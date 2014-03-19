@@ -1,0 +1,94 @@
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\IPCommon.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\IPCommon.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\IPCommon.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\C1.Common.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\C1.Win.C1FlexGrid.Classic.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\C1.Win.C1FlexGrid.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\CrystalDecisions.ReportSource.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\CrystalDecisions.Shared.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\CrystalDecisions.Web.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\CrystalDecisions.Windows.Forms.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\bin\CrystalReportPluginLib.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IPCommon.vbprojResolveAssemblyReference.cache
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.ctlButton2.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.ctlButton3.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.ctlClock.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgButtonYes_No_Cancel.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBtn_Yes_No.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.DataGrid_Custom.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.f370_REPORT_VIEW.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.frmEditText.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.frmIcons.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchDate.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchNumeric.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchString.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxForm_Yes_No.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxFormYes_No_Cancel.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxForm_OK.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IPCommon.vbproj.GenerateResource.Cache
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IPCommon.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IPCommon.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPCommon\obj\Debug\IPCommon.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\IPCommon.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\IPCommon.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\IPCommon.xml
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\C1.Common.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\C1.Win.C1FlexGrid.Classic.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\C1.Win.C1FlexGrid.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\CrystalDecisions.CrystalReports.Engine.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\CrystalDecisions.ReportSource.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\CrystalDecisions.Shared.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\CrystalDecisions.Web.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\CrystalDecisions.Windows.Forms.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\bin\CrystalReportPluginLib.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.ctlButton2.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.ctlButton3.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.ctlClock.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgButtonYes_No_Cancel.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBtn_Yes_No.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.DataGrid_Custom.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.f370_REPORT_VIEW.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.frmEditText.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.frmIcons.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchDate.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchNumeric.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchString.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxForm_Yes_No.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxFormYes_No_Cancel.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxForm_OK.resources
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IPCommon.vbproj.GenerateResource.Cache
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IPCommon.dll
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IPCommon.xml
+G:\0. Working\0. HRM\03. SourceCode\IPCommon\obj\Debug\IPCommon.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\IPCommon.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\IPCommon.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\IPCommon.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\C1.Common.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\C1.Win.C1FlexGrid.Classic.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\C1.Win.C1FlexGrid.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\CrystalDecisions.CrystalReports.Engine.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\CrystalDecisions.ReportSource.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\CrystalDecisions.Shared.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\CrystalDecisions.Web.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\CrystalDecisions.Windows.Forms.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\bin\CrystalReportPluginLib.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.ctlButton2.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.ctlButton3.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.ctlClock.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgButtonYes_No_Cancel.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBtn_Yes_No.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.DataGrid_Custom.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.f370_REPORT_VIEW.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.frmEditText.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.frmIcons.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchDate.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchNumeric.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.frmSearchString.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxForm_Yes_No.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxFormYes_No_Cancel.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IP.Core.IPCommon.MessageForms.MsgBoxForm_OK.resources
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IPCommon.vbproj.GenerateResource.Cache
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IPCommon.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IPCommon.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPCommon\obj\Debug\IPCommon.pdb

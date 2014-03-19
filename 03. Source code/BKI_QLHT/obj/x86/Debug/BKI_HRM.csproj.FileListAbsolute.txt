@@ -1,0 +1,66 @@
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\BKI_HRM\bin\Debug\BKI_HRM.exe.config
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\BKI_HRM\bin\Debug\BKI_HRM.exe
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\BKI_HRM\bin\Debug\BKI_HRM.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\BKI_HRM\obj\x86\Debug\BKI_HRM.Properties.Resources.resources
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\BKI_HRM\obj\x86\Debug\BKI_HRM.csproj.GenerateResource.Cache
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\BKI_HRM\obj\x86\Debug\BKI_HRM.exe
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\BKI_HRM\obj\x86\Debug\BKI_HRM.pdb
+D:\QLNS-HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.exe.config
+D:\QLNS-HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.exe
+D:\QLNS-HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.csprojResolveAssemblyReference.cache
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.csproj.ResolveComReference.cache
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.f400_Main.resources
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.HeThong.f995_ht_phan_quyen_cho_nhom.resources
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.HeThong.f996_ht_nhom_nguoi_su_dung_de.resources
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.f997_ht_nhom_nguoi_su_dung.resources
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.f998_ht_nguoi_su_dung_de.resources
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.f999_ht_nguoi_su_dung.resources
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.Properties.Resources.resources
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.csproj.GenerateResource.Cache
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.exe.licenses
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.exe.config
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.exe
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.DS.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.US.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\C1.Common.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\C1.Win.C1FlexGrid.Classic.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\C1.Win.C1FlexGrid.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\C1.Win.C1Input.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPBusinessService.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPCommon.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPData.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPExcelReport.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPExcelWebReport.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPException.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPSystemAdmin.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPUserService.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\SiSButton.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\SiSMenu.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\CrystalDecisions.Shared.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\CrystalDecisions.Windows.Forms.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\Interop.Excel.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\CrystalDecisions.ReportSource.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\Interop.Microsoft.Office.Core.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.DS.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\BKI_HRM.US.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPBusinessService.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPBusinessService.xml
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPCommon.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPCommon.xml
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPData.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPData.xml
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPExcelReport.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPExcelReport.xml
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPExcelWebReport.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPExcelWebReport.xml
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPException.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPException.xml
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPSystemAdmin.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPSystemAdmin.xml
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPUserService.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\bin\Debug\IPUserService.xml
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.exe
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM\obj\x86\Debug\BKI_HRM.pdb
