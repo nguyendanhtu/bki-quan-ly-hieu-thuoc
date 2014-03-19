@@ -1,0 +1,78 @@
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPUserService.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPUserService.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPUserService.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\C1.Win.C1FlexGrid.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPBusinessService.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPCommon.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPData.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPException.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\C1.Win.C1FlexGrid.Classic.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\CrystalDecisions.Shared.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\CrystalDecisions.Windows.Forms.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\C1.Common.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\CrystalDecisions.ReportSource.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPBusinessService.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPBusinessService.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPCommon.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPCommon.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPData.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPData.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPException.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\bin\IPException.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\obj\Debug\IPUserService.vbprojResolveAssemblyReference.cache
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\obj\Debug\IPUserService.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\obj\Debug\IPUserService.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPUserService\obj\Debug\IPUserService.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPUserService.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPUserService.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPUserService.xml
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\C1.Win.C1FlexGrid.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPBusinessService.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPCommon.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPData.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPException.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\C1.Win.C1FlexGrid.Classic.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\CrystalDecisions.Shared.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\CrystalDecisions.Windows.Forms.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\CrystalDecisions.CrystalReports.Engine.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\C1.Common.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\CrystalDecisions.ReportSource.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPBusinessService.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPBusinessService.xml
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPCommon.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPCommon.xml
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPData.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPData.xml
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPException.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\bin\IPException.xml
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\obj\Debug\IPUserService.vbprojResolveAssemblyReference.cache
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\obj\Debug\IPUserService.dll
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\obj\Debug\IPUserService.xml
+G:\0. Working\0. HRM\03. SourceCode\IPUserService\obj\Debug\IPUserService.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPUserService.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPUserService.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPUserService.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\C1.Win.C1FlexGrid.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPBusinessService.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPCommon.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPData.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPException.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\C1.Win.C1FlexGrid.Classic.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\CrystalDecisions.Shared.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\CrystalDecisions.Windows.Forms.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\CrystalDecisions.CrystalReports.Engine.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\C1.Common.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\CrystalDecisions.ReportSource.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPBusinessService.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPBusinessService.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPCommon.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPCommon.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPData.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPData.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPException.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\bin\IPException.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\obj\Debug\IPUserService.vbprojResolveAssemblyReference.cache
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\obj\Debug\IPUserService.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\obj\Debug\IPUserService.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPUserService\obj\Debug\IPUserService.pdb

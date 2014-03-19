@@ -1,0 +1,30 @@
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\bin\IPBusinessService.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\bin\IPBusinessService.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\bin\IPBusinessService.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\bin\IPException.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\bin\IPException.pdb
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\bin\IPException.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\obj\Debug\IPBusinessService.dll
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\obj\Debug\IPBusinessService.xml
+C:\Users\AnZVanie\Documents\Visual Studio 2010\Projects\BKI_HRM\IPBusinessService\obj\Debug\IPBusinessService.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\bin\IPBusinessService.dll
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\bin\IPBusinessService.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\bin\IPBusinessService.xml
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\bin\IPException.dll
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\bin\IPException.pdb
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\bin\IPException.xml
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
+G:\0. Working\0. HRM\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\bin\IPBusinessService.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\bin\IPBusinessService.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\bin\IPBusinessService.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\bin\IPException.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\bin\IPException.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\bin\IPException.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\obj\Debug\IPBusinessService.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\obj\Debug\IPBusinessService.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\IPBusinessService\obj\Debug\IPBusinessService.pdb

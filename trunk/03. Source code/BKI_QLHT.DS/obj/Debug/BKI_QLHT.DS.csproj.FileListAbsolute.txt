@@ -1,0 +1,37 @@
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM.DS\bin\Debug\BKI_QLHT.DS.dll.config
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM.DS\bin\Debug\BKI_QLHT.DS.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM.DS\bin\Debug\BKI_QLHT.DS.pdb
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM.DS\obj\Debug\BKI_QLHT.DS.dll
+G:\0. Working\0. HRM\03. SourceCode\BKI_HRM.DS\obj\Debug\BKI_QLHT.DS.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\BKI_QLHT.DS.dll.config
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\BKI_QLHT.DS.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\BKI_QLHT.DS.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPData.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPException.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPSystemAdmin.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPCommon.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPUserService.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\C1.Win.C1FlexGrid.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\SiSButton.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\C1.Win.C1FlexGrid.Classic.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\CrystalDecisions.Shared.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\CrystalDecisions.Windows.Forms.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPBusinessService.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\C1.Common.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\CrystalDecisions.ReportSource.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPData.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPData.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPException.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPException.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPSystemAdmin.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPSystemAdmin.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPCommon.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPCommon.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPUserService.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPUserService.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPBusinessService.pdb
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\bin\Debug\IPBusinessService.xml
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\obj\Debug\BKI_QLHT.DS.csprojResolveAssemblyReference.cache
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\obj\Debug\BKI_QLHT.DS.dll
+G:\0. Working\0. BKI_QLHT\03. Source code\BKI_QLHT.DS\obj\Debug\BKI_QLHT.DS.pdb
