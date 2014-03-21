@@ -46,7 +46,7 @@ namespace BKI_QLHT
 
         private void format_controls()
         {
-            CControlFormat.setFormStyle(this, new CAppContext_201());
+            //CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_events();
             ShowInTaskbar = true;
         }
@@ -58,6 +58,7 @@ namespace BKI_QLHT
         private void set_define_events()
         {
             this.Load += new System.EventHandler(this.f400_Main_Load);
+
         }
         private void f400_Main_Load(object sender, EventArgs e)
         {
@@ -71,6 +72,80 @@ namespace BKI_QLHT
             }
         }
 
-        
+        private void m_menu_item_he_thong_nguoi_su_dung_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f999_ht_nguoi_su_dung frm = new f999_ht_nguoi_su_dung();
+                frm.Show();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+        private void m_menu_item_he_thong_nhom_nguoi_su__dung_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f997_ht_nhom_nguoi_su_dung frm = new f997_ht_nhom_nguoi_su_dung();
+                frm.Show();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+
+        }
+
+        private void m_menu_item_he_thong_nhat_ky_he_thong_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+        private void m_menu_item_he_thong_phan_quyen_cho_nhom_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //f995_ht_phan_quyen_cho_nhom frm = new f995_ht_phan_quyen_cho_nhom();
+                //frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+        private void m_menu_item_tu_dien_he_thong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_menu_item_he_thong_thoat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Application.Exit();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+
     }
 }
