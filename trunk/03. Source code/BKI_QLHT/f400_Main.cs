@@ -42,6 +42,14 @@ namespace BKI_QLHT
 
         #endregion
 
+        #region Data Structure
+
+        #endregion
+
+        #region Members
+
+        #endregion
+
         #region Private Method
 
         private void format_controls()
@@ -50,16 +58,20 @@ namespace BKI_QLHT
             set_define_events();
             ShowInTaskbar = true;
         }
-
-        #endregion
-
-        // Event handlers
-
         private void set_define_events()
         {
             this.Load += new System.EventHandler(this.f400_Main_Load);
+            this.m_menu_item_he_thong_nguoi_su_dung.Click += new System.EventHandler(this.m_menu_item_he_thong_nguoi_su_dung_Click);
+            this.m_menu_item_he_thong_nhom_nguoi_su__dung.Click += new System.EventHandler(this.m_menu_item_he_thong_nhom_nguoi_su__dung_Click);
+            this.m_menu_item_he_thong_nhat_ky_he_thong.Click += new System.EventHandler(this.m_menu_item_he_thong_nhat_ky_he_thong_Click);
+            this.m_menu_item_he_thong_phan_quyen_cho_nhom.Click += new System.EventHandler(this.m_menu_item_he_thong_phan_quyen_cho_nhom_Click);
+            this.m_menu_item_tu_dien_he_thong.Click += new System.EventHandler(this.m_menu_item_tu_dien_he_thong_Click);
+            this.m_menu_item_he_thong_thoat.Click += new System.EventHandler(this.m_menu_item_he_thong_thoat_Click);
 
         }
+        #endregion
+
+        #region Events
         private void f400_Main_Load(object sender, EventArgs e)
         {
             try
@@ -118,8 +130,8 @@ namespace BKI_QLHT
         {
             try
             {
-                //f995_ht_phan_quyen_cho_nhom frm = new f995_ht_phan_quyen_cho_nhom();
-                //frm.ShowDialog();
+                f995_ht_phan_quyen_cho_nhom frm = new f995_ht_phan_quyen_cho_nhom();
+                frm.ShowDialog();
             }
             catch (System.Exception v_e)
             {
@@ -130,7 +142,15 @@ namespace BKI_QLHT
 
         private void m_menu_item_tu_dien_he_thong_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+            	
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+            
         }
 
         private void m_menu_item_he_thong_thoat_Click(object sender, EventArgs e)
@@ -145,7 +165,7 @@ namespace BKI_QLHT
             }
 
         }
-
+        #endregion
 
     }
 }
