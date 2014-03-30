@@ -87,7 +87,7 @@ namespace BKI_QLHT.HeThong
 
         private void format_control()
         {
-            CControlFormat.setFormStyle(this, new CAppContext_201());
+            CControlFormat.setFormStyle(this);
         }
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
