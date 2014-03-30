@@ -46,7 +46,7 @@ namespace BKI_QLHT
 
         private void format_controls()
         {
-            //CControlFormat.setFormStyle(this, new CAppContext_201());
+            CControlFormat.setFormStyle(this);
             set_define_events();
             ShowInTaskbar = true;
         }
