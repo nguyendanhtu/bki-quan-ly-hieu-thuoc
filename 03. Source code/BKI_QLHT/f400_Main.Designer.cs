@@ -90,35 +90,35 @@ namespace BKI_QLHT
             this.m_menu_item_he_thong_nguoi_su_dung.Name = "m_menu_item_he_thong_nguoi_su_dung";
             this.m_menu_item_he_thong_nguoi_su_dung.Size = new System.Drawing.Size(198, 22);
             this.m_menu_item_he_thong_nguoi_su_dung.Text = "Người sử dụng";
-            this.m_menu_item_he_thong_nguoi_su_dung.Click += new System.EventHandler(this.m_menu_item_he_thong_nguoi_su_dung_Click);
+            
             // 
             // m_menu_item_he_thong_nhom_nguoi_su__dung
             // 
             this.m_menu_item_he_thong_nhom_nguoi_su__dung.Name = "m_menu_item_he_thong_nhom_nguoi_su__dung";
             this.m_menu_item_he_thong_nhom_nguoi_su__dung.Size = new System.Drawing.Size(198, 22);
             this.m_menu_item_he_thong_nhom_nguoi_su__dung.Text = "Nhóm người sử dụng";
-            this.m_menu_item_he_thong_nhom_nguoi_su__dung.Click += new System.EventHandler(this.m_menu_item_he_thong_nhom_nguoi_su__dung_Click);
+           
             // 
             // m_menu_item_he_thong_nhat_ky_he_thong
             // 
             this.m_menu_item_he_thong_nhat_ky_he_thong.Name = "m_menu_item_he_thong_nhat_ky_he_thong";
             this.m_menu_item_he_thong_nhat_ky_he_thong.Size = new System.Drawing.Size(198, 22);
             this.m_menu_item_he_thong_nhat_ky_he_thong.Text = "Nhật ký hệ thống";
-            this.m_menu_item_he_thong_nhat_ky_he_thong.Click += new System.EventHandler(this.m_menu_item_he_thong_nhat_ky_he_thong_Click);
+            
             // 
             // m_menu_item_he_thong_phan_quyen_cho_nhom
             // 
             this.m_menu_item_he_thong_phan_quyen_cho_nhom.Name = "m_menu_item_he_thong_phan_quyen_cho_nhom";
             this.m_menu_item_he_thong_phan_quyen_cho_nhom.Size = new System.Drawing.Size(198, 22);
             this.m_menu_item_he_thong_phan_quyen_cho_nhom.Text = "Phân quyền cho nhóm";
-            this.m_menu_item_he_thong_phan_quyen_cho_nhom.Click += new System.EventHandler(this.m_menu_item_he_thong_phan_quyen_cho_nhom_Click);
+            
             // 
             // m_menu_item_tu_dien_he_thong
             // 
             this.m_menu_item_tu_dien_he_thong.Name = "m_menu_item_tu_dien_he_thong";
             this.m_menu_item_tu_dien_he_thong.Size = new System.Drawing.Size(172, 22);
             this.m_menu_item_tu_dien_he_thong.Text = "Từ điển hệ thống";
-            this.m_menu_item_tu_dien_he_thong.Click += new System.EventHandler(this.m_menu_item_tu_dien_he_thong_Click);
+            
             // 
             // toolStripMenuItem1
             // 
@@ -130,7 +130,7 @@ namespace BKI_QLHT
             this.m_menu_item_he_thong_thoat.Name = "m_menu_item_he_thong_thoat";
             this.m_menu_item_he_thong_thoat.Size = new System.Drawing.Size(172, 22);
             this.m_menu_item_he_thong_thoat.Text = "Thoát";
-            this.m_menu_item_he_thong_thoat.Click += new System.EventHandler(this.m_menu_item_he_thong_thoat_Click);
+           
             // 
             // m_menuitem_danhmuc
             // 
