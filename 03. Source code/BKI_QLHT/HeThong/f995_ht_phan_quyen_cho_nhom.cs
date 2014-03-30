@@ -207,8 +207,6 @@ namespace BKI_QLHT.HeThong
             }
 
         }
-        #endregion
-
-        
+        #endregion  
     }
 }
