@@ -613,5 +613,15 @@
        public const string DIA_CHI = "DIA_CHI";
        public const string DIEN_THOAI = "DIEN_THOAI";
    }
+    /// <summary>
+    /// 
+    /// </summary>
+   public class DM_DANH_MUC_THUOC
+   {
+       public const string ID = "ID";
+       public const string TEN_DANH_MUC = "TEN_DANH_MUC";
+       public const string GHI_CHU = "GHI_CHU";
+   }
+
 
 }
