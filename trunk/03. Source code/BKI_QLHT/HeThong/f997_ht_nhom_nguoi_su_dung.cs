@@ -224,7 +224,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f997_ht_nhom_nguoi_su_dung";
-            this.Text = "f997_ht_nhom_nguoi_su_dung";
+            this.Text = "F997 - Danh sách nhóm người sử dụng";
             this.Load += new System.EventHandler(this.f997_ht_nhom_nguoi_su_dung_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
