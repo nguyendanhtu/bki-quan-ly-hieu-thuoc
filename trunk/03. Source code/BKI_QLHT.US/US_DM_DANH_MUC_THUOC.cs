@@ -110,5 +110,12 @@ public class US_DM_DANH_MUC_THUOC : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDataseSearch(DS_DM_DANH_MUC_THUOC ip_ds_danh_muc_thuoc, string ip_str_tu_khoa)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_DM_DANH_MUC_THUOC_Search");
+        v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
+        v_stored_proc.fillDataSetByCommand(this, ip_ds_danh_muc_thuoc);
+    }
+}
 }
