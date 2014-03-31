@@ -37,21 +37,11 @@ namespace BKI_QLHT
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
-        private Label label1;
-        private TextBox m_txt_mo_ta;
-        private Label m_lbl_mo_ta;
-        private TextBox m_txt_ten_nhom;
-        private Label m_lbl_ten_nhom;
-        internal SIS.Controls.Button.SiSButton m_cmd_save;
-        internal SIS.Controls.Button.SiSButton siSButton1;
-        private Label label2;
         private C1FlexGrid m_fg;
         private Panel m_pnl_grid;
-        private Label lbl;
-        private TextBox textBox1;
-        internal SIS.Controls.Button.SiSButton m_cmd_tim_kiem;
+        private Label label1;
+        internal SIS.Controls.Button.SiSButton m_cmd_insert;
         private Panel panel1;
-        private Panel panel2;
         private System.ComponentModel.IContainer components;
 
         public f997_ht_nhom_nguoi_su_dung()
@@ -93,29 +83,18 @@ namespace BKI_QLHT
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f997_ht_nhom_nguoi_su_dung));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.m_txt_mo_ta = new System.Windows.Forms.TextBox();
-            this.m_lbl_mo_ta = new System.Windows.Forms.Label();
-            this.m_txt_ten_nhom = new System.Windows.Forms.TextBox();
-            this.m_lbl_ten_nhom = new System.Windows.Forms.Label();
-            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
-            this.siSButton1 = new SIS.Controls.Button.SiSButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_pnl_grid = new System.Windows.Forms.Panel();
-            this.lbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_grid.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -147,15 +126,32 @@ namespace BKI_QLHT
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 502);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 243);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(712, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
+            // 
+            // m_cmd_insert
+            // 
+            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_insert.ImageIndex = 2;
+            this.m_cmd_insert.ImageList = this.ImageList;
+            this.m_cmd_insert.Location = new System.Drawing.Point(356, 4);
+            this.m_cmd_insert.Name = "m_cmd_insert";
+            this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_insert.TabIndex = 15;
+            this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // m_cmd_update
             // 
@@ -201,93 +197,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.MaximumSize = new System.Drawing.Size(5000, 5000);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(712, 54);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "CẬP NHẬT THÔNG TIN NHÓM NGƯỜI SỬ DỤNG";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // m_txt_mo_ta
-            // 
-            this.m_txt_mo_ta.Location = new System.Drawing.Point(224, 108);
-            this.m_txt_mo_ta.Multiline = true;
-            this.m_txt_mo_ta.Name = "m_txt_mo_ta";
-            this.m_txt_mo_ta.Size = new System.Drawing.Size(245, 71);
-            this.m_txt_mo_ta.TabIndex = 26;
-            // 
-            // m_lbl_mo_ta
-            // 
-            this.m_lbl_mo_ta.AutoSize = true;
-            this.m_lbl_mo_ta.Location = new System.Drawing.Point(170, 111);
-            this.m_lbl_mo_ta.Name = "m_lbl_mo_ta";
-            this.m_lbl_mo_ta.Size = new System.Drawing.Size(34, 13);
-            this.m_lbl_mo_ta.TabIndex = 25;
-            this.m_lbl_mo_ta.Text = "Mô tả";
-            // 
-            // m_txt_ten_nhom
-            // 
-            this.m_txt_ten_nhom.Location = new System.Drawing.Point(224, 71);
-            this.m_txt_ten_nhom.Name = "m_txt_ten_nhom";
-            this.m_txt_ten_nhom.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_ten_nhom.TabIndex = 24;
-            // 
-            // m_lbl_ten_nhom
-            // 
-            this.m_lbl_ten_nhom.AutoSize = true;
-            this.m_lbl_ten_nhom.Location = new System.Drawing.Point(149, 74);
-            this.m_lbl_ten_nhom.Name = "m_lbl_ten_nhom";
-            this.m_lbl_ten_nhom.Size = new System.Drawing.Size(55, 13);
-            this.m_lbl_ten_nhom.TabIndex = 23;
-            this.m_lbl_ten_nhom.Text = "Tên nhóm";
-            // 
-            // m_cmd_save
-            // 
-            this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_save.ImageIndex = 10;
-            this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(224, 195);
-            this.m_cmd_save.Name = "m_cmd_save";
-            this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 0;
-            this.m_cmd_save.Text = "&Lưu";
-            // 
-            // siSButton1
-            // 
-            this.siSButton1.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.siSButton1.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.siSButton1.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.siSButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.siSButton1.ImageIndex = 11;
-            this.siSButton1.ImageList = this.ImageList;
-            this.siSButton1.Location = new System.Drawing.Point(343, 195);
-            this.siSButton1.Name = "siSButton1";
-            this.siSButton1.Size = new System.Drawing.Size(88, 28);
-            this.siSButton1.TabIndex = 1;
-            this.siSButton1.Text = "Trở về (Esc)";
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.MaximumSize = new System.Drawing.Size(5000, 5000);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(660, 33);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "DANH SÁCH NHÓM NGƯỜI SỬ DỤNG";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // m_fg
             // 
@@ -303,40 +213,23 @@ namespace BKI_QLHT
             // 
             this.m_pnl_grid.Controls.Add(this.m_fg);
             this.m_pnl_grid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_grid.Location = new System.Drawing.Point(0, 337);
+            this.m_pnl_grid.Location = new System.Drawing.Point(0, 78);
             this.m_pnl_grid.Name = "m_pnl_grid";
             this.m_pnl_grid.Size = new System.Drawing.Size(712, 165);
             this.m_pnl_grid.TabIndex = 22;
             // 
-            // lbl
+            // label1
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(157, 304);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(47, 13);
-            this.lbl.TabIndex = 28;
-            this.lbl.Text = "Từ khoá";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(224, 300);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
-            this.textBox1.TabIndex = 29;
-            // 
-            // m_cmd_tim_kiem
-            // 
-            this.m_cmd_tim_kiem.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_tim_kiem.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_tim_kiem.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_tim_kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_tim_kiem.ImageIndex = 5;
-            this.m_cmd_tim_kiem.ImageList = this.ImageList;
-            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(490, 300);
-            this.m_cmd_tim_kiem.Name = "m_cmd_tim_kiem";
-            this.m_cmd_tim_kiem.Size = new System.Drawing.Size(88, 21);
-            this.m_cmd_tim_kiem.TabIndex = 30;
-            this.m_cmd_tim_kiem.Text = "Tìm kiếm";
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.MaximumSize = new System.Drawing.Size(5000, 5000);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(712, 56);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "DANH SÁCH NHÓM NGƯỜI SỬ DỤNG";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -344,33 +237,15 @@ namespace BKI_QLHT
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(712, 54);
-            this.panel1.TabIndex = 31;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(23, 249);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(660, 33);
-            this.panel2.TabIndex = 32;
+            this.panel1.Size = new System.Drawing.Size(712, 56);
+            this.panel1.TabIndex = 24;
             // 
             // f997_ht_nhom_nguoi_su_dung
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(712, 538);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(712, 279);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.siSButton1);
-            this.Controls.Add(this.m_cmd_save);
             this.Controls.Add(this.m_pnl_grid);
-            this.Controls.Add(this.m_cmd_tim_kiem);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lbl);
-            this.Controls.Add(this.m_txt_mo_ta);
-            this.Controls.Add(this.m_lbl_mo_ta);
-            this.Controls.Add(this.m_txt_ten_nhom);
-            this.Controls.Add(this.m_lbl_ten_nhom);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f997_ht_nhom_nguoi_su_dung";
             this.Text = "F997 - Danh sách nhóm người sử dụng";
@@ -379,9 +254,7 @@ namespace BKI_QLHT
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_grid.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
         #endregion
@@ -415,7 +288,7 @@ namespace BKI_QLHT
         {
             CControlFormat.setFormStyle(this);
             CControlFormat.setC1FlexFormat(m_fg);
-            CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
+            //CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             set_define_events();
@@ -585,6 +458,20 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Application.Exit();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+            
+        }
+
 
     }
 }
