@@ -75,6 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
+    <Compile Include="DanhMuc\f100_DM_BAC_SY.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +108,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinFormControls.cs" />
+    <EmbeddedResource Include="DanhMuc\f100_DM_BAC_SY.resx">
+      <DependentUpon>f100_DM_BAC_SY.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,7 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BaoCao\" />
-    <Folder Include="DanhMuc\" />
     <Folder Include="NghiepVu\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
