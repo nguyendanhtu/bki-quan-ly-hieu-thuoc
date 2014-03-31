@@ -54,7 +54,7 @@ Public Class CControlFormat
     End Function
 
     Private Shared Function getSpecialForeColor() As System.Drawing.Color
-        Return System.Drawing.Color.Maroon
+        Return System.Drawing.Color.DarkBlue
     End Function
 
     Private Shared Function getRegularBackColor() As System.Drawing.Color
@@ -106,10 +106,10 @@ Public Class CControlFormat
         ElseIf TypeOf ip_control Is Button Then
             ip_control.Font = getBoldFont()
             ip_control.ForeColor = getSpecialForeColor()
-            If (i_objControlerControl.CanUseControl(ip_str_form_name, ip_control.Name, "") = False) Then
-                ip_control.Visible = False
-                ip_control.Enabled = False
-            End If
+            'If (i_objControlerControl.CanUseControl(ip_str_form_name, ip_control.Name, "") = False) Then
+            '    ip_control.Visible = False
+            '    ip_control.Enabled = False
+            'End If
         ElseIf TypeOf ip_control Is DateTimePicker Then
             CType(ip_control, DateTimePicker).CalendarForeColor = getRegularForeColor()
             CType(ip_control, DateTimePicker).CalendarTitleForeColor = getRegularForeColor()
@@ -293,7 +293,7 @@ Public Class CControlFormat
             .MergeCells = C1.Win.C1FlexGrid.Classic.MergeSettings.flexMergeOutline
             .OutlineBar = C1.Win.C1FlexGrid.Classic.OutlineBarSettings.flexOutlineBarSimple
             .SheetBorder = System.Drawing.SystemColors.WindowText
-            .TreeColor = System.Drawing.Color.DarkGray
+            .TreeColor = System.Drawing.Color.LightBlue
             .SelectionMode = C1.Win.C1FlexGrid.Classic.SelModeSettings.flexSelectionFree
         End With
     End Sub
@@ -335,7 +335,7 @@ Public Class CControlFormat
             .Styles.Fixed.Font = New System.Drawing.Font(C_FontName, C_FormFontSize, Drawing.FontStyle.Bold)
             .Styles.Fixed.TextAlign = C1.Win.C1FlexGrid.TextAlignEnum.CenterCenter
             .Styles.Fixed.ForeColor = System.Drawing.Color.White
-            .Styles.Fixed.BackColor = System.Drawing.Color.Maroon
+            .Styles.Fixed.BackColor = System.Drawing.Color.CornflowerBlue
             .Styles.Alternate.BackColor = System.Drawing.Color.FromArgb(CType(241, Byte), CType(252, Byte), CType(218, Byte))
             .Styles.EmptyArea.BackColor = .BackColor
             .Styles.EmptyArea.Border.Style = C1.Win.C1FlexGrid.BorderStyleEnum.None
