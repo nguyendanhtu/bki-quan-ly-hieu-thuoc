@@ -79,7 +79,7 @@ namespace BKI_QLHT.HeThong
             if (m_txt_ten_nhom.Text == "")
             {
                 MessageBox.Show("Bạn cần nhập tên nhóm!!!");
-                m_lbl_mess.Text = "Bạn cần nhập tên nhóm!!!";
+                 //m_lbl_mess.Text = "Bạn cần nhập tên nhóm!!!";
                 return false;
             }
             return true;
@@ -109,14 +109,14 @@ namespace BKI_QLHT.HeThong
 
         private void m_txt_ten_nhom_Click(object sender, EventArgs e)
         {
-            m_lbl_mess.Text = "";
+            //m_lbl_mess.Text = "";
         }
 
         private void m_txt_mo_ta_Click(object sender, EventArgs e)
         {
             if (m_txt_ten_nhom.Text == "")
             {
-                m_lbl_mess.Text = "Bạn chưa nhập tên nhóm!!!";
+                //m_lbl_mess.Text = "Bạn chưa nhập tên nhóm!!!";
             }
         }
         #endregion
