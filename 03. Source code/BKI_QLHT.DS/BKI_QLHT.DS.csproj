@@ -42,6 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDBNames.cs" />
+    <Compile Include="DS_DM_BAC_SY.cs">
+      <DependentUpon>DS_DM_BAC_SY.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_DM_BAC_SY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_BAC_SY.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_HT_PHAN_QUYEN_CHO_NHOM1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,6 +76,17 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_DM_BAC_SY.xsc">
+      <DependentUpon>DS_DM_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_BAC_SY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_BAC_SY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_BAC_SY.xss">
+      <DependentUpon>DS_DM_BAC_SY.xsd</DependentUpon>
     </None>
     <None Include="DS_HT_PHAN_QUYEN_CHO_NHOM.xsc">
       <DependentUpon>DS_HT_PHAN_QUYEN_CHO_NHOM.xsd</DependentUpon>
