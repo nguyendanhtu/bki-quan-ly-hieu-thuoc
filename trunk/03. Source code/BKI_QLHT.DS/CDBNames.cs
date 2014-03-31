@@ -605,4 +605,13 @@
        public const string VAI_TRO = "VAI_TRO";
        public const string MA_QUYET_DINH = "MA_QUYET_DINH";
    }
+   public class DM_BAC_SY
+   {
+       public const string ID = "ID";
+       public const string HO_TEN = "HO_TEN";
+       public const string BENH_VIEN = "BENH_VIEN";
+       public const string DIA_CHI = "DIA_CHI";
+       public const string DIEN_THOAI = "DIEN_THOAI";
+   }
+
 }
