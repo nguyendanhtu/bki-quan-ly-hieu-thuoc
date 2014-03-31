@@ -72,7 +72,7 @@ namespace BKI_QLHT
             this.toolStripMenuItem1,
             this.m_menu_item_he_thong_thoat});
             this.m_menuitem_hethong.Name = "m_menuitem_hethong";
-            this.m_menuitem_hethong.Size = new System.Drawing.Size(69, 20);
+            this.m_menuitem_hethong.Size = new System.Drawing.Size(71, 20);
             this.m_menuitem_hethong.Text = "Hệ thống";
             // 
             // m_menuitem_quantri
@@ -83,48 +83,48 @@ namespace BKI_QLHT
             this.m_menu_item_he_thong_nhat_ky_he_thong,
             this.m_menu_item_he_thong_phan_quyen_cho_nhom});
             this.m_menuitem_quantri.Name = "m_menuitem_quantri";
-            this.m_menuitem_quantri.Size = new System.Drawing.Size(165, 22);
+            this.m_menuitem_quantri.Size = new System.Drawing.Size(172, 22);
             this.m_menuitem_quantri.Text = "Quản trị";
             // 
             // m_menu_item_he_thong_nguoi_su_dung
             // 
             this.m_menu_item_he_thong_nguoi_su_dung.Name = "m_menu_item_he_thong_nguoi_su_dung";
-            this.m_menu_item_he_thong_nguoi_su_dung.Size = new System.Drawing.Size(195, 22);
+            this.m_menu_item_he_thong_nguoi_su_dung.Size = new System.Drawing.Size(198, 22);
             this.m_menu_item_he_thong_nguoi_su_dung.Text = "Người sử dụng";
             // 
             // m_menu_item_he_thong_nhom_nguoi_su__dung
             // 
             this.m_menu_item_he_thong_nhom_nguoi_su__dung.Name = "m_menu_item_he_thong_nhom_nguoi_su__dung";
-            this.m_menu_item_he_thong_nhom_nguoi_su__dung.Size = new System.Drawing.Size(195, 22);
+            this.m_menu_item_he_thong_nhom_nguoi_su__dung.Size = new System.Drawing.Size(198, 22);
             this.m_menu_item_he_thong_nhom_nguoi_su__dung.Text = "Nhóm người sử dụng";
             // 
             // m_menu_item_he_thong_nhat_ky_he_thong
             // 
             this.m_menu_item_he_thong_nhat_ky_he_thong.Name = "m_menu_item_he_thong_nhat_ky_he_thong";
-            this.m_menu_item_he_thong_nhat_ky_he_thong.Size = new System.Drawing.Size(195, 22);
+            this.m_menu_item_he_thong_nhat_ky_he_thong.Size = new System.Drawing.Size(198, 22);
             this.m_menu_item_he_thong_nhat_ky_he_thong.Text = "Nhật ký hệ thống";
             // 
             // m_menu_item_he_thong_phan_quyen_cho_nhom
             // 
             this.m_menu_item_he_thong_phan_quyen_cho_nhom.Name = "m_menu_item_he_thong_phan_quyen_cho_nhom";
-            this.m_menu_item_he_thong_phan_quyen_cho_nhom.Size = new System.Drawing.Size(195, 22);
+            this.m_menu_item_he_thong_phan_quyen_cho_nhom.Size = new System.Drawing.Size(198, 22);
             this.m_menu_item_he_thong_phan_quyen_cho_nhom.Text = "Phân quyền cho nhóm";
             // 
             // m_menu_item_tu_dien_he_thong
             // 
             this.m_menu_item_tu_dien_he_thong.Name = "m_menu_item_tu_dien_he_thong";
-            this.m_menu_item_tu_dien_he_thong.Size = new System.Drawing.Size(165, 22);
+            this.m_menu_item_tu_dien_he_thong.Size = new System.Drawing.Size(172, 22);
             this.m_menu_item_tu_dien_he_thong.Text = "Từ điển hệ thống";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(162, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 6);
             // 
             // m_menu_item_he_thong_thoat
             // 
             this.m_menu_item_he_thong_thoat.Name = "m_menu_item_he_thong_thoat";
-            this.m_menu_item_he_thong_thoat.Size = new System.Drawing.Size(165, 22);
+            this.m_menu_item_he_thong_thoat.Size = new System.Drawing.Size(172, 22);
             this.m_menu_item_he_thong_thoat.Text = "Thoát";
             // 
             // m_menuitem_danhmuc
@@ -138,7 +138,7 @@ namespace BKI_QLHT
             // m_menu_item_danh_muc_bac_si
             // 
             this.m_menu_item_danh_muc_bac_si.Name = "m_menu_item_danh_muc_bac_si";
-            this.m_menu_item_danh_muc_bac_si.Size = new System.Drawing.Size(162, 22);
+            this.m_menu_item_danh_muc_bac_si.Size = new System.Drawing.Size(164, 22);
             this.m_menu_item_danh_muc_bac_si.Text = "Danh sách bác sĩ";
             // 
             // m_menuitem_nghiepvu
@@ -150,7 +150,7 @@ namespace BKI_QLHT
             // m_menuitem_baocao
             // 
             this.m_menuitem_baocao.Name = "m_menuitem_baocao";
-            this.m_menuitem_baocao.Size = new System.Drawing.Size(61, 20);
+            this.m_menuitem_baocao.Size = new System.Drawing.Size(62, 20);
             this.m_menuitem_baocao.Text = "Báo cáo";
             // 
             // m_lbl_du_an_sap_kt
@@ -221,7 +221,7 @@ namespace BKI_QLHT
             this.MainMenuStrip = this.m_mst_menu;
             this.Name = "f400_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "F400 - Chương trình quản lý nhân sự";
+            this.Text = "F400 - Chương trình quản lý hiệu thuốc";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.m_mst_menu.ResumeLayout(false);
             this.m_mst_menu.PerformLayout();
