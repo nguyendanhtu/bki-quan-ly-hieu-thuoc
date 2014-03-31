@@ -49,6 +49,25 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="US_DM_BAC_SY.cs" />
+    <Compile Include="US_DM_DANH_MUC_THUOC.cs" />
+    <Compile Include="US_DM_DON_VI.cs" />
+    <Compile Include="US_DM_DON_VI_TINH.cs" />
+    <Compile Include="US_DM_KHACH_HANG.cs" />
+    <Compile Include="US_DM_NHA_CUNG_CAP.cs" />
+    <Compile Include="US_DM_NHOM_KHACH_HANG.cs" />
+    <Compile Include="US_DM_NHOM_THUOC.cs" />
+    <Compile Include="US_DM_THUOC.cs" />
+    <Compile Include="US_GD_CT_KHUYEN_MAI.cs" />
+    <Compile Include="US_GD_CT_KHUYEN_MAI_DETAIL.cs" />
+    <Compile Include="US_GD_CT_KHUYEN_MAI_DT.cs" />
+    <Compile Include="US_GD_DON_THUOC.cs" />
+    <Compile Include="US_GD_DON_THUOC_DETAIL.cs" />
+    <Compile Include="US_GD_DON_VI_TINH_THUOC.cs" />
+    <Compile Include="US_GD_GIA.cs" />
+    <Compile Include="US_GD_GIAO_DICH.cs" />
+    <Compile Include="US_GD_GIAO_DICH_DETAIL.cs" />
+    <Compile Include="US_GD_SO_DU.cs" />
     <Compile Include="US_HT_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
