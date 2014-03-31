@@ -182,5 +182,11 @@ namespace BKI_QLHT
             }
         }
 
+        private void m_menu_item_danh_muc_thuoc_Click(object sender, EventArgs e)
+        {
+            f500_dm_danh_muc_thuoc frm = new f500_dm_danh_muc_thuoc();
+            frm.ShowDialog();
+        }
+
     }
 }
