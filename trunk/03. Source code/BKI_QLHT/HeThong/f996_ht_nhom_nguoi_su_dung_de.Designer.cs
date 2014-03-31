@@ -39,7 +39,6 @@
             this.m_txt_mo_ta = new System.Windows.Forms.TextBox();
             this.m_lbl_mo_ta = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.m_lbl_mess = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,21 +156,11 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "(*)";
             // 
-            // m_lbl_mess
-            // 
-            this.m_lbl_mess.AutoSize = true;
-            this.m_lbl_mess.ForeColor = System.Drawing.Color.Red;
-            this.m_lbl_mess.Location = new System.Drawing.Point(27, 131);
-            this.m_lbl_mess.Name = "m_lbl_mess";
-            this.m_lbl_mess.Size = new System.Drawing.Size(0, 13);
-            this.m_lbl_mess.TabIndex = 8;
-            // 
             // f996_ht_nhom_nguoi_su_dung_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 193);
-            this.Controls.Add(this.m_lbl_mess);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.m_txt_mo_ta);
             this.Controls.Add(this.m_lbl_mo_ta);
@@ -197,6 +186,5 @@
         private System.Windows.Forms.TextBox m_txt_mo_ta;
         private System.Windows.Forms.Label m_lbl_mo_ta;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label m_lbl_mess;
     }
 }
