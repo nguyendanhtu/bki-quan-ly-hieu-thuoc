@@ -67,6 +67,8 @@ namespace BKI_QLHT
             this.m_menu_item_he_thong_phan_quyen_cho_nhom.Click += new System.EventHandler(this.m_menu_item_he_thong_phan_quyen_cho_nhom_Click);
             this.m_menu_item_tu_dien_he_thong.Click += new System.EventHandler(this.m_menu_item_tu_dien_he_thong_Click);
             this.m_menu_item_he_thong_thoat.Click += new System.EventHandler(this.m_menu_item_he_thong_thoat_Click);
+            this.m_menu_item_danh_muc_bac_si.Click += new System.EventHandler(this.m_menu_item_danh_muc_bac_si_Click);
+            
 
         }
         #endregion
@@ -166,6 +168,19 @@ namespace BKI_QLHT
 
         }
         #endregion
+
+        private void m_menu_item_danh_muc_bac_si_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f100_DM_BAC_SY v_frm_f100_DM_BAC_SY = new f100_DM_BAC_SY();
+                v_frm_f100_DM_BAC_SY.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
     }
 }
