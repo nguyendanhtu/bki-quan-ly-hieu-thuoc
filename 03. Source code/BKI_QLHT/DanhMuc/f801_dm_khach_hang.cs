@@ -38,6 +38,9 @@ namespace BKI_QLHT
 		internal SIS.Controls.Button.SiSButton m_cmd_insert;
 		internal SIS.Controls.Button.SiSButton m_cmd_exit;
 		internal SIS.Controls.Button.SiSButton m_cmd_view;
+        private Label label1;
+        private TextBox m_txt_tu_khoa;
+        internal SIS.Controls.Button.SiSButton m_cmd_search;
 		private System.ComponentModel.IContainer components;
 
 		public f801_dm_khach_hang()
@@ -85,6 +88,9 @@ namespace BKI_QLHT
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_grv_dm_khach_hang = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_txt_tu_khoa = new System.Windows.Forms.TextBox();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_dm_khach_hang)).BeginInit();
             this.SuspendLayout();
@@ -208,17 +214,51 @@ namespace BKI_QLHT
             // m_grv_dm_khach_hang
             // 
             this.m_grv_dm_khach_hang.ColumnInfo = resources.GetString("m_grv_dm_khach_hang.ColumnInfo");
-            this.m_grv_dm_khach_hang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_grv_dm_khach_hang.Location = new System.Drawing.Point(0, 0);
+            this.m_grv_dm_khach_hang.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_grv_dm_khach_hang.Location = new System.Drawing.Point(0, 79);
             this.m_grv_dm_khach_hang.Name = "m_grv_dm_khach_hang";
-            this.m_grv_dm_khach_hang.Size = new System.Drawing.Size(686, 373);
+            this.m_grv_dm_khach_hang.Size = new System.Drawing.Size(686, 294);
             this.m_grv_dm_khach_hang.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_dm_khach_hang.Styles"));
             this.m_grv_dm_khach_hang.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(76, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Từ khóa tìm kiếm";
+            // 
+            // m_txt_tu_khoa
+            // 
+            this.m_txt_tu_khoa.Location = new System.Drawing.Point(186, 33);
+            this.m_txt_tu_khoa.Name = "m_txt_tu_khoa";
+            this.m_txt_tu_khoa.Size = new System.Drawing.Size(296, 20);
+            this.m_txt_tu_khoa.TabIndex = 22;
+            // 
+            // m_cmd_search
+            // 
+            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_search.ImageIndex = 5;
+            this.m_cmd_search.ImageList = this.ImageList;
+            this.m_cmd_search.Location = new System.Drawing.Point(506, 28);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_search.TabIndex = 23;
+            this.m_cmd_search.Text = "Tìm kiếm";
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // f801_dm_khach_hang
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(686, 409);
+            this.Controls.Add(this.m_cmd_search);
+            this.Controls.Add(this.m_txt_tu_khoa);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.m_grv_dm_khach_hang);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f801_dm_khach_hang";
@@ -227,6 +267,7 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_dm_khach_hang)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion
@@ -303,8 +344,8 @@ namespace BKI_QLHT
 
 
 		private void insert_v_dm_khach_hang(){			
-		//	f801_dm_khach_hang_DE v_fDE = new  f801_dm_khach_hang_DE();								
-		//	v_fDE.display();
+			f801_dm_khach_hang_DE v_fDE = new  f801_dm_khach_hang_DE();
+            v_fDE.display_for_insert();
 			load_data_2_grid();
 		}
 
@@ -312,8 +353,8 @@ namespace BKI_QLHT
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_dm_khach_hang)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_dm_khach_hang, m_grv_dm_khach_hang.Row)) return;			
 			grid2us_object(m_us, m_grv_dm_khach_hang.Row);
-		//	f801_dm_khach_hang_DE v_fDE = new f801_dm_khach_hang_DE();
-		//	v_fDE.display(m_us);
+			f801_dm_khach_hang_DE v_fDE = new f801_dm_khach_hang_DE();
+            v_fDE.display_for_update(m_us);
 			load_data_2_grid();
 		}
 				
@@ -412,6 +453,17 @@ namespace BKI_QLHT
 				CSystemLog_301.ExceptionHandle(v_e);
 			}
 		}
+
+        private void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            string v_str_tu_khoa = m_txt_tu_khoa.Text;
+            US_V_DM_KHACH_HANG v_us_v_dm_khach_hang = new US_V_DM_KHACH_HANG();
+            DS_V_DM_KHACH_HANG v_ds_v_dm_khach_hang = new DS_V_DM_KHACH_HANG();
+            v_us_v_dm_khach_hang.FillDatasetSearch(v_ds_v_dm_khach_hang,v_str_tu_khoa);
+            m_grv_dm_khach_hang.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_v_dm_khach_hang, m_grv_dm_khach_hang, m_obj_trans);
+            m_grv_dm_khach_hang.Redraw = true;
+        }
 
 	}
 }
