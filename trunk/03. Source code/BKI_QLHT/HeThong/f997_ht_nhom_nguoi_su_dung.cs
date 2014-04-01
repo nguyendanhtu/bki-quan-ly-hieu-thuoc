@@ -458,7 +458,7 @@ namespace BKI_QLHT
         {
             try
             {
-                Application.Exit();
+                this.Close();
             }
             catch (System.Exception v_e)
             {
