@@ -151,5 +151,12 @@ public class US_DM_BAC_SY : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    //public void FillDatasetSearch(DS_DM_BAC_SY ip_ds_dm_bac_sy, string ip_str_tu_khoa)
+    //{
+    //    CStoredProc v_stored_proc = new CStoredProc("pr_DM_BAC_SY_Search");
+    //    v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
+    //    v_stored_proc.fillDataSetByCommand(this, ip_ds_dm_bac_sy);
+    //}
+}
 }
