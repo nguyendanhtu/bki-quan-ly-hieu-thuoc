@@ -622,6 +622,13 @@
        public const string TEN_DANH_MUC = "TEN_DANH_MUC";
        public const string GHI_CHU = "GHI_CHU";
    }
-
+   public class DM_NHA_CUNG_CAP
+   {
+       public const string ID = "ID";
+       public const string TEN_NCC = "TEN_NCC";
+       public const string MA_NCC = "MA_NCC";
+       public const string DIA_CHI = "DIA_CHI";
+       public const string SDT = "SDT";
+   }
 
 }
