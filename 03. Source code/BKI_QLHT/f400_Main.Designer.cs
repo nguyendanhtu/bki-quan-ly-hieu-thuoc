@@ -43,6 +43,7 @@ namespace BKI_QLHT
             this.m_menuitem_danhmuc = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menu_item_danh_muc_bac_si = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menu_item_danh_muc_thuoc = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_menu_item_danh_muc_nha_cung_cap = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_nghiepvu = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_baocao = new System.Windows.Forms.ToolStripMenuItem();
             this.m_lbl_du_an_sap_kt = new System.Windows.Forms.Label();
@@ -132,7 +133,8 @@ namespace BKI_QLHT
             // 
             this.m_menuitem_danhmuc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.m_menu_item_danh_muc_bac_si,
-            this.m_menu_item_danh_muc_thuoc});
+            this.m_menu_item_danh_muc_thuoc,
+            this.m_menu_item_danh_muc_nha_cung_cap});
             this.m_menuitem_danhmuc.Name = "m_menuitem_danhmuc";
             this.m_menuitem_danhmuc.Size = new System.Drawing.Size(74, 20);
             this.m_menuitem_danhmuc.Text = "Danh mục";
@@ -140,15 +142,22 @@ namespace BKI_QLHT
             // m_menu_item_danh_muc_bac_si
             // 
             this.m_menu_item_danh_muc_bac_si.Name = "m_menu_item_danh_muc_bac_si";
-            this.m_menu_item_danh_muc_bac_si.Size = new System.Drawing.Size(163, 22);
+            this.m_menu_item_danh_muc_bac_si.Size = new System.Drawing.Size(207, 22);
             this.m_menu_item_danh_muc_bac_si.Text = "Danh sách bác sĩ";
             // 
             // m_menu_item_danh_muc_thuoc
             // 
             this.m_menu_item_danh_muc_thuoc.Name = "m_menu_item_danh_muc_thuoc";
-            this.m_menu_item_danh_muc_thuoc.Size = new System.Drawing.Size(163, 22);
+            this.m_menu_item_danh_muc_thuoc.Size = new System.Drawing.Size(207, 22);
             this.m_menu_item_danh_muc_thuoc.Text = "Danh mục thuốc";
             this.m_menu_item_danh_muc_thuoc.Click += new System.EventHandler(this.m_menu_item_danh_muc_thuoc_Click);
+            // 
+            // m_menu_item_danh_muc_nha_cung_cap
+            // 
+            this.m_menu_item_danh_muc_nha_cung_cap.Name = "m_menu_item_danh_muc_nha_cung_cap";
+            this.m_menu_item_danh_muc_nha_cung_cap.Size = new System.Drawing.Size(207, 22);
+            this.m_menu_item_danh_muc_nha_cung_cap.Text = " Danh muc nhà cung cấp";
+            this.m_menu_item_danh_muc_nha_cung_cap.Click += new System.EventHandler(this.m_menu_item_danh_muc_nha_cung_cap_Click);
             // 
             // m_menuitem_nghiepvu
             // 
@@ -259,5 +268,6 @@ namespace BKI_QLHT
         private ToolStripMenuItem m_menu_item_he_thong_phan_quyen_cho_nhom;
         private ToolStripMenuItem m_menu_item_danh_muc_bac_si;
         private ToolStripMenuItem m_menu_item_danh_muc_thuoc;
+        private ToolStripMenuItem m_menu_item_danh_muc_nha_cung_cap;
     }
 }
