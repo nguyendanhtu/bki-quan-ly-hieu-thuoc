@@ -200,6 +200,12 @@ namespace BKI_QLHT
             frm.ShowDialog();
         }
 
+        private void m_menu_item_danh_muc_nhom_khach_hang_Click(object sender, EventArgs e)
+        {
+            f101_dm_nhom_khach_hang frm = new f101_dm_nhom_khach_hang();
+            frm.ShowDialog();
+        }
+
 
     }
 }
