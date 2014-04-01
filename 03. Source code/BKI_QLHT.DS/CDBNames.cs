@@ -630,5 +630,15 @@
        public const string DIA_CHI = "DIA_CHI";
        public const string SDT = "SDT";
    }
+   public class V_DM_BAC_SY
+   {
+       public const string ID = "ID";
+       public const string HO_TEN = "HO_TEN";
+       public const string BENH_VIEN = "BENH_VIEN";
+       public const string DIA_CHI = "DIA_CHI";
+       public const string DIEN_THOAI = "DIEN_THOAI";
+       public const string TEN_NGAN = "TEN_NGAN";
+       public const string ID_LOAI_TU_DIEN = "ID_LOAI_TU_DIEN";
+   }
 
 }
