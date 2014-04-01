@@ -651,4 +651,10 @@
        public const string MA_SO_THUE = "MA_SO_THUE";
        public const string TEN_NHOM = "TEN_NHOM";
    }
+   public class DM_NHOM_KHACH_HANG
+   {
+       public const string ID = "ID";
+       public const string MA_NHOM = "MA_NHOM";
+       public const string TEN_NHOM = "TEN_NHOM";
+   }
 }
