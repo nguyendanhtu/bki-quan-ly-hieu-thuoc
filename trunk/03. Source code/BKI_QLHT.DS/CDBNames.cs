@@ -640,5 +640,15 @@
        public const string TEN_NGAN = "TEN_NGAN";
        public const string ID_LOAI_TU_DIEN = "ID_LOAI_TU_DIEN";
    }
-
+   public class V_DM_KHACH_HANG
+   {
+       public const string ID = "ID";
+       public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+       public const string MA_KHACH_HANG = "MA_KHACH_HANG";
+       public const string SDT = "SDT";
+       public const string DIA_CHI = "DIA_CHI";
+       public const string ID_NHOM_KHACH_HANG = "ID_NHOM_KHACH_HANG";
+       public const string MA_SO_THUE = "MA_SO_THUE";
+       public const string TEN_NHOM = "TEN_NHOM";
+   }
 }
