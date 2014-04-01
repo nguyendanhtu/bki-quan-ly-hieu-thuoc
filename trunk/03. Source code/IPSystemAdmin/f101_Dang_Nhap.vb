@@ -1,5 +1,5 @@
 ﻿Option Strict On
-Option Explicit On 
+Option Explicit On
 
 Imports IP.Core.IPCommon
 Imports IP.Core.IPException
@@ -11,7 +11,9 @@ Imports IP.Core.IPData.DBNames
 
 Public Class f101_Dang_Nhap
     Inherits System.Windows.Forms.Form
-
+    Public Shared Function getSpecialForeColor() As System.Drawing.Color
+        Return System.Drawing.Color.CornflowerBlue
+    End Function
 #Region "Nhiệm vụ của class"
     '***************************************************
     '* LOGIN - vào hệ thống   & setup application context
@@ -29,7 +31,7 @@ Public Class f101_Dang_Nhap
 
         'Add any initialization after the InitializeComponent() call
         FormatForm()
-        
+
     End Sub
 
     'Form overrides dispose to clean up the component list.
@@ -41,7 +43,7 @@ Public Class f101_Dang_Nhap
         End If
         MyBase.Dispose(disposing)
     End Sub
-
+    
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
@@ -80,7 +82,7 @@ Public Class f101_Dang_Nhap
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Maroon
+        Me.Panel1.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Panel1.Controls.Add(Me.m_btnOK)
         Me.Panel1.Controls.Add(Me.m_btnCancel)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -189,7 +191,7 @@ Public Class f101_Dang_Nhap
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Silver
+        Me.Panel2.BackColor = System.Drawing.Color.Black
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -201,7 +203,7 @@ Public Class f101_Dang_Nhap
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Maroon
+        Me.Label3.ForeColor = System.Drawing.Color.CornflowerBlue
         Me.Label3.Location = New System.Drawing.Point(3, 11)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(286, 20)
@@ -212,7 +214,7 @@ Public Class f101_Dang_Nhap
         'f101_Dang_Nhap
         '
         Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
-        Me.BackColor = System.Drawing.Color.Maroon
+        Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(302, 205)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)
@@ -382,5 +384,5 @@ Public Class f101_Dang_Nhap
     End Sub
 
 
-   
+
 End Class
