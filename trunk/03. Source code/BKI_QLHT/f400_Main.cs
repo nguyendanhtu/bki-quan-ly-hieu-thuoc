@@ -173,8 +173,8 @@ namespace BKI_QLHT
         {
             try
             {
-                f100_DM_BAC_SY v_frm_f100_DM_BAC_SY = new f100_DM_BAC_SY();
-                v_frm_f100_DM_BAC_SY.ShowDialog();
+                f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
+                v_frm_f100_V_DM_BAC_SY.ShowDialog();
             }
             catch (Exception v_e)
             {
