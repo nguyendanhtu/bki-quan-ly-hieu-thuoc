@@ -28,7 +28,6 @@ namespace BKI_QLHT
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox m_txt_ten_truy_cap;
         private System.Windows.Forms.TextBox m_txt_ten;
         private System.Windows.Forms.Label label5;
@@ -88,7 +87,6 @@ namespace BKI_QLHT
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.m_txt_ten_truy_cap = new System.Windows.Forms.TextBox();
             this.m_txt_ten = new System.Windows.Forms.TextBox();
             this.m_txt_mat_khau = new System.Windows.Forms.TextBox();
@@ -203,15 +201,6 @@ namespace BKI_QLHT
             this.label3.Text = "Trạng thái";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label4
-            // 
-            this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(216, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Có quyền Admin?";
-            // 
             // m_txt_ten_truy_cap
             // 
             this.m_txt_ten_truy_cap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -279,11 +268,11 @@ namespace BKI_QLHT
             // 
             // m_chk_is_admin
             // 
-            this.m_chk_is_admin.Location = new System.Drawing.Point(312, 122);
+            this.m_chk_is_admin.Location = new System.Drawing.Point(250, 120);
             this.m_chk_is_admin.Name = "m_chk_is_admin";
-            this.m_chk_is_admin.Size = new System.Drawing.Size(60, 20);
+            this.m_chk_is_admin.Size = new System.Drawing.Size(149, 20);
             this.m_chk_is_admin.TabIndex = 14;
-            this.m_chk_is_admin.Text = "Không";
+            this.m_chk_is_admin.Text = "Không có quyền admin?";
             // 
             // groupBox1
             // 
@@ -292,7 +281,6 @@ namespace BKI_QLHT
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.m_txt_ten_truy_cap);
             this.groupBox1.Controls.Add(this.m_txt_ten);
             this.groupBox1.Controls.Add(this.m_txt_mat_khau);
@@ -518,11 +506,11 @@ namespace BKI_QLHT
             {
                 if (m_chk_is_admin.Checked)
                 {
-                    m_chk_is_admin.Text = "Có";
+                    m_chk_is_admin.Text = "Có quyền admin";
                 }
                 else
                 {
-                    m_chk_is_admin.Text = "Không";
+                    m_chk_is_admin.Text = "Không có quyền admin";
                 }
             }
             catch (Exception v_e)

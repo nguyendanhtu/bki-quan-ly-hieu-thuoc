@@ -285,9 +285,8 @@ namespace BKI_QLHT
         #region Private Methods
         private void format_controls()
         {
-            CControlFormat.setFormStyle(this);
             CControlFormat.setC1FlexFormat(m_fg);
-            //CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
+            CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             set_define_events();
