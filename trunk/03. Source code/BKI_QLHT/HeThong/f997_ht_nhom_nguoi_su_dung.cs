@@ -59,7 +59,6 @@ namespace BKI_QLHT
 
         /// <summary>
         /// Clean up any resources being used.
-        /// </summary>
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -393,11 +392,7 @@ namespace BKI_QLHT
         }
         #endregion
 
-        //
-        //
-        //		EVENT HANLDERS
-        //
-        //
+        #region Events
         private void f997_ht_nhom_nguoi_su_dung_Load(object sender, System.EventArgs e)
         {
             try
@@ -467,10 +462,12 @@ namespace BKI_QLHT
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
-            
+
         }
+
+        #endregion
 
 
     }
