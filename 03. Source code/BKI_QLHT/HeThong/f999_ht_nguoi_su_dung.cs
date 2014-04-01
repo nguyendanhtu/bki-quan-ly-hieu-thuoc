@@ -39,7 +39,6 @@ namespace BKI_QLHT
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private Label label1;
         private Panel panel1;
-        private Panel panel2;
         private System.ComponentModel.IContainer components;
 
         public f999_ht_nguoi_su_dung()
@@ -88,11 +87,9 @@ namespace BKI_QLHT
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -198,8 +195,8 @@ namespace BKI_QLHT
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 0);
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_fg.Location = new System.Drawing.Point(0, 70);
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(718, 255);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
@@ -209,11 +206,11 @@ namespace BKI_QLHT
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.ForeColor = System.Drawing.Color.LavenderBlush;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.MaximumSize = new System.Drawing.Size(5000, 5000);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(718, 70);
+            this.label1.Size = new System.Drawing.Size(718, 48);
             this.label1.TabIndex = 21;
             this.label1.Text = "DANH SÁCH NGƯỜI SỬ DỤNG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,24 +221,15 @@ namespace BKI_QLHT
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(718, 70);
+            this.panel1.Size = new System.Drawing.Size(718, 48);
             this.panel1.TabIndex = 22;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.m_fg);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 70);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(718, 255);
-            this.panel2.TabIndex = 23;
             // 
             // f999_ht_nguoi_su_dung
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(718, 361);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f999_ht_nguoi_su_dung";
             this.Text = "F999 - Danh sách người sử dụng";
@@ -249,7 +237,6 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -288,7 +275,7 @@ namespace BKI_QLHT
         #region Private Methods
         private void format_controls()
         {
-            CControlFormat.setFormStyle(this);
+            CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
             CControlFormat.setC1FlexFormat(m_fg);
             m_fg.Cols[(int)e_col_Number.TRANG_THAI].DataMap = get_mapping_col_trang_thai();
             set_define_events();
