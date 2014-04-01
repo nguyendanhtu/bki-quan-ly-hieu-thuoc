@@ -63,8 +63,8 @@ namespace BKI_QLHT
         #endregion
 
 
-        #region events
-        private void m_cmd_save_Click(object sender, EventArgs e)
+        #region events  
+        private void m_cmd_save_Click_1(object sender, EventArgs e)
         {
             form_2_us_obj();
             switch (m_e_form_mode)
@@ -76,7 +76,7 @@ namespace BKI_QLHT
                 case DataEntryFormMode.SelectDataState:
                     break;
                 case DataEntryFormMode.UpdateDataState:
-                     m_us_dm_nha_cung_cap.Update();
+                    m_us_dm_nha_cung_cap.Update();
                     this.Close();
                     break;
                 case DataEntryFormMode.ViewDataState:
@@ -86,13 +86,11 @@ namespace BKI_QLHT
             }
         }
 
-        private void m_cmd_thoat_Click(object sender, EventArgs e)
+        private void m_cmd_thoat_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
         #endregion
-
-        
     }
 }
