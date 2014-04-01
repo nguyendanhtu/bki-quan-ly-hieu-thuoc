@@ -90,6 +90,10 @@ namespace BKI_QLHT.HeThong
             CControlFormat.setFormStyle(this);
         }
 
+        
+        #endregion
+
+        #region Events
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -121,6 +125,6 @@ namespace BKI_QLHT.HeThong
         }
         #endregion
 
-        
+
     }
 }

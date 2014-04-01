@@ -23,6 +23,7 @@ namespace BKI_QLHT.HeThong
         public f995_ht_phan_quyen_cho_nhom()
         {
             InitializeComponent();
+            format_control();
         }
         #endregion
 
@@ -36,9 +37,9 @@ namespace BKI_QLHT.HeThong
         #endregion
 
         #region Private Method
-        private void load_data_2_cbo() {
+        private void load_data_2_cbo_nhom_nguoi_su_dung() {
             m_us_ht_user_group.FillDataset(m_ds_ht_user_group);
-            m_cbo_user_group.DataSource = m_ds_ht_user_group.Tables[0];
+            m_cbo_user_group.DataSource = m_ds_ht_user_group.HT_USER_GROUP;
             m_cbo_user_group.DisplayMember = HT_USER_GROUP.USER_GROUP_NAME;
             m_cbo_user_group.ValueMember = HT_USER_GROUP.ID;
             m_bool_load_data_complete = true;
@@ -81,14 +82,14 @@ namespace BKI_QLHT.HeThong
         #region Event
         private void f995_ht_phan_quyen_cho_nhom_Load(object sender, EventArgs e)
         {
-            format_control();
-            load_data_2_cbo();
-            m_us_ht_user_group.FillDataset(m_ds_ht_user_group);
-            DataRow v_dr = m_ds_ht_user_group.Tables[0].Rows[0];
-            load_data_2_rtxt_quyen_da_cap(CIPConvert.ToDecimal(v_dr[HT_USER_GROUP.ID]));
-            load_data_2_rtxt_quyen_chua_cap(CIPConvert.ToDecimal(v_dr[HT_USER_GROUP.ID]));
-            m_dc_index_in_left = 0;
-            m_dc_index_in_right = 0;
+            
+            load_data_2_cbo_nhom_nguoi_su_dung();
+            //m_us_ht_user_group.FillDataset(m_ds_ht_user_group);
+            //DataRow v_dr = m_ds_ht_user_group.Tables[0].Rows[0];
+            //load_data_2_rtxt_quyen_da_cap(CIPConvert.ToDecimal(v_dr[HT_USER_GROUP.ID]));
+            //load_data_2_rtxt_quyen_chua_cap(CIPConvert.ToDecimal(v_dr[HT_USER_GROUP.ID]));
+            //m_dc_index_in_left = 0;
+            //m_dc_index_in_right = 0;
         }
 
         private void m_lbox_quyen_chua_cap_SelectedIndexChanged(object sender, EventArgs e)
