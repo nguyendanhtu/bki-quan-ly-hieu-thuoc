@@ -81,11 +81,20 @@
     <Compile Include="DanhMuc\f500_dm_danh_muc_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DanhMuc\f800_dm_nha_cung_cap_DE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f800_dm_nha_cung_cap_DE.Designer.cs">
+      <DependentUpon>f800_dm_nha_cung_cap_DE.cs</DependentUpon>
+    </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="f400_Main.Designer.cs">
       <DependentUpon>f400_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\f800_dm_nha_cung_cap.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="HeThong\collection.cs" />
     <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.cs">
@@ -117,8 +126,14 @@
     <EmbeddedResource Include="DanhMuc\f500_dm_danh_muc_thuoc.resx">
       <DependentUpon>f500_dm_danh_muc_thuoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f800_dm_nha_cung_cap_DE.resx">
+      <DependentUpon>f800_dm_nha_cung_cap_DE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f800_dm_nha_cung_cap.resx">
+      <DependentUpon>f800_dm_nha_cung_cap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f995_ht_phan_quyen_cho_nhom.resx">
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>

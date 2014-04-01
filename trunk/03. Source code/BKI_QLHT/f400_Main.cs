@@ -188,5 +188,12 @@ namespace BKI_QLHT
             frm.ShowDialog();
         }
 
+        private void m_menu_item_danh_muc_nha_cung_cap_Click(object sender, EventArgs e)
+        {
+            f800_dm_nha_cung_cap frm = new f800_dm_nha_cung_cap();
+            frm.ShowDialog();
+        }
+
+
     }
 }
