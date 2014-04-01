@@ -152,5 +152,12 @@ public class US_DM_NHA_CUNG_CAP : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDatasetSearch(DS_DM_NHA_CUNG_CAP ip_ds_dm_nha_cung_cap, string ip_str_ten_nha_cung_cap)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_DM_NHA_CUNG_CAP_Search");
+        v_stored_proc.addNVarcharInputParam("@TEN_NHA_CUNG_CAP",ip_str_ten_nha_cung_cap);
+        v_stored_proc.fillDataSetByCommand(this,ip_ds_dm_nha_cung_cap);
+    }
+}
 }
