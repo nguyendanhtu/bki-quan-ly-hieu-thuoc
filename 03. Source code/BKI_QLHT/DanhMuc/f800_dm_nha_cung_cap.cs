@@ -36,8 +36,7 @@ namespace BKI_QLHT
 		internal SIS.Controls.Button.SiSButton m_cmd_delete;
 		internal SIS.Controls.Button.SiSButton m_cmd_update;
 		internal SIS.Controls.Button.SiSButton m_cmd_insert;
-		internal SIS.Controls.Button.SiSButton m_cmd_exit;
-		internal SIS.Controls.Button.SiSButton m_cmd_view;
+        internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private Label label1;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private TextBox m_txt_ten_nha_cung_cap;
@@ -84,7 +83,6 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_grv_nha_cung_cap = new C1.Win.C1FlexGrid.C1FlexGrid();
@@ -126,7 +124,6 @@ namespace BKI_QLHT
             // 
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -165,21 +162,6 @@ namespace BKI_QLHT
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
-            // 
-            // m_cmd_view
-            // 
-            this.m_cmd_view.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_view.ImageIndex = 18;
-            this.m_cmd_view.ImageList = this.ImageList;
-            this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_view.Name = "m_cmd_view";
-            this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_view.TabIndex = 21;
-            this.m_cmd_view.Text = "Xem";
             // 
             // m_cmd_delete
             // 
@@ -307,7 +289,6 @@ namespace BKI_QLHT
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             this.Load += new System.EventHandler(this.f800_dm_nha_cung_cap_Load);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-            m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
         }
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_grv_nha_cung_cap);
