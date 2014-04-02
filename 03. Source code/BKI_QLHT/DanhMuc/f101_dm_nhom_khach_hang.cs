@@ -146,7 +146,7 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(686, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(528, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_insert
@@ -158,7 +158,7 @@ namespace BKI_QLHT
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(330, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(172, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -173,7 +173,7 @@ namespace BKI_QLHT
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(418, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(260, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -188,7 +188,7 @@ namespace BKI_QLHT
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(506, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(348, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -203,7 +203,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(594, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(436, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -214,7 +214,7 @@ namespace BKI_QLHT
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Location = new System.Drawing.Point(0, 58);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 138);
+            this.m_fg.Size = new System.Drawing.Size(508, 176);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             this.m_fg.DoubleClick += new System.EventHandler(this.m_fg_DoubleClick);
@@ -225,18 +225,19 @@ namespace BKI_QLHT
             this.groupBox1.Controls.Add(this.m_cmd_tim_kiem);
             this.groupBox1.Controls.Add(this.m_fg);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 171);
+            this.groupBox1.Location = new System.Drawing.Point(0, 139);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(686, 202);
+            this.groupBox1.Size = new System.Drawing.Size(528, 234);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhóm khách hàng";
             // 
             // m_text_tim_kiem
             // 
-            this.m_text_tim_kiem.Location = new System.Drawing.Point(38, 27);
+            this.m_text_tim_kiem.Location = new System.Drawing.Point(38, 22);
+            this.m_text_tim_kiem.Multiline = true;
             this.m_text_tim_kiem.Name = "m_text_tim_kiem";
-            this.m_text_tim_kiem.Size = new System.Drawing.Size(265, 20);
+            this.m_text_tim_kiem.Size = new System.Drawing.Size(265, 25);
             this.m_text_tim_kiem.TabIndex = 23;
             // 
             // m_cmd_tim_kiem
@@ -262,9 +263,10 @@ namespace BKI_QLHT
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.m_txt_ma_nhom);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(662, 133);
+            this.groupBox2.Size = new System.Drawing.Size(528, 133);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cập nhật nhóm khách hàng";
@@ -277,7 +279,7 @@ namespace BKI_QLHT
             this.m_cmd_Cap_Nhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_Cap_Nhat.ImageIndex = 10;
             this.m_cmd_Cap_Nhat.ImageList = this.ImageList;
-            this.m_cmd_Cap_Nhat.Location = new System.Drawing.Point(96, 90);
+            this.m_cmd_Cap_Nhat.Location = new System.Drawing.Point(96, 99);
             this.m_cmd_Cap_Nhat.Name = "m_cmd_Cap_Nhat";
             this.m_cmd_Cap_Nhat.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_Cap_Nhat.TabIndex = 15;
@@ -292,7 +294,7 @@ namespace BKI_QLHT
             this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_huy.ImageIndex = 4;
             this.m_cmd_huy.ImageList = this.ImageList;
-            this.m_cmd_huy.Location = new System.Drawing.Point(216, 90);
+            this.m_cmd_huy.Location = new System.Drawing.Point(190, 99);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_huy.TabIndex = 16;
@@ -301,7 +303,7 @@ namespace BKI_QLHT
             // 
             // m_txt_ten_nhom
             // 
-            this.m_txt_ten_nhom.Location = new System.Drawing.Point(318, 42);
+            this.m_txt_ten_nhom.Location = new System.Drawing.Point(96, 61);
             this.m_txt_ten_nhom.Name = "m_txt_ten_nhom";
             this.m_txt_ten_nhom.Size = new System.Drawing.Size(236, 20);
             this.m_txt_ten_nhom.TabIndex = 2;
@@ -309,7 +311,7 @@ namespace BKI_QLHT
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(257, 45);
+            this.label2.Location = new System.Drawing.Point(35, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 0;
@@ -317,16 +319,16 @@ namespace BKI_QLHT
             // 
             // m_txt_ma_nhom
             // 
-            this.m_txt_ma_nhom.Location = new System.Drawing.Point(96, 42);
+            this.m_txt_ma_nhom.Location = new System.Drawing.Point(96, 28);
             this.m_txt_ma_nhom.Name = "m_txt_ma_nhom";
-            this.m_txt_ma_nhom.Size = new System.Drawing.Size(112, 20);
+            this.m_txt_ma_nhom.Size = new System.Drawing.Size(236, 20);
             this.m_txt_ma_nhom.TabIndex = 1;
             this.m_txt_ma_nhom.TextChanged += new System.EventHandler(this.m_txt_ma_nhom_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 45);
+            this.label1.Location = new System.Drawing.Point(39, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 0;
@@ -335,7 +337,7 @@ namespace BKI_QLHT
             // f101_dm_nhom_khach_hang
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(686, 409);
+            this.ClientSize = new System.Drawing.Size(528, 409);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.m_pnl_out_place_dm);
