@@ -609,7 +609,7 @@ namespace BKI_QLHT
 
         private void m_cmd_tim_kiem_Click(object sender, EventArgs e)
         {
-            string v_str_tu_khoa = m_text_tim_kiem.Text;
+            string v_str_tu_khoa = m_text_tim_kiem.Text.Trim();
             US_DM_NHOM_KHACH_HANG v_us_dm_nhom_khach_hang = new US_DM_NHOM_KHACH_HANG();
             DS_DM_NHOM_KHACH_HANG v_ds_dm_nhom_khach_hang = new DS_DM_NHOM_KHACH_HANG();
             v_us_dm_nhom_khach_hang.FillDatasetSearch(v_ds_dm_nhom_khach_hang, v_str_tu_khoa);
