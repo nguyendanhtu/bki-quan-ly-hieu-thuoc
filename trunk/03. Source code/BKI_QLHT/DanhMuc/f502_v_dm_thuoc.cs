@@ -36,8 +36,7 @@ namespace BKI_QLHT
 		internal SIS.Controls.Button.SiSButton m_cmd_delete;
 		internal SIS.Controls.Button.SiSButton m_cmd_update;
 		internal SIS.Controls.Button.SiSButton m_cmd_insert;
-		internal SIS.Controls.Button.SiSButton m_cmd_exit;
-		internal SIS.Controls.Button.SiSButton m_cmd_view;
+        internal SIS.Controls.Button.SiSButton m_cmd_exit;
 		private System.ComponentModel.IContainer components;
 
 		public f502_v_dm_thuoc()
@@ -81,7 +80,6 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
@@ -120,7 +118,6 @@ namespace BKI_QLHT
             // 
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -159,21 +156,6 @@ namespace BKI_QLHT
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
-            // 
-            // m_cmd_view
-            // 
-            this.m_cmd_view.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_view.ImageIndex = 18;
-            this.m_cmd_view.ImageList = this.ImageList;
-            this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_view.Name = "m_cmd_view";
-            this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_view.TabIndex = 21;
-            this.m_cmd_view.Text = "Xem";
             // 
             // m_cmd_delete
             // 
@@ -214,6 +196,7 @@ namespace BKI_QLHT
             this.m_fg.Size = new System.Drawing.Size(686, 373);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
+            this.m_fg.DoubleClick += new System.EventHandler(this.m_fg_DoubleClick);
             // 
             // f502_v_dm_thuoc
             // 
@@ -247,6 +230,8 @@ namespace BKI_QLHT
 		ITransferDataRow m_obj_trans;		
 		DS_V_DM_THUOC m_ds = new DS_V_DM_THUOC();
 		US_V_DM_THUOC m_us = new US_V_DM_THUOC();
+        US_DM_THUOC m_us_t = new US_DM_THUOC();
+        DS_DM_THUOC m_ds_t = new DS_DM_THUOC();
 		#endregion
 
 		#region Private Methods
@@ -273,7 +258,7 @@ namespace BKI_QLHT
 			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 			m_fg.Redraw = true;
 		}
-		private void grid2us_object(US_V_DM_THUOC i_us
+		private void grid2us_object(US_DM_THUOC i_us
 			, int i_grid_row) {
 			DataRow v_dr;
 			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
@@ -290,18 +275,18 @@ namespace BKI_QLHT
 		}
 
 
-		private void insert_v_dm_thuoc(){			
-		//	f502_v_dm_thuoc_DE v_fDE = new  f502_v_dm_thuoc_DE();								
-		//	v_fDE.display();
+		private void insert_v_dm_thuoc(){
+            f503_v_dm_thuoc_de v_fDE = new f503_v_dm_thuoc_de();								
+		    v_fDE.display_for_insert();
 			load_data_2_grid();
 		}
 
 		private void update_v_dm_thuoc(){			
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
-			grid2us_object(m_us, m_fg.Row);
-		//	f502_v_dm_thuoc_DE v_fDE = new f502_v_dm_thuoc_DE();
-		//	v_fDE.display(m_us);
+			grid2us_object(m_us_t, m_fg.Row);
+            f503_v_dm_thuoc_de v_fDE = new f503_v_dm_thuoc_de();
+            v_fDE.display_for_update(m_us_t);
 			load_data_2_grid();
 		}
 				
@@ -309,7 +294,7 @@ namespace BKI_QLHT
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
 			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
-			US_V_DM_THUOC v_us = new US_V_DM_THUOC();
+			US_DM_THUOC v_us = new US_DM_THUOC();
 			grid2us_object(v_us, m_fg.Row);
 			try {			
 				v_us.BeginTransaction();    											
@@ -328,7 +313,7 @@ namespace BKI_QLHT
 		private void view_v_dm_thuoc(){			
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			grid2us_object(m_us, m_fg.Row);
+			grid2us_object(m_us_t, m_fg.Row);
 		//	f502_v_dm_thuoc_DE v_fDE = new f502_v_dm_thuoc_DE();			
 		//	v_fDE.display(m_us);
 		}
@@ -337,7 +322,7 @@ namespace BKI_QLHT
 			m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
 			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
 			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-			m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            //m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
 		}
 		#endregion
 
@@ -400,6 +385,19 @@ namespace BKI_QLHT
 				CSystemLog_301.ExceptionHandle(v_e);
 			}
 		}
+
+        private void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                update_v_dm_thuoc();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
 	}
 }
