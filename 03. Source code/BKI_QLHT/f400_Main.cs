@@ -218,6 +218,26 @@ namespace BKI_QLHT
             frm.ShowDialog();
         }
 
+        private void m_menu_item_he_thong_danh_muc_control_Click(object sender, EventArgs e)
+        {
+            f991_v_ht_control_in_form v_frm = new f991_v_ht_control_in_form();
+            v_frm.display();
+        }
+
+        private void m_menu_item_he_thong_phan_quyen_he_thong_Click(object sender, EventArgs e)
+        {
+            f993_phan_quyen_he_thong v_frm = new f993_phan_quyen_he_thong();
+            v_frm.display();
+        }
+
+        private void m_menu_item_he_thong_phan_quyen_chi_tiet_Click(object sender, EventArgs e)
+        {
+            f994_phan_quyen_detail v_frm = new f994_phan_quyen_detail();
+            v_frm.ShowDialog();
+        }
+
+        
+
 
     }
 }
