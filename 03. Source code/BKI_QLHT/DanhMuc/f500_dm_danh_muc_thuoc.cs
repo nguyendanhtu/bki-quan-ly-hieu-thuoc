@@ -401,9 +401,9 @@ namespace BKI_QLHT
 		private void format_controls(){
             //m_pnl_danh_muc.Enabled = false;
 
-            //CControlFormat.setFormStyle(this);
+            CControlFormat.setFormStyle(this);
 			CControlFormat.setC1FlexFormat(m_grv_danh_muc_thuoc);
-            //CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
+            CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
 			set_define_events();
 			this.KeyPreview = true;
 		

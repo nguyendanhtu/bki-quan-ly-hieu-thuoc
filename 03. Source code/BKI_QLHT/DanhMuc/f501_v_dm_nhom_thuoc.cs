@@ -428,7 +428,7 @@ namespace BKI_QLHT
 
 		#region Private Methods
 		private void format_controls(){
-            //CControlFormat.setFormStyle(this);
+            CControlFormat.setFormStyle(this);
 			CControlFormat.setC1FlexFormat(m_grv_nhom_thuoc);
 			set_define_events();
 			this.KeyPreview = true;		
