@@ -46,13 +46,13 @@ namespace BKI_QLHT
             this.m_menu_item_danh_muc_nha_cung_cap = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menu_item_danh_muc_khach_hang = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menu_item_danh_muc_nhom_khach_hang = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_menu_item_danh_muc_nhom_thuoc = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_nghiepvu = new System.Windows.Forms.ToolStripMenuItem();
             this.m_menuitem_baocao = new System.Windows.Forms.ToolStripMenuItem();
             this.m_lbl_du_an_sap_kt = new System.Windows.Forms.Label();
             this.m_lbl_thong_bao_hop_dong_sap_het_han = new System.Windows.Forms.Label();
             this.m_lbl_het_han_thu_viec = new System.Windows.Forms.Label();
             this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky = new System.Windows.Forms.Label();
-            this.m_menu_item_danh_muc_nhom_thuoc = new System.Windows.Forms.ToolStripMenuItem();
             this.m_mst_menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,7 +162,7 @@ namespace BKI_QLHT
             // 
             this.m_menu_item_danh_muc_nha_cung_cap.Name = "m_menu_item_danh_muc_nha_cung_cap";
             this.m_menu_item_danh_muc_nha_cung_cap.Size = new System.Drawing.Size(229, 22);
-            this.m_menu_item_danh_muc_nha_cung_cap.Text = " Danh muc nhà cung cấp";
+            this.m_menu_item_danh_muc_nha_cung_cap.Text = "Danh muc nhà cung cấp";
             this.m_menu_item_danh_muc_nha_cung_cap.Click += new System.EventHandler(this.m_menu_item_danh_muc_nha_cung_cap_Click);
             // 
             // m_menu_item_danh_muc_khach_hang
@@ -178,6 +178,13 @@ namespace BKI_QLHT
             this.m_menu_item_danh_muc_nhom_khach_hang.Size = new System.Drawing.Size(229, 22);
             this.m_menu_item_danh_muc_nhom_khach_hang.Text = "Danh mục nhóm khách hàng";
             this.m_menu_item_danh_muc_nhom_khach_hang.Click += new System.EventHandler(this.m_menu_item_danh_muc_nhom_khach_hang_Click);
+            // 
+            // m_menu_item_danh_muc_nhom_thuoc
+            // 
+            this.m_menu_item_danh_muc_nhom_thuoc.Name = "m_menu_item_danh_muc_nhom_thuoc";
+            this.m_menu_item_danh_muc_nhom_thuoc.Size = new System.Drawing.Size(229, 22);
+            this.m_menu_item_danh_muc_nhom_thuoc.Text = "Danh mục nhóm thuốc";
+            this.m_menu_item_danh_muc_nhom_thuoc.Click += new System.EventHandler(this.m_menu_item_danh_muc_nhom_thuoc_Click);
             // 
             // m_menuitem_nghiepvu
             // 
@@ -242,13 +249,6 @@ namespace BKI_QLHT
             this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Size = new System.Drawing.Size(267, 18);
             this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.TabIndex = 5;
             this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Text = "Hợp đồng đã hết hạn nhưng chưa ký";
-            // 
-            // m_menu_item_danh_muc_nhom_thuoc
-            // 
-            this.m_menu_item_danh_muc_nhom_thuoc.Name = "m_menu_item_danh_muc_nhom_thuoc";
-            this.m_menu_item_danh_muc_nhom_thuoc.Size = new System.Drawing.Size(229, 22);
-            this.m_menu_item_danh_muc_nhom_thuoc.Text = "Danh mục nhóm thuốc";
-            this.m_menu_item_danh_muc_nhom_thuoc.Click += new System.EventHandler(this.m_menu_item_danh_muc_nhom_thuoc_Click);
             // 
             // f400_Main
             // 
