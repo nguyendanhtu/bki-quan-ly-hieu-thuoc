@@ -26,11 +26,11 @@ namespace BKI_QLHT.US.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THAIPH-PC\\SQLEXPRESS;Initial Catalog=BKI_HRM;Persist Security Info=Tr" +
-            "ue;User ID=sa;Password=sa")]
-        public string BKI_HRMConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THAIPH-PC\\SQLEXPRESS;Initial Catalog=BKI_QLHT;Persist Security Info=T" +
+            "rue;User ID=sa;Password=sa")]
+        public string BKI_QLHTConnectionString {
             get {
-                return ((string)(this["BKI_HRMConnectionString"]));
+                return ((string)(this["BKI_QLHTConnectionString"]));
             }
         }
     }

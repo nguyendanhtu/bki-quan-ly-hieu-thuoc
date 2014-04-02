@@ -12,7 +12,7 @@ using BKI_QLHT.US;
 using IP.Core.IPCommon;
 using IP.Core.IPExcelReport;
 using IP.Core.IPSystemAdmin;
-using BKI_QLHT.HeThong;
+using BKI_QLHT;
 
 namespace BKI_QLHT
 {

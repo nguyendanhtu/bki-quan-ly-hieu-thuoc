@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BKI_QLHT.HeThong
+namespace BKI_QLHT
 {
     class collection
     {

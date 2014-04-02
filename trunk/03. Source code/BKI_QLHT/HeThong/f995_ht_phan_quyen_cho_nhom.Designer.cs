@@ -1,4 +1,4 @@
-﻿namespace BKI_QLHT.HeThong
+﻿namespace BKI_QLHT
 {
     partial class f995_ht_phan_quyen_cho_nhom
     {
