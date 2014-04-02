@@ -323,7 +323,7 @@ namespace BKI_QLHT
             this.m_txt_ma_nhom.Name = "m_txt_ma_nhom";
             this.m_txt_ma_nhom.Size = new System.Drawing.Size(236, 20);
             this.m_txt_ma_nhom.TabIndex = 1;
-            this.m_txt_ma_nhom.TextChanged += new System.EventHandler(this.m_txt_ma_nhom_TextChanged);
+          
             // 
             // label1
             // 
@@ -518,6 +518,8 @@ namespace BKI_QLHT
 
 		private void m_cmd_insert_Click(object sender, EventArgs e) {
 			try{
+                m_txt_ma_nhom.Clear();
+                m_txt_ten_nhom.Clear();
 				insert_dm_nhom_khach_hang();
 			}
 			catch (Exception v_e){
@@ -614,18 +616,6 @@ namespace BKI_QLHT
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds_dm_nhom_khach_hang, m_fg, m_obj_trans);
             m_fg.Redraw = true;
-        }
-
-        private void m_txt_ma_nhom_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                insert_dm_nhom_khach_hang();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
         }
 
         private void m_fg_DoubleClick(object sender, EventArgs e)
