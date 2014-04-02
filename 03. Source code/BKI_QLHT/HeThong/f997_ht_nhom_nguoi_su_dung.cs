@@ -23,7 +23,7 @@ using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
-using BKI_QLHT.HeThong;
+using BKI_QLHT;
 
 namespace BKI_QLHT
 {

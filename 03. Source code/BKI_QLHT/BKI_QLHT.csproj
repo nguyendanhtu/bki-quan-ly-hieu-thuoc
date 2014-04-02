@@ -121,6 +121,27 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HeThong\collection.cs" />
+    <Compile Include="HeThong\f990_ht_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f991_v_ht_control_in_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f992_phan_quyen_he_thong_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f992_phan_quyen_he_thong_de.designer.cs">
+      <DependentUpon>f992_phan_quyen_he_thong_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\f993_phan_quyen_he_thong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f994_phan_quyen_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f994_phan_quyen_detail.designer.cs">
+      <DependentUpon>f994_phan_quyen_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +197,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f800_dm_nha_cung_cap.resx">
       <DependentUpon>f800_dm_nha_cung_cap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f990_ht_form.resx">
+      <DependentUpon>f990_ht_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f991_v_ht_control_in_form.resx">
+      <DependentUpon>f991_v_ht_control_in_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f992_phan_quyen_he_thong_de.resx">
+      <DependentUpon>f992_phan_quyen_he_thong_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f993_phan_quyen_he_thong.resx">
+      <DependentUpon>f993_phan_quyen_he_thong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f994_phan_quyen_detail.resx">
+      <DependentUpon>f994_phan_quyen_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f995_ht_phan_quyen_cho_nhom.resx">
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>

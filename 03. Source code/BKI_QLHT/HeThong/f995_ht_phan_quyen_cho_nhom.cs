@@ -15,7 +15,7 @@ using IP.Core.IPUserService;
 using IP.Core.IPData;
 using IP.Core.IPSystemAdmin;
 
-namespace BKI_QLHT.HeThong
+namespace BKI_QLHT
 {
     public partial class f995_ht_phan_quyen_cho_nhom : Form
     {

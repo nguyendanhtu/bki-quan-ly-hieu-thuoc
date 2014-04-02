@@ -1,4 +1,4 @@
-﻿namespace BKI_QLHT.HeThong
+﻿namespace BKI_QLHT
 {
     partial class f996_ht_nhom_nguoi_su_dung_de
     {

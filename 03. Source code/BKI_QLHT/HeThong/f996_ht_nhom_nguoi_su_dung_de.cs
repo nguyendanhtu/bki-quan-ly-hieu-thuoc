@@ -12,7 +12,7 @@ using BKI_QLHT.US;
 using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 
-namespace BKI_QLHT.HeThong
+namespace BKI_QLHT
 {
     public partial class f996_ht_nhom_nguoi_su_dung_de : Form
     {
