@@ -206,6 +206,12 @@ namespace BKI_QLHT
             frm.ShowDialog();
         }
 
+        private void m_menu_item_danh_muc_nhom_thuoc_Click(object sender, EventArgs e)
+        {
+            f501_v_dm_nhom_thuoc frm = new f501_v_dm_nhom_thuoc();
+            frm.ShowDialog();
+        }
+
 
     }
 }

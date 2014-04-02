@@ -87,6 +87,9 @@
     <Compile Include="DanhMuc\f500_dm_danh_muc_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DanhMuc\f501_v_dm_nhom_thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f800_dm_nha_cung_cap_DE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f500_dm_danh_muc_thuoc.resx">
       <DependentUpon>f500_dm_danh_muc_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f501_v_dm_nhom_thuoc.resx">
+      <DependentUpon>f501_v_dm_nhom_thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f800_dm_nha_cung_cap_DE.resx">
       <DependentUpon>f800_dm_nha_cung_cap_DE.cs</DependentUpon>
