@@ -290,7 +290,7 @@ namespace BKI_QLHT
             this.m_cmd_cap_nhat.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_cap_nhat.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_cap_nhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_cap_nhat.ImageIndex = 2;
+            this.m_cmd_cap_nhat.ImageIndex = 10;
             this.m_cmd_cap_nhat.ImageList = this.ImageList;
             this.m_cmd_cap_nhat.Location = new System.Drawing.Point(81, 109);
             this.m_cmd_cap_nhat.Name = "m_cmd_cap_nhat";
@@ -590,6 +590,9 @@ namespace BKI_QLHT
 
 		private void m_cmd_insert_Click(object sender, EventArgs e) {
 			try{
+                m_txt_ho_ten.Clear();
+                m_txt_dia_chi.Clear();
+                m_txt_dien_thoai.Clear();
 				insert_dm_bac_sy();
 			}
 			catch (Exception v_e){
