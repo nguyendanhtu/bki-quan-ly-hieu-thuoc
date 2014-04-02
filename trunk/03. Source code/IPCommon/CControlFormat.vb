@@ -50,7 +50,7 @@ Public Class CControlFormat
     End Function
 
     Private Shared Function getRegularForeColor() As System.Drawing.Color
-        Return System.Drawing.Color.Black
+        Return System.Drawing.Color.DarkRed
     End Function
 
     Private Shared Function getSpecialForeColor() As System.Drawing.Color
@@ -59,6 +59,7 @@ Public Class CControlFormat
 
     Private Shared Function getRegularBackColor() As System.Drawing.Color
         Return System.Drawing.Color.White
+
     End Function
 
     Private Shared Function getBoldFont() As System.Drawing.Font
@@ -91,7 +92,7 @@ Public Class CControlFormat
             ip_control.Font = getRegularFont()
             ip_control.ForeColor = getRegularForeColor()
         ElseIf TypeOf ip_control Is GroupBox Then
-            ip_control.Font = getBoldFont()
+            ip_control.Font = getRegularFont()
             ip_control.ForeColor = getSpecialForeColor()
             ip_control.BackColor = getRegularBackColor()
         ElseIf TypeOf ip_control Is ComboBox Then
@@ -217,20 +218,23 @@ Public Class CControlFormat
                 For Each v_Control In .Controls
                     If TypeOf v_Control Is Label Then
                         v_Control.Font = getRegularFont()
-                        v_Control.ForeColor = getRegularForeColor()
+                        v_Control.ForeColor = Drawing.Color.DarkBlue
                         v_Control.BackColor = getRegularBackColor()
                     ElseIf TypeOf v_Control Is TextBox Then
                         v_Control.Font = getRegularFont()
                         v_Control.ForeColor = getRegularForeColor()
                     ElseIf TypeOf v_Control Is GroupBox Then
                         v_Control.Font = getRegularFont()
-                        v_Control.ForeColor = getRegularForeColor()
+                        v_Control.ForeColor = Drawing.Color.DarkGreen
                         v_Control.BackColor = getRegularBackColor()
                     ElseIf TypeOf v_Control Is DataGrid_Custom Then
                         v_Control.Font = getRegularFont()
                     ElseIf TypeOf v_Control Is ComboBox Then
                         v_Control.Font = getRegularFont()
                         v_Control.ForeColor = getRegularForeColor()
+                    ElseIf TypeOf v_Control Is Panel Then
+                        v_Control.Font = getRegularFont()
+                        v_Control.BackColor = Drawing.Color.CornflowerBlue
                     End If
                 Next
             End With
@@ -246,8 +250,8 @@ Public Class CControlFormat
         ' Dùng để set các property của DataGrid
         '***************************************************
         With i_datagrid
-            .AlternatingBackColor = System.Drawing.Color.OldLace
-            .BackColor = System.Drawing.Color.OldLace
+            .AlternatingBackColor = System.Drawing.Color.Orange
+            .BackColor = System.Drawing.Color.Orange
             .BackgroundColor = System.Drawing.Color.Tan
             .BorderStyle = System.Windows.Forms.BorderStyle.None
             .CaptionBackColor = System.Drawing.Color.SaddleBrown
@@ -261,9 +265,10 @@ Public Class CControlFormat
             .HeaderForeColor = System.Drawing.Color.SaddleBrown
             .LinkColor = System.Drawing.Color.DarkSlateBlue
             .ParentRowsBackColor = System.Drawing.Color.OldLace
-            .ParentRowsForeColor = System.Drawing.Color.DarkSlateGray
-            .SelectionBackColor = System.Drawing.Color.SlateGray
-            .SelectionForeColor = System.Drawing.Color.White
+            .ParentRowsForeColor = System.Drawing.Color.DarkRed
+            .SelectionBackColor = System.Drawing.Color.Olive
+            .SelectionForeColor = System.Drawing.Color.Orange
+
         End With
     End Sub
 
@@ -403,6 +408,10 @@ Public Class CControlFormat
         End Select
         i_lbl.Font = v_Font
         i_lbl.ForeColor = v_ForeColor
+    End Sub
+
+    Public Shared Sub setFormStyle(ByVal i_Panel As System.Windows.Forms.Panel)
+        i_Panel.BackColor = Drawing.Color.Green
     End Sub
 #End Region
 
