@@ -92,5 +92,10 @@ namespace BKI_QLHT
         }
 
         #endregion
+
+        private void f800_dm_nha_cung_cap_DE_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

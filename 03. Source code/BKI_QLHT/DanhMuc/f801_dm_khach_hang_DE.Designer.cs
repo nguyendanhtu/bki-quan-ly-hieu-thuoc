@@ -261,6 +261,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "f801_dm_khach_hang_DE";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "f801_dm_khach_hang_DE";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
