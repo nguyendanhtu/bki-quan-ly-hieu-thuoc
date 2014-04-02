@@ -166,6 +166,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_KHACH_HANG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_NHOM_THUOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -440,6 +445,17 @@
     </None>
     <None Include="DS_V_DM_KHACH_HANG.xss">
       <DependentUpon>DS_V_DM_KHACH_HANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NHOM_THUOC.xsc">
+      <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NHOM_THUOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_NHOM_THUOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_NHOM_THUOC.xss">
+      <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
