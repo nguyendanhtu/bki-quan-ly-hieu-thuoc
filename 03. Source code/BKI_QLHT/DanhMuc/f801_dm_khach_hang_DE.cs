@@ -106,6 +106,12 @@ namespace BKI_QLHT
                    break;
            }
        }
+       private void m_cmd_exit_Click(object sender, EventArgs e)
+       {
+           this.Close();
+       }
         #endregion
+
+       
     }
 }
