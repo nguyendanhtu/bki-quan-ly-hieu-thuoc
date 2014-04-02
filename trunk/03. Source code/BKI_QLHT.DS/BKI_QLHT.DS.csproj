@@ -177,6 +177,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_THUOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_THUOC.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -460,6 +465,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_THUOC.xsc">
+      <DependentUpon>DS_V_DM_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_THUOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_THUOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_THUOC.xss">
+      <DependentUpon>DS_V_DM_THUOC.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

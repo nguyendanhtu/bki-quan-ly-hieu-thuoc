@@ -75,6 +75,7 @@
     <Compile Include="US_V_DM_BAC_SY.cs" />
     <Compile Include="US_V_DM_KHACH_HANG.cs" />
     <Compile Include="US_V_DM_NHOM_THUOC.cs" />
+    <Compile Include="US_V_DM_THUOC.cs" />
     <Compile Include="Windows.cs" />
   </ItemGroup>
   <ItemGroup>

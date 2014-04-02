@@ -687,5 +687,25 @@
        public const string ID_DANH_MUC_THUOC = "ID_DANH_MUC_THUOC";
        public const string GHI_CHU = "GHI_CHU";
    }
+    /// <summary>
+    /// 
+    /// </summary>
+   public class V_DM_THUOC
+   {
+       public const string ID = "ID";
+       public const string THUOC_THAY_THE = "THUOC_THAY_THE";
+       public const string ID_DANH_MUC_THUOC = "ID_DANH_MUC_THUOC";
+       public const string ID_NHOM_THUOC = "ID_NHOM_THUOC";
+       public const string TT_HOAT_CHAT = "TT_HOAT_CHAT";
+       public const string TT_THUOC = "TT_THUOC";
+       public const string TEN_THUOC = "TEN_THUOC";
+       public const string DUONG_DUNG_DANG_DUNG = "DUONG_DUNG_DANG_DUNG";
+       public const string TUYEN_SU_DUNG_5 = "TUYEN_SU_DUNG_5";
+       public const string TUYEN_SU_DUNG_6 = "TUYEN_SU_DUNG_6";
+       public const string TUYEN_SU_DUNG_7 = "TUYEN_SU_DUNG_7";
+       public const string TUYEN_SU_DUNG_8 = "TUYEN_SU_DUNG_8";
+       public const string TEN_NHOM = "TEN_NHOM";
+       public const string TEN_DANH_MUC = "TEN_DANH_MUC";
+   }
 
 }
