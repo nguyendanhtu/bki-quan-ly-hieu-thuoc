@@ -676,7 +676,7 @@ namespace BKI_QLHT
 
         private void m_cmd_Tim_Kiem_Click(object sender, EventArgs e)
         {
-            string v_str_tu_khoa = m_txt_tim_kiem.Text;
+            string v_str_tu_khoa = m_txt_tim_kiem.Text.Trim();
             US_V_DM_BAC_SY v_us_v_dm_bac_sy = new US_V_DM_BAC_SY();
             DS_V_DM_BAC_SY v_ds_v_dm_bac_sy = new DS_V_DM_BAC_SY();
             v_us_v_dm_bac_sy.FillDatasetSearch(v_ds_v_dm_bac_sy, v_str_tu_khoa);
