@@ -220,7 +220,7 @@ namespace BKI_QLHT
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(3, 83);
+            this.m_fg.Location = new System.Drawing.Point(3, 61);
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(680, 155);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
@@ -233,18 +233,19 @@ namespace BKI_QLHT
             this.groupBox1.Controls.Add(this.m_cmd_Tim_Kiem);
             this.groupBox1.Controls.Add(this.m_fg);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 132);
+            this.groupBox1.Location = new System.Drawing.Point(0, 154);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(686, 241);
+            this.groupBox1.Size = new System.Drawing.Size(686, 219);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bác sĩ";
             // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(81, 37);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(81, 19);
+            this.m_txt_tim_kiem.Multiline = true;
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
-            this.m_txt_tim_kiem.Size = new System.Drawing.Size(247, 20);
+            this.m_txt_tim_kiem.Size = new System.Drawing.Size(247, 25);
             this.m_txt_tim_kiem.TabIndex = 23;
             // 
             // m_cmd_Tim_Kiem
@@ -255,7 +256,7 @@ namespace BKI_QLHT
             this.m_cmd_Tim_Kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_Tim_Kiem.ImageIndex = 18;
             this.m_cmd_Tim_Kiem.ImageList = this.ImageList;
-            this.m_cmd_Tim_Kiem.Location = new System.Drawing.Point(382, 37);
+            this.m_cmd_Tim_Kiem.Location = new System.Drawing.Point(355, 19);
             this.m_cmd_Tim_Kiem.Name = "m_cmd_Tim_Kiem";
             this.m_cmd_Tim_Kiem.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_Tim_Kiem.TabIndex = 22;
@@ -278,7 +279,7 @@ namespace BKI_QLHT
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(686, 152);
+            this.groupBox2.Size = new System.Drawing.Size(686, 148);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cập nhật bác sĩ";
