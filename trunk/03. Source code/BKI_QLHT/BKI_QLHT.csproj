@@ -53,6 +53,8 @@
     <Reference Include="C1.Win.C1Input">
       <HintPath>..\DLL\C1.Win.C1Input.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\SiSButton.dll</HintPath>
