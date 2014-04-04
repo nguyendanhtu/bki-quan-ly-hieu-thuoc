@@ -31,10 +31,6 @@ namespace BKI_QLHT
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f400_Main));
-            this.m_lbl_du_an_sap_kt = new System.Windows.Forms.Label();
-            this.m_lbl_thong_bao_hop_dong_sap_het_han = new System.Windows.Forms.Label();
-            this.m_lbl_het_han_thu_viec = new System.Windows.Forms.Label();
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky = new System.Windows.Forms.Label();
             this.m_ribbonControl_Main = new DevComponents.DotNetBar.RibbonControl();
             this.m_ribbonPanel_hethong = new DevComponents.DotNetBar.RibbonPanel();
             this.m_menu_item_tu_dien_he_thong = new DevComponents.DotNetBar.RibbonBar();
@@ -100,58 +96,6 @@ namespace BKI_QLHT
             this.bar1.SuspendLayout();
             this.panelDockContainer1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // m_lbl_du_an_sap_kt
-            // 
-            this.m_lbl_du_an_sap_kt.AutoSize = true;
-            this.m_lbl_du_an_sap_kt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.m_lbl_du_an_sap_kt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_lbl_du_an_sap_kt.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_du_an_sap_kt.ForeColor = System.Drawing.Color.Red;
-            this.m_lbl_du_an_sap_kt.Location = new System.Drawing.Point(5, 641);
-            this.m_lbl_du_an_sap_kt.Name = "m_lbl_du_an_sap_kt";
-            this.m_lbl_du_an_sap_kt.Size = new System.Drawing.Size(207, 18);
-            this.m_lbl_du_an_sap_kt.TabIndex = 2;
-            this.m_lbl_du_an_sap_kt.Text = "dự án sắp đến ngày kết thúc";
-            // 
-            // m_lbl_thong_bao_hop_dong_sap_het_han
-            // 
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.AutoSize = true;
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.ForeColor = System.Drawing.Color.Red;
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.Location = new System.Drawing.Point(5, 623);
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.Name = "m_lbl_thong_bao_hop_dong_sap_het_han";
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.Size = new System.Drawing.Size(165, 18);
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.TabIndex = 3;
-            this.m_lbl_thong_bao_hop_dong_sap_het_han.Text = "Hợp đồng sắp hết hạn";
-            // 
-            // m_lbl_het_han_thu_viec
-            // 
-            this.m_lbl_het_han_thu_viec.AutoSize = true;
-            this.m_lbl_het_han_thu_viec.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.m_lbl_het_han_thu_viec.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_lbl_het_han_thu_viec.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
-            this.m_lbl_het_han_thu_viec.ForeColor = System.Drawing.Color.Red;
-            this.m_lbl_het_han_thu_viec.Location = new System.Drawing.Point(5, 605);
-            this.m_lbl_het_han_thu_viec.Name = "m_lbl_het_han_thu_viec";
-            this.m_lbl_het_han_thu_viec.Size = new System.Drawing.Size(158, 18);
-            this.m_lbl_het_han_thu_viec.TabIndex = 4;
-            this.m_lbl_het_han_thu_viec.Text = "Thử việc sắp hết hạn";
-            // 
-            // m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky
-            // 
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.AutoSize = true;
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.ForeColor = System.Drawing.Color.Red;
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Location = new System.Drawing.Point(5, 587);
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Name = "m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky";
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Size = new System.Drawing.Size(267, 18);
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.TabIndex = 5;
-            this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky.Text = "Hợp đồng đã hết hạn nhưng chưa ký";
             // 
             // m_ribbonControl_Main
             // 
@@ -221,6 +165,7 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_hethong.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_hethong.TabIndex = 1;
+            this.m_ribbonPanel_hethong.Visible = true;
             // 
             // m_menu_item_tu_dien_he_thong
             // 
@@ -801,7 +746,7 @@ namespace BKI_QLHT
             this.m_Panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_Panel_Content.Location = new System.Drawing.Point(130, 163);
             this.m_Panel_Content.Name = "m_Panel_Content";
-            this.m_Panel_Content.Size = new System.Drawing.Size(720, 424);
+            this.m_Panel_Content.Size = new System.Drawing.Size(720, 496);
             this.m_Panel_Content.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.m_Panel_Content.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.m_Panel_Content.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -857,10 +802,10 @@ namespace BKI_QLHT
             this.dockSite1.Controls.Add(this.bar1);
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 122, 424)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 122, 496)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
             this.dockSite1.Location = new System.Drawing.Point(5, 163);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(125, 424);
+            this.dockSite1.Size = new System.Drawing.Size(125, 496);
             this.dockSite1.TabIndex = 9;
             this.dockSite1.TabStop = false;
             // 
@@ -879,7 +824,7 @@ namespace BKI_QLHT
             this.bar1.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(122, 424);
+            this.bar1.Size = new System.Drawing.Size(122, 496);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
@@ -892,13 +837,14 @@ namespace BKI_QLHT
             this.panelDockContainer1.Controls.Add(this.buttonX1);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(116, 398);
+            this.panelDockContainer1.Size = new System.Drawing.Size(116, 470);
             this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 0;
+            this.panelDockContainer1.Visible = true;
             // 
             // buttonX2
             // 
@@ -935,7 +881,7 @@ namespace BKI_QLHT
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite2.Location = new System.Drawing.Point(850, 163);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 424);
+            this.dockSite2.Size = new System.Drawing.Size(0, 496);
             this.dockSite2.TabIndex = 10;
             this.dockSite2.TabStop = false;
             // 
@@ -1007,10 +953,6 @@ namespace BKI_QLHT
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
             this.Controls.Add(this.m_ribbonControl_Main);
-            this.Controls.Add(this.m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky);
-            this.Controls.Add(this.m_lbl_het_han_thu_viec);
-            this.Controls.Add(this.m_lbl_thong_bao_hop_dong_sap_het_han);
-            this.Controls.Add(this.m_lbl_du_an_sap_kt);
             this.Controls.Add(this.dockSite3);
             this.Controls.Add(this.dockSite4);
             this.Controls.Add(this.dockSite5);
@@ -1030,16 +972,11 @@ namespace BKI_QLHT
             this.bar1.ResumeLayout(false);
             this.panelDockContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label m_lbl_du_an_sap_kt;
-        private System.Windows.Forms.Label m_lbl_thong_bao_hop_dong_sap_het_han;
-        private Label m_lbl_het_han_thu_viec;
-        private Label m_lbl_thong_bao_hdld_da_het_han_nhung_chua_ky;
         private DevComponents.DotNetBar.RibbonControl m_ribbonControl_Main;
         private DevComponents.DotNetBar.RibbonPanel m_ribbonPanel_hethong;
         private DevComponents.DotNetBar.RibbonBar m_menu_item_quan_tri;

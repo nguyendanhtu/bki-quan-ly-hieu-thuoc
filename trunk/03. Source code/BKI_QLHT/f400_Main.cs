@@ -93,7 +93,7 @@ namespace BKI_QLHT
 
         private void m_cmd_item_danh_muc_nhom_thuoc_Click(object sender, EventArgs e)
         {
-            f501_v_dm_nhom_thuoc frm = new f501_v_dm_nhom_thuoc();
+            f504_v_dm_nhom_thuoc frm = new f504_v_dm_nhom_thuoc();
             frm.ShowDialog();
         }
 

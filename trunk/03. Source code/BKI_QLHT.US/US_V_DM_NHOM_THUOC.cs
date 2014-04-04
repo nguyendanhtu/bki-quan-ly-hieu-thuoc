@@ -158,5 +158,13 @@ public class US_V_DM_NHOM_THUOC : US_Object
         v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
         v_stored_proc.fillDataSetByCommand(this, ip_v_ds_nhom_thuoc);
     }
+
+    public void FillDatasetSearch(DS_V_DM_NHOM_THUOC ip_ds, string ip_id, string ip_tim_kiem)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_V_DM_NHOM_THUOC_Search_Combo");
+        v_stored_proc.addNVarcharInputParam("@IP_TEN_DANH_MUC", ip_id);
+        v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_tim_kiem);
+        v_stored_proc.fillDataSetByCommand(this, ip_ds);
+    }
 }
 }
