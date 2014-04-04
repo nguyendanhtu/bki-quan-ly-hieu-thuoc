@@ -104,8 +104,8 @@ namespace BKI_QLHT
             // 
             this.m_ribbonControl_Main.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonControl_Main.CaptionVisible = true;
-            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_danhmuc);
+            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_baocao);
             this.m_ribbonControl_Main.Dock = System.Windows.Forms.DockStyle.Top;
@@ -165,7 +165,7 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_hethong.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_hethong.TabIndex = 1;
-            this.m_ribbonPanel_hethong.Visible = true;
+            this.m_ribbonPanel_hethong.Visible = false;
             // 
             // m_menu_item_tu_dien_he_thong
             // 
@@ -338,7 +338,6 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_danhmuc.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_danhmuc.TabIndex = 2;
-            this.m_ribbonPanel_danhmuc.Visible = false;
             // 
             // m_menu_item_bac_sy
             // 
@@ -378,6 +377,7 @@ namespace BKI_QLHT
             this.m_cmd_item_danh_muc_bac_sy.Name = "m_cmd_item_danh_muc_bac_sy";
             this.m_cmd_item_danh_muc_bac_sy.SubItemsExpandWidth = 14;
             this.m_cmd_item_danh_muc_bac_sy.Text = "Danh mục bác sỹ";
+            this.m_cmd_item_danh_muc_bac_sy.Click += new System.EventHandler(this.m_cmd_item_danh_muc_bac_sy_Click_1);
             // 
             // m_menu_item_nha_cung_cap
             // 
@@ -672,7 +672,6 @@ namespace BKI_QLHT
             // 
             // m_menuitem_hethong
             // 
-            this.m_menuitem_hethong.Checked = true;
             this.m_menuitem_hethong.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
             this.m_menuitem_hethong.Name = "m_menuitem_hethong";
             this.m_menuitem_hethong.Panel = this.m_ribbonPanel_hethong;
@@ -680,6 +679,7 @@ namespace BKI_QLHT
             // 
             // m_menuitem_danhmuc
             // 
+            this.m_menuitem_danhmuc.Checked = true;
             this.m_menuitem_danhmuc.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
             this.m_menuitem_danhmuc.Name = "m_menuitem_danhmuc";
             this.m_menuitem_danhmuc.Panel = this.m_ribbonPanel_danhmuc;
@@ -778,7 +778,7 @@ namespace BKI_QLHT
             this.dotNetBarManager1.LeftDockSite = this.dockSite1;
             this.dotNetBarManager1.ParentForm = this;
             this.dotNetBarManager1.RightDockSite = this.dockSite2;
-            this.dotNetBarManager1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.dotNetBarManager1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.dotNetBarManager1.ToolbarBottomDockSite = this.dockSite8;
             this.dotNetBarManager1.ToolbarLeftDockSite = this.dockSite5;
             this.dotNetBarManager1.ToolbarRightDockSite = this.dockSite6;
@@ -826,13 +826,14 @@ namespace BKI_QLHT
             this.bar1.Name = "bar1";
             this.bar1.Size = new System.Drawing.Size(122, 496);
             this.bar1.Stretch = true;
-            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.bar1.TabIndex = 0;
             this.bar1.TabStop = false;
-            this.bar1.Text = "dockContainerItem1";
+            this.bar1.Text = "Chức năng";
             // 
             // panelDockContainer1
             // 
+            this.panelDockContainer1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.panelDockContainer1.Controls.Add(this.buttonX2);
             this.panelDockContainer1.Controls.Add(this.buttonX1);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
@@ -844,7 +845,6 @@ namespace BKI_QLHT
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 0;
-            this.panelDockContainer1.Visible = true;
             // 
             // buttonX2
             // 

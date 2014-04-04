@@ -242,6 +242,12 @@ namespace BKI_QLHT
 
         #endregion
 
+        private void m_cmd_item_danh_muc_bac_sy_Click_1(object sender, EventArgs e)
+        {
+            f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
+            v_frm_f100_V_DM_BAC_SY.ShowDialog();
+        }
+
       
 
 
