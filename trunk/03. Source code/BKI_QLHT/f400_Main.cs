@@ -117,8 +117,10 @@ namespace BKI_QLHT
 
         private void m_cmd_item_danh_muc_nha_cung_cap_Click(object sender, EventArgs e)
         {
-            f800_dm_nha_cung_cap frm = new f800_dm_nha_cung_cap();
-            frm.ShowDialog();
+            //f800_dm_nha_cung_cap frm = new f800_dm_nha_cung_cap();
+            //frm.ShowDialog();
+            uc_800_dm_nha_cung_cap v_frm=new uc_800_dm_nha_cung_cap();
+            m_Panel_Content.Controls.Add(v_frm);
         }
 
         private void m_cmd_item_danh_muc_bac_sy_Click(object sender, EventArgs e)

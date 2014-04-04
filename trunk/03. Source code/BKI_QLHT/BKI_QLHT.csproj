@@ -119,6 +119,12 @@
     <Compile Include="DanhMuc\f801_dm_khach_hang_DE.Designer.cs">
       <DependentUpon>f801_dm_khach_hang_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\uc_800_dm_nha_cung_cap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\uc_800_dm_nha_cung_cap.Designer.cs">
+      <DependentUpon>uc_800_dm_nha_cung_cap.cs</DependentUpon>
+    </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f801_dm_khach_hang_DE.resx">
       <DependentUpon>f801_dm_khach_hang_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\uc_800_dm_nha_cung_cap.resx">
+      <DependentUpon>uc_800_dm_nha_cung_cap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
