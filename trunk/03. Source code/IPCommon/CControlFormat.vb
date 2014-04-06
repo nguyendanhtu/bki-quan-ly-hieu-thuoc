@@ -57,6 +57,10 @@ Public Class CControlFormat
         Return System.Drawing.Color.DarkBlue
     End Function
 
+    Private Shared Function getSpecialBackColor() As System.Drawing.Color
+        Return System.Drawing.Color.OliveDrab
+    End Function
+
     Private Shared Function getRegularBackColor() As System.Drawing.Color
         Return System.Drawing.Color.White
 
@@ -85,16 +89,20 @@ Public Class CControlFormat
         '    End If
         'End If
         If TypeOf ip_control Is Label Then
-            ip_control.Font = getRegularFont()
-            ip_control.ForeColor = getSpecialForeColor()
-            ip_control.BackColor = getRegularBackColor()
+            'ip_control.Font = getRegularFont()
+            If ip_control.Font.Size >= 14 Then
+                ip_control.ForeColor = System.Drawing.Color.CornflowerBlue
+            Else
+                ip_control.ForeColor = getSpecialForeColor()
+                ip_control.BackColor = System.Drawing.Color.Transparent
+            End If
         ElseIf TypeOf ip_control Is TextBox Then
             ip_control.Font = getRegularFont()
             ip_control.ForeColor = getRegularForeColor()
         ElseIf TypeOf ip_control Is GroupBox Then
             ip_control.Font = getRegularFont()
             ip_control.ForeColor = getSpecialForeColor()
-            ip_control.BackColor = getRegularBackColor()
+            ip_control.BackColor = System.Drawing.Color.Transparent
         ElseIf TypeOf ip_control Is ComboBox Then
             ip_control.Font = getRegularFont()
             ip_control.ForeColor = getRegularForeColor()
@@ -104,6 +112,10 @@ Public Class CControlFormat
         ElseIf TypeOf ip_control Is DateTimePicker Then
             ip_control.Font = getRegularFont()
             ip_control.ForeColor = getRegularForeColor()
+        ElseIf TypeOf ip_control Is Panel Then
+            If ip_control.Name = "m_pnl_control" Then
+                ip_control.BackColor = getSpecialBackColor()
+            End If
         ElseIf TypeOf ip_control Is Button Then
             ip_control.Font = getBoldFont()
             ip_control.ForeColor = getSpecialForeColor()
@@ -144,13 +156,55 @@ Public Class CControlFormat
             Next
         End If
 
-        
+
 
 
     End Sub
 #End Region
 
 #Region "Public interface"
+
+    Public Shared Sub setUserControlStyle(ByVal i_form As System.Windows.Forms.UserControl _
+   , ByVal i_objControlerControl As IControlerControl)
+        Try
+            AddHandler i_form.KeyDown, AddressOf i_form_KeyDown
+
+            ' Dim v_Control As System.Windows.Forms.control
+            'i_form.KeyPreview = True
+            With i_form
+                '.AutoScaleBaseSize = New System.Drawing.Size(6, 15)
+                .BackColor = getRegularBackColor()
+                .Font = getRegularFont()
+                .ForeColor = getRegularForeColor()
+                .BackgroundImage = IPCommon.My.Resources.grid_blue
+                'Select Case i_form_style
+                '    Case IPFormStyle.DialogForm
+                '        i_form.BorderStyle = CType(FormBorderStyle.None, BorderStyle)
+                '        'i_form.vbMaximizedFocus = False
+                '        'i_form.MinimizeBox = False
+                '        'i_form.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+                '        'i_form.s = True
+                '    Case IPFormStyle.DockableTopForm
+                '        '.FormBorderStyle = FormBorderStyle.Sizable
+                '        '.MaximizeBox = True
+                '        '.MinimizeBox = True
+                '        '.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+                '        '.ShowInTaskbar = False
+                '    Case Else
+
+                'End Select
+
+                '.ResumeLayout(False)
+                'Tund sửa ngày 11/06/2008
+                formatControlInForms(i_form.Name, i_objControlerControl, i_form)
+
+            End With
+        Catch exp As Exception
+            MessageBox.Show(exp.Message, i_form.Text, MessageBoxButtons.OKCancel, MessageBoxIcon.Stop)
+        Finally
+
+        End Try
+    End Sub
 
     Public Shared Sub setFormStyle(ByVal i_form As Form _
     , ByVal i_objControlerControl As IControlerControl _
@@ -165,6 +219,7 @@ Public Class CControlFormat
                 .BackColor = getRegularBackColor()
                 .Font = getRegularFont()
                 .ForeColor = getRegularForeColor()
+                .BackgroundImage = IPCommon.My.Resources.grid_blue
                 Select Case i_form_style
                     Case IPFormStyle.DialogForm
                         .FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable
@@ -208,6 +263,7 @@ Public Class CControlFormat
                 .BackColor = getRegularBackColor()
                 .Font = getRegularFont()
                 .ForeColor = getRegularForeColor()
+                .BackgroundImage = IPCommon.My.Resources.grid_blue
                 .FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
                 .MaximizeBox = False
                 .MinimizeBox = False
@@ -310,7 +366,8 @@ Public Class CControlFormat
         With i_fg
             .AllowMerging = C1.Win.C1FlexGrid.AllowMergingEnum.Free
             .AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
-            .BackColor = System.Drawing.SystemColors.Window
+            .BackColor = System.Drawing.Color.White
+            ' .BackgroundImage = IPCommon.My.Resources.grid_blue
             .ExtendLastCol = False
             .FocusRect = C1.Win.C1FlexGrid.FocusRectEnum.Solid
             .ForeColor = System.Drawing.SystemColors.WindowText
@@ -318,7 +375,7 @@ Public Class CControlFormat
             .Styles.Fixed.Font = New System.Drawing.Font(C_FontName, C_FormFontSize, Drawing.FontStyle.Bold)
             .Styles.Fixed.TextAlign = C1.Win.C1FlexGrid.TextAlignEnum.CenterCenter
             .Styles.Fixed.ForeColor = System.Drawing.SystemColors.Highlight
-            .Styles.EmptyArea.BackColor = .BackColor
+            .Styles.EmptyArea.BackColor = System.Drawing.Color.Transparent
             .Styles.EmptyArea.Border.Style = C1.Win.C1FlexGrid.BorderStyleEnum.None
             .SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Cell
         End With
@@ -331,7 +388,8 @@ Public Class CControlFormat
         With i_fg
             .AllowEditing = False
             .AutoSearch = C1.Win.C1FlexGrid.AutoSearchEnum.FromTop
-            .BackColor = System.Drawing.SystemColors.Window
+            .BackColor = System.Drawing.Color.White
+            .BackgroundImage = IPCommon.My.Resources.grid_blue
             '.Dock = System.Windows.Forms.DockStyle.Fill
             .ExtendLastCol = False
             .ForeColor = System.Drawing.Color.Black
@@ -341,8 +399,9 @@ Public Class CControlFormat
             .Styles.Fixed.TextAlign = C1.Win.C1FlexGrid.TextAlignEnum.CenterCenter
             .Styles.Fixed.ForeColor = System.Drawing.Color.White
             .Styles.Fixed.BackColor = System.Drawing.Color.CornflowerBlue
-            .Styles.Alternate.BackColor = System.Drawing.Color.FromArgb(CType(241, Byte), CType(252, Byte), CType(218, Byte))
-            .Styles.EmptyArea.BackColor = .BackColor
+            .Styles.Focus.BackColor = System.Drawing.Color.LightSkyBlue
+            .Styles.Alternate.BackColor = System.Drawing.Color.PapayaWhip
+            .Styles.EmptyArea.BackColor = System.Drawing.Color.Transparent
             .Styles.EmptyArea.Border.Style = C1.Win.C1FlexGrid.BorderStyleEnum.None
             .Styles("subtotal0").BackColor = System.Drawing.Color.DarkKhaki
             .Styles("subtotal0").ForeColor = System.Drawing.Color.Maroon

@@ -333,6 +333,11 @@
     <Compile Include="MsgBoxForm_OK.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="PHAN_HE.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -391,7 +396,13 @@
       <DependentUpon>MsgBoxForm_OK.vb</DependentUpon>
     </EmbeddedResource>
     <Content Include="DatasetMsg.xsd" />
+    <None Include="Resources\grid-blue.gif" />
     <Content Include="Users_DataSet.xsd" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <None Include="DatasetMsg.xsx">
       <DependentUpon>DatasetMsg.xsd</DependentUpon>
     </None>
@@ -399,9 +410,7 @@
       <DependentUpon>Users_DataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="My Project\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
