@@ -105,8 +105,10 @@ namespace BKI_QLHT
 
         private void m_cmd_item_danh_muc_khach_hang_Click(object sender, EventArgs e)
         {
-            f801_dm_khach_hang frm = new f801_dm_khach_hang();
-            frm.ShowDialog();
+            m_Panel_Content.Controls.Clear();
+            uc801_dm_khach_hang v_frm = new uc801_dm_khach_hang();
+            v_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            m_Panel_Content.Controls.Add(v_frm);
         }
 
         private void m_cmd_nhom_khach_hang_Click(object sender, EventArgs e)
@@ -119,7 +121,9 @@ namespace BKI_QLHT
         {
             //f800_dm_nha_cung_cap frm = new f800_dm_nha_cung_cap();
             //frm.ShowDialog();
+            m_Panel_Content.Controls.Clear();
             uc_800_dm_nha_cung_cap v_frm=new uc_800_dm_nha_cung_cap();
+            v_frm.Dock = System.Windows.Forms.DockStyle.Fill;
             m_Panel_Content.Controls.Add(v_frm);
         }
 

@@ -6380,7 +6380,7 @@
   <data name="m_cmt_thoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAABEFJREFUSEu9ll9M1WUYx1GvvPFCr7zhBrvSeeWljUWtka3hGt44IVGTVYw/KWNO
+        wgAADsIBFShKgAAABEFJREFUSEu9ll9M1WUYx1GvvPFCr7zhBrvSeeWljUWtka3hGt44IVGTVYw/KWNO
         Z2vV0k03y3+krT8m1SigLAP/lCQHOYQNUxBR8U94gI5yDh5QEQ48fb5vvx8d+G3d2bN99vx5n/d5zvm9
         7+99f2n2P0igyft791pBSYkVlJbaWngF8iEP1qQgX3GNK0/5mreD+TNlqsmlri5LS0uzZ6EEtsC7sAcO
         w5fwDXwH38JROAS74R1Qfilovup0XLniVU5pooEPIAE2a5ZNwBi2eIw9Cg+xH6ITEMO+BwPYfdCLfRtu
@@ -6404,7 +6404,7 @@
   <data name="m_cmd_item_thoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAD49JREFUeF7tm2tsl9Udx/GVJro4b6BCBARijIjZ3mimJiYa4yvA7RXiFE2cbuzm
+        wgAADsIBFShKgAAAD49JREFUeF7tm2tsl9Udx/GVJro4b6BCBARijIjZ3mimJiYa4yvA7RXiFE2cbuzm
         zDYYw5llzMxkTMELFRAVvN9aFKWIyE0EBBREkFKglNJSWigWWlpK++z7OZxfe3r6POX/mC1hw5OcfNrn
         Obff5dyff5/kNA/fKcDztA25FVBZWZksXrw4Wbhw4SkVadPu3bt9KwsPBSmgpqYmGTlyZNKnT5//iThq
         1Khk//79vvW9h5MqYNy4cT0qOPeMM5ILxAs9LxIvFPuKF3n2FfuJ/cRLxIs9LxEvFS8VB4j9xf7Bc9Jd
@@ -6474,7 +6474,10 @@
 </value>
   </data>
   <metadata name="styleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>180, 134</value>
+    <value>180, 17</value>
+  </metadata>
+  <metadata name="dotNetBarManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>56</value>

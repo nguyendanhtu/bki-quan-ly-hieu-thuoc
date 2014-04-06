@@ -41,6 +41,7 @@ namespace BKI_QLHT
             us_obj_2_form();
             this.ShowDialog();
         }
+
         
         #endregion
 
@@ -79,6 +80,7 @@ namespace BKI_QLHT
            m_cbo_nhom_khach_hang.ValueMember = DM_NHOM_KHACH_HANG.ID;
            m_cbo_nhom_khach_hang.DisplayMember = DM_NHOM_KHACH_HANG.TEN_NHOM;
        }
+        
 
         #endregion
 
