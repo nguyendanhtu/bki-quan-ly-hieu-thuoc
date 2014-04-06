@@ -282,7 +282,7 @@ Public Class CControlFormat
                     ElseIf TypeOf v_Control Is GroupBox Then
                         v_Control.Font = getRegularFont()
                         v_Control.ForeColor = Drawing.Color.DarkGreen
-                        v_Control.BackColor = getRegularBackColor()
+                        v_Control.BackgroundImage = IPCommon.My.Resources.grid_blue
                     ElseIf TypeOf v_Control Is DataGrid_Custom Then
                         v_Control.Font = getRegularFont()
                     ElseIf TypeOf v_Control Is ComboBox Then
