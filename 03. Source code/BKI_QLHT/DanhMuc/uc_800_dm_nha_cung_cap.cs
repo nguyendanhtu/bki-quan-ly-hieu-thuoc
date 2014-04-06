@@ -25,12 +25,7 @@ namespace BKI_QLHT
             InitializeComponent();
             format_controls();
         }
-        #region Public Interface
-        public void display()
-        {
-            this.Show();
-        }
-        #endregion
+     
 
         #region Data Structure
         private enum e_col_Number
@@ -55,7 +50,7 @@ namespace BKI_QLHT
         private void format_controls()
         {
             //CControlFormat.setFormStyle(this);
-            CControlFormat.setC1FlexFormat(m_grv_nha_cung_cap);
+            CControlFormat.setC1FlexFormat(m_grv_dm_nha_cung_cap);
             set_define_events();
             //this.KeyPreview = true;
         }
@@ -64,13 +59,23 @@ namespace BKI_QLHT
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
-            this.Load += new System.EventHandler(this.f800_dm_nha_cung_cap_Load);
+            this.Load += new System.EventHandler(this.uc800_dm_nha_cung_cap_Load);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
         }
         private void set_initial_form_load()
         {
-            m_obj_trans = get_trans_object(m_grv_nha_cung_cap);
+            m_obj_trans = get_trans_object(m_grv_dm_nha_cung_cap);
             load_data_2_grid();
+            grid2us_object(m_us, m_grv_dm_nha_cung_cap.Row);
+            load_data_2_thong_tin_chi_tiet(m_us);
+        }
+
+        private void load_data_2_thong_tin_chi_tiet(US_DM_NHA_CUNG_CAP m_us)
+        {
+            m_lbl_ten_nha_cung_cap.Text = m_us.strTEN_NCC;
+            m_lbl_ma_nha_cung_cap.Text = m_us.strMA_NCC;
+            m_lbl_dia_chi.Text = m_us.strDIA_CHI;
+            m_lbl_so_dien_thoai.Text = m_us.strSDT;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -87,15 +92,15 @@ namespace BKI_QLHT
         {
             m_ds = new DS_DM_NHA_CUNG_CAP();
             m_us.FillDataset(m_ds);
-            m_grv_nha_cung_cap.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_grv_nha_cung_cap, m_obj_trans);
-            m_grv_nha_cung_cap.Redraw = true;
+            m_grv_dm_nha_cung_cap.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_grv_dm_nha_cung_cap, m_obj_trans);
+            m_grv_dm_nha_cung_cap.Redraw = true;
         }
         private void grid2us_object(US_DM_NHA_CUNG_CAP i_us
             , int i_grid_row)
         {
             DataRow v_dr;
-            v_dr = (DataRow)m_grv_nha_cung_cap.Rows[i_grid_row].UserData;
+            v_dr = (DataRow)m_grv_dm_nha_cung_cap.Rows[i_grid_row].UserData;
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
             i_us.DataRow2Me(v_dr);
         }
@@ -104,7 +109,7 @@ namespace BKI_QLHT
         private void us_object2grid(US_DM_NHA_CUNG_CAP i_us
             , int i_grid_row)
         {
-            DataRow v_dr = (DataRow)m_grv_nha_cung_cap.Rows[i_grid_row].UserData;
+            DataRow v_dr = (DataRow)m_grv_dm_nha_cung_cap.Rows[i_grid_row].UserData;
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
@@ -119,9 +124,9 @@ namespace BKI_QLHT
 
         private void update_dm_nha_cung_cap()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nha_cung_cap)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nha_cung_cap, m_grv_nha_cung_cap.Row)) return;
-            grid2us_object(m_us, m_grv_nha_cung_cap.Row);
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_dm_nha_cung_cap)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_dm_nha_cung_cap, m_grv_dm_nha_cung_cap.Row)) return;
+            grid2us_object(m_us, m_grv_dm_nha_cung_cap.Row);
             f800_dm_nha_cung_cap_DE v_fDE = new f800_dm_nha_cung_cap_DE();
             v_fDE.display_for_update(m_us);
             load_data_2_grid();
@@ -129,17 +134,17 @@ namespace BKI_QLHT
 
         private void delete_dm_nha_cung_cap()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nha_cung_cap)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nha_cung_cap, m_grv_nha_cung_cap.Row)) return;
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_dm_nha_cung_cap)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_dm_nha_cung_cap, m_grv_dm_nha_cung_cap.Row)) return;
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
             US_DM_NHA_CUNG_CAP v_us = new US_DM_NHA_CUNG_CAP();
-            grid2us_object(v_us, m_grv_nha_cung_cap.Row);
+            grid2us_object(v_us, m_grv_dm_nha_cung_cap.Row);
             try
             {
                 v_us.BeginTransaction();
                 v_us.Delete();
                 v_us.CommitTransaction();
-                m_grv_nha_cung_cap.Rows.Remove(m_grv_nha_cung_cap.Row);
+                m_grv_dm_nha_cung_cap.Rows.Remove(m_grv_dm_nha_cung_cap.Row);
             }
             catch (Exception v_e)
             {
@@ -152,9 +157,9 @@ namespace BKI_QLHT
 
         private void view_dm_nha_cung_cap()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nha_cung_cap)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nha_cung_cap, m_grv_nha_cung_cap.Row)) return;
-            grid2us_object(m_us, m_grv_nha_cung_cap.Row);
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_dm_nha_cung_cap)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_dm_nha_cung_cap, m_grv_dm_nha_cung_cap.Row)) return;
+            grid2us_object(m_us, m_grv_dm_nha_cung_cap.Row);
             //	f800_dm_nha_cung_cap_DE v_fDE = new f800_dm_nha_cung_cap_DE();			
             //	v_fDE.display(m_us);
         }
@@ -162,7 +167,7 @@ namespace BKI_QLHT
         #endregion
 
         #region Events
-        private void f800_dm_nha_cung_cap_Load(object sender, System.EventArgs e)
+        private void uc800_dm_nha_cung_cap_Load(object sender, System.EventArgs e)
         {
             try
             {
@@ -235,16 +240,24 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        private void m_cmd_search_Click(object sender, EventArgs e)
+        private void m_cmd_search_Click_1(object sender, EventArgs e)
         {
             string v_str_ten_nha_cung_cap = m_txt_ten_nha_cung_cap.Text;
             US_DM_NHA_CUNG_CAP v_us_dm_nha_cung_cap = new US_DM_NHA_CUNG_CAP();
             DS_DM_NHA_CUNG_CAP v_ds_dm_nha_cung_cap = new DS_DM_NHA_CUNG_CAP();
             v_us_dm_nha_cung_cap.FillDatasetSearch(v_ds_dm_nha_cung_cap, v_str_ten_nha_cung_cap);
-            m_grv_nha_cung_cap.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds_dm_nha_cung_cap, m_grv_nha_cung_cap, m_obj_trans);
-            m_grv_nha_cung_cap.Redraw = true;
+            m_grv_dm_nha_cung_cap.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_dm_nha_cung_cap, m_grv_dm_nha_cung_cap, m_obj_trans);
+            m_grv_dm_nha_cung_cap.Redraw = true;
+        }
+
+        private void m_grv_dm_nha_cung_cap_Click(object sender, EventArgs e)
+        {
+            grid2us_object(m_us, m_grv_dm_nha_cung_cap.Row);
+            load_data_2_thong_tin_chi_tiet(m_us);
         }
         #endregion
+
+
     }
 }
