@@ -47,7 +47,7 @@ namespace BKI_QLHT
 
         private void format_control()
         {
-            CControlFormat.setFormStyle(this);
+            CControlFormat.setFormStyle(this, new CAppContext_201());
         }
 
         private void load_data_2_rtxt_quyen_chua_cap(decimal ip_dc_id)

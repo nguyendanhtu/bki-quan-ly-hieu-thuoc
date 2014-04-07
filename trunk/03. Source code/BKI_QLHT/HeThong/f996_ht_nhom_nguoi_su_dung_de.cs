@@ -87,7 +87,7 @@ namespace BKI_QLHT
 
         private void format_control()
         {
-            CControlFormat.setFormStyle(this);
+            CControlFormat.setFormStyle(this, new CAppContext_201());
         }
 
         
