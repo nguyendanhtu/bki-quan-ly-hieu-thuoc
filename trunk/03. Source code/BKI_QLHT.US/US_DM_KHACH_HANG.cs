@@ -16,182 +16,193 @@ using System.Data;
 
 
 
-namespace BKI_QLHT{
-
-public class US_DM_KHACH_HANG : US_Object
+namespace BKI_QLHT
 {
-	private const string c_TableName = "DM_KHACH_HANG";
-#region "Public Properties"
-	public decimal dcID 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID"] = value;
-		}
-	}
 
-	public bool IsIDNull()	{
-		return pm_objDR.IsNull("ID");
-	}
+    public class US_DM_KHACH_HANG : US_Object
+    {
+        private const string c_TableName = "DM_KHACH_HANG";
+        #region "Public Properties"
+        public decimal dcID
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID"] = value;
+            }
+        }
 
-	public void SetIDNull() {
-		pm_objDR["ID"] = System.Convert.DBNull;
-	}
+        public bool IsIDNull()
+        {
+            return pm_objDR.IsNull("ID");
+        }
 
-	public string strTEN_KHACH_HANG 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "TEN_KHACH_HANG", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["TEN_KHACH_HANG"] = value;
-		}
-	}
+        public void SetIDNull()
+        {
+            pm_objDR["ID"] = System.Convert.DBNull;
+        }
 
-	public bool IsTEN_KHACH_HANGNull() 
-	{
-		return pm_objDR.IsNull("TEN_KHACH_HANG");
-	}
+        public string strTEN_KHACH_HANG
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "TEN_KHACH_HANG", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["TEN_KHACH_HANG"] = value;
+            }
+        }
 
-	public void SetTEN_KHACH_HANGNull() {
-		pm_objDR["TEN_KHACH_HANG"] = System.Convert.DBNull;
-	}
+        public bool IsTEN_KHACH_HANGNull()
+        {
+            return pm_objDR.IsNull("TEN_KHACH_HANG");
+        }
 
-	public string strMA_KHACH_HANG 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "MA_KHACH_HANG", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["MA_KHACH_HANG"] = value;
-		}
-	}
+        public void SetTEN_KHACH_HANGNull()
+        {
+            pm_objDR["TEN_KHACH_HANG"] = System.Convert.DBNull;
+        }
 
-	public bool IsMA_KHACH_HANGNull() 
-	{
-		return pm_objDR.IsNull("MA_KHACH_HANG");
-	}
+        public string strMA_KHACH_HANG
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "MA_KHACH_HANG", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["MA_KHACH_HANG"] = value;
+            }
+        }
 
-	public void SetMA_KHACH_HANGNull() {
-		pm_objDR["MA_KHACH_HANG"] = System.Convert.DBNull;
-	}
+        public bool IsMA_KHACH_HANGNull()
+        {
+            return pm_objDR.IsNull("MA_KHACH_HANG");
+        }
 
-	public string strSDT 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "SDT", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["SDT"] = value;
-		}
-	}
+        public void SetMA_KHACH_HANGNull()
+        {
+            pm_objDR["MA_KHACH_HANG"] = System.Convert.DBNull;
+        }
 
-	public bool IsSDTNull() 
-	{
-		return pm_objDR.IsNull("SDT");
-	}
+        public string strSDT
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "SDT", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["SDT"] = value;
+            }
+        }
 
-	public void SetSDTNull() {
-		pm_objDR["SDT"] = System.Convert.DBNull;
-	}
+        public bool IsSDTNull()
+        {
+            return pm_objDR.IsNull("SDT");
+        }
 
-	public string strDIA_CHI 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "DIA_CHI", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["DIA_CHI"] = value;
-		}
-	}
+        public void SetSDTNull()
+        {
+            pm_objDR["SDT"] = System.Convert.DBNull;
+        }
 
-	public bool IsDIA_CHINull() 
-	{
-		return pm_objDR.IsNull("DIA_CHI");
-	}
+        public string strDIA_CHI
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "DIA_CHI", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["DIA_CHI"] = value;
+            }
+        }
 
-	public void SetDIA_CHINull() {
-		pm_objDR["DIA_CHI"] = System.Convert.DBNull;
-	}
+        public bool IsDIA_CHINull()
+        {
+            return pm_objDR.IsNull("DIA_CHI");
+        }
 
-	public decimal dcID_NHOM_KHACH_HANG 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_NHOM_KHACH_HANG", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_NHOM_KHACH_HANG"] = value;
-		}
-	}
+        public void SetDIA_CHINull()
+        {
+            pm_objDR["DIA_CHI"] = System.Convert.DBNull;
+        }
 
-	public bool IsID_NHOM_KHACH_HANGNull()	{
-		return pm_objDR.IsNull("ID_NHOM_KHACH_HANG");
-	}
+        public decimal dcID_NHOM_KHACH_HANG
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_NHOM_KHACH_HANG", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_NHOM_KHACH_HANG"] = value;
+            }
+        }
 
-	public void SetID_NHOM_KHACH_HANGNull() {
-		pm_objDR["ID_NHOM_KHACH_HANG"] = System.Convert.DBNull;
-	}
+        public bool IsID_NHOM_KHACH_HANGNull()
+        {
+            return pm_objDR.IsNull("ID_NHOM_KHACH_HANG");
+        }
 
-	public string strMA_SO_THUE 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "MA_SO_THUE", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["MA_SO_THUE"] = value;
-		}
-	}
+        public void SetID_NHOM_KHACH_HANGNull()
+        {
+            pm_objDR["ID_NHOM_KHACH_HANG"] = System.Convert.DBNull;
+        }
 
-	public bool IsMA_SO_THUENull() 
-	{
-		return pm_objDR.IsNull("MA_SO_THUE");
-	}
+        public string strMA_SO_THUE
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "MA_SO_THUE", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["MA_SO_THUE"] = value;
+            }
+        }
 
-	public void SetMA_SO_THUENull() {
-		pm_objDR["MA_SO_THUE"] = System.Convert.DBNull;
-	}
+        public bool IsMA_SO_THUENull()
+        {
+            return pm_objDR.IsNull("MA_SO_THUE");
+        }
 
-#endregion
-#region "Init Functions"
-	public US_DM_KHACH_HANG() 
-	{
-		pm_objDS = new DS_DM_KHACH_HANG();
-		pm_strTableName = c_TableName;
-		pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
-	}
+        public void SetMA_SO_THUENull()
+        {
+            pm_objDR["MA_SO_THUE"] = System.Convert.DBNull;
+        }
 
-	public US_DM_KHACH_HANG(DataRow i_objDR): this()
-	{
-		this.DataRow2Me(i_objDR);
-	}
+        #endregion
+        #region "Init Functions"
+        public US_DM_KHACH_HANG()
+        {
+            pm_objDS = new DS_DM_KHACH_HANG();
+            pm_strTableName = c_TableName;
+            pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
+        }
 
-	public US_DM_KHACH_HANG(decimal i_dbID) 
-	{
-		pm_objDS = new DS_DM_KHACH_HANG();
-		pm_strTableName = c_TableName;
-		IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
-		v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
-		SqlCommand v_cmdSQL;
-		v_cmdSQL = v_objMkCmd.getSelectCmd();
-		this.FillDatasetByCommand(pm_objDS, v_cmdSQL);
-		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
-	}
-#endregion
-	}
+        public US_DM_KHACH_HANG(DataRow i_objDR)
+            : this()
+        {
+            this.DataRow2Me(i_objDR);
+        }
+
+        public US_DM_KHACH_HANG(decimal i_dbID)
+        {
+            pm_objDS = new DS_DM_KHACH_HANG();
+            pm_strTableName = c_TableName;
+            IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
+            v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
+            SqlCommand v_cmdSQL;
+            v_cmdSQL = v_objMkCmd.getSelectCmd();
+            this.FillDatasetByCommand(pm_objDS, v_cmdSQL);
+            pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
+        }
+        #endregion
+    }
 }
