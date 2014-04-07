@@ -84,12 +84,12 @@ namespace BKI_QLHT
         {
             
             load_data_2_cbo_nhom_nguoi_su_dung();
-            //m_us_ht_user_group.FillDataset(m_ds_ht_user_group);
-            //DataRow v_dr = m_ds_ht_user_group.Tables[0].Rows[0];
-            //load_data_2_rtxt_quyen_da_cap(CIPConvert.ToDecimal(v_dr[HT_USER_GROUP.ID]));
-            //load_data_2_rtxt_quyen_chua_cap(CIPConvert.ToDecimal(v_dr[HT_USER_GROUP.ID]));
-            //m_dc_index_in_left = 0;
-            //m_dc_index_in_right = 0;
+            m_us_ht_user_group.FillDataset(m_ds_ht_user_group);
+            DataRow v_dr = m_ds_ht_user_group.Tables[0].Rows[0];
+            load_data_2_rtxt_quyen_da_cap(CIPConvert.ToDecimal(v_dr[HT_USER_GROUP.ID]));
+            load_data_2_rtxt_quyen_chua_cap(CIPConvert.ToDecimal(v_dr[HT_USER_GROUP.ID]));
+            m_dc_index_in_left = 0;
+            m_dc_index_in_right = 0;
         }
 
         private void m_lbox_quyen_chua_cap_SelectedIndexChanged(object sender, EventArgs e)

@@ -15,6 +15,7 @@ using BKI_QLHT.US;
 using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT
 {
@@ -49,7 +50,7 @@ namespace BKI_QLHT
         #region Private Methods
         private void format_controls()
         {
-            //CControlFormat.setFormStyle(this);
+            CControlFormat.setUserControlStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_grv_dm_nha_cung_cap);
             set_define_events();
             //this.KeyPreview = true;
