@@ -72,7 +72,7 @@ namespace BKI_QLHT
         {
             US_CM_DM_TU_DIEN v_us = new US_CM_DM_TU_DIEN();
             DS_CM_DM_TU_DIEN v_ds = new DS_CM_DM_TU_DIEN();
-            v_us.FillDatasetByIdLoaiTuDien(v_ds, 14);
+            v_us.FillDatasetByIdLoaiTuDien(v_ds, 3);//3 là id loại từ điển phân quyền
             m_cbo_chuc_nang.DataSource = v_ds.Tables[0];
             m_cbo_chuc_nang.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_chuc_nang.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;

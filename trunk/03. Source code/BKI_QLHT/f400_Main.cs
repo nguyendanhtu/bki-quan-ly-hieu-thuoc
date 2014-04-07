@@ -58,6 +58,8 @@ namespace BKI_QLHT
             CControlFormat.setFormStyle(this);
             set_define_events();
             ShowInTaskbar = true;
+            this.m_cmd_item_chi_tiet_thuoc.Visible = false;
+            m_menu_item_thuoc.Visible = false;
         }
         private void set_define_events()
         {
@@ -180,7 +182,8 @@ namespace BKI_QLHT
         {
             try
             {
-
+                f990_ht_form v_frm = new f990_ht_form();
+                v_frm.ShowDialog();
             }
             catch (System.Exception v_e)
             {
@@ -206,7 +209,9 @@ namespace BKI_QLHT
         {
             try
             {
-
+                IP.Core.IPSystemAdmin.f100_TuDien v_frm = new f100_TuDien();
+                v_frm.ShowDialog();
+                
             }
             catch (System.Exception v_e)
             {
