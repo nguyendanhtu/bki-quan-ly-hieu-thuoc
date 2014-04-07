@@ -41,12 +41,10 @@ namespace BKI_QLHT
         private TextBox m_text_tim_kiem;
         internal SIS.Controls.Button.SiSButton m_cmd_tim_kiem;
         private GroupBox groupBox2;
-        internal SIS.Controls.Button.SiSButton m_cmd_Cap_Nhat;
-        internal SIS.Controls.Button.SiSButton m_cmd_huy;
-        private TextBox m_txt_ten_nhom;
         private Label label2;
-        private TextBox m_txt_ma_nhom;
         private Label label1;
+        private Label m_lbl_ten_nhom;
+        private Label m_lbl_ma_nhom;
 		private System.ComponentModel.IContainer components;
 
 		public f101_dm_nhom_khach_hang()
@@ -97,11 +95,9 @@ namespace BKI_QLHT
             this.m_text_tim_kiem = new System.Windows.Forms.TextBox();
             this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.m_cmd_Cap_Nhat = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
-            this.m_txt_ten_nhom = new System.Windows.Forms.TextBox();
+            this.m_lbl_ten_nhom = new System.Windows.Forms.Label();
+            this.m_lbl_ma_nhom = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.m_txt_ma_nhom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -143,7 +139,7 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 347);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(528, 36);
@@ -212,9 +208,9 @@ namespace BKI_QLHT
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(0, 58);
+            this.m_fg.Location = new System.Drawing.Point(0, 73);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(508, 176);
+            this.m_fg.Size = new System.Drawing.Size(508, 208);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             this.m_fg.DoubleClick += new System.EventHandler(this.m_fg_DoubleClick);
@@ -224,20 +220,19 @@ namespace BKI_QLHT
             this.groupBox1.Controls.Add(this.m_text_tim_kiem);
             this.groupBox1.Controls.Add(this.m_cmd_tim_kiem);
             this.groupBox1.Controls.Add(this.m_fg);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 139);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(528, 234);
+            this.groupBox1.Size = new System.Drawing.Size(528, 246);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhóm khách hàng";
             // 
             // m_text_tim_kiem
             // 
-            this.m_text_tim_kiem.Location = new System.Drawing.Point(38, 22);
-            this.m_text_tim_kiem.Multiline = true;
+            this.m_text_tim_kiem.Location = new System.Drawing.Point(43, 30);
             this.m_text_tim_kiem.Name = "m_text_tim_kiem";
-            this.m_text_tim_kiem.Size = new System.Drawing.Size(265, 25);
+            this.m_text_tim_kiem.Size = new System.Drawing.Size(265, 20);
             this.m_text_tim_kiem.TabIndex = 23;
             // 
             // m_cmd_tim_kiem
@@ -248,7 +243,7 @@ namespace BKI_QLHT
             this.m_cmd_tim_kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_tim_kiem.ImageIndex = 18;
             this.m_cmd_tim_kiem.ImageList = this.ImageList;
-            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(330, 22);
+            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(330, 25);
             this.m_cmd_tim_kiem.Name = "m_cmd_tim_kiem";
             this.m_cmd_tim_kiem.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_tim_kiem.TabIndex = 22;
@@ -257,87 +252,58 @@ namespace BKI_QLHT
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.m_cmd_Cap_Nhat);
-            this.groupBox2.Controls.Add(this.m_cmd_huy);
-            this.groupBox2.Controls.Add(this.m_txt_ten_nhom);
+            this.groupBox2.Controls.Add(this.m_lbl_ten_nhom);
+            this.groupBox2.Controls.Add(this.m_lbl_ma_nhom);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.m_txt_ma_nhom);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 239);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(528, 133);
+            this.groupBox2.Size = new System.Drawing.Size(528, 108);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cập nhật nhóm khách hàng";
+            this.groupBox2.Text = "Thông tin chi tiết nhóm khách hàng";
             // 
-            // m_cmd_Cap_Nhat
+            // m_lbl_ten_nhom
             // 
-            this.m_cmd_Cap_Nhat.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_Cap_Nhat.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_Cap_Nhat.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_Cap_Nhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_Cap_Nhat.ImageIndex = 10;
-            this.m_cmd_Cap_Nhat.ImageList = this.ImageList;
-            this.m_cmd_Cap_Nhat.Location = new System.Drawing.Point(96, 99);
-            this.m_cmd_Cap_Nhat.Name = "m_cmd_Cap_Nhat";
-            this.m_cmd_Cap_Nhat.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_Cap_Nhat.TabIndex = 15;
-            this.m_cmd_Cap_Nhat.Text = "&Cập nhật";
-            this.m_cmd_Cap_Nhat.Click += new System.EventHandler(this.m_cmd_Cap_Nhat_Click);
+            this.m_lbl_ten_nhom.AutoSize = true;
+            this.m_lbl_ten_nhom.Location = new System.Drawing.Point(137, 60);
+            this.m_lbl_ten_nhom.Name = "m_lbl_ten_nhom";
+            this.m_lbl_ten_nhom.Size = new System.Drawing.Size(16, 13);
+            this.m_lbl_ten_nhom.TabIndex = 3;
+            this.m_lbl_ten_nhom.Text = "...";
             // 
-            // m_cmd_huy
+            // m_lbl_ma_nhom
             // 
-            this.m_cmd_huy.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_huy.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_huy.ImageIndex = 4;
-            this.m_cmd_huy.ImageList = this.ImageList;
-            this.m_cmd_huy.Location = new System.Drawing.Point(190, 99);
-            this.m_cmd_huy.Name = "m_cmd_huy";
-            this.m_cmd_huy.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_huy.TabIndex = 16;
-            this.m_cmd_huy.Text = "&Hủy";
-            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
-            // 
-            // m_txt_ten_nhom
-            // 
-            this.m_txt_ten_nhom.Location = new System.Drawing.Point(96, 61);
-            this.m_txt_ten_nhom.Name = "m_txt_ten_nhom";
-            this.m_txt_ten_nhom.Size = new System.Drawing.Size(236, 20);
-            this.m_txt_ten_nhom.TabIndex = 2;
+            this.m_lbl_ma_nhom.AutoSize = true;
+            this.m_lbl_ma_nhom.Location = new System.Drawing.Point(137, 28);
+            this.m_lbl_ma_nhom.Name = "m_lbl_ma_nhom";
+            this.m_lbl_ma_nhom.Size = new System.Drawing.Size(16, 13);
+            this.m_lbl_ma_nhom.TabIndex = 2;
+            this.m_lbl_ma_nhom.Text = "...";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 64);
+            this.label2.Location = new System.Drawing.Point(67, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên nhóm";
-            // 
-            // m_txt_ma_nhom
-            // 
-            this.m_txt_ma_nhom.Location = new System.Drawing.Point(96, 28);
-            this.m_txt_ma_nhom.Name = "m_txt_ma_nhom";
-            this.m_txt_ma_nhom.Size = new System.Drawing.Size(236, 20);
-            this.m_txt_ma_nhom.TabIndex = 1;
-          
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên nhóm:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 31);
+            this.label1.Location = new System.Drawing.Point(67, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã nhóm";
+            this.label1.Text = "Mã nhóm:";
             // 
             // f101_dm_nhom_khach_hang
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(528, 409);
+            this.ClientSize = new System.Drawing.Size(528, 383);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.m_pnl_out_place_dm);
@@ -375,7 +341,6 @@ namespace BKI_QLHT
 		ITransferDataRow m_obj_trans;		
 		DS_DM_NHOM_KHACH_HANG m_ds_dm_nhom_khach_hang = new DS_DM_NHOM_KHACH_HANG();
 		US_DM_NHOM_KHACH_HANG m_us_dm_nhom_khach_hang = new US_DM_NHOM_KHACH_HANG();
-        DataEntryFormMode m_e_form_mode = new DataEntryFormMode();
 		#endregion
 
 		#region Private Methods
@@ -387,8 +352,16 @@ namespace BKI_QLHT
 		}
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_fg);
+            load_thong_tin_chi_tiet(m_us_dm_nhom_khach_hang);
 			load_data_2_grid();		
-		}	
+		}
+
+        private void load_thong_tin_chi_tiet(US_DM_NHOM_KHACH_HANG m_us_dm_nhom_khach_hang)
+        {
+            grid2us_object(m_us_dm_nhom_khach_hang, m_fg.Row);
+            m_lbl_ma_nhom.Text = m_us_dm_nhom_khach_hang.strMA_NHOM;
+            m_lbl_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
+        }	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
 			v_htb.Add(DM_NHOM_KHACH_HANG.TEN_NHOM, e_col_Number.TEN_NHOM);
@@ -422,39 +395,20 @@ namespace BKI_QLHT
 		}
 
 
-		private void insert_dm_nhom_khach_hang(){			
-		//	f101_dm_nhom_khach_hang_DE v_fDE = new  f101_dm_nhom_khach_hang_DE();	
-            m_txt_ma_nhom.Focus();				
-            display_for_insert();
+		private void insert_dm_nhom_khach_hang(){
+            f101_dm_nhom_khach_hang_de v_fDE = new f101_dm_nhom_khach_hang_de();				
+            v_fDE.display_for_insert();
 			load_data_2_grid();
 		}
-
-        private void display_for_insert()
-        {
-            m_e_form_mode = DataEntryFormMode.InsertDataState;
-        }
 
 		private void update_dm_nhom_khach_hang(){			
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
 			grid2us_object(m_us_dm_nhom_khach_hang, m_fg.Row);
-		//	f101_dm_nhom_khach_hang_DE v_fDE = new f101_dm_nhom_khach_hang_DE();
-            display_for_update(m_us_dm_nhom_khach_hang);
+            f101_dm_nhom_khach_hang_de v_fDE = new f101_dm_nhom_khach_hang_de();
+            v_fDE.display_for_update(m_us_dm_nhom_khach_hang);
 			load_data_2_grid();
 		}
-
-        private void display_for_update(US_DM_NHOM_KHACH_HANG m_us_dm_nhom_khach_hang)
-        {
-            m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            m_us_obj_to_form();
-
-        }
-
-        private void m_us_obj_to_form()
-        {
-            m_txt_ma_nhom.Text = m_us_dm_nhom_khach_hang.strMA_NHOM;
-            m_txt_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
-        }
 				
 		private void delete_dm_nhom_khach_hang(){
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
@@ -492,12 +446,8 @@ namespace BKI_QLHT
 		}
 		#endregion
 
-//
-		//
-		//		EVENT HANLDERS
-		//
-		//
-		private void f101_dm_nhom_khach_hang_Load(object sender, System.EventArgs e) {
+        #region Event
+        private void f101_dm_nhom_khach_hang_Load(object sender, System.EventArgs e) {
 			try{
 				set_initial_form_load();
 			}
@@ -518,8 +468,7 @@ namespace BKI_QLHT
 
 		private void m_cmd_insert_Click(object sender, EventArgs e) {
 			try{
-                m_txt_ma_nhom.Clear();
-                m_txt_ten_nhom.Clear();
+   
 				insert_dm_nhom_khach_hang();
 			}
 			catch (Exception v_e){
@@ -545,68 +494,6 @@ namespace BKI_QLHT
 			}
 		}
 
-		private void m_cmd_view_Click(object sender, EventArgs e) {
-			try{
-				view_dm_nhom_khach_hang();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
-
-        private void m_cmd_Cap_Nhat_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                save_data();
-                m_e_form_mode = DataEntryFormMode.InsertDataState;
-                
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-           
-        }
-
-        private void save_data()
-        {
-            try
-            {
-                m_form_to_us_obj();
-                switch (m_e_form_mode)
-                {
-                    case DataEntryFormMode.InsertDataState:
-                        m_us_dm_nhom_khach_hang.Insert();
-                        break;
-                    case DataEntryFormMode.UpdateDataState:
-                        m_us_dm_nhom_khach_hang.Update();
-                        break;
-                    default: m_us_dm_nhom_khach_hang.Insert(); ; break;
-                }
-                
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-            m_txt_ma_nhom.Clear();
-            m_txt_ten_nhom.Clear();
-            load_data_2_grid();
-        }
-
-        private void m_form_to_us_obj()
-        {
-            m_us_dm_nhom_khach_hang.strMA_NHOM = m_txt_ma_nhom.Text;
-            m_us_dm_nhom_khach_hang.strTEN_NHOM = m_txt_ten_nhom.Text;
-        }
-
-        private void m_cmd_huy_Click(object sender, EventArgs e)
-        {
-            m_txt_ma_nhom.Clear();
-            m_txt_ten_nhom.Clear();
-        }
-
         private void m_cmd_tim_kiem_Click(object sender, EventArgs e)
         {
             string v_str_tu_khoa = m_text_tim_kiem.Text.Trim();
@@ -630,6 +517,8 @@ namespace BKI_QLHT
             }
         }
 
+
+        #endregion
 	}
 }
 

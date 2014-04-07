@@ -12,6 +12,7 @@ using BKI_QLHT.US;
 using IP.Core.IPCommon;
 using IP.Core.IPExcelReport;
 using IP.Core.IPSystemAdmin;
+using BKI_QLHT.DanhMuc;
 
 
 namespace BKI_QLHT
@@ -113,8 +114,12 @@ namespace BKI_QLHT
 
         private void m_cmd_nhom_khach_hang_Click(object sender, EventArgs e)
         {
-            f101_dm_nhom_khach_hang frm = new f101_dm_nhom_khach_hang();
-            frm.ShowDialog();
+            //f101_dm_nhom_khach_hang frm = new f101_dm_nhom_khach_hang();
+            //frm.ShowDialog();
+            m_Panel_Content.Controls.Clear();
+            uc_f101_dm_nhom_khach_hang uc_frm = new uc_f101_dm_nhom_khach_hang();
+            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            m_Panel_Content.Controls.Add(uc_frm);
         }
 
         private void m_cmd_item_danh_muc_nha_cung_cap_Click(object sender, EventArgs e)
@@ -127,18 +132,6 @@ namespace BKI_QLHT
             m_Panel_Content.Controls.Add(v_frm);
         }
 
-        private void m_cmd_item_danh_muc_bac_sy_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
-                v_frm_f100_V_DM_BAC_SY.ShowDialog();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
 
         private void m_cmd_item_phan_quyen_he_thong_Click(object sender, EventArgs e)
         {
@@ -248,14 +241,15 @@ namespace BKI_QLHT
 
         #endregion
 
-        private void m_cmd_item_danh_muc_bac_sy_Click_1(object sender, EventArgs e)
+        private void m_cmd_item_danh_muc_bac_sy_Click(object sender, EventArgs e)
         {
-            f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
-            v_frm_f100_V_DM_BAC_SY.ShowDialog();
+            //f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
+            //v_frm_f100_V_DM_BAC_SY.ShowDialog();
+            m_Panel_Content.Controls.Clear();
+            uc_f100_dm_bac_sy uc_frm = new uc_f100_dm_bac_sy();
+            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            m_Panel_Content.Controls.Add(uc_frm);
         }
-
-      
-
 
 
         //private void m_menu_item_he_thong_nguoi_su_dung_Click(object sender, EventArgs e)

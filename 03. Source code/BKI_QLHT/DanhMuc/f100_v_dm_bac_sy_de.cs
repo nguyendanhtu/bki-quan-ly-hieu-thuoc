@@ -56,7 +56,7 @@ namespace BKI_QLHT.DanhMuc
 
             US_CM_DM_TU_DIEN v_us_cm_dm_tu_dien = new US_CM_DM_TU_DIEN();
             DS_CM_DM_TU_DIEN v_ds_cm_dm_tu_dien = new DS_CM_DM_TU_DIEN();
-            v_us_cm_dm_tu_dien.FillDataset(v_ds_cm_dm_tu_dien);
+            v_us_cm_dm_tu_dien.FillDatasetByIdLoaiTuDien(v_ds_cm_dm_tu_dien,2);
             m_cbo_benh_vien.DataSource = v_ds_cm_dm_tu_dien.CM_DM_TU_DIEN;
             m_cbo_benh_vien.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_benh_vien.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;
@@ -71,10 +71,7 @@ namespace BKI_QLHT.DanhMuc
         #endregion
 
         #region Event
-        private void m_cmd_huy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+   
         private void m_cmd_cap_nhat_Click(object sender, EventArgs e)
         {
             m_form_to_us_obj();
@@ -91,6 +88,11 @@ namespace BKI_QLHT.DanhMuc
             }
             this.Close();
         }
+        private void m_cmd_huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
+
     }
 }
