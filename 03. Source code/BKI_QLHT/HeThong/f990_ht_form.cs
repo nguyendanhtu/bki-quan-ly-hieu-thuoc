@@ -24,6 +24,8 @@ using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using BKI_QLHT;
+using System.Reflection;
+using System.Collections.Generic;
 
 namespace BKI_QLHT
 {
@@ -40,8 +42,38 @@ namespace BKI_QLHT
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal Panel m_pnl_out_place_dm;
         private Label label1;
+        internal SIS.Controls.Button.SiSButton m_cmd_save;
+        private GroupBox groupBox1;
+        private ListBox m_list_control_chua_liet_ke;
+        internal ImageList ImageList;
         private System.ComponentModel.IContainer components;
-
+        public class list_form
+        {
+            public int id;
+            public int Id
+            {
+                get { return id; }
+                set { id = Id; }
+            }
+            public string form_name;
+            public string Form_name
+            {
+                get { return form_name; }
+                set { form_name = Form_name; }
+            }
+            public string form_text;
+            public string Form_text
+            {
+                get { return form_text; }
+                set { form_text = Form_text; }
+            }
+            public list_form(int id, string form_name, string form_text)
+            {
+                this.id = id;
+                this.form_text = form_text;
+                this.form_name = form_name;
+            }
+        }
         public f990_ht_form()
         {
             //
@@ -77,6 +109,7 @@ namespace BKI_QLHT
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f990_ht_form));
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
@@ -86,16 +119,22 @@ namespace BKI_QLHT
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.m_list_control_chua_liet_ke = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(0, 87);
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_fg.Location = new System.Drawing.Point(0, 287);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(633, 322);
+            this.m_fg.Size = new System.Drawing.Size(633, 210);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
@@ -196,10 +235,73 @@ namespace BKI_QLHT
             this.label1.Text = "DANH MỤC FORM";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // m_cmd_save
+            // 
+            this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_save.ImageIndex = 10;
+            this.m_cmd_save.ImageList = this.ImageList;
+            this.m_cmd_save.Location = new System.Drawing.Point(374, 144);
+            this.m_cmd_save.Name = "m_cmd_save";
+            this.m_cmd_save.Size = new System.Drawing.Size(75, 30);
+            this.m_cmd_save.TabIndex = 38;
+            this.m_cmd_save.Text = "&Thêm";
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            // 
+            // ImageList
+            // 
+            this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
+            this.ImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList.Images.SetKeyName(0, "");
+            this.ImageList.Images.SetKeyName(1, "");
+            this.ImageList.Images.SetKeyName(2, "");
+            this.ImageList.Images.SetKeyName(3, "");
+            this.ImageList.Images.SetKeyName(4, "");
+            this.ImageList.Images.SetKeyName(5, "");
+            this.ImageList.Images.SetKeyName(6, "");
+            this.ImageList.Images.SetKeyName(7, "");
+            this.ImageList.Images.SetKeyName(8, "");
+            this.ImageList.Images.SetKeyName(9, "");
+            this.ImageList.Images.SetKeyName(10, "");
+            this.ImageList.Images.SetKeyName(11, "");
+            this.ImageList.Images.SetKeyName(12, "");
+            this.ImageList.Images.SetKeyName(13, "");
+            this.ImageList.Images.SetKeyName(14, "");
+            this.ImageList.Images.SetKeyName(15, "");
+            this.ImageList.Images.SetKeyName(16, "");
+            this.ImageList.Images.SetKeyName(17, "");
+            this.ImageList.Images.SetKeyName(18, "");
+            this.ImageList.Images.SetKeyName(19, "");
+            this.ImageList.Images.SetKeyName(20, "");
+            this.ImageList.Images.SetKeyName(21, "");
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.m_list_control_chua_liet_ke);
+            this.groupBox1.Location = new System.Drawing.Point(53, 74);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(276, 194);
+            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Form chưa thêm vào databasa";
+            // 
+            // m_list_control_chua_liet_ke
+            // 
+            this.m_list_control_chua_liet_ke.FormattingEnabled = true;
+            this.m_list_control_chua_liet_ke.ItemHeight = 14;
+            this.m_list_control_chua_liet_ke.Location = new System.Drawing.Point(6, 20);
+            this.m_list_control_chua_liet_ke.Name = "m_list_control_chua_liet_ke";
+            this.m_list_control_chua_liet_ke.Size = new System.Drawing.Size(238, 158);
+            this.m_list_control_chua_liet_ke.TabIndex = 0;
+            // 
             // f990_ht_form
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(633, 409);
+            this.ClientSize = new System.Drawing.Size(633, 497);
+            this.Controls.Add(this.m_cmd_save);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
@@ -208,6 +310,7 @@ namespace BKI_QLHT
             this.Load += new System.EventHandler(this.f990_ht_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -236,6 +339,7 @@ namespace BKI_QLHT
         DS_HT_FORM m_ds = new DS_HT_FORM();
         US_HT_FORM m_us = new US_HT_FORM();
         f994_phan_quyen_detail m_frm = new f994_phan_quyen_detail();
+        List<list_form> m_list = new List<list_form>();
         #endregion
 
         #region Private Methods
@@ -250,9 +354,41 @@ namespace BKI_QLHT
         }
         private void set_initial_form_load()
         {
+            load_form_name_unsaved();
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
         }
+        private void load_form_name_unsaved()
+        {
+            m_list.Clear();
+            int index = 0;
+            Type formType = typeof(Form);
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+                if (formType.IsAssignableFrom(type))
+                {
+                    if (!m_us.check_is_having_form_in_database(type.Name))
+                    {
+                        object lateBound = Activator.CreateInstance(type);
+                        m_list.Add(new list_form(index, type.Name, type.GetProperty("Text").GetValue(lateBound,null).ToString()));
+                        index++;
+                    }
+
+                }
+            if (m_list.Count==0)
+            {
+                m_list_control_chua_liet_ke.DataSource = null;
+                m_list_control_chua_liet_ke.DisplayMember = "Form_name";
+                m_list_control_chua_liet_ke.ValueMember = "Id";
+            }
+            else
+            {
+                m_list_control_chua_liet_ke.DataSource = m_list;
+                m_list_control_chua_liet_ke.DisplayMember = "Form_name";
+                m_list_control_chua_liet_ke.ValueMember = "Id";
+            }
+           
+        }
+       
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
@@ -266,7 +402,7 @@ namespace BKI_QLHT
         private void load_data_2_grid()
         {
             m_ds = new DS_HT_FORM();
-            m_us.FillDataset(m_ds);
+            m_us.FillDataset(m_ds, "order by form_name");
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -348,11 +484,7 @@ namespace BKI_QLHT
         }
         #endregion
 
-        //
-        //
-        //		EVENT HANLDERS
-        //
-        //
+        #region Events
         private void f990_ht_form_Load(object sender, System.EventArgs e)
         {
             try
@@ -442,6 +574,33 @@ namespace BKI_QLHT
             this.ShowDialog();
             f994_phan_quyen_detail = m_frm;
         }
+        #endregion
+
+        private void m_cmd_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+            	if (m_list.Count!=0)
+            	{
+                    foreach (list_form v_item in m_list)
+                    {
+                        m_us.strFORM_NAME = v_item.Form_name;
+                        m_us.strDISPLAY_NAME = v_item.Form_text;
+                        m_us.Insert();
+                    }
+                    BaseMessages.MsgBox_Infor("Đã cập nhập dữ liệu thành công!");
+
+                }
+                else BaseMessages.MsgBox_Infor("Không có form mới nào!");
+                load_form_name_unsaved();
+                load_data_2_grid();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
     }
 }
 

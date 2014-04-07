@@ -16,99 +16,118 @@ using System.Data;
 
 
 
-namespace BKI_QLHT.US{
-
-public class US_HT_FORM : US_Object
+namespace BKI_QLHT.US
 {
-	private const string c_TableName = "HT_FORM";
-#region "Public Properties"
-	public decimal dcID 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID"] = value;
-		}
-	}
 
-	public bool IsIDNull()	{
-		return pm_objDR.IsNull("ID");
-	}
+    public class US_HT_FORM : US_Object
+    {
+        private const string c_TableName = "HT_FORM";
+        #region "Public Properties"
+        public decimal dcID
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID"] = value;
+            }
+        }
 
-	public void SetIDNull() {
-		pm_objDR["ID"] = System.Convert.DBNull;
-	}
+        public bool IsIDNull()
+        {
+            return pm_objDR.IsNull("ID");
+        }
 
-	public string strFORM_NAME 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "FORM_NAME", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["FORM_NAME"] = value;
-		}
-	}
+        public void SetIDNull()
+        {
+            pm_objDR["ID"] = System.Convert.DBNull;
+        }
 
-	public bool IsFORM_NAMENull() 
-	{
-		return pm_objDR.IsNull("FORM_NAME");
-	}
+        public string strFORM_NAME
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "FORM_NAME", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["FORM_NAME"] = value;
+            }
+        }
 
-	public void SetFORM_NAMENull() {
-		pm_objDR["FORM_NAME"] = System.Convert.DBNull;
-	}
+        public bool IsFORM_NAMENull()
+        {
+            return pm_objDR.IsNull("FORM_NAME");
+        }
 
-	public string strDISPLAY_NAME 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "DISPLAY_NAME", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["DISPLAY_NAME"] = value;
-		}
-	}
+        public void SetFORM_NAMENull()
+        {
+            pm_objDR["FORM_NAME"] = System.Convert.DBNull;
+        }
 
-	public bool IsDISPLAY_NAMENull() 
-	{
-		return pm_objDR.IsNull("DISPLAY_NAME");
-	}
+        public string strDISPLAY_NAME
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "DISPLAY_NAME", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["DISPLAY_NAME"] = value;
+            }
+        }
 
-	public void SetDISPLAY_NAMENull() {
-		pm_objDR["DISPLAY_NAME"] = System.Convert.DBNull;
-	}
+        public bool IsDISPLAY_NAMENull()
+        {
+            return pm_objDR.IsNull("DISPLAY_NAME");
+        }
 
-#endregion
-#region "Init Functions"
-	public US_HT_FORM() 
-	{
-		pm_objDS = new DS_HT_FORM();
-		pm_strTableName = c_TableName;
-		pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
-	}
+        public void SetDISPLAY_NAMENull()
+        {
+            pm_objDR["DISPLAY_NAME"] = System.Convert.DBNull;
+        }
 
-	public US_HT_FORM(DataRow i_objDR): this()
-	{
-		this.DataRow2Me(i_objDR);
-	}
+        #endregion
+        #region "Init Functions"
+        public US_HT_FORM()
+        {
+            pm_objDS = new DS_HT_FORM();
+            pm_strTableName = c_TableName;
+            pm_objDR = pm_objDS.Tables[pm_strTableName].NewRow();
+        }
 
-	public US_HT_FORM(decimal i_dbID) 
-	{
-		pm_objDS = new DS_HT_FORM();
-		pm_strTableName = c_TableName;
-		IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
-		v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
-		SqlCommand v_cmdSQL;
-		v_cmdSQL = v_objMkCmd.getSelectCmd();
-		this.FillDatasetByCommand(pm_objDS, v_cmdSQL);
-		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
-	}
-#endregion
-	}
+        public US_HT_FORM(DataRow i_objDR)
+            : this()
+        {
+            this.DataRow2Me(i_objDR);
+        }
+
+        public US_HT_FORM(decimal i_dbID)
+        {
+            pm_objDS = new DS_HT_FORM();
+            pm_strTableName = c_TableName;
+            IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
+            v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
+            SqlCommand v_cmdSQL;
+            v_cmdSQL = v_objMkCmd.getSelectCmd();
+            this.FillDatasetByCommand(pm_objDS, v_cmdSQL);
+            pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
+        }
+        #endregion
+
+        #region "Additional"
+        public bool check_is_having_form_in_database(string ip_str_form_name)
+        {
+            DS_HT_FORM op_ds_ht_form=new DS_HT_FORM();
+            CStoredProc v_sp = new CStoredProc("pr_HT_FORM_check_is_having_form_in_database");
+            v_sp.addNVarcharInputParam("@ip_str_form_name", @ip_str_form_name);
+            v_sp.fillDataSetByCommand(this,op_ds_ht_form);
+            if (op_ds_ht_form.HT_FORM.Count > 0) return true;
+            return false;
+        }
+        #endregion
+
+    }
 }
