@@ -206,7 +206,7 @@ namespace BKI_QLHT
             this.m_cmd_item_danh_muc_bac_sy.Name = "m_cmd_item_danh_muc_bac_sy";
             this.m_cmd_item_danh_muc_bac_sy.SubItemsExpandWidth = 14;
             this.m_cmd_item_danh_muc_bac_sy.Text = "Danh mục bác sỹ";
-            this.m_cmd_item_danh_muc_bac_sy.Click += new System.EventHandler(this.m_cmd_item_danh_muc_bac_sy_Click_1);
+            this.m_cmd_item_danh_muc_bac_sy.Click += new System.EventHandler(this.m_cmd_item_danh_muc_bac_sy_Click);
             // 
             // m_menu_item_nha_cung_cap
             // 
