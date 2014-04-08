@@ -96,9 +96,6 @@ namespace BKI_QLHT
             set_initial_form_load();
         }
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -464,7 +461,16 @@ namespace BKI_QLHT
         #endregion
 
         #region Private Methods
-        
+        private void set_initial_form_load()
+        {
+            format_controls();
+            load_data_cbo_form_name();
+            load_control_unlist();
+            load_control_list();
+            load_data_to_cbo_chuc_nang();
+            m_obj_trans = get_trans_object(m_fg);
+            load_data_2_grid();
+        }
         private void load_control_unlist()
         {
             //Type formType = typeof(Form);
@@ -531,6 +537,15 @@ namespace BKI_QLHT
             m_list_control_da_liet_ke.ValueMember = "Id";
 
         }
+        private void load_data_to_cbo_chuc_nang()
+        {
+            US_CM_DM_TU_DIEN v_us_cm_dm_tu_dien = new US_CM_DM_TU_DIEN();
+            DS_CM_DM_TU_DIEN v_ds_cm_dm_tu_dien = new DS_CM_DM_TU_DIEN();
+            v_us_cm_dm_tu_dien.FillDataset(v_ds_cm_dm_tu_dien, "where id_loai_tu_dien = " + ID_LOAI_TU_DIEN.CHUC_NANG);
+            m_cbo_chuc_nang.DataSource = v_ds_cm_dm_tu_dien.CM_DM_TU_DIEN;
+            m_cbo_chuc_nang.DisplayMember = CM_DM_TU_DIEN.TEN;
+            m_cbo_chuc_nang.ValueMember = CM_DM_TU_DIEN.MA_TU_DIEN;
+        }
         private void m_list_control_chua_liet_ke_SelectedIndexChanged(object sender, EventArgs e)
         {
             m_dc_index_in_left = m_list_control_chua_liet_ke.SelectedIndex;
@@ -595,15 +610,6 @@ namespace BKI_QLHT
             this.KeyPreview = true;
         }
 
-        private void set_initial_form_load()
-        {
-            format_controls();
-            load_data_cbo_form_name();
-            load_control_unlist();
-            load_control_list();
-            m_obj_trans = get_trans_object(m_fg);
-            load_data_2_grid();
-        }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
