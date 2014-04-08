@@ -59,15 +59,5 @@ namespace BKI_QLHT.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap grid_blue {
-            get {
-                object obj = ResourceManager.GetObject("grid-blue", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
