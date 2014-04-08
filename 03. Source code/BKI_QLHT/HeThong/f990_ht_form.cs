@@ -366,15 +366,32 @@ namespace BKI_QLHT
             foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
                 if (formType.IsAssignableFrom(type))
                 {
-                    if (!m_us.check_is_having_form_in_database(type.Name))
+                    if (type.Name == "f400_Main")
                     {
                         object lateBound = Activator.CreateInstance(type);
-                        m_list.Add(new list_form(index, type.Name, type.GetProperty("Text").GetValue(lateBound,null).ToString()));
-                        index++;
+                        System.Windows.Forms.Form oForm = (System.Windows.Forms.Form)lateBound;
+
+                        foreach (Control v_obj in oForm.Controls)
+                        {
+                            m_list.Add(new list_form(index, v_obj.Name, v_obj.GetType().Name));
+                            index++;
+                        }
+                        
+
                     }
 
+
                 }
-            if (m_list.Count==0)
+            //if (type.Name == "f991_v_ht_control_in_form")
+            //{
+            //    if (!m_us.check_is_having_form_in_database(type.Name))
+            //    {
+            //        object lateBound = Activator.CreateInstance(type);
+            //        m_list.Add(new list_form(index, type.Name, type.GetProperty("Text").GetValue(lateBound, null).ToString()));
+            //        index++;
+            //    }
+            //}
+            if (m_list.Count == 0)
             {
                 m_list_control_chua_liet_ke.DataSource = null;
                 m_list_control_chua_liet_ke.DisplayMember = "Form_name";
@@ -386,9 +403,26 @@ namespace BKI_QLHT
                 m_list_control_chua_liet_ke.DisplayMember = "Form_name";
                 m_list_control_chua_liet_ke.ValueMember = "Id";
             }
-           
+
         }
-       
+        protected List<T> GetAllControls<T>(Control control) where T : Control
+        {
+
+            List<T> controls = new List<T>();
+
+            foreach (Control child in control.Controls)
+            {
+                //if (child is T)
+                T specificControl = child as T;
+
+                if (specificControl != null)
+                    controls.Add(specificControl);
+
+                if (child.HasChildren)
+                    controls.AddRange(GetAllControls<T>(child));
+            }
+            return controls;
+        }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
@@ -580,8 +614,8 @@ namespace BKI_QLHT
         {
             try
             {
-            	if (m_list.Count!=0)
-            	{
+                if (m_list.Count != 0)
+                {
                     foreach (list_form v_item in m_list)
                     {
                         m_us.strFORM_NAME = v_item.Form_name;
@@ -597,7 +631,7 @@ namespace BKI_QLHT
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
