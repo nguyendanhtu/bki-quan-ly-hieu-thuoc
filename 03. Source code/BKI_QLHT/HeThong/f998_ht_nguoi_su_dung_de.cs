@@ -384,10 +384,10 @@ namespace BKI_QLHT
         {
             m_us_user.strBUILT_IN_YN
                 = CIPConvert.ToYNString(m_chk_is_admin.Checked);
-            m_us_user.strTEN_TRUY_CAP = m_txt_ten_truy_cap.Text;
-            m_us_user.strTEN = m_txt_ten.Text;
-            //m_us_user.strMAT_KHAU = m_txt_mat_khau.Text;
-            m_us_user.strMAT_KHAU = CIPConvert.Encoding(m_txt_mat_khau.Text);
+            m_us_user.strTEN_TRUY_CAP = m_txt_ten_truy_cap.Text.Trim();
+            m_us_user.strTEN = m_txt_ten.Text.Trim();
+            m_us_user.strMAT_KHAU = m_txt_mat_khau.Text.Trim();
+            //m_us_user.strMAT_KHAU = CIPConvert.Encoding(m_txt_mat_khau.Text);
             m_us_user.strTRANG_THAI =
                 CIPConvert.ToStr(m_cbo_trang_thai.SelectedIndex);
             m_us_user.strNGUOI_TAO = IP.Core.IPSystemAdmin.CAppContext_201.getCurrentUser();

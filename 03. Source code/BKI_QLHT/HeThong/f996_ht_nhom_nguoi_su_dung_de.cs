@@ -70,8 +70,8 @@ namespace BKI_QLHT
 
         private void form_2_us_object()
         {
-            m_us.strDESCRIPTION = m_txt_mo_ta.Text;
-            m_us.strUSER_GROUP_NAME = m_txt_ten_nhom.Text;
+            m_us.strDESCRIPTION = m_txt_mo_ta.Text.Trim();
+            m_us.strUSER_GROUP_NAME = m_txt_ten_nhom.Text.Trim();
         }
 
         private bool check_validate()

@@ -479,7 +479,7 @@ namespace BKI_QLHT
         #region Private Methods
         private void format_form()
         {
-            if (m_e_form_mode==DataEntryFormMode.InsertDataState)
+            if (m_e_form_mode == DataEntryFormMode.InsertDataState)
             {
                 m_txt_display_name.Enabled = true;
                 m_txt_form_name.Enabled = false;
@@ -489,7 +489,7 @@ namespace BKI_QLHT
             }
             if (m_e_form_mode == DataEntryFormMode.UpdateDataState)
             {
-                m_txt_display_name.Enabled = true ;
+                m_txt_display_name.Enabled = true;
                 m_txt_form_name.Enabled = false;
                 m_cmd_save.Visible = false;
                 m_cmd_cap_nhat.Visible = true;
@@ -518,7 +518,7 @@ namespace BKI_QLHT
             int index = 0;
             Type formType = typeof(Form);
             foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
-                //if (formType.IsAssignableFrom(type))
+                if (formType.IsAssignableFrom(type))
                 //{
                 //    if (type.Name == "f400_Main")
                 //    {
@@ -536,7 +536,6 @@ namespace BKI_QLHT
 
 
                 //}
-                if (type.Name == "f991_v_ht_control_in_form")
                 {
                     if (!m_us.check_is_having_form_in_database(type.Name))
                     {
@@ -545,6 +544,8 @@ namespace BKI_QLHT
                         index++;
                     }
                 }
+
+
             if (m_list.Count == 0)
             {
                 m_list_control_chua_liet_ke.DataSource = null;
@@ -760,6 +761,9 @@ namespace BKI_QLHT
                         m_us.strFORM_NAME = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_name;
                         m_us.strDISPLAY_NAME = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_text;
                         m_us.Insert();
+                        m_list_control_chua_liet_ke.DataSource = null;
+                        load_form_name_unsaved();
+                        load_data_2_grid();
                         BaseMessages.MsgBox_Infor("Đã cập nhập dữ liệu thành công!");
                     }
                     else
@@ -771,8 +775,7 @@ namespace BKI_QLHT
 
                 }
                 else BaseMessages.MsgBox_Infor("Không có form mới nào!");
-                load_form_name_unsaved();
-                load_data_2_grid();
+                
             }
             catch (System.Exception v_e)
             {
@@ -809,11 +812,11 @@ namespace BKI_QLHT
                     load_data_2_grid();
                     BaseMessages.MsgBox_Infor("Đã sửa thành công!");
                 }
-               
+
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -846,7 +849,7 @@ namespace BKI_QLHT
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -858,7 +861,7 @@ namespace BKI_QLHT
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -866,16 +869,16 @@ namespace BKI_QLHT
         {
             try
             {
-            	if (m_list_control_chua_liet_ke.SelectedValue!=null) 
-            	{
+                if (m_list_control_chua_liet_ke.SelectedValue != null)
+                {
                     m_txt_display_name.Text = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_text;
                     m_txt_form_name.Text = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_name;
 
-            	}
+                }
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 

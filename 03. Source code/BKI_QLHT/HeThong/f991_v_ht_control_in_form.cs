@@ -417,17 +417,35 @@ namespace BKI_QLHT
                         {
                             if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
                             {
-                                m_list.Add(new list_form(index, v_control.Name, v_control.GetType().Name));
-                                index++;
+                                m_ds.Clear();
+                                m_us.FillDataset(m_ds, "where form_name='" +
+                                    ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                                    + "' and control_name='" + v_control.Name + "' and id_tu_dien = "+m_cbo_chuc_nang.SelectedValue);
+                                if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                {
+                                    m_list.Add(new list_form(index, v_control.Name, v_control.GetType().Name));
+                                    index++;
+                                }
+
+
                             }
                             else if (v_control.Name == "m_pnl_control" && v_control.GetType().Name == "Panel")
                             {
                                 foreach (Control v_control_child in v_control.Controls)
                                 {
+
                                     if (v_control_child.GetType().Name == "SiSButton" | v_control_child.GetType().Name == "Button")
                                     {
-                                        m_list.Add(new list_form(index, v_control_child.Name, v_control_child.GetType().Name));
-                                        index++;
+                                        m_ds.Clear();
+                                        m_us.FillDataset(m_ds, "where form_name='" +
+                                            ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                                            + "' and control_name='" + v_control_child.Name + "'and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
+                                        if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                        {
+                                            m_list.Add(new list_form(index, v_control_child.Name, v_control_child.GetType().Name));
+                                            index++;
+                                        }
+                                        
                                     }
                                 }
                             }
@@ -693,6 +711,8 @@ namespace BKI_QLHT
         {
             try
             {
+                m_list_control_chua_liet_ke.DataSource = null;
+                load_control_unlist();
                 load_data_2_grid();
             }
             catch (System.Exception v_e)
@@ -726,6 +746,8 @@ namespace BKI_QLHT
                             ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_name;
                         v_us_ht_control_in_form.strCONTROL_TYPE = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_text;
                         v_us_ht_control_in_form.Insert();
+                        m_list_control_chua_liet_ke.DataSource = null;
+                        load_control_unlist();
                         load_data_2_grid();
                         BaseMessages.MsgBox_Infor("Đã cập nhật dữ liệu thành công!");
                     }

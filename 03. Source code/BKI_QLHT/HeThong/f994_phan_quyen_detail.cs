@@ -19,9 +19,7 @@ namespace BKI_QLHT
 {
     public partial class f994_phan_quyen_detail : Form
     {
-        public void load_data_2_txt_form(US_HT_FORM ip_us){
-            m_txt_form.Text = ip_us.strFORM_NAME;
-        }
+        
 
         public f994_phan_quyen_detail()
         {
@@ -29,6 +27,28 @@ namespace BKI_QLHT
             format_control();
         }
 
+
+        private void load_data_to_cbo_form_name()
+        {
+            US_HT_FORM v_us_ht_form = new US_HT_FORM();
+            DS_HT_FORM v_ds_ht_form = new DS_HT_FORM();
+            v_us_ht_form.FillDataset(v_ds_ht_form,
+                "where form_name like N'%" + m_txt_loc_form.Text.Trim()
+            + "%' or display_name like N'%" + m_txt_loc_form.Text.Trim()
+            + "%' order by form_name");
+            if (v_ds_ht_form.HT_FORM.Count < 1)
+            {
+                m_cbo_form_name.DataSource = null;
+                m_cbo_form_name.ValueMember = HT_FORM.FORM_NAME;
+                m_cbo_form_name.DisplayMember = HT_FORM.FORM_NAME;
+            }
+            else
+            {
+                m_cbo_form_name.DataSource = v_ds_ht_form.HT_FORM;
+                m_cbo_form_name.ValueMember = HT_FORM.FORM_NAME;
+                m_cbo_form_name.DisplayMember = HT_FORM.FORM_NAME;
+            }
+        }
         private void format_control()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
@@ -43,7 +63,8 @@ namespace BKI_QLHT
         {
             US_V_HT_CONTROL_IN_FORM v_us = new US_V_HT_CONTROL_IN_FORM();
             DS_V_HT_CONTROL_IN_FORM v_ds = new DS_V_HT_CONTROL_IN_FORM();
-            v_us.FillDatasetByIdChucNangAndFormName(v_ds,CIPConvert.ToDecimal(m_cbo_chuc_nang.SelectedValue),m_txt_form.Text);
+            v_us.FillDatasetByIdChucNangAndFormName(v_ds,CIPConvert.ToDecimal(m_cbo_chuc_nang.SelectedValue),
+              m_cbo_form_name.SelectedValue.ToString());
 
             US_HT_PHAN_QUYEN_DETAIL v_us_ht_pq_detail;
             for (int i = 0; i < v_ds.Tables[0].Rows.Count; i++)
@@ -64,6 +85,7 @@ namespace BKI_QLHT
 
         private void f994_phan_quyen_detail_Load(object sender, EventArgs e)
         {
+            load_data_to_cbo_form_name();
             load_data_2_cbo_nhom_quyen();
             load_data_2_cbo_chuc_nang();
         }
@@ -92,6 +114,30 @@ namespace BKI_QLHT
         {
             f990_ht_form v_frm = new f990_ht_form();
             v_frm.show_2_choose(this);
+        }
+
+        private void m_txt_loc_form_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_to_cbo_form_name();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_txt_loc_form_Enter(object sender, EventArgs e)
+        {
+            try
+            {
+                m_txt_loc_form.Text = "";
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
     }
 }
