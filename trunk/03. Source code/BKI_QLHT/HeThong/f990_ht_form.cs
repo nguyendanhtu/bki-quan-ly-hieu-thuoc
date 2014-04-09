@@ -46,6 +46,15 @@ namespace BKI_QLHT
         private GroupBox groupBox1;
         private ListBox m_list_control_chua_liet_ke;
         internal ImageList ImageList;
+        private Label label2;
+        private TextBox m_txt_form_name;
+        private Label label3;
+        private TextBox m_txt_display_name;
+        internal SIS.Controls.Button.SiSButton m_cmd_cap_nhat;
+        internal SIS.Controls.Button.SiSButton m_cmd_sua;
+        internal SIS.Controls.Button.SiSButton m_cmd_thoat;
+        internal Panel m_pnl_control;
+        internal SIS.Controls.Button.SiSButton m_cmd_huy;
         private System.ComponentModel.IContainer components;
         public class list_form
         {
@@ -123,18 +132,27 @@ namespace BKI_QLHT
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.m_list_control_chua_liet_ke = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.m_txt_form_name = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.m_txt_display_name = new System.Windows.Forms.TextBox();
+            this.m_cmd_cap_nhat = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_sua = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_thoat = new SIS.Controls.Button.SiSButton();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_fg.Location = new System.Drawing.Point(0, 287);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(633, 210);
+            this.m_fg.Size = new System.Drawing.Size(633, 172);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
@@ -239,9 +257,9 @@ namespace BKI_QLHT
             // 
             this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_save.ImageIndex = 10;
+            this.m_cmd_save.ImageIndex = 16;
             this.m_cmd_save.ImageList = this.ImageList;
             this.m_cmd_save.Location = new System.Drawing.Point(374, 144);
             this.m_cmd_save.Name = "m_cmd_save";
@@ -280,12 +298,12 @@ namespace BKI_QLHT
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.m_list_control_chua_liet_ke);
-            this.groupBox1.Location = new System.Drawing.Point(53, 74);
+            this.groupBox1.Location = new System.Drawing.Point(40, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(276, 194);
+            this.groupBox1.Size = new System.Drawing.Size(276, 170);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Form chưa thêm vào databasa";
+            this.groupBox1.Text = "Form chưa thêm vào database";
             // 
             // m_list_control_chua_liet_ke
             // 
@@ -293,13 +311,126 @@ namespace BKI_QLHT
             this.m_list_control_chua_liet_ke.ItemHeight = 14;
             this.m_list_control_chua_liet_ke.Location = new System.Drawing.Point(6, 20);
             this.m_list_control_chua_liet_ke.Name = "m_list_control_chua_liet_ke";
-            this.m_list_control_chua_liet_ke.Size = new System.Drawing.Size(238, 158);
+            this.m_list_control_chua_liet_ke.Size = new System.Drawing.Size(238, 130);
             this.m_list_control_chua_liet_ke.TabIndex = 0;
+            this.m_list_control_chua_liet_ke.SelectedIndexChanged += new System.EventHandler(this.m_list_control_chua_liet_ke_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 253);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 14);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Form name";
+            // 
+            // m_txt_form_name
+            // 
+            this.m_txt_form_name.Location = new System.Drawing.Point(103, 250);
+            this.m_txt_form_name.Name = "m_txt_form_name";
+            this.m_txt_form_name.Size = new System.Drawing.Size(171, 20);
+            this.m_txt_form_name.TabIndex = 40;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(307, 253);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 14);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Display name";
+            // 
+            // m_txt_display_name
+            // 
+            this.m_txt_display_name.Location = new System.Drawing.Point(384, 250);
+            this.m_txt_display_name.Name = "m_txt_display_name";
+            this.m_txt_display_name.Size = new System.Drawing.Size(171, 20);
+            this.m_txt_display_name.TabIndex = 40;
+            // 
+            // m_cmd_cap_nhat
+            // 
+            this.m_cmd_cap_nhat.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_cap_nhat.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_cap_nhat.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_cap_nhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_cap_nhat.ImageIndex = 10;
+            this.m_cmd_cap_nhat.ImageList = this.ImageList;
+            this.m_cmd_cap_nhat.Location = new System.Drawing.Point(374, 199);
+            this.m_cmd_cap_nhat.Name = "m_cmd_cap_nhat";
+            this.m_cmd_cap_nhat.Size = new System.Drawing.Size(75, 30);
+            this.m_cmd_cap_nhat.TabIndex = 38;
+            this.m_cmd_cap_nhat.Text = "&Cập nhật";
+            this.m_cmd_cap_nhat.Click += new System.EventHandler(this.m_cmd_cap_nhat_Click);
+            // 
+            // m_cmd_sua
+            // 
+            this.m_cmd_sua.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_sua.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_sua.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_sua.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_sua.ImageIndex = 3;
+            this.m_cmd_sua.ImageList = this.ImageList;
+            this.m_cmd_sua.Location = new System.Drawing.Point(453, 4);
+            this.m_cmd_sua.Name = "m_cmd_sua";
+            this.m_cmd_sua.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_sua.TabIndex = 13;
+            this.m_cmd_sua.Text = "&Sửa";
+            this.m_cmd_sua.Click += new System.EventHandler(this.m_cmd_sua_Click);
+            // 
+            // m_cmd_thoat
+            // 
+            this.m_cmd_thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_thoat.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_thoat.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_thoat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_thoat.ImageIndex = 12;
+            this.m_cmd_thoat.ImageList = this.ImageList;
+            this.m_cmd_thoat.Location = new System.Drawing.Point(541, 4);
+            this.m_cmd_thoat.Name = "m_cmd_thoat";
+            this.m_cmd_thoat.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_thoat.TabIndex = 11;
+            this.m_cmd_thoat.Text = "Thoát (Esc)";
+            this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click);
+            // 
+            // m_pnl_control
+            // 
+            this.m_pnl_control.Controls.Add(this.m_cmd_sua);
+            this.m_pnl_control.Controls.Add(this.m_cmd_thoat);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 461);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_control.Size = new System.Drawing.Size(633, 36);
+            this.m_pnl_control.TabIndex = 41;
+            // 
+            // m_cmd_huy
+            // 
+            this.m_cmd_huy.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_huy.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_huy.ImageIndex = 3;
+            this.m_cmd_huy.ImageList = this.ImageList;
+            this.m_cmd_huy.Location = new System.Drawing.Point(466, 199);
+            this.m_cmd_huy.Name = "m_cmd_huy";
+            this.m_cmd_huy.Size = new System.Drawing.Size(75, 30);
+            this.m_cmd_huy.TabIndex = 38;
+            this.m_cmd_huy.Text = "&Huỷ";
+            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
             // 
             // f990_ht_form
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(633, 497);
+            this.Controls.Add(this.m_pnl_control);
+            this.Controls.Add(this.m_txt_display_name);
+            this.Controls.Add(this.m_txt_form_name);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.m_cmd_huy);
+            this.Controls.Add(this.m_cmd_cap_nhat);
             this.Controls.Add(this.m_cmd_save);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -311,7 +442,9 @@ namespace BKI_QLHT
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         #endregion
@@ -340,9 +473,29 @@ namespace BKI_QLHT
         US_HT_FORM m_us = new US_HT_FORM();
         f994_phan_quyen_detail m_frm = new f994_phan_quyen_detail();
         List<list_form> m_list = new List<list_form>();
+        DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         #endregion
 
         #region Private Methods
+        private void format_form()
+        {
+            if (m_e_form_mode==DataEntryFormMode.InsertDataState)
+            {
+                m_txt_display_name.Enabled = true;
+                m_txt_form_name.Enabled = false;
+                m_cmd_save.Visible = true;
+                m_cmd_cap_nhat.Visible = false;
+                m_cmd_huy.Visible = false;
+            }
+            if (m_e_form_mode == DataEntryFormMode.UpdateDataState)
+            {
+                m_txt_display_name.Enabled = true ;
+                m_txt_form_name.Enabled = false;
+                m_cmd_save.Visible = false;
+                m_cmd_cap_nhat.Visible = true;
+                m_cmd_huy.Visible = true;
+            }
+        }
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
@@ -351,6 +504,7 @@ namespace BKI_QLHT
             CGridUtils.AddSearch_Handlers(m_fg);
             set_define_events();
             this.KeyPreview = true;
+            format_form();
         }
         private void set_initial_form_load()
         {
@@ -364,33 +518,33 @@ namespace BKI_QLHT
             int index = 0;
             Type formType = typeof(Form);
             foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
-                if (formType.IsAssignableFrom(type))
+                //if (formType.IsAssignableFrom(type))
+                //{
+                //    if (type.Name == "f400_Main")
+                //    {
+                //        object lateBound = Activator.CreateInstance(type);
+                //        System.Windows.Forms.Form oForm = (System.Windows.Forms.Form)lateBound;
+
+                //        foreach (Control v_obj in oForm.Controls)
+                //        {
+                //            m_list.Add(new list_form(index, v_obj.Name, v_obj.GetType().Name));
+                //            index++;
+                //        }
+
+
+                //    }
+
+
+                //}
+                if (type.Name == "f991_v_ht_control_in_form")
                 {
-                    if (type.Name == "f400_Main")
+                    if (!m_us.check_is_having_form_in_database(type.Name))
                     {
                         object lateBound = Activator.CreateInstance(type);
-                        System.Windows.Forms.Form oForm = (System.Windows.Forms.Form)lateBound;
-
-                        foreach (Control v_obj in oForm.Controls)
-                        {
-                            m_list.Add(new list_form(index, v_obj.Name, v_obj.GetType().Name));
-                            index++;
-                        }
-                        
-
+                        m_list.Add(new list_form(index, type.Name, type.GetProperty("Text").GetValue(lateBound, null).ToString()));
+                        index++;
                     }
-
-
                 }
-            //if (type.Name == "f991_v_ht_control_in_form")
-            //{
-            //    if (!m_us.check_is_having_form_in_database(type.Name))
-            //    {
-            //        object lateBound = Activator.CreateInstance(type);
-            //        m_list.Add(new list_form(index, type.Name, type.GetProperty("Text").GetValue(lateBound, null).ToString()));
-            //        index++;
-            //    }
-            //}
             if (m_list.Count == 0)
             {
                 m_list_control_chua_liet_ke.DataSource = null;
@@ -510,8 +664,8 @@ namespace BKI_QLHT
         }
         private void set_define_events()
         {
-            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            //m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            //m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
@@ -530,30 +684,6 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
 
-        }
-
-        private void m_cmd_exit_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.Close();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_cmd_insert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                insert_ht_form();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
         }
 
         private void m_cmd_update_Click(object sender, EventArgs e)
@@ -597,8 +727,10 @@ namespace BKI_QLHT
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
-            this.Close();
-            m_frm.load_data_2_txt_form(m_us);
+            m_txt_form_name.Text = m_us.strFORM_NAME;
+            m_txt_display_name.Text = m_us.strDISPLAY_NAME;
+            m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            format_form();
         }
 
 
@@ -614,15 +746,28 @@ namespace BKI_QLHT
         {
             try
             {
+                m_e_form_mode = DataEntryFormMode.InsertDataState;
                 if (m_list.Count != 0)
                 {
-                    foreach (list_form v_item in m_list)
+                    //foreach (list_form v_item in m_list)
+                    //{
+                    //    m_us.strFORM_NAME = v_item.Form_name;
+                    //    m_us.strDISPLAY_NAME = v_item.Form_text;
+                    //    m_us.Insert();
+                    //}
+                    if (m_list_control_chua_liet_ke.SelectedValue != null)
                     {
-                        m_us.strFORM_NAME = v_item.Form_name;
-                        m_us.strDISPLAY_NAME = v_item.Form_text;
+                        m_us.strFORM_NAME = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_name;
+                        m_us.strDISPLAY_NAME = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_text;
                         m_us.Insert();
+                        BaseMessages.MsgBox_Infor("Đã cập nhập dữ liệu thành công!");
                     }
-                    BaseMessages.MsgBox_Infor("Đã cập nhập dữ liệu thành công!");
+                    else
+                    {
+                        BaseMessages.MsgBox_Infor("Hãy chọn form!");
+                        return;
+                    }
+
 
                 }
                 else BaseMessages.MsgBox_Infor("Không có form mới nào!");
@@ -632,6 +777,105 @@ namespace BKI_QLHT
             catch (System.Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_cap_nhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //m_e_form_mode = DataEntryFormMode.UpdateDataState;
+                //if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                //if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                //grid2us_object(m_us, m_fg.Row);
+                ////	f990_ht_form_DE v_fDE = new f990_ht_form_DE();
+                ////	v_fDE.display(m_us);
+                //load_data_2_grid();
+                if (m_txt_form_name.Text.Trim().Equals(""))
+                {
+                    BaseMessages.MsgBox_Infor("Bạn phải nhập tên form!");
+                    m_txt_form_name.Focus();
+                    return;
+                }
+                else
+                {
+                    m_us.strDISPLAY_NAME = m_txt_display_name.Text;
+                    m_us.strFORM_NAME = m_txt_form_name.Text;
+                    m_us.Insert();
+                    m_txt_form_name.Text = "";
+                    m_txt_display_name.Text = "";
+                    m_e_form_mode = DataEntryFormMode.InsertDataState;
+                    format_form();
+                    load_data_2_grid();
+                    BaseMessages.MsgBox_Infor("Đã sửa thành công!");
+                }
+               
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m_e_form_mode = DataEntryFormMode.UpdateDataState;
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(m_us, m_fg.Row);
+                m_txt_form_name.Text = m_us.strFORM_NAME.Trim();
+                m_txt_display_name.Text = m_us.strDISPLAY_NAME.Trim();
+                format_form();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_huy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m_txt_form_name.Text = "";
+                m_txt_display_name.Text = "";
+                m_e_form_mode = DataEntryFormMode.InsertDataState;
+                format_form();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_thoat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_list_control_chua_liet_ke_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+            	if (m_list_control_chua_liet_ke.SelectedValue!=null) 
+            	{
+                    m_txt_display_name.Text = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_text;
+                    m_txt_form_name.Text = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_name;
+
+            	}
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
