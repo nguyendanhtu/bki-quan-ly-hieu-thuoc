@@ -58,8 +58,6 @@ namespace BKI_QLHT
             CControlFormat.setFormStyle(this);
             set_define_events();
             ShowInTaskbar = true;
-            this.m_cmd_item_chi_tiet_thuoc.Visible = false;
-            m_menu_item_thuoc.Visible = false;
         }
         private void set_define_events()
         {
@@ -180,15 +178,7 @@ namespace BKI_QLHT
         }
         private void m_cmd_item_nhat_ki_he_thong_Click(object sender, EventArgs e)
         {
-            try
-            {
-                f990_ht_form v_frm = new f990_ht_form();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
+           
         }
 
         private void m_cmd_item_phan_quyen_cho_nhom_Click(object sender, EventArgs e)
@@ -254,6 +244,19 @@ namespace BKI_QLHT
             uc_f100_dm_bac_sy uc_frm = new uc_f100_dm_bac_sy();
             uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
             m_Panel_Content.Controls.Add(uc_frm);
+        }
+
+        private void m_cmd_item_ht_form_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f990_ht_form v_frm = new f990_ht_form();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
 
