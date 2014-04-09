@@ -532,7 +532,7 @@ Partial Public Class DS_HT_NGUOI_SU_DUNG
             Me.columnTRANG_THAI.AllowDBNull = false
             Me.columnTRANG_THAI.MaxLength = 15
             Me.columnBUILT_IN_YN.MaxLength = 1
-            Me.columnNGUOI_TAO.MaxLength = 15
+            Me.columnNGUOI_TAO.MaxLength = 35
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1053,7 +1053,7 @@ Namespace DS_HT_NGUOI_SU_DUNGTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.IP.Core.IPData.My.MySettings.Default.BKI_QLHTConnectionString
+            Me._connection.ConnectionString = Global.IP.Core.IPData.My.MySettings.Default.BKI_QLHTConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

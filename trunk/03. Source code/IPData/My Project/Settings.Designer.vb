@@ -85,6 +85,17 @@ Namespace My
                 Return CType(Me("BKI_QLHTConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=TUDM\SQLEXPRESS;Initial Catalog=BKI_QLHT;Persist Security Info=True;U"& _ 
+            "ser ID=sa;Password=sa")>  _
+        Public ReadOnly Property BKI_QLHTConnectionString1() As String
+            Get
+                Return CType(Me("BKI_QLHTConnectionString1"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -2,15 +2,16 @@
 <xs:schema id="DS_HT_NGUOI_SU_DUNG" targetNamespace="http://tempuri.org/DS_HT_NGUOI_SU_DUNG.xsd" xmlns:mstns="http://tempuri.org/DS_HT_NGUOI_SU_DUNG.xsd" xmlns="http://tempuri.org/DS_HT_NGUOI_SU_DUNG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BKI_HRMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_HRMConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.IP.Core.IPData.My.MySettings.GlobalReference.Default.BKI_HRMConnectionString" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BKI_QLHTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.IP.Core.IPData.My.MySettings.GlobalReference.Default.BKI_QLHTConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BKI_QLHTConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.IP.Core.IPData.My.MySettings.GlobalReference.Default.BKI_QLHTConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HT_NGUOI_SU_DUNGTableAdapter" GeneratorDataComponentClassName="HT_NGUOI_SU_DUNGTableAdapter" Name="HT_NGUOI_SU_DUNG" UserDataComponentName="HT_NGUOI_SU_DUNGTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BKI_QLHTConnectionString (MySettings)" DbObjectName="BKI_QLHT.dbo.HT_NGUOI_SU_DUNG" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BKI_QLHTConnectionString1 (MySettings)" DbObjectName="BKI_QLHT.dbo.HT_NGUOI_SU_DUNG" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[HT_NGUOI_SU_DUNG] WHERE (([ID] = @Original_ID) AND ([TEN_TRUY_CAP] = @Original_TEN_TRUY_CAP) AND ([TEN] = @Original_TEN) AND ([MAT_KHAU] = @Original_MAT_KHAU) AND ([NGAY_TAO] = @Original_NGAY_TAO) AND ([TRANG_THAI] = @Original_TRANG_THAI) AND ((@IsNull_BUILT_IN_YN = 1 AND [BUILT_IN_YN] IS NULL) OR ([BUILT_IN_YN] = @Original_BUILT_IN_YN)) AND ((@IsNull_ID_USER_GROUP = 1 AND [ID_USER_GROUP] IS NULL) OR ([ID_USER_GROUP] = @Original_ID_USER_GROUP)) AND ((@IsNull_NGUOI_TAO = 1 AND [NGUOI_TAO] IS NULL) OR ([NGUOI_TAO] = @Original_NGUOI_TAO)))</CommandText>
@@ -148,7 +149,7 @@ SELECT ID, TEN_TRUY_CAP, TEN, MAT_KHAU, NGAY_TAO, TRANG_THAI, BUILT_IN_YN, ID_US
               <xs:element name="NGUOI_TAO" msprop:Generator_ColumnVarNameInTable="columnNGUOI_TAO" msprop:Generator_ColumnPropNameInRow="NGUOI_TAO" msprop:Generator_ColumnPropNameInTable="NGUOI_TAOColumn" msprop:Generator_UserColumnName="NGUOI_TAO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="35" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
