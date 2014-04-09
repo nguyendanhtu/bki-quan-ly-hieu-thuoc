@@ -68,6 +68,7 @@
     <Compile Include="US_GD_GIAO_DICH.cs" />
     <Compile Include="US_GD_GIAO_DICH_DETAIL.cs" />
     <Compile Include="US_GD_SO_DU.cs" />
+    <Compile Include="US_HT_CONTROL_IN_FORM.cs" />
     <Compile Include="US_HT_FORM.cs" />
     <Compile Include="US_HT_NGUOI_SU_DUNG.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
