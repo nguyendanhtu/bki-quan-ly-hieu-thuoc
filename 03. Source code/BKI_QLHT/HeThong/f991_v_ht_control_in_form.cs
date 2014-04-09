@@ -25,7 +25,7 @@ using BKI_QLHT.DS.CDBNames;
 using C1.Win.C1FlexGrid;
 using System.Collections.Generic;
 using System.Reflection;
-
+using System.Linq;
 namespace BKI_QLHT
 {
 
@@ -45,14 +45,9 @@ namespace BKI_QLHT
         private ComboBox m_cbo_ten_form;
         private Label label3;
         private ComboBox m_cbo_chuc_nang;
-        internal SIS.Controls.Button.SiSButton m_cmd_right_2_left_all;
-        internal SIS.Controls.Button.SiSButton m_cmd_right_2_left;
-        internal SIS.Controls.Button.SiSButton m_cmd_left_2_right_all;
-        internal SIS.Controls.Button.SiSButton m_cmd_left_2_right;
-        private GroupBox groupBox2;
-        private ListBox m_list_control_da_liet_ke;
         private GroupBox groupBox1;
         private ListBox m_list_control_chua_liet_ke;
+        internal SIS.Controls.Button.SiSButton m_cmd_save;
         private System.ComponentModel.IContainer components;
         public class C
         {
@@ -81,6 +76,33 @@ namespace BKI_QLHT
                 this.id = id;
                 this.name = name;
                 this.type = type;
+            }
+        }
+        public class list_form
+        {
+            public int id;
+            public int Id
+            {
+                get { return id; }
+                set { id = Id; }
+            }
+            public string form_name;
+            public string Form_name
+            {
+                get { return form_name; }
+                set { form_name = Form_name; }
+            }
+            public string form_text;
+            public string Form_text
+            {
+                get { return form_text; }
+                set { form_text = Form_text; }
+            }
+            public list_form(int id, string form_name, string form_text)
+            {
+                this.id = id;
+                this.form_text = form_text;
+                this.form_name = form_name;
             }
         }
         public f991_v_ht_control_in_form()
@@ -129,17 +151,11 @@ namespace BKI_QLHT
             this.m_cbo_ten_form = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.m_cbo_chuc_nang = new System.Windows.Forms.ComboBox();
-            this.m_cmd_right_2_left_all = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_right_2_left = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_left_2_right_all = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_left_2_right = new SIS.Controls.Button.SiSButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.m_list_control_da_liet_ke = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.m_list_control_chua_liet_ke = new System.Windows.Forms.ListBox();
+            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.m_pnl_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -277,6 +293,7 @@ namespace BKI_QLHT
             // 
             // m_cbo_ten_form
             // 
+            this.m_cbo_ten_form.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_ten_form.FormattingEnabled = true;
             this.m_cbo_ten_form.Location = new System.Drawing.Point(242, 64);
             this.m_cbo_ten_form.Name = "m_cbo_ten_form";
@@ -294,92 +311,18 @@ namespace BKI_QLHT
             // 
             // m_cbo_chuc_nang
             // 
+            this.m_cbo_chuc_nang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_chuc_nang.FormattingEnabled = true;
             this.m_cbo_chuc_nang.Location = new System.Drawing.Point(242, 102);
             this.m_cbo_chuc_nang.Name = "m_cbo_chuc_nang";
             this.m_cbo_chuc_nang.Size = new System.Drawing.Size(281, 22);
             this.m_cbo_chuc_nang.TabIndex = 29;
-            // 
-            // m_cmd_right_2_left_all
-            // 
-            this.m_cmd_right_2_left_all.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_right_2_left_all.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_right_2_left_all.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_right_2_left_all.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_right_2_left_all.ImageIndex = 10;
-            this.m_cmd_right_2_left_all.Location = new System.Drawing.Point(311, 268);
-            this.m_cmd_right_2_left_all.Name = "m_cmd_right_2_left_all";
-            this.m_cmd_right_2_left_all.Size = new System.Drawing.Size(75, 30);
-            this.m_cmd_right_2_left_all.TabIndex = 35;
-            this.m_cmd_right_2_left_all.Text = "<<";
-            this.m_cmd_right_2_left_all.Click += new System.EventHandler(this.m_cmd_right_2_left_all_Click);
-            // 
-            // m_cmd_right_2_left
-            // 
-            this.m_cmd_right_2_left.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_right_2_left.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_right_2_left.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_right_2_left.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_right_2_left.ImageIndex = 10;
-            this.m_cmd_right_2_left.Location = new System.Drawing.Point(311, 232);
-            this.m_cmd_right_2_left.Name = "m_cmd_right_2_left";
-            this.m_cmd_right_2_left.Size = new System.Drawing.Size(75, 30);
-            this.m_cmd_right_2_left.TabIndex = 34;
-            this.m_cmd_right_2_left.Text = "<";
-            this.m_cmd_right_2_left.Click += new System.EventHandler(this.m_cmd_right_2_left_Click);
-            // 
-            // m_cmd_left_2_right_all
-            // 
-            this.m_cmd_left_2_right_all.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_left_2_right_all.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_left_2_right_all.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_left_2_right_all.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_left_2_right_all.ImageIndex = 10;
-            this.m_cmd_left_2_right_all.Location = new System.Drawing.Point(311, 181);
-            this.m_cmd_left_2_right_all.Name = "m_cmd_left_2_right_all";
-            this.m_cmd_left_2_right_all.Size = new System.Drawing.Size(75, 30);
-            this.m_cmd_left_2_right_all.TabIndex = 33;
-            this.m_cmd_left_2_right_all.Text = ">>";
-            this.m_cmd_left_2_right_all.Click += new System.EventHandler(this.m_cmd_left_2_right_all_Click);
-            // 
-            // m_cmd_left_2_right
-            // 
-            this.m_cmd_left_2_right.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_left_2_right.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_left_2_right.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_left_2_right.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_left_2_right.ImageIndex = 10;
-            this.m_cmd_left_2_right.Location = new System.Drawing.Point(311, 145);
-            this.m_cmd_left_2_right.Name = "m_cmd_left_2_right";
-            this.m_cmd_left_2_right.Size = new System.Drawing.Size(75, 30);
-            this.m_cmd_left_2_right.TabIndex = 32;
-            this.m_cmd_left_2_right.Text = ">";
-            this.m_cmd_left_2_right.Click += new System.EventHandler(this.m_cmd_left_2_right_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.m_list_control_da_liet_ke);
-            this.groupBox2.Location = new System.Drawing.Point(402, 135);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 174);
-            this.groupBox2.TabIndex = 31;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Control đã liệt kê";
-            // 
-            // m_list_control_da_liet_ke
-            // 
-            this.m_list_control_da_liet_ke.FormattingEnabled = true;
-            this.m_list_control_da_liet_ke.ItemHeight = 14;
-            this.m_list_control_da_liet_ke.Location = new System.Drawing.Point(6, 22);
-            this.m_list_control_da_liet_ke.Name = "m_list_control_da_liet_ke";
-            this.m_list_control_da_liet_ke.Size = new System.Drawing.Size(188, 144);
-            this.m_list_control_da_liet_ke.TabIndex = 1;
-            this.m_list_control_da_liet_ke.SelectedIndexChanged += new System.EventHandler(this.m_list_control_da_liet_ke_SelectedIndexChanged);
+            this.m_cbo_chuc_nang.SelectedIndexChanged += new System.EventHandler(this.m_cbo_chuc_nang_SelectedIndexChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.m_list_control_chua_liet_ke);
-            this.groupBox1.Location = new System.Drawing.Point(90, 135);
+            this.groupBox1.Location = new System.Drawing.Point(176, 141);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 174);
             this.groupBox1.TabIndex = 30;
@@ -394,17 +337,27 @@ namespace BKI_QLHT
             this.m_list_control_chua_liet_ke.Name = "m_list_control_chua_liet_ke";
             this.m_list_control_chua_liet_ke.Size = new System.Drawing.Size(188, 144);
             this.m_list_control_chua_liet_ke.TabIndex = 0;
-            this.m_list_control_chua_liet_ke.SelectedIndexChanged += new System.EventHandler(this.m_list_control_chua_liet_ke_SelectedIndexChanged);
+            // 
+            // m_cmd_save
+            // 
+            this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_save.ImageIndex = 10;
+            this.m_cmd_save.ImageList = this.ImageList;
+            this.m_cmd_save.Location = new System.Drawing.Point(400, 197);
+            this.m_cmd_save.Name = "m_cmd_save";
+            this.m_cmd_save.Size = new System.Drawing.Size(75, 30);
+            this.m_cmd_save.TabIndex = 39;
+            this.m_cmd_save.Text = "&Thêm";
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
             // 
             // f991_v_ht_control_in_form
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(703, 589);
-            this.Controls.Add(this.m_cmd_right_2_left_all);
-            this.Controls.Add(this.m_cmd_right_2_left);
-            this.Controls.Add(this.m_cmd_left_2_right_all);
-            this.Controls.Add(this.m_cmd_left_2_right);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.m_cmd_save);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.m_cbo_chuc_nang);
             this.Controls.Add(this.label3);
@@ -415,10 +368,8 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_pnl_control);
             this.Name = "f991_v_ht_control_in_form";
             this.Text = "F991 Phân loại control trong form";
-            this.Load += new System.EventHandler(this.f991_v_ht_control_in_form_Load);
             this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
-            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -458,148 +409,208 @@ namespace BKI_QLHT
         US_V_HT_CONTROL_IN_FORM m_us = new US_V_HT_CONTROL_IN_FORM();
         int m_dc_index_in_left = 0;
         int m_dc_index_in_right = 0;
+        List<list_form> m_list = new List<list_form>();
+        List<list_form> m_list_save = new List<list_form>();
         #endregion
 
         #region Private Methods
         private void set_initial_form_load()
         {
+            m_obj_trans = get_trans_object(m_fg);
             format_controls();
             load_data_cbo_form_name();
+            load_data_to_cbo_chuc_nang();
             load_control_unlist();
             load_control_list();
-            load_data_to_cbo_chuc_nang();
-            m_obj_trans = get_trans_object(m_fg);
+
+            
             load_data_2_grid();
+            
         }
         private void load_control_unlist()
         {
-            //Type formType = typeof(Form);
-            //foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
-            //    if (formType.IsAssignableFrom(type))
+            m_list.Clear();
+            int index = 0;
+            Type formType = typeof(Form);
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+                if (formType.IsAssignableFrom(type))
+                {
+                    if (type.Name == ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString())
+                    {
+
+                        object lateBound = Activator.CreateInstance(type);
+                        System.Windows.Forms.Form oForm = (System.Windows.Forms.Form)lateBound;
+
+                        foreach (Control v_control in oForm.Controls)
+                        {
+                            if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
+                            {
+                                m_list.Add(new list_form(index, v_control.Name, v_control.GetType().Name));
+                                index++;
+                            }
+                            else if (v_control.Name == "m_pnl_control" && v_control.GetType().Name == "Panel")
+                            {
+                                foreach (Control v_control_child in v_control.Controls)
+                                {
+                                    if (v_control_child.GetType().Name == "SiSButton" | v_control_child.GetType().Name == "Button")
+                                    {
+                                        m_list.Add(new list_form(index, v_control_child.Name, v_control_child.GetType().Name));
+                                        index++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            //List<list_form> v_list = new List<list_form>();
+            //v_list=m_list.Select(e=>e.)
+            if (m_list.Count == 0)
+            {
+                m_list_control_chua_liet_ke.DataSource = null;
+                m_list_control_chua_liet_ke.DisplayMember = "Form_name";
+                m_list_control_chua_liet_ke.ValueMember = "Id";
+            }
+            else
+            {
+                m_list_control_chua_liet_ke.DataSource = m_list;
+                m_list_control_chua_liet_ke.DisplayMember = "Form_name";
+                m_list_control_chua_liet_ke.ValueMember = "Id";
+            }
+            //List<C> v_list = new List<C>();
+            ////Hashtable v_htb=new Hashtable();
+            //int index = 0;
+            //foreach (Control v_control in this.Controls)
+            //{
+            //    if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
             //    {
-            //        m_lbl_form_title.Text += type.Name;
+            //        v_list.Add(new C(index, v_control.Name, v_control.GetType().Name));
+            //        index++;
             //    }
-            
-            
-            List<C> v_list = new List<C>();
-            //Hashtable v_htb=new Hashtable();
-            int index = 0;
-            foreach (Control v_control in this.Controls)
-            {
-                if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
-                {
-                    v_list.Add(new C(index, v_control.Name, v_control.GetType().Name));
-                    index++;
-                }
 
-            }
-            foreach (Control v_control in this.m_pnl_control.Controls)
-            {
-                if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
-                {
-                    v_list.Add(new C(index, v_control.Name, v_control.GetType().Name));
-                    index++;
-                }
+            //}
+            //foreach (Control v_control in this.m_pnl_control.Controls)
+            //{
+            //    if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
+            //    {
+            //        v_list.Add(new C(index, v_control.Name, v_control.GetType().Name));
+            //        index++;
+            //    }
 
-            }
+            //}
 
-            m_list_control_chua_liet_ke.DataSource = v_list;
-            m_list_control_chua_liet_ke.DisplayMember = "Name";
-            m_list_control_chua_liet_ke.ValueMember = "Id";
+            //m_list_control_chua_liet_ke.DataSource = v_list;
+            //m_list_control_chua_liet_ke.DisplayMember = "Name";
+            //m_list_control_chua_liet_ke.ValueMember = "Id";
 
-        }
-        private void load_control_list()
-        {
-            List<C> v_list = new List<C>();
-            //Hashtable v_htb=new Hashtable();
-            int index = 0;
-            foreach (Control v_control in this.Controls)
-            {
-                if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
-                {
-                    v_list.Add(new C(index, v_control.Name, v_control.GetType().Name));
-                    index++;
-                }
-
-            }
-            foreach (Control v_control in m_pnl_control.Controls)
-            {
-                if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
-                {
-                    v_list.Add(new C(index, v_control.Name, v_control.GetType().Name));
-                    index++;
-                }
-
-            }
-
-            m_list_control_da_liet_ke.DataSource = v_list;
-            m_list_control_da_liet_ke.DisplayMember = "Name";
-            m_list_control_da_liet_ke.ValueMember = "Id";
-
-        }
-        private void load_data_to_cbo_chuc_nang()
-        {
-            US_CM_DM_TU_DIEN v_us_cm_dm_tu_dien = new US_CM_DM_TU_DIEN();
-            DS_CM_DM_TU_DIEN v_ds_cm_dm_tu_dien = new DS_CM_DM_TU_DIEN();
-            v_us_cm_dm_tu_dien.FillDataset(v_ds_cm_dm_tu_dien, "where id_loai_tu_dien = " + ID_LOAI_TU_DIEN.CHUC_NANG);
-            m_cbo_chuc_nang.DataSource = v_ds_cm_dm_tu_dien.CM_DM_TU_DIEN;
-            m_cbo_chuc_nang.DisplayMember = CM_DM_TU_DIEN.TEN;
-            m_cbo_chuc_nang.ValueMember = CM_DM_TU_DIEN.MA_TU_DIEN;
-        }
-        private void m_list_control_chua_liet_ke_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            m_dc_index_in_left = m_list_control_chua_liet_ke.SelectedIndex;
-        }
-
-        private void m_list_control_da_liet_ke_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            m_dc_index_in_right = m_list_control_da_liet_ke.SelectedIndex;
-        }
-
-        private void m_cmd_left_2_right_Click(object sender, EventArgs e)
-        {
-            //m_list_control_da_liet_ke.SelectedIndex = m_dc_index_in_left;
-            m_list_control_da_liet_ke.Items.Add(m_list_control_chua_liet_ke.SelectedItem);
-            m_list_control_da_liet_ke.Items.RemoveAt(m_list_control_chua_liet_ke.SelectedIndex);
-            //m_dc_index_in_left = 0;
-        }
-
-        private void m_cmd_right_2_left_Click(object sender, EventArgs e)
-        {
-            m_list_control_da_liet_ke.SelectedIndex = m_dc_index_in_right;
-            m_list_control_da_liet_ke.Items.Add(m_list_control_da_liet_ke.SelectedItem);
-            m_list_control_da_liet_ke.Items.RemoveAt(m_list_control_da_liet_ke.SelectedIndex);
-            m_dc_index_in_right = 0;
-        }
-
-        private void m_cmd_left_2_right_all_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < m_list_control_chua_liet_ke.Items.Count; i++)
-            {
-                m_list_control_chua_liet_ke.SelectedIndex = i;
-                m_list_control_da_liet_ke.Items.Add(m_list_control_chua_liet_ke.SelectedItem);
-            }
-            m_list_control_chua_liet_ke.Items.Clear();
-        }
-
-        private void m_cmd_right_2_left_all_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < m_list_control_da_liet_ke.Items.Count; i++)
-            {
-                m_list_control_da_liet_ke.SelectedIndex = i;
-                m_list_control_chua_liet_ke.Items.Add(m_list_control_da_liet_ke.SelectedItem);
-            }
-            m_list_control_da_liet_ke.Items.Clear();
         }
         private void load_data_cbo_form_name()
         {
             US_HT_FORM v_us_ht_form = new US_HT_FORM();
             DS_HT_FORM v_ds_ht_form = new DS_HT_FORM();
             v_us_ht_form.FillDataset(v_ds_ht_form, "order by form_name");
-            m_cbo_ten_form.DataSource = v_ds_ht_form.HT_FORM;
-            m_cbo_ten_form.ValueMember = HT_FORM.ID;
-            m_cbo_ten_form.DisplayMember = HT_FORM.FORM_NAME;
+            if (v_ds_ht_form.HT_FORM.Count<1)
+            {
+                m_cbo_ten_form.DataSource = null;
+                m_cbo_ten_form.ValueMember = HT_FORM.FORM_NAME;
+                m_cbo_ten_form.DisplayMember = HT_FORM.FORM_NAME;
+            }
+            else
+            {
+                m_cbo_ten_form.DataSource = v_ds_ht_form.HT_FORM;
+                m_cbo_ten_form.ValueMember = HT_FORM.FORM_NAME;
+                m_cbo_ten_form.DisplayMember = HT_FORM.FORM_NAME;
+            }
+            
         }
+        private void load_control_list()
+        {
+           // DS_V_HT_CONTROL_IN_FORM v_ds_v_ht_control_in_form = new DS_V_HT_CONTROL_IN_FORM();
+           // US_V_HT_CONTROL_IN_FORM v_us_v_ht_control_in_form = new US_V_HT_CONTROL_IN_FORM();
+           //// m_list_save.Clear();
+           // if (m_cbo_ten_form.SelectedValue ==null | m_cbo_chuc_nang.SelectedValue==null) return;
+           // else
+           // {
+           //     v_us_v_ht_control_in_form.FillDataset(v_ds_v_ht_control_in_form, "where form_name = '"
+           //    + m_cbo_ten_form.SelectedValue
+           //    + "' and id_tu_dien = "
+           //    + m_cbo_chuc_nang.SelectedValue
+           //         //+ "or " + m_cbo_chuc_nang.SelectedValue + "=" + m_cbo_chuc_nang.SelectedValue
+           //         //+ ")"
+           //   );
+           //     if (v_ds_v_ht_control_in_form.V_HT_CONTROL_IN_FORM.Count>0)
+           //     {
+           //         foreach (DataRow dr in v_ds_v_ht_control_in_form.V_HT_CONTROL_IN_FORM)
+           //         {
+           //             m_list_save.Add(new list_form(Convert.ToInt16(dr[0]), dr[3].ToString(), dr[4].ToString()));
+           //         }
+           //         //m_list_control_da_liet_ke.DataSource = v_ds_v_ht_control_in_form.V_HT_CONTROL_IN_FORM;
+           //         //m_list_control_da_liet_ke.DisplayMember = V_HT_CONTROL_IN_FORM.CONTROL_NAME;
+           //         //m_list_control_da_liet_ke.ValueMember = V_HT_CONTROL_IN_FORM.ID;
+           //         m_list_control_da_liet_ke.DataSource = m_list_save;
+           //         m_list_control_da_liet_ke.DisplayMember = "Form_name";
+           //         m_list_control_da_liet_ke.ValueMember = "Id";
+           //     }
+               
+           // }
+           
+
+        }
+        private void load_data_to_cbo_chuc_nang()
+        {
+            US_CM_DM_TU_DIEN v_us_cm_dm_tu_dien = new US_CM_DM_TU_DIEN();
+            DS_CM_DM_TU_DIEN v_ds_cm_dm_tu_dien = new DS_CM_DM_TU_DIEN();
+            v_us_cm_dm_tu_dien.FillDataset(v_ds_cm_dm_tu_dien, "where id_loai_tu_dien = " + ID_LOAI_TU_DIEN.CHUC_NANG + "order by ten");
+            m_cbo_chuc_nang.DataSource = v_ds_cm_dm_tu_dien.CM_DM_TU_DIEN;
+            m_cbo_chuc_nang.DisplayMember = CM_DM_TU_DIEN.TEN;
+            m_cbo_chuc_nang.ValueMember = CM_DM_TU_DIEN.ID;
+        }
+        private void m_list_control_chua_liet_ke_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_dc_index_in_left = m_list_control_chua_liet_ke.SelectedIndex;
+        }
+
+        //private void m_list_control_da_liet_ke_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    m_dc_index_in_right = m_list_control_da_liet_ke.SelectedIndex;
+        //}
+
+        //private void m_cmd_left_2_right_Click(object sender, EventArgs e)
+        //{
+        //    //m_list_control_da_liet_ke.SelectedIndex = m_dc_index_in_left;
+        //    m_list_control_da_liet_ke.Items.Add(m_list_control_chua_liet_ke.SelectedItem);
+        //    m_list_control_da_liet_ke.Items.RemoveAt(m_list_control_chua_liet_ke.SelectedIndex);
+        //    //m_dc_index_in_left = 0;
+        //}
+
+        //private void m_cmd_right_2_left_Click(object sender, EventArgs e)
+        //{
+        //    m_list_control_da_liet_ke.SelectedIndex = m_dc_index_in_right;
+        //    m_list_control_da_liet_ke.Items.Add(m_list_control_da_liet_ke.SelectedItem);
+        //    m_list_control_da_liet_ke.Items.RemoveAt(m_list_control_da_liet_ke.SelectedIndex);
+        //    m_dc_index_in_right = 0;
+        //}
+
+        //private void m_cmd_left_2_right_all_Click(object sender, EventArgs e)
+        //{
+        //    for (int i = 0; i < m_list_control_chua_liet_ke.Items.Count; i++)
+        //    {
+        //        m_list_control_chua_liet_ke.SelectedIndex = i;
+        //        m_list_control_da_liet_ke.Items.Add(m_list_control_chua_liet_ke.SelectedItem);
+        //    }
+        //    m_list_control_chua_liet_ke.Items.Clear();
+        //}
+
+        //private void m_cmd_right_2_left_all_Click(object sender, EventArgs e)
+        //{
+        //    for (int i = 0; i < m_list_control_da_liet_ke.Items.Count; i++)
+        //    {
+        //        m_list_control_da_liet_ke.SelectedIndex = i;
+        //        m_list_control_chua_liet_ke.Items.Add(m_list_control_da_liet_ke.SelectedItem);
+        //    }
+        //    m_list_control_da_liet_ke.Items.Clear();
+        //}
+
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
@@ -627,7 +638,16 @@ namespace BKI_QLHT
         private void load_data_2_grid()
         {
             m_ds = new DS_V_HT_CONTROL_IN_FORM();
-            m_us.FillDataset(m_ds);
+            if (m_cbo_ten_form.SelectedValue == null)
+            {
+                m_us.FillDataset(m_ds);
+            }
+            else
+            {
+               
+                m_us.FillDataset(m_ds,"where form_name ='"+m_cbo_ten_form.SelectedValue+"'");
+                
+            }
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -703,11 +723,45 @@ namespace BKI_QLHT
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-            //m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            m_cbo_ten_form.SelectedIndexChanged += new System.EventHandler(this.m_cbo_ten_form_SelectedIndexChanged);
+            //m_cmd_right_2_left.Click += new System.EventHandler(this.m_cmd_right_2_left_Click);
+            //m_cmd_right_2_left_all.Click += new System.EventHandler(this.m_cmd_right_2_left_all_Click);
+            //m_cmd_left_2_right_all.Click += new System.EventHandler(this.m_cmd_left_2_right_all_Click);
+            //m_cmd_left_2_right.Click += new System.EventHandler(this.m_cmd_left_2_right_Click);
+            //m_list_control_da_liet_ke.SelectedIndexChanged += new System.EventHandler(this.m_list_control_da_liet_ke_SelectedIndexChanged);
+            m_list_control_chua_liet_ke.SelectedIndexChanged += new System.EventHandler(this.m_list_control_chua_liet_ke_SelectedIndexChanged);
+            this.Load += new System.EventHandler(this.f991_v_ht_control_in_form_Load);
         }
         #endregion
 
         #region Events
+        private void m_cbo_ten_form_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                m_list_control_chua_liet_ke.DataSource = null;
+                load_control_unlist();
+                load_control_list();
+                load_data_2_grid();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_cbo_chuc_nang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                m_list_control_chua_liet_ke.DataSource = null;
+                load_control_unlist();
+                load_control_list();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         private void f991_v_ht_control_in_form_Load(object sender, System.EventArgs e)
         {
             try
@@ -781,6 +835,22 @@ namespace BKI_QLHT
             }
         }
         #endregion
+
+        private void m_cmd_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+            	
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        
+
+
     }
 }
 
