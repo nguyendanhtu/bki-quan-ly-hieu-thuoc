@@ -88,20 +88,32 @@ namespace BKI_QLHT
         }
         private void m_cmd_item_danh_muc_thuoc_Click(object sender, EventArgs e)
         {
-            f500_dm_danh_muc_thuoc frm = new f500_dm_danh_muc_thuoc();
-            frm.ShowDialog();
+            //f500_dm_danh_muc_thuoc frm = new f500_dm_danh_muc_thuoc();
+            //frm.ShowDialog();
+            m_Panel_Content.Controls.Clear();
+            uc500_dm_danh_muc_thuoc uc_frm = new uc500_dm_danh_muc_thuoc();
+            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            m_Panel_Content.Controls.Add(uc_frm);
         }
 
         private void m_cmd_item_danh_muc_nhom_thuoc_Click(object sender, EventArgs e)
         {
-            f504_v_dm_nhom_thuoc frm = new f504_v_dm_nhom_thuoc();
-            frm.ShowDialog();
+            //f504_v_dm_nhom_thuoc frm = new f504_v_dm_nhom_thuoc();
+            //frm.ShowDialog();
+            m_Panel_Content.Controls.Clear();
+            uc504_v_dm_nhom_thuoc uc_frm = new uc504_v_dm_nhom_thuoc();
+            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            m_Panel_Content.Controls.Add(uc_frm);
         }
 
         private void m_cmd_item_chi_tiet_thuoc_Click(object sender, EventArgs e)
         {
-            f502_v_dm_thuoc frm = new f502_v_dm_thuoc();
-            frm.ShowDialog();
+            //f502_v_dm_thuoc frm = new f502_v_dm_thuoc();
+            //frm.ShowDialog();
+            m_Panel_Content.Controls.Clear();
+            uc502_v_dm_thuoc uc_frm = new uc502_v_dm_thuoc();
+            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            m_Panel_Content.Controls.Add(uc_frm);
         }
 
         private void m_cmd_item_danh_muc_khach_hang_Click(object sender, EventArgs e)

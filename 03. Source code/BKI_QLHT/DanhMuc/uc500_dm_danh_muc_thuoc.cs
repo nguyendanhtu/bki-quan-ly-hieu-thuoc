@@ -15,6 +15,7 @@ using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT
 {
@@ -23,11 +24,13 @@ namespace BKI_QLHT
         public uc500_dm_danh_muc_thuoc()
         {
             InitializeComponent();
+            format_controls();
         }
         #region Public Interface
         public void display()
         {
             this.Show();
+
         }
         #endregion
 
@@ -50,6 +53,7 @@ namespace BKI_QLHT
         private void format_controls()
         {
             //CControlFormat.setFormStyle(this);
+            CControlFormat.setUserControlStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_grv_danh_muc_thuoc);
             set_define_events();
             //this.KeyPreview = true;
@@ -302,6 +306,17 @@ namespace BKI_QLHT
 
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void m_txt_tu_khoa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string v_str_tu_khoa = m_txt_tu_khoa.Text;
+            US_DM_DANH_MUC_THUOC v_us_danh_muc_thuoc = new US_DM_DANH_MUC_THUOC();
+            DS_DM_DANH_MUC_THUOC v_ds_danh_muc_thuoc = new DS_DM_DANH_MUC_THUOC();
+            v_us_danh_muc_thuoc.FillDataseSearch(v_ds_danh_muc_thuoc, v_str_tu_khoa);
+            m_grv_danh_muc_thuoc.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_danh_muc_thuoc, m_grv_danh_muc_thuoc, m_obj_trans);
+            m_grv_danh_muc_thuoc.Redraw = true;
         }
     }
 }
