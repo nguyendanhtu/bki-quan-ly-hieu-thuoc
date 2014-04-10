@@ -64,7 +64,7 @@
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
             this.m_cmd_insert.Text = "&Thêm";
-            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
+            //this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // ImageList
             // 
@@ -107,7 +107,7 @@
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
-            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
+            //this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_grv_danh_muc_thuoc
             // 
@@ -134,7 +134,7 @@
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
-            this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
+            //this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
             // 
             // m_pnl_control
             // 
@@ -163,7 +163,7 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
+            //this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // m_cmd_search
             // 
@@ -186,6 +186,7 @@
             this.m_txt_tu_khoa.Name = "m_txt_tu_khoa";
             this.m_txt_tu_khoa.Size = new System.Drawing.Size(226, 20);
             this.m_txt_tu_khoa.TabIndex = 33;
+            this.m_txt_tu_khoa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_tu_khoa_KeyPress);
             // 
             // label2
             // 

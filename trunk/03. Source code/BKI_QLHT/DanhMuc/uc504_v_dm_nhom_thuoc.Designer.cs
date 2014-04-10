@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc504_v_dm_nhom_thuoc));
             this.m_grv_nhom_thuoc = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -51,7 +51,7 @@
             this.m_lbl_nhom_thuoc = new System.Windows.Forms.Label();
             this.m_lbl_danh_muc_thuoc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhom_thuoc)).BeginInit();
-            this.m_pnl_out_place_dm.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_grv_nhom_thuoc
@@ -64,18 +64,18 @@
             this.m_grv_nhom_thuoc.TabIndex = 21;
             this.m_grv_nhom_thuoc.Click += new System.EventHandler(this.m_grv_nhom_thuoc_Click);
             // 
-            // m_pnl_out_place_dm
+            // m_pnl_control
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
-            this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 394);
-            this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
-            this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(700, 36);
-            this.m_pnl_out_place_dm.TabIndex = 22;
+            this.m_pnl_control.Controls.Add(this.m_cmd_insert);
+            this.m_pnl_control.Controls.Add(this.m_cmd_update);
+            this.m_pnl_control.Controls.Add(this.m_cmd_delete);
+            this.m_pnl_control.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 394);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_control.Size = new System.Drawing.Size(700, 36);
+            this.m_pnl_control.TabIndex = 22;
             // 
             // m_cmd_insert
             // 
@@ -91,7 +91,7 @@
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 15;
             this.m_cmd_insert.Text = "&Thêm";
-            this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
+            //this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // ImageList
             // 
@@ -134,7 +134,7 @@
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
-            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
+            //this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_cmd_delete
             // 
@@ -150,7 +150,7 @@
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
-            this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
+            //this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
             // 
             // m_cmd_exit
             // 
@@ -166,7 +166,7 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
+            //this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // label7
             // 
@@ -222,6 +222,7 @@
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(258, 20);
             this.m_txt_tim_kiem.TabIndex = 51;
+            this.m_txt_tim_kiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_tim_kiem_KeyPress);
             // 
             // m_cbo_tk_danh_muc
             // 
@@ -319,13 +320,13 @@
             this.Controls.Add(this.m_cmd_search);
             this.Controls.Add(this.m_txt_tim_kiem);
             this.Controls.Add(this.m_cbo_tk_danh_muc);
-            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_grv_nhom_thuoc);
             this.Name = "uc504_v_dm_nhom_thuoc";
             this.Size = new System.Drawing.Size(700, 430);
             this.Load += new System.EventHandler(this.uc504_v_dm_nhom_thuoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhom_thuoc)).EndInit();
-            this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +335,7 @@
         #endregion
 
         private C1.Win.C1FlexGrid.C1FlexGrid m_grv_nhom_thuoc;
-        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
+        internal System.Windows.Forms.Panel m_pnl_control;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;

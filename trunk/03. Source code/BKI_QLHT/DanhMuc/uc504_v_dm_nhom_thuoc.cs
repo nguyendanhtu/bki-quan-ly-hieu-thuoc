@@ -20,6 +20,7 @@ using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT
 {
@@ -28,6 +29,7 @@ namespace BKI_QLHT
         public uc504_v_dm_nhom_thuoc()
         {
             InitializeComponent();
+            format_controls();
         }
         #region Public Interface
         public void display()
@@ -55,6 +57,7 @@ namespace BKI_QLHT
         #region Private Methods
         private void format_controls(){
             //CControlFormat.setFormStyle(this);
+            CControlFormat.setUserControlStyle(this, new CAppContext_201());
 			CControlFormat.setC1FlexFormat(m_grv_nhom_thuoc);
 			set_define_events();
             //this.KeyPreview = true;		
@@ -268,6 +271,19 @@ namespace BKI_QLHT
             {
                 grid2us_object(m_us, m_grv_nhom_thuoc.Row);
                 load_data_2_thong_tin(m_us);
+            }
+            catch (System.Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_txt_tim_kiem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
             }
             catch (System.Exception v_e)
             {
