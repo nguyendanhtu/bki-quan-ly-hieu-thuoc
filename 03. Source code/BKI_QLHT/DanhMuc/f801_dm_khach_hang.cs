@@ -192,6 +192,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click_1);
             // 
             // m_grv_dm_khach_hang
             // 
@@ -465,6 +466,11 @@ namespace BKI_QLHT
             m_grv_dm_khach_hang.Redraw = true;
         }
         #endregion
+
+        private void m_cmd_exit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
     }
 }

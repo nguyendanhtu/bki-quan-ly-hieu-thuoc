@@ -259,6 +259,11 @@ namespace BKI_QLHT
         }
         #endregion
 
+        private void m_cmd_exit_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

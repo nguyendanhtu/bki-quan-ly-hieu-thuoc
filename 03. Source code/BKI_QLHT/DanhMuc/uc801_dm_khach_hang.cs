@@ -15,6 +15,7 @@ using BKI_QLHT.US;
 using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT
 {
@@ -54,6 +55,7 @@ namespace BKI_QLHT
         private void format_controls()
         {
             //CControlFormat.setFormStyle(this);
+            CControlFormat.setUserControlStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_grv_dm_khach_hang);
             set_define_events();
             //this.KeyPreview = true;
@@ -283,11 +285,10 @@ namespace BKI_QLHT
             grid2us_object(m_us, m_grv_dm_khach_hang.Row);
             load_data_2_thong_tin_chi_tiet(m_us);
         }
+        private void m_cmd_exit_Click_1(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+        }
         #endregion
-
-        
-
-     
-
     }
 }
