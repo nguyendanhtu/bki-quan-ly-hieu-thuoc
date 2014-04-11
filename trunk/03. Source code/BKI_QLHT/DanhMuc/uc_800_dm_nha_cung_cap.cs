@@ -257,12 +257,13 @@ namespace BKI_QLHT
             grid2us_object(m_us, m_grv_dm_nha_cung_cap.Row);
             load_data_2_thong_tin_chi_tiet(m_us);
         }
-        #endregion
-
         private void m_cmd_exit_Click_1(object sender, EventArgs e)
         {
-
+            this.Controls.Clear();
         }
+        #endregion
+
+       
 
 
     }
