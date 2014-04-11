@@ -78,6 +78,7 @@
     <Compile Include="US_V_DM_KHACH_HANG.cs" />
     <Compile Include="US_V_DM_NHOM_THUOC.cs" />
     <Compile Include="US_V_DM_THUOC.cs" />
+    <Compile Include="US_V_GD_GIA.cs" />
     <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
     <Compile Include="Windows.cs" />
   </ItemGroup>
