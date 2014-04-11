@@ -13,6 +13,7 @@ using IP.Core.IPCommon;
 using IP.Core.IPException;
 using IP.Core.IPData;
 using IP.Core.IPUserService;
+using IP.Core.IPSystemAdmin;
 
 using BKI_QLHT;
 using BKI_QLHT.DanhMuc;
@@ -59,6 +60,7 @@ namespace BKI_QLHT.DanhMuc
         #region Private Methods
         private void format_controls()
         {
+            CControlFormat.setUserControlStyle(this, new CAppContext_201());
         //    CControlFormat.setFormStyle(this);
             CControlFormat.setC1FlexFormat(m_fg);
             set_define_events();
@@ -264,5 +266,8 @@ namespace BKI_QLHT.DanhMuc
             m_lbl_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
         }
         #endregion
+
+     
+
     }
 }
