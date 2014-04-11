@@ -271,7 +271,6 @@ namespace BKI_QLHT
             }
         }
 
-
         //private void m_menu_item_he_thong_nguoi_su_dung_Click(object sender, EventArgs e)
         //{
         //    try
