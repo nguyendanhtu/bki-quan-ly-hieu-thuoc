@@ -181,6 +181,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_GD_GIA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_GD_GIA.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_HT_CONTROL_IN_FORM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -498,6 +503,17 @@
     </None>
     <None Include="DS_V_DM_NHOM_THUOC.xss">
       <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_GIA.xsc">
+      <DependentUpon>DS_V_GD_GIA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_GIA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_GD_GIA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_GD_GIA.xss">
+      <DependentUpon>DS_V_GD_GIA.xsd</DependentUpon>
     </None>
     <None Include="DS_V_HT_CONTROL_IN_FORM.xsc">
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
