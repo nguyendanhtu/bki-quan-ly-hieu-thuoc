@@ -292,5 +292,18 @@
         public const string TEN_NHOM = "TEN_NHOM";
         public const string TEN_DANH_MUC = "TEN_DANH_MUC";
     }
-
+    public class V_GD_GIA
+    {
+        public const string ID = "ID";
+        public const string NGAY_AP_DUNG = "NGAY_AP_DUNG";
+        public const string ID_DON_VI_GIA = "ID_DON_VI_GIA";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string ID_THUOC = "ID_THUOC";
+        public const string GIA = "GIA";
+        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
+        public const string TEN_DON_VI_GIA = "TEN_DON_VI_GIA";
+        public const string TEN = "TEN";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string TEN_DON_VI_TINH = "TEN_DON_VI_TINH";
+    }
 }
