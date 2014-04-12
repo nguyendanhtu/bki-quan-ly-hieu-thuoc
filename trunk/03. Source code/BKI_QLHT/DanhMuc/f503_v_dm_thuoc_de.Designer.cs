@@ -49,8 +49,8 @@
             this.m_txt_thuoc_thay_the = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_thoat = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.m_cmd_thoat = new SIS.Controls.Button.SiSButton();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,6 +174,7 @@
             // 
             // m_cbo_nhom_thuoc
             // 
+            this.m_cbo_nhom_thuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhom_thuoc.FormattingEnabled = true;
             this.m_cbo_nhom_thuoc.Location = new System.Drawing.Point(121, 85);
             this.m_cbo_nhom_thuoc.Name = "m_cbo_nhom_thuoc";
@@ -182,6 +183,7 @@
             // 
             // m_cbo_danh_muc_thuoc
             // 
+            this.m_cbo_danh_muc_thuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_danh_muc_thuoc.FormattingEnabled = true;
             this.m_cbo_danh_muc_thuoc.Location = new System.Drawing.Point(121, 112);
             this.m_cbo_danh_muc_thuoc.Name = "m_cbo_danh_muc_thuoc";
@@ -208,7 +210,7 @@
             // 
             this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
@@ -218,21 +220,6 @@
             this.m_cmd_save.TabIndex = 28;
             this.m_cmd_save.Text = "Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
-            // 
-            // m_cmd_thoat
-            // 
-            this.m_cmd_thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_thoat.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_thoat.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_thoat.ImageIndex = 12;
-            this.m_cmd_thoat.ImageList = this.ImageList;
-            this.m_cmd_thoat.Location = new System.Drawing.Point(357, 259);
-            this.m_cmd_thoat.Name = "m_cmd_thoat";
-            this.m_cmd_thoat.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_thoat.TabIndex = 27;
-            this.m_cmd_thoat.Text = "Thoát (Esc)";
-            this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click);
             // 
             // ImageList
             // 
@@ -260,6 +247,21 @@
             this.ImageList.Images.SetKeyName(19, "");
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
+            // 
+            // m_cmd_thoat
+            // 
+            this.m_cmd_thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_thoat.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_thoat.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_thoat.ImageIndex = 11;
+            this.m_cmd_thoat.ImageList = this.ImageList;
+            this.m_cmd_thoat.Location = new System.Drawing.Point(357, 259);
+            this.m_cmd_thoat.Name = "m_cmd_thoat";
+            this.m_cmd_thoat.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_thoat.TabIndex = 27;
+            this.m_cmd_thoat.Text = "Trở về";
+            this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click);
             // 
             // f503_v_dm_thuoc_de
             // 

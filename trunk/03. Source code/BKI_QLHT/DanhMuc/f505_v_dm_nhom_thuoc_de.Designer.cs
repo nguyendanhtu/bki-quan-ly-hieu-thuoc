@@ -34,13 +34,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.m_cbo_danh_muc = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.m_txt_nhom_thuoc = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
+            this.m_cbo_danh_muc = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,14 +79,6 @@
             this.label3.TabIndex = 47;
             this.label3.Text = "Cập nhật thông tin nhóm thuốc";
             // 
-            // m_cbo_danh_muc
-            // 
-            this.m_cbo_danh_muc.FormattingEnabled = true;
-            this.m_cbo_danh_muc.Location = new System.Drawing.Point(176, 51);
-            this.m_cbo_danh_muc.Name = "m_cbo_danh_muc";
-            this.m_cbo_danh_muc.Size = new System.Drawing.Size(245, 21);
-            this.m_cbo_danh_muc.TabIndex = 1;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -117,7 +109,7 @@
             // 
             this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
@@ -159,16 +151,25 @@
             // 
             this.m_cmd_huy.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_huy.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_huy.ImageIndex = 12;
+            this.m_cmd_huy.ImageIndex = 11;
             this.m_cmd_huy.ImageList = this.ImageList;
             this.m_cmd_huy.Location = new System.Drawing.Point(306, 22);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_huy.TabIndex = 5;
-            this.m_cmd_huy.Text = "Thoát (Esc)";
+            this.m_cmd_huy.Text = "Trở về";
             this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
+            // 
+            // m_cbo_danh_muc
+            // 
+            this.m_cbo_danh_muc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m_cbo_danh_muc.FormattingEnabled = true;
+            this.m_cbo_danh_muc.Location = new System.Drawing.Point(176, 51);
+            this.m_cbo_danh_muc.Name = "m_cbo_danh_muc";
+            this.m_cbo_danh_muc.Size = new System.Drawing.Size(245, 21);
+            this.m_cbo_danh_muc.TabIndex = 1;
             // 
             // f505_v_dm_nhom_thuoc_de
             // 
@@ -197,12 +198,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox m_cbo_danh_muc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox m_txt_nhom_thuoc;
         private System.Windows.Forms.Panel panel1;
         internal SIS.Controls.Button.SiSButton m_cmd_save;
         internal SIS.Controls.Button.SiSButton m_cmd_huy;
         internal System.Windows.Forms.ImageList ImageList;
+        private System.Windows.Forms.ComboBox m_cbo_danh_muc;
     }
 }

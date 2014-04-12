@@ -54,7 +54,7 @@
             // 
             this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
@@ -64,7 +64,6 @@
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
             this.m_cmd_insert.Text = "&Thêm";
-            //this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
             // ImageList
             // 
@@ -97,7 +96,7 @@
             // 
             this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Right;
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
@@ -107,7 +106,6 @@
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
-            //this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // m_grv_danh_muc_thuoc
             // 
@@ -124,7 +122,7 @@
             // 
             this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Right;
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
@@ -134,7 +132,6 @@
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
-            //this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
             // 
             // m_pnl_control
             // 
@@ -153,7 +150,7 @@
             // 
             this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
@@ -163,7 +160,6 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            //this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // m_cmd_search
             // 
@@ -210,11 +206,10 @@
             // 
             // m_lbl_ten_danh_mục
             // 
-            this.m_lbl_ten_danh_mục.AutoSize = true;
             this.m_lbl_ten_danh_mục.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_lbl_ten_danh_mục.Location = new System.Drawing.Point(200, 326);
             this.m_lbl_ten_danh_mục.Name = "m_lbl_ten_danh_mục";
-            this.m_lbl_ten_danh_mục.Size = new System.Drawing.Size(32, 16);
+            this.m_lbl_ten_danh_mục.Size = new System.Drawing.Size(518, 34);
             this.m_lbl_ten_danh_mục.TabIndex = 39;
             this.m_lbl_ten_danh_mục.Text = "......";
             // 
@@ -222,11 +217,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(95, 371);
+            this.label4.Location = new System.Drawing.Point(135, 371);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 16);
+            this.label4.Size = new System.Drawing.Size(59, 16);
             this.label4.TabIndex = 38;
-            this.label4.Text = "Ghi chú           :";
+            this.label4.Text = "Ghi chú :";
             // 
             // label1
             // 

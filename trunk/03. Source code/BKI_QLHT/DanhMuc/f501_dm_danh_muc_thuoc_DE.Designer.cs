@@ -56,7 +56,7 @@
             // 
             this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
@@ -98,15 +98,15 @@
             // 
             this.m_cmd_huy.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_huy.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
             this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_huy.ImageIndex = 12;
+            this.m_cmd_huy.ImageIndex = 11;
             this.m_cmd_huy.ImageList = this.ImageList;
             this.m_cmd_huy.Location = new System.Drawing.Point(306, 22);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_huy.TabIndex = 12;
-            this.m_cmd_huy.Text = "Thoát (Esc)";
+            this.m_cmd_huy.Text = "Trở về";
             this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
             // 
             // label3
