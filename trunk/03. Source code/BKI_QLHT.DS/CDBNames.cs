@@ -301,9 +301,30 @@
         public const string ID_THUOC = "ID_THUOC";
         public const string GIA = "GIA";
         public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
-        public const string TEN_DON_VI_GIA = "TEN_DON_VI_GIA";
-        public const string TEN = "TEN";
         public const string TEN_THUOC = "TEN_THUOC";
+        public const string TEN = "TEN";
+        public const string TEN_DON_VI_GIA = "TEN_DON_VI_GIA";
         public const string TEN_DON_VI_TINH = "TEN_DON_VI_TINH";
+    }
+    public class GD_DON_VI_TINH_THUOC
+    {
+        public const string ID = "ID";
+        public const string MA_DON_VI = "MA_DON_VI";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string NGAY_AP_DUNG = "NGAY_AP_DUNG";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string ID_NGUOI_THEM = "ID_NGUOI_THEM";
+        public const string ID_DON_VI_CHA = "ID_DON_VI_CHA";
+        public const string QUY_DOI = "QUY_DOI";
+        public const string ID_NHOM_DON_VI_TINH = "ID_NHOM_DON_VI_TINH";
+    }
+    public class CM_DM_TU_DIEN
+    {
+        public const string ID = "ID";
+        public const string MA_TU_DIEN = "MA_TU_DIEN";
+        public const string ID_LOAI_TU_DIEN = "ID_LOAI_TU_DIEN";
+        public const string TEN_NGAN = "TEN_NGAN";
+        public const string TEN = "TEN";
+        public const string GHI_CHU = "GHI_CHU";
     }
 }
