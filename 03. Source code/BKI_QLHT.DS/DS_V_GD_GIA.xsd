@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="BKI_QLHTConnectionString4 (Settings)" DbObjectName="BKI_QLHT.dbo.V_GD_GIA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, NGAY_AP_DUNG, ID_DON_VI_GIA, ID_TRANG_THAI, ID_THUOC, GIA, ID_DON_VI_TINH, TEN_DON_VI_GIA, TEN, TEN_THUOC, TEN_DON_VI_TINH FROM dbo.V_GD_GIA</CommandText>
+                    <CommandText>SELECT ID, NGAY_AP_DUNG, ID_DON_VI_GIA, ID_TRANG_THAI, ID_THUOC, GIA, ID_DON_VI_TINH, TEN_THUOC, TEN, TEN_DON_VI_GIA, TEN_DON_VI_TINH FROM dbo.V_GD_GIA</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -26,9 +26,9 @@
               <Mapping SourceColumn="ID_THUOC" DataSetColumn="ID_THUOC" />
               <Mapping SourceColumn="GIA" DataSetColumn="GIA" />
               <Mapping SourceColumn="ID_DON_VI_TINH" DataSetColumn="ID_DON_VI_TINH" />
-              <Mapping SourceColumn="TEN_DON_VI_GIA" DataSetColumn="TEN_DON_VI_GIA" />
-              <Mapping SourceColumn="TEN" DataSetColumn="TEN" />
               <Mapping SourceColumn="TEN_THUOC" DataSetColumn="TEN_THUOC" />
+              <Mapping SourceColumn="TEN" DataSetColumn="TEN" />
+              <Mapping SourceColumn="TEN_DON_VI_GIA" DataSetColumn="TEN_DON_VI_GIA" />
               <Mapping SourceColumn="TEN_DON_VI_TINH" DataSetColumn="TEN_DON_VI_TINH" />
             </Mappings>
             <Sources />
@@ -51,10 +51,10 @@
               <xs:element name="ID_THUOC" msprop:Generator_ColumnVarNameInTable="columnID_THUOC" msprop:Generator_ColumnPropNameInRow="ID_THUOC" msprop:Generator_ColumnPropNameInTable="ID_THUOCColumn" msprop:Generator_UserColumnName="ID_THUOC" type="xs:decimal" />
               <xs:element name="GIA" msprop:Generator_ColumnVarNameInTable="columnGIA" msprop:Generator_ColumnPropNameInRow="GIA" msprop:Generator_ColumnPropNameInTable="GIAColumn" msprop:Generator_UserColumnName="GIA" type="xs:decimal" />
               <xs:element name="ID_DON_VI_TINH" msprop:Generator_ColumnVarNameInTable="columnID_DON_VI_TINH" msprop:Generator_ColumnPropNameInRow="ID_DON_VI_TINH" msprop:Generator_ColumnPropNameInTable="ID_DON_VI_TINHColumn" msprop:Generator_UserColumnName="ID_DON_VI_TINH" type="xs:decimal" />
-              <xs:element name="TEN_DON_VI_GIA" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI_GIA" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI_GIA" msprop:Generator_ColumnPropNameInTable="TEN_DON_VI_GIAColumn" msprop:Generator_UserColumnName="TEN_DON_VI_GIA">
+              <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -65,10 +65,10 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
+              <xs:element name="TEN_DON_VI_GIA" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI_GIA" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI_GIA" msprop:Generator_ColumnPropNameInTable="TEN_DON_VI_GIAColumn" msprop:Generator_UserColumnName="TEN_DON_VI_GIA">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
