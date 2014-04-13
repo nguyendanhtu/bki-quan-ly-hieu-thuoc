@@ -232,5 +232,16 @@ public class US_GD_DON_VI_TINH_THUOC : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+
+
+
+
+    public void FillDatasetbyIdLoaiDonVi(DS_GD_DON_VI_TINH_THUOC op_ds, decimal ip_id_loaidonvi)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_DANH_MUC_DON_VI_TINH_fill_dataset_byIDLoaiDonVi");
+        v_stored_proc.addDecimalInputParam("@id_loai_tu_dien", ip_id_loaidonvi);
+        v_stored_proc.fillDataSetByCommand(this, op_ds);
+    }
+}
 }

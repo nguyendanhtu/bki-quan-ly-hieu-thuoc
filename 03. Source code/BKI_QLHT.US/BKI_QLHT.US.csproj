@@ -49,6 +49,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="US_CM_DM_TU_DIEN.cs" />
     <Compile Include="US_DM_BAC_SY.cs" />
     <Compile Include="US_DM_DANH_MUC_THUOC.cs" />
     <Compile Include="US_DM_DON_VI.cs" />
