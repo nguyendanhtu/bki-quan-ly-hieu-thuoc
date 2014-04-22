@@ -432,7 +432,7 @@ namespace BKI_QLHT
                                 }
 
                             }
-                            else if (v_control.Name == "m_pnl_control" && v_control.GetType().Name == "Panel")
+                            else if (v_control.GetType().Name == "Panel")
                             {
                                 foreach (Control v_control_child in v_control.Controls)
                                 {
@@ -446,7 +446,7 @@ namespace BKI_QLHT
                                                 + "' and control_name='" + v_control.Name + "' and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
                                             if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
                                             {
-                                                m_list.Add(new list_form(index, v_control.Name, v_control.GetType().Name));
+                                                m_list.Add(new list_form(index, v_control_child.Name, v_control_child.GetType().Name));
                                                 index++;
                                             }
                                         }
@@ -492,6 +492,95 @@ namespace BKI_QLHT
                     }
                 }
 
+            // load control trong user control
+            Type ucType = typeof(UserControl);
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+                if (ucType.IsAssignableFrom(type))
+                {
+                    if (m_cbo_ten_form.SelectedIndex < 0) break;
+                    if (type.Name == ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString())
+                    {
+
+                        object lateBound = Activator.CreateInstance(type);
+                        System.Windows.Forms.UserControl oForm = (System.Windows.Forms.UserControl)lateBound;
+
+                        foreach (Control v_control in oForm.Controls)
+                        {
+                            if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
+                            {
+                                if (m_cbo_ten_form.SelectedValue != null && m_cbo_chuc_nang.SelectedValue != null)
+                                {
+                                    m_ds.Clear();
+                                    m_us.FillDataset(m_ds, "where form_name='" +
+                                        ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                                        + "' and control_name='" + v_control.Name + "' and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
+                                    if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                    {
+                                        m_list.Add(new list_form(index, v_control.Name, v_control.GetType().Name));
+                                        index++;
+                                    }
+                                }
+
+                            }
+                            else if (v_control.GetType().Name == "Panel")
+                            {
+                                foreach (Control v_control_child in v_control.Controls)
+                                {
+                                    if (v_control_child.GetType().Name == "SiSButton" | v_control_child.GetType().Name == "Button")
+                                    {
+                                        if (m_cbo_ten_form.SelectedValue != null && m_cbo_chuc_nang.SelectedValue != null)
+                                        {
+                                            m_ds.Clear();
+                                            m_us.FillDataset(m_ds, "where form_name='" +
+                                                ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                                                + "' and control_name='" + v_control.Name + "' and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
+                                            if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                            {
+                                                m_list.Add(new list_form(index, v_control_child.Name, v_control_child.GetType().Name));
+                                                index++;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            else if (v_control.GetType().Name == "RibbonControl")
+                            {
+                                foreach (Control v_sub_control in v_control.Controls)
+                                {
+                                    if (v_sub_control.GetType().Name == "RibbonPanel")
+                                    {
+                                        foreach (Control v_sub_sub_control in v_sub_control.Controls)
+                                        {
+                                            if (v_sub_sub_control.GetType().Name == "RibbonBar")
+                                            {
+                                                RibbonBar v_rp = (RibbonBar)v_sub_sub_control;
+                                                for (int i = 0; i < v_rp.Items.Count; i++)
+                                                {
+                                                    if (m_cbo_ten_form.SelectedValue != null && m_cbo_chuc_nang.SelectedValue != null)
+                                                    {
+                                                        //if (v_rb.Items[i].GetType().Name=="ButtonItem")
+                                                        //{
+                                                        m_ds.Clear();
+                                                        m_us.FillDataset(m_ds, "where form_name='" +
+                                                            ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                                                            + "' and control_name='" + v_rp.Items[i].Name + "'and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
+                                                        if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                                        {
+                                                            m_list.Add(new list_form(index, v_rp.Items[i].Name, v_rp.Items[i].GetType().Name));
+                                                            index++;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
             //List<list_form> v_list = new List<list_form>();
             //v_list=m_list.Select(e=>e.)
             if (m_list.Count == 0)
