@@ -26,6 +26,7 @@ using C1.Win.C1FlexGrid;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
+using DevComponents.DotNetBar;
 namespace BKI_QLHT
 {
 
@@ -417,37 +418,75 @@ namespace BKI_QLHT
                         {
                             if (v_control.GetType().Name == "SiSButton" | v_control.GetType().Name == "Button")
                             {
-                                m_ds.Clear();
-                                m_us.FillDataset(m_ds, "where form_name='" +
-                                    ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
-                                    + "' and control_name='" + v_control.Name + "' and id_tu_dien = "+m_cbo_chuc_nang.SelectedValue);
-                                if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                if (m_cbo_ten_form.SelectedValue != null && m_cbo_chuc_nang.SelectedValue != null)
                                 {
-                                    m_list.Add(new list_form(index, v_control.Name, v_control.GetType().Name));
-                                    index++;
+                                    m_ds.Clear();
+                                    m_us.FillDataset(m_ds, "where form_name='" +
+                                        ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                                        + "' and control_name='" + v_control.Name + "' and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
+                                    if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                    {
+                                        m_list.Add(new list_form(index, v_control.Name, v_control.GetType().Name));
+                                        index++;
+                                    }
                                 }
-
 
                             }
                             else if (v_control.Name == "m_pnl_control" && v_control.GetType().Name == "Panel")
                             {
                                 foreach (Control v_control_child in v_control.Controls)
                                 {
-
                                     if (v_control_child.GetType().Name == "SiSButton" | v_control_child.GetType().Name == "Button")
                                     {
-                                        m_ds.Clear();
-                                        m_us.FillDataset(m_ds, "where form_name='" +
-                                            ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
-                                            + "' and control_name='" + v_control_child.Name + "'and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
-                                        if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                        if (m_cbo_ten_form.SelectedValue != null && m_cbo_chuc_nang.SelectedValue != null)
                                         {
-                                            m_list.Add(new list_form(index, v_control_child.Name, v_control_child.GetType().Name));
-                                            index++;
+                                            m_ds.Clear();
+                                            m_us.FillDataset(m_ds, "where form_name='" +
+                                                ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                                                + "' and control_name='" + v_control.Name + "' and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
+                                            if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                            {
+                                                m_list.Add(new list_form(index, v_control.Name, v_control.GetType().Name));
+                                                index++;
+                                            }
                                         }
-                                        
                                     }
                                 }
+                            }
+                            else if (v_control.GetType().Name == "RibbonControl")
+                            {
+                                foreach (Control v_sub_control in v_control.Controls)
+                                {
+                                    if (v_sub_control.GetType().Name == "RibbonPanel")
+                                    {
+                                        foreach (Control v_sub_sub_control in v_sub_control.Controls)
+                                        {
+                                            if (v_sub_sub_control.GetType().Name == "RibbonBar")
+                                            {
+                                                RibbonBar v_rp = (RibbonBar)v_sub_sub_control;
+                                                for (int i = 0; i < v_rp.Items.Count; i++)
+                                                {
+                                                    if (m_cbo_ten_form.SelectedValue != null && m_cbo_chuc_nang.SelectedValue != null)
+                                                    {
+                                                        //if (v_rb.Items[i].GetType().Name=="ButtonItem")
+                                                        //{
+                                                        m_ds.Clear();
+                                                        m_us.FillDataset(m_ds, "where form_name='" +
+                                                            ((DataRowView)m_cbo_ten_form.Items[m_cbo_ten_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                                                            + "' and control_name='" + v_rp.Items[i].Name + "'and id_tu_dien = " + m_cbo_chuc_nang.SelectedValue);
+                                                        if (m_ds.V_HT_CONTROL_IN_FORM.Count == 0)
+                                                        {
+                                                            m_list.Add(new list_form(index, v_rp.Items[i].Name, v_rp.Items[i].GetType().Name));
+                                                            index++;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+
                             }
                         }
                     }
@@ -494,6 +533,7 @@ namespace BKI_QLHT
             //m_list_control_chua_liet_ke.ValueMember = "Id";
 
         }
+
         private void load_data_cbo_form_name()
         {
             US_HT_FORM v_us_ht_form = new US_HT_FORM();
@@ -519,12 +559,20 @@ namespace BKI_QLHT
 
         private void load_data_to_cbo_chuc_nang()
         {
-            US_CM_DM_TU_DIEN v_us_cm_dm_tu_dien = new US_CM_DM_TU_DIEN();
-            DS_CM_DM_TU_DIEN v_ds_cm_dm_tu_dien = new DS_CM_DM_TU_DIEN();
-            v_us_cm_dm_tu_dien.FillDataset(v_ds_cm_dm_tu_dien, "where id_loai_tu_dien = " + ID_LOAI_TU_DIEN.CHUC_NANG + "order by ma_tu_dien");
-            m_cbo_chuc_nang.DataSource = v_ds_cm_dm_tu_dien.CM_DM_TU_DIEN;
-            m_cbo_chuc_nang.DisplayMember = CM_DM_TU_DIEN.MA_TU_DIEN;
-            m_cbo_chuc_nang.ValueMember = CM_DM_TU_DIEN.ID;
+            //US_CM_DM_TU_DIEN v_us_cm_dm_tu_dien = new US_CM_DM_TU_DIEN();
+            //DS_CM_DM_TU_DIEN v_ds_cm_dm_tu_dien = new DS_CM_DM_TU_DIEN();
+            //v_us_cm_dm_tu_dien.FillDataset(v_ds_cm_dm_tu_dien, "where id_loai_tu_dien = " + ID_LOAI_TU_DIEN.CHUC_NANG + "order by ma_tu_dien");
+            //m_cbo_chuc_nang.DataSource = v_ds_cm_dm_tu_dien.CM_DM_TU_DIEN;
+            //m_cbo_chuc_nang.DisplayMember = CM_DM_TU_DIEN.MA_TU_DIEN;
+            //m_cbo_chuc_nang.ValueMember = CM_DM_TU_DIEN.ID;
+
+
+            US_HT_PHAN_QUYEN_HE_THONG v_us_ht_phan_quyen_he_thong = new US_HT_PHAN_QUYEN_HE_THONG();
+            DS_HT_PHAN_QUYEN_HE_THONG v_ds_ht_phan_quyen_he_thong = new DS_HT_PHAN_QUYEN_HE_THONG();
+            v_us_ht_phan_quyen_he_thong.FillDataset(v_ds_ht_phan_quyen_he_thong, "order by ma_phan_quyen");
+            m_cbo_chuc_nang.DataSource = v_ds_ht_phan_quyen_he_thong.HT_PHAN_QUYEN_HE_THONG;
+            m_cbo_chuc_nang.DisplayMember = HT_PHAN_QUYEN_HE_THONG.MA_PHAN_QUYEN;
+            m_cbo_chuc_nang.ValueMember = HT_PHAN_QUYEN_HE_THONG.ID;
         }
 
         //private void m_list_control_da_liet_ke_SelectedIndexChanged(object sender, EventArgs e)
@@ -657,6 +705,7 @@ namespace BKI_QLHT
                 v_us_ht_control_in_form.Delete();
                 v_us_ht_control_in_form.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
+                BaseMessages.MsgBox_Infor("Đã xoá thành công!");
             }
             catch (Exception v_e)
             {

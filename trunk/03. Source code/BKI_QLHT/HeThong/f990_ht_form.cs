@@ -544,6 +544,34 @@ namespace BKI_QLHT
                         index++;
                     }
                 }
+            Type ucType = typeof(UserControl);
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+                if (ucType.IsAssignableFrom(type))
+                //{
+                //    if (type.Name == "f400_Main")
+                //    {
+                //        object lateBound = Activator.CreateInstance(type);
+                //        System.Windows.Forms.Form oForm = (System.Windows.Forms.Form)lateBound;
+
+                //        foreach (Control v_obj in oForm.Controls)
+                //        {
+                //            m_list.Add(new list_form(index, v_obj.Name, v_obj.GetType().Name));
+                //            index++;
+                //        }
+
+
+                //    }
+
+
+                //}
+                {
+                    if (!m_us.check_is_having_form_in_database(type.Name))
+                    {
+                        object lateBound = Activator.CreateInstance(type);
+                        m_list.Add(new list_form(index, type.Name, type.GetProperty("Text").GetValue(lateBound, null).ToString()));
+                        index++;
+                    }
+                }
 
 
             if (m_list.Count == 0)
