@@ -19,7 +19,7 @@ namespace BKI_QLHT
 {
     public partial class f994_phan_quyen_detail : Form
     {
-        
+
 
         public f994_phan_quyen_detail()
         {
@@ -61,9 +61,13 @@ namespace BKI_QLHT
 
         private void m_cmd_save_Click(object sender, EventArgs e)
         {
+
+
+
             US_V_HT_CONTROL_IN_FORM v_us = new US_V_HT_CONTROL_IN_FORM();
             DS_V_HT_CONTROL_IN_FORM v_ds = new DS_V_HT_CONTROL_IN_FORM();
-            v_us.FillDatasetByIdChucNangAndFormName(v_ds,CIPConvert.ToDecimal(m_cbo_chuc_nang.SelectedValue),
+
+            v_us.FillDatasetByIdChucNangAndFormName(v_ds, CIPConvert.ToDecimal(m_cbo_chuc_nang.SelectedValue),
               m_cbo_form_name.SelectedValue.ToString());
 
             US_HT_PHAN_QUYEN_DETAIL v_us_ht_pq_detail;
@@ -77,10 +81,23 @@ namespace BKI_QLHT
                 v_us_ht_pq_detail.strENABLED_YN = "Y";
                 v_us_ht_pq_detail.strFORM_NAME = v_dr[V_HT_CONTROL_IN_FORM.FORM_NAME].ToString();
                 v_us_ht_pq_detail.strVISIBLE_YN = "Y";
-                v_us_ht_pq_detail.Insert();
+                //kiem tra xem da luu control chua, neu co roi thi khong them control nay nua
+                if (m_cbo_form_name.SelectedValue != null && m_cbo_chuc_nang.SelectedValue != null)
+                {
+                    US_HT_PHAN_QUYEN_DETAIL v_us_ht_phan_quyen_detail = new US_HT_PHAN_QUYEN_DETAIL();
+                    DS_HT_PHAN_QUYEN_DETAIL v_ds_ht_phan_quyen_detail = new DS_HT_PHAN_QUYEN_DETAIL();
+                    v_us_ht_phan_quyen_detail.FillDataset(v_ds_ht_phan_quyen_detail, "where form_name='"
+                        + ((DataRowView)m_cbo_form_name.Items[m_cbo_form_name.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
+                        + "' and id_phan_quyen_ht=" + m_cbo_chuc_nang.SelectedValue
+                        + "and control_name='" + v_us_ht_pq_detail.strCONTROL_NAME
+                        + "' and control_type='" + v_us_ht_pq_detail.strCONTROL_TYPE + "'");
+                    if (v_ds_ht_phan_quyen_detail.HT_PHAN_QUYEN_DETAIL.Count == 0)
+                        v_us_ht_pq_detail.Insert();
+                }
+
             }
             BaseMessages.MsgBox_Infor("Dữ liệu đã được cập nhật");
-         //   this.Close();
+            //   this.Close();
         }
 
         private void f994_phan_quyen_detail_Load(object sender, EventArgs e)
@@ -94,7 +111,7 @@ namespace BKI_QLHT
         {
             US_CM_DM_TU_DIEN v_us = new US_CM_DM_TU_DIEN();
             DS_CM_DM_TU_DIEN v_ds = new DS_CM_DM_TU_DIEN();
-            v_us.FillDatasetByIdLoaiTuDien(v_ds, 3);//3 là id loại từ điển phân quyền
+            v_us.FillDatasetByIdLoaiTuDien(v_ds, 1);//3 là id loại từ điển phân quyền
             m_cbo_chuc_nang.DataSource = v_ds.Tables[0];
             m_cbo_chuc_nang.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_chuc_nang.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;
@@ -124,7 +141,7 @@ namespace BKI_QLHT
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -136,7 +153,7 @@ namespace BKI_QLHT
             }
             catch (System.Exception v_e)
             {
-            	CSystemLog_301.ExceptionHandle(v_e);
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
     }
