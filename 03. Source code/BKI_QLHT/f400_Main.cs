@@ -13,6 +13,7 @@ using IP.Core.IPCommon;
 using IP.Core.IPExcelReport;
 using IP.Core.IPSystemAdmin;
 using BKI_QLHT.DanhMuc;
+using DevComponents.DotNetBar;
 
 
 namespace BKI_QLHT
@@ -52,10 +53,47 @@ namespace BKI_QLHT
         #endregion
 
         #region Private Method
+        private void format_dotnetbar_menu()
+        {
+            CAppContext_201 v_context = new CAppContext_201();
+            foreach (Control v_sub_control in m_ribbonControl_Main.Controls)
+            {
+                if (v_sub_control.GetType().Name == "RibbonPanel")
+                {
+                    foreach (Control v_sub_sub_control in v_sub_control.Controls)
+                    {
+                        if (v_sub_sub_control.GetType().Name == "RibbonBar")
+                        {
+                            RibbonBar v_rp = (RibbonBar)v_sub_sub_control;
+                            int v_dem = 0;
+                            for (int i = 0; i < v_rp.Items.Count; i++)
+                            {
+                                if (v_context.CanUseControl(this.Name, v_rp.Items[i].Name, v_rp.Items[i].GetType().Name))
+                                {
+                                    v_rp.Items[i].Visible = true;
+                                    v_rp.Items[i].Enabled = true;
+                                    v_dem++;
+                                    
+                                }
+                                else
+                                {
+                                    //v_rp.Items[i].Visible = false;
+                                    //v_rp.Items[i].Enabled = false;
+                                }
+                              
+                            }
+                            if (v_dem == 0) v_rp.Visible = false;
+                            
+                        }
 
+                    }
+                }
+            }
+        }
         private void format_controls()
         {
             CControlFormat.setFormStyle(this);
+            format_dotnetbar_menu();
             set_define_events();
             ShowInTaskbar = true;
         }
@@ -79,7 +117,7 @@ namespace BKI_QLHT
         {
             try
             {
-
+                //format_dotnetbar_menu();
             }
             catch (Exception v_e)
             {

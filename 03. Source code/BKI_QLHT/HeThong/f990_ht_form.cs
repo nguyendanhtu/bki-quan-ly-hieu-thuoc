@@ -832,7 +832,7 @@ namespace BKI_QLHT
                 {
                     m_us.strDISPLAY_NAME = m_txt_display_name.Text;
                     m_us.strFORM_NAME = m_txt_form_name.Text;
-                    m_us.Insert();
+                    m_us.Update();
                     m_txt_form_name.Text = "";
                     m_txt_display_name.Text = "";
                     m_e_form_mode = DataEntryFormMode.InsertDataState;
@@ -858,7 +858,7 @@ namespace BKI_QLHT
                 grid2us_object(m_us, m_fg.Row);
                 m_txt_form_name.Text = m_us.strFORM_NAME.Trim();
                 m_txt_display_name.Text = m_us.strDISPLAY_NAME.Trim();
-                format_form();
+                //format_form();
             }
             catch (System.Exception v_e)
             {
