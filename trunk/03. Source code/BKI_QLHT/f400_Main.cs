@@ -93,7 +93,7 @@ namespace BKI_QLHT
         private void format_controls()
         {
             CControlFormat.setFormStyle(this);
-            format_dotnetbar_menu();
+            //format_dotnetbar_menu();
             set_define_events();
             ShowInTaskbar = true;
         }
