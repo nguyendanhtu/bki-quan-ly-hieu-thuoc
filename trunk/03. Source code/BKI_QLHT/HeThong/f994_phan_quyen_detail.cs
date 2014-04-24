@@ -88,7 +88,7 @@ namespace BKI_QLHT
                     DS_HT_PHAN_QUYEN_DETAIL v_ds_ht_phan_quyen_detail = new DS_HT_PHAN_QUYEN_DETAIL();
                     v_us_ht_phan_quyen_detail.FillDataset(v_ds_ht_phan_quyen_detail, "where form_name='"
                         + ((DataRowView)m_cbo_form_name.Items[m_cbo_form_name.SelectedIndex])[HT_FORM.FORM_NAME].ToString()
-                        + "' and id_phan_quyen_ht=" + m_cbo_chuc_nang.SelectedValue
+                        + "' and id_phan_quyen_ht=" + m_cbo_nhom_quyen.SelectedValue
                         + "and control_name='" + v_us_ht_pq_detail.strCONTROL_NAME
                         + "' and control_type='" + v_us_ht_pq_detail.strCONTROL_TYPE + "'");
                     if (v_ds_ht_phan_quyen_detail.HT_PHAN_QUYEN_DETAIL.Count == 0)
@@ -111,7 +111,7 @@ namespace BKI_QLHT
         {
             US_CM_DM_TU_DIEN v_us = new US_CM_DM_TU_DIEN();
             DS_CM_DM_TU_DIEN v_ds = new DS_CM_DM_TU_DIEN();
-            v_us.FillDatasetByIdLoaiTuDien(v_ds, 1);//3 là id loại từ điển phân quyền
+            v_us.FillDatasetByIdLoaiTuDien(v_ds, 3);//3 là id loại từ điển phân quyền
             m_cbo_chuc_nang.DataSource = v_ds.Tables[0];
             m_cbo_chuc_nang.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_chuc_nang.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;
