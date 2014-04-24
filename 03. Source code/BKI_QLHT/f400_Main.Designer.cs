@@ -996,7 +996,7 @@ namespace BKI_QLHT
             this.m_cmd_dm_don_vi_tinh.Name = "m_cmd_dm_don_vi_tinh";
             this.m_cmd_dm_don_vi_tinh.SubItemsExpandWidth = 14;
             this.m_cmd_dm_don_vi_tinh.Text = "Danh mục đơn vị tính";
-            this.m_cmd_dm_don_vi_tinh.Click += new System.EventHandler(this.m_cmd_dm_don_vi_tinh_Click);
+            //this.m_cmd_dm_don_vi_tinh.Click += new System.EventHandler(this.m_cmd_dm_don_vi_tinh_Click);
             // 
             // f400_Main
             // 
