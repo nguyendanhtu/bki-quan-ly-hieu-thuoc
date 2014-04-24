@@ -332,4 +332,20 @@
         public const string ID_NGUOI_SU_DUNG = "ID_NGUOI_SU_DUNG";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_DM_DON_VI
+    {
+        public const string ID = "ID";
+        public const string MA_VIET_TAT = "MA_VIET_TAT";
+        public const string TEN_DAY_DU = "TEN_DAY_DU";
+        public const string MA_SO_THUE = "MA_SO_THUE";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string GHI_CHU_1 = "GHI_CHU_1";
+        public const string GHI_CHU_2 = "GHI_CHU_2";
+        public const string GHI_CHU_3 = "GHI_CHU_3";
+        public const string ID_DON_VI_CAP_TREN = "ID_DON_VI_CAP_TREN";
+        public const string ID_LOAI_DON_VI = "ID_LOAI_DON_VI";
+        public const string ID_TU_DIEN = "ID_TU_DIEN";
+        public const string ID_LOAI_TU_DIEN = "ID_LOAI_TU_DIEN";
+        public const string TEN = "TEN";
+    }
 }
