@@ -14,6 +14,7 @@ using IP.Core.IPUserService;
 using System.Data.SqlClient;
 using System.Data;
 using IP.Core.IPData;
+using BKI_QLHT;
 
 
 
@@ -257,5 +258,7 @@ public class US_HT_NGUOI_SU_DUNG : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+       
+}
 }

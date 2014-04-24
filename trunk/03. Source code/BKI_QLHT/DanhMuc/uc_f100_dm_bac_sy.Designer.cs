@@ -176,6 +176,7 @@
             this.m_cmd_Tim_Kiem.Size = new System.Drawing.Size(88, 26);
             this.m_cmd_Tim_Kiem.TabIndex = 27;
             this.m_cmd_Tim_Kiem.Text = "Tìm kiếm";
+            this.m_cmd_Tim_Kiem.Click += new System.EventHandler(this.m_cmd_Tim_Kiem_Click);
             // 
             // m_fg
             // 
@@ -186,6 +187,7 @@
             this.m_fg.Size = new System.Drawing.Size(714, 207);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 28;
+            this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
             // 
             // m_lbl_dien_thoai
             // 

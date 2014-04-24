@@ -41,6 +41,7 @@ namespace BKI_QLHT.DanhMuc
         #region Members
         US_DM_BAC_SY m_us_dm_bac_sy = new US_DM_BAC_SY();
         DS_DM_BAC_SY m_ds_dm_bac_sy = new DS_DM_BAC_SY();
+        US_V_DM_BAC_SY m_us_v_dm_bac_sy = new US_V_DM_BAC_SY();
         DataEntryFormMode m_e = new DataEntryFormMode();
         #endregion
 
@@ -50,6 +51,7 @@ namespace BKI_QLHT.DanhMuc
             m_txt_ho_ten.Text = m_us_dm_bac_sy.strHO_TEN;
             m_txt_dia_chi.Text = m_us_dm_bac_sy.strDIA_CHI;
             m_txt_dien_thoai.Text = m_us_dm_bac_sy.strDIEN_THOAI;
+            m_cbo_benh_vien.Text = m_us_v_dm_bac_sy.strTEN_NGAN;
         }
         private void Load_cbo_benh_vien()
         {

@@ -135,6 +135,7 @@ namespace BKI_QLHT.DanhMuc
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            v_grid2us_object(m_us_v_dm_bac_sy, m_fg.Row);
             grid2us_object(m_us_dm_bac_sy, m_fg.Row);
             f100_v_dm_bac_sy_de v_frm_de = new f100_v_dm_bac_sy_de();
             v_frm_de.display_for_update(m_us_dm_bac_sy);
