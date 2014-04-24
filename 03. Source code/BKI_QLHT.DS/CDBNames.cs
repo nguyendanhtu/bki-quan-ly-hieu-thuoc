@@ -318,4 +318,18 @@
         public const string QUY_DOI = "QUY_DOI";
         public const string ID_NHOM_DON_VI_TINH = "ID_NHOM_DON_VI_TINH";
     }
+    public class V_DM_DON_VI_TINH
+    {
+        public const string ID = "ID";
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string MA_NHOM = "MA_NHOM";
+        public const string ID_NGUOI_LAP = "ID_NGUOI_LAP";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string NGAY_LAP = "NGAY_LAP";
+        public const string TEN = "TEN";
+        public const string TRANG_THAI = "TRANG_THAI";
+        public const string ID_LOAI_TU_DIEN = "ID_LOAI_TU_DIEN";
+        public const string ID_NGUOI_SU_DUNG = "ID_NGUOI_SU_DUNG";
+        public const string ID_TU_DIEN = "ID_TU_DIEN";
+    }
 }

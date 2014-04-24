@@ -171,6 +171,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_BAC_SY.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_DON_VI_TINH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_DON_VI_TINH.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_DM_KHACH_HANG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -481,6 +486,17 @@
     </None>
     <None Include="DS_V_DM_BAC_SY.xss">
       <DependentUpon>DS_V_DM_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_DON_VI_TINH.xsc">
+      <DependentUpon>DS_V_DM_DON_VI_TINH.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_DON_VI_TINH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_DON_VI_TINH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_DON_VI_TINH.xss">
+      <DependentUpon>DS_V_DM_DON_VI_TINH.xsd</DependentUpon>
     </None>
     <None Include="DS_V_DM_KHACH_HANG.xsc">
       <DependentUpon>DS_V_DM_KHACH_HANG.xsd</DependentUpon>

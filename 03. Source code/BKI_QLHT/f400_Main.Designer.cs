@@ -89,6 +89,8 @@ namespace BKI_QLHT
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.m_menu_item_don_vi_tinh = new DevComponents.DotNetBar.RibbonBar();
+            this.m_cmd_dm_don_vi_tinh = new DevComponents.DotNetBar.ButtonItem();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
             this.m_ribbonPanel_hethong.SuspendLayout();
@@ -146,6 +148,7 @@ namespace BKI_QLHT
             // m_ribbonPanel_danhmuc
             // 
             this.m_ribbonPanel_danhmuc.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_ribbonPanel_danhmuc.Controls.Add(this.m_menu_item_don_vi_tinh);
             this.m_ribbonPanel_danhmuc.Controls.Add(this.m_menu_item_bac_sy);
             this.m_ribbonPanel_danhmuc.Controls.Add(this.m_menu_item_nha_cung_cap);
             this.m_ribbonPanel_danhmuc.Controls.Add(this.m_menu_khach_hang);
@@ -830,7 +833,7 @@ namespace BKI_QLHT
             this.bar1.AutoSyncBarCaption = true;
             this.bar1.CloseSingleTab = true;
             this.bar1.Controls.Add(this.panelDockContainer1);
-            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.dockContainerItem1});
@@ -955,6 +958,46 @@ namespace BKI_QLHT
             this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem1.Name = "controlContainerItem1";
             // 
+            // m_menu_item_don_vi_tinh
+            // 
+            this.m_menu_item_don_vi_tinh.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.m_menu_item_don_vi_tinh.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_menu_item_don_vi_tinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_menu_item_don_vi_tinh.ContainerControlProcessDialogKey = true;
+            this.m_menu_item_don_vi_tinh.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_menu_item_don_vi_tinh.ImageSize = DevComponents.DotNetBar.eBarImageSize.Medium;
+            this.m_menu_item_don_vi_tinh.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.m_cmd_dm_don_vi_tinh});
+            this.m_menu_item_don_vi_tinh.Location = new System.Drawing.Point(535, 0);
+            this.m_menu_item_don_vi_tinh.Name = "m_menu_item_don_vi_tinh";
+            this.m_menu_item_don_vi_tinh.Size = new System.Drawing.Size(71, 103);
+            this.m_menu_item_don_vi_tinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_menu_item_don_vi_tinh.TabIndex = 4;
+            this.m_menu_item_don_vi_tinh.Text = "Đơn vị tính";
+            // 
+            // 
+            // 
+            this.m_menu_item_don_vi_tinh.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_menu_item_don_vi_tinh.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // m_cmd_dm_don_vi_tinh
+            // 
+            this.m_cmd_dm_don_vi_tinh.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_dm_don_vi_tinh.Image")));
+            this.m_cmd_dm_don_vi_tinh.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_dm_don_vi_tinh.Name = "m_cmd_dm_don_vi_tinh";
+            this.m_cmd_dm_don_vi_tinh.SubItemsExpandWidth = 14;
+            this.m_cmd_dm_don_vi_tinh.Text = "Danh mục đơn vị tính";
+            this.m_cmd_dm_don_vi_tinh.Click += new System.EventHandler(this.m_cmd_dm_don_vi_tinh_Click);
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1048,5 +1091,7 @@ namespace BKI_QLHT
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem1;
         private DevComponents.DotNetBar.ButtonItem m_cmt_thoat;
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_ht_form;
+        private DevComponents.DotNetBar.RibbonBar m_menu_item_don_vi_tinh;
+        private DevComponents.DotNetBar.ButtonItem m_cmd_dm_don_vi_tinh;
     }
 }
