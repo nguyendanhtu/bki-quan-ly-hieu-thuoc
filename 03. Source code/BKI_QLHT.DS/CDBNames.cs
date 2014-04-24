@@ -347,5 +347,8 @@
         public const string ID_TU_DIEN = "ID_TU_DIEN";
         public const string ID_LOAI_TU_DIEN = "ID_LOAI_TU_DIEN";
         public const string TEN = "TEN";
+        public const string ID_DV_CAP_TREN = "ID_DV_CAP_TREN";
+        public const string MA_VIET_TAT_DV_CAP_TREN = "MA_VIET_TAT_DV_CAP_TREN";
     }
+
 }
