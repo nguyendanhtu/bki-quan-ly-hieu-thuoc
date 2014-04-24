@@ -82,12 +82,12 @@ Public Class CControlFormat
     , ByVal i_objControlerControl As IControlerControl _
     , ByVal ip_control As System.Windows.Forms.Control)
 
-        If (ip_control.ToString().IndexOf("SIS.Controls.Button.SiSButton") >= 0) Then
-            If (i_objControlerControl.CanUseControl(ip_str_form_name, ip_control.Name, "") = False) Then
-                ip_control.Visible = False
-                ip_control.Enabled = False
-            End If
-        End If
+        'If (ip_control.ToString().IndexOf("SIS.Controls.Button.SiSButton") >= 0) Then
+        '    If (i_objControlerControl.CanUseControl(ip_str_form_name, ip_control.Name, "") = False) Then
+        '        ip_control.Visible = False
+        '        ip_control.Enabled = False
+        '    End If
+        'End If
         If TypeOf ip_control Is Label Then
             'ip_control.Font = getRegularFont()
             If ip_control.Font.Size >= 14 Then
@@ -119,13 +119,13 @@ Public Class CControlFormat
             Else
                 ip_control.BackColor=System.Drawing.Color.Transparent
             End If
-        ElseIf TypeOf ip_control Is Button Then
-            ip_control.Font = getBoldFont()
-            ip_control.ForeColor = getSpecialForeColor()
-            If (i_objControlerControl.CanUseControl(ip_str_form_name, ip_control.Name, "") = False) Then
-                ip_control.Visible = False
-                ip_control.Enabled = False
-            End If
+            'ElseIf TypeOf ip_control Is Button Then
+            '    ip_control.Font = getBoldFont()
+            '    ip_control.ForeColor = getSpecialForeColor()
+            '    If (i_objControlerControl.CanUseControl(ip_str_form_name, ip_control.Name, "") = False) Then
+            '        ip_control.Visible = False
+            '        ip_control.Enabled = False
+            '    End If
         ElseIf TypeOf ip_control Is DateTimePicker Then
             CType(ip_control, DateTimePicker).CalendarForeColor = getRegularForeColor()
             CType(ip_control, DateTimePicker).CalendarTitleForeColor = getRegularForeColor()
