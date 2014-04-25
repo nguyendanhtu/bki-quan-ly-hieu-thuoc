@@ -46,7 +46,7 @@ namespace BKI_QLHT
         private Label label3;
         private TextBox m_txt_tim_kiem;
         private Label label4;
-        internal SIS.Controls.Button.SiSButton siSButton1;
+        internal SIS.Controls.Button.SiSButton m_cmd_tim_kiem;
         private Label label5;
         private Label label6;
         private Label label7;
@@ -120,7 +120,7 @@ namespace BKI_QLHT
             this.label3 = new System.Windows.Forms.Label();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.siSButton1 = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -268,6 +268,7 @@ namespace BKI_QLHT
             this.m_fg.Size = new System.Drawing.Size(999, 203);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
+            this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
             // 
             // label1
             // 
@@ -332,19 +333,20 @@ namespace BKI_QLHT
             this.label4.TabIndex = 23;
             this.label4.Text = "Tìm kiếm";
             // 
-            // siSButton1
+            // m_cmd_tim_kiem
             // 
-            this.siSButton1.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.siSButton1.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.siSButton1.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.siSButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.siSButton1.ImageIndex = 18;
-            this.siSButton1.ImageList = this.ImageList;
-            this.siSButton1.Location = new System.Drawing.Point(591, 86);
-            this.siSButton1.Name = "siSButton1";
-            this.siSButton1.Size = new System.Drawing.Size(88, 28);
-            this.siSButton1.TabIndex = 25;
-            this.siSButton1.Text = "Tìm kiếm";
+            this.m_cmd_tim_kiem.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_tim_kiem.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_tim_kiem.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_tim_kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_tim_kiem.ImageIndex = 18;
+            this.m_cmd_tim_kiem.ImageList = this.ImageList;
+            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(591, 86);
+            this.m_cmd_tim_kiem.Name = "m_cmd_tim_kiem";
+            this.m_cmd_tim_kiem.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_tim_kiem.TabIndex = 25;
+            this.m_cmd_tim_kiem.Text = "Tìm kiếm";
+            this.m_cmd_tim_kiem.Click += new System.EventHandler(this.m_cmd_tim_kiem_Click);
             // 
             // label5
             // 
@@ -559,7 +561,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_lbl_ma_so_thue);
             this.Controls.Add(this.m_lbl_ten_day_du);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.siSButton1);
+            this.Controls.Add(this.m_cmd_tim_kiem);
             this.Controls.Add(this.m_txt_tim_kiem);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -661,6 +663,14 @@ namespace BKI_QLHT
 			m_obj_trans.GridRow2DataRow(i_grid_row,v_dr);
 			i_us.DataRow2Me(v_dr);
 		}
+        private void v_grid2us_object(US_V_DM_DON_VI i_us
+            , int i_grid_row)
+        {
+            DataRow v_dr;
+            v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
+            m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
+            i_us.DataRow2Me(v_dr);
+        }
 
 	
 		private void us_object2grid(US_V_DM_DON_VI i_us
@@ -742,6 +752,9 @@ namespace BKI_QLHT
 
         private void load_thong_tin_chi_tiet()
         {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            v_grid2us_object(m_us_v_dm_don_vi, m_fg.Row);
             m_lbl_ma_viet_tat.Text = m_us_v_dm_don_vi.strMA_VIET_TAT;
             m_lbl_ten_day_du.Text = m_us_v_dm_don_vi.strTEN_DAY_DU;
             m_lbl_ma_so_thue.Text = m_us_v_dm_don_vi.strMA_SO_THUE;
@@ -818,6 +831,24 @@ namespace BKI_QLHT
 				CSystemLog_301.ExceptionHandle(v_e);
 			}
 		}
+
+        private void m_fg_Click(object sender, EventArgs e)
+        {
+            load_thong_tin_chi_tiet();
+        }
+
+        private void m_cmd_tim_kiem_Click(object sender, EventArgs e)
+        {
+            string v_tu_khoa = m_txt_tim_kiem.Text.Trim();
+            decimal v_ip_cbo_loai_don_vi = Convert.ToDecimal(m_cbo_tk_loai_don_vi.SelectedValue);
+            decimal v_ip_cbo_ma_dv_cap_tren = Convert.ToDecimal(m_cbo_tk_ma_dv_cap_tren.SelectedValue);
+            US_V_DM_DON_VI v_us_v_dm_don_vi = new US_V_DM_DON_VI();
+            DS_V_DM_DON_VI v_ds_v_dm_don_vi = new DS_V_DM_DON_VI();
+            v_us_v_dm_don_vi.FillDatasetSearch(v_ds_v_dm_don_vi, v_tu_khoa, v_ip_cbo_loai_don_vi, v_ip_cbo_ma_dv_cap_tren);
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_v_dm_don_vi, m_fg, m_obj_trans);
+            m_fg.Redraw = true;
+        }
 
 	}
 }
