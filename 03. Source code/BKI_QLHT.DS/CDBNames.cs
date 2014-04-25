@@ -152,31 +152,21 @@
         public const string COMPANY_NAME = "COMPANY_NAME";
         public const string COMPANY_ADDRESS = "COMPANY_ADDRESS";
     }
-
-
-
-
-
-
-
-
-
     public class DM_DON_VI
     {
         public const string ID = "ID";
-        public const string MA_DON_VI = "MA_DON_VI";
-        public const string TEN_DON_VI = "TEN_DON_VI";
-        public const string TEN_TA = "TEN_TA";
-        public const string ID_CAP_DON_VI = "ID_CAP_DON_VI";
+        public const string MA_VIET_TAT = "MA_VIET_TAT";
+        public const string TEN_DAY_DU = "TEN_DAY_DU";
+        public const string MA_SO_THUE = "MA_SO_THUE";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string GHI_CHU_1 = "GHI_CHU_1";
+        public const string GHI_CHU_2 = "GHI_CHU_2";
+        public const string GHI_CHU_3 = "GHI_CHU_3";
         public const string ID_DON_VI_CAP_TREN = "ID_DON_VI_CAP_TREN";
         public const string ID_LOAI_DON_VI = "ID_LOAI_DON_VI";
-        public const string DIA_BAN = "DIA_BAN";
-        public const string TRANG_THAI = "TRANG_THAI";
-        public const string TU_NGAY = "TU_NGAY";
     }
 
-
-    public class DM_PHAP_NHAN
+      public class DM_PHAP_NHAN
     {
         public const string ID = "ID";
         public const string MA_PHAP_NHAN = "MA_PHAP_NHAN";
