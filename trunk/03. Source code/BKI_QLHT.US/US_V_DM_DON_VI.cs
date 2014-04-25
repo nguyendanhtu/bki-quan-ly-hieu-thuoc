@@ -357,5 +357,14 @@ public class US_V_DM_DON_VI : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDatasetSearch(DS_V_DM_DON_VI v_ds_v_dm_don_vi, string v_tu_khoa, decimal v_ip_cbo_loai_don_vi, decimal v_ip_cbo_ma_dv_cap_tren)
+    {
+        CStoredProc v_stotedProc = new CStoredProc("pr_V_DM_DON_VI_Search");
+        v_stotedProc.addNVarcharInputParam("@TU_KHOA",v_tu_khoa);
+        v_stotedProc.addDecimalInputParam("@IP_CBO_LOAI_DON_VI", v_ip_cbo_loai_don_vi);
+        v_stotedProc.addDecimalInputParam("@IP_CBO_MA_DV_CAP_TREN", v_ip_cbo_ma_dv_cap_tren);
+        v_stotedProc.fillDataSetByCommand(this,v_ds_v_dm_don_vi);
+    }
+}
 }
