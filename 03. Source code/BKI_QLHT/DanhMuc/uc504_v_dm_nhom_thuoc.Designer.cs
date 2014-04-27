@@ -63,6 +63,7 @@
             this.m_grv_nhom_thuoc.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nhom_thuoc.Styles"));
             this.m_grv_nhom_thuoc.TabIndex = 21;
             this.m_grv_nhom_thuoc.Click += new System.EventHandler(this.m_grv_nhom_thuoc_Click);
+            this.m_grv_nhom_thuoc.DoubleClick += new System.EventHandler(this.m_grv_nhom_thuoc_DoubleClick);
             // 
             // m_pnl_control
             // 

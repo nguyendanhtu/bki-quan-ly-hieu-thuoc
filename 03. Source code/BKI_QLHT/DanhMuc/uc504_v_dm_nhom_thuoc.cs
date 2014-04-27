@@ -291,5 +291,18 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void m_grv_nhom_thuoc_DoubleClick(object sender, System.EventArgs e)
+        {
+            try
+            {
+                update_v_dm_nhom_thuoc();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }

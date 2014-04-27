@@ -97,7 +97,7 @@
             // m_lbl_tt_thuoc
             // 
             this.m_lbl_tt_thuoc.AutoSize = true;
-            this.m_lbl_tt_thuoc.Location = new System.Drawing.Point(144, 434);
+            this.m_lbl_tt_thuoc.Location = new System.Drawing.Point(138, 436);
             this.m_lbl_tt_thuoc.Name = "m_lbl_tt_thuoc";
             this.m_lbl_tt_thuoc.Size = new System.Drawing.Size(25, 13);
             this.m_lbl_tt_thuoc.TabIndex = 69;
@@ -173,7 +173,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(26, 431);
+            this.label10.Location = new System.Drawing.Point(23, 436);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(112, 16);
             this.label10.TabIndex = 61;
@@ -255,7 +255,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(371, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(369, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_insert.TabIndex = 12;
@@ -280,7 +280,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(547, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(545, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_delete.TabIndex = 14;
@@ -324,6 +324,7 @@
             this.m_cbo_danh_muc_tk.Name = "m_cbo_danh_muc_tk";
             this.m_cbo_danh_muc_tk.Size = new System.Drawing.Size(216, 21);
             this.m_cbo_danh_muc_tk.TabIndex = 53;
+            this.m_cbo_danh_muc_tk.SelectedIndexChanged += new System.EventHandler(this.m_cbo_danh_muc_tk_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -354,7 +355,7 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(459, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(457, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_update.TabIndex = 13;
@@ -369,7 +370,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(635, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(633, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_exit.TabIndex = 11;
@@ -388,11 +389,13 @@
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(-4, 122);
+            this.m_fg.Location = new System.Drawing.Point(3, 122);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(734, 153);
+            this.m_fg.Size = new System.Drawing.Size(709, 153);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 49;
+            this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
+            this.m_fg.DoubleClick += new System.EventHandler(this.m_fg_DoubleClick);
             // 
             // m_pnl_control
             // 
@@ -401,10 +404,10 @@
             this.m_pnl_control.Controls.Add(this.m_cmd_delete);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 480);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 468);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(727, 39);
+            this.m_pnl_control.Size = new System.Drawing.Size(725, 39);
             this.m_pnl_control.TabIndex = 48;
             // 
             // label1
@@ -460,7 +463,7 @@
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.label1);
             this.Name = "uc502_v_dm_thuoc";
-            this.Size = new System.Drawing.Size(727, 519);
+            this.Size = new System.Drawing.Size(725, 507);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
