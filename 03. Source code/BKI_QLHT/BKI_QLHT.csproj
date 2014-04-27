@@ -83,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
+    <Compile Include="BaoCao\f401_bao_cao_lssg.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f100_v_dm_bac_sy_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +260,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinFormControls.cs" />
+    <EmbeddedResource Include="BaoCao\f401_bao_cao_lssg.resx">
+      <DependentUpon>f401_bao_cao_lssg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f100_v_dm_bac_sy_de.resx">
       <DependentUpon>f100_v_dm_bac_sy_de.cs</DependentUpon>
     </EmbeddedResource>
@@ -447,7 +453,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaoCao\" />
     <Folder Include="NghiepVu\" />
   </ItemGroup>
   <ItemGroup>
