@@ -274,5 +274,12 @@ public class US_V_GD_GIA : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDatasetSearch(DS_V_GD_GIA ip_ds_v_gd_gia, string ip_str_tu_khoa)
+    {
+        CStoredProc v_stored_proc=new CStoredProc("pr_V_GD_GIA_Search");
+        v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
+        v_stored_proc.fillDataSetByCommand(this, ip_ds_v_gd_gia);
+    }
+}
 }
