@@ -290,12 +290,11 @@
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";
         public const string ID_THUOC = "ID_THUOC";
         public const string GIA = "GIA";
-        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
         public const string TEN_THUOC = "TEN_THUOC";
-        public const string TEN = "TEN";
-        public const string TEN_DON_VI_GIA = "TEN_DON_VI_GIA";
-        public const string TEN_DON_VI_TINH = "TEN_DON_VI_TINH";
+        public const string TRANG_THAI_SU_DUNG = "TRANG_THAI_SU_DUNG";
+        public const string DON_VI_TINH = "DON_VI_TINH";
     }
+
     public class GD_DON_VI_TINH_THUOC
     {
         public const string ID = "ID";

@@ -18,6 +18,8 @@ using System.Data;
 
 namespace BKI_QLHT{
 
+
+
 public class US_V_GD_GIA : US_Object
 {
 	private const string c_TableName = "V_GD_GIA";
@@ -144,26 +146,6 @@ public class US_V_GD_GIA : US_Object
 		pm_objDR["GIA"] = System.Convert.DBNull;
 	}
 
-	public decimal dcID_DON_VI_TINH 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_DON_VI_TINH", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_DON_VI_TINH"] = value;
-		}
-	}
-
-	public bool IsID_DON_VI_TINHNull()	{
-		return pm_objDR.IsNull("ID_DON_VI_TINH");
-	}
-
-	public void SetID_DON_VI_TINHNull() {
-		pm_objDR["ID_DON_VI_TINH"] = System.Convert.DBNull;
-	}
-
 	public string strTEN_THUOC 
 	{
 		get 
@@ -185,67 +167,46 @@ public class US_V_GD_GIA : US_Object
 		pm_objDR["TEN_THUOC"] = System.Convert.DBNull;
 	}
 
-	public string strTEN 
+	public string strTRANG_THAI_SU_DUNG 
 	{
 		get 
 		{
-			return CNull.RowNVLString(pm_objDR, "TEN", IPConstants.c_DefaultString);
+			return CNull.RowNVLString(pm_objDR, "TRANG_THAI_SU_DUNG", IPConstants.c_DefaultString);
 		}
 		set 
 		{
-			pm_objDR["TEN"] = value;
+			pm_objDR["TRANG_THAI_SU_DUNG"] = value;
 		}
 	}
 
-	public bool IsTENNull() 
+	public bool IsTRANG_THAI_SU_DUNGNull() 
 	{
-		return pm_objDR.IsNull("TEN");
+		return pm_objDR.IsNull("TRANG_THAI_SU_DUNG");
 	}
 
-	public void SetTENNull() {
-		pm_objDR["TEN"] = System.Convert.DBNull;
+	public void SetTRANG_THAI_SU_DUNGNull() {
+		pm_objDR["TRANG_THAI_SU_DUNG"] = System.Convert.DBNull;
 	}
 
-	public string strTEN_DON_VI_GIA 
+	public string strDON_VI_TINH 
 	{
 		get 
 		{
-			return CNull.RowNVLString(pm_objDR, "TEN_DON_VI_GIA", IPConstants.c_DefaultString);
+			return CNull.RowNVLString(pm_objDR, "DON_VI_TINH", IPConstants.c_DefaultString);
 		}
 		set 
 		{
-			pm_objDR["TEN_DON_VI_GIA"] = value;
+			pm_objDR["DON_VI_TINH"] = value;
 		}
 	}
 
-	public bool IsTEN_DON_VI_GIANull() 
+	public bool IsDON_VI_TINHNull() 
 	{
-		return pm_objDR.IsNull("TEN_DON_VI_GIA");
+		return pm_objDR.IsNull("DON_VI_TINH");
 	}
 
-	public void SetTEN_DON_VI_GIANull() {
-		pm_objDR["TEN_DON_VI_GIA"] = System.Convert.DBNull;
-	}
-
-	public string strTEN_DON_VI_TINH 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "TEN_DON_VI_TINH", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["TEN_DON_VI_TINH"] = value;
-		}
-	}
-
-	public bool IsTEN_DON_VI_TINHNull() 
-	{
-		return pm_objDR.IsNull("TEN_DON_VI_TINH");
-	}
-
-	public void SetTEN_DON_VI_TINHNull() {
-		pm_objDR["TEN_DON_VI_TINH"] = System.Convert.DBNull;
+	public void SetDON_VI_TINHNull() {
+		pm_objDR["DON_VI_TINH"] = System.Convert.DBNull;
 	}
 
 #endregion
@@ -274,12 +235,5 @@ public class US_V_GD_GIA : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-
-    public void FillDatasetSearch(DS_V_GD_GIA ip_ds_v_gd_gia, string ip_str_tu_khoa)
-    {
-        CStoredProc v_stored_proc=new CStoredProc("pr_V_GD_GIA_Search");
-        v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
-        v_stored_proc.fillDataSetByCommand(this, ip_ds_v_gd_gia);
-    }
-}
+	}
 }

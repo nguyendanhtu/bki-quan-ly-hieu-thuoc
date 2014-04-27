@@ -286,6 +286,7 @@ namespace BKI_QLHT
 
         #endregion
 
+        
         private void m_cmd_item_danh_muc_bac_sy_Click(object sender, EventArgs e)
         {
             //f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
@@ -333,6 +334,26 @@ namespace BKI_QLHT
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void f400_Main_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_cmd_bao_cao_lssg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f401_bao_cao_lssg v_frm = new f401_bao_cao_lssg();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
         }
 
         //private void m_menu_item_he_thong_nguoi_su_dung_Click(object sender, EventArgs e)
