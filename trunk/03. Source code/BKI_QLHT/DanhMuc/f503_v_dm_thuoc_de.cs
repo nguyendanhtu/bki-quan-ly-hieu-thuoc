@@ -79,9 +79,13 @@ namespace BKI_QLHT
             m_us_dm_thuoc.dcTT_THUOC = CIPConvert.ToDecimal(m_txt_tt_thuoc.Text);
             m_us_dm_thuoc.dcTT_HOAT_CHAT = CIPConvert.ToDecimal(m_txt_tt_hoat_chat.Text);
             if (m_chk_tuyen_su_dung_5.Checked == true) m_us_dm_thuoc.strTUYEN_SU_DUNG_5 = "+";
+            else m_us_dm_thuoc.strTUYEN_SU_DUNG_5 = "";
             if (m_chk_tuyen_su_dung_6.Checked == true) m_us_dm_thuoc.strTUYEN_SU_DUNG_6 = "+";
+            else m_us_dm_thuoc.strTUYEN_SU_DUNG_6 = "";
             if (m_chk_tuyen_su_dung_7.Checked == true) m_us_dm_thuoc.strTUYEN_SU_DUNG_7 = "+";
+            else m_us_dm_thuoc.strTUYEN_SU_DUNG_7 = "";
             if (m_chk_tuyen_su_dung_8.Checked == true) m_us_dm_thuoc.strTUYEN_SU_DUNG_8 = "+";
+            else m_us_dm_thuoc.strTUYEN_SU_DUNG_8 = "";
         }
         private void us_obj_2_form(US_DM_THUOC ip_us_dm_thuoc)
         {
