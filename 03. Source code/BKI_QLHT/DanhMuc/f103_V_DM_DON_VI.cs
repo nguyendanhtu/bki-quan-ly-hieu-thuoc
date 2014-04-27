@@ -774,6 +774,16 @@ namespace BKI_QLHT
             m_cbo_tk_ma_dv_cap_tren.DataSource = v_ds.DM_DON_VI;
             m_cbo_tk_ma_dv_cap_tren.ValueMember = DM_DON_VI.ID_DON_VI_CAP_TREN;
             m_cbo_tk_ma_dv_cap_tren.DisplayMember = DM_DON_VI.MA_VIET_TAT;
+            DataRow v_dr = v_ds.DM_DON_VI.NewRow();
+            v_dr[DM_DON_VI.ID] = -1;
+            v_dr[DM_DON_VI.MA_VIET_TAT] = "----------Tất cả-----------";
+            v_dr[DM_DON_VI.ID_LOAI_DON_VI] ="-1";
+            v_dr[DM_DON_VI.ID_DON_VI_CAP_TREN] = "-1";
+            v_dr[DM_DON_VI.TEN_DAY_DU] = "";
+            v_dr[DM_DON_VI.MA_SO_THUE] = "";
+            v_dr[DM_DON_VI.DIA_CHI] = "";
+            v_ds.DM_DON_VI.Rows.InsertAt(v_dr, 0);
+            m_cbo_tk_ma_dv_cap_tren.SelectedIndex = 0;
         }
 
         private void load_data_2_cbo_tk_loai_don_vi()
@@ -784,6 +794,14 @@ namespace BKI_QLHT
             m_cbo_tk_loai_don_vi.DataSource = v_ds.CM_DM_TU_DIEN;
             m_cbo_tk_loai_don_vi.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_tk_loai_don_vi.DisplayMember = CM_DM_TU_DIEN.TEN;
+            DataRow v_dr = v_ds.CM_DM_TU_DIEN.NewRow();
+            v_dr[CM_DM_TU_DIEN.ID] = -1;
+            v_dr[CM_DM_TU_DIEN.TEN] = "--------------Tất cả--------------";
+            v_dr[CM_DM_TU_DIEN.MA_TU_DIEN] = "";
+            v_dr[CM_DM_TU_DIEN.ID_LOAI_TU_DIEN] = "4";
+            v_dr[CM_DM_TU_DIEN.TEN_NGAN] = "";
+            v_ds.CM_DM_TU_DIEN.Rows.InsertAt(v_dr, 0);
+            m_cbo_tk_loai_don_vi.SelectedIndex = 0;
         }
 
 
