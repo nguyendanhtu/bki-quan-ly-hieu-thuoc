@@ -57,6 +57,7 @@
             this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_save.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
@@ -99,6 +100,7 @@
             this.m_cmd_huy.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_huy.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_huy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_huy.ImageIndex = 11;
             this.m_cmd_huy.ImageList = this.ImageList;
@@ -122,31 +124,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(70, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 43;
             this.label1.Text = "Tên danh mục";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 110);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(110, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 44;
             this.label2.Text = "Ghi chú";
             // 
             // m_txt_danh_muc
             // 
-            this.m_txt_danh_muc.Location = new System.Drawing.Point(159, 61);
+            this.m_txt_danh_muc.Location = new System.Drawing.Point(166, 60);
             this.m_txt_danh_muc.Name = "m_txt_danh_muc";
             this.m_txt_danh_muc.Size = new System.Drawing.Size(245, 20);
             this.m_txt_danh_muc.TabIndex = 45;
             // 
             // m_txt_ghi_chu
             // 
-            this.m_txt_ghi_chu.Location = new System.Drawing.Point(159, 103);
+            this.m_txt_ghi_chu.Location = new System.Drawing.Point(166, 106);
             this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
             this.m_txt_ghi_chu.Size = new System.Drawing.Size(245, 20);
             this.m_txt_ghi_chu.TabIndex = 46;

@@ -54,18 +54,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 135);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(116, 132);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 49;
             this.label2.Text = "Ghi chú";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(76, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 48;
             this.label1.Text = "Tên danh mục";
             // 
@@ -82,15 +84,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 97);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(69, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 53;
             this.label4.Text = "Tên nhóm thuốc";
             // 
             // m_txt_nhom_thuoc
             // 
-            this.m_txt_nhom_thuoc.Location = new System.Drawing.Point(176, 90);
+            this.m_txt_nhom_thuoc.Location = new System.Drawing.Point(176, 93);
             this.m_txt_nhom_thuoc.Name = "m_txt_nhom_thuoc";
             this.m_txt_nhom_thuoc.Size = new System.Drawing.Size(245, 20);
             this.m_txt_nhom_thuoc.TabIndex = 2;
@@ -110,6 +113,7 @@
             this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_save.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
@@ -152,6 +156,7 @@
             this.m_cmd_huy.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.m_cmd_huy.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_huy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_huy.ImageIndex = 11;
             this.m_cmd_huy.ImageList = this.ImageList;
@@ -166,7 +171,7 @@
             // 
             this.m_cbo_danh_muc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_danh_muc.FormattingEnabled = true;
-            this.m_cbo_danh_muc.Location = new System.Drawing.Point(176, 51);
+            this.m_cbo_danh_muc.Location = new System.Drawing.Point(176, 54);
             this.m_cbo_danh_muc.Name = "m_cbo_danh_muc";
             this.m_cbo_danh_muc.Size = new System.Drawing.Size(245, 21);
             this.m_cbo_danh_muc.TabIndex = 1;
