@@ -2,17 +2,18 @@
 <xs:schema id="DS_V_GD_GIA" targetNamespace="http://tempuri.org/DS_V_GD_GIA.xsd" xmlns:mstns="http://tempuri.org/DS_V_GD_GIA.xsd" xmlns="http://tempuri.org/DS_V_GD_GIA.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString4" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString3" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_GD_GIATableAdapter" GeneratorDataComponentClassName="V_GD_GIATableAdapter" Name="V_GD_GIA" UserDataComponentName="V_GD_GIATableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BKI_QLHTConnectionString4 (Settings)" DbObjectName="BKI_QLHT.dbo.V_GD_GIA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BKI_QLHTConnectionString3 (Settings)" DbObjectName="BKI_QLHT.dbo.V_GD_GIA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, NGAY_AP_DUNG, ID_DON_VI_GIA, ID_TRANG_THAI, ID_THUOC, GIA, ID_DON_VI_TINH, TEN_THUOC, TEN, TEN_DON_VI_GIA, TEN_DON_VI_TINH FROM dbo.V_GD_GIA</CommandText>
+                    <CommandText>SELECT ID, NGAY_AP_DUNG, ID_DON_VI_GIA, ID_TRANG_THAI, ID_THUOC, GIA, TEN_THUOC, TRANG_THAI_SU_DUNG, DON_VI_TINH FROM dbo.V_GD_GIA</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -25,11 +26,9 @@
               <Mapping SourceColumn="ID_TRANG_THAI" DataSetColumn="ID_TRANG_THAI" />
               <Mapping SourceColumn="ID_THUOC" DataSetColumn="ID_THUOC" />
               <Mapping SourceColumn="GIA" DataSetColumn="GIA" />
-              <Mapping SourceColumn="ID_DON_VI_TINH" DataSetColumn="ID_DON_VI_TINH" />
               <Mapping SourceColumn="TEN_THUOC" DataSetColumn="TEN_THUOC" />
-              <Mapping SourceColumn="TEN" DataSetColumn="TEN" />
-              <Mapping SourceColumn="TEN_DON_VI_GIA" DataSetColumn="TEN_DON_VI_GIA" />
-              <Mapping SourceColumn="TEN_DON_VI_TINH" DataSetColumn="TEN_DON_VI_TINH" />
+              <Mapping SourceColumn="TRANG_THAI_SU_DUNG" DataSetColumn="TRANG_THAI_SU_DUNG" />
+              <Mapping SourceColumn="DON_VI_TINH" DataSetColumn="DON_VI_TINH" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -50,7 +49,6 @@
               <xs:element name="ID_TRANG_THAI" msprop:Generator_ColumnVarNameInTable="columnID_TRANG_THAI" msprop:Generator_ColumnPropNameInRow="ID_TRANG_THAI" msprop:Generator_ColumnPropNameInTable="ID_TRANG_THAIColumn" msprop:Generator_UserColumnName="ID_TRANG_THAI" type="xs:decimal" />
               <xs:element name="ID_THUOC" msprop:Generator_ColumnVarNameInTable="columnID_THUOC" msprop:Generator_ColumnPropNameInRow="ID_THUOC" msprop:Generator_ColumnPropNameInTable="ID_THUOCColumn" msprop:Generator_UserColumnName="ID_THUOC" type="xs:decimal" />
               <xs:element name="GIA" msprop:Generator_ColumnVarNameInTable="columnGIA" msprop:Generator_ColumnPropNameInRow="GIA" msprop:Generator_ColumnPropNameInTable="GIAColumn" msprop:Generator_UserColumnName="GIA" type="xs:decimal" />
-              <xs:element name="ID_DON_VI_TINH" msprop:Generator_ColumnVarNameInTable="columnID_DON_VI_TINH" msprop:Generator_ColumnPropNameInRow="ID_DON_VI_TINH" msprop:Generator_ColumnPropNameInTable="ID_DON_VI_TINHColumn" msprop:Generator_UserColumnName="ID_DON_VI_TINH" type="xs:decimal" />
               <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -58,21 +56,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TEN" msprop:Generator_ColumnVarNameInTable="columnTEN" msprop:Generator_ColumnPropNameInRow="TEN" msprop:Generator_ColumnPropNameInTable="TENColumn" msprop:Generator_UserColumnName="TEN">
+              <xs:element name="TRANG_THAI_SU_DUNG" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_SU_DUNG" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_SU_DUNG" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_SU_DUNGColumn" msprop:Generator_UserColumnName="TRANG_THAI_SU_DUNG">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TEN_DON_VI_GIA" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI_GIA" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI_GIA" msprop:Generator_ColumnPropNameInTable="TEN_DON_VI_GIAColumn" msprop:Generator_UserColumnName="TEN_DON_VI_GIA">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="TEN_DON_VI_TINH" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI_TINH" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI_TINH" msprop:Generator_ColumnPropNameInTable="TEN_DON_VI_TINHColumn" msprop:Generator_UserColumnName="TEN_DON_VI_TINH">
+              <xs:element name="DON_VI_TINH" msprop:Generator_ColumnVarNameInTable="columnDON_VI_TINH" msprop:Generator_ColumnPropNameInRow="DON_VI_TINH" msprop:Generator_ColumnPropNameInTable="DON_VI_TINHColumn" msprop:Generator_UserColumnName="DON_VI_TINH">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
