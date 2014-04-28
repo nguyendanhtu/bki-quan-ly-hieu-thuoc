@@ -37,9 +37,9 @@
             this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_Cap_Nhat = new SIS.Controls.Button.SiSButton();
-            this.m_panel_control = new System.Windows.Forms.Panel();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.m_panel_control.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -133,15 +133,15 @@
             this.m_cmd_Cap_Nhat.Text = "&Cập nhật";
             this.m_cmd_Cap_Nhat.Click += new System.EventHandler(this.m_cmd_Cap_Nhat_Click);
             // 
-            // m_panel_control
+            // m_pnl_control
             // 
-            this.m_panel_control.Controls.Add(this.m_cmd_Cap_Nhat);
-            this.m_panel_control.Controls.Add(this.m_cmd_huy);
-            this.m_panel_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_panel_control.Location = new System.Drawing.Point(0, 213);
-            this.m_panel_control.Name = "m_panel_control";
-            this.m_panel_control.Size = new System.Drawing.Size(485, 42);
-            this.m_panel_control.TabIndex = 17;
+            this.m_pnl_control.Controls.Add(this.m_cmd_Cap_Nhat);
+            this.m_pnl_control.Controls.Add(this.m_cmd_huy);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 213);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Size = new System.Drawing.Size(485, 42);
+            this.m_pnl_control.TabIndex = 17;
             // 
             // label3
             // 
@@ -159,7 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 255);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.m_panel_control);
+            this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_txt_ten_nhom);
             this.Controls.Add(this.m_txt_ma_nhom);
@@ -167,7 +167,7 @@
             this.Name = "f101_dm_nhom_khach_hang_de";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "f101_dm_nhom_khach_hang_de";
-            this.m_panel_control.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,7 +181,7 @@
         private System.Windows.Forms.TextBox m_txt_ten_nhom;
         internal SIS.Controls.Button.SiSButton m_cmd_huy;
         internal SIS.Controls.Button.SiSButton m_cmd_Cap_Nhat;
-        private System.Windows.Forms.Panel m_panel_control;
+        private System.Windows.Forms.Panel m_pnl_control;
         private System.Windows.Forms.Label label3;
         internal System.Windows.Forms.ImageList ImageList;
     }

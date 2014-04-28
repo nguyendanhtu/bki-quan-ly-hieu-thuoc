@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using BKI_QLHT.DS;
 using BKI_QLHT.US;
 using IP.Core.IPCommon;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT
 {
@@ -18,6 +19,13 @@ namespace BKI_QLHT
         public f101_dm_nhom_khach_hang_de()
         {
             InitializeComponent();
+            format_control();
+        }
+
+        private void format_control()
+        {
+
+            CControlFormat.setFormStyle(this, new CAppContext_201());
         }
 
         public void display_for_insert()
