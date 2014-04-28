@@ -5,17 +5,22 @@
 ///************************************************
 
 
+
+
 using System;
 using System.Data;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 using IP.Core.IPCommon;
+using IP.Core.IPExcelReport;
 using IP.Core.IPException;
 using IP.Core.IPData;
 using IP.Core.IPUserService;
+using IP.Core.IPSystemAdmin;
 
 using BKI_QLHT.US;
 using BKI_QLHT.DS;
@@ -34,10 +39,16 @@ namespace BKI_QLHT
 		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
 		internal SIS.Controls.Button.SiSButton m_cmd_exit;
-		internal SIS.Controls.Button.SiSButton m_cmd_view;
+		internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         private Button m_cmd_search;
         private TextBox m_txt_tim_kiem;
+        
         private Label label1;
+        private Label m_lbl_count_record;
+        private Label label2;
+        private Label label3;
+        private DateTimePicker m_dat_tu_ngay;
+        private DateTimePicker m_dat_den_ngay;
 		private System.ComponentModel.IContainer components;
 
 		public f401_bao_cao_lssg()
@@ -79,12 +90,17 @@ namespace BKI_QLHT
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f401_bao_cao_lssg));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.m_cmd_view = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_search = new System.Windows.Forms.Button();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.m_lbl_count_record = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
+            this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -118,29 +134,30 @@ namespace BKI_QLHT
             // 
             // m_pnl_out_place_dm
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 408);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 433);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(791, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(885, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
-            // m_cmd_view
+            // m_cmd_xuat_excel
             // 
-            this.m_cmd_view.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_view.ImageIndex = 18;
-            this.m_cmd_view.ImageList = this.ImageList;
-            this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_view.Name = "m_cmd_view";
-            this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_view.TabIndex = 21;
-            this.m_cmd_view.Text = "Xem";
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(114, 28);
+            this.m_cmd_xuat_excel.TabIndex = 21;
+            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
+            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
             // 
             // m_cmd_exit
             // 
@@ -151,7 +168,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(699, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(793, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -160,24 +177,27 @@ namespace BKI_QLHT
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(0, 78);
+            this.m_fg.Location = new System.Drawing.Point(0, 114);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(787, 328);
+            this.m_fg.Size = new System.Drawing.Size(885, 292);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
             // m_cmd_search
             // 
-            this.m_cmd_search.Location = new System.Drawing.Point(573, 25);
+            this.m_cmd_search.Location = new System.Drawing.Point(573, 17);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(75, 23);
             this.m_cmd_search.TabIndex = 21;
             this.m_cmd_search.Text = "Tìm kiếm";
             this.m_cmd_search.UseVisualStyleBackColor = true;
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // m_txt_tim_kiem
             // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(182, 28);
+            this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(182, 20);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(385, 20);
             this.m_txt_tim_kiem.TabIndex = 22;
@@ -185,16 +205,65 @@ namespace BKI_QLHT
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 30);
+            this.label1.Location = new System.Drawing.Point(111, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "Tìm kiếm";
             // 
+            // m_lbl_count_record
+            // 
+            this.m_lbl_count_record.AutoSize = true;
+            this.m_lbl_count_record.Location = new System.Drawing.Point(23, 51);
+            this.m_lbl_count_record.Name = "m_lbl_count_record";
+            this.m_lbl_count_record.Size = new System.Drawing.Size(0, 13);
+            this.m_lbl_count_record.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(111, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Từ ngày";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(403, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Đến ngày";
+            // 
+            // m_dat_tu_ngay
+            // 
+            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(182, 54);
+            this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
+            this.m_dat_tu_ngay.ShowCheckBox = true;
+            this.m_dat_tu_ngay.Size = new System.Drawing.Size(176, 20);
+            this.m_dat_tu_ngay.TabIndex = 27;
+            // 
+            // m_dat_den_ngay
+            // 
+            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(472, 54);
+            this.m_dat_den_ngay.Name = "m_dat_den_ngay";
+            this.m_dat_den_ngay.ShowCheckBox = true;
+            this.m_dat_den_ngay.Size = new System.Drawing.Size(176, 20);
+            this.m_dat_den_ngay.TabIndex = 28;
+            // 
             // f401_bao_cao_lssg
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(791, 444);
+            this.ClientSize = new System.Drawing.Size(885, 469);
+            this.Controls.Add(this.m_dat_den_ngay);
+            this.Controls.Add(this.m_dat_tu_ngay);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.m_lbl_count_record);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_txt_tim_kiem);
             this.Controls.Add(this.m_cmd_search);
@@ -215,6 +284,7 @@ namespace BKI_QLHT
 		public void display(){			
 			this.ShowDialog();
 		}
+        
 		#endregion
 
 		#region Data Structure
@@ -229,15 +299,35 @@ namespace BKI_QLHT
 		#endregion
 
 		#region Members
+        DataEntryFormMode m_e_form_mode = DataEntryFormMode.ViewDataState;
 		ITransferDataRow m_obj_trans;		
-		DS_V_GD_GIA m_ds = new DS_V_GD_GIA();
-		US_V_GD_GIA m_us = new US_V_GD_GIA();
-		#endregion
+		DS_V_GD_GIA m_v_ds = new DS_V_GD_GIA();
+		US_V_GD_GIA m_v_us = new US_V_GD_GIA();
+        DS_GD_GIA m_ds = new DS_GD_GIA();
+        US_GD_GIA m_us = new US_GD_GIA();
+        DateTime v_dat_ngay_bd;
+        DateTime v_dat_ngay_kt;
+        
+        private const String m_str_tim_kiem = "Nhập tên thuốc cần tìm";
+
+        #endregion
 
 		#region Private Methods
+        private void load_custom_source_2_m_txt_tim_kiem()
+        {
+            int count = m_v_ds.Tables["V_GD_GIA"].Rows.Count;
+            AutoCompleteStringCollection v_acsc_search = new AutoCompleteStringCollection();
+            foreach (DataRow dr in m_v_ds.V_GD_GIA)
+            {
+                v_acsc_search.Add(dr[V_GD_GIA.TEN_THUOC].ToString());
+            }
+            m_txt_tim_kiem.AutoCompleteCustomSource = v_acsc_search;
+        }
 		private void format_controls(){
 			CControlFormat.setFormStyle(this);
 			CControlFormat.setC1FlexFormat(m_fg);
+            CGridUtils.AddSave_Excel_Handlers(m_fg);
+            CGridUtils.AddSearch_Handlers(m_fg);
 			set_define_events();
 			this.KeyPreview = true;		
 		}
@@ -253,16 +343,43 @@ namespace BKI_QLHT
 			v_htb.Add(V_GD_GIA.TEN_THUOC, e_col_Number.TEN_THUOC);
 			v_htb.Add(V_GD_GIA.DON_VI_TINH, e_col_Number.DON_VI_TINH);
 									
-			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_GD_GIA.NewRow());
+			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_v_ds.V_GD_GIA.NewRow());
 			return v_obj_trans;			
 		}
-		private void load_data_2_grid(){						
-			m_ds = new DS_V_GD_GIA();			
-			m_us.FillDataset(m_ds);
-			m_fg.Redraw = false;
-			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-			m_fg.Redraw = true;
+		private void load_data_2_grid(){
+            m_v_ds = new DS_V_GD_GIA();
+            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "");
+            else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
+           // m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
+            var v_str_search = m_txt_tim_kiem.Text.Trim();
+            if (v_str_search.Equals(m_str_tim_kiem))
+            {
+                v_str_search = "";
+            }
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
+            
+            m_fg.Redraw = true;
+            set_search_format_before();
 		}
+        private void set_search_format_before()
+        {
+            if (m_txt_tim_kiem.Text == "")
+            {
+                m_txt_tim_kiem.Text = m_str_tim_kiem;
+                m_txt_tim_kiem.ForeColor = Color.Gray;
+            }
+
+        }
+        private void set_search_format_after()
+        {
+            
+            if (m_txt_tim_kiem.Text == m_str_tim_kiem)
+            {
+                m_txt_tim_kiem.Text = "";
+            }
+            m_txt_tim_kiem.ForeColor = Color.Black;
+        }
 		private void grid2us_object(US_V_GD_GIA i_us
 			, int i_grid_row) {
 			DataRow v_dr;
@@ -270,7 +387,12 @@ namespace BKI_QLHT
 			m_obj_trans.GridRow2DataRow(i_grid_row,v_dr);
 			i_us.DataRow2Me(v_dr);
 		}
-
+        //private void search_lich_su_gia(String ip_str_tu_khoa)
+        //{
+        //    US_V_GD_GIA v_us_gd_gia = new US_V_GD_GIA();
+        //    DS_V_GD_GIA v_ds_gd_gia = new DS_V_GD_GIA();
+        //    v_us_gd_gia.FillDataset(v_ds_gd_gia, "where ");
+        //}
 	
 		private void us_object2grid(US_V_GD_GIA i_us
 			, int i_grid_row) {
@@ -278,54 +400,21 @@ namespace BKI_QLHT
 			i_us.Me2DataRow(v_dr);
 			m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
 		}
-
-
-		private void insert_v_gd_gia(){			
-		//	f401_bao_cao_lssg_DE v_fDE = new  f401_bao_cao_lssg_DE();								
-		//	v_fDE.display();
-			load_data_2_grid();
-		}
-
-		private void update_v_gd_gia(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
-			grid2us_object(m_us, m_fg.Row);
-		//	f401_bao_cao_lssg_DE v_fDE = new f401_bao_cao_lssg_DE();
-		//	v_fDE.display(m_us);
-			load_data_2_grid();
-		}
-				
-		private void delete_v_gd_gia(){
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
-			US_V_GD_GIA v_us = new US_V_GD_GIA();
-			grid2us_object(v_us, m_fg.Row);
-			try {			
-				v_us.BeginTransaction();    											
-				v_us.Delete();                      								
-				v_us.CommitTransaction();
-				m_fg.Rows.Remove(m_fg.Row);				
-			}
-			catch (Exception v_e) {
-				v_us.Rollback();
-				CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-					new CDBClientDBExceptionInterpret());
-				v_objErrHandler.showErrorMessage();
-			}
-		}
-
-		private void view_v_gd_gia(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			grid2us_object(m_us, m_fg.Row);
-		//	f401_bao_cao_lssg_DE v_fDE = new f401_bao_cao_lssg_DE();			
-		//	v_fDE.display(m_us);
-		}
+        private void xuat_excel()
+        {
+            CExcelReport v_obj_excel_rpt = new CExcelReport("f401_bao_cao_lich_su_sua_gia_tu_ngay_den_ngay.xlsx", 4, 1);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tu_ngay>", m_dat_tu_ngay.Value.Date);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<den_ngay>", m_dat_den_ngay.Value.Date);
+            v_obj_excel_rpt.FindAndReplace(false);
+            //v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 1, m_fg.Cols.Count - 1, true);
+        }
+        
+		
+		
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
 			
-			m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+			m_cmd_xuat_excel.Click += new EventHandler(m_cmd_xuat_excel_Click);
 		}
 		#endregion
 
@@ -336,7 +425,10 @@ namespace BKI_QLHT
 		//
 		private void f401_bao_cao_lssg_Load(object sender, System.EventArgs e) {
 			try{
-				set_initial_form_load();
+                m_txt_tim_kiem.ForeColor = Color.Gray;
+                set_initial_form_load();
+                m_txt_tim_kiem.Focus();
+                
 			}
 			catch (Exception v_e){
 				CSystemLog_301.ExceptionHandle(v_e);
@@ -353,42 +445,126 @@ namespace BKI_QLHT
 			}
 		}
 
-		private void m_cmd_insert_Click(object sender, EventArgs e) {
-			try{
-				insert_v_gd_gia();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+		
 
-		private void m_cmd_update_Click(object sender, EventArgs e) {
-			try{
-				update_v_gd_gia();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
 
-		private void m_cmd_delete_Click(object sender, EventArgs e) {
-			try{
-				delete_v_gd_gia();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+		
+        private void m_cmd_search_Click(object sender, EventArgs e)
+        {
 
-		private void m_cmd_view_Click(object sender, EventArgs e) {
-			try{
-				view_v_gd_gia();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+            try
+            {
+                m_v_ds = new DS_V_GD_GIA();
+                if (!m_dat_tu_ngay.Checked)
+                {
+                    v_dat_ngay_bd = new DateTime(1970, 1, 1);
+                }
+                else
+                {
+                    v_dat_ngay_bd = m_dat_tu_ngay.Value;
+                }
 
+                if (!m_dat_den_ngay.Checked)
+                {
+                    v_dat_ngay_kt = new DateTime(2050, 12, 31);
+                }
+                else
+                {
+                    v_dat_ngay_kt = m_dat_den_ngay.Value;
+                }
+
+                m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text);//, v_dat_ngay_bd, v_dat_ngay_kt);
+                m_fg.Redraw = false;
+                CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+                m_fg.Redraw = true;
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_txt_tim_kiem_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {                                                                                                                                                                                                                                                       
+                set_search_format_after();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_txt_tim_kiem_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                set_search_format_before();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_txt_tim_kiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+                    load_data_2_grid();
+                }
+                else
+                {
+                    set_search_format_after();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_fg_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Enter:
+                        if (m_fg.Focused)
+                        {
+                            switch (m_e_form_mode)
+                            {
+                                    case DataEntryFormMode.SelectDataState:
+                                    //select_data_2_us();
+                                    break;
+
+                            }
+                        }
+                        break;
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_xuat_excel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                 xuat_excel();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        
 	}
 }
 
