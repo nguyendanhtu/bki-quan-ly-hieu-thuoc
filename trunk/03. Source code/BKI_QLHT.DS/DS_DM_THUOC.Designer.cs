@@ -573,7 +573,7 @@ namespace BKI_QLHT.DS {
                 this.columnID_NHOM_THUOC.AllowDBNull = false;
                 this.columnTT_THUOC.AllowDBNull = false;
                 this.columnTEN_THUOC.AllowDBNull = false;
-                this.columnTEN_THUOC.MaxLength = 50;
+                this.columnTEN_THUOC.MaxLength = 250;
                 this.columnDUONG_DUNG_DANG_DUNG.AllowDBNull = false;
                 this.columnDUONG_DUNG_DANG_DUNG.MaxLength = 250;
                 this.columnTUYEN_SU_DUNG_5.MaxLength = 1;
@@ -1224,7 +1224,7 @@ SELECT ID, THUOC_THAY_THE, ID_DANH_MUC_THUOC, ID_NHOM_THUOC, TT_HOAT_CHAT, TT_TH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_QLHT.DS.Properties.Settings.Default.BKI_QLHTConnectionString;
+            this._connection.ConnectionString = global::BKI_QLHT.DS.Properties.Settings.Default.BKI_QLHTConnectionString4;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
