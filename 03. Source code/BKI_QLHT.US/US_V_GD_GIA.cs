@@ -211,7 +211,21 @@ public class US_V_GD_GIA : US_Object
 
 #endregion
 #region "Init Functions"
-	public US_V_GD_GIA() 
+    public void FillDatasetSearch(DS_V_GD_GIA op_ds_bc_gia, string i_str_search, DateTime i_dat_ngay_bd, DateTime i_dat_ngay_kt)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_GD_GIA_search_by_ngay");
+        v_sp.addNVarcharInputParam("@str_search", i_str_search);
+        v_sp.addDatetimeInputParam("@DAT_BD", i_dat_ngay_bd);
+        v_sp.addDatetimeInputParam("@DAT_KT", i_dat_ngay_kt);
+        v_sp.fillDataSetByCommand(this, op_ds_bc_gia);
+    }
+    public void FillDatasetSearch(DS_V_GD_GIA op_ds, string i_str_search)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_GD_GIA_search");
+        v_sp.addNVarcharInputParam("@str_search", i_str_search);
+        v_sp.fillDataSetByCommand(this, op_ds);
+    }
+    public US_V_GD_GIA() 
 	{
 		pm_objDS = new DS_V_GD_GIA();
 		pm_strTableName = c_TableName;
