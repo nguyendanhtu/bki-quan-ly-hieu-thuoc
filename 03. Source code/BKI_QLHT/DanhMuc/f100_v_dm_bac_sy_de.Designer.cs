@@ -43,8 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_cmd_cap_nhat
@@ -56,7 +56,7 @@
             this.m_cmd_cap_nhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_cap_nhat.ImageIndex = 10;
             this.m_cmd_cap_nhat.ImageList = this.ImageList;
-            this.m_cmd_cap_nhat.Location = new System.Drawing.Point(151, 10);
+            this.m_cmd_cap_nhat.Location = new System.Drawing.Point(151, 15);
             this.m_cmd_cap_nhat.Name = "m_cmd_cap_nhat";
             this.m_cmd_cap_nhat.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_cap_nhat.TabIndex = 26;
@@ -99,7 +99,7 @@
             this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_huy.ImageIndex = 4;
             this.m_cmd_huy.ImageList = this.ImageList;
-            this.m_cmd_huy.Location = new System.Drawing.Point(253, 10);
+            this.m_cmd_huy.Location = new System.Drawing.Point(253, 15);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_huy.TabIndex = 27;
@@ -192,22 +192,22 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Cập nhật thông tin bác sỹ";
             // 
-            // panel1
+            // m_pnl_control
             // 
-            this.panel1.Controls.Add(this.m_cmd_cap_nhat);
-            this.panel1.Controls.Add(this.m_cmd_huy);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 256);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(431, 52);
-            this.panel1.TabIndex = 29;
+            this.m_pnl_control.Controls.Add(this.m_cmd_cap_nhat);
+            this.m_pnl_control.Controls.Add(this.m_cmd_huy);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 262);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Size = new System.Drawing.Size(431, 46);
+            this.m_pnl_control.TabIndex = 29;
             // 
             // f100_v_dm_bac_sy_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 308);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.m_cbo_benh_vien);
             this.Controls.Add(this.m_txt_dien_thoai);
@@ -221,7 +221,7 @@
             this.Name = "f100_v_dm_bac_sy_de";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "_100_v_dm_bac_sy_de";
-            this.panel1.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +241,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel m_pnl_control;
         internal System.Windows.Forms.ImageList ImageList;
     }
 }
