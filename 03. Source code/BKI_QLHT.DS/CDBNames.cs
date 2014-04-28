@@ -247,6 +247,7 @@
         public const string TUYEN_SU_DUNG_7 = "TUYEN_SU_DUNG_7";
         public const string TUYEN_SU_DUNG_8 = "TUYEN_SU_DUNG_8";
     }
+
     public class DM_NHOM_THUOC
     {
         public const string ID = "ID";
@@ -340,4 +341,18 @@
         public const string MA_VIET_TAT_DV_CAP_TREN = "MA_VIET_TAT_DV_CAP_TREN";
     }
 
+    public class V_GD_GIA_2
+    {
+        public const string ID = "ID";
+        public const string NGAY_AP_DUNG = "NGAY_AP_DUNG";
+        public const string ID_DON_VI_GIA = "ID_DON_VI_GIA";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string ID_THUOC = "ID_THUOC";
+        public const string GIA = "GIA";
+        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string TEN = "TEN";
+        public const string TEN_DON_VI_GIA = "TEN_DON_VI_GIA";
+        public const string TEN_DON_VI_TINH = "TEN_DON_VI_TINH";
+    }
 }
