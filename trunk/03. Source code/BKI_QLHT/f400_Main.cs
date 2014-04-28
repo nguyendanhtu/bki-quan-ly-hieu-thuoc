@@ -126,6 +126,9 @@ namespace BKI_QLHT
             try
             {
                 //format_dotnetbar_menu();
+                uc_f05_Image_Main uc_frm = new uc_f05_Image_Main();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
             }
             catch (Exception v_e)
             {
