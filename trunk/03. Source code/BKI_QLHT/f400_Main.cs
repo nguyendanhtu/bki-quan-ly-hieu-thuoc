@@ -175,12 +175,19 @@ namespace BKI_QLHT
 
         private void m_cmd_nhom_khach_hang_Click(object sender, EventArgs e)
         {
-            //f101_dm_nhom_khach_hang frm = new f101_dm_nhom_khach_hang();
-            //frm.ShowDialog();
-            m_Panel_Content.Controls.Clear();
-            uc_f101_dm_nhom_khach_hang uc_frm = new uc_f101_dm_nhom_khach_hang();
-            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
-            m_Panel_Content.Controls.Add(uc_frm);
+            try
+            {
+                //f101_dm_nhom_khach_hang frm = new f101_dm_nhom_khach_hang();
+                //frm.ShowDialog();
+                m_Panel_Content.Controls.Clear();
+                uc_f101_dm_nhom_khach_hang uc_frm = new uc_f101_dm_nhom_khach_hang();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_item_danh_muc_nha_cung_cap_Click(object sender, EventArgs e)
@@ -300,12 +307,19 @@ namespace BKI_QLHT
         
         private void m_cmd_item_danh_muc_bac_sy_Click(object sender, EventArgs e)
         {
-            //f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
-            //v_frm_f100_V_DM_BAC_SY.ShowDialog();
-            m_Panel_Content.Controls.Clear();
-            uc_f100_dm_bac_sy uc_frm = new uc_f100_dm_bac_sy();
-            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
-            m_Panel_Content.Controls.Add(uc_frm);
+            try
+            {
+                //f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
+                //v_frm_f100_V_DM_BAC_SY.ShowDialog();
+                m_Panel_Content.Controls.Clear();
+                uc_f100_dm_bac_sy uc_frm = new uc_f100_dm_bac_sy();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_item_ht_form_Click(object sender, EventArgs e)
@@ -338,8 +352,10 @@ namespace BKI_QLHT
         {
             try
             {
-                f103_V_DM_DON_VI v_frm = new f103_V_DM_DON_VI();
-                v_frm.ShowDialog();
+                m_Panel_Content.Controls.Clear();
+                uc_103_dm_don_vi uc_frm = new uc_103_dm_don_vi();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
             }
             catch (System.Exception v_e)
             {
