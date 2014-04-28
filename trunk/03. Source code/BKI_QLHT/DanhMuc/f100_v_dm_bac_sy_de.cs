@@ -12,6 +12,7 @@ using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 using IP.Core.IPUserService;
 using IP.Core.IPData;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT.DanhMuc
 {
@@ -22,7 +23,14 @@ namespace BKI_QLHT.DanhMuc
         public f100_v_dm_bac_sy_de()
         {
             InitializeComponent();
+            format_control();
             Load_cbo_benh_vien();
+        }
+
+        private void format_control()
+        {
+
+            CControlFormat.setFormStyle(this, new CAppContext_201());
         }
         public void display_for_insert()
         {
