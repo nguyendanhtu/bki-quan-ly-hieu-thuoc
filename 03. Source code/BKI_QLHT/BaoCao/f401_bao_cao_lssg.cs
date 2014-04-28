@@ -239,6 +239,7 @@ namespace BKI_QLHT
             // 
             // m_dat_tu_ngay
             // 
+            this.m_dat_tu_ngay.Checked = false;
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(182, 54);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
@@ -248,6 +249,7 @@ namespace BKI_QLHT
             // 
             // m_dat_den_ngay
             // 
+            this.m_dat_den_ngay.Checked = false;
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.m_dat_den_ngay.Location = new System.Drawing.Point(472, 54);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
@@ -347,19 +349,48 @@ namespace BKI_QLHT
 			return v_obj_trans;			
 		}
 		private void load_data_2_grid(){
+
             m_v_ds = new DS_V_GD_GIA();
-            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "");
-            else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
-           // m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
-            var v_str_search = m_txt_tim_kiem.Text.Trim();
-            if (v_str_search.Equals(m_str_tim_kiem))
+            
+            if (!m_dat_tu_ngay.Checked)
             {
-                v_str_search = "";
+                v_dat_ngay_bd = new DateTime(1970, 1, 1);
             }
+            else
+            {
+                v_dat_ngay_bd = m_dat_tu_ngay.Value;
+            }
+
+            if (!m_dat_den_ngay.Checked)
+            {
+                v_dat_ngay_kt = new DateTime(2050, 12, 31);
+            }
+            else
+            {
+                v_dat_ngay_kt = m_dat_den_ngay.Value;
+            }
+
+            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "")
+                m_v_us.FillDatasetSearch(m_v_ds, "",v_dat_ngay_bd,v_dat_ngay_kt);
+            else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
+           
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
-            
             m_fg.Redraw = true;
+
+           // m_v_ds = new DS_V_GD_GIA();
+           // if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "");
+           // else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
+           //// m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
+           // var v_str_search = m_txt_tim_kiem.Text.Trim();
+           // if (v_str_search.Equals(m_str_tim_kiem))
+           // {
+           //     v_str_search = "";
+           // }
+           // m_fg.Redraw = false;
+           // CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
+            
+           // m_fg.Redraw = true;
             set_search_format_before();
 		}
         private void set_search_format_before()
@@ -392,7 +423,7 @@ namespace BKI_QLHT
         //    US_V_GD_GIA v_us_gd_gia = new US_V_GD_GIA();
         //    DS_V_GD_GIA v_ds_gd_gia = new DS_V_GD_GIA();
         //    v_us_gd_gia.FillDataset(v_ds_gd_gia, "where ");
-        //}
+        // }
 	
 		private void us_object2grid(US_V_GD_GIA i_us
 			, int i_grid_row) {
@@ -415,6 +446,9 @@ namespace BKI_QLHT
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
 			
 			m_cmd_xuat_excel.Click += new EventHandler(m_cmd_xuat_excel_Click);
+            m_txt_tim_kiem.KeyDown += m_txt_tim_kiem_KeyDown;
+            m_txt_tim_kiem.MouseClick += m_txt_tim_kiem_MouseClick;
+            m_txt_tim_kiem.Leave += m_txt_tim_kiem_Leave;
 		}
 		#endregion
 
@@ -427,7 +461,7 @@ namespace BKI_QLHT
 			try{
                 m_txt_tim_kiem.ForeColor = Color.Gray;
                 set_initial_form_load();
-                m_txt_tim_kiem.Focus();
+                //m_txt_tim_kiem.Focus();
                 
 			}
 			catch (Exception v_e){
@@ -454,29 +488,7 @@ namespace BKI_QLHT
 
             try
             {
-                m_v_ds = new DS_V_GD_GIA();
-                if (!m_dat_tu_ngay.Checked)
-                {
-                    v_dat_ngay_bd = new DateTime(1970, 1, 1);
-                }
-                else
-                {
-                    v_dat_ngay_bd = m_dat_tu_ngay.Value;
-                }
-
-                if (!m_dat_den_ngay.Checked)
-                {
-                    v_dat_ngay_kt = new DateTime(2050, 12, 31);
-                }
-                else
-                {
-                    v_dat_ngay_kt = m_dat_den_ngay.Value;
-                }
-
-                m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text);//, v_dat_ngay_bd, v_dat_ngay_kt);
-                m_fg.Redraw = false;
-                CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
-                m_fg.Redraw = true;
+                load_data_2_grid();
             }
             catch (Exception v_e)
             {
@@ -486,14 +498,7 @@ namespace BKI_QLHT
 
         private void m_txt_tim_kiem_MouseClick(object sender, MouseEventArgs e)
         {
-            try
-            {                                                                                                                                                                                                                                                       
-                set_search_format_after();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
+
         }
         private void m_txt_tim_kiem_Leave(object sender, EventArgs e)
         {
