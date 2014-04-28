@@ -93,6 +93,14 @@ namespace BKI_QLHT
         private void format_controls()
         {
             CControlFormat.setFormStyle(this);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
+            //ScrollBar vScrollBar1 = new VScrollBar();
+            //vScrollBar1.Dock = DockStyle.Right;
+            //vScrollBar1.Scroll += (sender, e) => { m_Panel_Content.VerticalScroll.Value = vScrollBar1.Value; };
+            //m_Panel_Content.Controls.Add(vScrollBar1);
             //format_dotnetbar_menu();
             set_define_events();
             ShowInTaskbar = true;
@@ -336,12 +344,7 @@ namespace BKI_QLHT
             }
         }
 
-        private void f400_Main_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void m_cmd_bao_cao_lssg_Click(object sender, EventArgs e)
+        private void m_cmd_lich_su_gia_ban_Click(object sender, EventArgs e)
         {
             try
             {
@@ -350,10 +353,9 @@ namespace BKI_QLHT
             }
             catch (Exception v_e)
             {
-                
+
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-
         }
 
         //private void m_menu_item_he_thong_nguoi_su_dung_Click(object sender, EventArgs e)
