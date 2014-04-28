@@ -2,14 +2,15 @@
 <xs:schema id="DS_DM_THUOC" targetNamespace="http://tempuri.org/DS_DM_THUOC.xsd" xmlns:mstns="http://tempuri.org/DS_DM_THUOC.xsd" xmlns="http://tempuri.org/DS_DM_THUOC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString4" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DM_THUOCTableAdapter" GeneratorDataComponentClassName="DM_THUOCTableAdapter" Name="DM_THUOC" UserDataComponentName="DM_THUOCTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BKI_QLHTConnectionString (Settings)" DbObjectName="BKI_QLHT.dbo.DM_THUOC" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BKI_QLHTConnectionString4 (Settings)" DbObjectName="BKI_QLHT.dbo.DM_THUOC" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DM_THUOC] WHERE (([ID] = @Original_ID) AND ((@IsNull_THUOC_THAY_THE = 1 AND [THUOC_THAY_THE] IS NULL) OR ([THUOC_THAY_THE] = @Original_THUOC_THAY_THE)) AND ([ID_DANH_MUC_THUOC] = @Original_ID_DANH_MUC_THUOC) AND ([ID_NHOM_THUOC] = @Original_ID_NHOM_THUOC) AND ((@IsNull_TT_HOAT_CHAT = 1 AND [TT_HOAT_CHAT] IS NULL) OR ([TT_HOAT_CHAT] = @Original_TT_HOAT_CHAT)) AND ([TT_THUOC] = @Original_TT_THUOC) AND ([TEN_THUOC] = @Original_TEN_THUOC) AND ([DUONG_DUNG_DANG_DUNG] = @Original_DUONG_DUNG_DANG_DUNG) AND ((@IsNull_TUYEN_SU_DUNG_5 = 1 AND [TUYEN_SU_DUNG_5] IS NULL) OR ([TUYEN_SU_DUNG_5] = @Original_TUYEN_SU_DUNG_5)) AND ((@IsNull_TUYEN_SU_DUNG_6 = 1 AND [TUYEN_SU_DUNG_6] IS NULL) OR ([TUYEN_SU_DUNG_6] = @Original_TUYEN_SU_DUNG_6)) AND ((@IsNull_TUYEN_SU_DUNG_7 = 1 AND [TUYEN_SU_DUNG_7] IS NULL) OR ([TUYEN_SU_DUNG_7] = @Original_TUYEN_SU_DUNG_7)) AND ((@IsNull_TUYEN_SU_DUNG_8 = 1 AND [TUYEN_SU_DUNG_8] IS NULL) OR ([TUYEN_SU_DUNG_8] = @Original_TUYEN_SU_DUNG_8)))</CommandText>
@@ -142,7 +143,7 @@ SELECT ID, THUOC_THAY_THE, ID_DANH_MUC_THUOC, ID_NHOM_THUOC, TT_HOAT_CHAT, TT_TH
               <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
