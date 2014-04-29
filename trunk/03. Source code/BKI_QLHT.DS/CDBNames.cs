@@ -401,4 +401,5 @@
         public const string ID_LOAI_GIAO_DICH = "ID_LOAI_GIAO_DICH";
     }
 
+
 }
