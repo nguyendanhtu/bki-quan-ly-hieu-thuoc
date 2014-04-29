@@ -188,6 +188,12 @@
     <Compile Include="DanhMuc\uc_102_dm_don_vi_tinh.Designer.cs">
       <DependentUpon>uc_102_dm_don_vi_tinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\uc_103_dm_don_vi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\uc_103_dm_don_vi.Designer.cs">
+      <DependentUpon>uc_103_dm_don_vi.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\uc_800_dm_nha_cung_cap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -337,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc_102_dm_don_vi_tinh.resx">
       <DependentUpon>uc_102_dm_don_vi_tinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\uc_103_dm_don_vi.resx">
+      <DependentUpon>uc_103_dm_don_vi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc_800_dm_nha_cung_cap.resx">
       <DependentUpon>uc_800_dm_nha_cung_cap.cs</DependentUpon>

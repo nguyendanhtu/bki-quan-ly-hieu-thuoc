@@ -247,7 +247,17 @@ namespace BKI_QLHT
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_8, e_col_Number.TUYEN_SU_DUNG_8);			v_htb.Add(V_DM_THUOC.TT_THUOC, e_col_Number.TT_THUOC);			v_htb.Add(V_DM_THUOC.THUOC_THAY_THE, e_col_Number.THUOC_THAY_THE);			v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_7, e_col_Number.TUYEN_SU_DUNG_7);			v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_6, e_col_Number.TUYEN_SU_DUNG_6);			v_htb.Add(V_DM_THUOC.TT_HOAT_CHAT, e_col_Number.TT_HOAT_CHAT);			v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_5, e_col_Number.TUYEN_SU_DUNG_5);			v_htb.Add(V_DM_THUOC.TEN_NHOM, e_col_Number.TEN_NHOM);			v_htb.Add(V_DM_THUOC.DUONG_DUNG_DANG_DUNG, e_col_Number.DUONG_DUNG_DANG_DUNG);			v_htb.Add(V_DM_THUOC.TEN_THUOC, e_col_Number.TEN_THUOC);			v_htb.Add(V_DM_THUOC.TEN_DANH_MUC, e_col_Number.TEN_DANH_MUC);									
+            v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_8, e_col_Number.TUYEN_SU_DUNG_8);
+            v_htb.Add(V_DM_THUOC.TT_THUOC, e_col_Number.TT_THUOC);
+            v_htb.Add(V_DM_THUOC.THUOC_THAY_THE, e_col_Number.THUOC_THAY_THE);
+            v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_7, e_col_Number.TUYEN_SU_DUNG_7);
+            v_htb.Add(V_DM_THUOC.TT_HOAT_CHAT, e_col_Number.TT_HOAT_CHAT);
+            v_htb.Add(V_DM_THUOC.TEN_NHOM, e_col_Number.TEN_NHOM);
+            v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_5, e_col_Number.TUYEN_SU_DUNG_5);
+            v_htb.Add(V_DM_THUOC.DUONG_DUNG_DANG_DUNG, e_col_Number.DUONG_DUNG_DANG_DUNG);
+            v_htb.Add(V_DM_THUOC.TEN_THUOC, e_col_Number.TEN_THUOC);
+            v_htb.Add(V_DM_THUOC.TEN_DANH_MUC, e_col_Number.TEN_DANH_MUC);
+            v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_6, e_col_Number.TUYEN_SU_DUNG_6);									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds._V_DM_THUOC.NewRow());
 			return v_obj_trans;			
 		}

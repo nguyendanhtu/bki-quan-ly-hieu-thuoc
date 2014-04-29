@@ -117,7 +117,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 59);
+            this.label2.Location = new System.Drawing.Point(58, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 16);
             this.label2.TabIndex = 10;
@@ -137,7 +137,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(23, 88);
+            this.label7.Location = new System.Drawing.Point(47, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 16);
             this.label7.TabIndex = 21;
@@ -147,7 +147,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 122);
+            this.label8.Location = new System.Drawing.Point(26, 100);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 16);
             this.label8.TabIndex = 22;
@@ -157,7 +157,7 @@
             // 
             this.m_cbo_nhom_thuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhom_thuoc.FormattingEnabled = true;
-            this.m_cbo_nhom_thuoc.Location = new System.Drawing.Point(134, 83);
+            this.m_cbo_nhom_thuoc.Location = new System.Drawing.Point(134, 117);
             this.m_cbo_nhom_thuoc.Name = "m_cbo_nhom_thuoc";
             this.m_cbo_nhom_thuoc.Size = new System.Drawing.Size(201, 21);
             this.m_cbo_nhom_thuoc.TabIndex = 23;
@@ -166,10 +166,11 @@
             // 
             this.m_cbo_danh_muc_thuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_danh_muc_thuoc.FormattingEnabled = true;
-            this.m_cbo_danh_muc_thuoc.Location = new System.Drawing.Point(134, 110);
+            this.m_cbo_danh_muc_thuoc.Location = new System.Drawing.Point(132, 88);
             this.m_cbo_danh_muc_thuoc.Name = "m_cbo_danh_muc_thuoc";
             this.m_cbo_danh_muc_thuoc.Size = new System.Drawing.Size(201, 21);
             this.m_cbo_danh_muc_thuoc.TabIndex = 24;
+            this.m_cbo_danh_muc_thuoc.SelectedIndexChanged += new System.EventHandler(this.m_cbo_danh_muc_thuoc_SelectedIndexChanged);
             // 
             // m_txt_thuoc_thay_the
             // 

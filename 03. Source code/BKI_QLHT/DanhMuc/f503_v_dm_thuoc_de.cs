@@ -103,6 +103,10 @@ namespace BKI_QLHT
             if (m_us_dm_thuoc.strTUYEN_SU_DUNG_6 == "+") m_chk_tuyen_su_dung_6.Checked = true;
             if (m_us_dm_thuoc.strTUYEN_SU_DUNG_7 == "+") m_chk_tuyen_su_dung_7.Checked = true;
             if (m_us_dm_thuoc.strTUYEN_SU_DUNG_8 == "+") m_chk_tuyen_su_dung_8.Checked = true;
+            if (m_us_dm_thuoc.strTUYEN_SU_DUNG_5 == "Y") m_chk_tuyen_su_dung_5.Checked = true;
+            if (m_us_dm_thuoc.strTUYEN_SU_DUNG_6 == "Y") m_chk_tuyen_su_dung_6.Checked = true;
+            if (m_us_dm_thuoc.strTUYEN_SU_DUNG_7 == "Y") m_chk_tuyen_su_dung_7.Checked = true;
+            if (m_us_dm_thuoc.strTUYEN_SU_DUNG_8 == "Y") m_chk_tuyen_su_dung_8.Checked = true;
 
         }
         private void save_data()
@@ -148,6 +152,22 @@ namespace BKI_QLHT
 
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void m_cbo_danh_muc_thuoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            decimal v_dc_id_danh_muc = m_cbo_danh_muc_thuoc.SelectedIndex;
+            load_nhom_thuoc_2_danh_muc(v_dc_id_danh_muc);
+        }
+
+        private void load_nhom_thuoc_2_danh_muc(decimal ip_dc_id_danh_muc)
+        {
+            US_DM_NHOM_THUOC v_us = new US_DM_NHOM_THUOC();
+            DS_DM_NHOM_THUOC v_ds = new DS_DM_NHOM_THUOC();
+            v_us.FillDataSearchByDanhMuc(v_ds, ip_dc_id_danh_muc);
+            m_cbo_nhom_thuoc.DataSource = v_ds.DM_NHOM_THUOC;
+            m_cbo_nhom_thuoc.ValueMember = DM_NHOM_THUOC.ID;
+            m_cbo_nhom_thuoc.DisplayMember = DM_NHOM_THUOC.TEN_NHOM;
         }
         #region Event
 
