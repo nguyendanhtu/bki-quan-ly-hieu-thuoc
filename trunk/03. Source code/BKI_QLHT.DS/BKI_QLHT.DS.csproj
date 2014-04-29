@@ -195,6 +195,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_THUOC.cs">
+      <DependentUpon>DS_V_DM_THUOC.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DS_V_GD_GIA.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

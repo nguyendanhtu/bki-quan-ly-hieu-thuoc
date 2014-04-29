@@ -12,14 +12,15 @@
               <DbSource ConnectionRef="BKI_QLHTConnectionString2 (Settings)" DbObjectName="BKI_QLHT.dbo.V_DM_THUOC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, THUOC_THAY_THE, ID_DANH_MUC_THUOC, ID_NHOM_THUOC, TT_HOAT_CHAT, TT_THUOC, TEN_THUOC, DUONG_DUNG_DANG_DUNG, TUYEN_SU_DUNG_5, TUYEN_SU_DUNG_6, TUYEN_SU_DUNG_7, TUYEN_SU_DUNG_8, TEN_NHOM, TEN_DANH_MUC FROM dbo.V_DM_THUOC</CommandText>
+                    <CommandText>SELECT TEN_DANH_MUC, TEN_NHOM, THUOC_THAY_THE, ID_DANH_MUC_THUOC, ID_NHOM_THUOC, TT_HOAT_CHAT, TT_THUOC, TEN_THUOC, DUONG_DUNG_DANG_DUNG, TUYEN_SU_DUNG_5, TUYEN_SU_DUNG_6, TUYEN_SU_DUNG_7, TUYEN_SU_DUNG_8, ID FROM dbo.V_DM_THUOC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="TEN_DANH_MUC" DataSetColumn="TEN_DANH_MUC" />
+              <Mapping SourceColumn="TEN_NHOM" DataSetColumn="TEN_NHOM" />
               <Mapping SourceColumn="THUOC_THAY_THE" DataSetColumn="THUOC_THAY_THE" />
               <Mapping SourceColumn="ID_DANH_MUC_THUOC" DataSetColumn="ID_DANH_MUC_THUOC" />
               <Mapping SourceColumn="ID_NHOM_THUOC" DataSetColumn="ID_NHOM_THUOC" />
@@ -31,8 +32,7 @@
               <Mapping SourceColumn="TUYEN_SU_DUNG_6" DataSetColumn="TUYEN_SU_DUNG_6" />
               <Mapping SourceColumn="TUYEN_SU_DUNG_7" DataSetColumn="TUYEN_SU_DUNG_7" />
               <Mapping SourceColumn="TUYEN_SU_DUNG_8" DataSetColumn="TUYEN_SU_DUNG_8" />
-              <Mapping SourceColumn="TEN_NHOM" DataSetColumn="TEN_NHOM" />
-              <Mapping SourceColumn="TEN_DANH_MUC" DataSetColumn="TEN_DANH_MUC" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -47,7 +47,20 @@
         <xs:element name="V_DM_THUOC" msprop:Generator_TableClassName="V_DM_THUOCDataTable" msprop:Generator_TableVarName="tableV_DM_THUOC" msprop:Generator_TablePropName="_V_DM_THUOC" msprop:Generator_RowDeletingName="V_DM_THUOCRowDeleting" msprop:Generator_UserTableName="V_DM_THUOC" msprop:Generator_RowChangingName="V_DM_THUOCRowChanging" msprop:Generator_RowEvHandlerName="V_DM_THUOCRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DM_THUOCRowDeleted" msprop:Generator_RowEvArgName="V_DM_THUOCRowChangeEvent" msprop:Generator_RowChangedName="V_DM_THUOCRowChanged" msprop:Generator_RowClassName="V_DM_THUOCRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
+              <xs:element name="TEN_DANH_MUC" msprop:Generator_ColumnVarNameInTable="columnTEN_DANH_MUC" msprop:Generator_ColumnPropNameInRow="TEN_DANH_MUC" msprop:Generator_ColumnPropNameInTable="TEN_DANH_MUCColumn" msprop:Generator_UserColumnName="TEN_DANH_MUC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_NHOM" msprop:Generator_ColumnVarNameInTable="columnTEN_NHOM" msprop:Generator_ColumnPropNameInRow="TEN_NHOM" msprop:Generator_ColumnPropNameInTable="TEN_NHOMColumn" msprop:Generator_UserColumnName="TEN_NHOM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="THUOC_THAY_THE" msprop:Generator_ColumnVarNameInTable="columnTHUOC_THAY_THE" msprop:Generator_ColumnPropNameInRow="THUOC_THAY_THE" msprop:Generator_ColumnPropNameInTable="THUOC_THAY_THEColumn" msprop:Generator_UserColumnName="THUOC_THAY_THE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -62,7 +75,7 @@
               <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -101,20 +114,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TEN_NHOM" msprop:Generator_ColumnVarNameInTable="columnTEN_NHOM" msprop:Generator_ColumnPropNameInRow="TEN_NHOM" msprop:Generator_ColumnPropNameInTable="TEN_NHOMColumn" msprop:Generator_UserColumnName="TEN_NHOM">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="TEN_DANH_MUC" msprop:Generator_ColumnVarNameInTable="columnTEN_DANH_MUC" msprop:Generator_ColumnPropNameInRow="TEN_DANH_MUC" msprop:Generator_ColumnPropNameInTable="TEN_DANH_MUCColumn" msprop:Generator_UserColumnName="TEN_DANH_MUC">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="250" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
