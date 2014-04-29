@@ -719,7 +719,7 @@ namespace BKI_QLHT
             this.m_ribbonPanel_baocao.Location = new System.Drawing.Point(0, 53);
             this.m_ribbonPanel_baocao.Name = "m_ribbonPanel_baocao";
             this.m_ribbonPanel_baocao.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.m_ribbonPanel_baocao.Size = new System.Drawing.Size(845, 106);
+            this.m_ribbonPanel_baocao.Size = new System.Drawing.Size(813, 106);
             // 
             // 
             // 

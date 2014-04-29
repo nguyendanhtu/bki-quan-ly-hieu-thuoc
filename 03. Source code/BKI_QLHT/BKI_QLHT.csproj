@@ -218,6 +218,9 @@
     <Compile Include="DanhMuc\f101_dm_nhom_khach_hang_de.Designer.cs">
       <DependentUpon>f101_dm_nhom_khach_hang_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\f108_V_GD_GIAO_DICH_DETAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,6 +362,9 @@
     <EmbeddedResource Include="DanhMuc\f101_dm_nhom_khach_hang_de.resx">
       <DependentUpon>f101_dm_nhom_khach_hang_de.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f108_V_GD_GIAO_DICH_DETAIL.resx">
+      <DependentUpon>f108_V_GD_GIAO_DICH_DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -479,9 +485,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NghiepVu\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\form.gif" />
   </ItemGroup>
