@@ -418,6 +418,21 @@ namespace BKI_QLHT
 
         }
 
+        private void m_cmd_nhasx_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f404_v_dm_nhasx v_frm = new f404_v_dm_nhasx();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
 
 
 

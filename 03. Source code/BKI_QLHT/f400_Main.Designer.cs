@@ -101,6 +101,7 @@ namespace BKI_QLHT
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.m_cmd_nhasx = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
@@ -179,6 +180,7 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_nghiepvu.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_nghiepvu.TabIndex = 3;
+            this.m_ribbonPanel_nghiepvu.Visible = true;
             // 
             // m_menu_item_gia
             // 
@@ -1081,6 +1083,7 @@ namespace BKI_QLHT
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 0;
+            this.panelDockContainer1.Visible = true;
             // 
             // buttonX2
             // 
@@ -1180,6 +1183,16 @@ namespace BKI_QLHT
             this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem1.Name = "controlContainerItem1";
             // 
+            // m_cmd_nhasx
+            // 
+            this.m_cmd_nhasx.Location = new System.Drawing.Point(17, 302);
+            this.m_cmd_nhasx.Name = "m_cmd_nhasx";
+            this.m_cmd_nhasx.Size = new System.Drawing.Size(75, 23);
+            this.m_cmd_nhasx.TabIndex = 17;
+            this.m_cmd_nhasx.Text = "Danh mục nhà sản xuất";
+            this.m_cmd_nhasx.UseVisualStyleBackColor = true;
+            this.m_cmd_nhasx.Click += new System.EventHandler(this.m_cmd_nhasx_Click);
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1187,6 +1200,7 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(823, 587);
+            this.Controls.Add(this.m_cmd_nhasx);
             this.Controls.Add(this.m_Panel_Content);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
@@ -1288,5 +1302,6 @@ namespace BKI_QLHT
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_bang_gia;
         private DevComponents.DotNetBar.ButtonItem m_cmd_quan_ly_thuoc_het_han;
         private DevComponents.DotNetBar.ButtonItem m_cmd_quan_ly_so_du;
+        private Button m_cmd_nhasx;
     }
 }
