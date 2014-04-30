@@ -35,37 +35,32 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.m_txt_gia_nhap = new System.Windows.Forms.TextBox();
             this.m_lbl_don_vi_cap_3 = new System.Windows.Forms.Label();
             this.m_cbo_dv_cap_4 = new System.Windows.Forms.ComboBox();
             this.m_dtp_han_su_dung = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.m_txt_quy_doi_3 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.m_cbo_hang_san_xuat = new System.Windows.Forms.ComboBox();
-            this.m_lbl_don_vi_cap_4 = new System.Windows.Forms.Label();
             this.m_lbl_dv_tinh_ban = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.m_cbo_dv_cap_5 = new System.Windows.Forms.ComboBox();
+            this.m_txt_gia_ban = new System.Windows.Forms.TextBox();
             this.m_cbo_nuoc_san_xuat = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.m_lbl_don_vi_cap_2 = new System.Windows.Forms.Label();
             this.m_cbo_dv_cap_3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.m_txt_quy_doi_2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.m_dtp_ngay_san_xuat = new System.Windows.Forms.DateTimePicker();
             this.m_cbo_nha_cung_cap = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.m_cbo_dv_cap_2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.m_txt_quy_doi_1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.m_cbo_don_vi_tinh = new System.Windows.Forms.ComboBox();
             this.m_txt_so_luong = new System.Windows.Forms.TextBox();
@@ -80,17 +75,19 @@
             this.m_lbl_ma_giao_dich = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_grv_nhap_thuoc = new System.Windows.Forms.DataGridView();
-            this.m_pnl_control = new System.Windows.Forms.Panel();
-            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_add = new SIS.Controls.Button.SiSButton();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_thuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.So_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_add = new SIS.Controls.Button.SiSButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.m_lbl_tong_tien = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhap_thuoc)).BeginInit();
             this.m_pnl_control.SuspendLayout();
@@ -150,12 +147,12 @@
             this.label12.TabIndex = 99;
             this.label12.Text = "Giá nhập";
             // 
-            // textBox5
+            // m_txt_gia_nhap
             // 
-            this.textBox5.Location = new System.Drawing.Point(104, 185);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(105, 20);
-            this.textBox5.TabIndex = 100;
+            this.m_txt_gia_nhap.Location = new System.Drawing.Point(104, 185);
+            this.m_txt_gia_nhap.Name = "m_txt_gia_nhap";
+            this.m_txt_gia_nhap.Size = new System.Drawing.Size(105, 20);
+            this.m_txt_gia_nhap.TabIndex = 100;
             // 
             // m_lbl_don_vi_cap_3
             // 
@@ -187,12 +184,12 @@
             this.m_dtp_han_su_dung.Size = new System.Drawing.Size(239, 20);
             this.m_dtp_han_su_dung.TabIndex = 98;
             // 
-            // textBox4
+            // m_txt_quy_doi_3
             // 
-            this.textBox4.Location = new System.Drawing.Point(166, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(47, 23);
-            this.textBox4.TabIndex = 88;
+            this.m_txt_quy_doi_3.Location = new System.Drawing.Point(166, 83);
+            this.m_txt_quy_doi_3.Name = "m_txt_quy_doi_3";
+            this.m_txt_quy_doi_3.Size = new System.Drawing.Size(47, 23);
+            this.m_txt_quy_doi_3.TabIndex = 88;
             // 
             // label22
             // 
@@ -215,16 +212,6 @@
             this.label11.TabIndex = 97;
             this.label11.Text = "Hạn sử dụng";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(78, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 16);
-            this.label2.TabIndex = 86;
-            // 
             // m_cbo_hang_san_xuat
             // 
             this.m_cbo_hang_san_xuat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -233,17 +220,6 @@
             this.m_cbo_hang_san_xuat.Name = "m_cbo_hang_san_xuat";
             this.m_cbo_hang_san_xuat.Size = new System.Drawing.Size(239, 21);
             this.m_cbo_hang_san_xuat.TabIndex = 104;
-            // 
-            // m_lbl_don_vi_cap_4
-            // 
-            this.m_lbl_don_vi_cap_4.AutoSize = true;
-            this.m_lbl_don_vi_cap_4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_don_vi_cap_4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.m_lbl_don_vi_cap_4.Location = new System.Drawing.Point(59, 118);
-            this.m_lbl_don_vi_cap_4.Name = "m_lbl_don_vi_cap_4";
-            this.m_lbl_don_vi_cap_4.Size = new System.Drawing.Size(60, 16);
-            this.m_lbl_don_vi_cap_4.TabIndex = 85;
-            this.m_lbl_don_vi_cap_4.Text = ".............";
             // 
             // m_lbl_dv_tinh_ban
             // 
@@ -267,21 +243,12 @@
             this.label24.TabIndex = 109;
             this.label24.Text = "/";
             // 
-            // textBox6
+            // m_txt_gia_ban
             // 
-            this.textBox6.Location = new System.Drawing.Point(104, 210);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(105, 20);
-            this.textBox6.TabIndex = 108;
-            // 
-            // m_cbo_dv_cap_5
-            // 
-            this.m_cbo_dv_cap_5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m_cbo_dv_cap_5.FormattingEnabled = true;
-            this.m_cbo_dv_cap_5.Location = new System.Drawing.Point(219, 114);
-            this.m_cbo_dv_cap_5.Name = "m_cbo_dv_cap_5";
-            this.m_cbo_dv_cap_5.Size = new System.Drawing.Size(77, 24);
-            this.m_cbo_dv_cap_5.TabIndex = 84;
+            this.m_txt_gia_ban.Location = new System.Drawing.Point(104, 210);
+            this.m_txt_gia_ban.Name = "m_txt_gia_ban";
+            this.m_txt_gia_ban.Size = new System.Drawing.Size(105, 20);
+            this.m_txt_gia_ban.TabIndex = 108;
             // 
             // m_cbo_nuoc_san_xuat
             // 
@@ -313,23 +280,6 @@
             this.label16.Size = new System.Drawing.Size(89, 16);
             this.label16.TabIndex = 103;
             this.label16.Text = "Hãng sản xuất";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(166, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(47, 23);
-            this.textBox3.TabIndex = 83;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(139, 118);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(21, 19);
-            this.label19.TabIndex = 82;
-            this.label19.Text = "=";
             // 
             // label8
             // 
@@ -372,12 +322,12 @@
             this.m_cbo_dv_cap_3.Size = new System.Drawing.Size(77, 24);
             this.m_cbo_dv_cap_3.TabIndex = 79;
             // 
-            // textBox1
+            // m_txt_quy_doi_2
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 23);
-            this.textBox1.TabIndex = 78;
+            this.m_txt_quy_doi_2.Location = new System.Drawing.Point(166, 52);
+            this.m_txt_quy_doi_2.Name = "m_txt_quy_doi_2";
+            this.m_txt_quy_doi_2.Size = new System.Drawing.Size(47, 23);
+            this.m_txt_quy_doi_2.TabIndex = 78;
             // 
             // label7
             // 
@@ -413,26 +363,21 @@
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.m_lbl_don_vi_cap_3);
             this.groupBox1.Controls.Add(this.m_cbo_dv_cap_4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.m_txt_quy_doi_3);
             this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.m_lbl_don_vi_cap_4);
-            this.groupBox1.Controls.Add(this.m_cbo_dv_cap_5);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.m_lbl_don_vi_cap_2);
             this.groupBox1.Controls.Add(this.m_cbo_dv_cap_3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.m_txt_quy_doi_2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.m_cbo_dv_cap_2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.m_txt_quy_doi_1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(427, 130);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(336, 146);
+            this.groupBox1.Size = new System.Drawing.Size(336, 130);
             this.groupBox1.TabIndex = 90;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quy đổi đơn vị tính";
@@ -457,12 +402,12 @@
             this.m_cbo_dv_cap_2.Size = new System.Drawing.Size(77, 24);
             this.m_cbo_dv_cap_2.TabIndex = 69;
             // 
-            // textBox2
+            // m_txt_quy_doi_1
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 22);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(47, 23);
-            this.textBox2.TabIndex = 68;
+            this.m_txt_quy_doi_1.Location = new System.Drawing.Point(166, 22);
+            this.m_txt_quy_doi_1.Name = "m_txt_quy_doi_1";
+            this.m_txt_quy_doi_1.Size = new System.Drawing.Size(47, 23);
+            this.m_txt_quy_doi_1.TabIndex = 68;
             // 
             // label6
             // 
@@ -614,6 +559,7 @@
             // 
             // m_grv_nhap_thuoc
             // 
+            this.m_grv_nhap_thuoc.AllowUserToAddRows = false;
             this.m_grv_nhap_thuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.m_grv_nhap_thuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -622,13 +568,51 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.m_grv_nhap_thuoc.Location = new System.Drawing.Point(5, 334);
+            this.m_grv_nhap_thuoc.Location = new System.Drawing.Point(5, 339);
             this.m_grv_nhap_thuoc.Name = "m_grv_nhap_thuoc";
-            this.m_grv_nhap_thuoc.Size = new System.Drawing.Size(754, 198);
+            this.m_grv_nhap_thuoc.RowHeadersVisible = false;
+            this.m_grv_nhap_thuoc.Size = new System.Drawing.Size(754, 193);
             this.m_grv_nhap_thuoc.TabIndex = 115;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 90;
+            // 
+            // Ten_thuoc
+            // 
+            this.Ten_thuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ten_thuoc.HeaderText = "Tên thuốc";
+            this.Ten_thuoc.Name = "Ten_thuoc";
+            // 
+            // So_luong
+            // 
+            this.So_luong.HeaderText = "Số lượng";
+            this.So_luong.Name = "So_luong";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Đơn vị tính";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Giá nhập";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Thành tiền";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 120;
             // 
             // m_pnl_control
             // 
+            this.m_pnl_control.Controls.Add(this.m_lbl_tong_tien);
+            this.m_pnl_control.Controls.Add(this.label2);
             this.m_pnl_control.Controls.Add(this.m_cmd_save);
             this.m_pnl_control.Controls.Add(this.m_cmd_delete);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
@@ -692,46 +676,31 @@
             this.m_cmd_add.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cmd_add.Image = global::BKI_QLHT.Properties.Resources.add;
             this.m_cmd_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_add.Location = new System.Drawing.Point(646, 282);
+            this.m_cmd_add.Location = new System.Drawing.Point(624, 292);
             this.m_cmd_add.Name = "m_cmd_add";
-            this.m_cmd_add.Size = new System.Drawing.Size(99, 33);
+            this.m_cmd_add.Size = new System.Drawing.Size(99, 30);
             this.m_cmd_add.TabIndex = 114;
             this.m_cmd_add.Text = "Thêm";
             // 
-            // STT
+            // label2
             // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 90;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(24, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 16);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Tổng tiền hóa đơn  :";
             // 
-            // Ten_thuoc
+            // m_lbl_tong_tien
             // 
-            this.Ten_thuoc.HeaderText = "Tên thuốc";
-            this.Ten_thuoc.Name = "Ten_thuoc";
-            this.Ten_thuoc.Width = 200;
-            // 
-            // So_luong
-            // 
-            this.So_luong.HeaderText = "Số lượng";
-            this.So_luong.Name = "So_luong";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Đơn vị tính";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Giá nhập";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Thành tiền";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 120;
+            this.m_lbl_tong_tien.AutoSize = true;
+            this.m_lbl_tong_tien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_tong_tien.Location = new System.Drawing.Point(157, 16);
+            this.m_lbl_tong_tien.Name = "m_lbl_tong_tien";
+            this.m_lbl_tong_tien.Size = new System.Drawing.Size(36, 16);
+            this.m_lbl_tong_tien.TabIndex = 17;
+            this.m_lbl_tong_tien.Text = ".......";
             // 
             // f511_gd_nhap_thuoc
             // 
@@ -747,13 +716,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.m_txt_gia_nhap);
             this.Controls.Add(this.m_dtp_han_su_dung);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.m_cbo_hang_san_xuat);
             this.Controls.Add(this.m_lbl_dv_tinh_ban);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.m_txt_gia_ban);
             this.Controls.Add(this.m_cbo_nuoc_san_xuat);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -776,6 +745,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhap_thuoc)).EndInit();
             this.m_pnl_control.ResumeLayout(false);
+            this.m_pnl_control.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -788,37 +758,32 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox m_txt_gia_nhap;
         private System.Windows.Forms.Label m_lbl_don_vi_cap_3;
         private System.Windows.Forms.ComboBox m_cbo_dv_cap_4;
         private System.Windows.Forms.DateTimePicker m_dtp_han_su_dung;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox m_txt_quy_doi_3;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox m_cbo_hang_san_xuat;
-        private System.Windows.Forms.Label m_lbl_don_vi_cap_4;
         private System.Windows.Forms.Label m_lbl_dv_tinh_ban;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox m_cbo_dv_cap_5;
+        private System.Windows.Forms.TextBox m_txt_gia_ban;
         private System.Windows.Forms.ComboBox m_cbo_nuoc_san_xuat;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label m_lbl_don_vi_cap_2;
         private System.Windows.Forms.ComboBox m_cbo_dv_cap_3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox m_txt_quy_doi_2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker m_dtp_ngay_san_xuat;
         private System.Windows.Forms.ComboBox m_cbo_nha_cung_cap;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox m_cbo_dv_cap_2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox m_txt_quy_doi_1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox m_cbo_don_vi_tinh;
         private System.Windows.Forms.TextBox m_txt_so_luong;
@@ -844,5 +809,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label m_lbl_tong_tien;
+        private System.Windows.Forms.Label label2;
     }
 }
