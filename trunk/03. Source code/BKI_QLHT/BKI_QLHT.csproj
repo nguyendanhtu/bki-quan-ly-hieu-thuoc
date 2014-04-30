@@ -170,6 +170,18 @@
     <Compile Include="DanhMuc\f801_dm_khach_hang_DE.Designer.cs">
       <DependentUpon>f801_dm_khach_hang_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\txt_search_thuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\txt_search_thuoc.Designer.cs">
+      <DependentUpon>txt_search_thuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\uc500_dm_danh_muc_thuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -367,6 +379,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f801_dm_khach_hang_DE.resx">
       <DependentUpon>f801_dm_khach_hang_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\txt_search_thuoc.resx">
+      <DependentUpon>txt_search_thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc500_dm_danh_muc_thuoc.resx">
       <DependentUpon>uc500_dm_danh_muc_thuoc.cs</DependentUpon>
