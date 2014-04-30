@@ -10,6 +10,7 @@ using BKI_QLHT.US;
 using IP.Core.IPCommon;
 using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT
 {
@@ -21,10 +22,11 @@ namespace BKI_QLHT
         public f503_v_dm_thuoc_de()
         {
             InitializeComponent();
-            load_data_2_cbo_danh_muc();
-            load_data_2_cbo_nhom_thuoc();
-        }
 
+            format_controls();
+            //load_data_2_cbo_danh_muc();
+            //load_data_2_cbo_nhom_thuoc();
+        }
 
         #region Public Interface
         public void display_for_insert()
@@ -40,21 +42,40 @@ namespace BKI_QLHT
             this.ShowDialog();
         }
         #endregion
+
         #region Members
         US_DM_THUOC m_us_dm_thuoc = new US_DM_THUOC();
         DataEntryFormMode m_e_form_mode;
         #endregion
+
         #region Private Methods
-        private void load_data_2_cbo_danh_muc()
+        private void format_controls()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+            set_define_events();
+        }
+
+        private void set_define_events()
+        {
+            this.Load += new System.EventHandler(this.f503_v_dm_thuoc_de_Load);
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click);
+            this.m_cbo_danh_muc_thuoc.SelectedIndexChanged += new System.EventHandler(this.m_cbo_danh_muc_thuoc_SelectedIndexChanged);
+        }
+
+        public void load_data_2_cbo_danh_muc()
         {
             US_DM_DANH_MUC_THUOC v_us = new US_DM_DANH_MUC_THUOC();
             DS_DM_DANH_MUC_THUOC v_ds = new DS_DM_DANH_MUC_THUOC();
             v_us.FillDataset(v_ds);
-            m_cbo_danh_muc_thuoc.DataSource = v_ds.DM_DANH_MUC_THUOC;
+            this.m_cbo_danh_muc_thuoc.SelectedIndexChanged -= new System.EventHandler(this.m_cbo_danh_muc_thuoc_SelectedIndexChanged);
             m_cbo_danh_muc_thuoc.ValueMember = DM_DANH_MUC_THUOC.ID;
             m_cbo_danh_muc_thuoc.DisplayMember = DM_DANH_MUC_THUOC.TEN_DANH_MUC;
+            m_cbo_danh_muc_thuoc.DataSource = v_ds.DM_DANH_MUC_THUOC;
+            this.m_cbo_danh_muc_thuoc.SelectedIndexChanged += new System.EventHandler(this.m_cbo_danh_muc_thuoc_SelectedIndexChanged);
+            
         }
-        private void load_data_2_cbo_nhom_thuoc()
+        public void load_data_2_cbo_nhom_thuoc()
         {
             US_DM_NHOM_THUOC v_us = new US_DM_NHOM_THUOC();
             DS_DM_NHOM_THUOC v_ds = new DS_DM_NHOM_THUOC();
@@ -65,7 +86,17 @@ namespace BKI_QLHT
            
 
         }
-        private void form_2_us_obj()
+        public void load_nhom_thuoc_2_danh_muc(object ip_dc_id_danh_muc)
+        {
+            US_DM_NHOM_THUOC v_us = new US_DM_NHOM_THUOC();
+            DS_DM_NHOM_THUOC v_ds = new DS_DM_NHOM_THUOC();
+            v_us.FillDataset(v_ds, "where id_danh_muc_thuoc=" + ip_dc_id_danh_muc);
+            //v_us.FillDataSearchByDanhMuc(v_ds, ip_dc_id_danh_muc);
+            m_cbo_nhom_thuoc.DataSource = v_ds.DM_NHOM_THUOC;
+            m_cbo_nhom_thuoc.ValueMember = DM_NHOM_THUOC.ID;
+            m_cbo_nhom_thuoc.DisplayMember = DM_NHOM_THUOC.TEN_NHOM;
+        }
+        public void form_2_us_obj()
         {
             m_us_dm_thuoc.strTEN_THUOC = m_txt_ten_thuoc.Text;
             m_us_dm_thuoc.strTHUOC_THAY_THE = m_txt_thuoc_thay_the.Text;
@@ -87,7 +118,7 @@ namespace BKI_QLHT
             if (m_chk_tuyen_su_dung_8.Checked == true) m_us_dm_thuoc.strTUYEN_SU_DUNG_8 = "+";
             else m_us_dm_thuoc.strTUYEN_SU_DUNG_8 = "";
         }
-        private void us_obj_2_form(US_DM_THUOC ip_us_dm_thuoc)
+        public void us_obj_2_form(US_DM_THUOC ip_us_dm_thuoc)
         {
 
             m_txt_ten_thuoc.Text = ip_us_dm_thuoc.strTEN_THUOC;
@@ -103,13 +134,10 @@ namespace BKI_QLHT
             if (m_us_dm_thuoc.strTUYEN_SU_DUNG_6 == "+") m_chk_tuyen_su_dung_6.Checked = true;
             if (m_us_dm_thuoc.strTUYEN_SU_DUNG_7 == "+") m_chk_tuyen_su_dung_7.Checked = true;
             if (m_us_dm_thuoc.strTUYEN_SU_DUNG_8 == "+") m_chk_tuyen_su_dung_8.Checked = true;
-            if (m_us_dm_thuoc.strTUYEN_SU_DUNG_5 == "Y") m_chk_tuyen_su_dung_5.Checked = true;
-            if (m_us_dm_thuoc.strTUYEN_SU_DUNG_6 == "Y") m_chk_tuyen_su_dung_6.Checked = true;
-            if (m_us_dm_thuoc.strTUYEN_SU_DUNG_7 == "Y") m_chk_tuyen_su_dung_7.Checked = true;
-            if (m_us_dm_thuoc.strTUYEN_SU_DUNG_8 == "Y") m_chk_tuyen_su_dung_8.Checked = true;
+           
 
         }
-        private void save_data()
+        public void save_data()
         {
 
             form_2_us_obj();
@@ -126,7 +154,25 @@ namespace BKI_QLHT
             }
             this.Close();
         }
+        public void set_inital_form_load()
+        {
+            load_data_2_cbo_danh_muc();
+            load_nhom_thuoc_2_danh_muc(m_cbo_danh_muc_thuoc.SelectedValue.ToString());
+        }
         #endregion
+
+        #region Event
+        protected void f503_v_dm_thuoc_de_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                set_inital_form_load();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
         private void m_cmd_save_Click(object sender, EventArgs e)
         {
@@ -154,29 +200,29 @@ namespace BKI_QLHT
             }
         }
 
-        private void m_cbo_danh_muc_thuoc_SelectedIndexChanged(object sender, EventArgs e)
+        protected void m_cbo_danh_muc_thuoc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            decimal v_dc_id_danh_muc = m_cbo_danh_muc_thuoc.SelectedIndex;
-            load_nhom_thuoc_2_danh_muc(v_dc_id_danh_muc);
+            try
+            {
+                if (m_cbo_danh_muc_thuoc.SelectedValue != null)
+                {
+                    load_nhom_thuoc_2_danh_muc(m_cbo_danh_muc_thuoc.SelectedValue);
+                    
+                }
+
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
         }
 
-        private void load_nhom_thuoc_2_danh_muc(decimal ip_dc_id_danh_muc)
-        {
-            US_DM_NHOM_THUOC v_us = new US_DM_NHOM_THUOC();
-            DS_DM_NHOM_THUOC v_ds = new DS_DM_NHOM_THUOC();
-            v_us.FillDataSearchByDanhMuc(v_ds, ip_dc_id_danh_muc);
-            m_cbo_nhom_thuoc.DataSource = v_ds.DM_NHOM_THUOC;
-            m_cbo_nhom_thuoc.ValueMember = DM_NHOM_THUOC.ID;
-            m_cbo_nhom_thuoc.DisplayMember = DM_NHOM_THUOC.TEN_NHOM;
-        }
-        #region Event
-
+        
         #endregion
 
-
-
-
-
+       
 
     }
 }

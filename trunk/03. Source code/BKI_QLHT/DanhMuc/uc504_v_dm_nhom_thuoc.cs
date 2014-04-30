@@ -191,6 +191,7 @@ namespace BKI_QLHT
         #region Events
         private void m_cmd_exit_Click(object sender, EventArgs e) {
 			try{
+                this.Visible = false;
                 this.Controls.Clear();
 			}
 			catch (Exception v_e){
@@ -224,8 +225,6 @@ namespace BKI_QLHT
 				CSystemLog_301.ExceptionHandle(v_e);
 			}
 		}
-        #endregion
-
         private void uc504_v_dm_nhom_thuoc_Load(object sender, System.EventArgs e)
         {
             try
@@ -304,5 +303,8 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+        #endregion
+
+        
     }
 }

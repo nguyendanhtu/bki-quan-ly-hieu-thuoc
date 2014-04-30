@@ -170,7 +170,7 @@
             this.m_cbo_danh_muc_thuoc.Name = "m_cbo_danh_muc_thuoc";
             this.m_cbo_danh_muc_thuoc.Size = new System.Drawing.Size(201, 21);
             this.m_cbo_danh_muc_thuoc.TabIndex = 24;
-            this.m_cbo_danh_muc_thuoc.SelectedIndexChanged += new System.EventHandler(this.m_cbo_danh_muc_thuoc_SelectedIndexChanged);
+            
             // 
             // m_txt_thuoc_thay_the
             // 
@@ -203,7 +203,7 @@
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_save.TabIndex = 28;
             this.m_cmd_save.Text = "Lưu";
-            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            
             // 
             // ImageList
             // 
@@ -246,7 +246,7 @@
             this.m_cmd_thoat.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_thoat.TabIndex = 27;
             this.m_cmd_thoat.Text = "Trở về";
-            this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click);
+       
             // 
             // m_chk_tuyen_su_dung_5
             // 
@@ -332,6 +332,7 @@
             this.Controls.Add(this.label2);
             this.Name = "f503_v_dm_thuoc_de";
             this.Text = "f503_v_dm_thuoc_de";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
