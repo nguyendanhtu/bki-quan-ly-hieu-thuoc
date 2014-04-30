@@ -200,10 +200,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_KHACH_HANG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_NCC.cs">
+      <DependentUpon>DS_V_DM_NCC.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_V_DM_NCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_NCC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_DM_NHASX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_NHASX.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_DM_NHOM_THUOC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_DM_NSX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_NSX.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_V_DM_THUOC.cs">
       <DependentUpon>DS_V_DM_THUOC.xsd</DependentUpon>
@@ -575,6 +594,28 @@
     <None Include="DS_V_DM_KHACH_HANG.xss">
       <DependentUpon>DS_V_DM_KHACH_HANG.xsd</DependentUpon>
     </None>
+    <None Include="DS_V_DM_NCC.xsc">
+      <DependentUpon>DS_V_DM_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_NCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_NCC.xss">
+      <DependentUpon>DS_V_DM_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NHASX.xsc">
+      <DependentUpon>DS_V_DM_NHASX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NHASX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_NHASX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_NHASX.xss">
+      <DependentUpon>DS_V_DM_NHASX.xsd</DependentUpon>
+    </None>
     <None Include="DS_V_DM_NHOM_THUOC.xsc">
       <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
     </None>
@@ -585,6 +626,17 @@
     </None>
     <None Include="DS_V_DM_NHOM_THUOC.xss">
       <DependentUpon>DS_V_DM_NHOM_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NSX.xsc">
+      <DependentUpon>DS_V_DM_NSX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NSX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_NSX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_NSX.xss">
+      <DependentUpon>DS_V_DM_NSX.xsd</DependentUpon>
     </None>
     <None Include="DS_V_GD_GIA.xsc">
       <DependentUpon>DS_V_GD_GIA.xsd</DependentUpon>
