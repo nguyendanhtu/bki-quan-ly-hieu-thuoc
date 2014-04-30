@@ -54,6 +54,7 @@
     <Compile Include="US_DM_DON_VI.cs" />
     <Compile Include="US_DM_DON_VI_TINH.cs" />
     <Compile Include="US_DM_KHACH_HANG.cs" />
+    <Compile Include="US_DM_NCC_NSX_NHASX.cs" />
     <Compile Include="US_DM_NHA_CUNG_CAP.cs" />
     <Compile Include="US_DM_NHOM_KHACH_HANG.cs" />
     <Compile Include="US_DM_NHOM_THUOC.cs" />
