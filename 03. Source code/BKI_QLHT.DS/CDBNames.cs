@@ -189,6 +189,17 @@
         public const string ID_DON_VI_CAP_TREN = "ID_DON_VI_CAP_TREN";
         public const string ID_LOAI_DON_VI = "ID_LOAI_DON_VI";
     }
+    public class DM_KHACH_HANG
+    {
+        public const string ID = "ID";
+        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+        public const string MA_KHACH_HANG = "MA_KHACH_HANG";
+        public const string SDT = "SDT";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string ID_NHOM_KHACH_HANG = "ID_NHOM_KHACH_HANG";
+        public const string MA_SO_THUE = "MA_SO_THUE";
+    }
+
 
       public class DM_PHAP_NHAN
     {
