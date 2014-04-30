@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc108_v_gd_giao_dich_detail));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.m_cbo_don_vi_tinh = new System.Windows.Forms.ComboBox();
             this.m_lbl_dia_chi = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi_text = new System.Windows.Forms.Label();
             this.m_lbl_Ma_GD_text = new System.Windows.Forms.Label();
@@ -44,25 +44,28 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.m_cbo_ten_bac_sy = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.m_txt_so_luong = new System.Windows.Forms.TextBox();
             this.groupBox_2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.m_txt_ten_thuoc = new System.Windows.Forms.TextBox();
+            this.m_cmd_them = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox_3 = new System.Windows.Forms.GroupBox();
             this.groupBox_1 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.m_cmd_luu = new System.Windows.Forms.Button();
+            this.m_cmd_huy = new System.Windows.Forms.Button();
+            this.m_cmd_thoat = new System.Windows.Forms.Button();
+            this.m_cmd_in = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.m_txt_tong_tien = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.m_txt_ti_le_chiet_khau = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.m_txt_tong_tien_thanh_toan = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.m_fg = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,7 +74,6 @@
             this.TEN_DON_VI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIA_BAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.THANH_TIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox_2.SuspendLayout();
             this.groupBox_3.SuspendLayout();
             this.groupBox_1.SuspendLayout();
@@ -100,15 +102,15 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Bác sỹ";
             // 
-            // comboBox1
+            // m_cbo_don_vi_tinh
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(626, 26);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(123, 24);
-            this.comboBox1.TabIndex = 2;
+            this.m_cbo_don_vi_tinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m_cbo_don_vi_tinh.FormattingEnabled = true;
+            this.m_cbo_don_vi_tinh.Location = new System.Drawing.Point(627, 19);
+            this.m_cbo_don_vi_tinh.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cbo_don_vi_tinh.Name = "m_cbo_don_vi_tinh";
+            this.m_cbo_don_vi_tinh.Size = new System.Drawing.Size(123, 24);
+            this.m_cbo_don_vi_tinh.TabIndex = 2;
             // 
             // m_lbl_dia_chi
             // 
@@ -125,7 +127,7 @@
             // 
             this.m_lbl_dia_chi_text.AutoSize = true;
             this.m_lbl_dia_chi_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_dia_chi_text.Location = new System.Drawing.Point(746, 64);
+            this.m_lbl_dia_chi_text.Location = new System.Drawing.Point(772, 60);
             this.m_lbl_dia_chi_text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.m_lbl_dia_chi_text.Name = "m_lbl_dia_chi_text";
             this.m_lbl_dia_chi_text.Size = new System.Drawing.Size(264, 16);
@@ -136,7 +138,7 @@
             // 
             this.m_lbl_Ma_GD_text.AutoSize = true;
             this.m_lbl_Ma_GD_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_Ma_GD_text.Location = new System.Drawing.Point(746, 27);
+            this.m_lbl_Ma_GD_text.Location = new System.Drawing.Point(772, 27);
             this.m_lbl_Ma_GD_text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.m_lbl_Ma_GD_text.Name = "m_lbl_Ma_GD_text";
             this.m_lbl_Ma_GD_text.Size = new System.Drawing.Size(156, 16);
@@ -158,7 +160,7 @@
             // 
             this.m_lbl_SDT_text.AutoSize = true;
             this.m_lbl_SDT_text.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_SDT_text.Location = new System.Drawing.Point(748, 92);
+            this.m_lbl_SDT_text.Location = new System.Drawing.Point(772, 92);
             this.m_lbl_SDT_text.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.m_lbl_SDT_text.Name = "m_lbl_SDT_text";
             this.m_lbl_SDT_text.Size = new System.Drawing.Size(160, 16);
@@ -234,75 +236,83 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(523, 29);
+            this.label12.Location = new System.Drawing.Point(524, 24);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 16);
             this.label12.TabIndex = 1;
             this.label12.Text = "Đơn vị tính";
             // 
-            // comboBox4
+            // m_cbo_ten_bac_sy
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(185, 87);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(267, 24);
-            this.comboBox4.TabIndex = 2;
+            this.m_cbo_ten_bac_sy.FormattingEnabled = true;
+            this.m_cbo_ten_bac_sy.Location = new System.Drawing.Point(185, 87);
+            this.m_cbo_ten_bac_sy.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cbo_ten_bac_sy.Name = "m_cbo_ten_bac_sy";
+            this.m_cbo_ten_bac_sy.Size = new System.Drawing.Size(267, 24);
+            this.m_cbo_ten_bac_sy.TabIndex = 2;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(772, 29);
+            this.label13.Location = new System.Drawing.Point(787, 24);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(59, 16);
             this.label13.TabIndex = 1;
             this.label13.Text = "Số lượng";
             // 
-            // textBox1
+            // m_txt_so_luong
             // 
-            this.textBox1.Location = new System.Drawing.Point(849, 24);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 23);
-            this.textBox1.TabIndex = 7;
+            this.m_txt_so_luong.Location = new System.Drawing.Point(869, 20);
+            this.m_txt_so_luong.Margin = new System.Windows.Forms.Padding(4);
+            this.m_txt_so_luong.Name = "m_txt_so_luong";
+            this.m_txt_so_luong.Size = new System.Drawing.Size(83, 23);
+            this.m_txt_so_luong.TabIndex = 7;
             // 
             // groupBox_2
             // 
-            this.groupBox_2.Controls.Add(this.textBox3);
-            this.groupBox_2.Controls.Add(this.button1);
+            this.groupBox_2.Controls.Add(this.m_txt_ten_thuoc);
+            this.groupBox_2.Controls.Add(this.m_cmd_them);
             this.groupBox_2.Controls.Add(this.label11);
-            this.groupBox_2.Controls.Add(this.textBox1);
+            this.groupBox_2.Controls.Add(this.m_txt_so_luong);
             this.groupBox_2.Controls.Add(this.label12);
-            this.groupBox_2.Controls.Add(this.comboBox1);
+            this.groupBox_2.Controls.Add(this.m_cbo_don_vi_tinh);
             this.groupBox_2.Controls.Add(this.label14);
             this.groupBox_2.Controls.Add(this.label13);
             this.groupBox_2.Location = new System.Drawing.Point(4, 171);
             this.groupBox_2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_2.Name = "groupBox_2";
             this.groupBox_2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox_2.Size = new System.Drawing.Size(1383, 62);
+            this.groupBox_2.Size = new System.Drawing.Size(1492, 59);
             this.groupBox_2.TabIndex = 8;
             this.groupBox_2.TabStop = false;
             this.groupBox_2.Text = "Thông tin thuốc";
             // 
-            // button1
+            // m_txt_ten_thuoc
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(1060, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 35);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
+            this.m_txt_ten_thuoc.Location = new System.Drawing.Point(187, 21);
+            this.m_txt_ten_thuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.m_txt_ten_thuoc.Name = "m_txt_ten_thuoc";
+            this.m_txt_ten_thuoc.Size = new System.Drawing.Size(267, 23);
+            this.m_txt_ten_thuoc.TabIndex = 9;
+            // 
+            // m_cmd_them
+            // 
+            this.m_cmd_them.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_them.BackgroundImage")));
+            this.m_cmd_them.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.m_cmd_them.Location = new System.Drawing.Point(1053, 14);
+            this.m_cmd_them.Name = "m_cmd_them";
+            this.m_cmd_them.Size = new System.Drawing.Size(39, 35);
+            this.m_cmd_them.TabIndex = 8;
+            this.m_cmd_them.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1012, 24);
+            this.label14.Location = new System.Drawing.Point(1005, 23);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(41, 16);
@@ -317,7 +327,7 @@
             this.groupBox_3.Controls.Add(this.m_lbl_dia_chi);
             this.groupBox_3.Controls.Add(this.dateTimePicker1);
             this.groupBox_3.Controls.Add(this.m_lbl_SDT);
-            this.groupBox_3.Controls.Add(this.comboBox4);
+            this.groupBox_3.Controls.Add(this.m_cbo_ten_bac_sy);
             this.groupBox_3.Controls.Add(this.m_lbl_Ma_GD);
             this.groupBox_3.Controls.Add(this.m_lbl_SDT_text);
             this.groupBox_3.Controls.Add(this.label7);
@@ -328,150 +338,179 @@
             this.groupBox_3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox_3.Name = "groupBox_3";
             this.groupBox_3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox_3.Size = new System.Drawing.Size(1383, 123);
+            this.groupBox_3.Size = new System.Drawing.Size(1492, 123);
             this.groupBox_3.TabIndex = 9;
             this.groupBox_3.TabStop = false;
             this.groupBox_3.Text = "Thông tin khách hàng";
             // 
             // groupBox_1
             // 
-            this.groupBox_1.Controls.Add(this.label21);
+            this.groupBox_1.Controls.Add(this.m_cmd_luu);
+            this.groupBox_1.Controls.Add(this.m_cmd_huy);
+            this.groupBox_1.Controls.Add(this.m_cmd_thoat);
+            this.groupBox_1.Controls.Add(this.m_txt_tong_tien);
+            this.groupBox_1.Controls.Add(this.m_cmd_in);
             this.groupBox_1.Controls.Add(this.label22);
-            this.groupBox_1.Controls.Add(this.textBox2);
-            this.groupBox_1.Controls.Add(this.label20);
-            this.groupBox_1.Controls.Add(this.label19);
-            this.groupBox_1.Controls.Add(this.label18);
             this.groupBox_1.Controls.Add(this.label17);
-            this.groupBox_1.Controls.Add(this.button4);
-            this.groupBox_1.Controls.Add(this.button3);
-            this.groupBox_1.Controls.Add(this.button2);
-            this.groupBox_1.Controls.Add(this.label16);
+            this.groupBox_1.Controls.Add(this.m_txt_ti_le_chiet_khau);
+            this.groupBox_1.Controls.Add(this.label3);
+            this.groupBox_1.Controls.Add(this.label20);
+            this.groupBox_1.Controls.Add(this.label18);
+            this.groupBox_1.Controls.Add(this.m_txt_tong_tien_thanh_toan);
+            this.groupBox_1.Controls.Add(this.label19);
             this.groupBox_1.Controls.Add(this.label15);
             this.groupBox_1.Controls.Add(this.m_fg);
-            this.groupBox_1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox_1.Location = new System.Drawing.Point(0, 263);
+            this.groupBox_1.Location = new System.Drawing.Point(0, 226);
             this.groupBox_1.Name = "groupBox_1";
-            this.groupBox_1.Size = new System.Drawing.Size(1391, 421);
+            this.groupBox_1.Size = new System.Drawing.Size(1499, 400);
             this.groupBox_1.TabIndex = 10;
             this.groupBox_1.TabStop = false;
             this.groupBox_1.Text = "Chi tiết thông tin thuốc bán";
             // 
-            // label21
+            // m_cmd_luu
             // 
-            this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.Color.Firebrick;
-            this.label21.Location = new System.Drawing.Point(393, 40);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(152, 16);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "....................................";
+            this.m_cmd_luu.BackColor = System.Drawing.Color.Transparent;
+            this.m_cmd_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_luu.BackgroundImage")));
+            this.m_cmd_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.m_cmd_luu.Location = new System.Drawing.Point(1057, 22);
+            this.m_cmd_luu.Name = "m_cmd_luu";
+            this.m_cmd_luu.Size = new System.Drawing.Size(50, 33);
+            this.m_cmd_luu.TabIndex = 2;
+            this.m_cmd_luu.UseVisualStyleBackColor = false;
+            // 
+            // m_cmd_huy
+            // 
+            this.m_cmd_huy.BackColor = System.Drawing.Color.Transparent;
+            this.m_cmd_huy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_huy.BackgroundImage")));
+            this.m_cmd_huy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.m_cmd_huy.Location = new System.Drawing.Point(1160, 23);
+            this.m_cmd_huy.Name = "m_cmd_huy";
+            this.m_cmd_huy.Size = new System.Drawing.Size(49, 33);
+            this.m_cmd_huy.TabIndex = 2;
+            this.m_cmd_huy.UseVisualStyleBackColor = false;
+            // 
+            // m_cmd_thoat
+            // 
+            this.m_cmd_thoat.BackColor = System.Drawing.Color.Transparent;
+            this.m_cmd_thoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_thoat.BackgroundImage")));
+            this.m_cmd_thoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.m_cmd_thoat.Location = new System.Drawing.Point(1374, 22);
+            this.m_cmd_thoat.Name = "m_cmd_thoat";
+            this.m_cmd_thoat.Size = new System.Drawing.Size(51, 33);
+            this.m_cmd_thoat.TabIndex = 2;
+            this.m_cmd_thoat.UseVisualStyleBackColor = false;
+            // 
+            // m_cmd_in
+            // 
+            this.m_cmd_in.BackColor = System.Drawing.Color.Transparent;
+            this.m_cmd_in.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_in.BackgroundImage")));
+            this.m_cmd_in.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.m_cmd_in.Location = new System.Drawing.Point(1269, 22);
+            this.m_cmd_in.Name = "m_cmd_in";
+            this.m_cmd_in.Size = new System.Drawing.Size(51, 33);
+            this.m_cmd_in.TabIndex = 2;
+            this.m_cmd_in.UseVisualStyleBackColor = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(1043, 59);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 13);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Lưu (Ctrl+S)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1359, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Thoát (Ctrl+X)";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(1148, 60);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(79, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Hủy (Ctrl+D)";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(1266, 58);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 13);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "In (Ctrl+P)";
+            // 
+            // m_txt_tong_tien
+            // 
+            this.m_txt_tong_tien.AutoSize = true;
+            this.m_txt_tong_tien.ForeColor = System.Drawing.Color.Firebrick;
+            this.m_txt_tong_tien.Location = new System.Drawing.Point(362, 38);
+            this.m_txt_tong_tien.Name = "m_txt_tong_tien";
+            this.m_txt_tong_tien.Size = new System.Drawing.Size(152, 16);
+            this.m_txt_tong_tien.TabIndex = 11;
+            this.m_txt_tong_tien.Text = "....................................";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label22.Location = new System.Drawing.Point(279, 39);
+            this.label22.Location = new System.Drawing.Point(248, 37);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(82, 18);
             this.label22.TabIndex = 10;
             this.label22.Text = "Tổng tiền:";
             // 
-            // textBox2
+            // m_txt_ti_le_chiet_khau
             // 
-            this.textBox2.Location = new System.Drawing.Point(178, 38);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(52, 23);
-            this.textBox2.TabIndex = 9;
+            this.m_txt_ti_le_chiet_khau.Location = new System.Drawing.Point(163, 35);
+            this.m_txt_ti_le_chiet_khau.Margin = new System.Windows.Forms.Padding(4);
+            this.m_txt_ti_le_chiet_khau.Name = "m_txt_ti_le_chiet_khau";
+            this.m_txt_ti_le_chiet_khau.Size = new System.Drawing.Size(52, 23);
+            this.m_txt_ti_le_chiet_khau.TabIndex = 9;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(36, 39);
+            this.label20.Location = new System.Drawing.Point(35, 39);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(95, 16);
             this.label20.TabIndex = 8;
             this.label20.Text = "Tỉ lệ chiết khấu";
             // 
-            // label19
+            // m_txt_tong_tien_thanh_toan
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1273, 58);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 13);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "In (Ctrl+P)";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1152, 58);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(79, 13);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Hủy (Ctrl+D)";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1039, 58);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 13);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Lưu (Ctrl+S)";
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Location = new System.Drawing.Point(1282, 22);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(51, 33);
-            this.button4.TabIndex = 2;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(1165, 22);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(49, 33);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(1048, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 33);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Firebrick;
-            this.label16.Location = new System.Drawing.Point(825, 39);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(152, 16);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "....................................";
+            this.m_txt_tong_tien_thanh_toan.AutoSize = true;
+            this.m_txt_tong_tien_thanh_toan.ForeColor = System.Drawing.Color.Firebrick;
+            this.m_txt_tong_tien_thanh_toan.Location = new System.Drawing.Point(791, 39);
+            this.m_txt_tong_tien_thanh_toan.Name = "m_txt_tong_tien_thanh_toan";
+            this.m_txt_tong_tien_thanh_toan.Size = new System.Drawing.Size(152, 16);
+            this.m_txt_tong_tien_thanh_toan.TabIndex = 1;
+            this.m_txt_tong_tien_thanh_toan.Text = "....................................";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label15.Location = new System.Drawing.Point(612, 37);
+            this.label15.Location = new System.Drawing.Point(559, 39);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(165, 18);
             this.label15.TabIndex = 1;
@@ -487,9 +526,10 @@
             this.TEN_DON_VI,
             this.GIA_BAN,
             this.THANH_TIEN});
-            this.m_fg.Location = new System.Drawing.Point(3, 80);
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_fg.Location = new System.Drawing.Point(3, 102);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1385, 338);
+            this.m_fg.Size = new System.Drawing.Size(1493, 295);
             this.m_fg.TabIndex = 0;
             // 
             // STT
@@ -527,14 +567,6 @@
             this.THANH_TIEN.Name = "THANH_TIEN";
             this.THANH_TIEN.Width = 200;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(185, 17);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(267, 23);
-            this.textBox3.TabIndex = 9;
-            // 
             // uc108_v_gd_giao_dich_detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -546,7 +578,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uc108_v_gd_giao_dich_detail";
-            this.Size = new System.Drawing.Size(1391, 684);
+            this.Size = new System.Drawing.Size(1511, 626);
             this.groupBox_2.ResumeLayout(false);
             this.groupBox_2.PerformLayout();
             this.groupBox_3.ResumeLayout(false);
@@ -563,7 +595,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox m_cbo_don_vi_tinh;
         private System.Windows.Forms.Label m_lbl_dia_chi;
         private System.Windows.Forms.Label m_lbl_dia_chi_text;
         private System.Windows.Forms.Label m_lbl_Ma_GD_text;
@@ -576,22 +608,22 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox m_cbo_ten_bac_sy;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox m_txt_so_luong;
         private System.Windows.Forms.GroupBox groupBox_2;
         private System.Windows.Forms.GroupBox groupBox_3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button m_cmd_them;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox_1;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label m_txt_tong_tien_thanh_toan;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button m_cmd_in;
+        private System.Windows.Forms.Button m_cmd_huy;
+        private System.Windows.Forms.Button m_cmd_luu;
         private System.Windows.Forms.DataGridView m_fg;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_THUOC;
@@ -599,10 +631,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_DON_VI;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIA_BAN;
         private System.Windows.Forms.DataGridViewTextBoxColumn THANH_TIEN;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label m_txt_tong_tien;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox m_txt_ti_le_chiet_khau;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox m_txt_ten_thuoc;
+        private System.Windows.Forms.Button m_cmd_thoat;
+        private System.Windows.Forms.Label label3;
     }
 }
