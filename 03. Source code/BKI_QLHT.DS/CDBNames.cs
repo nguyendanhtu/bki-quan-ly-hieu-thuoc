@@ -348,7 +348,8 @@
         public const string ID_DON_VI_GIA = "ID_DON_VI_GIA";
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";
         public const string ID_THUOC = "ID_THUOC";
-        public const string GIA = "GIA";
+        public const string GIA_NHAP = "GIA_NHAP";
+        public const string GIA_BAN = "GIA_BAN";
         public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
         public const string TEN_THUOC = "TEN_THUOC";
         public const string TEN = "TEN";
@@ -400,6 +401,22 @@
         public const string ID_BAC_SY = "ID_BAC_SY";
         public const string ID_LOAI_GIAO_DICH = "ID_LOAI_GIAO_DICH";
     }
+    public class GD_GIA_BAN
+    {
+        public const string ID = "ID";
+        public const string ID_THUOC = "ID_THUOC";
+        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
+        public const string GIA_BAN = "GIA_BAN";
+    }
 
+    public class V_GD_GIA_BAN
+    {
+        public const string ID = "ID";
+        public const string ID_THUOC = "ID_THUOC";
+        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
+        public const string GIA_BAN = "GIA_BAN";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string TEN_THUOC = "TEN_THUOC";
+    }
 
 }
