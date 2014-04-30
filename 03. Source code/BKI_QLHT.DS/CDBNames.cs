@@ -442,5 +442,14 @@
         public const string TEN_DON_VI = "TEN_DON_VI";
         public const string TEN_THUOC = "TEN_THUOC";
     }
+    public class DM_NCC_NSX_NHASX
+    {
+        public const string ID = "ID";
+        public const string ID_LOAI_DM = "ID_LOAI_DM";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string MA_NCC = "MA_NCC";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT = "SDT";
+    }
 
 }

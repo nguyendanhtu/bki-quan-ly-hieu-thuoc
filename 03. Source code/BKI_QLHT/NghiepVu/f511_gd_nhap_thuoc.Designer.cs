@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f511_gd_nhap_thuoc));
-            this.label14 = new System.Windows.Forms.Label();
+            this.m_lbl_dv_tinh_nhap = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.m_cbo_dv_cap_3 = new System.Windows.Forms.ComboBox();
+            this.m_lbl_don_vi_cap_3 = new System.Windows.Forms.Label();
+            this.m_cbo_dv_cap_4 = new System.Windows.Forms.ComboBox();
             this.m_dtp_han_su_dung = new System.Windows.Forms.DateTimePicker();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.m_cbo_hang_san_xuat = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.m_lbl_don_vi_cap_4 = new System.Windows.Forms.Label();
+            this.m_lbl_dv_tinh_ban = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.m_cbo_dv_cap_5 = new System.Windows.Forms.ComboBox();
@@ -57,7 +57,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.m_lbl_don_vi_cap_2 = new System.Windows.Forms.Label();
-            this.m_cbo_dv_cap_4 = new System.Windows.Forms.ComboBox();
+            this.m_cbo_dv_cap_3 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.m_dtp_ngay_san_xuat = new System.Windows.Forms.DateTimePicker();
@@ -80,33 +80,32 @@
             this.m_lbl_ma_giao_dich = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_grv_nhap_thuoc = new System.Windows.Forms.DataGridView();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_add = new SIS.Controls.Button.SiSButton();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_thuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.So_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.m_pnl_control = new System.Windows.Forms.Panel();
-            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_add = new SIS.Controls.Button.SiSButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhap_thuoc)).BeginInit();
             this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label14
+            // m_lbl_dv_tinh_nhap
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(238, 181);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 16);
-            this.label14.TabIndex = 102;
-            this.label14.Text = "............";
+            this.m_lbl_dv_tinh_nhap.AutoSize = true;
+            this.m_lbl_dv_tinh_nhap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_dv_tinh_nhap.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.m_lbl_dv_tinh_nhap.Location = new System.Drawing.Point(238, 188);
+            this.m_lbl_dv_tinh_nhap.Name = "m_lbl_dv_tinh_nhap";
+            this.m_lbl_dv_tinh_nhap.Size = new System.Drawing.Size(56, 16);
+            this.m_lbl_dv_tinh_nhap.TabIndex = 102;
+            this.m_lbl_dv_tinh_nhap.Text = "............";
             // 
             // label3
             // 
@@ -158,25 +157,25 @@
             this.textBox5.Size = new System.Drawing.Size(105, 20);
             this.textBox5.TabIndex = 100;
             // 
-            // label21
+            // m_lbl_don_vi_cap_3
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label21.Location = new System.Drawing.Point(59, 87);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 16);
-            this.label21.TabIndex = 90;
-            this.label21.Text = ".............";
+            this.m_lbl_don_vi_cap_3.AutoSize = true;
+            this.m_lbl_don_vi_cap_3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_don_vi_cap_3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.m_lbl_don_vi_cap_3.Location = new System.Drawing.Point(59, 87);
+            this.m_lbl_don_vi_cap_3.Name = "m_lbl_don_vi_cap_3";
+            this.m_lbl_don_vi_cap_3.Size = new System.Drawing.Size(60, 16);
+            this.m_lbl_don_vi_cap_3.TabIndex = 90;
+            this.m_lbl_don_vi_cap_3.Text = ".............";
             // 
-            // m_cbo_dv_cap_3
+            // m_cbo_dv_cap_4
             // 
-            this.m_cbo_dv_cap_3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m_cbo_dv_cap_3.FormattingEnabled = true;
-            this.m_cbo_dv_cap_3.Location = new System.Drawing.Point(219, 83);
-            this.m_cbo_dv_cap_3.Name = "m_cbo_dv_cap_3";
-            this.m_cbo_dv_cap_3.Size = new System.Drawing.Size(77, 24);
-            this.m_cbo_dv_cap_3.TabIndex = 89;
+            this.m_cbo_dv_cap_4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m_cbo_dv_cap_4.FormattingEnabled = true;
+            this.m_cbo_dv_cap_4.Location = new System.Drawing.Point(219, 83);
+            this.m_cbo_dv_cap_4.Name = "m_cbo_dv_cap_4";
+            this.m_cbo_dv_cap_4.Size = new System.Drawing.Size(77, 24);
+            this.m_cbo_dv_cap_4.TabIndex = 89;
             // 
             // m_dtp_han_su_dung
             // 
@@ -235,27 +234,27 @@
             this.m_cbo_hang_san_xuat.Size = new System.Drawing.Size(239, 21);
             this.m_cbo_hang_san_xuat.TabIndex = 104;
             // 
-            // label18
+            // m_lbl_don_vi_cap_4
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(59, 118);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 16);
-            this.label18.TabIndex = 85;
-            this.label18.Text = ".............";
+            this.m_lbl_don_vi_cap_4.AutoSize = true;
+            this.m_lbl_don_vi_cap_4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_don_vi_cap_4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.m_lbl_don_vi_cap_4.Location = new System.Drawing.Point(59, 118);
+            this.m_lbl_don_vi_cap_4.Name = "m_lbl_don_vi_cap_4";
+            this.m_lbl_don_vi_cap_4.Size = new System.Drawing.Size(60, 16);
+            this.m_lbl_don_vi_cap_4.TabIndex = 85;
+            this.m_lbl_don_vi_cap_4.Text = ".............";
             // 
-            // label23
+            // m_lbl_dv_tinh_ban
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label23.Location = new System.Drawing.Point(238, 208);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(56, 16);
-            this.label23.TabIndex = 110;
-            this.label23.Text = "............";
+            this.m_lbl_dv_tinh_ban.AutoSize = true;
+            this.m_lbl_dv_tinh_ban.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_dv_tinh_ban.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.m_lbl_dv_tinh_ban.Location = new System.Drawing.Point(236, 211);
+            this.m_lbl_dv_tinh_ban.Name = "m_lbl_dv_tinh_ban";
+            this.m_lbl_dv_tinh_ban.Size = new System.Drawing.Size(56, 16);
+            this.m_lbl_dv_tinh_ban.TabIndex = 110;
+            this.m_lbl_dv_tinh_ban.Text = "............";
             // 
             // label24
             // 
@@ -364,14 +363,14 @@
             this.m_lbl_don_vi_cap_2.TabIndex = 80;
             this.m_lbl_don_vi_cap_2.Text = ".............";
             // 
-            // m_cbo_dv_cap_4
+            // m_cbo_dv_cap_3
             // 
-            this.m_cbo_dv_cap_4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m_cbo_dv_cap_4.FormattingEnabled = true;
-            this.m_cbo_dv_cap_4.Location = new System.Drawing.Point(219, 52);
-            this.m_cbo_dv_cap_4.Name = "m_cbo_dv_cap_4";
-            this.m_cbo_dv_cap_4.Size = new System.Drawing.Size(77, 24);
-            this.m_cbo_dv_cap_4.TabIndex = 79;
+            this.m_cbo_dv_cap_3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m_cbo_dv_cap_3.FormattingEnabled = true;
+            this.m_cbo_dv_cap_3.Location = new System.Drawing.Point(219, 52);
+            this.m_cbo_dv_cap_3.Name = "m_cbo_dv_cap_3";
+            this.m_cbo_dv_cap_3.Size = new System.Drawing.Size(77, 24);
+            this.m_cbo_dv_cap_3.TabIndex = 79;
             // 
             // textBox1
             // 
@@ -412,18 +411,18 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.m_cbo_dv_cap_3);
+            this.groupBox1.Controls.Add(this.m_lbl_don_vi_cap_3);
+            this.groupBox1.Controls.Add(this.m_cbo_dv_cap_4);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.m_lbl_don_vi_cap_4);
             this.groupBox1.Controls.Add(this.m_cbo_dv_cap_5);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.m_lbl_don_vi_cap_2);
-            this.groupBox1.Controls.Add(this.m_cbo_dv_cap_4);
+            this.groupBox1.Controls.Add(this.m_cbo_dv_cap_3);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label15);
@@ -628,42 +627,9 @@
             this.m_grv_nhap_thuoc.Size = new System.Drawing.Size(754, 198);
             this.m_grv_nhap_thuoc.TabIndex = 115;
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // Ten_thuoc
-            // 
-            this.Ten_thuoc.HeaderText = "Tên thuốc";
-            this.Ten_thuoc.Name = "Ten_thuoc";
-            // 
-            // So_luong
-            // 
-            this.So_luong.HeaderText = "Số lượng";
-            this.So_luong.Name = "So_luong";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Đơn vị tính";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Giá nhập";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Thành tiền";
-            this.Column3.Name = "Column3";
-            // 
             // m_pnl_control
             // 
             this.m_pnl_control.Controls.Add(this.m_cmd_save);
-            this.m_pnl_control.Controls.Add(this.m_cmd_update);
             this.m_pnl_control.Controls.Add(this.m_cmd_delete);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -682,26 +648,11 @@
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.imageList1;
-            this.m_cmd_save.Location = new System.Drawing.Point(407, 4);
+            this.m_cmd_save.Location = new System.Drawing.Point(495, 4);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 37);
             this.m_cmd_save.TabIndex = 15;
             this.m_cmd_save.Text = "&Lưu";
-            // 
-            // m_cmd_update
-            // 
-            this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_update.ImageIndex = 3;
-            this.m_cmd_update.ImageList = this.imageList1;
-            this.m_cmd_update.Location = new System.Drawing.Point(495, 4);
-            this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 37);
-            this.m_cmd_update.TabIndex = 13;
-            this.m_cmd_update.Text = "&Sửa";
             // 
             // m_cmd_delete
             // 
@@ -747,6 +698,41 @@
             this.m_cmd_add.TabIndex = 114;
             this.m_cmd_add.Text = "Thêm";
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 90;
+            // 
+            // Ten_thuoc
+            // 
+            this.Ten_thuoc.HeaderText = "Tên thuốc";
+            this.Ten_thuoc.Name = "Ten_thuoc";
+            this.Ten_thuoc.Width = 200;
+            // 
+            // So_luong
+            // 
+            this.So_luong.HeaderText = "Số lượng";
+            this.So_luong.Name = "So_luong";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Đơn vị tính";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Giá nhập";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Thành tiền";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 120;
+            // 
             // f511_gd_nhap_thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -757,7 +743,7 @@
             this.Controls.Add(this.m_cmd_add);
             this.Controls.Add(this.m_lbl_ma_giao_dich);
             this.Controls.Add(this.label123);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.m_lbl_dv_tinh_nhap);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -765,7 +751,7 @@
             this.Controls.Add(this.m_dtp_han_su_dung);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.m_cbo_hang_san_xuat);
-            this.Controls.Add(this.label23);
+            this.Controls.Add(this.m_lbl_dv_tinh_ban);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.m_cbo_nuoc_san_xuat);
@@ -797,22 +783,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label m_lbl_dv_tinh_nhap;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox m_cbo_dv_cap_3;
+        private System.Windows.Forms.Label m_lbl_don_vi_cap_3;
+        private System.Windows.Forms.ComboBox m_cbo_dv_cap_4;
         private System.Windows.Forms.DateTimePicker m_dtp_han_su_dung;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox m_cbo_hang_san_xuat;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label m_lbl_don_vi_cap_4;
+        private System.Windows.Forms.Label m_lbl_dv_tinh_ban;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.ComboBox m_cbo_dv_cap_5;
@@ -824,7 +810,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label m_lbl_don_vi_cap_2;
-        private System.Windows.Forms.ComboBox m_cbo_dv_cap_4;
+        private System.Windows.Forms.ComboBox m_cbo_dv_cap_3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker m_dtp_ngay_san_xuat;
@@ -850,7 +836,6 @@
         private System.Windows.Forms.DataGridView m_grv_nhap_thuoc;
         internal System.Windows.Forms.Panel m_pnl_control;
         internal SIS.Controls.Button.SiSButton m_cmd_save;
-        internal SIS.Controls.Button.SiSButton m_cmd_update;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
