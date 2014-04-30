@@ -38,9 +38,10 @@ namespace BKI_QLHT.DanhMuc
         public void display_for_update(US_DM_NCC_NSX_NHASX ip_m_us_v_dm_nhasx)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
-
             us_object_2_form(ip_m_us_v_dm_nhasx);
+
             m_us_1 = ip_m_us_v_dm_nhasx;
+            
             this.ShowDialog();
         }
         #endregion
@@ -69,15 +70,22 @@ namespace BKI_QLHT.DanhMuc
 
         private void us_object_2_form(US_DM_NCC_NSX_NHASX ip_us_v_dm_nhasx)
         {
-            m_us.dcID = ip_us_v_dm_nhasx.dcID;
+            //m_us.dcID = ip_us_v_dm_nhasx.dcID;
             m_txt_ten_nhasx.Text = ip_us_v_dm_nhasx.strTEN_NCC;
             m_txt_sdt.Text=ip_us_v_dm_nhasx.strSDT;
-            m_txt_ma_nhasx.Text=ip_us_v_dm_nhasx.strMA_NCC;
+            m_txt_ma_nhasx.Text = ip_us_v_dm_nhasx.strMA_NCC;
             m_txt_diachi.Text=ip_us_v_dm_nhasx.strDIA_CHI;
             
             
         }
-
+        //private void us_object_2_form(US_DM_NCC_NSX_NHASX ip_us_v_dm_nhasx)
+        //{
+        //    m_us.dcID = ip_us_v_dm_nhasx.dcID;
+        //    m_txt_ten_nhasx.Text = ip_us_v_dm_nhasx.strTEN_NCC;
+        //    m_txt_sdt.Text = ip_us_v_dm_nhasx.strSDT;
+        //    m_txt_ma_nhasx.Text = ip_us_v_dm_nhasx.strMA_NCC;
+        //    m_txt_diachi.Text = ip_us_v_dm_nhasx.strDIA_CHI;
+                //}
         private void format_control()
         {
             CControlFormat.setFormStyle(this);
@@ -98,10 +106,10 @@ namespace BKI_QLHT.DanhMuc
         }
         private void form_2_us_object()
         {
-            m_us.strDIA_CHI=m_txt_diachi.Text.Trim();
-            m_us.strMA_NCC=m_txt_ma_nhasx.Text.Trim();
-            m_us.strSDT=m_txt_sdt.Text.Trim();
-            m_us.strTEN_NCC=m_txt_ten_nhasx.Text.Trim();
+            m_v_us.strDIA_CHI=m_txt_diachi.Text.Trim();
+            m_v_us.strMA_NHASX=m_txt_ma_nhasx.Text.Trim();
+            m_v_us.strSDT=m_txt_sdt.Text.Trim();
+            m_v_us.strTEN_NHASX=m_txt_ten_nhasx.Text.Trim();
             
         }
 
@@ -124,15 +132,15 @@ namespace BKI_QLHT.DanhMuc
                     break;
                 case DataEntryFormMode.InsertDataState:
                     
-                    if (check_trung_ma_nhasx(m_txt_ma_nhasx.Text))
-                    {
-                        BaseMessages.MsgBox_Error(217);
-                        m_txt_ma_nhasx.BackColor = Color.Bisque;
-                        m_txt_ma_nhasx.Focus();
-                        m_txt_ma_nhasx.SelectAll();
-                        return;
-                    }
-                    else
+                    //if (check_trung_ma_nhasx(m_txt_ma_nhasx.Text))
+                    //{
+                    //    BaseMessages.MsgBox_Error(217);
+                    //    m_txt_ma_nhasx.BackColor = Color.Bisque;
+                    //    m_txt_ma_nhasx.Focus();
+                    //    m_txt_ma_nhasx.SelectAll();
+                    //    return;
+                    //}
+                    //else
                     {
                         m_txt_ma_nhasx.BackColor = Color.White;
                         if (check_data_is_ok() == false)
@@ -152,17 +160,17 @@ namespace BKI_QLHT.DanhMuc
             this.Close();
         }
         
-        private bool check_trung_ma_nhasx(string ip_str_ma_nhasx)
-        {
-            DS_V_DM_NHASX v_ds = new DS_V_DM_NHASX();
+        //private bool check_trung_ma_nhasx(string ip_str_ma_nhasx)
+        //{
+        //    DS_V_DM_NHASX v_ds = new DS_V_DM_NHASX();
     
-            decimal count_ma_nhasx;
-            m_v_us.FillDataset_By_Ma_nhasx(v_ds, ip_str_ma_nhasx);
-            count_ma_nhasx = v_ds.V_DM_NHASX.Count;
-            if (count_ma_nhasx > 0)
-                return true;
-            return false;
-        }
+        //    decimal count_ma_nhasx;
+        //    m_v_us.FillDataset_By_Ma_nhasx(v_ds, ip_str_ma_nhasx);
+        //    count_ma_nhasx = v_ds.V_DM_NHASX.Count;
+        //    if (count_ma_nhasx > 0)
+        //        return true;
+        //    return false;
+        //}
        
 
         private void fomat_control()

@@ -372,7 +372,7 @@ namespace BKI_QLHT
             }
             m_txt_tim_kiem.ForeColor = Color.Black;
         }
-		private void grid2us_object(US_V_DM_NHASX i_us
+		private void grid2us_object(US_DM_NCC_NSX_NHASX i_us
 			, int i_grid_row) {
 			DataRow v_dr;
 			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
@@ -393,16 +393,16 @@ namespace BKI_QLHT
 		    
 		    f404_v_dm_nhasx_detail v_fDE = new  f404_v_dm_nhasx_detail();								
             v_fDE.display_for_insert();
-            //load_data_2_grid();
+            load_data_2_grid();
             //v_fDE.get_us(ref m_us);
             //WinFormControls.set_focus_for_grid(m_fg, m_us.strMA_QUYET_DINH, 2);
-			load_data_2_grid();
+			
 		}
 
 		private void update_v_dm_nhasx(){			
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
-			grid2us_object(m_v_us, m_fg.Row);
+			grid2us_object(m_us, m_fg.Row);
 		    f404_v_dm_nhasx_detail v_fDE = new f404_v_dm_nhasx_detail();
             v_fDE.display_for_update(m_us);
             //m_txt_tim_kiem.Text = "";
@@ -414,16 +414,16 @@ namespace BKI_QLHT
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
 			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
-			US_V_DM_NHASX v_us = new US_V_DM_NHASX();
-			grid2us_object(v_us, m_fg.Row);
+			
+			grid2us_object(m_us, m_fg.Row);
 			try {			
-				v_us.BeginTransaction();    											
-				v_us.Delete();                      								
-				v_us.CommitTransaction();
+				m_us.BeginTransaction();    											
+				m_us.Delete();                      								
+				m_us.CommitTransaction();
 				m_fg.Rows.Remove(m_fg.Row);				
 			}
 			catch (Exception v_e) {
-				v_us.Rollback();
+				m_us.Rollback();
 				CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
 					new CDBClientDBExceptionInterpret());
 				v_objErrHandler.showErrorMessage();
@@ -571,7 +571,7 @@ namespace BKI_QLHT
                             switch (m_e_form_mode)
                             {
 
-                                case DataEntryFormMode.UpdateDataState:
+                                case DataEntryFormMode.ViewDataState:
                                     update_v_dm_nhasx();
                                     break;
                                 case DataEntryFormMode.InsertDataState:
