@@ -128,7 +128,19 @@ public class US_V_DM_NHASX : US_Object
 
 #endregion
 #region "Init Functions"
-	public US_V_DM_NHASX() 
+    public void FillDataset_By_Ma_nhasx(DS_V_DM_NHASX op_ds, string ip_str_ma_nhasx)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_DM_CAP_BAC_By_Ma_Nhasx");
+        v_sp.addNVarcharInputParam("@ip_str_ma_nhasx", ip_str_ma_nhasx);
+        v_sp.fillDataSetByCommand(this, op_ds);
+    }
+    public void FillDatasetSearch(DS_V_DM_NHASX op_ds, string i_str_search)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_DM_NHASX_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_search);
+        v_sp.fillDataSetByCommand(this, op_ds);
+    }
+    public US_V_DM_NHASX() 
 	{
 		pm_objDS = new DS_V_DM_NHASX();
 		pm_strTableName = c_TableName;
