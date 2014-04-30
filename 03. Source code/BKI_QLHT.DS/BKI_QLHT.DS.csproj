@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_DM_KHACH_HANG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_DM_NCC_NSX_NHASX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DM_NCC_NSX_NHASX.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_DM_NHA_CUNG_CAP.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -284,6 +289,17 @@
     </None>
     <None Include="DS_DM_KHACH_HANG.xss">
       <DependentUpon>DS_DM_KHACH_HANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NCC_NSX_NHASX.xsc">
+      <DependentUpon>DS_DM_NCC_NSX_NHASX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DM_NCC_NSX_NHASX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DM_NCC_NSX_NHASX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DM_NCC_NSX_NHASX.xss">
+      <DependentUpon>DS_DM_NCC_NSX_NHASX.xsd</DependentUpon>
     </None>
     <None Include="DS_DM_NHA_CUNG_CAP.xsc">
       <DependentUpon>DS_DM_NHA_CUNG_CAP.xsd</DependentUpon>
