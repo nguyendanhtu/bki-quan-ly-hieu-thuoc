@@ -32,6 +32,11 @@ namespace BKI_QLHT.DanhMuc
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            load_data_to_text_box_search();
+        }
+
 
     }
 }
