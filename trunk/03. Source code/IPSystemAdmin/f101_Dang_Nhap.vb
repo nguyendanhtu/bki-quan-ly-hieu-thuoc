@@ -363,6 +363,7 @@ Public Class f101_Dang_Nhap
         Try
             If (SubmitLogonIsOK()) Then
                 Me.DialogResult = DialogResult.OK
+                My.Computer.FileSystem.WriteAllText("..\user_login.txt", m_txtTenTruyNhap.Text, False)
                 Me.Close()
             End If
         Catch ex As Exception
