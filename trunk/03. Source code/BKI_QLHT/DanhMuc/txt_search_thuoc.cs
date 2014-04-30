@@ -92,16 +92,31 @@ namespace BKI_QLHT.DanhMuc
                         //    v_ds.Tables[0].Rows.Add((DataRow)v_thuoc);
                         //    row_count++;
                         //}
-                        DataTable v_dt = v_query.CopyToDataTable();
-                        //v_ds.Tables.Add(v_dt);
-                        //v_ds.Tables[0].Rows.Clear();
-                        //for (int i = 0; i < v_drows.Length; i++)
-                        //{
-                        //    v_ds.Tables[0].Rows.Add(v_drows[i]);
-                        //}
-                        m_list_suggest.DataSource = v_dt;
-                        m_list_suggest.DisplayMember = v_dt.Columns[6].ColumnName;
-                        m_list_suggest.ValueMember = v_dt.Columns[0].ColumnName;
+                        if (v_query.Count()>0)
+                        {
+                            DataTable v_dt = v_query.CopyToDataTable();
+                            //v_ds.Tables.Add(v_dt);
+                            //v_ds.Tables[0].Rows.Clear();
+                            //for (int i = 0; i < v_drows.Length; i++)
+                            //{
+                            //    v_ds.Tables[0].Rows.Add(v_drows[i]);
+                            //}
+
+                            m_list_suggest.DataSource = v_dt;
+                            m_list_suggest.DisplayMember = v_dt.Columns[6].ColumnName;
+                            m_list_suggest.ValueMember = v_dt.Columns[0].ColumnName;
+                        }
+                        else
+                        {
+                            //m_list_suggest.Items.Clear();
+                            m_list_suggest.DataSource = null;
+                            m_txt_search.Focus();
+                            return;
+
+                        }
+                       
+
+
 
 
 
@@ -111,7 +126,7 @@ namespace BKI_QLHT.DanhMuc
                     m_list_suggest.Visible = true;
                     m_list_suggest.Focus();
                 }
-                if (e.KeyData == Keys.Down)
+                if (e.KeyData == Keys.Down || e.KeyData == Keys.Up)
                 {
                     m_list_suggest.Focus();
                     this.Height = m_txt_search.Width;
