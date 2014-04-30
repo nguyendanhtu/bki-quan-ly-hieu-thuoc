@@ -80,7 +80,10 @@
     <Compile Include="US_V_DM_DON_VI.cs" />
     <Compile Include="US_V_DM_DON_VI_TINH.cs" />
     <Compile Include="US_V_DM_KHACH_HANG.cs" />
+    <Compile Include="US_V_DM_NCC.cs" />
+    <Compile Include="US_V_DM_NHASX.cs" />
     <Compile Include="US_V_DM_NHOM_THUOC.cs" />
+    <Compile Include="US_V_DM_NSX.cs" />
     <Compile Include="US_V_DM_THUOC.cs" />
     <Compile Include="US_V_GD_GIA.cs" />
     <Compile Include="US_V_GD_GIA_2.cs" />
