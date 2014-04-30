@@ -537,7 +537,7 @@ namespace BKI_QLHT
 
                 //}
                 {
-                    if (!m_us.check_is_having_form_in_database(type.Name))
+                    if (!m_us.check_is_having_form_in_database(type.Name) && type.Name != "f103_v_dm_don_vi_de")
                     {
                         object lateBound = Activator.CreateInstance(type);
                         m_list.Add(new list_form(index, type.Name, type.GetProperty("Text").GetValue(lateBound, null).ToString()));
