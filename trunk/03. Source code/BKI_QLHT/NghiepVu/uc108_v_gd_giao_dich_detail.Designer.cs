@@ -57,6 +57,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEN_THUOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_LUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEN_DON_VI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIA_BAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.THANH_TIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -328,10 +339,16 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(37, 331);
+            this.groupBox3.Location = new System.Drawing.Point(37, 327);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1172, 322);
             this.groupBox3.TabIndex = 10;
@@ -342,7 +359,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Firebrick;
-            this.label16.Location = new System.Drawing.Point(625, 29);
+            this.label16.Location = new System.Drawing.Point(279, 43);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(152, 16);
             this.label16.TabIndex = 1;
@@ -353,7 +370,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label15.Location = new System.Drawing.Point(454, 29);
+            this.label15.Location = new System.Drawing.Point(108, 43);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(165, 18);
             this.label15.TabIndex = 1;
@@ -363,16 +380,107 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT});
-            this.dataGridView1.Location = new System.Drawing.Point(-89, 67);
+            this.STT,
+            this.TEN_THUOC,
+            this.SO_LUONG,
+            this.TEN_DON_VI,
+            this.GIA_BAN,
+            this.THANH_TIEN});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 88);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1255, 269);
+            this.dataGridView1.Size = new System.Drawing.Size(1166, 248);
             this.dataGridView1.TabIndex = 0;
             // 
             // STT
             // 
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // TEN_THUOC
+            // 
+            this.TEN_THUOC.HeaderText = "Tên thuốc";
+            this.TEN_THUOC.Name = "TEN_THUOC";
+            // 
+            // SO_LUONG
+            // 
+            this.SO_LUONG.HeaderText = "Số lượng";
+            this.SO_LUONG.Name = "SO_LUONG";
+            // 
+            // TEN_DON_VI
+            // 
+            this.TEN_DON_VI.HeaderText = "Tên đơn vị";
+            this.TEN_DON_VI.Name = "TEN_DON_VI";
+            // 
+            // GIA_BAN
+            // 
+            this.GIA_BAN.HeaderText = "Đơn giá";
+            this.GIA_BAN.Name = "GIA_BAN";
+            // 
+            // THANH_TIEN
+            // 
+            this.THANH_TIEN.HeaderText = "Thành tiền";
+            this.THANH_TIEN.Name = "THANH_TIEN";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(793, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(57, 44);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(891, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(56, 44);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Location = new System.Drawing.Point(982, 17);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(58, 44);
+            this.button4.TabIndex = 2;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(788, 64);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 13);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Lưu (Ctrl+S)";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(882, 64);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(79, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Hủy (Ctrl+D)";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(977, 64);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 13);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "In (Ctrl+P)";
             // 
             // uc108_v_gd_giao_dich_detail
             // 
@@ -426,7 +534,18 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEN_THUOC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_LUONG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TEN_DON_VI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIA_BAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn THANH_TIEN;
     }
 }

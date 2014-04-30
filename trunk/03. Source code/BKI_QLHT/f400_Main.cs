@@ -13,6 +13,7 @@ using IP.Core.IPCommon;
 using IP.Core.IPExcelReport;
 using IP.Core.IPSystemAdmin;
 using BKI_QLHT.DanhMuc;
+using BKI_QLHT.NghiepVu;
 using DevComponents.DotNetBar;
 
 
@@ -399,7 +400,17 @@ namespace BKI_QLHT
 
         private void m_cmd_quan_ly_thuoc_ban_le_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                m_Panel_Content.Controls.Clear();
+                uc108_v_gd_giao_dich_detail uc_frm = new uc108_v_gd_giao_dich_detail();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_quan_ly_so_du_Click(object sender, EventArgs e)
