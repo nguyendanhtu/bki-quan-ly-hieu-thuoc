@@ -204,11 +204,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_GD_GIA.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS_V_GD_GIAO_DICH_DETAIL.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DS_V_GD_GIAO_DICH_DETAIL.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DS_V_GD_GIA_2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -564,17 +559,6 @@
     </None>
     <None Include="DS_V_GD_GIA.xss">
       <DependentUpon>DS_V_GD_GIA.xsd</DependentUpon>
-    </None>
-    <None Include="DS_V_GD_GIAO_DICH_DETAIL.xsc">
-      <DependentUpon>DS_V_GD_GIAO_DICH_DETAIL.xsd</DependentUpon>
-    </None>
-    <None Include="DS_V_GD_GIAO_DICH_DETAIL.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DS_V_GD_GIAO_DICH_DETAIL.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DS_V_GD_GIAO_DICH_DETAIL.xss">
-      <DependentUpon>DS_V_GD_GIAO_DICH_DETAIL.xsd</DependentUpon>
     </None>
     <None Include="DS_V_GD_GIA_2.xsc">
       <DependentUpon>DS_V_GD_GIA_2.xsd</DependentUpon>

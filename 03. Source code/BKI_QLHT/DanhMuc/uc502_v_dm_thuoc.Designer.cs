@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc502_v_dm_thuoc));
-            this.m_lbl_tuyen_su_dung = new System.Windows.Forms.Label();
             this.m_lbl_duong_dung = new System.Windows.Forms.Label();
             this.m_lbl_thuoc_thay_the = new System.Windows.Forms.Label();
             this.m_lbl_tt_thuoc = new System.Windows.Forms.Label();
@@ -63,79 +62,78 @@
             this.m_pnl_control = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.m_chk_tuyen_su_dung_8 = new System.Windows.Forms.CheckBox();
+            this.m_chk_tuyen_su_dung_7 = new System.Windows.Forms.CheckBox();
+            this.m_chk_tuyen_su_dung_6 = new System.Windows.Forms.CheckBox();
+            this.m_chk_tuyen_su_dung_5 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
-            // m_lbl_tuyen_su_dung
-            // 
-            this.m_lbl_tuyen_su_dung.AutoSize = true;
-            this.m_lbl_tuyen_su_dung.Location = new System.Drawing.Point(583, 372);
-            this.m_lbl_tuyen_su_dung.Name = "m_lbl_tuyen_su_dung";
-            this.m_lbl_tuyen_su_dung.Size = new System.Drawing.Size(31, 13);
-            this.m_lbl_tuyen_su_dung.TabIndex = 72;
-            this.m_lbl_tuyen_su_dung.Text = "........";
-            // 
             // m_lbl_duong_dung
             // 
             this.m_lbl_duong_dung.AutoSize = true;
-            this.m_lbl_duong_dung.Location = new System.Drawing.Point(583, 338);
+            this.m_lbl_duong_dung.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_duong_dung.Location = new System.Drawing.Point(796, 336);
             this.m_lbl_duong_dung.Name = "m_lbl_duong_dung";
-            this.m_lbl_duong_dung.Size = new System.Drawing.Size(31, 13);
+            this.m_lbl_duong_dung.Size = new System.Drawing.Size(40, 16);
             this.m_lbl_duong_dung.TabIndex = 71;
             this.m_lbl_duong_dung.Text = "........";
             // 
             // m_lbl_thuoc_thay_the
             // 
             this.m_lbl_thuoc_thay_the.AutoSize = true;
-            this.m_lbl_thuoc_thay_the.Location = new System.Drawing.Point(583, 311);
+            this.m_lbl_thuoc_thay_the.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_thuoc_thay_the.Location = new System.Drawing.Point(796, 309);
             this.m_lbl_thuoc_thay_the.Name = "m_lbl_thuoc_thay_the";
-            this.m_lbl_thuoc_thay_the.Size = new System.Drawing.Size(28, 13);
+            this.m_lbl_thuoc_thay_the.Size = new System.Drawing.Size(36, 16);
             this.m_lbl_thuoc_thay_the.TabIndex = 70;
             this.m_lbl_thuoc_thay_the.Text = ".......";
             // 
             // m_lbl_tt_thuoc
             // 
             this.m_lbl_tt_thuoc.AutoSize = true;
+            this.m_lbl_tt_thuoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_tt_thuoc.Location = new System.Drawing.Point(138, 436);
             this.m_lbl_tt_thuoc.Name = "m_lbl_tt_thuoc";
-            this.m_lbl_tt_thuoc.Size = new System.Drawing.Size(25, 13);
+            this.m_lbl_tt_thuoc.Size = new System.Drawing.Size(32, 16);
             this.m_lbl_tt_thuoc.TabIndex = 69;
             this.m_lbl_tt_thuoc.Text = "......";
             // 
             // m_lbl_tt_hoat_chat
             // 
             this.m_lbl_tt_hoat_chat.AutoSize = true;
+            this.m_lbl_tt_hoat_chat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_tt_hoat_chat.Location = new System.Drawing.Point(144, 404);
             this.m_lbl_tt_hoat_chat.Name = "m_lbl_tt_hoat_chat";
-            this.m_lbl_tt_hoat_chat.Size = new System.Drawing.Size(25, 13);
+            this.m_lbl_tt_hoat_chat.Size = new System.Drawing.Size(32, 16);
             this.m_lbl_tt_hoat_chat.TabIndex = 68;
             this.m_lbl_tt_hoat_chat.Text = "......";
             // 
             // m_lbl_ten_thuoc
             // 
-            this.m_lbl_ten_thuoc.AutoSize = true;
+            this.m_lbl_ten_thuoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_ten_thuoc.Location = new System.Drawing.Point(144, 371);
             this.m_lbl_ten_thuoc.Name = "m_lbl_ten_thuoc";
-            this.m_lbl_ten_thuoc.Size = new System.Drawing.Size(31, 13);
+            this.m_lbl_ten_thuoc.Size = new System.Drawing.Size(433, 16);
             this.m_lbl_ten_thuoc.TabIndex = 67;
             this.m_lbl_ten_thuoc.Text = "........";
             // 
             // m_lbl_nhom_thuoc
             // 
-            this.m_lbl_nhom_thuoc.AutoSize = true;
+            this.m_lbl_nhom_thuoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_nhom_thuoc.Location = new System.Drawing.Point(138, 345);
             this.m_lbl_nhom_thuoc.Name = "m_lbl_nhom_thuoc";
-            this.m_lbl_nhom_thuoc.Size = new System.Drawing.Size(31, 13);
+            this.m_lbl_nhom_thuoc.Size = new System.Drawing.Size(509, 26);
             this.m_lbl_nhom_thuoc.TabIndex = 66;
             this.m_lbl_nhom_thuoc.Text = "........";
             // 
             // m_lbl_danh_muc_thuoc
             // 
-            this.m_lbl_danh_muc_thuoc.AutoSize = true;
+            this.m_lbl_danh_muc_thuoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_danh_muc_thuoc.Location = new System.Drawing.Point(138, 309);
             this.m_lbl_danh_muc_thuoc.Name = "m_lbl_danh_muc_thuoc";
-            this.m_lbl_danh_muc_thuoc.Size = new System.Drawing.Size(25, 13);
+            this.m_lbl_danh_muc_thuoc.Size = new System.Drawing.Size(470, 36);
             this.m_lbl_danh_muc_thuoc.TabIndex = 65;
             this.m_lbl_danh_muc_thuoc.Text = "......";
             // 
@@ -143,7 +141,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(485, 369);
+            this.label13.Location = new System.Drawing.Point(694, 404);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 16);
             this.label13.TabIndex = 64;
@@ -153,7 +151,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(481, 309);
+            this.label12.Location = new System.Drawing.Point(694, 307);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 16);
             this.label12.TabIndex = 63;
@@ -163,7 +161,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(435, 338);
+            this.label11.Location = new System.Drawing.Point(648, 336);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(152, 16);
             this.label11.TabIndex = 62;
@@ -255,7 +253,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(369, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(666, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_insert.TabIndex = 12;
@@ -280,7 +278,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(545, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(842, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_delete.TabIndex = 14;
@@ -355,7 +353,7 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(457, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(754, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_update.TabIndex = 13;
@@ -370,7 +368,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(633, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(930, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_exit.TabIndex = 11;
@@ -391,7 +389,7 @@
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Location = new System.Drawing.Point(3, 122);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(709, 153);
+            this.m_fg.Size = new System.Drawing.Size(997, 153);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 49;
             this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
@@ -404,10 +402,10 @@
             this.m_pnl_control.Controls.Add(this.m_cmd_delete);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 468);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 514);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(725, 39);
+            this.m_pnl_control.Size = new System.Drawing.Size(1022, 39);
             this.m_pnl_control.TabIndex = 48;
             // 
             // label1
@@ -430,12 +428,63 @@
             this.label14.TabIndex = 73;
             this.label14.Text = "Danh sách thuốc";
             // 
+            // m_chk_tuyen_su_dung_8
+            // 
+            this.m_chk_tuyen_su_dung_8.AutoCheck = false;
+            this.m_chk_tuyen_su_dung_8.AutoSize = true;
+            this.m_chk_tuyen_su_dung_8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_chk_tuyen_su_dung_8.Location = new System.Drawing.Point(799, 440);
+            this.m_chk_tuyen_su_dung_8.Name = "m_chk_tuyen_su_dung_8";
+            this.m_chk_tuyen_su_dung_8.Size = new System.Drawing.Size(131, 20);
+            this.m_chk_tuyen_su_dung_8.TabIndex = 77;
+            this.m_chk_tuyen_su_dung_8.Text = "Tuyen_su_dung_8";
+            this.m_chk_tuyen_su_dung_8.UseVisualStyleBackColor = true;
+            // 
+            // m_chk_tuyen_su_dung_7
+            // 
+            this.m_chk_tuyen_su_dung_7.AutoCheck = false;
+            this.m_chk_tuyen_su_dung_7.AutoSize = true;
+            this.m_chk_tuyen_su_dung_7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_chk_tuyen_su_dung_7.Location = new System.Drawing.Point(799, 417);
+            this.m_chk_tuyen_su_dung_7.Name = "m_chk_tuyen_su_dung_7";
+            this.m_chk_tuyen_su_dung_7.Size = new System.Drawing.Size(131, 20);
+            this.m_chk_tuyen_su_dung_7.TabIndex = 76;
+            this.m_chk_tuyen_su_dung_7.Text = "Tuyen_su_dung_7";
+            this.m_chk_tuyen_su_dung_7.UseVisualStyleBackColor = true;
+            // 
+            // m_chk_tuyen_su_dung_6
+            // 
+            this.m_chk_tuyen_su_dung_6.AutoCheck = false;
+            this.m_chk_tuyen_su_dung_6.AutoSize = true;
+            this.m_chk_tuyen_su_dung_6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_chk_tuyen_su_dung_6.Location = new System.Drawing.Point(799, 394);
+            this.m_chk_tuyen_su_dung_6.Name = "m_chk_tuyen_su_dung_6";
+            this.m_chk_tuyen_su_dung_6.Size = new System.Drawing.Size(131, 20);
+            this.m_chk_tuyen_su_dung_6.TabIndex = 75;
+            this.m_chk_tuyen_su_dung_6.Text = "Tuyen_su_dung_6";
+            this.m_chk_tuyen_su_dung_6.UseVisualStyleBackColor = true;
+            // 
+            // m_chk_tuyen_su_dung_5
+            // 
+            this.m_chk_tuyen_su_dung_5.AutoCheck = false;
+            this.m_chk_tuyen_su_dung_5.AutoSize = true;
+            this.m_chk_tuyen_su_dung_5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_chk_tuyen_su_dung_5.Location = new System.Drawing.Point(799, 371);
+            this.m_chk_tuyen_su_dung_5.Name = "m_chk_tuyen_su_dung_5";
+            this.m_chk_tuyen_su_dung_5.Size = new System.Drawing.Size(131, 20);
+            this.m_chk_tuyen_su_dung_5.TabIndex = 74;
+            this.m_chk_tuyen_su_dung_5.Text = "Tuyen_su_dung_5";
+            this.m_chk_tuyen_su_dung_5.UseVisualStyleBackColor = true;
+            // 
             // uc502_v_dm_thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.m_chk_tuyen_su_dung_8);
+            this.Controls.Add(this.m_chk_tuyen_su_dung_7);
+            this.Controls.Add(this.m_chk_tuyen_su_dung_6);
+            this.Controls.Add(this.m_chk_tuyen_su_dung_5);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.m_lbl_tuyen_su_dung);
             this.Controls.Add(this.m_lbl_duong_dung);
             this.Controls.Add(this.m_lbl_thuoc_thay_the);
             this.Controls.Add(this.m_lbl_tt_thuoc);
@@ -463,7 +512,7 @@
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.label1);
             this.Name = "uc502_v_dm_thuoc";
-            this.Size = new System.Drawing.Size(725, 507);
+            this.Size = new System.Drawing.Size(1022, 553);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -473,7 +522,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label m_lbl_tuyen_su_dung;
         private System.Windows.Forms.Label m_lbl_duong_dung;
         private System.Windows.Forms.Label m_lbl_thuoc_thay_the;
         private System.Windows.Forms.Label m_lbl_tt_thuoc;
@@ -506,5 +554,9 @@
         internal System.Windows.Forms.Panel m_pnl_control;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckBox m_chk_tuyen_su_dung_8;
+        private System.Windows.Forms.CheckBox m_chk_tuyen_su_dung_7;
+        private System.Windows.Forms.CheckBox m_chk_tuyen_su_dung_6;
+        private System.Windows.Forms.CheckBox m_chk_tuyen_su_dung_5;
     }
 }

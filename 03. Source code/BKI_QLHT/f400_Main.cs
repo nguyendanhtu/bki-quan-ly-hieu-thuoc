@@ -367,8 +367,8 @@ namespace BKI_QLHT
         {
             try
             {
-                f401_bao_cao_lssg v_frm = new f401_bao_cao_lssg();
-                v_frm.ShowDialog();
+                //f401_bao_cao_lssg v_frm = new f401_bao_cao_lssg();
+                //v_frm.ShowDialog();
             }
             catch (Exception v_e)
             {

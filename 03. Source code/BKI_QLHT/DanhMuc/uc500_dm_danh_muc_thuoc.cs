@@ -171,6 +171,7 @@ namespace BKI_QLHT
         //		EVENT HANLDERS
         //
         //
+        #region Event
         private void test_dm_danh_muc_thuoc_Load(object sender, System.EventArgs e)
         {
             try
@@ -189,6 +190,7 @@ namespace BKI_QLHT
             try
             {
                 //this.Close();
+                this.Visible = false;
                 this.Controls.Clear();
             }
             catch (Exception v_e)
@@ -285,7 +287,7 @@ namespace BKI_QLHT
         {
             try
             {
-                grid2us_object(m_us,m_grv_danh_muc_thuoc.Row);
+                grid2us_object(m_us, m_grv_danh_muc_thuoc.Row);
                 load_data_2_thong_tin(m_us);
             }
             catch (Exception v_e)
@@ -318,5 +320,7 @@ namespace BKI_QLHT
             CGridUtils.Dataset2C1Grid(v_ds_danh_muc_thuoc, m_grv_danh_muc_thuoc, m_obj_trans);
             m_grv_danh_muc_thuoc.Redraw = true;
         }
+        #endregion
+       
     }
 }

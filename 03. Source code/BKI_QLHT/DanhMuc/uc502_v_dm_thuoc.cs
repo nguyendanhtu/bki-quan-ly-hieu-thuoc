@@ -236,16 +236,28 @@ namespace BKI_QLHT
             m_trang_thai = true;
 
         }
-        private void load_data_2_thong_tin(US_V_DM_THUOC v_us)
+        private void load_data_2_thong_tin()
         {
-            m_lbl_danh_muc_thuoc.Text = v_us.strTEN_DANH_MUC;
-            m_lbl_ten_thuoc.Text = v_us.strTEN_THUOC;
-            m_lbl_nhom_thuoc.Text = v_us.strTEN_NHOM;
-            m_lbl_thuoc_thay_the.Text = v_us.strTHUOC_THAY_THE;
-            m_lbl_tuyen_su_dung.Text = v_us.strTUYEN_SU_DUNG_5;
-            m_lbl_tt_hoat_chat.Text = CIPConvert.ToStr(v_us.dcTT_HOAT_CHAT);
-            m_lbl_tt_thuoc.Text = CIPConvert.ToStr(v_us.dcTT_THUOC);
-            m_lbl_duong_dung.Text = v_us.strDUONG_DUNG_DANG_DUNG;
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            m_lbl_danh_muc_thuoc.Text = m_us.strTEN_DANH_MUC;
+            m_lbl_ten_thuoc.Text = m_us.strTEN_THUOC;
+            m_lbl_nhom_thuoc.Text = m_us.strTEN_NHOM;
+            m_lbl_thuoc_thay_the.Text = m_us.strTHUOC_THAY_THE;
+            //m_lbl_tuyen_su_dung.Text = m_us.strTUYEN_SU_DUNG_5;
+            m_lbl_tt_hoat_chat.Text = CIPConvert.ToStr(m_us.dcTT_HOAT_CHAT);
+            m_lbl_tt_thuoc.Text = CIPConvert.ToStr(m_us.dcTT_THUOC);
+            m_lbl_duong_dung.Text = m_us.strDUONG_DUNG_DANG_DUNG;
+            if (m_us.strTUYEN_SU_DUNG_5 == "+") m_chk_tuyen_su_dung_5.Checked = true;
+            else m_chk_tuyen_su_dung_5.Checked = false;
+            if (m_us.strTUYEN_SU_DUNG_6 == "+") m_chk_tuyen_su_dung_6.Checked = true;
+            else m_chk_tuyen_su_dung_6.Checked = false;
+            if (m_us.strTUYEN_SU_DUNG_7 == "+") m_chk_tuyen_su_dung_7.Checked = true;
+            else m_chk_tuyen_su_dung_7.Checked = false;
+            if (m_us.strTUYEN_SU_DUNG_8 == "+") m_chk_tuyen_su_dung_8.Checked = true;
+            else m_chk_tuyen_su_dung_8.Checked = false;
+            
         }
         private void load_cbo_nhom_thuoc_from_danh_muc(decimal ip_dc_id_danh_muc)
         {
@@ -282,11 +294,13 @@ namespace BKI_QLHT
         }
 
         #endregion
+        #region Event
         private void uc502_v_dm_Load(object sender, System.EventArgs e)
         {
             try
             {
                 set_initial_form_load();
+                load_data_2_thong_tin();
             }
             catch (System.Exception v_e)
             {
@@ -298,6 +312,7 @@ namespace BKI_QLHT
         {
             try
             {
+                this.Visible = false;
                 this.Controls.Clear();
             }
             catch (Exception v_e)
@@ -323,6 +338,7 @@ namespace BKI_QLHT
             try
             {
                 update_v_dm_thuoc();
+                load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -335,6 +351,7 @@ namespace BKI_QLHT
             try
             {
                 delete_v_dm_thuoc();
+                load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -363,6 +380,7 @@ namespace BKI_QLHT
                     decimal v_dc_id_danh_muc = m_cbo_danh_muc_tk.SelectedIndex;
                     load_data_2_grid_from_danh_muc(v_dc_id_danh_muc);
                     load_cbo_nhom_thuoc_from_danh_muc(v_dc_id_danh_muc);
+                    load_data_2_thong_tin();
                 }
             }
             catch (Exception v_e)
@@ -401,7 +419,7 @@ namespace BKI_QLHT
             try
             {
                 grid2us_object(m_us, m_fg.Row);
-                load_data_2_thong_tin(m_us);
+                load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -421,6 +439,8 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+        #endregion
+       
 
 
     }
