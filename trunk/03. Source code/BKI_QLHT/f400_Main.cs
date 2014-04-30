@@ -395,7 +395,17 @@ namespace BKI_QLHT
 
         private void m_cmd_item_quan_ly_gia_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                m_Panel_Content.Controls.Clear();
+                uc_802_gd_gia_ban uc_frm = new uc_802_gd_gia_ban();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_quan_ly_thuoc_ban_le_Click(object sender, EventArgs e)
