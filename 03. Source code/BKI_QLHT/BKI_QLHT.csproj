@@ -267,6 +267,12 @@
     <Compile Include="HeThong\f999_ht_nguoi_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NghiepVu\f511_gd_nhap_thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f511_gd_nhap_thuoc.Designer.cs">
+      <DependentUpon>f511_gd_nhap_thuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\uc108_v_gd_giao_dich_detail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -361,6 +367,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f800_dm_nha_cung_cap.resx">
       <DependentUpon>f800_dm_nha_cung_cap.cs</DependentUpon>
@@ -394,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f999_ht_nguoi_su_dung.resx">
       <DependentUpon>f999_ht_nguoi_su_dung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f511_gd_nhap_thuoc.resx">
+      <DependentUpon>f511_gd_nhap_thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\uc108_v_gd_giao_dich_detail.resx">
       <DependentUpon>uc108_v_gd_giao_dich_detail.cs</DependentUpon>
@@ -487,6 +497,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\form.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
