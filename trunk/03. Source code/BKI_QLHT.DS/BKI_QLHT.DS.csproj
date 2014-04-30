@@ -145,6 +145,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_GD_GIAO_DICH_DETAIL.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_GD_GIA_BAN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_GD_GIA_BAN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_GD_SO_DU.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,6 +218,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_GD_GIA_2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_GD_GIA_BAN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_GD_GIA_BAN.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_V_HT_CONTROL_IN_FORM.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -444,6 +454,17 @@
     <None Include="DS_GD_GIAO_DICH_DETAIL.xss">
       <DependentUpon>DS_GD_GIAO_DICH_DETAIL.xsd</DependentUpon>
     </None>
+    <None Include="DS_GD_GIA_BAN.xsc">
+      <DependentUpon>DS_GD_GIA_BAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_GD_GIA_BAN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_GD_GIA_BAN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_GD_GIA_BAN.xss">
+      <DependentUpon>DS_GD_GIA_BAN.xsd</DependentUpon>
+    </None>
     <None Include="DS_GD_SO_DU.xsc">
       <DependentUpon>DS_GD_SO_DU.xsd</DependentUpon>
     </None>
@@ -586,6 +607,17 @@
     </None>
     <None Include="DS_V_GD_GIA_2.xss">
       <DependentUpon>DS_V_GD_GIA_2.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_GIA_BAN.xsc">
+      <DependentUpon>DS_V_GD_GIA_BAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_GD_GIA_BAN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_GD_GIA_BAN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_GD_GIA_BAN.xss">
+      <DependentUpon>DS_V_GD_GIA_BAN.xsd</DependentUpon>
     </None>
     <None Include="DS_V_HT_CONTROL_IN_FORM.xsc">
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
