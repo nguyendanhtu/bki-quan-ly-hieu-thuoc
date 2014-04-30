@@ -247,7 +247,15 @@ namespace BKI_QLHT
         }
         private void m_cmd_item_nhat_ki_he_thong_Click(object sender, EventArgs e)
         {
-           
+           try
+           {
+               test v_frm = new test();
+               v_frm.ShowDialog();
+           }
+           catch (System.Exception v_e)
+           {
+           	CSystemLog_301.ExceptionHandle(v_e);
+           }
         }
 
         private void m_cmd_item_phan_quyen_cho_nhom_Click(object sender, EventArgs e)
