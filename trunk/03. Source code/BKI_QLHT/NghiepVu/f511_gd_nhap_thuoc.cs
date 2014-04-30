@@ -32,15 +32,18 @@ namespace BKI_QLHT
         #region Public Interface
         
         #endregion
-        #region Member
 
+        #region Member
+        long tong_tien = 0;
         #endregion
+
         #region Private Method
         private void format_control()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_event();
             m_grv_nhap_thuoc.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            m_grv_nhap_thuoc.DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
         }
 
         private void set_define_event()
@@ -49,7 +52,8 @@ namespace BKI_QLHT
             this.m_cbo_don_vi_tinh.SelectedIndexChanged += new System.EventHandler(this.m_cbo_don_vi_tinh_SelectedIndexChanged);
             this.m_cbo_dv_cap_2.SelectedIndexChanged += new System.EventHandler(this.m_cbo_dv_cap_2_SelectedIndexChanged);
             this.m_cbo_dv_cap_3.SelectedIndexChanged += new System.EventHandler(this.m_cbo_dv_cap_3_SelectedIndexChanged);
-            this.m_cbo_dv_cap_4.SelectedIndexChanged += new System.EventHandler(this.m_cbo_dv_cap_4_SelectedIndexChanged);
+           
+            this.m_cmd_add.Click += new System.EventHandler(this.m_cmd_add_Click);
         }
         public void set_inital_form_load() {
             load_data_2_cbo_ten_thuoc();
@@ -57,7 +61,7 @@ namespace BKI_QLHT
             load_data_2_dv_cap_2();
             load_data_2_dv_cap_3();
             load_data_2_dv_cap_4();
-            load_data_2_dv_cap_5();
+            
             load_data_2_cbo_nha_cung_cap();
             load_data_2_cbo_nuoc_sx();
             load_data_2_cbo_hang_sx();
@@ -108,16 +112,7 @@ namespace BKI_QLHT
             m_cbo_dv_cap_3.DisplayMember = CM_DM_TU_DIEN.TEN;
 
         }
-        private void load_data_2_dv_cap_5()
-        {
-            US_CM_DM_TU_DIEN v_us_tu_dien = new US_CM_DM_TU_DIEN();
-            DS_CM_DM_TU_DIEN v_ds_tu_dien = new DS_CM_DM_TU_DIEN();
-            v_us_tu_dien.FillDataset(v_ds_tu_dien, "where id_loai_tu_dien=8");
-            m_cbo_dv_cap_5.DataSource = v_ds_tu_dien.CM_DM_TU_DIEN;
-            m_cbo_dv_cap_5.ValueMember = CM_DM_TU_DIEN.ID;
-            m_cbo_dv_cap_5.DisplayMember = CM_DM_TU_DIEN.TEN;
-
-        }
+        
         private void load_data_2_cbo_nha_cung_cap() {
             US_DM_NCC_NSX_NHASX v_us = new US_DM_NCC_NSX_NHASX();
             DS_DM_NCC_NSX_NHASX v_ds = new DS_DM_NCC_NSX_NHASX();
@@ -150,7 +145,18 @@ namespace BKI_QLHT
             m_lbl_dv_tinh_ban.Text = "1" + " " + m_cbo_don_vi_tinh.Text;
             m_lbl_don_vi_cap_2.Text = "1" + " " + m_cbo_dv_cap_2.Text;
             m_lbl_don_vi_cap_3.Text = "1" + " " + m_cbo_dv_cap_4.Text;
-            m_lbl_don_vi_cap_4.Text = "1" + " " + m_cbo_dv_cap_3.Text;
+            
+        }
+        private void restart_form()
+        {
+            m_cbo_ten_thuoc.SelectedIndex = 0;
+            m_txt_gia_nhap.Clear();
+            m_txt_gia_ban.Clear();
+            m_txt_so_luong.Clear();
+            m_txt_quy_doi_1.Clear();
+            m_txt_quy_doi_2.Clear();
+            m_txt_quy_doi_3.Clear();
+            load_data_2_label();
         }
         
 
@@ -167,28 +173,39 @@ namespace BKI_QLHT
             m_lbl_don_vi_cap_2.Text = "1" + " " + m_cbo_dv_cap_2.Text;
             m_cbo_dv_cap_3.Text = m_cbo_dv_cap_2.Text;
             m_cbo_dv_cap_4.Text = m_cbo_dv_cap_2.Text;
-            m_cbo_dv_cap_5.Text = m_cbo_dv_cap_2.Text;
+            
 
         }
         private void m_cbo_dv_cap_3_SelectedIndexChanged(object sender, EventArgs e)
         {
             m_lbl_don_vi_cap_3.Text = "1" + " " + m_cbo_dv_cap_3.Text;
             m_cbo_dv_cap_4.Text = m_cbo_dv_cap_3.Text;
-            m_cbo_dv_cap_5.Text = m_cbo_dv_cap_4.Text;
+            
         }
-
-        private void m_cbo_dv_cap_4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            m_lbl_don_vi_cap_4.Text = "1" + " " + m_cbo_dv_cap_4.Text;
-            m_cbo_dv_cap_5.Text = m_cbo_dv_cap_4.Text;
-        }
-
         private void m_cbo_don_vi_tinh_SelectedIndexChanged(object sender, EventArgs e)
         {
             m_lbl_dv_tinh_ban.Text = "1" + " " + m_cbo_don_vi_tinh.Text;
             m_lbl_dv_tinh_nhap.Text = "1" + " " + m_cbo_don_vi_tinh.Text;
         }
+        private void m_cmd_add_Click(object sender, EventArgs e)
+        {
+            int n = m_grv_nhap_thuoc.Rows.Add();
+            m_grv_nhap_thuoc.Rows[n].Cells[0].Value = n+1;
+            m_grv_nhap_thuoc.Rows[n].Cells[1].Value = m_cbo_ten_thuoc.Text;
+            m_grv_nhap_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
+            m_grv_nhap_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
+            m_grv_nhap_thuoc.Rows[n].Cells[4].Value = string.Format("{0:0,#}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text)) + " " + "VNĐ";
+            m_grv_nhap_thuoc.Rows[n].Cells[5].Value = string.Format("{0:0,#}",CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.ToString())) )+ " " + "VNĐ";
+            tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.ToString());
+            m_lbl_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+            restart_form();
+
+        }
+
+        
         #endregion
+
+        
 
         
 
