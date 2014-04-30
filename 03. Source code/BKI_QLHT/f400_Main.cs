@@ -382,10 +382,31 @@ namespace BKI_QLHT
 
         }
 
-        private void buttonItem3_Click(object sender, EventArgs e)
+    
+
+        private void cmd_item_quan_ly_nhap_thuoc_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
+        private void m_cmd_item_quan_ly_gia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_cmd_quan_ly_thuoc_ban_le_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_cmd_quan_ly_so_du_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
 
 
 
