@@ -419,7 +419,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Firebrick;
-            this.label16.Location = new System.Drawing.Point(279, 29);
+            this.label16.Location = new System.Drawing.Point(326, 31);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(152, 16);
             this.label16.TabIndex = 1;
@@ -430,7 +430,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label15.Location = new System.Drawing.Point(108, 29);
+            this.label15.Location = new System.Drawing.Point(75, 29);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(165, 18);
             this.label15.TabIndex = 1;
