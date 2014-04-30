@@ -113,6 +113,15 @@
     <Compile Include="DanhMuc\f103_v_dm_don_vi_de.Designer.cs">
       <DependentUpon>f103_v_dm_don_vi_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f404_v_dm_nhasx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f405_v_dm_ncc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f406_v_dm_nsx.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f500_dm_danh_muc_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +316,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f103_v_dm_don_vi_de.resx">
       <DependentUpon>f103_v_dm_don_vi_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f404_v_dm_nhasx.resx">
+      <DependentUpon>f404_v_dm_nhasx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f405_v_dm_ncc.resx">
+      <DependentUpon>f405_v_dm_ncc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f406_v_dm_nsx.resx">
+      <DependentUpon>f406_v_dm_nsx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f500_dm_danh_muc_thuoc.resx">
       <DependentUpon>f500_dm_danh_muc_thuoc.cs</DependentUpon>

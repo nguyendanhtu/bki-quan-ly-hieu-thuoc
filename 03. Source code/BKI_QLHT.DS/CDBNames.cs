@@ -53,6 +53,30 @@
     }
 
 
+    public class V_DM_NSX
+    {
+        public const string ID_LOAI_DM = "ID_LOAI_DM";
+        public const string TEN_NUOCSX = "TEN_NUOCSX";
+        public const string MA_NUOCSX = "MA_NUOCSX";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+    public class V_DM_NCC
+    {
+        public const string ID_LOAI_DM = "ID_LOAI_DM";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string MA_NCC = "MA_NCC";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT = "SDT";
+    }
+
+    public class V_DM_NHASX
+    {
+        public const string ID_LOAI_DM = "ID_LOAI_DM";
+        public const string TEN_NHASX = "TEN_NHASX";
+        public const string MA_NHASX = "MA_NHASX";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT = "SDT";
+    }
 
     public class HT_PHAN_QUYEN_HE_THONG
     {

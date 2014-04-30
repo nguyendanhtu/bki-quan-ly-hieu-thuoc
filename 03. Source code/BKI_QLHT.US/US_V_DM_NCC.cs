@@ -8,15 +8,15 @@
 /// </summary>
 
 using System;
-using WebDS;
+using BKI_QLHT.DS;
 using IP.Core.IPCommon;
 using IP.Core.IPUserService;
 using System.Data.SqlClient;
 using System.Data;
-using WebDS;
+using BKI_QLHT.DS;
 
 
-namespace WebUS{
+namespace BKI_QLHT.US{
 
 public class US_V_DM_NCC : US_Object
 {
