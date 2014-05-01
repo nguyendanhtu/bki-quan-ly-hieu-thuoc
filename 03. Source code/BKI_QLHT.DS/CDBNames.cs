@@ -317,7 +317,9 @@
         public const string TUYEN_SU_DUNG_7 = "TUYEN_SU_DUNG_7";
         public const string TUYEN_SU_DUNG_8 = "TUYEN_SU_DUNG_8";
         public const string ID = "ID";
+        public const string DISPLAY = "DISPLAY";
     }
+
     public class V_GD_GIA
     {
         public const string ID = "ID";

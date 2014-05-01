@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="V_DM_THUOC" targetNamespace="http://tempuri.org/V_DM_THUOC.xsd" xmlns:mstns="http://tempuri.org/V_DM_THUOC.xsd" xmlns="http://tempuri.org/V_DM_THUOC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DS_V_DM_THUOC" targetNamespace="http://tempuri.org/DS_V_DM_THUOC.xsd" xmlns:mstns="http://tempuri.org/DS_V_DM_THUOC.xsd" xmlns="http://tempuri.org/DS_V_DM_THUOC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString2" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DM_THUOCTableAdapter" GeneratorDataComponentClassName="V_DM_THUOCTableAdapter" Name="V_DM_THUOC" UserDataComponentName="V_DM_THUOCTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BKI_QLHTConnectionString2 (Settings)" DbObjectName="BKI_QLHT.dbo.V_DM_THUOC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BKI_QLHTConnectionString1 (Settings)" DbObjectName="BKI_QLHT.dbo.V_DM_THUOC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT TEN_DANH_MUC, TEN_NHOM, THUOC_THAY_THE, ID_DANH_MUC_THUOC, ID_NHOM_THUOC, TT_HOAT_CHAT, TT_THUOC, TEN_THUOC, DUONG_DUNG_DANG_DUNG, TUYEN_SU_DUNG_5, TUYEN_SU_DUNG_6, TUYEN_SU_DUNG_7, TUYEN_SU_DUNG_8, ID FROM dbo.V_DM_THUOC</CommandText>
+                    <CommandText>SELECT TEN_DANH_MUC, TEN_NHOM, THUOC_THAY_THE, ID_DANH_MUC_THUOC, ID_NHOM_THUOC, TT_HOAT_CHAT, TT_THUOC, TEN_THUOC, DUONG_DUNG_DANG_DUNG, TUYEN_SU_DUNG_5, TUYEN_SU_DUNG_6, TUYEN_SU_DUNG_7, TUYEN_SU_DUNG_8, ID, DISPLAY FROM dbo.V_DM_THUOC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -33,6 +33,7 @@
               <Mapping SourceColumn="TUYEN_SU_DUNG_7" DataSetColumn="TUYEN_SU_DUNG_7" />
               <Mapping SourceColumn="TUYEN_SU_DUNG_8" DataSetColumn="TUYEN_SU_DUNG_8" />
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="DISPLAY" DataSetColumn="DISPLAY" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -41,10 +42,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="V_DM_THUOC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="V_DM_THUOC" msprop:Generator_UserDSName="V_DM_THUOC">
+  <xs:element name="DS_V_DM_THUOC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_DM_THUOC" msprop:Generator_UserDSName="DS_V_DM_THUOC">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_DM_THUOC" msprop:Generator_TableClassName="V_DM_THUOCDataTable" msprop:Generator_TableVarName="tableV_DM_THUOC" msprop:Generator_TablePropName="_V_DM_THUOC" msprop:Generator_RowDeletingName="V_DM_THUOCRowDeleting" msprop:Generator_UserTableName="V_DM_THUOC" msprop:Generator_RowChangingName="V_DM_THUOCRowChanging" msprop:Generator_RowEvHandlerName="V_DM_THUOCRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DM_THUOCRowDeleted" msprop:Generator_RowEvArgName="V_DM_THUOCRowChangeEvent" msprop:Generator_RowChangedName="V_DM_THUOCRowChanged" msprop:Generator_RowClassName="V_DM_THUOCRow">
+        <xs:element name="V_DM_THUOC" msprop:Generator_TableClassName="V_DM_THUOCDataTable" msprop:Generator_TableVarName="tableV_DM_THUOC" msprop:Generator_TablePropName="V_DM_THUOC" msprop:Generator_RowDeletingName="V_DM_THUOCRowDeleting" msprop:Generator_RowChangingName="V_DM_THUOCRowChanging" msprop:Generator_RowEvHandlerName="V_DM_THUOCRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DM_THUOCRowDeleted" msprop:Generator_UserTableName="V_DM_THUOC" msprop:Generator_RowChangedName="V_DM_THUOCRowChanged" msprop:Generator_RowEvArgName="V_DM_THUOCRowChangeEvent" msprop:Generator_RowClassName="V_DM_THUOCRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TEN_DANH_MUC" msprop:Generator_ColumnVarNameInTable="columnTEN_DANH_MUC" msprop:Generator_ColumnPropNameInRow="TEN_DANH_MUC" msprop:Generator_ColumnPropNameInTable="TEN_DANH_MUCColumn" msprop:Generator_UserColumnName="TEN_DANH_MUC">
@@ -115,6 +116,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
+              <xs:element name="DISPLAY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDISPLAY" msprop:Generator_ColumnPropNameInRow="DISPLAY" msprop:Generator_ColumnPropNameInTable="DISPLAYColumn" msprop:Generator_UserColumnName="DISPLAY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="503" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
