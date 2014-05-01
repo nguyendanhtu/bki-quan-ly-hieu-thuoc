@@ -1,4 +1,4 @@
-﻿namespace BKI_QLHT.NghiepVu
+﻿namespace BKI_QLHT
 {
     partial class uc_802_gd_gia_ban
     {
@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_802_gd_gia_ban));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.m_pnl_control = new System.Windows.Forms.Panel();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_grv_v_gd_gia = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.m_pnl_out_place_dm.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_v_gd_gia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,17 @@
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
+            // m_pnl_control
+            // 
+            this.m_pnl_control.Controls.Add(this.m_cmd_update);
+            this.m_pnl_control.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 403);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_control.Size = new System.Drawing.Size(696, 36);
+            this.m_pnl_control.TabIndex = 21;
+            // 
             // m_cmd_update
             // 
             this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -84,17 +95,6 @@
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
             // 
-            // m_pnl_out_place_dm
-            // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
-            this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 403);
-            this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
-            this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(696, 36);
-            this.m_pnl_out_place_dm.TabIndex = 21;
-            // 
             // m_cmd_exit
             // 
             this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -109,6 +109,7 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click_1);
             // 
             // m_grv_v_gd_gia
             // 
@@ -153,11 +154,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_grv_v_gd_gia);
             this.Name = "uc_802_gd_gia_ban";
             this.Size = new System.Drawing.Size(696, 439);
-            this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_v_gd_gia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,7 +169,7 @@
 
         internal System.Windows.Forms.ImageList ImageList;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
-        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
+        internal System.Windows.Forms.Panel m_pnl_control;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private C1.Win.C1FlexGrid.C1FlexGrid m_grv_v_gd_gia;
         private System.Windows.Forms.Label label1;
