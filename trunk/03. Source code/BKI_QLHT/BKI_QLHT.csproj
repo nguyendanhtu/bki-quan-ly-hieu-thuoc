@@ -86,6 +86,9 @@
     <Compile Include="BaoCao\f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f100_v_dm_bac_sy_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +329,9 @@
     <Compile Include="WinFormControls.cs" />
     <EmbeddedResource Include="BaoCao\f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc.resx">
       <DependentUpon>f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.resx">
+      <DependentUpon>f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f100_v_dm_bac_sy_de.resx">
       <DependentUpon>f100_v_dm_bac_sy_de.cs</DependentUpon>
