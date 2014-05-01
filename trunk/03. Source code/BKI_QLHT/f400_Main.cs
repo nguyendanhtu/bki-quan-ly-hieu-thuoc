@@ -465,6 +465,21 @@ namespace BKI_QLHT
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc v_frm = new f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+            
+        }
+
 
 
 
