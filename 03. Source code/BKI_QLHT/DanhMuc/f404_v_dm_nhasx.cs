@@ -218,10 +218,11 @@ namespace BKI_QLHT
             this.m_fg.Location = new System.Drawing.Point(0, 76);
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(686, 297);
-            this.m_fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             this.m_fg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_fg_KeyDown);
+            this.m_fg.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
 
             // 
             // m_cmd_search

@@ -102,7 +102,7 @@ namespace BKI_QLHT
             v_htb.Add(V_DM_THUOC.TEN_DANH_MUC, e_col_Number.TEN_DANH_MUC);
             v_htb.Add(V_DM_THUOC.TUYEN_SU_DUNG_6, e_col_Number.TUYEN_SU_DUNG_6);
 
-            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds._V_DM_THUOC.NewRow());
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_DM_THUOC.NewRow());
             return v_obj_trans;
         }
         private void load_data_2_grid()

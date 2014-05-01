@@ -108,8 +108,8 @@ namespace BKI_QLHT
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_v_gd_gia)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_v_gd_gia, m_grv_v_gd_gia.Row)) return;
             grid2us_object(m_us, m_grv_v_gd_gia.Row);
-            	f802_v_gd_gia_ban_DE v_fDE = new f802_v_gd_gia_ban_DE();
-            	v_fDE.display_for_update(m_us);
+                //f802_v_gd_gia_ban_DE v_fDE = new f802_v_gd_gia_ban_DE();
+                //v_fDE.display_for_update(m_us);
             load_data_2_grid();
         }
 
