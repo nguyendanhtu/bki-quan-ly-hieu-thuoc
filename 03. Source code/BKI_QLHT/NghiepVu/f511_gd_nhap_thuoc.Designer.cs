@@ -559,7 +559,7 @@
             // 
             // m_grv_nhap_thuoc
             // 
-            this.m_grv_nhap_thuoc.AllowUserToAddRows = false;
+            this.m_grv_nhap_thuoc.BackgroundColor = System.Drawing.Color.White;
             this.m_grv_nhap_thuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.m_grv_nhap_thuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,

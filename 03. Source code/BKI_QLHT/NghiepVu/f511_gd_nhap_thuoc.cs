@@ -16,6 +16,7 @@ using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using IP.Core.IPSystemAdmin;
+using System.Collections.Generic;
 
 namespace BKI_QLHT
 {
@@ -42,10 +43,25 @@ namespace BKI_QLHT
             string datetime = ydate + mdate + ddate + hdate + Mdate + Sdate;
             return "PN_" + username + "_" + datetime;
         }
+        public class data
+        {
+            public string ten_thuoc;
+            public DateTime ngay_nhap;
+            public DateTime ngay_sx;
+            public DateTime han_sd;
+            public string nha_cung_cap;
+            public string hang_sx;
+            public string nuoc_sx;
+            public int so_luong;
+            public decimal ID_thuoc;
+            public decimal ID_don_vi_thuoc;
+            public int gia;
+        }
         #endregion
 
         #region Member
         long tong_tien = 0;
+        List<data> list = new List<data>();
         #endregion
 
         #region Private Method
@@ -55,6 +71,15 @@ namespace BKI_QLHT
             set_define_event();
             m_grv_nhap_thuoc.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             m_grv_nhap_thuoc.DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
+            m_grv_nhap_thuoc.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            m_grv_nhap_thuoc.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+            m_grv_nhap_thuoc.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            m_grv_nhap_thuoc.DefaultCellStyle.SelectionBackColor = Color.CornflowerBlue;
+            m_grv_nhap_thuoc.DefaultCellStyle.SelectionForeColor = Color.White;
+            m_grv_nhap_thuoc.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            m_grv_nhap_thuoc.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            m_grv_nhap_thuoc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            m_grv_nhap_thuoc.AllowUserToResizeColumns = false;
             m_lbl_ma_giao_dich.Text = gen_Ma_GD();
         }
 
@@ -66,6 +91,7 @@ namespace BKI_QLHT
             this.m_cbo_dv_cap_3.SelectedIndexChanged += new System.EventHandler(this.m_cbo_dv_cap_3_SelectedIndexChanged);
            
             this.m_cmd_add.Click += new System.EventHandler(this.m_cmd_add_Click);
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
         }
         public void set_inital_form_load() {
             load_data_2_cbo_ten_thuoc();
@@ -170,6 +196,39 @@ namespace BKI_QLHT
             m_txt_quy_doi_3.Clear();
             load_data_2_label();
         }
+        private void add_list()
+        {
+            data v_data = new data();
+            v_data.ten_thuoc = m_cbo_ten_thuoc.Text;
+            v_data.ngay_nhap = m_dtp_ngay_nhap.Value;
+            v_data.ngay_sx = m_dtp_ngay_san_xuat.Value;
+            v_data.han_sd = m_dtp_han_su_dung.Value;
+            v_data.nha_cung_cap = m_cbo_nha_cung_cap.Text;
+            v_data.hang_sx = m_cbo_hang_san_xuat.Text;
+            v_data.nuoc_sx = m_cbo_nuoc_san_xuat.Text;
+            v_data.ID_thuoc = CIPConvert.ToDecimal(m_cbo_ten_thuoc.SelectedValue);
+            v_data.so_luong = int.Parse(m_txt_so_luong.Text);
+            v_data.gia = int.Parse(m_txt_gia_nhap.Text);
+            v_data.ID_don_vi_thuoc = CIPConvert.ToDecimal(m_cbo_dv_cap_4.SelectedValue);
+            list.Add(v_data);
+        }
+        private void load_data_2_gd_so_du()
+        {
+            US_GD_SO_DU v_us_sd = new US_GD_SO_DU();
+            DS_GD_SO_DU v_ds_sd = new DS_GD_SO_DU();
+
+
+            foreach (data v_list in list)
+            {
+
+                v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_list.ID_thuoc);
+                v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_list.ID_don_vi_thuoc);
+                v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_list.so_luong);
+                v_us_sd.datNGAY_PHAT_SINH = v_list.ngay_nhap;
+                v_us_sd.strMOI_NHAT_YN = "Y";
+                v_us_sd.Insert();
+            }
+        }        
         
 
         #endregion
@@ -215,9 +274,25 @@ namespace BKI_QLHT
             restart_form();
 
         }
+        private void m_cmd_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_gd_so_du();
+                list.Clear();
+                m_grv_nhap_thuoc.Rows.Clear();
+            }
+            catch (Exception v_e)
+            {
 
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+            
+        }
         
         #endregion
+
+       
 
         //private void m_txt_gia_nhap_TextChanged(object sender, EventArgs e)
         //{
