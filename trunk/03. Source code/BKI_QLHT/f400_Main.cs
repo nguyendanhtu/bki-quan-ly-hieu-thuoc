@@ -451,6 +451,20 @@ namespace BKI_QLHT
 
         }
 
+        private void m_cmd_ncc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f405_v_dm_ncc v_frm = new f405_v_dm_ncc();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
 
 

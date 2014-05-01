@@ -139,7 +139,7 @@ public class US_V_DM_NCC : US_Object
 	{
 		this.DataRow2Me(i_objDR);
 	}
-
+    
 	public US_V_DM_NCC(decimal i_dbID) 
 	{
 		pm_objDS = new DS_V_DM_NCC();
@@ -152,5 +152,12 @@ public class US_V_DM_NCC : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDatasetSearch(DS_V_DM_NCC op_ds, string ip_str_ma_ncc)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_DM_NCC_By_Ma_Ncc");
+        v_sp.addNVarcharInputParam("@ip_str_ma_ncc", ip_str_ma_ncc);
+        v_sp.fillDataSetByCommand(this, op_ds);
+    }
+}
 }
