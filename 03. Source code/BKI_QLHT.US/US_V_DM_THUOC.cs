@@ -358,5 +358,21 @@ public class US_V_DM_THUOC : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
+    public void FillDatasetSearchByDanhMuc(DS_V_DM_THUOC ip_ds, decimal ip_dc_id_danh_muc, string ip_str_tu_khoa)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_DM_THUOC_By_danh_muc");
+        v_store_proc.addDecimalInputParam("@IP_ID_DANH_MUC", ip_dc_id_danh_muc);
+        //v_store_proc.addDecimalInputParam("@IP_ID_NHOM_THUOC", ip_dc_id_nhom_thuoc);
+        v_store_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
+        v_store_proc.fillDataSetByCommand(this, ip_ds);
+    }
+
+    public void FillDatasetSearchByNhomThuoc(DS_V_DM_THUOC ip_ds, decimal ip_dc_id_nhom_thuoc, string ip_str_tu_khoa)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_DM_THUOC_By_Nhom_Thuoc");
+        v_store_proc.addDecimalInputParam("@IP_ID_NHOM_THUOC", ip_dc_id_nhom_thuoc);
+        v_store_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
+        v_store_proc.fillDataSetByCommand(this, ip_ds);
+    }
 	}
 }
