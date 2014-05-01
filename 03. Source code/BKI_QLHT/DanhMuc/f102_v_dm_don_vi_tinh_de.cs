@@ -79,9 +79,9 @@ namespace BKI_QLHT.DanhMuc
 
         private void m_form_2_us_obj()
         {
-            m_us_dm_don_vi_tinh.strTEN_NHOM = m_txt_ma_nhom.Text;
+           // m_us_dm_don_vi_tinh.strTEN_NHOM = m_txt_ma_nhom.Text;
             m_us_dm_don_vi_tinh.strMA_NHOM = m_txt_ten_nhom.Text;
-            m_us_dm_don_vi_tinh.dcID_NGUOI_LAP = Convert.ToDecimal(m_cbo_nguoi_lap.SelectedValue);
+            //m_us_dm_don_vi_tinh.dcID_NGUOI_LAP = Convert.ToDecimal(m_cbo_nguoi_lap.SelectedValue);
             m_us_dm_don_vi_tinh.dcID_TRANG_THAI = Convert.ToDecimal(m_cbo_trang_thai.SelectedValue);
             m_us_dm_don_vi_tinh.datNGAY_LAP = m_dt_ngay_lap.Value;
         }
@@ -115,7 +115,7 @@ namespace BKI_QLHT.DanhMuc
         private void m_us_obj_2_form()
         {
             m_txt_ma_nhom.Text = m_us_dm_don_vi_tinh.strMA_NHOM;
-            m_txt_ten_nhom.Text = m_us_dm_don_vi_tinh.strTEN_NHOM;
+            //m_txt_ten_nhom.Text = m_us_dm_don_vi_tinh.strTEN_NHOM;
             m_cbo_nguoi_lap.Text = m_us_v_dm_don_vi_tinh.strTEN;
             m_cbo_trang_thai.Text = m_us_v_dm_don_vi_tinh.strTRANG_THAI;
         }
