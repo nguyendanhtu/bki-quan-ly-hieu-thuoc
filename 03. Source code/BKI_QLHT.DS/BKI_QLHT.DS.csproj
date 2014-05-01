@@ -263,6 +263,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_THUOC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="V_GD_DON_VI_TINH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_GD_DON_VI_TINH.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -700,6 +705,17 @@
     </None>
     <None Include="DS_V_DM_THUOC.xss">
       <DependentUpon>DS_V_DM_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="V_GD_DON_VI_TINH.xsc">
+      <DependentUpon>V_GD_DON_VI_TINH.xsd</DependentUpon>
+    </None>
+    <None Include="V_GD_DON_VI_TINH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_GD_DON_VI_TINH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_GD_DON_VI_TINH.xss">
+      <DependentUpon>V_GD_DON_VI_TINH.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
