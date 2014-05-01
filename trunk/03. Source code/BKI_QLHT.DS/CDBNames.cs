@@ -459,5 +459,17 @@
         public const string DIA_CHI = "DIA_CHI";
         public const string SDT = "SDT";
     }
-
+    public class v_gd_don_vi_tinh
+    {
+        public const string ID = "ID";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string ID_DON_VI_CHA = "ID_DON_VI_CHA";
+        public const string QUY_DOI = "QUY_DOI";
+        public const string ID_NHOM_DON_VI_TINH = "ID_NHOM_DON_VI_TINH";
+        public const string Expr1 = "Expr1";
+        public const string MA_NHOM = "MA_NHOM";
+        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
+        public const string NGAY_LAP = "NGAY_LAP";
+        public const string ID_THUOC = "ID_THUOC";
+    }
 }
