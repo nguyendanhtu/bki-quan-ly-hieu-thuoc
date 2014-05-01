@@ -82,12 +82,12 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_lbl_tong_tien = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_cmd_add = new SIS.Controls.Button.SiSButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.m_lbl_tong_tien = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhap_thuoc)).BeginInit();
             this.m_pnl_control.SuspendLayout();
@@ -513,7 +513,7 @@
             this.label123.AutoSize = true;
             this.label123.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label123.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label123.Location = new System.Drawing.Point(334, 44);
+            this.label123.Location = new System.Drawing.Point(314, 42);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(58, 16);
             this.label123.TabIndex = 111;
@@ -524,7 +524,7 @@
             this.m_lbl_ma_giao_dich.AutoSize = true;
             this.m_lbl_ma_giao_dich.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_ma_giao_dich.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.m_lbl_ma_giao_dich.Location = new System.Drawing.Point(384, 44);
+            this.m_lbl_ma_giao_dich.Location = new System.Drawing.Point(364, 42);
             this.m_lbl_ma_giao_dich.Name = "m_lbl_ma_giao_dich";
             this.m_lbl_ma_giao_dich.Size = new System.Drawing.Size(52, 16);
             this.m_lbl_ma_giao_dich.TabIndex = 112;
@@ -623,6 +623,26 @@
             this.m_pnl_control.Size = new System.Drawing.Size(763, 45);
             this.m_pnl_control.TabIndex = 116;
             // 
+            // m_lbl_tong_tien
+            // 
+            this.m_lbl_tong_tien.AutoSize = true;
+            this.m_lbl_tong_tien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_tong_tien.Location = new System.Drawing.Point(157, 16);
+            this.m_lbl_tong_tien.Name = "m_lbl_tong_tien";
+            this.m_lbl_tong_tien.Size = new System.Drawing.Size(36, 16);
+            this.m_lbl_tong_tien.TabIndex = 17;
+            this.m_lbl_tong_tien.Text = ".......";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(24, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 16);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Tổng tiền hóa đơn  :";
+            // 
             // m_cmd_save
             // 
             this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -681,26 +701,6 @@
             this.m_cmd_add.Size = new System.Drawing.Size(99, 30);
             this.m_cmd_add.TabIndex = 114;
             this.m_cmd_add.Text = "Thêm";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 16);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Tổng tiền hóa đơn  :";
-            // 
-            // m_lbl_tong_tien
-            // 
-            this.m_lbl_tong_tien.AutoSize = true;
-            this.m_lbl_tong_tien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_tong_tien.Location = new System.Drawing.Point(157, 16);
-            this.m_lbl_tong_tien.Name = "m_lbl_tong_tien";
-            this.m_lbl_tong_tien.Size = new System.Drawing.Size(36, 16);
-            this.m_lbl_tong_tien.TabIndex = 17;
-            this.m_lbl_tong_tien.Text = ".......";
             // 
             // f511_gd_nhap_thuoc
             // 

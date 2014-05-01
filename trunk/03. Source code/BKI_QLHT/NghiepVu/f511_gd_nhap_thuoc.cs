@@ -30,7 +30,18 @@ namespace BKI_QLHT
 
         
         #region Public Interface
-        
+        public String gen_Ma_GD()
+        {
+            string username = System.IO.File.ReadAllText(@"..\user_login.txt");
+            string ydate = DateTime.Now.Year.ToString();
+            string mdate = DateTime.Now.Month.ToString();
+            string ddate = DateTime.Now.Day.ToString();
+            string hdate = DateTime.Now.Hour.ToString();
+            string Mdate = DateTime.Now.Minute.ToString();
+            string Sdate = DateTime.Now.Second.ToString();
+            string datetime = ydate + mdate + ddate + hdate + Mdate + Sdate;
+            return "PN_" + username + "_" + datetime;
+        }
         #endregion
 
         #region Member
@@ -44,6 +55,7 @@ namespace BKI_QLHT
             set_define_event();
             m_grv_nhap_thuoc.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             m_grv_nhap_thuoc.DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
+            m_lbl_ma_giao_dich.Text = gen_Ma_GD();
         }
 
         private void set_define_event()
@@ -190,20 +202,32 @@ namespace BKI_QLHT
         private void m_cmd_add_Click(object sender, EventArgs e)
         {
             int n = m_grv_nhap_thuoc.Rows.Add();
+            
             m_grv_nhap_thuoc.Rows[n].Cells[0].Value = n+1;
             m_grv_nhap_thuoc.Rows[n].Cells[1].Value = m_cbo_ten_thuoc.Text;
             m_grv_nhap_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
             m_grv_nhap_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
-            m_grv_nhap_thuoc.Rows[n].Cells[4].Value = string.Format("{0:0,#}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text)) + " " + "VNĐ";
-            m_grv_nhap_thuoc.Rows[n].Cells[5].Value = string.Format("{0:0,#}",CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.ToString())) )+ " " + "VNĐ";
+            m_grv_nhap_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text)) + " " + "VNĐ";
+            m_grv_nhap_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.ToString()))) + " " + "VNĐ";
             tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.ToString());
-            m_lbl_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+            m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+            
             restart_form();
 
         }
 
         
         #endregion
+
+        //private void m_txt_gia_nhap_TextChanged(object sender, EventArgs e)
+        //{
+        //    m_txt_gia_nhap.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text));
+        //    m_txt_gia_nhap.SelectionStart = m_txt_gia_nhap.Text.Length + 1;
+        //}
+
+        
+
+    
 
         
 
