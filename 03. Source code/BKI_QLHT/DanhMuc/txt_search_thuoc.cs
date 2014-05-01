@@ -84,7 +84,7 @@ namespace BKI_QLHT.DanhMuc
                         DataTable dm_thuoc = m_ds.Tables[0];
                         var v_query =
                             from thuoc in dm_thuoc.AsEnumerable()
-                            where (thuoc.Field<string>("ten_thuoc").ToLower().Contains(m_txt_search.Text.Trim().ToLower()))
+                            where (thuoc.Field<string>("display").ToLower().Contains(m_txt_search.Text.Trim().ToLower()))
                             select thuoc;
                         //int row_count = 0;
                         //foreach (var v_thuoc in v_query)
