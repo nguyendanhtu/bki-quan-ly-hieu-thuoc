@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="V_GD_DON_VI_TINH" targetNamespace="http://tempuri.org/V_GD_DON_VI_TINH.xsd" xmlns:mstns="http://tempuri.org/V_GD_DON_VI_TINH.xsd" xmlns="http://tempuri.org/V_GD_DON_VI_TINH.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DS_V_GD_DON_VI_TINH" targetNamespace="http://tempuri.org/DS_V_GD_DON_VI_TINH.xsd" xmlns:mstns="http://tempuri.org/DS_V_GD_DON_VI_TINH.xsd" xmlns="http://tempuri.org/DS_V_GD_DON_VI_TINH.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -37,10 +37,10 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="V_GD_DON_VI_TINH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="V_GD_DON_VI_TINH" msprop:Generator_UserDSName="V_GD_DON_VI_TINH">
+  <xs:element name="DS_V_GD_DON_VI_TINH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_GD_DON_VI_TINH" msprop:Generator_UserDSName="DS_V_GD_DON_VI_TINH">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_GD_DON_VI_TINH" msprop:Generator_TableClassName="V_GD_DON_VI_TINHDataTable" msprop:Generator_TableVarName="tableV_GD_DON_VI_TINH" msprop:Generator_TablePropName="_V_GD_DON_VI_TINH" msprop:Generator_RowDeletingName="V_GD_DON_VI_TINHRowDeleting" msprop:Generator_RowChangingName="V_GD_DON_VI_TINHRowChanging" msprop:Generator_RowEvHandlerName="V_GD_DON_VI_TINHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_GD_DON_VI_TINHRowDeleted" msprop:Generator_UserTableName="V_GD_DON_VI_TINH" msprop:Generator_RowChangedName="V_GD_DON_VI_TINHRowChanged" msprop:Generator_RowEvArgName="V_GD_DON_VI_TINHRowChangeEvent" msprop:Generator_RowClassName="V_GD_DON_VI_TINHRow">
+        <xs:element name="V_GD_DON_VI_TINH" msprop:Generator_TableClassName="V_GD_DON_VI_TINHDataTable" msprop:Generator_TableVarName="tableV_GD_DON_VI_TINH" msprop:Generator_TablePropName="V_GD_DON_VI_TINH" msprop:Generator_RowDeletingName="V_GD_DON_VI_TINHRowDeleting" msprop:Generator_RowChangingName="V_GD_DON_VI_TINHRowChanging" msprop:Generator_RowEvHandlerName="V_GD_DON_VI_TINHRowChangeEventHandler" msprop:Generator_RowDeletedName="V_GD_DON_VI_TINHRowDeleted" msprop:Generator_UserTableName="V_GD_DON_VI_TINH" msprop:Generator_RowChangedName="V_GD_DON_VI_TINHRowChanged" msprop:Generator_RowEvArgName="V_GD_DON_VI_TINHRowChangeEvent" msprop:Generator_RowClassName="V_GD_DON_VI_TINHRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
