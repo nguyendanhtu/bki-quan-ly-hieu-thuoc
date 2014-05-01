@@ -87,6 +87,7 @@
     <Compile Include="US_V_DM_THUOC.cs" />
     <Compile Include="US_V_GD_DON_VI_TINH.cs" />
     <Compile Include="US_V_GD_GIA.cs" />
+    <Compile Include="US_V_GD_GIAO_DICH_DETAIL.cs" />
     <Compile Include="US_V_GD_GIA_2.cs" />
     <Compile Include="US_V_GD_GIA_BAN.cs" />
     <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
