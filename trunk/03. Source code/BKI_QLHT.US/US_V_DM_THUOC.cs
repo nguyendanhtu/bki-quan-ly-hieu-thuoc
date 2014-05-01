@@ -366,6 +366,12 @@ public class US_V_DM_THUOC : US_Object
         v_store_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
         v_store_proc.fillDataSetByCommand(this, ip_ds);
     }
+    public void FillDatasetSearch_1(DS_V_DM_THUOC ip_ds, string ip_str_search)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_BAO_CAO_DM_THUOC_search_1");
+        v_store_proc.addNVarcharInputParam("@STR_SEARCH", ip_str_search);
+        v_store_proc.fillDataSetByCommand(this, ip_ds);
+    }
 
     public void FillDatasetSearchByNhomThuoc(DS_V_DM_THUOC ip_ds, decimal ip_dc_id_nhom_thuoc, string ip_str_tu_khoa)
     {
