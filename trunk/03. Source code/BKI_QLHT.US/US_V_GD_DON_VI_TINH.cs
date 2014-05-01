@@ -8,12 +8,12 @@
 /// </summary>
 
 using System;
-using WebDS;
+using BKI_QLHT;
 using IP.Core.IPCommon;
 using IP.Core.IPUserService;
 using System.Data.SqlClient;
 using System.Data;
-using WebDS;
+using BKI_QLHT.DS;
 
 
 namespace WebUS{
