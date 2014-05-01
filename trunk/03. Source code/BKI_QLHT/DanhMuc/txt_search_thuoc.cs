@@ -15,8 +15,21 @@ namespace BKI_QLHT.DanhMuc
     {
         public System.Data.DataSet m_ds;
 
-        public string displayMember;
-        public string DisplayMember;
+        private string displayMember;
+
+        public string DisplayMember
+        {
+            get { return displayMember; }
+            set { displayMember = value; }
+        }
+        
+        private string text;
+
+        public string Text1
+        {
+            get { return text; }
+            set { text = value; }
+        }
 
         public string valueMember;
         public string ValueMember
@@ -84,7 +97,7 @@ namespace BKI_QLHT.DanhMuc
                         DataTable dm_thuoc = m_ds.Tables[0];
                         var v_query =
                             from thuoc in dm_thuoc.AsEnumerable()
-                            where (thuoc.Field<string>("display").ToLower().Contains(m_txt_search.Text.Trim().ToLower()))
+                            where (thuoc.Field<string>(DisplayMember).ToLower().Contains(m_txt_search.Text.Trim().ToLower()))
                             select thuoc;
                         //int row_count = 0;
                         //foreach (var v_thuoc in v_query)
@@ -158,6 +171,7 @@ namespace BKI_QLHT.DanhMuc
             {
                 if (m_list_suggest.Items.Count > 0)
                 {
+                    this.Text1 = m_list_suggest.Text;
                     m_txt_search.Text = m_list_suggest.Text;
                     m_list_suggest.Visible = false;
                     this.Height = m_txt_search.Height;
@@ -178,6 +192,7 @@ namespace BKI_QLHT.DanhMuc
 
                     if (m_list_suggest.Items.Count > 0)
                     {
+                        this.Text1 = m_list_suggest.Text;
                         m_txt_search.Text = m_list_suggest.Text;
                         m_list_suggest.Visible = false;
                         this.Height = m_txt_search.Height;
