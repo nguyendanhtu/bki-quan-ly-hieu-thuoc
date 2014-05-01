@@ -48,7 +48,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.m_txt_so_luong = new System.Windows.Forms.TextBox();
             this.groupBox_2 = new System.Windows.Forms.GroupBox();
-            this.m_txt_ten_thuoc = new System.Windows.Forms.TextBox();
             this.m_cmd_them = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox_3 = new System.Windows.Forms.GroupBox();
@@ -56,18 +55,19 @@
             this.m_cmd_luu = new System.Windows.Forms.Button();
             this.m_cmd_huy = new System.Windows.Forms.Button();
             this.m_cmd_thoat = new System.Windows.Forms.Button();
-            this.m_cmd_in = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien = new System.Windows.Forms.Label();
+            this.m_cmd_in = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.m_txt_ti_le_chiet_khau = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien_thanh_toan = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.m_fg = new System.Windows.Forms.DataGridView();
+            this.m_grv_quan_ly_ban_thuoc = new System.Windows.Forms.DataGridView();
+            this.m_cbo_ten_thuoc = new System.Windows.Forms.ComboBox();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TEN_THUOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SO_LUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,7 +77,7 @@
             this.groupBox_2.SuspendLayout();
             this.groupBox_3.SuspendLayout();
             this.groupBox_1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grv_quan_ly_ban_thuoc)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -270,10 +270,11 @@
             this.m_txt_so_luong.Name = "m_txt_so_luong";
             this.m_txt_so_luong.Size = new System.Drawing.Size(83, 23);
             this.m_txt_so_luong.TabIndex = 7;
+            this.m_txt_so_luong.TextChanged += new System.EventHandler(this.m_txt_so_luong_TextChanged);
             // 
             // groupBox_2
             // 
-            this.groupBox_2.Controls.Add(this.m_txt_ten_thuoc);
+            this.groupBox_2.Controls.Add(this.m_cbo_ten_thuoc);
             this.groupBox_2.Controls.Add(this.m_cmd_them);
             this.groupBox_2.Controls.Add(this.label11);
             this.groupBox_2.Controls.Add(this.m_txt_so_luong);
@@ -290,14 +291,6 @@
             this.groupBox_2.TabStop = false;
             this.groupBox_2.Text = "Thông tin thuốc";
             // 
-            // m_txt_ten_thuoc
-            // 
-            this.m_txt_ten_thuoc.Location = new System.Drawing.Point(187, 21);
-            this.m_txt_ten_thuoc.Margin = new System.Windows.Forms.Padding(4);
-            this.m_txt_ten_thuoc.Name = "m_txt_ten_thuoc";
-            this.m_txt_ten_thuoc.Size = new System.Drawing.Size(267, 23);
-            this.m_txt_ten_thuoc.TabIndex = 9;
-            // 
             // m_cmd_them
             // 
             this.m_cmd_them.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_them.BackgroundImage")));
@@ -307,6 +300,7 @@
             this.m_cmd_them.Size = new System.Drawing.Size(39, 35);
             this.m_cmd_them.TabIndex = 8;
             this.m_cmd_them.UseVisualStyleBackColor = true;
+            this.m_cmd_them.Click += new System.EventHandler(this.m_cmd_them_Click);
             // 
             // label14
             // 
@@ -359,10 +353,11 @@
             this.groupBox_1.Controls.Add(this.m_txt_tong_tien_thanh_toan);
             this.groupBox_1.Controls.Add(this.label19);
             this.groupBox_1.Controls.Add(this.label15);
-            this.groupBox_1.Controls.Add(this.m_fg);
+            this.groupBox_1.Controls.Add(this.m_grv_quan_ly_ban_thuoc);
+            this.groupBox_1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox_1.Location = new System.Drawing.Point(0, 226);
             this.groupBox_1.Name = "groupBox_1";
-            this.groupBox_1.Size = new System.Drawing.Size(1499, 400);
+            this.groupBox_1.Size = new System.Drawing.Size(1511, 400);
             this.groupBox_1.TabIndex = 10;
             this.groupBox_1.TabStop = false;
             this.groupBox_1.Text = "Chi tiết thông tin thuốc bán";
@@ -400,6 +395,16 @@
             this.m_cmd_thoat.TabIndex = 2;
             this.m_cmd_thoat.UseVisualStyleBackColor = false;
             // 
+            // m_txt_tong_tien
+            // 
+            this.m_txt_tong_tien.AutoSize = true;
+            this.m_txt_tong_tien.ForeColor = System.Drawing.Color.Firebrick;
+            this.m_txt_tong_tien.Location = new System.Drawing.Point(362, 38);
+            this.m_txt_tong_tien.Name = "m_txt_tong_tien";
+            this.m_txt_tong_tien.Size = new System.Drawing.Size(152, 16);
+            this.m_txt_tong_tien.TabIndex = 11;
+            this.m_txt_tong_tien.Text = "....................................";
+            // 
             // m_cmd_in
             // 
             this.m_cmd_in.BackColor = System.Drawing.Color.Transparent;
@@ -410,60 +415,6 @@
             this.m_cmd_in.Size = new System.Drawing.Size(51, 33);
             this.m_cmd_in.TabIndex = 2;
             this.m_cmd_in.UseVisualStyleBackColor = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1043, 59);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 13);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Lưu (Ctrl+S)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1359, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Thoát (Ctrl+X)";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1148, 60);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(79, 13);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Hủy (Ctrl+D)";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1266, 58);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 13);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "In (Ctrl+P)";
-            // 
-            // m_txt_tong_tien
-            // 
-            this.m_txt_tong_tien.AutoSize = true;
-            this.m_txt_tong_tien.ForeColor = System.Drawing.Color.Firebrick;
-            this.m_txt_tong_tien.Location = new System.Drawing.Point(362, 38);
-            this.m_txt_tong_tien.Name = "m_txt_tong_tien";
-            this.m_txt_tong_tien.Size = new System.Drawing.Size(152, 16);
-            this.m_txt_tong_tien.TabIndex = 11;
-            this.m_txt_tong_tien.Text = "....................................";
             // 
             // label22
             // 
@@ -476,6 +427,17 @@
             this.label22.TabIndex = 10;
             this.label22.Text = "Tổng tiền:";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(1043, 59);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 13);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Lưu (Ctrl+S)";
+            // 
             // m_txt_ti_le_chiet_khau
             // 
             this.m_txt_ti_le_chiet_khau.Location = new System.Drawing.Point(163, 35);
@@ -483,6 +445,17 @@
             this.m_txt_ti_le_chiet_khau.Name = "m_txt_ti_le_chiet_khau";
             this.m_txt_ti_le_chiet_khau.Size = new System.Drawing.Size(52, 23);
             this.m_txt_ti_le_chiet_khau.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1359, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Thoát (Ctrl+X)";
             // 
             // label20
             // 
@@ -495,6 +468,17 @@
             this.label20.TabIndex = 8;
             this.label20.Text = "Tỉ lệ chiết khấu";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(1148, 60);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(79, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Hủy (Ctrl+D)";
+            // 
             // m_txt_tong_tien_thanh_toan
             // 
             this.m_txt_tong_tien_thanh_toan.AutoSize = true;
@@ -504,6 +488,17 @@
             this.m_txt_tong_tien_thanh_toan.Size = new System.Drawing.Size(152, 16);
             this.m_txt_tong_tien_thanh_toan.TabIndex = 1;
             this.m_txt_tong_tien_thanh_toan.Text = "....................................";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(1266, 58);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 13);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "In (Ctrl+P)";
             // 
             // label15
             // 
@@ -516,21 +511,32 @@
             this.label15.TabIndex = 1;
             this.label15.Text = "Tổng tiền thanh toán:";
             // 
-            // m_fg
+            // m_grv_quan_ly_ban_thuoc
             // 
-            this.m_fg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.m_fg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.m_grv_quan_ly_ban_thuoc.BackgroundColor = System.Drawing.Color.White;
+            this.m_grv_quan_ly_ban_thuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.m_grv_quan_ly_ban_thuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.TEN_THUOC,
             this.SO_LUONG,
             this.TEN_DON_VI,
             this.GIA_BAN,
             this.THANH_TIEN});
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(3, 102);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1493, 295);
-            this.m_fg.TabIndex = 0;
+            this.m_grv_quan_ly_ban_thuoc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_grv_quan_ly_ban_thuoc.Location = new System.Drawing.Point(3, 102);
+            this.m_grv_quan_ly_ban_thuoc.Name = "m_grv_quan_ly_ban_thuoc";
+            this.m_grv_quan_ly_ban_thuoc.RowHeadersVisible = false;
+            this.m_grv_quan_ly_ban_thuoc.Size = new System.Drawing.Size(1505, 295);
+            this.m_grv_quan_ly_ban_thuoc.TabIndex = 0;
+            // 
+            // m_cbo_ten_thuoc
+            // 
+            this.m_cbo_ten_thuoc.FormattingEnabled = true;
+            this.m_cbo_ten_thuoc.Location = new System.Drawing.Point(187, 19);
+            this.m_cbo_ten_thuoc.Margin = new System.Windows.Forms.Padding(4);
+            this.m_cbo_ten_thuoc.Name = "m_cbo_ten_thuoc";
+            this.m_cbo_ten_thuoc.Size = new System.Drawing.Size(267, 24);
+            this.m_cbo_ten_thuoc.TabIndex = 9;
             // 
             // STT
             // 
@@ -549,23 +555,25 @@
             // 
             this.SO_LUONG.HeaderText = "Số lượng";
             this.SO_LUONG.Name = "SO_LUONG";
+            this.SO_LUONG.Width = 150;
             // 
             // TEN_DON_VI
             // 
             this.TEN_DON_VI.HeaderText = "Tên đơn vị";
             this.TEN_DON_VI.Name = "TEN_DON_VI";
+            this.TEN_DON_VI.Width = 150;
             // 
             // GIA_BAN
             // 
             this.GIA_BAN.HeaderText = "Đơn giá";
             this.GIA_BAN.Name = "GIA_BAN";
-            this.GIA_BAN.Width = 200;
+            this.GIA_BAN.Width = 300;
             // 
             // THANH_TIEN
             // 
             this.THANH_TIEN.HeaderText = "Thành tiền";
             this.THANH_TIEN.Name = "THANH_TIEN";
-            this.THANH_TIEN.Width = 200;
+            this.THANH_TIEN.Width = 350;
             // 
             // uc108_v_gd_giao_dich_detail
             // 
@@ -585,7 +593,7 @@
             this.groupBox_3.PerformLayout();
             this.groupBox_1.ResumeLayout(false);
             this.groupBox_1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grv_quan_ly_ban_thuoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -624,19 +632,19 @@
         private System.Windows.Forms.Button m_cmd_in;
         private System.Windows.Forms.Button m_cmd_huy;
         private System.Windows.Forms.Button m_cmd_luu;
-        private System.Windows.Forms.DataGridView m_fg;
+        private System.Windows.Forms.DataGridView m_grv_quan_ly_ban_thuoc;
+        private System.Windows.Forms.Label m_txt_tong_tien;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox m_txt_ti_le_chiet_khau;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button m_cmd_thoat;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox m_cbo_ten_thuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_THUOC;
         private System.Windows.Forms.DataGridViewTextBoxColumn SO_LUONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_DON_VI;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIA_BAN;
         private System.Windows.Forms.DataGridViewTextBoxColumn THANH_TIEN;
-        private System.Windows.Forms.Label m_txt_tong_tien;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox m_txt_ti_le_chiet_khau;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox m_txt_ten_thuoc;
-        private System.Windows.Forms.Button m_cmd_thoat;
-        private System.Windows.Forms.Label label3;
     }
 }
