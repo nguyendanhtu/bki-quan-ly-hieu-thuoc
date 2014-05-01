@@ -35,13 +35,11 @@ namespace BKI_QLHT.DanhMuc
 
             this.ShowDialog();
         }
-        public void display_for_update(US_DM_NCC_NSX_NHASX ip_m_us_v_dm_nhasx)
+        public void display_for_update(US_DM_NCC_NSX_NHASX ip_us)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            us_object_2_form(ip_m_us_v_dm_nhasx);
-
-            m_us_1 = ip_m_us_v_dm_nhasx;
-            
+            m_us = ip_us;
+            us_object_2_form(m_us);
             this.ShowDialog();
         }
         #endregion
@@ -106,15 +104,16 @@ namespace BKI_QLHT.DanhMuc
         }
         private void form_2_us_object()
         {
-            m_v_us.strDIA_CHI=m_txt_diachi.Text.Trim();
-            m_v_us.strMA_NHASX=m_txt_ma_nhasx.Text.Trim();
-            m_v_us.strSDT=m_txt_sdt.Text.Trim();
-            m_v_us.strTEN_NHASX=m_txt_ten_nhasx.Text.Trim();
+            m_us.strDIA_CHI=m_txt_diachi.Text.Trim();
+            m_us.strMA_NCC=m_txt_ma_nhasx.Text.Trim();
+            m_us.strSDT=m_txt_sdt.Text.Trim();
+            m_us.strTEN_NCC=m_txt_ten_nhasx.Text.Trim();
             
         }
 
         private void save_data()
         {
+            //form_2_us_object();
             switch (m_e_form_mode)
             {
 
@@ -194,6 +193,7 @@ namespace BKI_QLHT.DanhMuc
         #region Events
         private void set_define_events()
         {
+            //this.Load += new System.EventHandler(this.f503_v_dm_thuoc_de_Load);
             this.m_cmd_save.Click += new EventHandler(m_cmd_save_Click);
             this.m_cmd_refresh.Click += new EventHandler(m_cmd_refresh_Click);
             this.m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
