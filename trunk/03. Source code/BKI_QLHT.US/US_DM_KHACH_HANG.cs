@@ -204,5 +204,12 @@ namespace BKI_QLHT
             pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
         }
         #endregion
+
+        public void FillDatasetByIDKhachBanBuon(DS_DM_KHACH_HANG ip_v_ds, decimal ip_v_id_kh)
+        {
+            CStoredProc proc = new CStoredProc("pr_DM_KHACH_HANG_by_id_khach_buon");
+            proc.addDecimalInputParam("@TU_KHOA",ip_v_id_kh);
+            proc.fillDataSetByCommand(this,ip_v_ds);
+        }
     }
 }
