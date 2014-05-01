@@ -469,7 +469,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc v_frm = new f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc();
+                f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc v_frm = new f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc();
                 v_frm.ShowDialog();
             }
             catch (Exception v_e)
