@@ -254,10 +254,10 @@ namespace BKI_QLHT
 
 		#region Private Methods
 		private void format_controls(){
-			CControlFormat.setFormStyle(this);
-			CControlFormat.setC1FlexFormat(m_fg);
-			set_define_events();
-			this.KeyPreview = true;		
+            CControlFormat.setFormStyle(this);
+            CControlFormat.setC1FlexFormat(m_fg);
+            set_define_events();
+            this.KeyPreview = true;		
 		}
 		private void set_initial_form_load(){						
 			m_obj_trans = get_trans_object(m_fg);

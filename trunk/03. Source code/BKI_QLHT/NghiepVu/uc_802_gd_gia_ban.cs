@@ -18,7 +18,7 @@ using C1.Win.C1FlexGrid;
 using IP.Core.IPSystemAdmin;
 
 
-namespace BKI_QLHT.NghiepVu
+namespace BKI_QLHT
 {
     public partial class uc_802_gd_gia_ban : UserControl
     {
@@ -43,6 +43,8 @@ namespace BKI_QLHT.NghiepVu
         ITransferDataRow m_obj_trans;
         DS_V_GD_GIA_BAN m_ds = new DS_V_GD_GIA_BAN();
         US_V_GD_GIA_BAN m_us = new US_V_GD_GIA_BAN();
+        US_GD_GIA_BAN m_us_gd_gia_ban = new US_GD_GIA_BAN();
+        DS_GD_GIA_BAN m_ds_gd_gia_ban = new DS_GD_GIA_BAN();
         #endregion
 
         #region Private Methods
@@ -106,8 +108,8 @@ namespace BKI_QLHT.NghiepVu
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_v_gd_gia)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_v_gd_gia, m_grv_v_gd_gia.Row)) return;
             grid2us_object(m_us, m_grv_v_gd_gia.Row);
-            //	f802_v_gd_gia_ban_DE v_fDE = new f802_v_gd_gia_ban_DE();
-            //	v_fDE.display(m_us);
+            	f802_v_gd_gia_ban_DE v_fDE = new f802_v_gd_gia_ban_DE();
+            	v_fDE.display_for_update(m_us);
             load_data_2_grid();
         }
 
@@ -174,7 +176,7 @@ namespace BKI_QLHT.NghiepVu
         {
             try
             {
-                //this.Close();
+                this.Controls.Clear();
             }
             catch (Exception v_e)
             {
@@ -230,5 +232,10 @@ namespace BKI_QLHT.NghiepVu
             }
         }
         #endregion
+
+        private void m_cmd_exit_Click_1(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+        }
     }
 }
