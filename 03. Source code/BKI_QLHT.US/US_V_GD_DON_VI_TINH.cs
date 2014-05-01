@@ -16,7 +16,8 @@ using System.Data;
 using BKI_QLHT.DS;
 
 
-namespace BKI_QLHT.US{
+namespace BKI_QLHT.US
+{
 
 public class US_V_GD_DON_VI_TINH : US_Object
 {
@@ -252,5 +253,12 @@ public class US_V_GD_DON_VI_TINH : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDatasetByIDThuoc(DS_V_GD_DON_VI_TINH v_ds, decimal ip_dc_id_thuoc)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_GD_DON_VI_TINH_search_by_id_thuoc");
+        v_store_proc.addDecimalInputParam("@IP_ID_THUOC", ip_dc_id_thuoc);
+        v_store_proc.fillDataSetByCommand(this, v_ds);
+    }
+}
 }
