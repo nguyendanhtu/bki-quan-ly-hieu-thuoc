@@ -334,15 +334,12 @@
     public class GD_DON_VI_TINH_THUOC
     {
         public const string ID = "ID";
-        public const string MA_DON_VI = "MA_DON_VI";
         public const string TEN_DON_VI = "TEN_DON_VI";
-        public const string NGAY_AP_DUNG = "NGAY_AP_DUNG";
-        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
-        public const string ID_NGUOI_THEM = "ID_NGUOI_THEM";
         public const string ID_DON_VI_CHA = "ID_DON_VI_CHA";
         public const string QUY_DOI = "QUY_DOI";
         public const string ID_NHOM_DON_VI_TINH = "ID_NHOM_DON_VI_TINH";
     }
+
     public class V_DM_DON_VI_TINH
     {
         public const string ID = "ID";
