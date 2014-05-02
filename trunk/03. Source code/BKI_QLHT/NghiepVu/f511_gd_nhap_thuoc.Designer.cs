@@ -66,7 +66,6 @@
             this.m_txt_so_luong = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.m_cbo_ten_thuoc = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.m_dtp_ngay_nhap = new System.Windows.Forms.DateTimePicker();
@@ -88,6 +87,7 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_cmd_add = new SIS.Controls.Button.SiSButton();
+            this.m_txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhap_thuoc)).BeginInit();
             this.m_pnl_control.SuspendLayout();
@@ -457,14 +457,6 @@
             this.label5.TabIndex = 86;
             this.label5.Text = "Tên thuốc";
             // 
-            // m_cbo_ten_thuoc
-            // 
-            this.m_cbo_ten_thuoc.FormattingEnabled = true;
-            this.m_cbo_ten_thuoc.Location = new System.Drawing.Point(104, 98);
-            this.m_cbo_ten_thuoc.Name = "m_cbo_ten_thuoc";
-            this.m_cbo_ten_thuoc.Size = new System.Drawing.Size(239, 21);
-            this.m_cbo_ten_thuoc.TabIndex = 85;
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -559,6 +551,7 @@
             // 
             // m_grv_nhap_thuoc
             // 
+            this.m_grv_nhap_thuoc.AllowUserToAddRows = false;
             this.m_grv_nhap_thuoc.BackgroundColor = System.Drawing.Color.White;
             this.m_grv_nhap_thuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.m_grv_nhap_thuoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -702,11 +695,23 @@
             this.m_cmd_add.TabIndex = 114;
             this.m_cmd_add.Text = "Thêm";
             // 
+            // m_txt_search_thuoc1
+            // 
+            this.m_txt_search_thuoc1.DisplayMember = null;
+            this.m_txt_search_thuoc1.Location = new System.Drawing.Point(105, 94);
+            this.m_txt_search_thuoc1.Name = "m_txt_search_thuoc1";
+            this.m_txt_search_thuoc1.Size = new System.Drawing.Size(238, 20);
+            this.m_txt_search_thuoc1.str_query = null;
+            this.m_txt_search_thuoc1.TabIndex = 117;
+            this.m_txt_search_thuoc1.Text1 = null;
+            this.m_txt_search_thuoc1.ValueMember = null;
+            // 
             // f511_gd_nhap_thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 579);
+            this.Controls.Add(this.m_txt_search_thuoc1);
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_grv_nhap_thuoc);
             this.Controls.Add(this.m_cmd_add);
@@ -734,7 +739,6 @@
             this.Controls.Add(this.m_txt_so_luong);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.m_cbo_ten_thuoc);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.m_dtp_ngay_nhap);
@@ -789,7 +793,6 @@
         private System.Windows.Forms.TextBox m_txt_so_luong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox m_cbo_ten_thuoc;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker m_dtp_ngay_nhap;
@@ -811,5 +814,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label m_lbl_tong_tien;
         private System.Windows.Forms.Label label2;
+        private DanhMuc.txt_search_thuoc m_txt_search_thuoc1;
     }
 }
