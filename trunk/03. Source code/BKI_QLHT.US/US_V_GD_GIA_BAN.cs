@@ -226,10 +226,10 @@ public class US_V_GD_GIA_BAN : US_Object
     }
     #endregion
 
-    public void FillDatasetbyTenThuoc(DS_V_GD_GIA_BAN ip_ds_v_gd_gia_ban, string ip_v_str_tu_khoa)
+    public void FillDatasetbyTenThuoc(DS_V_GD_GIA_BAN ip_ds_v_gd_gia_ban, decimal ip_dc_id)
     {
         CStoredProc v_stored_proc = new CStoredProc("pr_V_GD_GIA_BAN_search_ten_thuoc");
-        v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_v_str_tu_khoa);
+        v_stored_proc.addDecimalInputParam("@TU_KHOA", ip_dc_id);
         v_stored_proc.fillDataSetByCommand(this, ip_ds_v_gd_gia_ban);
 
     }
