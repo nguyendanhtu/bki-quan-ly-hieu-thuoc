@@ -327,7 +327,9 @@
     <Compile Include="NghiepVu\f802_v_gd_gia_DE.Designer.cs">
       <DependentUpon>f802_v_gd_gia_DE.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\f804_han_su_dung.cs" />
+    <Compile Include="NghiepVu\f804_han_su_dung.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NghiepVu\uc108_v_gd_giao_dich_detail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -526,6 +528,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\uc803_bang_gia.resx">
       <DependentUpon>uc803_bang_gia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\uc804_han_su_dung.resx">
+      <DependentUpon>uc804_han_su_dung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\uc_802_gd_gia_ban.resx">
       <DependentUpon>uc_802_gd_gia_ban.cs</DependentUpon>

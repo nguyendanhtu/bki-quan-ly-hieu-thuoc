@@ -481,6 +481,21 @@ namespace BKI_QLHT
             
         }
 
+        private void m_cmd_quan_ly_thuoc_het_han_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                m_Panel_Content.Controls.Clear();
+                uc804_han_su_dung uc_frm = new uc804_han_su_dung();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
 
 

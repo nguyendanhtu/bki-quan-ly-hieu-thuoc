@@ -116,6 +116,7 @@ namespace BKI_QLHT
             // 
             // m_ribbonControl_Main
             // 
+            this.m_ribbonControl_Main.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -123,9 +124,10 @@ namespace BKI_QLHT
             this.m_ribbonControl_Main.CaptionVisible = true;
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_danhmuc);
-            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_baocao);
+            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_ribbonControl_Main.ForeColor = System.Drawing.Color.Black;
             this.m_ribbonControl_Main.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.applicationButton1,
             this.m_menuitem_hethong,
@@ -182,7 +184,6 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_nghiepvu.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_nghiepvu.TabIndex = 3;
-            this.m_ribbonPanel_nghiepvu.Visible = true;
             // 
             // m_menu_item_gia
             // 
@@ -292,6 +293,7 @@ namespace BKI_QLHT
             this.m_cmd_quan_ly_thuoc_het_han.Name = "m_cmd_quan_ly_thuoc_het_han";
             this.m_cmd_quan_ly_thuoc_het_han.SubItemsExpandWidth = 14;
             this.m_cmd_quan_ly_thuoc_het_han.Text = "Quản lý thuốc hết hạn";
+            this.m_cmd_quan_ly_thuoc_het_han.Click += new System.EventHandler(this.m_cmd_quan_ly_thuoc_het_han_Click_1);
             // 
             // m_cmd_quan_ly_so_du
             // 
@@ -1057,7 +1059,7 @@ namespace BKI_QLHT
             this.bar1.AutoSyncBarCaption = true;
             this.bar1.CloseSingleTab = true;
             this.bar1.Controls.Add(this.panelDockContainer1);
-            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.dockContainerItem1});
@@ -1085,7 +1087,6 @@ namespace BKI_QLHT
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 0;
-            this.panelDockContainer1.Visible = true;
             // 
             // buttonX2
             // 
