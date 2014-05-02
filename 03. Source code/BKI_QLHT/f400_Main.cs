@@ -496,6 +496,11 @@ namespace BKI_QLHT
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
