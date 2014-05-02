@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="BKI_QLHTConnectionString2 (Settings)" DbObjectName="BKI_QLHT.dbo.V_GD_GIA_BAN" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, ID_THUOC, ID_DON_VI_TINH, GIA_BAN, TEN_DON_VI, TEN_THUOC FROM dbo.V_GD_GIA_BAN</CommandText>
+                    <CommandText>SELECT ID, ID_THUOC, ID_DON_VI_TINH, GIA_BAN, TEN_THUOC, TEN_DON_VI, ID_DON_VI_CHA, QUY_DOI FROM dbo.V_GD_GIA_BAN</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -23,8 +23,10 @@
               <Mapping SourceColumn="ID_THUOC" DataSetColumn="ID_THUOC" />
               <Mapping SourceColumn="ID_DON_VI_TINH" DataSetColumn="ID_DON_VI_TINH" />
               <Mapping SourceColumn="GIA_BAN" DataSetColumn="GIA_BAN" />
-              <Mapping SourceColumn="TEN_DON_VI" DataSetColumn="TEN_DON_VI" />
               <Mapping SourceColumn="TEN_THUOC" DataSetColumn="TEN_THUOC" />
+              <Mapping SourceColumn="TEN_DON_VI" DataSetColumn="TEN_DON_VI" />
+              <Mapping SourceColumn="ID_DON_VI_CHA" DataSetColumn="ID_DON_VI_CHA" />
+              <Mapping SourceColumn="QUY_DOI" DataSetColumn="QUY_DOI" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -43,13 +45,6 @@
               <xs:element name="ID_THUOC" msprop:Generator_ColumnVarNameInTable="columnID_THUOC" msprop:Generator_ColumnPropNameInRow="ID_THUOC" msprop:Generator_ColumnPropNameInTable="ID_THUOCColumn" msprop:Generator_UserColumnName="ID_THUOC" type="xs:decimal" />
               <xs:element name="ID_DON_VI_TINH" msprop:Generator_ColumnVarNameInTable="columnID_DON_VI_TINH" msprop:Generator_ColumnPropNameInRow="ID_DON_VI_TINH" msprop:Generator_ColumnPropNameInTable="ID_DON_VI_TINHColumn" msprop:Generator_UserColumnName="ID_DON_VI_TINH" type="xs:decimal" />
               <xs:element name="GIA_BAN" msprop:Generator_ColumnVarNameInTable="columnGIA_BAN" msprop:Generator_ColumnPropNameInRow="GIA_BAN" msprop:Generator_ColumnPropNameInTable="GIA_BANColumn" msprop:Generator_UserColumnName="GIA_BAN" type="xs:decimal" />
-              <xs:element name="TEN_DON_VI" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI" msprop:Generator_ColumnPropNameInTable="TEN_DON_VIColumn" msprop:Generator_UserColumnName="TEN_DON_VI">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -57,6 +52,15 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="TEN_DON_VI" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI" msprop:Generator_ColumnPropNameInTable="TEN_DON_VIColumn" msprop:Generator_UserColumnName="TEN_DON_VI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_DON_VI_CHA" msprop:Generator_ColumnVarNameInTable="columnID_DON_VI_CHA" msprop:Generator_ColumnPropNameInRow="ID_DON_VI_CHA" msprop:Generator_ColumnPropNameInTable="ID_DON_VI_CHAColumn" msprop:Generator_UserColumnName="ID_DON_VI_CHA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="QUY_DOI" msprop:Generator_ColumnVarNameInTable="columnQUY_DOI" msprop:Generator_ColumnPropNameInRow="QUY_DOI" msprop:Generator_ColumnPropNameInTable="QUY_DOIColumn" msprop:Generator_UserColumnName="QUY_DOI" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

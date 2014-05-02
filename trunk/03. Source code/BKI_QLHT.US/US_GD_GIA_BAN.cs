@@ -128,5 +128,12 @@ public class US_GD_GIA_BAN : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+
+    //public void Update_2_dv_cha()
+    //{
+    //    CStoredProc v_store_proc = new CStoredProc("pr_GD_GIA_BAN_Update_CHA");
+    //    v_store_proc.fillDataSetByCommand(this);
+    //}
+}
 }
