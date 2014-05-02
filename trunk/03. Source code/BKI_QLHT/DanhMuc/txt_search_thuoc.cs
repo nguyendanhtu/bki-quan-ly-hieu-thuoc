@@ -145,6 +145,7 @@ namespace BKI_QLHT.DanhMuc
                     this.Width = m_txt_search.Width;
                     m_list_suggest.Visible = true;
                     m_list_suggest.Focus();
+                   // this.Focus();
                 }
                 if (e.KeyData == Keys.Down || e.KeyData == Keys.Up)
                 {
@@ -183,7 +184,8 @@ namespace BKI_QLHT.DanhMuc
                     this.dcID = CIPConvert.ToDecimal(m_list_suggest.SelectedValue);
                     m_list_suggest.Visible = false;
                     this.Height = m_txt_search.Height;
-                    m_list_suggest.Focus();
+
+                    this.OnKeyDown(new KeyEventArgs(Keys.Enter));
                     this.Focus();
                 }
             }
@@ -206,7 +208,8 @@ namespace BKI_QLHT.DanhMuc
                         this.dcID = CIPConvert.ToDecimal(m_list_suggest.SelectedValue);
                         m_list_suggest.Visible = false;
                         this.Height = m_txt_search.Height;
-                        m_list_suggest.Focus();
+                        //m_list_suggest.Focus();
+                        this.OnKeyDown(new KeyEventArgs(Keys.Enter));
                         this.Focus();
                     }
                 }
