@@ -396,6 +396,7 @@ namespace BKI_QLHT
         private void cmd_item_quan_ly_nhap_thuoc_Click(object sender, EventArgs e)
         {
             f511_gd_nhap_thuoc frm = new f511_gd_nhap_thuoc();
+            //test frm = new test();
             frm.ShowDialog();
         }
 
