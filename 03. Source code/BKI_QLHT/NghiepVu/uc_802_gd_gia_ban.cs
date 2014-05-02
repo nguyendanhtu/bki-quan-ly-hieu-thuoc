@@ -108,8 +108,8 @@ namespace BKI_QLHT
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_v_gd_gia)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_v_gd_gia, m_grv_v_gd_gia.Row)) return;
             grid2us_object(m_us, m_grv_v_gd_gia.Row);
-                //f802_v_gd_gia_ban_DE v_fDE = new f802_v_gd_gia_ban_DE();
-                //v_fDE.display_for_update(m_us);
+                f802_v_gd_gia_ban_DE v_fDE = new f802_v_gd_gia_ban_DE();
+                v_fDE.display_for_update(m_us);
             load_data_2_grid();
         }
 
@@ -164,12 +164,21 @@ namespace BKI_QLHT
             try
             {
                 set_initial_form_load();
+                load_data_to_text_box_search();
             }
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
 
+        }
+
+        private void load_data_to_text_box_search()
+        {
+            US_DM_THUOC v_us = new US_DM_THUOC();
+            DS_DM_THUOC v_ds = new DS_DM_THUOC();
+            v_us.FillDataset(v_ds);
+            m_txts_ten_thuoc.load_data_to_list(v_ds,DM_THUOC.TEN_THUOC, DM_THUOC.ID);
         }
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
@@ -236,6 +245,30 @@ namespace BKI_QLHT
         private void m_cmd_exit_Click_1(object sender, EventArgs e)
         {
             this.Controls.Clear();
+        }
+
+        private void m_cmd_refresh_Click(object sender, EventArgs e)
+        {
+            string v_str_tu_khoa = m_txts_ten_thuoc.Text1;
+            US_V_GD_GIA_BAN v_us_v_gd_gia_ban=new US_V_GD_GIA_BAN();
+            DS_V_GD_GIA_BAN v_ds_v_gd_gia_ban=new DS_V_GD_GIA_BAN();
+            v_us_v_gd_gia_ban.FillDatasetbyTenThuoc(v_ds_v_gd_gia_ban,v_str_tu_khoa);
+            m_grv_v_gd_gia.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_v_gd_gia_ban, m_grv_v_gd_gia, m_obj_trans);
+            m_grv_v_gd_gia.Redraw = true;
+
+        }
+
+        private void m_cmd_update_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                update_v_gd_gia_ban();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
     }
 }
