@@ -116,8 +116,8 @@ namespace BKI_QLHT.DanhMuc
                             //}
 
                             m_list_suggest.DataSource = v_dt;
-                            m_list_suggest.DisplayMember = v_dt.Columns[6].ColumnName;
-                            m_list_suggest.ValueMember = v_dt.Columns[0].ColumnName;
+                            m_list_suggest.DisplayMember = DisplayMember;
+                            m_list_suggest.ValueMember = ValueMember;
                         }
                         else
                         {
