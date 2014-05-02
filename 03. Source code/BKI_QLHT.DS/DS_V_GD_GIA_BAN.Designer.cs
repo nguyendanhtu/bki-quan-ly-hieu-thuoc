@@ -287,9 +287,13 @@ namespace BKI_QLHT.DS {
             
             private global::System.Data.DataColumn columnGIA_BAN;
             
+            private global::System.Data.DataColumn columnTEN_THUOC;
+            
             private global::System.Data.DataColumn columnTEN_DON_VI;
             
-            private global::System.Data.DataColumn columnTEN_THUOC;
+            private global::System.Data.DataColumn columnID_DON_VI_CHA;
+            
+            private global::System.Data.DataColumn columnQUY_DOI;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -358,6 +362,14 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TEN_THUOCColumn {
+                get {
+                    return this.columnTEN_THUOC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn TEN_DON_VIColumn {
                 get {
                     return this.columnTEN_DON_VI;
@@ -366,9 +378,17 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TEN_THUOCColumn {
+            public global::System.Data.DataColumn ID_DON_VI_CHAColumn {
                 get {
-                    return this.columnTEN_THUOC;
+                    return this.columnID_DON_VI_CHA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QUY_DOIColumn {
+                get {
+                    return this.columnQUY_DOI;
                 }
             }
             
@@ -409,15 +429,17 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_GD_GIA_BANRow AddV_GD_GIA_BANRow(decimal ID, decimal ID_THUOC, decimal ID_DON_VI_TINH, decimal GIA_BAN, string TEN_DON_VI, string TEN_THUOC) {
+            public V_GD_GIA_BANRow AddV_GD_GIA_BANRow(decimal ID, decimal ID_THUOC, decimal ID_DON_VI_TINH, decimal GIA_BAN, string TEN_THUOC, string TEN_DON_VI, decimal ID_DON_VI_CHA, decimal QUY_DOI) {
                 V_GD_GIA_BANRow rowV_GD_GIA_BANRow = ((V_GD_GIA_BANRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         ID_THUOC,
                         ID_DON_VI_TINH,
                         GIA_BAN,
+                        TEN_THUOC,
                         TEN_DON_VI,
-                        TEN_THUOC};
+                        ID_DON_VI_CHA,
+                        QUY_DOI};
                 rowV_GD_GIA_BANRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowV_GD_GIA_BANRow);
                 return rowV_GD_GIA_BANRow;
@@ -457,8 +479,10 @@ namespace BKI_QLHT.DS {
                 this.columnID_THUOC = base.Columns["ID_THUOC"];
                 this.columnID_DON_VI_TINH = base.Columns["ID_DON_VI_TINH"];
                 this.columnGIA_BAN = base.Columns["GIA_BAN"];
-                this.columnTEN_DON_VI = base.Columns["TEN_DON_VI"];
                 this.columnTEN_THUOC = base.Columns["TEN_THUOC"];
+                this.columnTEN_DON_VI = base.Columns["TEN_DON_VI"];
+                this.columnID_DON_VI_CHA = base.Columns["ID_DON_VI_CHA"];
+                this.columnQUY_DOI = base.Columns["QUY_DOI"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -472,10 +496,14 @@ namespace BKI_QLHT.DS {
                 base.Columns.Add(this.columnID_DON_VI_TINH);
                 this.columnGIA_BAN = new global::System.Data.DataColumn("GIA_BAN", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGIA_BAN);
-                this.columnTEN_DON_VI = new global::System.Data.DataColumn("TEN_DON_VI", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTEN_DON_VI);
                 this.columnTEN_THUOC = new global::System.Data.DataColumn("TEN_THUOC", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTEN_THUOC);
+                this.columnTEN_DON_VI = new global::System.Data.DataColumn("TEN_DON_VI", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEN_DON_VI);
+                this.columnID_DON_VI_CHA = new global::System.Data.DataColumn("ID_DON_VI_CHA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_DON_VI_CHA);
+                this.columnQUY_DOI = new global::System.Data.DataColumn("QUY_DOI", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQUY_DOI);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AllowDBNull = false;
@@ -483,10 +511,10 @@ namespace BKI_QLHT.DS {
                 this.columnID_THUOC.AllowDBNull = false;
                 this.columnID_DON_VI_TINH.AllowDBNull = false;
                 this.columnGIA_BAN.AllowDBNull = false;
-                this.columnTEN_DON_VI.AllowDBNull = false;
-                this.columnTEN_DON_VI.MaxLength = 50;
                 this.columnTEN_THUOC.AllowDBNull = false;
                 this.columnTEN_THUOC.MaxLength = 250;
+                this.columnTEN_DON_VI.AllowDBNull = false;
+                this.columnTEN_DON_VI.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -673,6 +701,17 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TEN_THUOC {
+                get {
+                    return ((string)(this[this.tableV_GD_GIA_BAN.TEN_THUOCColumn]));
+                }
+                set {
+                    this[this.tableV_GD_GIA_BAN.TEN_THUOCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TEN_DON_VI {
                 get {
                     return ((string)(this[this.tableV_GD_GIA_BAN.TEN_DON_VIColumn]));
@@ -684,13 +723,58 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TEN_THUOC {
+            public decimal ID_DON_VI_CHA {
                 get {
-                    return ((string)(this[this.tableV_GD_GIA_BAN.TEN_THUOCColumn]));
+                    try {
+                        return ((decimal)(this[this.tableV_GD_GIA_BAN.ID_DON_VI_CHAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID_DON_VI_CHA\' in table \'V_GD_GIA_BAN\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableV_GD_GIA_BAN.TEN_THUOCColumn] = value;
+                    this[this.tableV_GD_GIA_BAN.ID_DON_VI_CHAColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal QUY_DOI {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableV_GD_GIA_BAN.QUY_DOIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QUY_DOI\' in table \'V_GD_GIA_BAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_GD_GIA_BAN.QUY_DOIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_DON_VI_CHANull() {
+                return this.IsNull(this.tableV_GD_GIA_BAN.ID_DON_VI_CHAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_DON_VI_CHANull() {
+                this[this.tableV_GD_GIA_BAN.ID_DON_VI_CHAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQUY_DOINull() {
+                return this.IsNull(this.tableV_GD_GIA_BAN.QUY_DOIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQUY_DOINull() {
+                this[this.tableV_GD_GIA_BAN.QUY_DOIColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -857,8 +941,10 @@ namespace BKI_QLHT.DS.DS_V_GD_GIA_BANTableAdapters {
             tableMapping.ColumnMappings.Add("ID_THUOC", "ID_THUOC");
             tableMapping.ColumnMappings.Add("ID_DON_VI_TINH", "ID_DON_VI_TINH");
             tableMapping.ColumnMappings.Add("GIA_BAN", "GIA_BAN");
-            tableMapping.ColumnMappings.Add("TEN_DON_VI", "TEN_DON_VI");
             tableMapping.ColumnMappings.Add("TEN_THUOC", "TEN_THUOC");
+            tableMapping.ColumnMappings.Add("TEN_DON_VI", "TEN_DON_VI");
+            tableMapping.ColumnMappings.Add("ID_DON_VI_CHA", "ID_DON_VI_CHA");
+            tableMapping.ColumnMappings.Add("QUY_DOI", "QUY_DOI");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -875,8 +961,8 @@ namespace BKI_QLHT.DS.DS_V_GD_GIA_BANTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, ID_THUOC, ID_DON_VI_TINH, GIA_BAN, TEN_DON_VI, TEN_THUOC FROM dbo.V_GD" +
-                "_GIA_BAN";
+            this._commandCollection[0].CommandText = "SELECT ID, ID_THUOC, ID_DON_VI_TINH, GIA_BAN, TEN_THUOC, TEN_DON_VI, ID_DON_VI_CH" +
+                "A, QUY_DOI FROM dbo.V_GD_GIA_BAN";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
