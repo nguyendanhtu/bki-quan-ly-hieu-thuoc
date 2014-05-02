@@ -504,4 +504,14 @@
         public const string NGAY_LAP = "NGAY_LAP";
         public const string ID_THUOC = "ID_THUOC";
     }
+    public class V_HAN_SU_DUNG
+    {
+        public const string ID = "ID";
+        public const string SO_DU = "SO_DU";
+        public const string ID_DON_VI_THUOC = "ID_DON_VI_THUOC";
+        public const string HAN_SU_DUNG = "HAN_SU_DUNG";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string MOI_NHAT_YN = "MOI_NHAT_YN";
+    }
 }
