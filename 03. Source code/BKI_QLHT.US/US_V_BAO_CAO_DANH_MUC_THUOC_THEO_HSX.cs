@@ -16,7 +16,8 @@ using System.Data;
 using BKI_QLHT.DS;
 
 
-namespace WebUS{
+namespace BKI_QLHT.US
+{
 
 public class US_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX : US_Object
 {

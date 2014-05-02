@@ -68,6 +68,51 @@
         public const string DIA_CHI = "DIA_CHI";
         public const string SDT = "SDT";
     }
+    public class V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX
+    {
+        public const string ID = "ID";
+        public const string TT_HOAT_CHAT = "TT_HOAT_CHAT";
+        public const string TT_THUOC = "TT_THUOC";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string DUONG_DUNG_DANG_DUNG = "DUONG_DUNG_DANG_DUNG";
+        public const string TUYEN_SU_DUNG_5 = "TUYEN_SU_DUNG_5";
+        public const string TUYEN_SU_DUNG_6 = "TUYEN_SU_DUNG_6";
+        public const string TUYEN_SU_DUNG_7 = "TUYEN_SU_DUNG_7";
+        public const string TUYEN_SU_DUNG_8 = "TUYEN_SU_DUNG_8";
+        public const string ID_HANG_SX = "ID_HANG_SX";
+        public const string MA_HANG_SX = "MA_HANG_SX";
+        public const string TEN_HANG_SX = "TEN_HANG_SX";
+    }
+    public class V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX
+    {
+        public const string ID = "ID";
+        public const string TT_HOAT_CHAT = "TT_HOAT_CHAT";
+        public const string TT_THUOC = "TT_THUOC";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string DUONG_DUNG_DANG_DUNG = "DUONG_DUNG_DANG_DUNG";
+        public const string TUYEN_SU_DUNG_5 = "TUYEN_SU_DUNG_5";
+        public const string TUYEN_SU_DUNG_6 = "TUYEN_SU_DUNG_6";
+        public const string TUYEN_SU_DUNG_7 = "TUYEN_SU_DUNG_7";
+        public const string TUYEN_SU_DUNG_8 = "TUYEN_SU_DUNG_8";
+        public const string ID_NUOC_SX = "ID_NUOC_SX";
+        public const string MA_NUOC_SAN_XUAT = "MA_NUOC_SAN_XUAT";
+        public const string TEN_NUOC_SAN_XUAT = "TEN_NUOC_SAN_XUAT";
+    }
+    public class V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC
+    {
+        public const string ID = "ID";
+        public const string TT_HOAT_CHAT = "TT_HOAT_CHAT";
+        public const string TT_THUOC = "TT_THUOC";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string DUONG_DUNG_DANG_DUNG = "DUONG_DUNG_DANG_DUNG";
+        public const string TUYEN_SU_DUNG_5 = "TUYEN_SU_DUNG_5";
+        public const string TUYEN_SU_DUNG_6 = "TUYEN_SU_DUNG_6";
+        public const string TUYEN_SU_DUNG_7 = "TUYEN_SU_DUNG_7";
+        public const string TUYEN_SU_DUNG_8 = "TUYEN_SU_DUNG_8";
+        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string MA_NHA_CUNG_CAP = "MA_NHA_CUNG_CAP";
+        public const string TEN_NHA_CUNG_CAP = "TEN_NHA_CUNG_CAP";
+    }
 
     public class V_DM_NHASX
     {
