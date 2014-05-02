@@ -22,6 +22,13 @@ namespace BKI_QLHT.DanhMuc
             get { return displayMember; }
             set { displayMember = value; }
         }
+        private decimal DcID;
+
+        public decimal dcID
+        {
+            get { return DcID; }
+            set { DcID = value; }
+        }
         
         private string text;
 
@@ -173,6 +180,7 @@ namespace BKI_QLHT.DanhMuc
                 {
                     this.Text1 = m_list_suggest.Text;
                     m_txt_search.Text = m_list_suggest.Text;
+                    this.dcID = CIPConvert.ToDecimal(m_list_suggest.SelectedValue);
                     m_list_suggest.Visible = false;
                     this.Height = m_txt_search.Height;
                     m_list_suggest.Focus();
@@ -194,6 +202,7 @@ namespace BKI_QLHT.DanhMuc
                     {
                         this.Text1 = m_list_suggest.Text;
                         m_txt_search.Text = m_list_suggest.Text;
+                        this.dcID = CIPConvert.ToDecimal(m_list_suggest.SelectedValue);
                         m_list_suggest.Visible = false;
                         this.Height = m_txt_search.Height;
                         m_list_suggest.Focus();
