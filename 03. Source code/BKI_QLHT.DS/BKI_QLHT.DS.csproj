@@ -278,6 +278,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_GD_GIA_BAN.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_HAN_SU_DUNG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_HAN_SU_DUNG.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_HT_CONTROL_IN_FORM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -777,6 +782,17 @@
     </None>
     <None Include="DS_V_GD_GIA_BAN.xss">
       <DependentUpon>DS_V_GD_GIA_BAN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HAN_SU_DUNG.xsc">
+      <DependentUpon>DS_V_HAN_SU_DUNG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HAN_SU_DUNG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_HAN_SU_DUNG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_HAN_SU_DUNG.xss">
+      <DependentUpon>DS_V_HAN_SU_DUNG.xsd</DependentUpon>
     </None>
     <None Include="DS_V_HT_CONTROL_IN_FORM.xsc">
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
