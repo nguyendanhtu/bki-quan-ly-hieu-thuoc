@@ -152,7 +152,7 @@ namespace BKI_QLHT
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(115, 28);
             this.m_cmd_xuat_excel.TabIndex = 21;
             this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
-            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
+            //this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
             // 
             // m_cmd_exit
             // 
@@ -307,10 +307,11 @@ namespace BKI_QLHT
 		#region Private Methods
         private void load_data_2_lbl()
         {
-            CAppContext_201 v_cac = new CAppContext_201();
-
-
-            //m_lbl_nguoi_lam_bc.Text = v_cac.getCurrentUserName();
+            Decimal CUI = CAppContext_201.getCurrentUserID();
+            IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG v_us=new IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG(CUI);
+            m_lbl_ngay_lam_bc.ForeColor = Color.Red;
+            m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
+            m_lbl_nguoi_lam_bc.Text = v_us.strTEN.Trim();
             m_lbl_ngay_lam_bc.Text = DateTime.Now.Date.ToShortDateString();
         }
         private void load_custom_source_2_m_txt_tim_kiem()
@@ -460,6 +461,7 @@ namespace BKI_QLHT
                 load_data_2_lbl();
                 //m_lbl_ngay_lam_bc.text = DateTime.Today;
                 load_custom_source_2_m_txt_tim_kiem();
+               
 			}
 			catch (Exception v_e){
 				CSystemLog_301.ExceptionHandle(v_e);

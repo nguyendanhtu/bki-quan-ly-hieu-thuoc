@@ -245,6 +245,7 @@ namespace BKI_QLHT
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(115, 28);
             this.m_cmd_xuat_excel.TabIndex = 22;
             this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
+            //this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
             // 
             // f409_bao_cao_danh_muc_thuoc_theo_hsx
             // 
@@ -303,10 +304,11 @@ namespace BKI_QLHT
 		#region Private Methods
         private void load_data_2_lbl()
         {
-            CAppContext_201 v_cac = new CAppContext_201();
-
-
-            //m_lbl_nguoi_lam_bc.Text = v_cac.getCurrentUserName();
+            Decimal CUI = CAppContext_201.getCurrentUserID();
+            IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG v_us = new IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG(CUI);
+            m_lbl_ngay_lam_bc.ForeColor = Color.Red;
+            m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
+            m_lbl_nguoi_lam_bc.Text = v_us.strTEN.Trim();
             m_lbl_ngay_lam_bc.Text = DateTime.Now.Date.ToShortDateString();
         }
         private void load_custom_source_2_m_txt_tim_kiem()
@@ -356,7 +358,7 @@ namespace BKI_QLHT
         {
             m_v_ds.Clear();
             //m_v_ds = new DS_V_DM_NHASX();
-            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "");
+            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds,"");
             else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
             //m_us.FillDataset(m_ds);
             var v_str_search = m_txt_tim_kiem.Text.Trim();
