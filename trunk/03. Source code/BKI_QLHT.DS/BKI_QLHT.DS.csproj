@@ -184,10 +184,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS_V_BAO_CAO_DANH_MUC_THEO_HSX.Designer.cs">
+    <Compile Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsd</DependentUpon>
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -575,16 +575,16 @@
     <None Include="DS_HT_USER_GROUP.xss">
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
     </None>
-    <None Include="DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsc">
-      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsd</DependentUpon>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.xsc">
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.xsd</DependentUpon>
     </None>
-    <None Include="DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsd">
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DS_V_BAO_CAO_DANH_MUC_THEO_HSX.Designer.cs</LastGenOutput>
+      <LastGenOutput>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xss">
-      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsd</DependentUpon>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.xss">
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.xsd</DependentUpon>
     </None>
     <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.xsc">
       <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.xsd</DependentUpon>
