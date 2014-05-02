@@ -76,6 +76,9 @@
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
     <Compile Include="US_HT_USER_GROUP.cs" />
+    <Compile Include="US_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.cs" />
+    <Compile Include="US_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.cs" />
+    <Compile Include="US_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.cs" />
     <Compile Include="US_V_DM_BAC_SY.cs" />
     <Compile Include="US_V_DM_DON_VI.cs" />
     <Compile Include="US_V_DM_DON_VI_TINH.cs" />
