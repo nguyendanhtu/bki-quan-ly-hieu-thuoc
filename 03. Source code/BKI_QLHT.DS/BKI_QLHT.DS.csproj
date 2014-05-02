@@ -184,6 +184,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_BAO_CAO_DANH_MUC_THEO_HSX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_DM_BAC_SY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -559,6 +574,39 @@
     </None>
     <None Include="DS_HT_USER_GROUP.xss">
       <DependentUpon>DS_HT_USER_GROUP.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsc">
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BAO_CAO_DANH_MUC_THEO_HSX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xss">
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THEO_HSX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.xsc">
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.xss">
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xsc">
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xss">
+      <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xsd</DependentUpon>
     </None>
     <None Include="DS_V_DM_BAC_SY.xsc">
       <DependentUpon>DS_V_DM_BAC_SY.xsd</DependentUpon>
