@@ -57,7 +57,7 @@ namespace BKI_QLHT
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_grv_v_gd_gia);
-            load_data_2_grid();
+            //load_data_2_grid();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -175,10 +175,10 @@ namespace BKI_QLHT
 
         private void load_data_to_text_box_search()
         {
-            US_DM_THUOC v_us = new US_DM_THUOC();
-            DS_DM_THUOC v_ds = new DS_DM_THUOC();
+            US_V_DM_THUOC v_us = new US_V_DM_THUOC();
+            DS_V_DM_THUOC v_ds = new DS_V_DM_THUOC();
             v_us.FillDataset(v_ds);
-            m_txts_ten_thuoc.load_data_to_list(v_ds,DM_THUOC.TEN_THUOC, DM_THUOC.ID);
+            m_txts_ten_thuoc.load_data_to_list(v_ds,V_DM_THUOC.DISPLAY, V_DM_THUOC.ID);
         }
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
@@ -249,26 +249,30 @@ namespace BKI_QLHT
 
         private void m_cmd_refresh_Click(object sender, EventArgs e)
         {
-            string v_str_tu_khoa = m_txts_ten_thuoc.Text1;
-            US_V_GD_GIA_BAN v_us_v_gd_gia_ban=new US_V_GD_GIA_BAN();
-            DS_V_GD_GIA_BAN v_ds_v_gd_gia_ban=new DS_V_GD_GIA_BAN();
-            v_us_v_gd_gia_ban.FillDatasetbyTenThuoc(v_ds_v_gd_gia_ban,v_str_tu_khoa);
+            load_data_to_text_box_search();
+        }
+
+        private void m_txts_ten_thuoc_KeyDown(object sender, KeyEventArgs e)
+        {
+            decimal dc_id = m_txts_ten_thuoc.dcID;
+            US_V_GD_GIA_BAN v_us_v_gd_gia_ban = new US_V_GD_GIA_BAN();
+            DS_V_GD_GIA_BAN v_ds_v_gd_gia_ban = new DS_V_GD_GIA_BAN();
+            v_us_v_gd_gia_ban.FillDatasetbyTenThuoc(v_ds_v_gd_gia_ban,dc_id);
             m_grv_v_gd_gia.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds_v_gd_gia_ban, m_grv_v_gd_gia, m_obj_trans);
             m_grv_v_gd_gia.Redraw = true;
-
         }
 
-        private void m_cmd_update_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                update_v_gd_gia_ban();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //private void m_cmd_update_Click_1(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        update_v_gd_gia_ban();
+        //    }
+        //    catch (Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
     }
 }

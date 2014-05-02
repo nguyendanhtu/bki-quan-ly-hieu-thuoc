@@ -95,7 +95,6 @@
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
-            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click_1);
             // 
             // m_cmd_exit
             // 
@@ -159,6 +158,11 @@
             // 
             // m_txts_ten_thuoc
             // 
+            this.m_txts_ten_thuoc.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.m_txts_ten_thuoc.DisplayMember = null;
             this.m_txts_ten_thuoc.Location = new System.Drawing.Point(209, 92);
             this.m_txts_ten_thuoc.Name = "m_txts_ten_thuoc";
@@ -167,6 +171,7 @@
             this.m_txts_ten_thuoc.TabIndex = 25;
             this.m_txts_ten_thuoc.Text1 = null;
             this.m_txts_ten_thuoc.ValueMember = null;
+            this.m_txts_ten_thuoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txts_ten_thuoc_KeyDown);
             // 
             // uc_802_gd_gia_ban
             // 
