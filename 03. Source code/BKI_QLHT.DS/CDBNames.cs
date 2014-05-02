@@ -10,6 +10,15 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_GD_DON_VI_TINH_THUOC
+    {
+        public const string ID = "ID";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string ID_NHOM_DON_VI_TINH = "ID_NHOM_DON_VI_TINH";
+        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
+        public const string GIA_BAN = "GIA_BAN";
+        public const string ID_THUOC = "ID_THUOC";
+    }
 
 
     public class HT_FORM
