@@ -118,7 +118,32 @@ namespace BKI_QLHT.NghiepVu
             m_cbo_ten_bac_sy.SelectedIndex = 0;
         }
 
-        
+        private void m_cbo_don_vi_tinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            load_cbo_don_vi_tinh();
+        }
+
+        private void txt_search_thuoc1_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Enter)
+                    load_cbo_don_vi_tinh();
+                load_don_gia();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_txt_ti_le_chiet_khau_TextChanged(object sender, EventArgs e)
+        {
+            decimal v_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
+            decimal tong_tien_thanh_toan = tong_tien - (tong_tien * v_ti_le_chiet_khau) / 100;
+            m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
+        }
         private void load_cbo_ten_khach_hang()
         {
             US_DM_KHACH_HANG v_us = new US_DM_KHACH_HANG();
@@ -215,36 +240,7 @@ namespace BKI_QLHT.NghiepVu
         }
         #endregion
 
-        private void m_cbo_don_vi_tinh_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            load_cbo_don_vi_tinh();
-        }
-
-        private void txt_search_thuoc1_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if(e.KeyData == Keys.Enter)
-                    load_cbo_don_vi_tinh();
-                    load_don_gia();
-            }
-            catch (Exception v_e)
-            {
-
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_txt_ti_le_chiet_khau_TextChanged(object sender, EventArgs e)
-        {
-            decimal v_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
-            decimal tong_tien_thanh_toan = tong_tien - (tong_tien * v_ti_le_chiet_khau)/100;
-            m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
-        }
-
-  
-
-        }
+     }
 
 
 
