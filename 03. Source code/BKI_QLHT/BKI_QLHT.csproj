@@ -336,6 +336,12 @@
     <Compile Include="NghiepVu\uc108_v_gd_giao_dich_detail.Designer.cs">
       <DependentUpon>uc108_v_gd_giao_dich_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\uc803_bang_gia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\uc803_bang_gia.Designer.cs">
+      <DependentUpon>uc803_bang_gia.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\uc_802_gd_gia_ban.cs">
       <SubType>UserControl</SubType>
     </Compile>
