@@ -78,6 +78,18 @@ namespace BKI_QLHT
                     break;
                 case DataEntryFormMode.UpdateDataState:
                     m_us_gd_gia_ban.Update();
+                    US_V_GD_GIA_BAN v_v_gd_gia_ban = new US_V_GD_GIA_BAN(m_us_gd_gia_ban.dcID);
+                    for(int i=1;i<=3;i++)
+                    {
+                    if (v_v_gd_gia_ban.dcID_DON_VI_CHA != null)
+                    {
+                        decimal v_gia_ban = m_us_gd_gia_ban.dcGIA_BAN;
+                        m_us_gd_gia_ban = new US_GD_GIA_BAN(v_v_gd_gia_ban.dcID_DON_VI_CHA);
+                        m_us_gd_gia_ban.dcGIA_BAN = v_gia_ban * v_v_gd_gia_ban.dcQUY_DOI;
+                        m_us_gd_gia_ban.Update();
+                        v_v_gd_gia_ban = new US_V_GD_GIA_BAN(m_us_gd_gia_ban.dcID);
+                    }
+                    }
                     this.Close();
                     break;
                 case DataEntryFormMode.ViewDataState:
