@@ -37,7 +37,8 @@
             this.m_grv_v_gd_gia = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.m_cmd_refresh = new SIS.Controls.Button.SiSButton();
+            this.m_txts_ten_thuoc = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.m_pnl_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_v_gd_gia)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +95,7 @@
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
             this.m_cmd_update.Text = "&Sửa";
+            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click_1);
             // 
             // m_cmd_exit
             // 
@@ -134,24 +136,44 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(128, 97);
+            this.label2.Location = new System.Drawing.Point(129, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 24;
             this.label2.Text = "Tên thuốc :";
             // 
-            // textBox1
+            // m_cmd_refresh
             // 
-            this.textBox1.Location = new System.Drawing.Point(222, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 20);
-            this.textBox1.TabIndex = 25;
+            this.m_cmd_refresh.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_refresh.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_refresh.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_refresh.ImageIndex = 9;
+            this.m_cmd_refresh.ImageList = this.ImageList;
+            this.m_cmd_refresh.Location = new System.Drawing.Point(506, 92);
+            this.m_cmd_refresh.Name = "m_cmd_refresh";
+            this.m_cmd_refresh.Size = new System.Drawing.Size(88, 22);
+            this.m_cmd_refresh.TabIndex = 26;
+            this.m_cmd_refresh.Text = "Refresh";
+            this.m_cmd_refresh.Click += new System.EventHandler(this.m_cmd_refresh_Click);
+            // 
+            // m_txts_ten_thuoc
+            // 
+            this.m_txts_ten_thuoc.DisplayMember = null;
+            this.m_txts_ten_thuoc.Location = new System.Drawing.Point(209, 92);
+            this.m_txts_ten_thuoc.Name = "m_txts_ten_thuoc";
+            this.m_txts_ten_thuoc.Size = new System.Drawing.Size(276, 20);
+            this.m_txts_ten_thuoc.str_query = null;
+            this.m_txts_ten_thuoc.TabIndex = 25;
+            this.m_txts_ten_thuoc.Text1 = null;
+            this.m_txts_ten_thuoc.ValueMember = null;
             // 
             // uc_802_gd_gia_ban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.m_cmd_refresh);
+            this.Controls.Add(this.m_txts_ten_thuoc);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_pnl_control);
@@ -174,7 +196,8 @@
         private C1.Win.C1FlexGrid.C1FlexGrid m_grv_v_gd_gia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private DanhMuc.txt_search_thuoc m_txts_ten_thuoc;
+        internal SIS.Controls.Button.SiSButton m_cmd_refresh;
 
     }
 }
