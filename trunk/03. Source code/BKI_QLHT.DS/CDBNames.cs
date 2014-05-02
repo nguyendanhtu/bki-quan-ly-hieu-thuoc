@@ -392,49 +392,25 @@
     }
     public class V_GD_GIAO_DICH_DETAIL
     {
-        public const string ID_NGUOI_SU_DUNG = "ID_NGUOI_SU_DUNG";
-        public const string TEN_TRUY_CAP = "TEN_TRUY_CAP";
-        public const string ID_DON_VI_TINH_THUOC = "ID_DON_VI_TINH_THUOC";
-        public const string TEN_DON_VI = "TEN_DON_VI";
-        public const string ID_TRANG_THAI = "ID_TRANG_THAI";
-        public const string QUY_DOI = "QUY_DOI";
-        public const string ID_DON_VI_CHA = "ID_DON_VI_CHA";
-        public const string ID_THUOC_DM_THUOC = "ID_THUOC_DM_THUOC";
-        public const string ID_THUOC_GIA = "ID_THUOC_GIA";
-        public const string GIA = "GIA";
-        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
-        public const string ID_TRANG_THAI_GIA = "ID_TRANG_THAI_GIA";
-        public const string ID_DON_VI_GIA = "ID_DON_VI_GIA";
-        public const string ID_GD_GIA = "ID_GD_GIA";
-        public const string TEN_THUOC = "TEN_THUOC";
-        public const string ID_DM_KHACH_HANG = "ID_DM_KHACH_HANG";
-        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
-        public const string DIA_CHI_DM_KHACH_HANG = "DIA_CHI_DM_KHACH_HANG";
-        public const string MA_SO_THUE = "MA_SO_THUE";
-        public const string ID_NHOM_KHACH_HANG = "ID_NHOM_KHACH_HANG";
-        public const string ID_DM_NHOM_KHACH_HANG = "ID_DM_NHOM_KHACH_HANG";
-        public const string TEN_NHOM = "TEN_NHOM";
         public const string ID = "ID";
         public const string ID_GIAO_DICH = "ID_GIAO_DICH";
         public const string ID_THUOC = "ID_THUOC";
         public const string ID_DON_VI_THUOC = "ID_DON_VI_THUOC";
         public const string SO_LUONG = "SO_LUONG";
         public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string ID_NUOC_SX = "ID_NUOC_SX";
+        public const string ID_HANG_SX = "ID_HANG_SX";
         public const string HAN_SU_DUNG = "HAN_SU_DUNG";
+        public const string GIA = "GIA";
+        public const string ID_V_DM_THUOC = "ID_V_DM_THUOC";
+        public const string DISPLAY = "DISPLAY";
+        public const string ID_DON_VI_TINH_THUOC = "ID_DON_VI_TINH_THUOC";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string GD_GIA_BAN_ID_THUOC = "GD_GIA_BAN_ID_THUOC";
         public const string GIA_BAN = "GIA_BAN";
-        public const string ID_DM_BAC_SY = "ID_DM_BAC_SY";
-        public const string HO_TEN = "HO_TEN";
-        public const string BENH_VIEN = "BENH_VIEN";
-        public const string DIEN_THOAI = "DIEN_THOAI";
-        public const string ID_GD_GIAO_DICH = "ID_GD_GIAO_DICH";
-        public const string TEN_GIAO_DICH = "TEN_GIAO_DICH";
-        public const string MA_GIAO_DICH = "MA_GIAO_DICH";
-        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
-        public const string ID_NGUOI_THUC_HIEN = "ID_NGUOI_THUC_HIEN";
-        public const string ID_KHACH_HANG = "ID_KHACH_HANG";
-        public const string ID_BAC_SY = "ID_BAC_SY";
-        public const string ID_LOAI_GIAO_DICH = "ID_LOAI_GIAO_DICH";
+        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
     }
+
     public class GD_GIA_BAN
     {
         public const string ID = "ID";
