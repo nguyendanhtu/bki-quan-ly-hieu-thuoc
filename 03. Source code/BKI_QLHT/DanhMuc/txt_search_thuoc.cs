@@ -184,6 +184,7 @@ namespace BKI_QLHT.DanhMuc
                     m_list_suggest.Visible = false;
                     this.Height = m_txt_search.Height;
                     m_list_suggest.Focus();
+                    this.Focus();
                 }
             }
             catch (System.Exception v_e)
@@ -206,6 +207,7 @@ namespace BKI_QLHT.DanhMuc
                         m_list_suggest.Visible = false;
                         this.Height = m_txt_search.Height;
                         m_list_suggest.Focus();
+                        this.Focus();
                     }
                 }
             }
