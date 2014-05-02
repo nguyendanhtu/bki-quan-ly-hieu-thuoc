@@ -485,10 +485,10 @@ namespace BKI_QLHT
         {
             try
             {
-                m_Panel_Content.Controls.Clear();
-                uc804_han_su_dung uc_frm = new uc804_han_su_dung();
-                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
-                m_Panel_Content.Controls.Add(uc_frm);
+                //m_Panel_Content.Controls.Clear();
+                //uc804_han_su_dung uc_frm = new uc804_han_su_dung();
+                //uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                //m_Panel_Content.Controls.Add(uc_frm);
             }
             catch (Exception v_e)
             {
