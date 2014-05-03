@@ -140,6 +140,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_GD_GIAO_DICH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_GD_GIAO_DICH_DETAIL.cs">
+      <DependentUpon>DS_GD_GIAO_DICH_DETAIL.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DS_GD_GIAO_DICH_DETAIL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
