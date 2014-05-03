@@ -193,5 +193,13 @@ public class US_V_DM_NCC_NSX_NHASX_1 : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public void FillDatasetSearch(DS.DS_V_DM_NCC_NSX_NHASX_1 ip_ds_v_dm_ncc, string ip_tu_khoa,decimal ip_id_loai_dm)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_V_DM_NCC_NSX_NHASX_1_Search");
+        v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_tu_khoa);
+        v_stored_proc.addDecimalInputParam("@id_loai_dm", ip_id_loai_dm);
+        v_stored_proc.fillDataSetByCommand(this, ip_ds_v_dm_ncc);
+    }
+}
 }
