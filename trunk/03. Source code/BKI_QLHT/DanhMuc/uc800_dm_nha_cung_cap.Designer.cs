@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // uc800_dm_nha_cung_cap
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "uc800_dm_nha_cung_cap";
+            this.Size = new System.Drawing.Size(761, 398);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
