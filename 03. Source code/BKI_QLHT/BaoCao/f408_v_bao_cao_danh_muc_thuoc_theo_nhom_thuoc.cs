@@ -301,6 +301,7 @@ namespace BKI_QLHT
         DS_DM_THUOC m_ds = new DS_DM_THUOC();
         private const String m_str_tim_kiem = "Nhập nhóm thuốc, tên thuốc cần tìm";
         
+        
 
 		#endregion
 
@@ -313,6 +314,7 @@ namespace BKI_QLHT
             m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.Text = v_us.strTEN.Trim();
             m_lbl_ngay_lam_bc.Text = DateTime.Now.Date.ToShortDateString();
+            
         }
         private void load_custom_source_2_m_txt_tim_kiem()
         {
@@ -440,11 +442,19 @@ namespace BKI_QLHT
 		}
         private void export_2_excel()
         {
+            DS_DM_DON_VI_KINH_DOANH v_ds = new DS_DM_DON_VI_KINH_DOANH();
+            US_DM_DON_VI_KINH_DOANH v_us = new US_DM_DON_VI_KINH_DOANH();
+            v_us.FillDataset(v_ds);
+            v_us.DataRow2Me((DataRow)v_ds.DM_DON_VI_KINH_DOANH.Rows[0]);
+            String m_str_ten_don_vi = v_us.strTEN_DAY_DU;
+            String m_str_dia_chi = v_us.strDIA_CHI;
+            String m_str_so_dien_thoai =v_us.strSDT;
             CExcelReport v_obj_excel_rpt = new CExcelReport("f408_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.xlsx", 9, 1);
-            //người làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<nguoi_xuat_bao_cao>", m_lbl_nguoi_lam_bc.Text.Trim());
-            //ngày làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<ngay_xuat_bao_cao>",m_lbl_ngay_lam_bc.Text.Trim());
+            v_obj_excel_rpt.AddFindAndReplaceItem("<ten_don_vi>",m_str_ten_don_vi);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<dia_chi>", m_str_dia_chi);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<so_dien_thoai>",m_str_so_dien_thoai);
             v_obj_excel_rpt.FindAndReplace(false);
             v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 1, m_fg.Cols.Count - 1, true);
         }
