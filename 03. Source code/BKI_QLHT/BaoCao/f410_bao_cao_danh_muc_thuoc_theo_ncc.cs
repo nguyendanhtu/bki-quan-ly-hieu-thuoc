@@ -294,7 +294,7 @@ namespace BKI_QLHT
 		#region Members
         ITransferDataRow m_obj_trans;
         DataEntryFormMode m_e_form_mode = DataEntryFormMode.ViewDataState;
-        private const String m_str_tim_kiem = "Nhập nhà cung cấp sản xuất, tên thuốc cần tìm";
+        private const String m_str_tim_kiem = "Nhập nhà cung cấp thuốc cần tìm";
 		DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC m_v_ds = new DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC();
 		US_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC m_v_us = new US_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC();
 		#endregion
