@@ -129,7 +129,7 @@ namespace BKI_QLHT
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_dm_nha_cung_cap, m_grv_dm_nha_cung_cap.Row)) return;
             grid2us_object(m_us, m_grv_dm_nha_cung_cap.Row);
             f800_dm_nha_cung_cap_DE v_fDE = new f800_dm_nha_cung_cap_DE();
-            v_fDE.display_for_update(m_us);
+            //v_fDE.display_for_update(m_us);
             load_data_2_grid();
         }
 

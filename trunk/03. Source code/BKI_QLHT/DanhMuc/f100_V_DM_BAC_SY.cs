@@ -567,7 +567,7 @@ namespace BKI_QLHT
             string v_str_tu_khoa = m_txt_tim_kiem.Text.Trim();
             US_V_DM_BAC_SY v_us_v_dm_bac_sy = new US_V_DM_BAC_SY();
             DS_V_DM_BAC_SY v_ds_v_dm_bac_sy = new DS_V_DM_BAC_SY();
-            v_us_v_dm_bac_sy.FillDatasetSearch(v_ds_v_dm_bac_sy, v_str_tu_khoa);
+            //v_us_v_dm_bac_sy.FillDatasetSearch(v_ds_v_dm_bac_sy, v_str_tu_khoa);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds_v_dm_bac_sy, m_fg, m_obj_trans);
             m_fg.Redraw = true;

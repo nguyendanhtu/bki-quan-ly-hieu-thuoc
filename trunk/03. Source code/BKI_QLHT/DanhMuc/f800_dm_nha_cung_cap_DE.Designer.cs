@@ -206,7 +206,6 @@
             this.Name = "f800_dm_nha_cung_cap_DE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin nhà cung cấp";
-            this.Load += new System.EventHandler(this.f800_dm_nha_cung_cap_DE_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
