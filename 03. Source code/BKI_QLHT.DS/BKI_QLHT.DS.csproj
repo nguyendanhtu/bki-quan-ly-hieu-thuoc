@@ -218,6 +218,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_DON_VI_TINH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_HANG_SX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_HANG_SX.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_DM_KHACH_HANG.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -251,6 +256,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_NSX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_DM_NUOC_SX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_NUOC_SX.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_V_DM_THUOC.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -660,6 +670,17 @@
     <None Include="DS_V_DM_DON_VI_TINH.xss">
       <DependentUpon>DS_V_DM_DON_VI_TINH.xsd</DependentUpon>
     </None>
+    <None Include="DS_V_DM_HANG_SX.xsc">
+      <DependentUpon>DS_V_DM_HANG_SX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_HANG_SX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_HANG_SX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_HANG_SX.xss">
+      <DependentUpon>DS_V_DM_HANG_SX.xsd</DependentUpon>
+    </None>
     <None Include="DS_V_DM_KHACH_HANG.xsc">
       <DependentUpon>DS_V_DM_KHACH_HANG.xsd</DependentUpon>
     </None>
@@ -725,6 +746,17 @@
     </None>
     <None Include="DS_V_DM_NSX.xss">
       <DependentUpon>DS_V_DM_NSX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NUOC_SX.xsc">
+      <DependentUpon>DS_V_DM_NUOC_SX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_NUOC_SX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_NUOC_SX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_NUOC_SX.xss">
+      <DependentUpon>DS_V_DM_NUOC_SX.xsd</DependentUpon>
     </None>
     <None Include="DS_V_DM_THUOC.xsc">
       <DependentUpon>DS_V_DM_THUOC.xsd</DependentUpon>
