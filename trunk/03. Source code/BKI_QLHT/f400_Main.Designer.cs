@@ -141,7 +141,7 @@ namespace BKI_QLHT
             this.m_ribbonControl_Main.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.m_ribbonControl_Main.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.qatCustomizeItem1});
-            this.m_ribbonControl_Main.Size = new System.Drawing.Size(813, 162);
+            this.m_ribbonControl_Main.Size = new System.Drawing.Size(813, 142);
             this.m_ribbonControl_Main.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_ribbonControl_Main.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.m_ribbonControl_Main.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -175,7 +175,7 @@ namespace BKI_QLHT
             this.m_ribbonPanel_danhmuc.Location = new System.Drawing.Point(0, 53);
             this.m_ribbonPanel_danhmuc.Name = "m_ribbonPanel_danhmuc";
             this.m_ribbonPanel_danhmuc.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.m_ribbonPanel_danhmuc.Size = new System.Drawing.Size(813, 106);
+            this.m_ribbonPanel_danhmuc.Size = new System.Drawing.Size(813, 86);
             // 
             // 
             // 
@@ -189,7 +189,6 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_danhmuc.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_danhmuc.TabIndex = 2;
-            this.m_ribbonPanel_danhmuc.Visible = true;
             // 
             // m_menu_item_dm_don_vi
             // 
@@ -209,7 +208,7 @@ namespace BKI_QLHT
             this.m_cmd_dm_don_vi});
             this.m_menu_item_dm_don_vi.Location = new System.Drawing.Point(587, 0);
             this.m_menu_item_dm_don_vi.Name = "m_menu_item_dm_don_vi";
-            this.m_menu_item_dm_don_vi.Size = new System.Drawing.Size(83, 103);
+            this.m_menu_item_dm_don_vi.Size = new System.Drawing.Size(83, 83);
             this.m_menu_item_dm_don_vi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_dm_don_vi.TabIndex = 5;
             this.m_menu_item_dm_don_vi.Text = "Đơn vị";
@@ -249,7 +248,7 @@ namespace BKI_QLHT
             this.m_cmd_dm_don_vi_tinh});
             this.m_menu_item_don_vi_tinh.Location = new System.Drawing.Point(516, 0);
             this.m_menu_item_don_vi_tinh.Name = "m_menu_item_don_vi_tinh";
-            this.m_menu_item_don_vi_tinh.Size = new System.Drawing.Size(71, 103);
+            this.m_menu_item_don_vi_tinh.Size = new System.Drawing.Size(71, 83);
             this.m_menu_item_don_vi_tinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_don_vi_tinh.TabIndex = 4;
             this.m_menu_item_don_vi_tinh.Text = "Đơn vị tính";
@@ -289,7 +288,7 @@ namespace BKI_QLHT
             this.m_cmd_item_danh_muc_bac_sy});
             this.m_menu_item_bac_sy.Location = new System.Drawing.Point(443, 0);
             this.m_menu_item_bac_sy.Name = "m_menu_item_bac_sy";
-            this.m_menu_item_bac_sy.Size = new System.Drawing.Size(73, 103);
+            this.m_menu_item_bac_sy.Size = new System.Drawing.Size(73, 83);
             this.m_menu_item_bac_sy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_bac_sy.TabIndex = 3;
             this.m_menu_item_bac_sy.Text = "Bác sỹ";
@@ -330,7 +329,7 @@ namespace BKI_QLHT
             this.m_cmd_item_danh_muc_nha_cung_cap});
             this.m_menu_item_nha_cung_cap.Location = new System.Drawing.Point(340, 0);
             this.m_menu_item_nha_cung_cap.Name = "m_menu_item_nha_cung_cap";
-            this.m_menu_item_nha_cung_cap.Size = new System.Drawing.Size(103, 103);
+            this.m_menu_item_nha_cung_cap.Size = new System.Drawing.Size(103, 83);
             this.m_menu_item_nha_cung_cap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_nha_cung_cap.TabIndex = 2;
             this.m_menu_item_nha_cung_cap.Text = "Nhà cung cấp";
@@ -372,7 +371,7 @@ namespace BKI_QLHT
             this.m_cmd_nhom_khach_hang});
             this.m_menu_khach_hang.Location = new System.Drawing.Point(207, 0);
             this.m_menu_khach_hang.Name = "m_menu_khach_hang";
-            this.m_menu_khach_hang.Size = new System.Drawing.Size(133, 103);
+            this.m_menu_khach_hang.Size = new System.Drawing.Size(133, 83);
             this.m_menu_khach_hang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_khach_hang.TabIndex = 1;
             this.m_menu_khach_hang.Text = "Danh mục khách hàng";
@@ -425,7 +424,7 @@ namespace BKI_QLHT
             this.m_cmd_item_chi_tiet_thuoc});
             this.m_menu_item_thuoc.Location = new System.Drawing.Point(3, 0);
             this.m_menu_item_thuoc.Name = "m_menu_item_thuoc";
-            this.m_menu_item_thuoc.Size = new System.Drawing.Size(204, 103);
+            this.m_menu_item_thuoc.Size = new System.Drawing.Size(204, 83);
             this.m_menu_item_thuoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_thuoc.TabIndex = 0;
             this.m_menu_item_thuoc.Text = "Danh mục thuốc";
@@ -988,9 +987,9 @@ namespace BKI_QLHT
             this.m_Panel_Content.CanvasColor = System.Drawing.SystemColors.Control;
             this.m_Panel_Content.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_Panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_Panel_Content.Location = new System.Drawing.Point(130, 163);
+            this.m_Panel_Content.Location = new System.Drawing.Point(234, 143);
             this.m_Panel_Content.Name = "m_Panel_Content";
-            this.m_Panel_Content.Size = new System.Drawing.Size(688, 422);
+            this.m_Panel_Content.Size = new System.Drawing.Size(584, 442);
             this.m_Panel_Content.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.m_Panel_Content.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.m_Panel_Content.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1046,10 +1045,10 @@ namespace BKI_QLHT
             this.dockSite1.Controls.Add(this.bar1);
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 122, 422)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
-            this.dockSite1.Location = new System.Drawing.Point(5, 163);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 226, 442)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            this.dockSite1.Location = new System.Drawing.Point(5, 143);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(125, 422);
+            this.dockSite1.Size = new System.Drawing.Size(229, 442);
             this.dockSite1.TabIndex = 9;
             this.dockSite1.TabStop = false;
             // 
@@ -1068,7 +1067,7 @@ namespace BKI_QLHT
             this.bar1.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(122, 422);
+            this.bar1.Size = new System.Drawing.Size(226, 442);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.bar1.TabIndex = 0;
@@ -1082,14 +1081,13 @@ namespace BKI_QLHT
             this.panelDockContainer1.Controls.Add(this.m_cmd_lich_su_gia_ban);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(116, 396);
+            this.panelDockContainer1.Size = new System.Drawing.Size(220, 416);
             this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 0;
-            this.panelDockContainer1.Visible = true;
             // 
             // buttonX2
             // 
@@ -1097,7 +1095,7 @@ namespace BKI_QLHT
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.Location = new System.Drawing.Point(3, 60);
             this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(110, 40);
+            this.buttonX2.Size = new System.Drawing.Size(196, 40);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 1;
             this.buttonX2.Text = "buttonX2";
@@ -1109,7 +1107,7 @@ namespace BKI_QLHT
             this.m_cmd_lich_su_gia_ban.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cmd_lich_su_gia_ban.Location = new System.Drawing.Point(3, 14);
             this.m_cmd_lich_su_gia_ban.Name = "m_cmd_lich_su_gia_ban";
-            this.m_cmd_lich_su_gia_ban.Size = new System.Drawing.Size(110, 40);
+            this.m_cmd_lich_su_gia_ban.Size = new System.Drawing.Size(196, 40);
             this.m_cmd_lich_su_gia_ban.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_cmd_lich_su_gia_ban.TabIndex = 0;
             this.m_cmd_lich_su_gia_ban.Text = "Lịch sử giá bán";
@@ -1126,9 +1124,9 @@ namespace BKI_QLHT
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite2.Location = new System.Drawing.Point(818, 163);
+            this.dockSite2.Location = new System.Drawing.Point(818, 143);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 422);
+            this.dockSite2.Size = new System.Drawing.Size(0, 442);
             this.dockSite2.TabIndex = 10;
             this.dockSite2.TabStop = false;
             // 
