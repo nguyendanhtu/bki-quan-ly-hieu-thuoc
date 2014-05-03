@@ -145,7 +145,6 @@ namespace BKI_QLHT
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(114, 28);
             this.m_cmd_xuat_excel.TabIndex = 21;
             this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
-            //this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
             // 
             // m_cmd_exit
             // 
@@ -274,7 +273,10 @@ namespace BKI_QLHT
 			CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
-            m_fg.Tree.Column = (int)e_col_Number.TEN_NHOM;
+            m_fg.Tree.Column = (int)e_col_Number.TEN_THUOC;
+            m_fg.Cols[(int)e_col_Number.TEN_NHOM].Visible = false;
+            m_fg.Cols[(int)e_col_Number.TEN_DANH_MUC].Visible = false;
+            m_fg.Cols[0].Caption = "STT";
             m_fg.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
 
 			set_define_events();
@@ -309,6 +311,7 @@ namespace BKI_QLHT
             }
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
               , 0
               , (int)e_col_Number.TEN_NHOM // chỗ này là tên trường mà mình nhóm
