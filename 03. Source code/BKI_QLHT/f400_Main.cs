@@ -498,7 +498,16 @@ namespace BKI_QLHT
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                f409_bao_cao_danh_muc_thuoc_theo_hsx v_frm = new f409_bao_cao_danh_muc_thuoc_theo_hsx();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
 
