@@ -424,12 +424,12 @@ namespace BKI_QLHT
                 v_us_gd_detail.dcID_GIAO_DICH = v_list.id_giao_dich;
                 v_us_gd_detail.dcID_THUOC = CIPConvert.ToDecimal(v_list.ID_thuoc);
                 v_us_gd_detail.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_list.ID_don_vi_thuoc);
-                v_us_gd_detail.dcSO_LUONG = CIPConvert.ToDecimal(v_list.so_luong);
+                v_us_gd_detail.dcSO_LUONG_NHAP = CIPConvert.ToDecimal(v_list.so_luong);
                 v_us_gd_detail.dcID_NUOC_SX = CIPConvert.ToDecimal(v_list.id_nuoc_sx);
                 v_us_gd_detail.dcID_NHA_CUNG_CAP = CIPConvert.ToDecimal(v_list.id_nha_cc);
                 v_us_gd_detail.dcID_HANG_SX = CIPConvert.ToDecimal(v_list.id_hang_sx);
                 v_us_gd_detail.datHAN_SU_DUNG = v_list.han_sd;
-                v_us_gd_detail.dcGIA = CIPConvert.ToDecimal(v_list.gia);
+                v_us_gd_detail.dcGIA_NHAP = CIPConvert.ToDecimal(v_list.gia);
                 v_us_gd_detail.Insert();
             }
         }
