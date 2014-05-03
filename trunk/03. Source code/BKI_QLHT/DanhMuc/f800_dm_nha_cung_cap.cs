@@ -218,7 +218,11 @@ namespace BKI_QLHT
 
 		#region Data Structure
 		private enum e_col_Number{
-			TEN_NCC = 1,DIA_CHI = 3,SDT = 4,MA_NCC = 2
+			TEN_NCC = 1
+,DIA_CHI = 3
+,SDT = 4
+,MA_NCC = 2
+
 		}			
 		#endregion
 
@@ -241,7 +245,11 @@ namespace BKI_QLHT
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(V_DM_NCC_NSX_NHASX_1.TEN_NCC, e_col_Number.TEN_NCC);			v_htb.Add(V_DM_NCC_NSX_NHASX_1.DIA_CHI, e_col_Number.DIA_CHI);			v_htb.Add(V_DM_NCC_NSX_NHASX_1.SDT, e_col_Number.SDT);			v_htb.Add(V_DM_NCC_NSX_NHASX_1.MA_NCC, e_col_Number.MA_NCC);									
+			v_htb.Add(V_DM_NCC_NSX_NHASX_1.TEN_NCC, e_col_Number.TEN_NCC);
+			v_htb.Add(V_DM_NCC_NSX_NHASX_1.DIA_CHI, e_col_Number.DIA_CHI);
+			v_htb.Add(V_DM_NCC_NSX_NHASX_1.SDT, e_col_Number.SDT);
+			v_htb.Add(V_DM_NCC_NSX_NHASX_1.MA_NCC, e_col_Number.MA_NCC);
+									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_DM_NCC_NSX_NHASX_1.NewRow());
 			return v_obj_trans;			
 		}
@@ -324,61 +332,83 @@ namespace BKI_QLHT
 		//
 		//		EVENT HANLDERS
 		//
-		//
-		private void f800_DM_NHA_CUNG_CAP_Load(object sender, System.EventArgs e) {
-			try{
-				set_initial_form_load();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		
-		}
+        //
 
-		private void m_cmd_exit_Click(object sender, EventArgs e) {
-			try{
-				this.Close();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        #region events
+        private void f800_DM_NHA_CUNG_CAP_Load(object sender, System.EventArgs e)
+        {
+            try
+            {
+                set_initial_form_load();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
 
-		private void m_cmd_insert_Click(object sender, EventArgs e) {
-			try{
-				insert_v_dm_ncc_nsx_nhasx_1();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        }
 
-		private void m_cmd_update_Click(object sender, EventArgs e) {
-			try{
-				update_v_dm_ncc_nsx_nhasx_1();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_delete_Click(object sender, EventArgs e) {
-			try{
-				delete_v_dm_ncc_nsx_nhasx_1();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_insert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                insert_v_dm_ncc_nsx_nhasx_1();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_view_Click(object sender, EventArgs e) {
-			try{
-				view_v_dm_ncc_nsx_nhasx_1();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                update_v_dm_ncc_nsx_nhasx_1();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                delete_v_dm_ncc_nsx_nhasx_1();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_view_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                view_v_dm_ncc_nsx_nhasx_1();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        #endregion
+        
 
 	}
 }

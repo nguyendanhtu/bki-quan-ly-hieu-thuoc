@@ -196,7 +196,7 @@ namespace BKI_QLHT
             //f800_dm_nha_cung_cap frm = new f800_dm_nha_cung_cap();
             //frm.ShowDialog();
             m_Panel_Content.Controls.Clear();
-            uc_800_dm_nha_cung_cap v_frm=new uc_800_dm_nha_cung_cap();
+            uc800_dm_nha_cung_cap v_frm=new uc800_dm_nha_cung_cap();
             v_frm.Dock = System.Windows.Forms.DockStyle.Fill;
             m_Panel_Content.Controls.Add(v_frm);
         }
