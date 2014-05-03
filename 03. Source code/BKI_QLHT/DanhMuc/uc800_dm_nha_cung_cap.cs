@@ -44,6 +44,8 @@ namespace BKI_QLHT.DanhMuc
         ITransferDataRow m_obj_trans;
         DS_V_DM_NCC_NSX_NHASX_1 m_ds = new DS_V_DM_NCC_NSX_NHASX_1();
         US_V_DM_NCC_NSX_NHASX_1 m_us = new US_V_DM_NCC_NSX_NHASX_1();
+        US_DM_NCC_NSX_NHASX m_us_dm_ncc = new US_DM_NCC_NSX_NHASX();
+        DS_DM_NCC_NSX_NHASX m_ds_dm_ncc = new DS_DM_NCC_NSX_NHASX();
         #endregion
 
         #region Private Methods
@@ -57,6 +59,17 @@ namespace BKI_QLHT.DanhMuc
         {
             m_obj_trans = get_trans_object(m_grv_nha_cung_cap);
             load_data_2_grid();
+            grid2us_object(m_us_dm_ncc,m_grv_nha_cung_cap.Row);
+            m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+            load_data_2_thong_tin_chi_tiet(m_us);
+        }
+
+        private void load_data_2_thong_tin_chi_tiet(US_V_DM_NCC_NSX_NHASX_1 m_us)
+        {
+            m_lbl_ten_nha_cung_cap.Text = m_us.strTEN_NCC;
+            m_lbl_ma_nha_cung_cap.Text = m_us.strMA_NCC;
+            m_lbl_sdt.Text = m_us.strSDT;
+            m_lbl_dia_chi.Text = m_us.strDIA_CHI;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -72,12 +85,12 @@ namespace BKI_QLHT.DanhMuc
         private void load_data_2_grid()
         {
             m_ds = new DS_V_DM_NCC_NSX_NHASX_1();
-            m_us.FillDataset(m_ds);
+            m_us.FillDataset(m_ds,"where ID_LOAI_DM=1");
             m_grv_nha_cung_cap.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_grv_nha_cung_cap, m_obj_trans);
             m_grv_nha_cung_cap.Redraw = true;
         }
-        private void grid2us_object(US_V_DM_NCC_NSX_NHASX_1 i_us
+        private void grid2us_object(US_DM_NCC_NSX_NHASX i_us
             , int i_grid_row)
         {
             DataRow v_dr;
@@ -98,8 +111,8 @@ namespace BKI_QLHT.DanhMuc
 
         private void insert_v_dm_ncc_nsx_nhasx_1()
         {
-            //	f800_DM_NHA_CUNG_CAP_DE v_fDE = new  f800_DM_NHA_CUNG_CAP_DE();								
-            //	v_fDE.display();
+            	f800_dm_nha_cung_cap_DE v_fDE = new  f800_dm_nha_cung_cap_DE();								
+            	v_fDE.display_for_insert();
             load_data_2_grid();
         }
 
@@ -107,9 +120,9 @@ namespace BKI_QLHT.DanhMuc
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nha_cung_cap)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nha_cung_cap, m_grv_nha_cung_cap.Row)) return;
-            grid2us_object(m_us, m_grv_nha_cung_cap.Row);
-            //	f800_DM_NHA_CUNG_CAP_DE v_fDE = new f800_DM_NHA_CUNG_CAP_DE();
-            //	v_fDE.display(m_us);
+            grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+            	f800_dm_nha_cung_cap_DE v_fDE = new f800_dm_nha_cung_cap_DE();
+            	v_fDE.display_for_update(m_us_dm_ncc);
             load_data_2_grid();
         }
 
@@ -118,21 +131,29 @@ namespace BKI_QLHT.DanhMuc
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nha_cung_cap)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nha_cung_cap, m_grv_nha_cung_cap.Row)) return;
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
-            US_V_DM_NCC_NSX_NHASX_1 v_us = new US_V_DM_NCC_NSX_NHASX_1();
+            US_DM_NCC_NSX_NHASX v_us = new US_DM_NCC_NSX_NHASX();
             grid2us_object(v_us, m_grv_nha_cung_cap.Row);
-            try
+            US_V_DM_NCC_NSX_NHASX_1 v_v_us = new US_V_DM_NCC_NSX_NHASX_1(v_us.dcID);
+            if (v_v_us.dcID_NHA_CUNG_CAP ==0)
             {
-                v_us.BeginTransaction();
-                v_us.Delete();
-                v_us.CommitTransaction();
-                m_grv_nha_cung_cap.Rows.Remove(m_grv_nha_cung_cap.Row);
+                try
+                {
+                    v_us.BeginTransaction();
+                    v_us.Delete();
+                    v_us.CommitTransaction();
+                    m_grv_nha_cung_cap.Rows.Remove(m_grv_nha_cung_cap.Row);
+                }
+                catch (Exception v_e)
+                {
+                    v_us.Rollback();
+                    CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
+                        new CDBClientDBExceptionInterpret());
+                    v_objErrHandler.showErrorMessage();
+                }
             }
-            catch (Exception v_e)
+            else
             {
-                v_us.Rollback();
-                CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-                    new CDBClientDBExceptionInterpret());
-                v_objErrHandler.showErrorMessage();
+                MessageBox.Show("Nhà cung cấp đã được sử dụng. Không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -140,7 +161,7 @@ namespace BKI_QLHT.DanhMuc
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nha_cung_cap)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nha_cung_cap, m_grv_nha_cung_cap.Row)) return;
-            grid2us_object(m_us, m_grv_nha_cung_cap.Row);
+            grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
             //	f800_DM_NHA_CUNG_CAP_DE v_fDE = new f800_DM_NHA_CUNG_CAP_DE();			
             //	v_fDE.display(m_us);
         }
@@ -235,5 +256,23 @@ namespace BKI_QLHT.DanhMuc
             }
         }
         #endregion
+
+        private void m_grv_nha_cung_cap_Click(object sender, EventArgs e)
+        {
+            grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+            m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+            load_data_2_thong_tin_chi_tiet(m_us);
+        }
+
+        private void m_cmd_tim_kiem_Click(object sender, EventArgs e)
+        {
+            US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
+            DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
+            v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text,1);
+            m_grv_nha_cung_cap.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
+            m_grv_nha_cung_cap.Redraw = true;
+        }
+
     }
 }

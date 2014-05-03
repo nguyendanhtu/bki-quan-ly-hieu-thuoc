@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BKI_QLHT.US;
+using BKI_QLHT.DS;
+using BKI_QLHT.DS.CDBNames;
 using IP.Core.IPCommon;
 
 namespace BKI_QLHT
@@ -24,10 +26,10 @@ namespace BKI_QLHT
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
         }
-        public void display_for_update(US_DM_NHA_CUNG_CAP m_us)
+        public void display_for_update(US_DM_NCC_NSX_NHASX ip_us_dm_ncc)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
-            m_us_dm_nha_cung_cap = m_us;
+            m_us_dm_ncc = ip_us_dm_ncc;
             us_obj_2_form();
             this.ShowDialog();
         }
@@ -36,7 +38,10 @@ namespace BKI_QLHT
 
         #region members
         DataEntryFormMode m_e_form_mode;
-        US_DM_NHA_CUNG_CAP m_us_dm_nha_cung_cap = new US_DM_NHA_CUNG_CAP();
+        US_V_DM_NCC_NSX_NHASX_1 m_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
+        DS_V_DM_NCC_NSX_NHASX_1 m_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
+        US_DM_NCC_NSX_NHASX m_us_dm_ncc = new US_DM_NCC_NSX_NHASX();
+        DS_DM_NCC_NSX_NHASX m_ds_dm_ncc = new DS_DM_NCC_NSX_NHASX();
         #endregion
         
 
@@ -44,17 +49,18 @@ namespace BKI_QLHT
 
         private void form_2_us_obj()
         {
-            m_us_dm_nha_cung_cap.strTEN_NCC =m_txt_ten_nha_cung_cap.Text ;
-            m_us_dm_nha_cung_cap.strMA_NCC = m_txt_ma_nha_cung_cap.Text;
-            m_us_dm_nha_cung_cap.strSDT = m_txt_sdt.Text;
-            m_us_dm_nha_cung_cap.strDIA_CHI = m_txt_dia_chi.Text;
+            m_us_dm_ncc.strTEN_NCC =m_txt_ten_nha_cung_cap.Text ;
+            m_us_dm_ncc.strMA_NCC = m_txt_ma_nha_cung_cap.Text;
+            m_us_dm_ncc.strSDT = m_txt_sdt.Text;
+            m_us_dm_ncc.strDIA_CHI = m_txt_dia_chi.Text;
+            m_us_dm_ncc.dcID_LOAI_DM = 1;
         }
         private void us_obj_2_form()
         {
-            m_txt_ten_nha_cung_cap.Text = m_us_dm_nha_cung_cap.strTEN_NCC;
-            m_txt_ma_nha_cung_cap.Text = m_us_dm_nha_cung_cap.strMA_NCC;
-            m_txt_sdt.Text = m_us_dm_nha_cung_cap.strSDT;
-            m_txt_dia_chi.Text = m_us_dm_nha_cung_cap.strDIA_CHI;
+            m_txt_ten_nha_cung_cap.Text = m_us_dm_ncc.strTEN_NCC;
+            m_txt_ma_nha_cung_cap.Text = m_us_dm_ncc.strMA_NCC;
+            m_txt_sdt.Text = m_us_dm_ncc.strSDT;
+            m_txt_dia_chi.Text = m_us_dm_ncc.strDIA_CHI;
         }
         private void defineEvent()
         {
@@ -70,13 +76,13 @@ namespace BKI_QLHT
             switch (m_e_form_mode)
             {
                 case DataEntryFormMode.InsertDataState:
-                    m_us_dm_nha_cung_cap.Insert();
+                    m_us_dm_ncc.Insert();
                     this.Close();
                     break;
                 case DataEntryFormMode.SelectDataState:
                     break;
                 case DataEntryFormMode.UpdateDataState:
-                    m_us_dm_nha_cung_cap.Update();
+                    m_us_dm_ncc.Update();
                     this.Close();
                     break;
                 case DataEntryFormMode.ViewDataState:
@@ -93,9 +99,5 @@ namespace BKI_QLHT
 
         #endregion
 
-        private void f800_dm_nha_cung_cap_DE_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
