@@ -468,6 +468,9 @@
     <EmbeddedResource Include="DanhMuc\uc504_v_dm_nhom_thuoc.resx">
       <DependentUpon>uc504_v_dm_nhom_thuoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\uc800_dm_nha_cung_cap.resx">
+      <DependentUpon>uc800_dm_nha_cung_cap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc801_dm_khach_hang.resx">
       <DependentUpon>uc801_dm_khach_hang.cs</DependentUpon>
     </EmbeddedResource>
