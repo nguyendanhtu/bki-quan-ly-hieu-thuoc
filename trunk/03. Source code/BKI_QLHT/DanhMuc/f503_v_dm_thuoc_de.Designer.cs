@@ -97,21 +97,21 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(352, 63);
+            this.label4.Location = new System.Drawing.Point(392, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 16);
+            this.label4.Size = new System.Drawing.Size(81, 16);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Thuộc tính hoạt chất";
+            this.label4.Text = "TT hoạt chất";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 154);
+            this.label3.Location = new System.Drawing.Point(64, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 16);
+            this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Thuộc tính thuốc";
+            this.label3.Text = "TT thuốc";
             // 
             // label2
             // 
@@ -170,7 +170,6 @@
             this.m_cbo_danh_muc_thuoc.Name = "m_cbo_danh_muc_thuoc";
             this.m_cbo_danh_muc_thuoc.Size = new System.Drawing.Size(201, 21);
             this.m_cbo_danh_muc_thuoc.TabIndex = 24;
-            
             // 
             // m_txt_thuoc_thay_the
             // 
@@ -202,8 +201,7 @@
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_save.TabIndex = 28;
-            this.m_cmd_save.Text = "Lưu";
-            
+            this.m_cmd_save.Text = "Lưu (F2)";
             // 
             // ImageList
             // 
@@ -243,10 +241,9 @@
             this.m_cmd_thoat.ImageList = this.ImageList;
             this.m_cmd_thoat.Location = new System.Drawing.Point(357, 316);
             this.m_cmd_thoat.Name = "m_cmd_thoat";
-            this.m_cmd_thoat.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_thoat.Size = new System.Drawing.Size(101, 28);
             this.m_cmd_thoat.TabIndex = 27;
-            this.m_cmd_thoat.Text = "Trở về";
-       
+            this.m_cmd_thoat.Text = "Trở về (Esc)";
             // 
             // m_chk_tuyen_su_dung_5
             // 
@@ -332,7 +329,7 @@
             this.Controls.Add(this.label2);
             this.Name = "f503_v_dm_thuoc_de";
             this.Text = "f503_v_dm_thuoc_de";
-            
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.f503_v_dm_thuoc_de_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -152,7 +152,7 @@
             this.m_txt_gia_nhap.Location = new System.Drawing.Point(104, 185);
             this.m_txt_gia_nhap.Name = "m_txt_gia_nhap";
             this.m_txt_gia_nhap.Size = new System.Drawing.Size(105, 20);
-            this.m_txt_gia_nhap.TabIndex = 100;
+            this.m_txt_gia_nhap.TabIndex = 7;
             // 
             // m_lbl_don_vi_cap_3
             // 
@@ -182,7 +182,7 @@
             this.m_dtp_han_su_dung.Location = new System.Drawing.Point(104, 156);
             this.m_dtp_han_su_dung.Name = "m_dtp_han_su_dung";
             this.m_dtp_han_su_dung.Size = new System.Drawing.Size(239, 20);
-            this.m_dtp_han_su_dung.TabIndex = 98;
+            this.m_dtp_han_su_dung.TabIndex = 6;
             // 
             // m_txt_quy_doi_3
             // 
@@ -226,7 +226,7 @@
             this.m_lbl_dv_tinh_ban.AutoSize = true;
             this.m_lbl_dv_tinh_ban.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_dv_tinh_ban.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.m_lbl_dv_tinh_ban.Location = new System.Drawing.Point(236, 211);
+            this.m_lbl_dv_tinh_ban.Location = new System.Drawing.Point(238, 210);
             this.m_lbl_dv_tinh_ban.Name = "m_lbl_dv_tinh_ban";
             this.m_lbl_dv_tinh_ban.Size = new System.Drawing.Size(56, 16);
             this.m_lbl_dv_tinh_ban.TabIndex = 110;
@@ -248,7 +248,7 @@
             this.m_txt_gia_ban.Location = new System.Drawing.Point(104, 210);
             this.m_txt_gia_ban.Name = "m_txt_gia_ban";
             this.m_txt_gia_ban.Size = new System.Drawing.Size(105, 20);
-            this.m_txt_gia_ban.TabIndex = 108;
+            this.m_txt_gia_ban.TabIndex = 8;
             // 
             // m_cbo_nuoc_san_xuat
             // 
@@ -327,7 +327,7 @@
             this.m_txt_quy_doi_2.Location = new System.Drawing.Point(166, 52);
             this.m_txt_quy_doi_2.Name = "m_txt_quy_doi_2";
             this.m_txt_quy_doi_2.Size = new System.Drawing.Size(47, 23);
-            this.m_txt_quy_doi_2.TabIndex = 78;
+            this.m_txt_quy_doi_2.TabIndex = 10;
             // 
             // label7
             // 
@@ -347,7 +347,7 @@
             this.m_dtp_ngay_san_xuat.Location = new System.Drawing.Point(104, 130);
             this.m_dtp_ngay_san_xuat.Name = "m_dtp_ngay_san_xuat";
             this.m_dtp_ngay_san_xuat.Size = new System.Drawing.Size(239, 20);
-            this.m_dtp_ngay_san_xuat.TabIndex = 96;
+            this.m_dtp_ngay_san_xuat.TabIndex = 5;
             // 
             // m_cbo_nha_cung_cap
             // 
@@ -407,7 +407,7 @@
             this.m_txt_quy_doi_1.Location = new System.Drawing.Point(166, 22);
             this.m_txt_quy_doi_1.Name = "m_txt_quy_doi_1";
             this.m_txt_quy_doi_1.Size = new System.Drawing.Size(47, 23);
-            this.m_txt_quy_doi_1.TabIndex = 68;
+            this.m_txt_quy_doi_1.TabIndex = 9;
             // 
             // label6
             // 
@@ -426,14 +426,14 @@
             this.m_cbo_don_vi_tinh.Location = new System.Drawing.Point(668, 103);
             this.m_cbo_don_vi_tinh.Name = "m_cbo_don_vi_tinh";
             this.m_cbo_don_vi_tinh.Size = new System.Drawing.Size(77, 21);
-            this.m_cbo_don_vi_tinh.TabIndex = 89;
+            this.m_cbo_don_vi_tinh.TabIndex = 4;
             // 
             // m_txt_so_luong
             // 
             this.m_txt_so_luong.Location = new System.Drawing.Point(511, 103);
             this.m_txt_so_luong.Name = "m_txt_so_luong";
             this.m_txt_so_luong.Size = new System.Drawing.Size(151, 20);
-            this.m_txt_so_luong.TabIndex = 88;
+            this.m_txt_so_luong.TabIndex = 3;
             // 
             // label1
             // 
@@ -487,7 +487,7 @@
             this.m_dtp_ngay_nhap.Location = new System.Drawing.Point(511, 69);
             this.m_dtp_ngay_nhap.Name = "m_dtp_ngay_nhap";
             this.m_dtp_ngay_nhap.Size = new System.Drawing.Size(234, 20);
-            this.m_dtp_ngay_nhap.TabIndex = 92;
+            this.m_dtp_ngay_nhap.TabIndex = 1;
             // 
             // label4
             // 
@@ -665,6 +665,7 @@
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 37);
             this.m_cmd_delete.TabIndex = 14;
             this.m_cmd_delete.Text = "&Xoá";
+            this.m_cmd_delete.Click += new System.EventHandler(this.m_cmd_delete_Click);
             // 
             // m_cmd_exit
             // 
@@ -680,6 +681,7 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 37);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // m_cmd_add
             // 
@@ -697,14 +699,20 @@
             // 
             // m_txt_search_thuoc1
             // 
+            this.m_txt_search_thuoc1.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.m_txt_search_thuoc1.DisplayMember = null;
             this.m_txt_search_thuoc1.Location = new System.Drawing.Point(105, 94);
             this.m_txt_search_thuoc1.Name = "m_txt_search_thuoc1";
             this.m_txt_search_thuoc1.Size = new System.Drawing.Size(238, 20);
             this.m_txt_search_thuoc1.str_query = null;
-            this.m_txt_search_thuoc1.TabIndex = 117;
+            this.m_txt_search_thuoc1.TabIndex = 2;
             this.m_txt_search_thuoc1.Text1 = null;
             this.m_txt_search_thuoc1.ValueMember = null;
+            this.m_txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_search_thuoc1_KeyDown);
             // 
             // f511_gd_nhap_thuoc
             // 

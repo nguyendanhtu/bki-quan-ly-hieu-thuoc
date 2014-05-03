@@ -222,6 +222,19 @@ namespace BKI_QLHT
         
         #endregion
 
+        private void f503_v_dm_thuoc_de_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                save_data();
+
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
+
        
 
     }

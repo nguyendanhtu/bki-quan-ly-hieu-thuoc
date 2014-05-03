@@ -257,7 +257,7 @@ namespace BKI_QLHT
             else m_chk_tuyen_su_dung_7.Checked = false;
             if (m_us.strTUYEN_SU_DUNG_8 == "+") m_chk_tuyen_su_dung_8.Checked = true;
             else m_chk_tuyen_su_dung_8.Checked = false;
-            
+
         }
         private void load_cbo_nhom_thuoc_from_danh_muc(decimal ip_dc_id_danh_muc)
         {
@@ -275,6 +275,17 @@ namespace BKI_QLHT
                 m_cbo_nhom_thuoc_tk.DisplayMember = DM_NHOM_THUOC.TEN_NHOM;
             }
         }
+        private void load_grid_search()
+        {
+            m_ds = new DS_V_DM_THUOC();
+            string v_str_tu_khoa = m_txt_tu_khoa.Text;
+            decimal v_id_danh_muc = CIPConvert.ToDecimal(m_cbo_danh_muc_tk.SelectedValue);
+            decimal v_id_nhom_thuoc = CIPConvert.ToDecimal(m_cbo_nhom_thuoc_tk.SelectedValue);
+            m_us.FillDatasetSearch(m_ds, v_id_danh_muc, v_id_nhom_thuoc, v_str_tu_khoa);
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            m_fg.Redraw = true;
+        }
         //private void load_data_2_grid_from_nhom_thuoc(decimal ip_dc_id_nhom_thuoc)
         //{
         //    m_ds = new DS_V_DM_THUOC(); 
@@ -291,6 +302,7 @@ namespace BKI_QLHT
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             this.Load += new System.EventHandler(this.uc502_v_dm_Load);
             //m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
         }
 
         #endregion
@@ -395,8 +407,7 @@ namespace BKI_QLHT
         //    {
         //        if (m_trang_thai == true)
         //        {
-        //            decimal v_dc_id_nhom_thuoc = m_cbo_nhom_thuoc_tk.SelectedIndex;
-        //            load_data_2_grid_from_nhom_thuoc(v_dc_id_nhom_thuoc);
+        //            load_grid_search();
         //        }
         //    }
         //    catch (Exception v_e)
@@ -405,14 +416,6 @@ namespace BKI_QLHT
         //        CSystemLog_301.ExceptionHandle(v_e);
         //    }
         //}
-
-
-
-
-
-
-
-
 
         private void m_fg_Click(object sender, EventArgs e)
         {
@@ -439,8 +442,37 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+        private void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_grid_search();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+        private void m_txt_tu_khoa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                load_grid_search();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         #endregion
-       
+
+        
+
+
+
 
 
     }

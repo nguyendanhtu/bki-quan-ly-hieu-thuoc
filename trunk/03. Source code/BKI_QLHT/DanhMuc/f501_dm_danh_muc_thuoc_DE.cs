@@ -10,6 +10,7 @@ using IP.Core.IPCommon;
 using BKI_QLHT.US;
 using BKI_QLHT.DS.CDBNames;
 using BKI_QLHT.DS;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT
 {
@@ -18,7 +19,10 @@ namespace BKI_QLHT
         public f501_dm_danh_muc_thuoc_DE()
         {
             InitializeComponent();
+            format_control();
         }
+
+        
         #region Public Interface
         public void display_for_insert()
         {
@@ -39,6 +43,18 @@ namespace BKI_QLHT
         DS_DM_DANH_MUC_THUOC m_ds_danh_muc_thuoc = new DS_DM_DANH_MUC_THUOC();
         #endregion
         #region Private Method
+        private void format_control()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+            set_define_events();
+            
+        }
+
+        private void set_define_events()
+        {
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
+        }
         private void form_2_us_obj() {
             m_us_danh_muc_thuoc.strTEN_DANH_MUC = m_txt_danh_muc.Text;
             m_us_danh_muc_thuoc.strGHI_CHU = m_txt_ghi_chu.Text;
@@ -104,6 +120,19 @@ namespace BKI_QLHT
             }
         }
         #endregion
+
+        private void f501_dm_danh_muc_thuoc_DE_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                save_data();
+
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
+        }
 
         
     }

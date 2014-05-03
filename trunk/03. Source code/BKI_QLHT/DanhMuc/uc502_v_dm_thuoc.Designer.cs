@@ -171,21 +171,21 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(23, 436);
+            this.label10.Location = new System.Drawing.Point(71, 436);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 16);
+            this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 61;
-            this.label10.Text = "Thuộc tính thuốc :";
+            this.label10.Text = "TTthuốc :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 404);
+            this.label9.Location = new System.Drawing.Point(45, 404);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 16);
+            this.label9.Size = new System.Drawing.Size(90, 16);
             this.label9.TabIndex = 60;
-            this.label9.Text = "thuộc tính hoạt chất :";
+            this.label9.Text = "TT hoạt chất :";
             // 
             // label8
             // 
@@ -263,7 +263,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(251, 278);
+            this.label4.Location = new System.Drawing.Point(425, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 23);
             this.label4.TabIndex = 56;
@@ -292,7 +292,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(458, 84);
+            this.m_cmd_search.Location = new System.Drawing.Point(650, 84);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 47;
@@ -300,16 +300,17 @@
             // 
             // m_txt_tu_khoa
             // 
-            this.m_txt_tu_khoa.Location = new System.Drawing.Point(217, 92);
+            this.m_txt_tu_khoa.Location = new System.Drawing.Point(409, 92);
             this.m_txt_tu_khoa.Name = "m_txt_tu_khoa";
             this.m_txt_tu_khoa.Size = new System.Drawing.Size(216, 20);
             this.m_txt_tu_khoa.TabIndex = 55;
+            this.m_txt_tu_khoa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_tu_khoa_KeyPress);
             // 
             // m_cbo_nhom_thuoc_tk
             // 
             this.m_cbo_nhom_thuoc_tk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhom_thuoc_tk.FormattingEnabled = true;
-            this.m_cbo_nhom_thuoc_tk.Location = new System.Drawing.Point(217, 64);
+            this.m_cbo_nhom_thuoc_tk.Location = new System.Drawing.Point(409, 64);
             this.m_cbo_nhom_thuoc_tk.Name = "m_cbo_nhom_thuoc_tk";
             this.m_cbo_nhom_thuoc_tk.Size = new System.Drawing.Size(216, 21);
             this.m_cbo_nhom_thuoc_tk.TabIndex = 54;
@@ -318,7 +319,7 @@
             // 
             this.m_cbo_danh_muc_tk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_danh_muc_tk.FormattingEnabled = true;
-            this.m_cbo_danh_muc_tk.Location = new System.Drawing.Point(217, 37);
+            this.m_cbo_danh_muc_tk.Location = new System.Drawing.Point(409, 37);
             this.m_cbo_danh_muc_tk.Name = "m_cbo_danh_muc_tk";
             this.m_cbo_danh_muc_tk.Size = new System.Drawing.Size(216, 21);
             this.m_cbo_danh_muc_tk.TabIndex = 53;
@@ -328,7 +329,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(80, 95);
+            this.label5.Location = new System.Drawing.Point(272, 95);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 51;
@@ -338,7 +339,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 69);
+            this.label3.Location = new System.Drawing.Point(272, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 52;
@@ -378,7 +379,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 37);
+            this.label2.Location = new System.Drawing.Point(272, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 50;
@@ -389,7 +390,7 @@
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Location = new System.Drawing.Point(3, 122);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(997, 153);
+            this.m_fg.Size = new System.Drawing.Size(1006, 153);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 49;
             this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
@@ -422,7 +423,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(233, 0);
+            this.label14.Location = new System.Drawing.Point(425, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(152, 23);
             this.label14.TabIndex = 73;

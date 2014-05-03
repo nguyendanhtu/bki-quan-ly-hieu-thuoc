@@ -11,6 +11,7 @@ using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 using IP.Core.IPCommon;
 using System.Collections;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT
 {
@@ -19,8 +20,11 @@ namespace BKI_QLHT
         public f505_v_dm_nhom_thuoc_de()
         {
             InitializeComponent();
+            format_control();
             load_data_2_cbo();
         }
+
+        
         #region Public Interface
         public void display_for_insert()
         {
@@ -42,6 +46,18 @@ namespace BKI_QLHT
 
         #endregion
         #region Private Method
+        private void format_control()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+            set_define_events();
+        }
+
+        private void set_define_events()
+        {
+            this.Load += new System.EventHandler(this.f505_v_dm_nhom_thuoc_de_Load);
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
+        }
         private void load_data_2_cbo()
         {
             US_DM_DANH_MUC_THUOC v_us_dm = new US_DM_DANH_MUC_THUOC();
@@ -94,6 +110,10 @@ namespace BKI_QLHT
             m_e_for_mode = DataEntryFormMode.InsertDataState;
 
         }
+        public void set_inital_form_load()
+        {
+            load_data_2_cbo();
+        }
         #endregion
 
        
@@ -110,8 +130,6 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        #endregion
-
         private void m_cmd_huy_Click(object sender, EventArgs e)
         {
             try
@@ -124,6 +142,34 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+        private void f505_v_dm_nhom_thuoc_de_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                set_inital_form_load();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        #endregion
+
+        private void f505_v_dm_nhom_thuoc_de_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2) {
+                save_data();
+               
+            }
+            if (e.KeyCode == Keys.Escape) {
+                this.Close();
+            }
+        }
+
+        
+
+       
 
 
 

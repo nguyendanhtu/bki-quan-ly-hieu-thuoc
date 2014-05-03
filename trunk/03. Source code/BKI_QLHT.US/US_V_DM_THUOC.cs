@@ -380,5 +380,14 @@ public class US_V_DM_THUOC : US_Object
         v_store_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
         v_store_proc.fillDataSetByCommand(this, ip_ds);
     }
-	}
+
+    public void FillDatasetSearch(DS_V_DM_THUOC ip_ds, decimal ip_dc_id_danh_muc, decimal ip_dc_id_nhom_thuoc, string ip_str_tu_khoa)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_DM_THUOC_Search");
+        v_store_proc.addDecimalInputParam("@IP_ID_DANH_MUC", ip_dc_id_danh_muc);
+        v_store_proc.addDecimalInputParam("@IP_ID_NHOM_THUOC", ip_dc_id_nhom_thuoc);
+        v_store_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
+        v_store_proc.fillDataSetByCommand(this, ip_ds);
+    }
+}
 }
