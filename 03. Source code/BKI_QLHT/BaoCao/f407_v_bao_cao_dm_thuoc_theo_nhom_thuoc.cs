@@ -125,7 +125,7 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 406);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 415);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(797, 36);
@@ -145,7 +145,6 @@ namespace BKI_QLHT
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(114, 28);
             this.m_cmd_xuat_excel.TabIndex = 21;
             this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
-            //this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
             // 
             // m_cmd_exit
             // 
@@ -171,6 +170,7 @@ namespace BKI_QLHT
             this.m_fg.Size = new System.Drawing.Size(795, 323);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
+            this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
             // 
             // m_cmd_search
             // 
@@ -210,7 +210,7 @@ namespace BKI_QLHT
             // f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(797, 442);
+            this.ClientSize = new System.Drawing.Size(797, 451);
             this.Controls.Add(this.m_cmd_search);
             this.Controls.Add(this.m_txt_tim_kiem);
             this.Controls.Add(this.label4);
@@ -368,7 +368,7 @@ namespace BKI_QLHT
 		}
         private void export_2_excel()
         {
-            String v_str_nguoi_lam_bao_cao = "xyz";
+            String v_str_nguoi_lam_bao_cao = "";
             CExcelReport v_obj_excel_rpt = new CExcelReport("f407_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.xlsx", 9, 1);
             //người làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<nguoi_xuat_bao_cao>", v_str_nguoi_lam_bao_cao.Trim());
@@ -468,6 +468,7 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
 
 	}
 }
