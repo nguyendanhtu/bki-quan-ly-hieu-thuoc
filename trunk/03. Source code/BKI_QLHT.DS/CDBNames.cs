@@ -538,4 +538,26 @@
         public const string ID_LOAI_DON_VI = "ID_LOAI_DON_VI";
     }
 
+    public class V_DM_NUOC_SX
+    {
+        public const string ID = "ID";
+        public const string ID_LOAI_DM = "ID_LOAI_DM";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string MA_NCC = "MA_NCC";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT = "SDT";
+        public const string ID_NUOC_SX = "ID_NUOC_SX";
+    }
+
+    public class V_DM_HANG_SX
+    {
+        public const string ID = "ID";
+        public const string ID_LOAI_DM = "ID_LOAI_DM";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string MA_NCC = "MA_NCC";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT = "SDT";
+        public const string ID_HANG_SX = "ID_HANG_SX";
+    }
+
 }
