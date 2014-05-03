@@ -13,9 +13,9 @@ using IP.Core.IPCommon;
 
 namespace BKI_QLHT
 {
-    public partial class f805_nuoc_san_xuat_DE : Form
+    public partial class f806_nha_san_xuat_DE : Form
     {
-        public f805_nuoc_san_xuat_DE()
+        public f806_nha_san_xuat_DE()
         {
             InitializeComponent();
         }
@@ -38,8 +38,8 @@ namespace BKI_QLHT
 
         #region members
         DataEntryFormMode m_e_form_mode;
-        US_V_DM_NCC_NSX_NHASX_1 m_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
-        DS_V_DM_NCC_NSX_NHASX_1 m_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
+        US_V_DM_HANG_SX m_us_v_dm_ncc = new US_V_DM_HANG_SX();
+        DS_V_DM_HANG_SX m_ds_v_dm_ncc = new DS_V_DM_HANG_SX();
         US_DM_NCC_NSX_NHASX m_us_dm_ncc = new US_DM_NCC_NSX_NHASX();
         internal ImageList ImageList;
         private IContainer components;
@@ -48,6 +48,8 @@ namespace BKI_QLHT
         private Panel m_pnl_control;
         internal SIS.Controls.Button.SiSButton m_cmd_save;
         private TextBox m_txt_sdt;
+        private Label label4;
+        private TextBox m_txt_dia_chi;
         DS_DM_NCC_NSX_NHASX m_ds_dm_ncc = new DS_DM_NCC_NSX_NHASX();
         #endregion
         
@@ -59,13 +61,15 @@ namespace BKI_QLHT
             m_us_dm_ncc.strTEN_NCC =m_txt_ten_nha_cung_cap.Text ;
             m_us_dm_ncc.strMA_NCC = m_txt_ma_nha_cung_cap.Text;
             m_us_dm_ncc.strSDT = m_txt_sdt.Text;
-            m_us_dm_ncc.dcID_LOAI_DM = 2;
+            m_us_dm_ncc.strDIA_CHI = m_txt_dia_chi.Text;
+            m_us_dm_ncc.dcID_LOAI_DM = 3;
         }
         private void us_obj_2_form()
         {
             m_txt_ten_nha_cung_cap.Text = m_us_dm_ncc.strTEN_NCC;
             m_txt_ma_nha_cung_cap.Text = m_us_dm_ncc.strMA_NCC;
             m_txt_sdt.Text = m_us_dm_ncc.strSDT;
+            m_txt_dia_chi.Text = m_us_dm_ncc.strDIA_CHI;
         }
         private void defineEvent()
         {
@@ -119,6 +123,8 @@ namespace BKI_QLHT
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.m_txt_dia_chi = new System.Windows.Forms.TextBox();
             this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,9 +162,9 @@ namespace BKI_QLHT
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(213, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 22);
+            this.label1.Size = new System.Drawing.Size(197, 22);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Thông tin nước sản xuất";
+            this.label1.Text = "Thông tin nhà sản xuất";
             // 
             // m_cmd_thoat
             // 
@@ -180,7 +186,7 @@ namespace BKI_QLHT
             this.m_pnl_control.Controls.Add(this.m_cmd_save);
             this.m_pnl_control.Controls.Add(this.m_cmd_thoat);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 209);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 266);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Size = new System.Drawing.Size(612, 72);
             this.m_pnl_control.TabIndex = 24;
@@ -202,7 +208,7 @@ namespace BKI_QLHT
             // 
             // m_txt_sdt
             // 
-            this.m_txt_sdt.Location = new System.Drawing.Point(207, 168);
+            this.m_txt_sdt.Location = new System.Drawing.Point(207, 164);
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(284, 20);
             this.m_txt_sdt.TabIndex = 23;
@@ -227,9 +233,9 @@ namespace BKI_QLHT
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label5.Location = new System.Drawing.Point(69, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 16);
+            this.label5.Size = new System.Drawing.Size(83, 16);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Ghi chú";
+            this.label5.Text = "Số điện thoại";
             // 
             // label3
             // 
@@ -237,9 +243,9 @@ namespace BKI_QLHT
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.label3.Location = new System.Drawing.Point(69, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 16);
+            this.label3.Size = new System.Drawing.Size(102, 16);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Mã nước sản xuất";
+            this.label3.Text = "Mã nhà sản xuất";
             // 
             // label2
             // 
@@ -247,13 +253,32 @@ namespace BKI_QLHT
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(69, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.Size = new System.Drawing.Size(107, 16);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Tên nước sản xuất";
+            this.label2.Text = "Tên nhà sản xuất";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.label4.Location = new System.Drawing.Point(69, 209);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 16);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Số điện thoại";
+            // 
+            // m_txt_dia_chi
+            // 
+            this.m_txt_dia_chi.Location = new System.Drawing.Point(207, 209);
+            this.m_txt_dia_chi.Name = "m_txt_dia_chi";
+            this.m_txt_dia_chi.Size = new System.Drawing.Size(284, 20);
+            this.m_txt_dia_chi.TabIndex = 26;
             // 
             // f805_nuoc_san_xuat_DE
             // 
-            this.ClientSize = new System.Drawing.Size(612, 281);
+            this.ClientSize = new System.Drawing.Size(612, 338);
+            this.Controls.Add(this.m_txt_dia_chi);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_txt_sdt);

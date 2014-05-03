@@ -42,8 +42,8 @@ namespace BKI_QLHT.DanhMuc
 
         #region Members
         ITransferDataRow m_obj_trans;
-        DS_V_DM_NCC_NSX_NHASX_1 m_ds = new DS_V_DM_NCC_NSX_NHASX_1();
-        US_V_DM_NCC_NSX_NHASX_1 m_us = new US_V_DM_NCC_NSX_NHASX_1();
+        DS_V_DM_NUOC_SX m_ds = new DS_V_DM_NUOC_SX();
+        US_V_DM_NUOC_SX m_us = new US_V_DM_NUOC_SX();
         US_DM_NCC_NSX_NHASX m_us_dm_ncc = new US_DM_NCC_NSX_NHASX();
         private Label m_lbl_ma_nha_cung_cap;
         private Label m_lbl_ten_nha_cung_cap;
@@ -79,11 +79,11 @@ namespace BKI_QLHT.DanhMuc
             m_obj_trans = get_trans_object(m_grv_nha_cung_cap);
             load_data_2_grid();
             grid2us_object(m_us_dm_ncc,m_grv_nha_cung_cap.Row);
-            m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+            m_us = new US_V_DM_NUOC_SX(m_us_dm_ncc.dcID);
             load_data_2_thong_tin_chi_tiet(m_us);
         }
 
-        private void load_data_2_thong_tin_chi_tiet(US_V_DM_NCC_NSX_NHASX_1 m_us)
+        private void load_data_2_thong_tin_chi_tiet(US_V_DM_NUOC_SX m_us)
         {
             m_lbl_ten_nha_cung_cap.Text = m_us.strTEN_NCC;
             m_lbl_ma_nha_cung_cap.Text = m_us.strMA_NCC;
@@ -92,17 +92,17 @@ namespace BKI_QLHT.DanhMuc
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
-            v_htb.Add(V_DM_NCC_NSX_NHASX_1.TEN_NCC, e_col_Number.TEN_NCC);
-            v_htb.Add(V_DM_NCC_NSX_NHASX_1.DIA_CHI, e_col_Number.DIA_CHI);
-            v_htb.Add(V_DM_NCC_NSX_NHASX_1.SDT, e_col_Number.SDT);
-            v_htb.Add(V_DM_NCC_NSX_NHASX_1.MA_NCC, e_col_Number.MA_NCC);
+            v_htb.Add(V_DM_NUOC_SX.TEN_NCC, e_col_Number.TEN_NCC);
+            v_htb.Add(V_DM_NUOC_SX.DIA_CHI, e_col_Number.DIA_CHI);
+            v_htb.Add(V_DM_NCC.SDT, e_col_Number.SDT);
+            v_htb.Add(V_DM_NUOC_SX.MA_NCC, e_col_Number.MA_NCC);
 
-            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_DM_NCC_NSX_NHASX_1.NewRow());
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_DM_NUOC_SX.NewRow());
             return v_obj_trans;
         }
         private void load_data_2_grid()
         {
-            m_ds = new DS_V_DM_NCC_NSX_NHASX_1();
+            m_ds = new DS_V_DM_NUOC_SX();
             m_us.FillDataset(m_ds,"where ID_LOAI_DM=2");
             m_grv_nha_cung_cap.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_grv_nha_cung_cap, m_obj_trans);
@@ -118,7 +118,7 @@ namespace BKI_QLHT.DanhMuc
         }
 
 
-        private void us_object2grid(US_V_DM_NCC_NSX_NHASX_1 i_us
+        private void us_object2grid(US_V_DM_NUOC_SX i_us
             , int i_grid_row)
         {
             DataRow v_dr = (DataRow)m_grv_nha_cung_cap.Rows[i_grid_row].UserData;
@@ -151,8 +151,8 @@ namespace BKI_QLHT.DanhMuc
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
             US_DM_NCC_NSX_NHASX v_us = new US_DM_NCC_NSX_NHASX();
             grid2us_object(v_us, m_grv_nha_cung_cap.Row);
-            US_V_DM_NCC_NSX_NHASX_1 v_v_us = new US_V_DM_NCC_NSX_NHASX_1(v_us.dcID);
-            if (v_v_us.dcID_NHA_CUNG_CAP ==0)
+            US_V_DM_NUOC_SX v_v_us = new US_V_DM_NUOC_SX(v_us.dcID);
+            if (v_v_us.dcID_NUOC_SX ==0)
             {
                 try
                 {
@@ -171,7 +171,7 @@ namespace BKI_QLHT.DanhMuc
             }
             else
             {
-                MessageBox.Show("Nhà cung cấp đã được sử dụng. Không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nước sản xuất đã được sử dụng. Không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -278,7 +278,7 @@ namespace BKI_QLHT.DanhMuc
         private void m_grv_nha_cung_cap_Click(object sender, EventArgs e)
         {
             grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
-            m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+            m_us = new US_V_DM_NUOC_SX(m_us_dm_ncc.dcID);
             load_data_2_thong_tin_chi_tiet(m_us);
         }
 

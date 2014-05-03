@@ -286,6 +286,7 @@ namespace BKI_QLHT
             this.m_cmd_nha_san_xuat.Name = "m_cmd_nha_san_xuat";
             this.m_cmd_nha_san_xuat.SubItemsExpandWidth = 14;
             this.m_cmd_nha_san_xuat.Text = "Nhà sản xuất";
+            this.m_cmd_nha_san_xuat.Click += new System.EventHandler(this.m_cmd_nha_san_xuat_Click);
             // 
             // m_menu_khach_hang
             // 

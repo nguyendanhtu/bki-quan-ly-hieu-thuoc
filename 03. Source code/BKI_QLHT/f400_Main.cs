@@ -553,6 +553,21 @@ namespace BKI_QLHT
             }
         }
 
+        private void m_cmd_nha_san_xuat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m_Panel_Content.Controls.Clear();
+                uc806_dm_nha_san_xuat uc_frm = new uc806_dm_nha_san_xuat();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
 
 
