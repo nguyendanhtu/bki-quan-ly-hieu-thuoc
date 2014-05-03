@@ -443,7 +443,7 @@ namespace BKI_QLHT
 			try{
 				set_initial_form_load();
                 load_data_2_lbl();
-                //m_lbl_ngay_lam_bc.text = DateTime.Today;
+               
                 load_custom_source_2_m_txt_tim_kiem();
 			}
 			catch (Exception v_e){
