@@ -135,7 +135,7 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 426);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(887, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(848, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_xuat_excel
@@ -163,7 +163,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(795, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(756, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -173,16 +173,16 @@ namespace BKI_QLHT
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 102);
+            this.m_fg.Location = new System.Drawing.Point(0, 91);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(887, 324);
+            this.m_fg.Size = new System.Drawing.Size(848, 335);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
             // m_lbl_nguoi_lam_bc
             // 
             this.m_lbl_nguoi_lam_bc.AutoSize = true;
-            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(265, 61);
+            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(128, 71);
             this.m_lbl_nguoi_lam_bc.Name = "m_lbl_nguoi_lam_bc";
             this.m_lbl_nguoi_lam_bc.Size = new System.Drawing.Size(63, 13);
             this.m_lbl_nguoi_lam_bc.TabIndex = 2723;
@@ -191,7 +191,7 @@ namespace BKI_QLHT
             // m_lbl_ngay_lam_bc
             // 
             this.m_lbl_ngay_lam_bc.AutoSize = true;
-            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(609, 61);
+            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(779, 71);
             this.m_lbl_ngay_lam_bc.Name = "m_lbl_ngay_lam_bc";
             this.m_lbl_ngay_lam_bc.Size = new System.Drawing.Size(60, 13);
             this.m_lbl_ngay_lam_bc.TabIndex = 2722;
@@ -200,7 +200,7 @@ namespace BKI_QLHT
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(441, 61);
+            this.label3.Location = new System.Drawing.Point(645, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 2721;
@@ -209,7 +209,7 @@ namespace BKI_QLHT
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(190, 31);
+            this.label2.Location = new System.Drawing.Point(126, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 2720;
@@ -218,7 +218,7 @@ namespace BKI_QLHT
             // m_lbl_nguoi_lam_bao_cao
             // 
             this.m_lbl_nguoi_lam_bao_cao.AutoSize = true;
-            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(143, 61);
+            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(6, 71);
             this.m_lbl_nguoi_lam_bao_cao.Name = "m_lbl_nguoi_lam_bao_cao";
             this.m_lbl_nguoi_lam_bao_cao.Size = new System.Drawing.Size(96, 13);
             this.m_lbl_nguoi_lam_bao_cao.TabIndex = 2719;
@@ -232,7 +232,7 @@ namespace BKI_QLHT
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 18;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(689, 23);
+            this.m_cmd_search.Location = new System.Drawing.Point(625, 21);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 2718;
@@ -243,7 +243,7 @@ namespace BKI_QLHT
             this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_tim_kiem.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(268, 28);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(204, 26);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(401, 20);
             this.m_txt_tim_kiem.TabIndex = 2717;
@@ -251,7 +251,7 @@ namespace BKI_QLHT
             // f411_bao_cao_danh_muc_thuoc_theo_nsx
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(887, 462);
+            this.ClientSize = new System.Drawing.Size(848, 462);
             this.Controls.Add(this.m_lbl_nguoi_lam_bc);
             this.Controls.Add(this.m_lbl_ngay_lam_bc);
             this.Controls.Add(this.label3);
@@ -325,11 +325,16 @@ namespace BKI_QLHT
         }
         private void format_controls()
         {
+
             CControlFormat.setFormStyle(this);
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
-            m_fg.Tree.Column = (int)e_col_Number.TEN_NUOC_SAN_XUAT;
+            m_fg.Tree.Column = (int)e_col_Number.TEN_THUOC;
+            m_fg.Cols[(int)e_col_Number.TEN_NUOC_SAN_XUAT].Visible = false;
+            m_fg.Cols[(int)e_col_Number.TT_HOAT_CHAT].Visible = false;
+            m_fg.Cols[(int)e_col_Number.TT_THUOC].Visible = false;
+            m_fg.Cols[0].Caption = "STT";
             m_fg.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
 
             set_define_events();
@@ -365,12 +370,13 @@ namespace BKI_QLHT
             {
                 v_str_search = "";
             }
-            m_fg.Redraw = false;
+            m_fg.Redraw = true;
             CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
               , 0
               , (int)e_col_Number.TEN_NUOC_SAN_XUAT // chỗ này là tên trường mà mình nhóm
-              , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
+              , (int)e_col_Number.DUONG_DUNG_DANG_DUNG // chỗ này là tên trường mà mình Count
               , "{0}"
               );
 
@@ -421,7 +427,7 @@ namespace BKI_QLHT
             String m_str_dia_chi = v_us.strDIA_CHI;
             String m_str_so_dien_thoai = v_us.strSDT;
             
-            CExcelReport v_obj_excel_rpt = new CExcelReport("f410_bao_cao_danh_muc_thuoc_theo_ncc.xlsx", 9, 1);
+            CExcelReport v_obj_excel_rpt = new CExcelReport("f410_bao_cao_danh_muc_thuoc_theo_ncc.xlsx", 9, 2);
             //người làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<nguoi_xuat_bao_cao>", m_lbl_nguoi_lam_bc.Text.Trim());
             //ngày làm báo cáo
@@ -430,7 +436,7 @@ namespace BKI_QLHT
             v_obj_excel_rpt.AddFindAndReplaceItem("<so_dien_thoai>", m_str_so_dien_thoai);
             v_obj_excel_rpt.AddFindAndReplaceItem("<ngay_xuat_bao_cao>", m_lbl_ngay_lam_bc.Text.Trim());
             v_obj_excel_rpt.FindAndReplace(false);
-            v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 1, m_fg.Cols.Count - 1, true);
+            v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 0, m_fg.Cols.Count - 1, true);
         }
 
 		private void set_define_events(){
