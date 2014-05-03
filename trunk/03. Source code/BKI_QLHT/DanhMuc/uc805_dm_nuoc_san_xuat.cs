@@ -129,7 +129,7 @@ namespace BKI_QLHT.DanhMuc
 
         private void insert_v_dm_ncc_nsx_nhasx_1()
         {
-            	f800_dm_nha_cung_cap_DE v_fDE = new  f800_dm_nha_cung_cap_DE();								
+            	f805_nuoc_san_xuat_DE v_fDE = new  f805_nuoc_san_xuat_DE();								
             	v_fDE.display_for_insert();
             load_data_2_grid();
         }
@@ -139,7 +139,7 @@ namespace BKI_QLHT.DanhMuc
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nha_cung_cap)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nha_cung_cap, m_grv_nha_cung_cap.Row)) return;
             grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
-            	f800_dm_nha_cung_cap_DE v_fDE = new f800_dm_nha_cung_cap_DE();
+            	f805_nuoc_san_xuat_DE v_fDE = new f805_nuoc_san_xuat_DE();
             	v_fDE.display_for_update(m_us_dm_ncc);
             load_data_2_grid();
         }

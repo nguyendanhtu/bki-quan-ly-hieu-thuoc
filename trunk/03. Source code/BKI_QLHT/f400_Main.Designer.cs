@@ -37,6 +37,8 @@ namespace BKI_QLHT
             this.m_cmd_item_danh_muc_bac_sy = new DevComponents.DotNetBar.ButtonItem();
             this.m_menu_item_nha_cung_cap = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_item_danh_muc_nha_cung_cap = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_nuoc_san_xuat = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_nha_san_xuat = new DevComponents.DotNetBar.ButtonItem();
             this.m_menu_khach_hang = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_item_danh_muc_khach_hang = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_nhom_khach_hang = new DevComponents.DotNetBar.ButtonItem();
@@ -101,8 +103,6 @@ namespace BKI_QLHT
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.m_cmd_nuoc_san_xuat = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_nha_san_xuat = new DevComponents.DotNetBar.ButtonItem();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
@@ -269,6 +269,23 @@ namespace BKI_QLHT
             this.m_cmd_item_danh_muc_nha_cung_cap.SubItemsExpandWidth = 14;
             this.m_cmd_item_danh_muc_nha_cung_cap.Text = "Danh mục nhà cung cấp";
             this.m_cmd_item_danh_muc_nha_cung_cap.Click += new System.EventHandler(this.m_cmd_item_danh_muc_nha_cung_cap_Click);
+            // 
+            // m_cmd_nuoc_san_xuat
+            // 
+            this.m_cmd_nuoc_san_xuat.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_nuoc_san_xuat.Image")));
+            this.m_cmd_nuoc_san_xuat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_nuoc_san_xuat.Name = "m_cmd_nuoc_san_xuat";
+            this.m_cmd_nuoc_san_xuat.SubItemsExpandWidth = 14;
+            this.m_cmd_nuoc_san_xuat.Text = "Nước sản xuất";
+            this.m_cmd_nuoc_san_xuat.Click += new System.EventHandler(this.m_cmd_nuoc_san_xuat_Click);
+            // 
+            // m_cmd_nha_san_xuat
+            // 
+            this.m_cmd_nha_san_xuat.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_nha_san_xuat.Image")));
+            this.m_cmd_nha_san_xuat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_nha_san_xuat.Name = "m_cmd_nha_san_xuat";
+            this.m_cmd_nha_san_xuat.SubItemsExpandWidth = 14;
+            this.m_cmd_nha_san_xuat.Text = "Nhà sản xuất";
             // 
             // m_menu_khach_hang
             // 
@@ -978,7 +995,7 @@ namespace BKI_QLHT
             this.bar1.AutoSyncBarCaption = true;
             this.bar1.CloseSingleTab = true;
             this.bar1.Controls.Add(this.panelDockContainer1);
-            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.dockContainerItem1});
@@ -1144,22 +1161,6 @@ namespace BKI_QLHT
             this.button4.Text = "Báo cáo danh mục thuốc theo nước sản xuất\r\n";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // m_cmd_nuoc_san_xuat
-            // 
-            this.m_cmd_nuoc_san_xuat.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_nuoc_san_xuat.Image")));
-            this.m_cmd_nuoc_san_xuat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_nuoc_san_xuat.Name = "m_cmd_nuoc_san_xuat";
-            this.m_cmd_nuoc_san_xuat.SubItemsExpandWidth = 14;
-            this.m_cmd_nuoc_san_xuat.Text = "Nước sản xuất";
-            // 
-            // m_cmd_nha_san_xuat
-            // 
-            this.m_cmd_nha_san_xuat.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_nha_san_xuat.Image")));
-            this.m_cmd_nha_san_xuat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_nha_san_xuat.Name = "m_cmd_nha_san_xuat";
-            this.m_cmd_nha_san_xuat.SubItemsExpandWidth = 14;
-            this.m_cmd_nha_san_xuat.Text = "Nhà sản xuất";
             // 
             // f400_Main
             // 
