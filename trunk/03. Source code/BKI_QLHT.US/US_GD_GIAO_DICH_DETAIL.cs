@@ -269,5 +269,38 @@ public class US_GD_GIAO_DICH_DETAIL : US_Object
         pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
     }
     #endregion
-	}
+
+    #region "Additional"
+    public void Insert_data_into_gd_giao_dich_detail(
+        decimal @ip_dc_id_giao_dich
+        ,decimal @ip_dc_id_thuoc
+        ,decimal @ip_dc_id_don_vi_thuoc
+        ,decimal @ip_dc_so_luong_nhap
+        , decimal @ip_dc_so_luong_ban
+        , decimal @ip_dc_id_giao_dich_detail
+        , decimal @ip_dc_id_nha_cung_cap
+        , decimal @ip_dc_id_nuoc_sx
+        , decimal @ip_dc_id_hang_sx
+        , DateTime @ip_dat_han_su_dung
+        , decimal @ip_dc_gia_ban
+        , decimal @ip_dc_gia_nhap)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_GD_GIAO_DICH_DETAIL");
+        v_sp.addDecimalInputParam("@ip_dc_id_giao_dich", @ip_dc_id_giao_dich);
+        v_sp.addDecimalInputParam("@ip_dc_id_thuoc", @ip_dc_id_thuoc);
+        v_sp.addDecimalInputParam("@ip_dc_id_don_vi_thuoc", @ip_dc_id_don_vi_thuoc);
+        v_sp.addDecimalInputParam("@ip_dc_so_luong_nhap", @ip_dc_so_luong_nhap);
+        v_sp.addDecimalInputParam("@ip_dc_so_luong_ban", @ip_dc_so_luong_ban);
+        v_sp.addDecimalOutputParam("@ip_dc_id_giao_dich_detail", @ip_dc_id_giao_dich_detail);
+        v_sp.addDecimalInputParam("@ip_dc_id_nha_cung_cap", @ip_dc_id_nha_cung_cap);
+        v_sp.addDecimalInputParam("@ip_dc_id_nuoc_sx", @ip_dc_id_nuoc_sx);
+        v_sp.addDecimalInputParam("@ip_dc_id_hang_sx", @ip_dc_id_hang_sx);
+        v_sp.addDatetimeInputParam("@ip_dat_han_su_dung", @ip_dat_han_su_dung);
+        v_sp.addDecimalInputParam("@ip_dc_gia_ban", @ip_dc_gia_ban);
+        v_sp.addDecimalInputParam("@ip_dc_gia_nhap", @ip_dc_gia_nhap);
+        v_sp.ExecuteCommand(this);
+        this.dcID = @ip_dc_id_giao_dich_detail;
+    }
+    #endregion
+}
 }
