@@ -110,26 +110,48 @@ public class US_GD_GIAO_DICH_DETAIL : US_Object
         pm_objDR["ID_DON_VI_THUOC"] = System.Convert.DBNull;
     }
 
-    public decimal dcSO_LUONG
+    public decimal dcSO_LUONG_NHAP
     {
         get
         {
-            return CNull.RowNVLDecimal(pm_objDR, "SO_LUONG", IPConstants.c_DefaultDecimal);
+            return CNull.RowNVLDecimal(pm_objDR, "SO_LUONG_NHAP", IPConstants.c_DefaultDecimal);
         }
         set
         {
-            pm_objDR["SO_LUONG"] = value;
+            pm_objDR["SO_LUONG_NHAP"] = value;
         }
     }
 
-    public bool IsSO_LUONGNull()
+    public bool IsSO_LUONG_NHAPNull()
     {
-        return pm_objDR.IsNull("SO_LUONG");
+        return pm_objDR.IsNull("SO_LUONG_NHAP");
     }
 
-    public void SetSO_LUONGNull()
+    public void SetSO_LUONG_NHAPNull()
     {
-        pm_objDR["SO_LUONG"] = System.Convert.DBNull;
+        pm_objDR["SO_LUONG_NHAP"] = System.Convert.DBNull;
+    }
+
+    public decimal dcSO_LUONG_BAN
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "SO_LUONG_BAN", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["SO_LUONG_BAN"] = value;
+        }
+    }
+
+    public bool IsSO_LUONG_BANNull()
+    {
+        return pm_objDR.IsNull("SO_LUONG_BAN");
+    }
+
+    public void SetSO_LUONG_BANNull()
+    {
+        pm_objDR["SO_LUONG_BAN"] = System.Convert.DBNull;
     }
 
     public decimal dcID_NHA_CUNG_CAP
@@ -220,26 +242,70 @@ public class US_GD_GIAO_DICH_DETAIL : US_Object
         pm_objDR["HAN_SU_DUNG"] = System.Convert.DBNull;
     }
 
-    public decimal dcGIA
+    public decimal dcGIA_NHAP
     {
         get
         {
-            return CNull.RowNVLDecimal(pm_objDR, "GIA", IPConstants.c_DefaultDecimal);
+            return CNull.RowNVLDecimal(pm_objDR, "GIA_NHAP", IPConstants.c_DefaultDecimal);
         }
         set
         {
-            pm_objDR["GIA"] = value;
+            pm_objDR["GIA_NHAP"] = value;
         }
     }
 
-    public bool IsGIANull()
+    public bool IsGIA_NHAPNull()
     {
-        return pm_objDR.IsNull("GIA");
+        return pm_objDR.IsNull("GIA_NHAP");
     }
 
-    public void SetGIANull()
+    public void SetGIA_NHAPNull()
     {
-        pm_objDR["GIA"] = System.Convert.DBNull;
+        pm_objDR["GIA_NHAP"] = System.Convert.DBNull;
+    }
+
+    public decimal dcGIA_BAN
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "GIA_BAN", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["GIA_BAN"] = value;
+        }
+    }
+
+    public bool IsGIA_BANNull()
+    {
+        return pm_objDR.IsNull("GIA_BAN");
+    }
+
+    public void SetGIA_BANNull()
+    {
+        pm_objDR["GIA_BAN"] = System.Convert.DBNull;
+    }
+
+    public decimal dcID_LO_THUOC
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID_LO_THUOC", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID_LO_THUOC"] = value;
+        }
+    }
+
+    public bool IsID_LO_THUOCNull()
+    {
+        return pm_objDR.IsNull("ID_LO_THUOC");
+    }
+
+    public void SetID_LO_THUOCNull()
+    {
+        pm_objDR["ID_LO_THUOC"] = System.Convert.DBNull;
     }
 
     #endregion
