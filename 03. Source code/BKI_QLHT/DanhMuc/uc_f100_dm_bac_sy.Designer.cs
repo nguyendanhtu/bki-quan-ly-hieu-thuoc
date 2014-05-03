@@ -49,6 +49,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.m_cbo_tk_bac_sy = new System.Windows.Forms.ComboBox();
             this.m_pnl_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +109,7 @@
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 3;
-            this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Text = "Thêm (F3)";
             // 
             // m_cmd_update
             // 
@@ -122,7 +124,7 @@
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 4;
-            this.m_cmd_update.Text = "&Sửa";
+            this.m_cmd_update.Text = "Sửa (F4)";
             // 
             // m_cmd_delete
             // 
@@ -137,7 +139,7 @@
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 5;
-            this.m_cmd_delete.Text = "&Xoá";
+            this.m_cmd_delete.Text = "Xoá (F6)";
             // 
             // m_cmd_exit
             // 
@@ -158,10 +160,11 @@
             // 
             this.m_txt_tim_kiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(127, 48);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(347, 52);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(247, 20);
             this.m_txt_tim_kiem.TabIndex = 26;
+            this.m_txt_tim_kiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_tim_kiem_KeyDown);
             // 
             // m_cmd_Tim_Kiem
             // 
@@ -171,7 +174,7 @@
             this.m_cmd_Tim_Kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_Tim_Kiem.ImageIndex = 18;
             this.m_cmd_Tim_Kiem.ImageList = this.ImageList;
-            this.m_cmd_Tim_Kiem.Location = new System.Drawing.Point(397, 44);
+            this.m_cmd_Tim_Kiem.Location = new System.Drawing.Point(617, 48);
             this.m_cmd_Tim_Kiem.Name = "m_cmd_Tim_Kiem";
             this.m_cmd_Tim_Kiem.Size = new System.Drawing.Size(88, 26);
             this.m_cmd_Tim_Kiem.TabIndex = 27;
@@ -289,10 +292,32 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Danh sách bác sỹ";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(24, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 16);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Bệnh viện";
+            // 
+            // m_cbo_tk_bac_sy
+            // 
+            this.m_cbo_tk_bac_sy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.m_cbo_tk_bac_sy.FormattingEnabled = true;
+            this.m_cbo_tk_bac_sy.Location = new System.Drawing.Point(108, 47);
+            this.m_cbo_tk_bac_sy.Name = "m_cbo_tk_bac_sy";
+            this.m_cbo_tk_bac_sy.Size = new System.Drawing.Size(184, 21);
+            this.m_cbo_tk_bac_sy.TabIndex = 40;
+            this.m_cbo_tk_bac_sy.SelectedIndexChanged += new System.EventHandler(this.m_cbo_tk_bac_sy_SelectedIndexChanged);
+            // 
             // uc_f100_dm_bac_sy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.m_cbo_tk_bac_sy);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.m_lbl_dien_thoai);
@@ -310,6 +335,7 @@
             this.Name = "uc_f100_dm_bac_sy";
             this.Size = new System.Drawing.Size(720, 496);
             this.Load += new System.EventHandler(this.uc_f100_V_DM_BAC_SY_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uc_f100_dm_bac_sy_KeyDown);
             this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
@@ -338,5 +364,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox m_cbo_tk_bac_sy;
     }
 }
