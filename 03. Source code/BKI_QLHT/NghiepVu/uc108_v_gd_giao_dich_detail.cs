@@ -47,6 +47,7 @@ namespace BKI_QLHT.NghiepVu
         decimal tong_tien_thanh_toan = 0;
         US_GD_GIAO_DICH_DETAIL m_us_giao_dich_detail = new US_GD_GIAO_DICH_DETAIL();
         DS_GD_GIAO_DICH_DETAIL m_ds_giao_dich_detail = new DS_GD_GIAO_DICH_DETAIL();
+        bool trang_thai = false;
         #endregion
 
 
@@ -92,14 +93,35 @@ namespace BKI_QLHT.NghiepVu
         
         private void load_cbo_don_vi_tinh()
         {
+            
             US_V_GD_DON_VI_TINH_THUOC v_us_v_gd_don_vi_tinh_thuoc = new US_V_GD_DON_VI_TINH_THUOC();
             DS_V_GD_DON_VI_TINH_THUOC v_ds_v_gd_don_vi_tinh_thuoc = new DS_V_GD_DON_VI_TINH_THUOC();
             decimal v_id_thuoc = txt_search_thuoc1.dcID;
-            v_us_v_gd_don_vi_tinh_thuoc.FillDataset(v_ds_v_gd_don_vi_tinh_thuoc, "where ID_THUOC = "+v_id_thuoc);
-            m_cbo_don_vi_tinh.DataSource = v_ds_v_gd_don_vi_tinh_thuoc.V_GD_DON_VI_TINH_THUOC;
-            m_cbo_don_vi_tinh.ValueMember = V_GD_DON_VI_TINH_THUOC.ID;
-            m_cbo_don_vi_tinh.DisplayMember = V_GD_GIAO_DICH_DETAIL.TEN_DON_VI;
-            
+            v_us_v_gd_don_vi_tinh_thuoc.FillDataset(v_ds_v_gd_don_vi_tinh_thuoc, "where ID_THUOC = " + v_id_thuoc);
+            if (v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows.Count != 0)
+            {
+                
+                m_cbo_don_vi_tinh.DataSource = v_ds_v_gd_don_vi_tinh_thuoc.V_GD_DON_VI_TINH_THUOC;
+                m_cbo_don_vi_tinh.ValueMember = V_GD_DON_VI_TINH_THUOC.ID;
+                m_cbo_don_vi_tinh.DisplayMember = V_GD_DON_VI_TINH_THUOC.TEN_DON_VI;
+            }
+            else
+            {
+                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows[0];
+                v_dr[V_GD_DON_VI_TINH_THUOC.ID] = -1;
+                v_dr[V_GD_DON_VI_TINH_THUOC.TEN_DON_VI] = "Chưa có dữ liệu";
+                v_dr[V_GD_DON_VI_TINH_THUOC.ID_THUOC] = -1;
+                v_dr[V_GD_DON_VI_TINH_THUOC.ID_DON_VI_TINH] = -1;
+                v_dr[V_GD_DON_VI_TINH_THUOC.ID_NHOM_DON_VI_TINH] = -1;
+                v_dr[V_GD_DON_VI_TINH_THUOC.GIA_BAN] = -1;
+                v_ds_v_gd_don_vi_tinh_thuoc.V_GD_DON_VI_TINH_THUOC.Rows.InsertAt(v_dr, 0);
+                m_cbo_don_vi_tinh.DataSource = v_ds_v_gd_don_vi_tinh_thuoc.V_GD_DON_VI_TINH_THUOC;
+                m_cbo_don_vi_tinh.ValueMember = V_GD_DON_VI_TINH_THUOC.ID;
+                m_cbo_don_vi_tinh.DisplayMember = V_GD_DON_VI_TINH_THUOC.TEN_DON_VI;
+                m_txt_don_gia.Text = "Chưa có dữ liệu";
+              
+            }
+            trang_thai = true;
         }
 
         private void load_cbo_bac_sy()
@@ -148,10 +170,25 @@ namespace BKI_QLHT.NghiepVu
             decimal don_gia;
             decimal v_id_don_vi_tinh_thuoc = CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue);
             v_us_v_gd_don_vi_tinh_thuoc.FillDataset(v_ds_v_gd_don_vi_tinh_thuoc, "where ID = " + v_id_don_vi_tinh_thuoc);
-            DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows[0];
-            don_gia = CIPConvert.ToDecimal(v_dr[V_GD_DON_VI_TINH_THUOC.GIA_BAN]);
-            m_txt_don_gia.Text = don_gia.ToString();
-            m_txt_don_gia.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.Trim()));
+            if (v_ds_v_gd_don_vi_tinh_thuoc.Tables.Count != 0)
+            {
+                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows[0];
+                don_gia = CIPConvert.ToDecimal(v_dr[V_GD_DON_VI_TINH_THUOC.GIA_BAN]);
+                m_txt_don_gia.Text = don_gia.ToString();
+                m_txt_don_gia.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.Trim()));
+            }
+            else
+            { 
+                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].NewRow();
+                v_dr["ID"] = -1;
+                v_dr["TEN_DON_VI"] = "Chưa có dữ liệu";
+                v_dr["ID_THUOC"] = -1;
+                v_dr["ID_DON_VI_TINH"] = -1;
+                v_dr["ID_NHOM_DON_VI_TINH"] = -1;
+                v_dr["V_GD_DON_VI_TINH_THUOC.GIA_BAN"] = -1;
+                v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows.Add(v_dr);
+                m_txt_don_gia.Text = "Chưa có dữ liệu";
+            }
         }
         #endregion
 
@@ -174,8 +211,33 @@ namespace BKI_QLHT.NghiepVu
         }
         private void m_cbo_don_vi_tinh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            load_cbo_don_vi_tinh();
-            load_don_gia();
+            if(trang_thai == true)
+            {
+            US_V_GD_DON_VI_TINH_THUOC v_us_v_gd_don_vi_tinh_thuoc = new US_V_GD_DON_VI_TINH_THUOC();
+            DS_V_GD_DON_VI_TINH_THUOC v_ds_v_gd_don_vi_tinh_thuoc = new DS_V_GD_DON_VI_TINH_THUOC();
+            decimal don_gia;
+            decimal v_id_don_vi_tinh_thuoc = CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue);
+            v_us_v_gd_don_vi_tinh_thuoc.FillDataset(v_ds_v_gd_don_vi_tinh_thuoc, "where ID = " + v_id_don_vi_tinh_thuoc);
+            if (v_ds_v_gd_don_vi_tinh_thuoc.Tables.Count != 0)
+            {
+                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows[0];
+                don_gia = CIPConvert.ToDecimal(v_dr[V_GD_DON_VI_TINH_THUOC.GIA_BAN]);
+                m_txt_don_gia.Text = don_gia.ToString();
+                m_txt_don_gia.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.Trim()));
+            }
+            else
+            {
+                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].NewRow();
+                v_dr["ID"] = -1;
+                v_dr["TEN_DON_VI"] = "Chưa có dữ liệu";
+                v_dr["ID_THUOC"] = -1;
+                v_dr["ID_DON_VI_TINH"] = -1;
+                v_dr["ID_NHOM_DON_VI_TINH"] = -1;
+                v_dr["V_GD_DON_VI_TINH_THUOC.GIA_BAN"] = -1;
+                v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows.Add(v_dr);
+                m_txt_don_gia.Text = "Chưa có dữ liệu";
+            }
+        }
         }
 
         private void txt_search_thuoc1_KeyDown(object sender, KeyEventArgs e)
@@ -183,8 +245,8 @@ namespace BKI_QLHT.NghiepVu
             try
             {
                 if (e.KeyData == Keys.Enter)
-                    load_cbo_don_vi_tinh();
-                load_don_gia();
+                  load_cbo_don_vi_tinh();
+                  load_don_gia();
             }
             catch (Exception v_e)
             {
@@ -235,11 +297,22 @@ namespace BKI_QLHT.NghiepVu
             m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",","")))) + " " + "VNĐ";
             tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", ""));
             m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
-            //restart_form();
+            m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+            restart_data();
+        }
+
+        private void restart_data()
+        {
+            txt_search_thuoc1.Focus();
         }
 
      
         #endregion
+
+        private void m_cmd_luu_Click(object sender, EventArgs e)
+        {
+
+        }
 
      }
 
