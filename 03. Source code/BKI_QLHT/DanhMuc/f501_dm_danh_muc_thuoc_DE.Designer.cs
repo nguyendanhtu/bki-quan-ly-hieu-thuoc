@@ -65,8 +65,7 @@
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_save.TabIndex = 13;
-            this.m_cmd_save.Text = "Lưu";
-            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            this.m_cmd_save.Text = "Lưu (F2)";
             // 
             // ImageList
             // 
@@ -106,10 +105,9 @@
             this.m_cmd_huy.ImageList = this.ImageList;
             this.m_cmd_huy.Location = new System.Drawing.Point(306, 22);
             this.m_cmd_huy.Name = "m_cmd_huy";
-            this.m_cmd_huy.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_huy.Size = new System.Drawing.Size(105, 28);
             this.m_cmd_huy.TabIndex = 12;
-            this.m_cmd_huy.Text = "Trở về";
-            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
+            this.m_cmd_huy.Text = "Trở về (Esc)";
             // 
             // label3
             // 
@@ -168,6 +166,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "f501_dm_danh_muc_thuoc_DE";
             this.Text = "f501_dm_danh_muc_thuoc_DE";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.f501_dm_danh_muc_thuoc_DE_KeyDown);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

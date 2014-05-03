@@ -305,6 +305,24 @@ namespace BKI_QLHT
         }
         #endregion
 
+        private void uc504_v_dm_nhom_thuoc_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.Control) {
+                    switch (e.KeyCode) {
+                        case Keys.F1: insert_v_dm_nhom_thuoc();
+                            break;
+                    }
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
+        }
+
         
     }
 }
