@@ -118,9 +118,64 @@ namespace BKI_QLHT.NghiepVu
             m_cbo_ten_bac_sy.SelectedIndex = 0;
         }
 
+     
+        private void load_cbo_ten_khach_hang()
+        {
+            US_DM_KHACH_HANG v_us = new US_DM_KHACH_HANG();
+            DS_DM_KHACH_HANG v_ds = new DS_DM_KHACH_HANG();
+            v_us.FillDataset(v_ds);
+            m_cbo_ten_khach_hang.ValueMember = DM_KHACH_HANG.ID;
+            m_cbo_ten_khach_hang.DisplayMember = DM_KHACH_HANG.TEN_KHACH_HANG;
+            m_cbo_ten_khach_hang.DataSource = v_ds.DM_KHACH_HANG;
+
+
+        }
+
+        private void load_khach_ban_buon()
+        {
+            US_DM_KHACH_HANG v_us = new US_DM_KHACH_HANG();
+            DS_DM_KHACH_HANG v_ds = new DS_DM_KHACH_HANG();
+            int v_id_kh = Convert.ToInt32(m_cbo_ten_khach_hang.SelectedValue);
+            v_us.FillDatasetByIDKhachBanBuon(v_ds, v_id_kh);
+            DataRow v_dr = v_ds.Tables[0].Rows[0];
+            m_lbl_dia_chi_text.Text = v_dr["DIA_CHI"].ToString();
+            m_lbl_SDT_text.Text = v_dr["SDT"].ToString();
+        }
+        private void load_don_gia()
+        {
+            US_V_GD_DON_VI_TINH_THUOC v_us_v_gd_don_vi_tinh_thuoc = new US_V_GD_DON_VI_TINH_THUOC();
+            DS_V_GD_DON_VI_TINH_THUOC v_ds_v_gd_don_vi_tinh_thuoc = new DS_V_GD_DON_VI_TINH_THUOC();
+            decimal don_gia;
+            decimal v_id_don_vi_tinh_thuoc = CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue);
+            v_us_v_gd_don_vi_tinh_thuoc.FillDataset(v_ds_v_gd_don_vi_tinh_thuoc, "where ID = " + v_id_don_vi_tinh_thuoc);
+            DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows[0];
+            don_gia = CIPConvert.ToDecimal(v_dr[V_GD_DON_VI_TINH_THUOC.GIA_BAN]);
+            m_txt_don_gia.Text = don_gia.ToString();
+            m_txt_don_gia.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.Trim()));
+        }
+        #endregion
+
+
+        #region Events
+
+        private void uc_f108_v_gd_giao_dich_detail_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                set_initial_form_load();
+
+
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
         private void m_cbo_don_vi_tinh_SelectedIndexChanged(object sender, EventArgs e)
         {
             load_cbo_don_vi_tinh();
+            load_don_gia();
         }
 
         private void txt_search_thuoc1_KeyDown(object sender, KeyEventArgs e)
@@ -144,49 +199,6 @@ namespace BKI_QLHT.NghiepVu
             decimal tong_tien_thanh_toan = tong_tien - (tong_tien * v_ti_le_chiet_khau) / 100;
             m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
         }
-        private void load_cbo_ten_khach_hang()
-        {
-            US_DM_KHACH_HANG v_us = new US_DM_KHACH_HANG();
-            DS_DM_KHACH_HANG v_ds = new DS_DM_KHACH_HANG();
-            v_us.FillDataset(v_ds);
-            m_cbo_ten_khach_hang.ValueMember = DM_KHACH_HANG.ID;
-            m_cbo_ten_khach_hang.DisplayMember = DM_KHACH_HANG.TEN_KHACH_HANG;
-            m_cbo_ten_khach_hang.DataSource = v_ds.DM_KHACH_HANG;
-
-
-        }
-
-        private void load_khach_ban_buon()
-        {
-            US_DM_KHACH_HANG v_us = new US_DM_KHACH_HANG();
-            DS_DM_KHACH_HANG v_ds = new DS_DM_KHACH_HANG();
-            int v_id_kh = Convert.ToInt32(m_cbo_ten_khach_hang.SelectedValue);
-            v_us.FillDatasetByIDKhachBanBuon(v_ds, v_id_kh);
-            DataRow v_dr = v_ds.Tables[0].Rows[0];
-            m_lbl_dia_chi_text.Text = v_dr["DIA_CHI"].ToString();
-            m_lbl_SDT_text.Text = v_dr["SDT"].ToString();
-        }
-       
-        #endregion
-
-
-        #region Events
-
-        private void uc_f108_v_gd_giao_dich_detail_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                set_initial_form_load();
-
-
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-
-        }
-
         private void set_initial_form_load()
         {
 
@@ -226,18 +238,7 @@ namespace BKI_QLHT.NghiepVu
             //restart_form();
         }
 
-        private void load_don_gia()
-        {
-            US_V_GD_DON_VI_TINH_THUOC v_us_v_gd_don_vi_tinh_thuoc = new US_V_GD_DON_VI_TINH_THUOC();
-            DS_V_GD_DON_VI_TINH_THUOC v_ds_v_gd_don_vi_tinh_thuoc = new DS_V_GD_DON_VI_TINH_THUOC();
-            decimal don_gia;
-            decimal v_id_don_vi_tinh_thuoc =CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue);
-            v_us_v_gd_don_vi_tinh_thuoc.FillDataset(v_ds_v_gd_don_vi_tinh_thuoc, "where ID = " + v_id_don_vi_tinh_thuoc);
-            DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows[0];
-            don_gia = CIPConvert.ToDecimal(v_dr[V_GD_DON_VI_TINH_THUOC.GIA_BAN]);
-            m_txt_don_gia.Text = don_gia.ToString();
-            m_txt_don_gia.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.Trim()));
-        }
+     
         #endregion
 
      }

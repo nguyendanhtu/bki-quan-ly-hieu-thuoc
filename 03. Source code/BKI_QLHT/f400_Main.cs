@@ -361,10 +361,10 @@ namespace BKI_QLHT
         {
             try
             {
-                m_Panel_Content.Controls.Clear();
-                uc_103_dm_don_vi uc_frm = new uc_103_dm_don_vi();
-                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
-                m_Panel_Content.Controls.Add(uc_frm);
+                //m_Panel_Content.Controls.Clear();
+                //uc_103_dm_don_vi uc_frm = new uc_103_dm_don_vi();
+                //uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                //m_Panel_Content.Controls.Add(uc_frm);
             }
             catch (System.Exception v_e)
             {

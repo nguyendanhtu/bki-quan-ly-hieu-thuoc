@@ -153,6 +153,7 @@
             // m_txt_tong_tien_thanh_toan
             // 
             this.m_txt_tong_tien_thanh_toan.AutoSize = true;
+            this.m_txt_tong_tien_thanh_toan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_txt_tong_tien_thanh_toan.ForeColor = System.Drawing.Color.Firebrick;
             this.m_txt_tong_tien_thanh_toan.Location = new System.Drawing.Point(826, 106);
             this.m_txt_tong_tien_thanh_toan.Name = "m_txt_tong_tien_thanh_toan";
@@ -164,7 +165,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(315, 109);
+            this.label20.Location = new System.Drawing.Point(27, 155);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(95, 16);
@@ -173,7 +174,7 @@
             // 
             // m_txt_ti_le_chiet_khau
             // 
-            this.m_txt_ti_le_chiet_khau.Location = new System.Drawing.Point(452, 103);
+            this.m_txt_ti_le_chiet_khau.Location = new System.Drawing.Point(164, 149);
             this.m_txt_ti_le_chiet_khau.Margin = new System.Windows.Forms.Padding(4);
             this.m_txt_ti_le_chiet_khau.Name = "m_txt_ti_le_chiet_khau";
             this.m_txt_ti_le_chiet_khau.Size = new System.Drawing.Size(52, 23);
@@ -411,7 +412,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(512, 106);
+            this.label5.Location = new System.Drawing.Point(224, 152);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 16);

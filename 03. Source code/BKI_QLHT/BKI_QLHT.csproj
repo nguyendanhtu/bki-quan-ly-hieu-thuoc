@@ -119,15 +119,6 @@
     <Compile Include="DanhMuc\f102_v_dm_don_vi_tinh_de.Designer.cs">
       <DependentUpon>f102_v_dm_don_vi_tinh_de.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f103_V_DM_DON_VI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f103_v_dm_don_vi_de.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f103_v_dm_don_vi_de.Designer.cs">
-      <DependentUpon>f103_v_dm_don_vi_de.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhMuc\f404_v_dm_nhasx.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +191,12 @@
     <Compile Include="DanhMuc\txt_search_thuoc.Designer.cs">
       <DependentUpon>txt_search_thuoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\uc110_txt_search_ten_thuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\uc110_txt_search_ten_thuoc.Designer.cs">
+      <DependentUpon>uc110_txt_search_ten_thuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\uc500_dm_danh_muc_thuoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,12 +235,6 @@
     </Compile>
     <Compile Include="DanhMuc\uc_102_dm_don_vi_tinh.Designer.cs">
       <DependentUpon>uc_102_dm_don_vi_tinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\uc_103_dm_don_vi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\uc_103_dm_don_vi.Designer.cs">
-      <DependentUpon>uc_103_dm_don_vi.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\uc_800_dm_nha_cung_cap.cs">
       <SubType>UserControl</SubType>
@@ -408,12 +399,6 @@
     <EmbeddedResource Include="DanhMuc\f102_v_dm_don_vi_tinh_de.resx">
       <DependentUpon>f102_v_dm_don_vi_tinh_de.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f103_V_DM_DON_VI.resx">
-      <DependentUpon>f103_V_DM_DON_VI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f103_v_dm_don_vi_de.resx">
-      <DependentUpon>f103_v_dm_don_vi_de.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f404_v_dm_nhasx.resx">
       <DependentUpon>f404_v_dm_nhasx.cs</DependentUpon>
     </EmbeddedResource>
@@ -462,6 +447,9 @@
     <EmbeddedResource Include="DanhMuc\txt_search_thuoc.resx">
       <DependentUpon>txt_search_thuoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\uc110_txt_search_ten_thuoc.resx">
+      <DependentUpon>uc110_txt_search_ten_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc500_dm_danh_muc_thuoc.resx">
       <DependentUpon>uc500_dm_danh_muc_thuoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -482,9 +470,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc_102_dm_don_vi_tinh.resx">
       <DependentUpon>uc_102_dm_don_vi_tinh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\uc_103_dm_don_vi.resx">
-      <DependentUpon>uc_103_dm_don_vi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc_800_dm_nha_cung_cap.resx">
       <DependentUpon>uc_800_dm_nha_cung_cap.cs</DependentUpon>
