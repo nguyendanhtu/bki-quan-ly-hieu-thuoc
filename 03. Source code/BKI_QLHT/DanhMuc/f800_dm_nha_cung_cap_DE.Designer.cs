@@ -42,8 +42,8 @@
             this.m_cmd_thoat = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -178,15 +178,15 @@
             this.m_cmd_save.Text = "Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click_1);
             // 
-            // panel1
+            // m_pnl_control
             // 
-            this.panel1.Controls.Add(this.m_cmd_save);
-            this.panel1.Controls.Add(this.m_cmd_thoat);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 283);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 72);
-            this.panel1.TabIndex = 14;
+            this.m_pnl_control.Controls.Add(this.m_cmd_save);
+            this.m_pnl_control.Controls.Add(this.m_cmd_thoat);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 283);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Size = new System.Drawing.Size(572, 72);
+            this.m_pnl_control.TabIndex = 14;
             // 
             // f800_dm_nha_cung_cap_DE
             // 
@@ -194,7 +194,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 355);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_txt_sdt);
             this.Controls.Add(this.m_txt_dia_chi);
             this.Controls.Add(this.m_txt_ma_nha_cung_cap);
@@ -206,7 +206,7 @@
             this.Name = "f800_dm_nha_cung_cap_DE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin nhà cung cấp";
-            this.panel1.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +225,7 @@
         private System.Windows.Forms.TextBox m_txt_sdt;
         internal SIS.Controls.Button.SiSButton m_cmd_thoat;
         internal SIS.Controls.Button.SiSButton m_cmd_save;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel m_pnl_control;
         internal System.Windows.Forms.ImageList ImageList;
     }
 }
