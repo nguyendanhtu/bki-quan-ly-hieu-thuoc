@@ -267,6 +267,30 @@ namespace BKI_QLHT.DanhMuc
         }
         #endregion
 
+        private void m_text_tim_kiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            try 
+	{
+        if (e.KeyData == Keys.Enter)
+        {
+
+            string v_str_tu_khoa = m_text_tim_kiem.Text.Trim();
+            US_DM_NHOM_KHACH_HANG v_us_dm_nhom_khach_hang = new US_DM_NHOM_KHACH_HANG();
+            DS_DM_NHOM_KHACH_HANG v_ds_dm_nhom_khach_hang = new DS_DM_NHOM_KHACH_HANG();
+            v_us_dm_nhom_khach_hang.FillDatasetSearch(v_ds_dm_nhom_khach_hang, v_str_tu_khoa);
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_dm_nhom_khach_hang, m_fg, m_obj_trans);
+            m_fg.Redraw = true;
+        }
+	}
+	catch (Exception v_e)
+	{
+		
+		CSystemLog_301.ExceptionHandle(v_e);
+	}
+            
+        }
+
      
 
     }
