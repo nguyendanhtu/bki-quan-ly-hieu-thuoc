@@ -193,10 +193,11 @@ public class US_V_DM_BAC_SY : US_Object
 	}
 #endregion
 
-    public void FillDatasetSearch(DS_V_DM_BAC_SY ip_ds_v_dm_bac_sy, string ip_str_tu_khoa)
+    public void FillDatasetSearch(DS_V_DM_BAC_SY ip_ds_v_dm_bac_sy, string ip_str_tu_khoa, decimal ip_dc_benh_vien)
     {
         CStoredProc v_stored_proc = new CStoredProc("pr_V_DM_BAC_SY_Search");
         v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
+        v_stored_proc.addDecimalInputParam("@ID_BENH_VIEN", ip_dc_benh_vien);
         v_stored_proc.fillDataSetByCommand(this, ip_ds_v_dm_bac_sy);
     }
 }
