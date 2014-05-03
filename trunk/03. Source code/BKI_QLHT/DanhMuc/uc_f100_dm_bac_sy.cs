@@ -61,6 +61,7 @@ namespace BKI_QLHT.DanhMuc
         US_V_DM_BAC_SY m_us_v_dm_bac_sy = new US_V_DM_BAC_SY();
         DS_DM_BAC_SY m_ds_dm_bac_sy = new DS_DM_BAC_SY();
         US_DM_BAC_SY m_us_dm_bac_sy = new US_DM_BAC_SY();
+        bool m_trang_thai = false;
         #endregion
 
         #region Private Methods
@@ -70,6 +71,7 @@ namespace BKI_QLHT.DanhMuc
             CControlFormat.setUserControlStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_fg);
             set_define_events();
+            Load_cbo_benh_vien();
             //this.KeyPreview = true;
         }
         private void set_initial_form_load()
@@ -191,6 +193,25 @@ namespace BKI_QLHT.DanhMuc
             m_lbl_benh_vien.Text = m_us_v_dm_bac_sy.strTEN_NGAN;
             m_lbl_dien_thoai.Text = m_us_v_dm_bac_sy.strDIEN_THOAI;
         }
+        private void Load_cbo_benh_vien()
+        {
+
+            US_CM_DM_TU_DIEN v_us = new US_CM_DM_TU_DIEN();
+            DS_CM_DM_TU_DIEN v_ds = new DS_CM_DM_TU_DIEN();
+            v_us.FillDatasetByIdLoaiTuDien(v_ds, 2);
+            m_cbo_tk_bac_sy.DataSource = v_ds.CM_DM_TU_DIEN;
+            m_cbo_tk_bac_sy.ValueMember = CM_DM_TU_DIEN.ID;
+            m_cbo_tk_bac_sy.DisplayMember = CM_DM_TU_DIEN.TEN;
+            DataRow v_dr = v_ds.CM_DM_TU_DIEN.NewRow();
+            v_dr[CM_DM_TU_DIEN.ID] = -1;
+            v_dr[CM_DM_TU_DIEN.TEN] = "----------------Tất cả----------------";
+            v_dr[CM_DM_TU_DIEN.MA_TU_DIEN] = "";
+            v_dr[CM_DM_TU_DIEN.ID_LOAI_TU_DIEN] = "2";
+            v_dr[CM_DM_TU_DIEN.TEN_NGAN] = "";
+            v_ds.CM_DM_TU_DIEN.Rows.InsertAt(v_dr, 0);
+            m_cbo_tk_bac_sy.SelectedIndex = 0;
+            m_trang_thai = true;
+        }
         #endregion
 
         #region Event
@@ -200,6 +221,7 @@ namespace BKI_QLHT.DanhMuc
             {
                 set_initial_form_load();
                 load_thong_tin_chi_tiet();
+                this.Focus();
             }
             catch (Exception v_e)
             {
@@ -271,9 +293,10 @@ namespace BKI_QLHT.DanhMuc
         private void m_cmd_Tim_Kiem_Click(object sender, EventArgs e)
         {
             string v_str_tu_khoa = m_txt_tim_kiem.Text.Trim();
+            decimal v_dc_benh_vien = CIPConvert.ToDecimal(m_cbo_tk_bac_sy.SelectedValue);
             US_V_DM_BAC_SY v_us_v_dm_bac_sy = new US_V_DM_BAC_SY();
             DS_V_DM_BAC_SY v_ds_v_dm_bac_sy = new DS_V_DM_BAC_SY();
-            v_us_v_dm_bac_sy.FillDatasetSearch(v_ds_v_dm_bac_sy, v_str_tu_khoa);
+            v_us_v_dm_bac_sy.FillDatasetSearch(v_ds_v_dm_bac_sy, v_str_tu_khoa, v_dc_benh_vien);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds_v_dm_bac_sy, m_fg, m_obj_trans);
             m_fg.Redraw = true;
@@ -290,6 +313,80 @@ namespace BKI_QLHT.DanhMuc
             m_lbl_benh_vien.Text = m_us_v_dm_bac_sy.strTEN_NGAN;
             m_lbl_dien_thoai.Text = m_us_v_dm_bac_sy.strDIEN_THOAI;
         }
+        private void m_txt_tim_kiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+
+                    string v_str_tu_khoa = m_txt_tim_kiem.Text.Trim();
+                    decimal v_dc_benh_vien = CIPConvert.ToDecimal(m_cbo_tk_bac_sy.SelectedValue);
+                    US_V_DM_BAC_SY v_us_v_dm_bac_sy = new US_V_DM_BAC_SY();
+                    DS_V_DM_BAC_SY v_ds_v_dm_bac_sy = new DS_V_DM_BAC_SY();
+                    v_us_v_dm_bac_sy.FillDatasetSearch(v_ds_v_dm_bac_sy, v_str_tu_khoa, v_dc_benh_vien);
+                    m_fg.Redraw = false;
+                    CGridUtils.Dataset2C1Grid(v_ds_v_dm_bac_sy, m_fg, m_obj_trans);
+                    m_fg.Redraw = true;
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+
         #endregion
+
+        private void uc_f100_dm_bac_sy_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                switch (e.KeyData)
+                {
+                    case Keys.F3:
+                        insert_dm_bac_sy();
+                        break;
+
+                    case Keys.F4:
+                        update_dm_bac_sy();
+                        break;
+
+                    case Keys.F6:
+                        delete_dm_bac_sy();
+                        break;
+
+                    case Keys.Escape:
+                        this.Controls.Clear();
+                        break;
+
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cbo_tk_bac_sy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (m_trang_thai == true)
+            {
+                string v_str_tu_khoa = m_txt_tim_kiem.Text;
+                decimal v_dc_benh_vien = CIPConvert.ToDecimal(m_cbo_tk_bac_sy.SelectedValue);
+                US_V_DM_BAC_SY v_us_v_dm_bac_sy = new US_V_DM_BAC_SY();
+                DS_V_DM_BAC_SY v_ds_v_dm_bac_sy = new DS_V_DM_BAC_SY();
+                v_us_v_dm_bac_sy.FillDatasetSearch(v_ds_v_dm_bac_sy, v_str_tu_khoa, v_dc_benh_vien);
+                m_fg.Redraw = false;
+                CGridUtils.Dataset2C1Grid(v_ds_v_dm_bac_sy, m_fg, m_obj_trans);
+                m_fg.Redraw = true;
+            }
+        }
+
+       
     }
 }
