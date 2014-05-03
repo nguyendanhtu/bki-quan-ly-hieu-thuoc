@@ -524,4 +524,18 @@
         public const string SDT = "SDT";
         public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
     }
+    public class DM_DON_VI_KINH_DOANH
+    {
+        public const string ID = "ID";
+        public const string MA_VIET_TAT = "MA_VIET_TAT";
+        public const string TEN_DAY_DU = "TEN_DAY_DU";
+        public const string MA_SO_THUE = "MA_SO_THUE";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT = "SDT";
+        public const string GHI_CHU_2 = "GHI_CHU_2";
+        public const string GHI_CHU_3 = "GHI_CHU_3";
+        public const string ID_DON_VI_CAP_TREN = "ID_DON_VI_CAP_TREN";
+        public const string ID_LOAI_DON_VI = "ID_LOAI_DON_VI";
+    }
+
 }
