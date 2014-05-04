@@ -26,6 +26,11 @@ namespace BKI_QLHT
                 foreach (var item in v_ds.V_GD_DON_VI_TINH.Rows)
                 {
                     DataRow v_dr = (DataRow)item;
+                    if (v_dr[v_gd_don_vi_tinh.ID_DON_VI_CHA].ToString() == "")
+                    {
+                        continue;
+                    }
+
                     if (CIPConvert.ToDecimal(v_dr[v_gd_don_vi_tinh.ID_DON_VI_CHA].ToString()) == ip_dc_id_dvt)
                     {
                         count++;
