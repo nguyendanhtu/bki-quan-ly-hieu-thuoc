@@ -98,6 +98,9 @@
     <Compile Include="BaoCao\f411_bao_cao_danh_muc_thuoc_theo_nsx.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f412_bao_cao_kiem_ke_kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DanhMuc\f100_v_dm_bac_sy_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +395,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f411_bao_cao_danh_muc_thuoc_theo_nsx.resx">
       <DependentUpon>f411_bao_cao_danh_muc_thuoc_theo_nsx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f412_bao_cao_kiem_ke_kho.resx">
+      <DependentUpon>f412_bao_cao_kiem_ke_kho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f100_v_dm_bac_sy_de.resx">
       <DependentUpon>f100_v_dm_bac_sy_de.cs</DependentUpon>
