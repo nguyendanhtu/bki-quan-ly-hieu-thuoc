@@ -64,7 +64,7 @@ namespace BKI_QLHT
             m_obj_trans = get_trans_object(m_grv_danh_muc_thuoc);
             load_data_2_grid();
             grid2us_object(m_us, m_grv_danh_muc_thuoc.Row);
-            load_data_2_thong_tin(m_us);
+            load_data_2_thong_tin();
 
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -160,9 +160,12 @@ namespace BKI_QLHT
             //m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
             this.Load += new System.EventHandler(this.usercontrol_Load);
         }
-        private void load_data_2_thong_tin(US_DM_DANH_MUC_THUOC v_us) {
-            m_lbl_ten_danh_mục.Text = v_us.strTEN_DANH_MUC;
-            m_lbl_ghi_chu.Text = v_us.strGHI_CHU;
+        private void load_data_2_thong_tin() {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_danh_muc_thuoc)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_danh_muc_thuoc, m_grv_danh_muc_thuoc.Row)) return;
+            grid2us_object(m_us, m_grv_danh_muc_thuoc.Row);
+            m_lbl_ten_danh_mục.Text = m_us.strTEN_DANH_MUC;
+            m_lbl_ghi_chu.Text = m_us.strGHI_CHU;
         }
         #endregion
 
@@ -204,6 +207,7 @@ namespace BKI_QLHT
             try
             {
                 insert_dm_danh_muc_thuoc();
+                load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -216,6 +220,7 @@ namespace BKI_QLHT
             try
             {
                 update_dm_danh_muc_thuoc();
+                load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -228,6 +233,7 @@ namespace BKI_QLHT
             try
             {
                 delete_dm_danh_muc_thuoc();
+                load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -288,7 +294,7 @@ namespace BKI_QLHT
             try
             {
                 grid2us_object(m_us, m_grv_danh_muc_thuoc.Row);
-                load_data_2_thong_tin(m_us);
+                load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {

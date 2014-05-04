@@ -45,14 +45,16 @@
             this.m_cbo_danh_muc_thuoc = new System.Windows.Forms.ComboBox();
             this.m_txt_thuoc_thay_the = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.m_cmd_thoat = new SIS.Controls.Button.SiSButton();
             this.m_chk_tuyen_su_dung_5 = new System.Windows.Forms.CheckBox();
             this.m_chk_tuyen_su_dung_6 = new System.Windows.Forms.CheckBox();
             this.m_chk_tuyen_su_dung_7 = new System.Windows.Forms.CheckBox();
             this.m_chk_tuyen_su_dung_8 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_thoat = new SIS.Controls.Button.SiSButton();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_txt_cach_dung
@@ -188,21 +190,6 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "Thuốc thay thế";
             // 
-            // m_cmd_save
-            // 
-            this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
-            this.m_cmd_save.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_save.ImageIndex = 10;
-            this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(234, 316);
-            this.m_cmd_save.Name = "m_cmd_save";
-            this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 28;
-            this.m_cmd_save.Text = "Lưu (F2)";
-            // 
             // ImageList
             // 
             this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
@@ -229,21 +216,6 @@
             this.ImageList.Images.SetKeyName(19, "");
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
-            // 
-            // m_cmd_thoat
-            // 
-            this.m_cmd_thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_thoat.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_thoat.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
-            this.m_cmd_thoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_cmd_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_thoat.ImageIndex = 11;
-            this.m_cmd_thoat.ImageList = this.ImageList;
-            this.m_cmd_thoat.Location = new System.Drawing.Point(357, 316);
-            this.m_cmd_thoat.Name = "m_cmd_thoat";
-            this.m_cmd_thoat.Size = new System.Drawing.Size(101, 28);
-            this.m_cmd_thoat.TabIndex = 27;
-            this.m_cmd_thoat.Text = "Trở về (Esc)";
             // 
             // m_chk_tuyen_su_dung_5
             // 
@@ -300,18 +272,57 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Cập nhật Thông tin thuốc";
             // 
+            // m_pnl_control
+            // 
+            this.m_pnl_control.Controls.Add(this.m_cmd_save);
+            this.m_pnl_control.Controls.Add(this.m_cmd_thoat);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 293);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Size = new System.Drawing.Size(699, 81);
+            this.m_pnl_control.TabIndex = 34;
+            // 
+            // m_cmd_save
+            // 
+            this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_save.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_save.ImageIndex = 10;
+            this.m_cmd_save.ImageList = this.ImageList;
+            this.m_cmd_save.Location = new System.Drawing.Point(237, 26);
+            this.m_cmd_save.Name = "m_cmd_save";
+            this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_save.TabIndex = 30;
+            this.m_cmd_save.Text = "Lưu (F2)";
+            // 
+            // m_cmd_thoat
+            // 
+            this.m_cmd_thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_thoat.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_thoat.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_thoat.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_cmd_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_thoat.ImageIndex = 11;
+            this.m_cmd_thoat.ImageList = this.ImageList;
+            this.m_cmd_thoat.Location = new System.Drawing.Point(360, 26);
+            this.m_cmd_thoat.Name = "m_cmd_thoat";
+            this.m_cmd_thoat.Size = new System.Drawing.Size(101, 28);
+            this.m_cmd_thoat.TabIndex = 29;
+            this.m_cmd_thoat.Text = "Trở về (Esc)";
+            // 
             // f503_v_dm_thuoc_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 374);
+            this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_chk_tuyen_su_dung_8);
             this.Controls.Add(this.m_chk_tuyen_su_dung_7);
             this.Controls.Add(this.m_chk_tuyen_su_dung_6);
             this.Controls.Add(this.m_chk_tuyen_su_dung_5);
-            this.Controls.Add(this.m_cmd_save);
-            this.Controls.Add(this.m_cmd_thoat);
             this.Controls.Add(this.m_txt_thuoc_thay_the);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.m_cbo_danh_muc_thuoc);
@@ -330,6 +341,7 @@
             this.Name = "f503_v_dm_thuoc_de";
             this.Text = "f503_v_dm_thuoc_de";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.f503_v_dm_thuoc_de_KeyDown);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,13 +364,14 @@
         private System.Windows.Forms.ComboBox m_cbo_danh_muc_thuoc;
         private System.Windows.Forms.TextBox m_txt_thuoc_thay_the;
         private System.Windows.Forms.Label label9;
-        internal SIS.Controls.Button.SiSButton m_cmd_save;
-        internal SIS.Controls.Button.SiSButton m_cmd_thoat;
         internal System.Windows.Forms.ImageList ImageList;
         private System.Windows.Forms.CheckBox m_chk_tuyen_su_dung_5;
         private System.Windows.Forms.CheckBox m_chk_tuyen_su_dung_6;
         private System.Windows.Forms.CheckBox m_chk_tuyen_su_dung_7;
         private System.Windows.Forms.CheckBox m_chk_tuyen_su_dung_8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel m_pnl_control;
+        internal SIS.Controls.Button.SiSButton m_cmd_save;
+        internal SIS.Controls.Button.SiSButton m_cmd_thoat;
     }
 }
