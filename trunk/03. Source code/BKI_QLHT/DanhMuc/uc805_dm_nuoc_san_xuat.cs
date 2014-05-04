@@ -45,9 +45,7 @@ namespace BKI_QLHT.DanhMuc
         DS_V_DM_NUOC_SX m_ds = new DS_V_DM_NUOC_SX();
         US_V_DM_NUOC_SX m_us = new US_V_DM_NUOC_SX();
         US_DM_NCC_NSX_NHASX m_us_dm_ncc = new US_DM_NCC_NSX_NHASX();
-        private Label m_lbl_ma_nha_cung_cap;
         private Label m_lbl_ten_nha_cung_cap;
-        private Label label5;
         private Label label4;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal ImageList ImageList;
@@ -62,8 +60,8 @@ namespace BKI_QLHT.DanhMuc
         private Label label2;
         private Label label1;
         internal Panel m_pnl_out_place_dm;
-        private Label m_lbl_ghi_chu;
         private Label label7;
+        private Label m_lbl_ghi_chu;
         DS_DM_NCC_NSX_NHASX m_ds_dm_ncc = new DS_DM_NCC_NSX_NHASX();
         #endregion
 
@@ -86,7 +84,6 @@ namespace BKI_QLHT.DanhMuc
         private void load_data_2_thong_tin_chi_tiet(US_V_DM_NUOC_SX m_us)
         {
             m_lbl_ten_nha_cung_cap.Text = m_us.strTEN_NCC;
-            m_lbl_ma_nha_cung_cap.Text = m_us.strMA_NCC;
             m_lbl_ghi_chu.Text = m_us.strSDT;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -286,9 +283,7 @@ namespace BKI_QLHT.DanhMuc
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc805_dm_nuoc_san_xuat));
-            this.m_lbl_ma_nha_cung_cap = new System.Windows.Forms.Label();
             this.m_lbl_ten_nha_cung_cap = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
@@ -302,21 +297,11 @@ namespace BKI_QLHT.DanhMuc
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.m_lbl_ghi_chu = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.m_lbl_ghi_chu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nha_cung_cap)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // m_lbl_ma_nha_cung_cap
-            // 
-            this.m_lbl_ma_nha_cung_cap.AutoSize = true;
-            this.m_lbl_ma_nha_cung_cap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_ma_nha_cung_cap.Location = new System.Drawing.Point(609, 391);
-            this.m_lbl_ma_nha_cung_cap.Name = "m_lbl_ma_nha_cung_cap";
-            this.m_lbl_ma_nha_cung_cap.Size = new System.Drawing.Size(64, 16);
-            this.m_lbl_ma_nha_cung_cap.TabIndex = 49;
-            this.m_lbl_ma_nha_cung_cap.Text = "Từ khóa :";
             // 
             // m_lbl_ten_nha_cung_cap
             // 
@@ -327,16 +312,6 @@ namespace BKI_QLHT.DanhMuc
             this.m_lbl_ten_nha_cung_cap.Size = new System.Drawing.Size(64, 16);
             this.m_lbl_ten_nha_cung_cap.TabIndex = 48;
             this.m_lbl_ten_nha_cung_cap.Text = "Từ khóa :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(521, 391);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 16);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Mã nhà nước";
             // 
             // label4
             // 
@@ -504,39 +479,37 @@ namespace BKI_QLHT.DanhMuc
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 495);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 442);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(765, 36);
             this.m_pnl_out_place_dm.TabIndex = 37;
             // 
-            // m_lbl_ghi_chu
-            // 
-            this.m_lbl_ghi_chu.AutoSize = true;
-            this.m_lbl_ghi_chu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_ghi_chu.Location = new System.Drawing.Point(169, 444);
-            this.m_lbl_ghi_chu.Name = "m_lbl_ghi_chu";
-            this.m_lbl_ghi_chu.Size = new System.Drawing.Size(71, 16);
-            this.m_lbl_ghi_chu.TabIndex = 50;
-            this.m_lbl_ghi_chu.Text = "Tên nước :";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(104, 444);
+            this.label7.Location = new System.Drawing.Point(537, 391);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 16);
             this.label7.TabIndex = 51;
             this.label7.Text = "Ghi chú :";
             // 
+            // m_lbl_ghi_chu
+            // 
+            this.m_lbl_ghi_chu.AutoSize = true;
+            this.m_lbl_ghi_chu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_ghi_chu.Location = new System.Drawing.Point(602, 391);
+            this.m_lbl_ghi_chu.Name = "m_lbl_ghi_chu";
+            this.m_lbl_ghi_chu.Size = new System.Drawing.Size(71, 16);
+            this.m_lbl_ghi_chu.TabIndex = 50;
+            this.m_lbl_ghi_chu.Text = "Tên nước :";
+            // 
             // uc805_dm_nuoc_san_xuat
             // 
             this.Controls.Add(this.label7);
             this.Controls.Add(this.m_lbl_ghi_chu);
-            this.Controls.Add(this.m_lbl_ma_nha_cung_cap);
             this.Controls.Add(this.m_lbl_ten_nha_cung_cap);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.m_cmd_tim_kiem);
@@ -546,7 +519,7 @@ namespace BKI_QLHT.DanhMuc
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "uc805_dm_nuoc_san_xuat";
-            this.Size = new System.Drawing.Size(765, 531);
+            this.Size = new System.Drawing.Size(765, 478);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nha_cung_cap)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.ResumeLayout(false);
