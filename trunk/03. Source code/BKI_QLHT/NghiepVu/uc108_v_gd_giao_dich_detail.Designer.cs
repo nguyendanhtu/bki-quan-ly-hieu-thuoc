@@ -49,9 +49,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.m_cmd_them = new System.Windows.Forms.Button();
             this.m_group_chi_tiet_thong_tin_ban = new System.Windows.Forms.GroupBox();
+            this.m_cmd_sua = new System.Windows.Forms.Button();
             this.m_cmd_luu = new System.Windows.Forms.Button();
             this.m_cmd_huy = new System.Windows.Forms.Button();
             this.m_cmd_thoat = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.m_cmd_in = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -77,8 +79,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.m_lbl_Ma_GD_text = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi_text = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.m_cmd_sua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_quan_ly_ban_thuoc)).BeginInit();
             this.m_group_chi_tiet_thong_tin_ban.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -103,7 +103,6 @@
             this.m_grv_quan_ly_ban_thuoc.RowHeadersVisible = false;
             this.m_grv_quan_ly_ban_thuoc.Size = new System.Drawing.Size(1505, 295);
             this.m_grv_quan_ly_ban_thuoc.TabIndex = 9;
-            //this.m_grv_quan_ly_ban_thuoc.Click += new System.EventHandler(this.m_grv_quan_ly_ban_thuoc_Click);
             // 
             // STT
             // 
@@ -306,12 +305,24 @@
             this.m_group_chi_tiet_thong_tin_ban.TabStop = false;
             this.m_group_chi_tiet_thong_tin_ban.Text = "Chi tiết thông tin thuốc bán";
             // 
+            // m_cmd_sua
+            // 
+            this.m_cmd_sua.BackColor = System.Drawing.Color.Transparent;
+            this.m_cmd_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_sua.BackgroundImage")));
+            this.m_cmd_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.m_cmd_sua.Location = new System.Drawing.Point(1037, 88);
+            this.m_cmd_sua.Name = "m_cmd_sua";
+            this.m_cmd_sua.Size = new System.Drawing.Size(50, 33);
+            this.m_cmd_sua.TabIndex = 20;
+            this.m_cmd_sua.UseVisualStyleBackColor = false;
+            this.m_cmd_sua.Click += new System.EventHandler(this.m_cmd_sua_Click);
+            // 
             // m_cmd_luu
             // 
             this.m_cmd_luu.BackColor = System.Drawing.Color.Transparent;
             this.m_cmd_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_luu.BackgroundImage")));
             this.m_cmd_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.m_cmd_luu.Location = new System.Drawing.Point(976, 89);
+            this.m_cmd_luu.Location = new System.Drawing.Point(918, 87);
             this.m_cmd_luu.Name = "m_cmd_luu";
             this.m_cmd_luu.Size = new System.Drawing.Size(50, 33);
             this.m_cmd_luu.TabIndex = 20;
@@ -323,11 +334,12 @@
             this.m_cmd_huy.BackColor = System.Drawing.Color.Transparent;
             this.m_cmd_huy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_huy.BackgroundImage")));
             this.m_cmd_huy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.m_cmd_huy.Location = new System.Drawing.Point(1171, 90);
+            this.m_cmd_huy.Location = new System.Drawing.Point(1161, 88);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Size = new System.Drawing.Size(49, 33);
             this.m_cmd_huy.TabIndex = 21;
             this.m_cmd_huy.UseVisualStyleBackColor = false;
+            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
             // 
             // m_cmd_thoat
             // 
@@ -339,13 +351,25 @@
             this.m_cmd_thoat.Size = new System.Drawing.Size(51, 33);
             this.m_cmd_thoat.TabIndex = 23;
             this.m_cmd_thoat.UseVisualStyleBackColor = false;
+            this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1024, 125);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Sửa (Ctrl+E)";
             // 
             // m_cmd_in
             // 
             this.m_cmd_in.BackColor = System.Drawing.Color.Transparent;
             this.m_cmd_in.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_in.BackgroundImage")));
             this.m_cmd_in.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.m_cmd_in.Location = new System.Drawing.Point(1280, 89);
+            this.m_cmd_in.Location = new System.Drawing.Point(1274, 87);
             this.m_cmd_in.Name = "m_cmd_in";
             this.m_cmd_in.Size = new System.Drawing.Size(51, 33);
             this.m_cmd_in.TabIndex = 22;
@@ -356,7 +380,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(963, 126);
+            this.label17.Location = new System.Drawing.Point(905, 124);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 13);
             this.label17.TabIndex = 17;
@@ -378,7 +402,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1160, 127);
+            this.label18.Location = new System.Drawing.Point(1150, 125);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(79, 13);
             this.label18.TabIndex = 19;
@@ -389,7 +413,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1278, 125);
+            this.label19.Location = new System.Drawing.Point(1272, 123);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(68, 13);
             this.label19.TabIndex = 18;
@@ -627,29 +651,6 @@
             this.m_lbl_dia_chi_text.Size = new System.Drawing.Size(264, 16);
             this.m_lbl_dia_chi_text.TabIndex = 1;
             this.m_lbl_dia_chi_text.Text = "................................................................";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1054, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Sửa (Ctrl+E)";
-            // 
-            // m_cmd_sua
-            // 
-            this.m_cmd_sua.BackColor = System.Drawing.Color.Transparent;
-            this.m_cmd_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_sua.BackgroundImage")));
-            this.m_cmd_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.m_cmd_sua.Location = new System.Drawing.Point(1067, 90);
-            this.m_cmd_sua.Name = "m_cmd_sua";
-            this.m_cmd_sua.Size = new System.Drawing.Size(50, 33);
-            this.m_cmd_sua.TabIndex = 20;
-            this.m_cmd_sua.UseVisualStyleBackColor = false;
-            this.m_cmd_sua.Click += new System.EventHandler(this.m_cmd_sua_Click);
             // 
             // uc108_v_gd_giao_dich_detail
             // 
