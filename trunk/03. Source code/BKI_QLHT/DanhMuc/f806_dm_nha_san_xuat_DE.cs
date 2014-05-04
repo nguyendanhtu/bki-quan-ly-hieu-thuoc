@@ -10,6 +10,8 @@ using BKI_QLHT.US;
 using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 using IP.Core.IPCommon;
+using IP.Core.IPSystemAdmin;
+
 
 namespace BKI_QLHT
 {
@@ -18,6 +20,7 @@ namespace BKI_QLHT
         public f806_nha_san_xuat_DE()
         {
             InitializeComponent();
+            format_controls();
         }
         
         #region public interface
@@ -55,7 +58,10 @@ namespace BKI_QLHT
         
 
         #region private methods
-
+        private void format_controls()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+        }
         private void form_2_us_obj()
         {
             m_us_dm_ncc.strTEN_NCC =m_txt_ten_nha_cung_cap.Text ;
@@ -78,6 +84,28 @@ namespace BKI_QLHT
 
 
         #region events  
+        private void m_txt_ten_nha_cung_cap_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                save_data();
+            }
+            
+        }
+
+        private void m_txt_sdt_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                save_data();
+            }
+        }
+
+        private void m_txt_dia_chi_MouseUp(object sender, MouseEventArgs e)
+        {
+            save_data();
+        }
+
         private void m_cmd_save_Click_1(object sender, EventArgs e)
         {
             form_2_us_obj();
@@ -209,6 +237,7 @@ namespace BKI_QLHT
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(284, 20);
             this.m_txt_sdt.TabIndex = 23;
+            this.m_txt_sdt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_sdt_KeyUp);
             // 
             // m_txt_ten_nha_cung_cap
             // 
@@ -216,6 +245,7 @@ namespace BKI_QLHT
             this.m_txt_ten_nha_cung_cap.Name = "m_txt_ten_nha_cung_cap";
             this.m_txt_ten_nha_cung_cap.Size = new System.Drawing.Size(284, 20);
             this.m_txt_ten_nha_cung_cap.TabIndex = 20;
+            this.m_txt_ten_nha_cung_cap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_ten_nha_cung_cap_KeyUp);
             // 
             // label5
             // 
@@ -253,6 +283,7 @@ namespace BKI_QLHT
             this.m_txt_dia_chi.Name = "m_txt_dia_chi";
             this.m_txt_dia_chi.Size = new System.Drawing.Size(284, 20);
             this.m_txt_dia_chi.TabIndex = 26;
+            this.m_txt_dia_chi.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_dia_chi_KeyUp);
             // 
             // f806_nha_san_xuat_DE
             // 
@@ -274,6 +305,40 @@ namespace BKI_QLHT
         private TextBox m_txt_ten_nha_cung_cap;
         private Label label5;
         private Label label2;
+
+       
+
+        private void save_data()
+        {
+            form_2_us_obj();
+            switch (m_e_form_mode)
+            {
+                case DataEntryFormMode.InsertDataState:
+                    m_us_dm_ncc.Insert();
+                    this.Close();
+                    break;
+                case DataEntryFormMode.SelectDataState:
+                    break;
+                case DataEntryFormMode.UpdateDataState:
+                    m_us_dm_ncc.Update();
+                    this.Close();
+                    break;
+                case DataEntryFormMode.ViewDataState:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void m_txt_dia_chi_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                save_data();
+            }
+        }
+
+       
 
     }
 }
