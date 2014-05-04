@@ -10,6 +10,7 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+
     public class V_GD_DON_VI_TINH_THUOC
     {
         public const string ID = "ID";
@@ -20,7 +21,22 @@
         public const string ID_THUOC = "ID_THUOC";
     }
 
-
+    public class V_BAO_CAO_KIEM_KE_KHO
+    {
+        public const string ID_THUOC = "ID_THUOC";
+        public const string SO_DU = "SO_DU";
+        public const string ID_DON_VI_THUOC = "ID_DON_VI_THUOC";
+        public const string NGAY_PHAT_SINH = "NGAY_PHAT_SINH";
+        public const string MOI_NHAT_YN = "MOI_NHAT_YN";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string GHI_CHU = "GHI_CHU";
+        public const string THUOC_THAY_THE = "THUOC_THAY_THE";
+        public const string ID_NHOM_THUOC = "ID_NHOM_THUOC";
+        public const string TT_THUOC = "TT_THUOC";
+        public const string TT_HOAT_CHAT = "TT_HOAT_CHAT";
+        public const string TEN_THUOC = "TEN_THUOC";
+    }
     public class HT_FORM
     {
         public const string ID = "ID";
