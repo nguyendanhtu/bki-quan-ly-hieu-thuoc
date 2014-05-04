@@ -585,7 +585,16 @@ namespace BKI_QLHT
 
         private void button6_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                f413_v_bao_cao_danh_muc_bac_sy v_frm = new f413_v_bao_cao_danh_muc_bac_sy();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
 
