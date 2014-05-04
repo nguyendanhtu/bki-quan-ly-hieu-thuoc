@@ -200,5 +200,11 @@ public class US_V_DM_BAC_SY : US_Object
         v_stored_proc.addDecimalInputParam("@ID_BENH_VIEN", ip_dc_benh_vien);
         v_stored_proc.fillDataSetByCommand(this, ip_ds_v_dm_bac_sy);
     }
+    public void FillDatasetSearch(DS_V_DM_BAC_SY ip_ds, string ip_str_search)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_BAO_CAO_DANH_MUC_BAC_SY_search");
+        v_store_proc.addNVarcharInputParam("@STR_SEARCH", ip_str_search);
+        v_store_proc.fillDataSetByCommand(this, ip_ds);
+    }
 }
 }
