@@ -575,5 +575,17 @@
         public const string SDT = "SDT";
         public const string ID_HANG_SX = "ID_HANG_SX";
     }
+    public class GD_GIAO_DICH
+    {
+        public const string ID = "ID";
+        public const string MA_GIAO_DICH = "MA_GIAO_DICH";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string ID_NGUOI_THUC_HIEN = "ID_NGUOI_THUC_HIEN";
+        public const string ID_KHACH_HANG = "ID_KHACH_HANG";
+        public const string ID_LOAI_GIAO_DICH = "ID_LOAI_GIAO_DICH";
+        public const string ID_BAC_SY = "ID_BAC_SY";
+        public const string TI_LE_CHIET_KHAU = "TI_LE_CHIET_KHAU";
+    }
+
 
 }
