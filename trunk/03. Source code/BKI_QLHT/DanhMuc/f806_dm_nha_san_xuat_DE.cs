@@ -59,7 +59,7 @@ namespace BKI_QLHT
         private void form_2_us_obj()
         {
             m_us_dm_ncc.strTEN_NCC =m_txt_ten_nha_cung_cap.Text ;
-            m_us_dm_ncc.strMA_NCC = m_txt_ma_nha_cung_cap.Text;
+            m_us_dm_ncc.strMA_NCC = "NSX_" + m_txt_sdt.Text;
             m_us_dm_ncc.strSDT = m_txt_sdt.Text;
             m_us_dm_ncc.strDIA_CHI = m_txt_dia_chi.Text;
             m_us_dm_ncc.dcID_LOAI_DM = 3;
@@ -67,7 +67,6 @@ namespace BKI_QLHT
         private void us_obj_2_form()
         {
             m_txt_ten_nha_cung_cap.Text = m_us_dm_ncc.strTEN_NCC;
-            m_txt_ma_nha_cung_cap.Text = m_us_dm_ncc.strMA_NCC;
             m_txt_sdt.Text = m_us_dm_ncc.strSDT;
             m_txt_dia_chi.Text = m_us_dm_ncc.strDIA_CHI;
         }
@@ -111,17 +110,15 @@ namespace BKI_QLHT
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f805_nuoc_san_xuat_DE));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f806_nha_san_xuat_DE));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.m_cmd_thoat = new SIS.Controls.Button.SiSButton();
             this.m_pnl_control = new System.Windows.Forms.Panel();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.m_txt_sdt = new System.Windows.Forms.TextBox();
-            this.m_txt_ma_nha_cung_cap = new System.Windows.Forms.TextBox();
             this.m_txt_ten_nha_cung_cap = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.m_txt_dia_chi = new System.Windows.Forms.TextBox();
@@ -186,7 +183,7 @@ namespace BKI_QLHT
             this.m_pnl_control.Controls.Add(this.m_cmd_save);
             this.m_pnl_control.Controls.Add(this.m_cmd_thoat);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 266);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 230);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Size = new System.Drawing.Size(612, 72);
             this.m_pnl_control.TabIndex = 24;
@@ -208,17 +205,10 @@ namespace BKI_QLHT
             // 
             // m_txt_sdt
             // 
-            this.m_txt_sdt.Location = new System.Drawing.Point(207, 164);
+            this.m_txt_sdt.Location = new System.Drawing.Point(207, 133);
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(284, 20);
             this.m_txt_sdt.TabIndex = 23;
-            // 
-            // m_txt_ma_nha_cung_cap
-            // 
-            this.m_txt_ma_nha_cung_cap.Location = new System.Drawing.Point(207, 121);
-            this.m_txt_ma_nha_cung_cap.Name = "m_txt_ma_nha_cung_cap";
-            this.m_txt_ma_nha_cung_cap.Size = new System.Drawing.Size(284, 20);
-            this.m_txt_ma_nha_cung_cap.TabIndex = 21;
             // 
             // m_txt_ten_nha_cung_cap
             // 
@@ -231,21 +221,11 @@ namespace BKI_QLHT
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label5.Location = new System.Drawing.Point(69, 168);
+            this.label5.Location = new System.Drawing.Point(69, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 16);
             this.label5.TabIndex = 19;
             this.label5.Text = "Số điện thoại";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label3.Location = new System.Drawing.Point(69, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 16);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Mã nhà sản xuất";
             // 
             // label2
             // 
@@ -261,43 +241,38 @@ namespace BKI_QLHT
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label4.Location = new System.Drawing.Point(69, 209);
+            this.label4.Location = new System.Drawing.Point(69, 186);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 16);
+            this.label4.Size = new System.Drawing.Size(47, 16);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Số điện thoại";
+            this.label4.Text = "Địa chỉ";
             // 
             // m_txt_dia_chi
             // 
-            this.m_txt_dia_chi.Location = new System.Drawing.Point(207, 209);
+            this.m_txt_dia_chi.Location = new System.Drawing.Point(207, 186);
             this.m_txt_dia_chi.Name = "m_txt_dia_chi";
             this.m_txt_dia_chi.Size = new System.Drawing.Size(284, 20);
             this.m_txt_dia_chi.TabIndex = 26;
             // 
-            // f805_nuoc_san_xuat_DE
+            // f806_nha_san_xuat_DE
             // 
-            this.ClientSize = new System.Drawing.Size(612, 338);
+            this.ClientSize = new System.Drawing.Size(612, 302);
             this.Controls.Add(this.m_txt_dia_chi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_txt_sdt);
-            this.Controls.Add(this.m_txt_ma_nha_cung_cap);
             this.Controls.Add(this.m_txt_ten_nha_cung_cap);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "f805_nuoc_san_xuat_DE";
+            this.Name = "f806_nha_san_xuat_DE";
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
-        private TextBox m_txt_ma_nha_cung_cap;
         private TextBox m_txt_ten_nha_cung_cap;
         private Label label5;
-        private Label label3;
         private Label label2;
 
     }
