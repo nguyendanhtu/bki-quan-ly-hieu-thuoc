@@ -496,7 +496,6 @@ namespace BKI_QLHT.DS {
                 this.columnID.Unique = true;
                 this.columnTEN_NCC.AllowDBNull = false;
                 this.columnTEN_NCC.MaxLength = 50;
-                this.columnMA_NCC.AllowDBNull = false;
                 this.columnMA_NCC.MaxLength = 50;
                 this.columnDIA_CHI.MaxLength = 250;
                 this.columnSDT.MaxLength = 15;
@@ -682,7 +681,12 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string MA_NCC {
                 get {
-                    return ((string)(this[this.tableV_DM_NUOC_SX.MA_NCCColumn]));
+                    try {
+                        return ((string)(this[this.tableV_DM_NUOC_SX.MA_NCCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MA_NCC\' in table \'V_DM_NUOC_SX\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableV_DM_NUOC_SX.MA_NCCColumn] = value;
@@ -747,6 +751,18 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetID_LOAI_DMNull() {
                 this[this.tableV_DM_NUOC_SX.ID_LOAI_DMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMA_NCCNull() {
+                return this.IsNull(this.tableV_DM_NUOC_SX.MA_NCCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMA_NCCNull() {
+                this[this.tableV_DM_NUOC_SX.MA_NCCColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

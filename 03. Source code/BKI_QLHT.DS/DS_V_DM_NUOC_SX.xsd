@@ -49,7 +49,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="MA_NCC" msprop:Generator_ColumnVarNameInTable="columnMA_NCC" msprop:Generator_ColumnPropNameInRow="MA_NCC" msprop:Generator_ColumnPropNameInTable="MA_NCCColumn" msprop:Generator_UserColumnName="MA_NCC">
+              <xs:element name="MA_NCC" msprop:Generator_ColumnVarNameInTable="columnMA_NCC" msprop:Generator_ColumnPropNameInRow="MA_NCC" msprop:Generator_ColumnPropNameInTable="MA_NCCColumn" msprop:Generator_UserColumnName="MA_NCC" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
