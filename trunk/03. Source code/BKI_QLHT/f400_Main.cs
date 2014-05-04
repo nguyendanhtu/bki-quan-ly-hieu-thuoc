@@ -586,7 +586,7 @@ namespace BKI_QLHT
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Report a = new Report();
+            Report1 a = new Report1();
             a.ShowDialog();
         }
 
