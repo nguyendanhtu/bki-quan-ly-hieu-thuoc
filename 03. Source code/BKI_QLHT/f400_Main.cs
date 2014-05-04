@@ -15,6 +15,8 @@ using IP.Core.IPSystemAdmin;
 using BKI_QLHT.DanhMuc;
 using BKI_QLHT.NghiepVu;
 using DevComponents.DotNetBar;
+using BKI_QLHT.BaoCao;
+using BKI_QLHT.BaoCao.Demo_Report;
 
 
 namespace BKI_QLHT
@@ -580,6 +582,12 @@ namespace BKI_QLHT
                 
                 CSystemLog_301.ExceptionHandle(v_e);
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Report a = new Report();
+            a.ShowDialog();
         }
 
 
