@@ -45,7 +45,7 @@ namespace BKI_QLHT
 
         #region Members
         US_DM_THUOC m_us_dm_thuoc = new US_DM_THUOC();
-        DataEntryFormMode m_e_form_mode;
+        DataEntryFormMode m_e_form_mode=DataEntryFormMode.InsertDataState;
         #endregion
 
         #region Private Methods

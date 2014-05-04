@@ -36,12 +36,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.m_txt_nhom_thuoc = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
             this.m_cbo_danh_muc = new System.Windows.Forms.ComboBox();
-            this.panel1.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_txt_ghi_chu
@@ -98,15 +98,15 @@
             this.m_txt_nhom_thuoc.Size = new System.Drawing.Size(245, 20);
             this.m_txt_nhom_thuoc.TabIndex = 2;
             // 
-            // panel1
+            // m_pnl_control
             // 
-            this.panel1.Controls.Add(this.m_cmd_save);
-            this.panel1.Controls.Add(this.m_cmd_huy);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 220);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 72);
-            this.panel1.TabIndex = 55;
+            this.m_pnl_control.Controls.Add(this.m_cmd_save);
+            this.m_pnl_control.Controls.Add(this.m_cmd_huy);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 220);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Size = new System.Drawing.Size(572, 72);
+            this.m_pnl_control.TabIndex = 55;
             // 
             // m_cmd_save
             // 
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 292);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_txt_nhom_thuoc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.m_cbo_danh_muc);
@@ -190,7 +190,7 @@
             this.Name = "f505_v_dm_nhom_thuoc_de";
             this.Text = "f505_v_dm_nhom_thuoc_de";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.f505_v_dm_nhom_thuoc_de_KeyDown);
-            this.panel1.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,7 +204,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox m_txt_nhom_thuoc;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel m_pnl_control;
         internal SIS.Controls.Button.SiSButton m_cmd_save;
         internal SIS.Controls.Button.SiSButton m_cmd_huy;
         internal System.Windows.Forms.ImageList ImageList;

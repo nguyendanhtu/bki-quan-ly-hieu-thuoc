@@ -68,7 +68,7 @@ namespace BKI_QLHT
             //load_data_2_cbo();
             load_data_2_cbo_tk();
             grid2us_object(m_us, m_grv_nhom_thuoc.Row);
-            load_data_2_thong_tin(m_us);
+            load_data_2_thong_tin();
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
@@ -171,11 +171,14 @@ namespace BKI_QLHT
             }
             return "";
         }
-        private void load_data_2_thong_tin(US_V_DM_NHOM_THUOC v_us) {
-            m_ds = new DS_V_DM_NHOM_THUOC();
-            m_lbl_danh_muc_thuoc.Text = v_us.strTEN_DANH_MUC;
-            m_lbl_nhom_thuoc.Text = v_us.strTEN_NHOM;
-            m_lbl_ghi_chu.Text = v_us.strGHI_CHU;
+        private void load_data_2_thong_tin() {
+            //m_ds = new DS_V_DM_NHOM_THUOC();
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nhom_thuoc)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nhom_thuoc, m_grv_nhom_thuoc.Row)) return;
+            grid2us_object(m_us, m_grv_nhom_thuoc.Row);
+            m_lbl_danh_muc_thuoc.Text = m_us.strTEN_DANH_MUC;
+            m_lbl_nhom_thuoc.Text = m_us.strTEN_NHOM;
+            m_lbl_ghi_chu.Text = m_us.strGHI_CHU;
             
         }
         private void set_define_events()
@@ -184,47 +187,65 @@ namespace BKI_QLHT
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            this.Load += new System.EventHandler(this.uc504_v_dm_nhom_thuoc_Load);
             //m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
         }
 
         #endregion
         #region Events
-        private void m_cmd_exit_Click(object sender, EventArgs e) {
-			try{
+
+
+        private void m_cmd_insert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                insert_v_dm_nhom_thuoc();
+                load_data_2_thong_tin();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                update_v_dm_nhom_thuoc();
+                load_data_2_thong_tin();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                delete_v_dm_nhom_thuoc();
+                load_data_2_thong_tin();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
                 this.Visible = false;
                 this.Controls.Clear();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+            }
+            catch (Exception v_e)
+            {
 
-		private void m_cmd_insert_Click(object sender, EventArgs e) {
-			try{
-				insert_v_dm_nhom_thuoc();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
-
-		private void m_cmd_update_Click(object sender, EventArgs e) {
-			try{
-				update_v_dm_nhom_thuoc();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
-
-		private void m_cmd_delete_Click(object sender, EventArgs e) {
-			try{
-				delete_v_dm_nhom_thuoc();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         private void uc504_v_dm_nhom_thuoc_Load(object sender, System.EventArgs e)
         {
             try
@@ -269,7 +290,7 @@ namespace BKI_QLHT
             try
             {
                 grid2us_object(m_us, m_grv_nhom_thuoc.Row);
-                load_data_2_thong_tin(m_us);
+                load_data_2_thong_tin();
             }
             catch (System.Exception v_e)
             {

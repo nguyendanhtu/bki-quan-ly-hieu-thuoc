@@ -229,6 +229,7 @@
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 58;
             this.m_cmd_search.Text = "&Tìm kiếm";
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // m_txt_tim_kiem
             // 
@@ -236,6 +237,7 @@
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(258, 20);
             this.m_txt_tim_kiem.TabIndex = 57;
+            this.m_txt_tim_kiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_tim_kiem_KeyPress);
             // 
             // m_cbo_tk_danh_muc
             // 
@@ -245,6 +247,7 @@
             this.m_cbo_tk_danh_muc.Name = "m_cbo_tk_danh_muc";
             this.m_cbo_tk_danh_muc.Size = new System.Drawing.Size(260, 21);
             this.m_cbo_tk_danh_muc.TabIndex = 56;
+            this.m_cbo_tk_danh_muc.SelectedIndexChanged += new System.EventHandler(this.m_cbo_tk_danh_muc_SelectedIndexChanged);
             // 
             // m_grv_nhom_thuoc
             // 
@@ -254,6 +257,8 @@
             this.m_grv_nhom_thuoc.Size = new System.Drawing.Size(1279, 140);
             this.m_grv_nhom_thuoc.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nhom_thuoc.Styles"));
             this.m_grv_nhom_thuoc.TabIndex = 55;
+            this.m_grv_nhom_thuoc.Click += new System.EventHandler(this.m_grv_nhom_thuoc_Click);
+            this.m_grv_nhom_thuoc.DoubleClick += new System.EventHandler(this.m_grv_nhom_thuoc_DoubleClick);
             // 
             // panel3
             // 
@@ -349,7 +354,6 @@
             this.Controls.Add(this.m_pnl_control);
             this.Name = "uc504_v_dm_nhom_thuoc";
             this.Size = new System.Drawing.Size(1282, 487);
-            this.Load += new System.EventHandler(this.uc504_v_dm_nhom_thuoc_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uc504_v_dm_nhom_thuoc_KeyDown);
             this.m_pnl_control.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

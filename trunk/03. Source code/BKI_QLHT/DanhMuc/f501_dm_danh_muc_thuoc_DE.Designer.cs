@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f501_dm_danh_muc_thuoc_DE));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
@@ -39,18 +39,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.m_txt_danh_muc = new System.Windows.Forms.TextBox();
             this.m_txt_ghi_chu = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // m_pnl_control
             // 
-            this.panel1.Controls.Add(this.m_cmd_save);
-            this.panel1.Controls.Add(this.m_cmd_huy);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 253);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(566, 72);
-            this.panel1.TabIndex = 16;
+            this.m_pnl_control.Controls.Add(this.m_cmd_save);
+            this.m_pnl_control.Controls.Add(this.m_cmd_huy);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 253);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Size = new System.Drawing.Size(566, 72);
+            this.m_pnl_control.TabIndex = 16;
             // 
             // m_cmd_save
             // 
@@ -163,11 +163,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.m_pnl_control);
             this.Name = "f501_dm_danh_muc_thuoc_DE";
             this.Text = "f501_dm_danh_muc_thuoc_DE";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.f501_dm_danh_muc_thuoc_DE_KeyDown);
-            this.panel1.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,7 +175,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel m_pnl_control;
         internal SIS.Controls.Button.SiSButton m_cmd_save;
         internal SIS.Controls.Button.SiSButton m_cmd_huy;
         internal System.Windows.Forms.ImageList ImageList;

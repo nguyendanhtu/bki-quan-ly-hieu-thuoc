@@ -87,6 +87,7 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_cmd_add = new SIS.Controls.Button.SiSButton();
+            this.m_txt_add_thuoc = new System.Windows.Forms.Button();
             this.m_txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhap_thuoc)).BeginInit();
@@ -249,6 +250,7 @@
             this.m_txt_gia_ban.Name = "m_txt_gia_ban";
             this.m_txt_gia_ban.Size = new System.Drawing.Size(105, 20);
             this.m_txt_gia_ban.TabIndex = 8;
+            this.m_txt_gia_ban.TextChanged += new System.EventHandler(this.m_txt_gia_ban_TextChanged);
             // 
             // m_cbo_nuoc_san_xuat
             // 
@@ -697,6 +699,17 @@
             this.m_cmd_add.TabIndex = 114;
             this.m_cmd_add.Text = "Thêm";
             // 
+            // m_txt_add_thuoc
+            // 
+            this.m_txt_add_thuoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_txt_add_thuoc.Image = global::BKI_QLHT.Properties.Resources.add;
+            this.m_txt_add_thuoc.Location = new System.Drawing.Point(349, 94);
+            this.m_txt_add_thuoc.Name = "m_txt_add_thuoc";
+            this.m_txt_add_thuoc.Size = new System.Drawing.Size(52, 20);
+            this.m_txt_add_thuoc.TabIndex = 117;
+            this.m_txt_add_thuoc.UseVisualStyleBackColor = true;
+            this.m_txt_add_thuoc.Click += new System.EventHandler(this.m_txt_add_thuoc_Click);
+            // 
             // m_txt_search_thuoc1
             // 
             this.m_txt_search_thuoc1.dcID = new decimal(new int[] {
@@ -719,6 +732,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 579);
+            this.Controls.Add(this.m_txt_add_thuoc);
             this.Controls.Add(this.m_txt_search_thuoc1);
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_grv_nhap_thuoc);
@@ -823,5 +837,6 @@
         private System.Windows.Forms.Label m_lbl_tong_tien;
         private System.Windows.Forms.Label label2;
         private DanhMuc.txt_search_thuoc m_txt_search_thuoc1;
+        private System.Windows.Forms.Button m_txt_add_thuoc;
     }
 }
