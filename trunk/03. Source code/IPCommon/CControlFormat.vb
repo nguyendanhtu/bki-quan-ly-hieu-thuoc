@@ -92,7 +92,7 @@ Public Class CControlFormat
             'ip_control.Font = getRegularFont()
             If ip_control.Font.Size >= 14 Then
                 ip_control.ForeColor = System.Drawing.Color.CornflowerBlue
-                ip_control.BackColor=System.Drawing.Color.Transparent
+                ip_control.BackColor = System.Drawing.Color.Transparent
             Else
                 ip_control.ForeColor = getSpecialForeColor()
                 ip_control.BackColor = System.Drawing.Color.Transparent
@@ -117,7 +117,7 @@ Public Class CControlFormat
             If ip_control.Name = "m_pnl_control" Then
                 ip_control.BackColor = getSpecialBackColor()
             Else
-                ip_control.BackColor=System.Drawing.Color.Transparent
+                ip_control.BackColor = System.Drawing.Color.Transparent
             End If
             'ElseIf TypeOf ip_control Is Button Then
             '    ip_control.Font = getBoldFont()
