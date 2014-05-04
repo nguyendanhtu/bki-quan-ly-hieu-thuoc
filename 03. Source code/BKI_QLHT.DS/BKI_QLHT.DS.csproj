@@ -203,6 +203,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_BAO_CAO_KIEM_KE_KHO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_DM_BAC_SY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -636,6 +641,17 @@
     </None>
     <None Include="DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xss">
       <DependentUpon>DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_KIEM_KE_KHO.xsc">
+      <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_KIEM_KE_KHO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BAO_CAO_KIEM_KE_KHO.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BAO_CAO_KIEM_KE_KHO.xss">
+      <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>
     </None>
     <None Include="DS_V_DM_BAC_SY.xsc">
       <DependentUpon>DS_V_DM_BAC_SY.xsd</DependentUpon>
