@@ -359,6 +359,10 @@ namespace BKI_QLHT.NghiepVu
                 MessageBoxButtons.YesNo);
                 insert_gd_giao_dich();
                 insert_giao_dich_detail();
+                list.Clear();
+                m_grv_quan_ly_ban_thuoc.Rows.Clear();
+                txt_search_thuoc1.Text1 = " ";
+                m_txt_don_gia.Text =" ";
             }
             catch (Exception v_e)
             {
@@ -382,7 +386,7 @@ namespace BKI_QLHT.NghiepVu
             //id_giao_dich = CIPConvert.ToDecimal(v_dr[GD_GIAO_DICH.ID]);
             foreach(data v_list in list)
             {
-                v_us_gd_de.Insert_data_into_gd_giao_dich_detail(m_id_giao_dich,v_list.id_thuoc,v_list.id_don_vi_tinh_thuoc,v_list.so_luong_nhap,v_list.so_luong_ban_de,v_list.id_giao_dich_detail, v_list.id_nha_cung_cap, v_list.id_nha_san_xuat, v_list.id_hang_san_xuat,v_list.han_su_dung,v_list.gia_ban,v_list.gia_nhap);
+                v_us_gd_de.Insert_data_into_gd_giao_dich_detail(m_id_giao_dich,v_list.id_thuoc,v_list.id_don_vi_tinh_thuoc,v_list.so_luong_nhap,v_list.so_luong_ban,v_list.id_giao_dich_detail, v_list.id_nha_cung_cap, v_list.id_nha_san_xuat, v_list.id_hang_san_xuat,v_list.han_su_dung,v_list.gia_ban,v_list.gia_nhap);
             }
             
         }
@@ -422,6 +426,31 @@ namespace BKI_QLHT.NghiepVu
             load_cbo_don_vi_tinh();
             load_don_gia();
         }
+
+        private void m_cmd_huy_Click(object sender, EventArgs e)
+        {
+            txt_search_thuoc1.Text1 = "";
+            m_cbo_don_vi_tinh.DisplayMember ="";
+            m_txt_don_gia.Text = "";
+            list.Clear();
+            m_grv_quan_ly_ban_thuoc.Rows.Clear();
+        }
+
+        private void m_cmd_thoat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Controls.Clear();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+
+
 
 
      }
