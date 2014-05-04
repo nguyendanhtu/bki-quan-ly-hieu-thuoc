@@ -86,6 +86,7 @@ namespace BKI_QLHT
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f412_bao_cao_kiem_ke_kho));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_lbl_nguoi_lam_bc = new System.Windows.Forms.Label();
@@ -95,7 +96,6 @@ namespace BKI_QLHT
             this.m_lbl_nguoi_lam_bao_cao = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
-            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -137,6 +137,22 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(756, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
+            // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(115, 28);
+            this.m_cmd_xuat_excel.TabIndex = 25;
+            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
+            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
             // 
             // m_cmd_exit
             // 
@@ -231,21 +247,6 @@ namespace BKI_QLHT
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(401, 20);
             this.m_txt_tim_kiem.TabIndex = 2724;
-            // 
-            // m_cmd_xuat_excel
-            // 
-            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xuat_excel.ImageIndex = 19;
-            this.m_cmd_xuat_excel.ImageList = this.ImageList;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(115, 28);
-            this.m_cmd_xuat_excel.TabIndex = 25;
-            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
             // 
             // f412_bao_cao_kiem_ke_kho
             // 
@@ -365,7 +366,7 @@ namespace BKI_QLHT
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
               , 0
               , (int)e_col_Number.TEN_NHOM // chỗ này là tên trường mà mình nhóm
-              , (int)e_col_Number.SO_DU // chỗ này là tên trường mà mình Count
+              , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
               , "{0}"
               );
 
@@ -416,7 +417,7 @@ namespace BKI_QLHT
             String m_str_dia_chi = v_us.strDIA_CHI;
             String m_str_so_dien_thoai = v_us.strSDT;
 
-            CExcelReport v_obj_excel_rpt = new CExcelReport("f412_bao_cao_kiem_ke_kho.xlsx", 9, 2);
+            CExcelReport v_obj_excel_rpt = new CExcelReport("f412_bao_cao_kiem_ke_kho.xlsx", 9, 1);
             //người làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<nguoi_xuat_bao_cao>", m_lbl_nguoi_lam_bc.Text.Trim());
             //ngày làm báo cáo
