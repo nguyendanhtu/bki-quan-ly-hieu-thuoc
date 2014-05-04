@@ -568,6 +568,20 @@ namespace BKI_QLHT
             }
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f412_bao_cao_kiem_ke_kho v_frm = new f412_bao_cao_kiem_ke_kho();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
 
 
