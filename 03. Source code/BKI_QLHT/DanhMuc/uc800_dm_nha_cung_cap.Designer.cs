@@ -190,6 +190,7 @@
             this.m_txt_tu_khoa.Name = "m_txt_tu_khoa";
             this.m_txt_tu_khoa.Size = new System.Drawing.Size(328, 20);
             this.m_txt_tu_khoa.TabIndex = 26;
+            this.m_txt_tu_khoa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_tu_khoa_KeyUp);
             // 
             // m_cmd_tim_kiem
             // 

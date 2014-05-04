@@ -426,6 +426,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_txt_tu_khoa.Name = "m_txt_tu_khoa";
             this.m_txt_tu_khoa.Size = new System.Drawing.Size(328, 20);
             this.m_txt_tu_khoa.TabIndex = 41;
+            this.m_txt_tu_khoa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_tu_khoa_KeyUp);
             // 
             // m_cmd_update
             // 
@@ -597,6 +598,19 @@ namespace BKI_QLHT.DanhMuc
             grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
             m_us = new US_V_DM_HANG_SX(m_us_dm_ncc.dcID);
             load_data_2_thong_tin_chi_tiet(m_us);
+        }
+
+        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
+                DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
+                v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text, 3);
+                m_grv_dm_nha_san_xuat.Redraw = false;
+                CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_dm_nha_san_xuat, m_obj_trans);
+                m_grv_dm_nha_san_xuat.Redraw = true;
+            }
         }
 
     }
