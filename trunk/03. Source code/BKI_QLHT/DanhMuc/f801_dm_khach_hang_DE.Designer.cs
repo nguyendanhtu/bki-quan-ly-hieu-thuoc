@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f801_dm_khach_hang_DE));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,7 +41,6 @@
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_txt_ten_khach_hang = new System.Windows.Forms.TextBox();
-            this.m_txt_ma_khach_hang = new System.Windows.Forms.TextBox();
             this.m_txt_so_dien_thoai = new System.Windows.Forms.TextBox();
             this.m_txt_dia_chi = new System.Windows.Forms.TextBox();
             this.m_txt_ma_so_thue = new System.Windows.Forms.TextBox();
@@ -71,21 +69,11 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên khách hàng";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(60, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mã khách hàng";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(60, 230);
+            this.label4.Location = new System.Drawing.Point(60, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 3;
@@ -95,7 +83,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(60, 287);
+            this.label5.Location = new System.Drawing.Point(60, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 4;
@@ -105,7 +93,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(60, 393);
+            this.label6.Location = new System.Drawing.Point(60, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 16);
             this.label6.TabIndex = 5;
@@ -115,7 +103,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(60, 344);
+            this.label7.Location = new System.Drawing.Point(60, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 16);
             this.label7.TabIndex = 6;
@@ -126,7 +114,7 @@
             this.panel2.Controls.Add(this.m_cmd_save);
             this.panel2.Controls.Add(this.m_cmd_exit);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 432);
+            this.panel2.Location = new System.Drawing.Point(0, 365);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(613, 88);
             this.panel2.TabIndex = 8;
@@ -195,30 +183,23 @@
             this.m_txt_ten_khach_hang.Size = new System.Drawing.Size(304, 20);
             this.m_txt_ten_khach_hang.TabIndex = 9;
             // 
-            // m_txt_ma_khach_hang
-            // 
-            this.m_txt_ma_khach_hang.Location = new System.Drawing.Point(229, 166);
-            this.m_txt_ma_khach_hang.Name = "m_txt_ma_khach_hang";
-            this.m_txt_ma_khach_hang.Size = new System.Drawing.Size(304, 20);
-            this.m_txt_ma_khach_hang.TabIndex = 10;
-            // 
             // m_txt_so_dien_thoai
             // 
-            this.m_txt_so_dien_thoai.Location = new System.Drawing.Point(229, 226);
+            this.m_txt_so_dien_thoai.Location = new System.Drawing.Point(229, 153);
             this.m_txt_so_dien_thoai.Name = "m_txt_so_dien_thoai";
             this.m_txt_so_dien_thoai.Size = new System.Drawing.Size(304, 20);
             this.m_txt_so_dien_thoai.TabIndex = 11;
             // 
             // m_txt_dia_chi
             // 
-            this.m_txt_dia_chi.Location = new System.Drawing.Point(229, 283);
+            this.m_txt_dia_chi.Location = new System.Drawing.Point(229, 203);
             this.m_txt_dia_chi.Name = "m_txt_dia_chi";
             this.m_txt_dia_chi.Size = new System.Drawing.Size(304, 20);
             this.m_txt_dia_chi.TabIndex = 12;
             // 
             // m_txt_ma_so_thue
             // 
-            this.m_txt_ma_so_thue.Location = new System.Drawing.Point(229, 343);
+            this.m_txt_ma_so_thue.Location = new System.Drawing.Point(229, 248);
             this.m_txt_ma_so_thue.Name = "m_txt_ma_so_thue";
             this.m_txt_ma_so_thue.Size = new System.Drawing.Size(304, 20);
             this.m_txt_ma_so_thue.TabIndex = 13;
@@ -226,7 +207,7 @@
             // m_cbo_nhom_khach_hang
             // 
             this.m_cbo_nhom_khach_hang.FormattingEnabled = true;
-            this.m_cbo_nhom_khach_hang.Location = new System.Drawing.Point(229, 392);
+            this.m_cbo_nhom_khach_hang.Location = new System.Drawing.Point(229, 305);
             this.m_cbo_nhom_khach_hang.Name = "m_cbo_nhom_khach_hang";
             this.m_cbo_nhom_khach_hang.Size = new System.Drawing.Size(304, 21);
             this.m_cbo_nhom_khach_hang.TabIndex = 14;
@@ -235,20 +216,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 520);
+            this.ClientSize = new System.Drawing.Size(613, 453);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_cbo_nhom_khach_hang);
             this.Controls.Add(this.m_txt_ma_so_thue);
             this.Controls.Add(this.m_txt_dia_chi);
             this.Controls.Add(this.m_txt_so_dien_thoai);
-            this.Controls.Add(this.m_txt_ma_khach_hang);
             this.Controls.Add(this.m_txt_ten_khach_hang);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "f801_dm_khach_hang_DE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -263,7 +242,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -271,7 +249,6 @@
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.ImageList ImageList;
         private System.Windows.Forms.TextBox m_txt_ten_khach_hang;
-        private System.Windows.Forms.TextBox m_txt_ma_khach_hang;
         private System.Windows.Forms.TextBox m_txt_so_dien_thoai;
         private System.Windows.Forms.TextBox m_txt_dia_chi;
         private System.Windows.Forms.TextBox m_txt_ma_so_thue;

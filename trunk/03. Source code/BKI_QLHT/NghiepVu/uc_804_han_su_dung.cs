@@ -239,7 +239,7 @@ namespace BKI_QLHT
             DS_V_HAN_SU_DUNG v_ds_v_han_su_dung=new DS_V_HAN_SU_DUNG();
             if (m_cbo_thoi_gian.Text == "Dưới 1 tháng")
             {
-                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(month,GETDATE(),HAN_SU_DUNG)<1");
+                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(month,GETDATE(),HAN_SU_DUNG)<1 AND DATEDIFF(month,GETDATE(),HAN_SU_DUNG)>=0");
             }
             if (m_cbo_thoi_gian.Text == "Từ  1 tháng đến 3 tháng")
             {

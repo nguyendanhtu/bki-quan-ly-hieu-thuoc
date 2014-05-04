@@ -56,7 +56,7 @@ namespace BKI_QLHT
        private void form_2_us_obj()
         {
             m_us_dm_khach_hang.strTEN_KHACH_HANG = m_txt_ten_khach_hang.Text;
-            m_us_dm_khach_hang.strMA_KHACH_HANG = m_txt_ma_khach_hang.Text;
+            m_us_dm_khach_hang.strMA_KHACH_HANG = "KH_" + m_txt_so_dien_thoai.Text;
             m_us_dm_khach_hang.strDIA_CHI = m_txt_dia_chi.Text;
             m_us_dm_khach_hang.strSDT = m_txt_so_dien_thoai.Text;
             m_us_dm_khach_hang.strMA_SO_THUE = m_txt_ma_so_thue.Text;
@@ -65,7 +65,6 @@ namespace BKI_QLHT
        private void us_obj_2_form()
         {
             m_txt_ten_khach_hang.Text = m_us_dm_khach_hang.strTEN_KHACH_HANG;
-            m_txt_ma_khach_hang.Text = m_us_dm_khach_hang.strMA_KHACH_HANG;
             m_txt_so_dien_thoai.Text = m_us_dm_khach_hang.strSDT;
             m_txt_dia_chi.Text = m_us_dm_khach_hang.strDIA_CHI;
             m_txt_ma_so_thue.Text = m_us_dm_khach_hang.strMA_SO_THUE;
