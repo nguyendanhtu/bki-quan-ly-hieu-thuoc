@@ -88,6 +88,7 @@
             this.m_txt_ten_nha_cung_cap.Name = "m_txt_ten_nha_cung_cap";
             this.m_txt_ten_nha_cung_cap.Size = new System.Drawing.Size(284, 20);
             this.m_txt_ten_nha_cung_cap.TabIndex = 5;
+            this.m_txt_ten_nha_cung_cap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_ten_nha_cung_cap_KeyUp);
             // 
             // m_txt_dia_chi
             // 
@@ -95,6 +96,7 @@
             this.m_txt_dia_chi.Name = "m_txt_dia_chi";
             this.m_txt_dia_chi.Size = new System.Drawing.Size(284, 20);
             this.m_txt_dia_chi.TabIndex = 8;
+            this.m_txt_dia_chi.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_dia_chi_KeyUp);
             // 
             // m_txt_sdt
             // 
@@ -102,6 +104,7 @@
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(284, 20);
             this.m_txt_sdt.TabIndex = 9;
+            this.m_txt_sdt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_sdt_KeyDown);
             // 
             // m_cmd_thoat
             // 
@@ -186,6 +189,7 @@
             this.Name = "f800_dm_nha_cung_cap_DE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin nhà cung cấp";
+            this.Enter += new System.EventHandler(this.m_cmd_save_Click_1);
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

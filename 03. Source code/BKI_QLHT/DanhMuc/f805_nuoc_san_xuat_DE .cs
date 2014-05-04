@@ -10,6 +10,8 @@ using BKI_QLHT.US;
 using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 using IP.Core.IPCommon;
+using IP.Core.IPSystemAdmin;
+
 
 namespace BKI_QLHT
 {
@@ -18,6 +20,12 @@ namespace BKI_QLHT
         public f805_nuoc_san_xuat_DE()
         {
             InitializeComponent();
+            format_controls();
+        }
+
+        private void format_controls()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
         }
         
         #region public interface
@@ -202,6 +210,7 @@ namespace BKI_QLHT
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(284, 20);
             this.m_txt_sdt.TabIndex = 23;
+            this.m_txt_sdt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_sdt_KeyUp);
             // 
             // m_txt_ten_nha_cung_cap
             // 
@@ -209,6 +218,7 @@ namespace BKI_QLHT
             this.m_txt_ten_nha_cung_cap.Name = "m_txt_ten_nha_cung_cap";
             this.m_txt_ten_nha_cung_cap.Size = new System.Drawing.Size(284, 20);
             this.m_txt_ten_nha_cung_cap.TabIndex = 20;
+            this.m_txt_ten_nha_cung_cap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_ten_nha_cung_cap_KeyUp);
             // 
             // label5
             // 
@@ -248,6 +258,44 @@ namespace BKI_QLHT
         private TextBox m_txt_ten_nha_cung_cap;
         private Label label5;
         private Label label2;
+
+        private void m_txt_ten_nha_cung_cap_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                save_data();
+            }
+        }
+
+        private void save_data()
+        {
+            form_2_us_obj();
+            switch (m_e_form_mode)
+            {
+                case DataEntryFormMode.InsertDataState:
+                    m_us_dm_ncc.Insert();
+                    this.Close();
+                    break;
+                case DataEntryFormMode.SelectDataState:
+                    break;
+                case DataEntryFormMode.UpdateDataState:
+                    m_us_dm_ncc.Update();
+                    this.Close();
+                    break;
+                case DataEntryFormMode.ViewDataState:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void m_txt_sdt_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                save_data();
+            }
+        }
 
     }
 }
