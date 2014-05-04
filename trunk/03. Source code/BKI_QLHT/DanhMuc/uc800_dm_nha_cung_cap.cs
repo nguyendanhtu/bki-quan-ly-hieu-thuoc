@@ -274,5 +274,18 @@ namespace BKI_QLHT.DanhMuc
             m_grv_nha_cung_cap.Redraw = true;
         }
 
+        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
+            DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
+            v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text,1);
+            m_grv_nha_cung_cap.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
+            m_grv_nha_cung_cap.Redraw = true;
+            }
+        }
+
     }
 }

@@ -131,6 +131,7 @@
             this.m_txt_tu_khoa.Name = "m_txt_tu_khoa";
             this.m_txt_tu_khoa.Size = new System.Drawing.Size(296, 20);
             this.m_txt_tu_khoa.TabIndex = 27;
+            this.m_txt_tu_khoa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_tu_khoa_KeyUp);
             // 
             // m_grv_dm_khach_hang
             // 

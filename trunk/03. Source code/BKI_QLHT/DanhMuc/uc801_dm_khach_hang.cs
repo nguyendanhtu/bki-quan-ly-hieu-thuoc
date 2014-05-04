@@ -290,5 +290,19 @@ namespace BKI_QLHT
             this.Controls.Clear();
         }
         #endregion
+
+        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string v_str_tu_khoa = m_txt_tu_khoa.Text;
+                US_V_DM_KHACH_HANG v_us_v_dm_khach_hang = new US_V_DM_KHACH_HANG();
+                DS_V_DM_KHACH_HANG v_ds_v_dm_khach_hang = new DS_V_DM_KHACH_HANG();
+                v_us_v_dm_khach_hang.FillDatasetSearch(v_ds_v_dm_khach_hang, v_str_tu_khoa);
+                m_grv_dm_khach_hang.Redraw = false;
+                CGridUtils.Dataset2C1Grid(v_ds_v_dm_khach_hang, m_grv_dm_khach_hang, m_obj_trans);
+                m_grv_dm_khach_hang.Redraw = true;
+            }
+        }
     }
 }
