@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_BAO_CAO_KIEM_KE_KHO" targetNamespace="http://tempuri.org/DS_V_BAO_CAO_KIEM_KE_KHO.xsd" xmlns:mstns="http://tempuri.org/DS_V_BAO_CAO_KIEM_KE_KHO.xsd" xmlns="http://tempuri.org/DS_V_BAO_CAO_KIEM_KE_KHO.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_BAO_CAO_KIEM_KE_KHOTableAdapter" GeneratorDataComponentClassName="V_BAO_CAO_KIEM_KE_KHOTableAdapter" Name="V_BAO_CAO_KIEM_KE_KHO" UserDataComponentName="V_BAO_CAO_KIEM_KE_KHOTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BKI_QLHTConnectionString1 (Settings)" DbObjectName="BKI_QLHT.dbo.V_BAO_CAO_KIEM_KE_KHO" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_THUOC, SO_DU, ID_DON_VI_THUOC, NGAY_PHAT_SINH, MOI_NHAT_YN, TEN_DON_VI, TEN_NHOM, GHI_CHU, THUOC_THAY_THE, ID_NHOM_THUOC, TT_THUOC, TT_HOAT_CHAT, TEN_THUOC FROM dbo.V_BAO_CAO_KIEM_KE_KHO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_THUOC" DataSetColumn="ID_THUOC" />
+              <Mapping SourceColumn="SO_DU" DataSetColumn="SO_DU" />
+              <Mapping SourceColumn="ID_DON_VI_THUOC" DataSetColumn="ID_DON_VI_THUOC" />
+              <Mapping SourceColumn="NGAY_PHAT_SINH" DataSetColumn="NGAY_PHAT_SINH" />
+              <Mapping SourceColumn="MOI_NHAT_YN" DataSetColumn="MOI_NHAT_YN" />
+              <Mapping SourceColumn="TEN_DON_VI" DataSetColumn="TEN_DON_VI" />
+              <Mapping SourceColumn="TEN_NHOM" DataSetColumn="TEN_NHOM" />
+              <Mapping SourceColumn="GHI_CHU" DataSetColumn="GHI_CHU" />
+              <Mapping SourceColumn="THUOC_THAY_THE" DataSetColumn="THUOC_THAY_THE" />
+              <Mapping SourceColumn="ID_NHOM_THUOC" DataSetColumn="ID_NHOM_THUOC" />
+              <Mapping SourceColumn="TT_THUOC" DataSetColumn="TT_THUOC" />
+              <Mapping SourceColumn="TT_HOAT_CHAT" DataSetColumn="TT_HOAT_CHAT" />
+              <Mapping SourceColumn="TEN_THUOC" DataSetColumn="TEN_THUOC" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_BAO_CAO_KIEM_KE_KHO" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_BAO_CAO_KIEM_KE_KHO" msprop:Generator_UserDSName="DS_V_BAO_CAO_KIEM_KE_KHO">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_BAO_CAO_KIEM_KE_KHO" msprop:Generator_TableClassName="V_BAO_CAO_KIEM_KE_KHODataTable" msprop:Generator_TableVarName="tableV_BAO_CAO_KIEM_KE_KHO" msprop:Generator_TablePropName="V_BAO_CAO_KIEM_KE_KHO" msprop:Generator_RowDeletingName="V_BAO_CAO_KIEM_KE_KHORowDeleting" msprop:Generator_RowChangingName="V_BAO_CAO_KIEM_KE_KHORowChanging" msprop:Generator_RowEvHandlerName="V_BAO_CAO_KIEM_KE_KHORowChangeEventHandler" msprop:Generator_RowDeletedName="V_BAO_CAO_KIEM_KE_KHORowDeleted" msprop:Generator_UserTableName="V_BAO_CAO_KIEM_KE_KHO" msprop:Generator_RowChangedName="V_BAO_CAO_KIEM_KE_KHORowChanged" msprop:Generator_RowEvArgName="V_BAO_CAO_KIEM_KE_KHORowChangeEvent" msprop:Generator_RowClassName="V_BAO_CAO_KIEM_KE_KHORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_THUOC" msprop:Generator_ColumnVarNameInTable="columnID_THUOC" msprop:Generator_ColumnPropNameInRow="ID_THUOC" msprop:Generator_ColumnPropNameInTable="ID_THUOCColumn" msprop:Generator_UserColumnName="ID_THUOC" type="xs:decimal" />
+              <xs:element name="SO_DU" msprop:Generator_ColumnVarNameInTable="columnSO_DU" msprop:Generator_ColumnPropNameInRow="SO_DU" msprop:Generator_ColumnPropNameInTable="SO_DUColumn" msprop:Generator_UserColumnName="SO_DU" type="xs:decimal" />
+              <xs:element name="ID_DON_VI_THUOC" msprop:Generator_ColumnVarNameInTable="columnID_DON_VI_THUOC" msprop:Generator_ColumnPropNameInRow="ID_DON_VI_THUOC" msprop:Generator_ColumnPropNameInTable="ID_DON_VI_THUOCColumn" msprop:Generator_UserColumnName="ID_DON_VI_THUOC" type="xs:decimal" />
+              <xs:element name="NGAY_PHAT_SINH" msprop:Generator_ColumnVarNameInTable="columnNGAY_PHAT_SINH" msprop:Generator_ColumnPropNameInRow="NGAY_PHAT_SINH" msprop:Generator_ColumnPropNameInTable="NGAY_PHAT_SINHColumn" msprop:Generator_UserColumnName="NGAY_PHAT_SINH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MOI_NHAT_YN" msprop:Generator_ColumnVarNameInTable="columnMOI_NHAT_YN" msprop:Generator_ColumnPropNameInRow="MOI_NHAT_YN" msprop:Generator_ColumnPropNameInTable="MOI_NHAT_YNColumn" msprop:Generator_UserColumnName="MOI_NHAT_YN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_DON_VI" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI" msprop:Generator_ColumnPropNameInTable="TEN_DON_VIColumn" msprop:Generator_UserColumnName="TEN_DON_VI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_NHOM" msprop:Generator_ColumnVarNameInTable="columnTEN_NHOM" msprop:Generator_ColumnPropNameInRow="TEN_NHOM" msprop:Generator_ColumnPropNameInTable="TEN_NHOMColumn" msprop:Generator_UserColumnName="TEN_NHOM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GHI_CHU" msprop:Generator_ColumnVarNameInTable="columnGHI_CHU" msprop:Generator_ColumnPropNameInRow="GHI_CHU" msprop:Generator_ColumnPropNameInTable="GHI_CHUColumn" msprop:Generator_UserColumnName="GHI_CHU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="THUOC_THAY_THE" msprop:Generator_ColumnVarNameInTable="columnTHUOC_THAY_THE" msprop:Generator_ColumnPropNameInRow="THUOC_THAY_THE" msprop:Generator_ColumnPropNameInTable="THUOC_THAY_THEColumn" msprop:Generator_UserColumnName="THUOC_THAY_THE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID_NHOM_THUOC" msprop:Generator_ColumnVarNameInTable="columnID_NHOM_THUOC" msprop:Generator_ColumnPropNameInRow="ID_NHOM_THUOC" msprop:Generator_ColumnPropNameInTable="ID_NHOM_THUOCColumn" msprop:Generator_UserColumnName="ID_NHOM_THUOC" type="xs:decimal" />
+              <xs:element name="TT_THUOC" msprop:Generator_ColumnVarNameInTable="columnTT_THUOC" msprop:Generator_ColumnPropNameInRow="TT_THUOC" msprop:Generator_ColumnPropNameInTable="TT_THUOCColumn" msprop:Generator_UserColumnName="TT_THUOC" type="xs:decimal" />
+              <xs:element name="TT_HOAT_CHAT" msprop:Generator_ColumnVarNameInTable="columnTT_HOAT_CHAT" msprop:Generator_ColumnPropNameInRow="TT_HOAT_CHAT" msprop:Generator_ColumnPropNameInTable="TT_HOAT_CHATColumn" msprop:Generator_UserColumnName="TT_HOAT_CHAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
