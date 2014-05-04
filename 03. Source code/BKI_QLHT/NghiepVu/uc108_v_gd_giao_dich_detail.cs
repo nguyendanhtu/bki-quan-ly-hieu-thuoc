@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 
 using IP.Core.IPSystemAdmin;
@@ -26,7 +27,23 @@ namespace BKI_QLHT.NghiepVu
             format_control();
 
         }
-
+        public class data
+        {
+            public decimal id_giao_dich_detail;
+            public decimal id_thuoc;
+            public decimal id_giao_dich;
+            public decimal id_don_vi_tinh_thuoc;
+            public decimal so_luong_ban;
+            public decimal so_luong_ban_de;
+            public decimal so_luong_nhap;
+            public decimal id_nha_cung_cap;
+            public decimal id_nha_san_xuat;
+            public decimal id_hang_san_xuat;
+            public DateTime han_su_dung;
+            public decimal gia_ban;
+            public decimal gia_nhap;
+            public decimal id_lo_thuoc;
+        }
         public String gen_Ma_GD()
         {
             string username = System.IO.File.ReadAllText(@"..\user_login.txt");
@@ -45,13 +62,36 @@ namespace BKI_QLHT.NghiepVu
         #region Members
         decimal tong_tien = 0;
         decimal tong_tien_thanh_toan = 0;
+        decimal m_ti_le_chiet_khau = 0;
+        decimal m_id_giao_dich;
         US_GD_GIAO_DICH_DETAIL m_us_giao_dich_detail = new US_GD_GIAO_DICH_DETAIL();
         DS_GD_GIAO_DICH_DETAIL m_ds_giao_dich_detail = new DS_GD_GIAO_DICH_DETAIL();
         bool trang_thai = false;
+        List<data> list = new List<data>();
+        
         #endregion
 
 
         #region Private Method
+        private void add_list()
+        {
+            data v_data = new data();
+            QuyDoiDVT q = new QuyDoiDVT();
+            v_data.id_giao_dich_detail = 0;
+            v_data.id_thuoc = txt_search_thuoc1.dcID;
+            v_data.so_luong_ban = Convert.ToInt32(m_txt_so_luong.Text);
+            v_data.so_luong_nhap = 0;
+            v_data.so_luong_ban_de = q.QuyDoi(Convert.ToInt32(m_txt_so_luong.Text), CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue), txt_search_thuoc1.dcID);
+            v_data.id_don_vi_tinh_thuoc = CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue);
+            v_data.gia_ban = CIPConvert.ToDecimal(m_txt_don_gia.Text);
+            v_data.gia_nhap = 0;
+            v_data.id_hang_san_xuat = 2;
+            v_data.id_nha_cung_cap = 2;
+            v_data.id_nha_san_xuat = 2;
+            v_data.han_su_dung = DateTime.Now;
+            v_data.id_lo_thuoc = 1;
+            list.Add(v_data);
+        }
         private void format_control()
         {
             m_lbl_Ma_GD_text.Text = gen_Ma_GD();
@@ -257,8 +297,8 @@ namespace BKI_QLHT.NghiepVu
 
         private void m_txt_ti_le_chiet_khau_TextChanged(object sender, EventArgs e)
         {
-            decimal v_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
-            decimal tong_tien_thanh_toan = tong_tien - (tong_tien * v_ti_le_chiet_khau) / 100;
+            m_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
+            tong_tien_thanh_toan = tong_tien - (tong_tien * m_ti_le_chiet_khau) / 100;
             m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
         }
         private void set_initial_form_load()
@@ -288,6 +328,7 @@ namespace BKI_QLHT.NghiepVu
 
         private void m_cmd_them_Click(object sender, EventArgs e)
         {
+            add_list();
             int n = m_grv_quan_ly_ban_thuoc.Rows.Add();
             m_grv_quan_ly_ban_thuoc.Rows[n].Cells[0].Value = n + 1;
             m_grv_quan_ly_ban_thuoc.Rows[n].Cells[1].Value = txt_search_thuoc1.Text1;
@@ -311,8 +352,77 @@ namespace BKI_QLHT.NghiepVu
 
         private void m_cmd_luu_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DialogResult result1 = MessageBox.Show("Bạn có muốn lưu lại không?",
+                "Quản lý bán thuốc",
+                MessageBoxButtons.YesNo);
+                insert_gd_giao_dich();
+                insert_giao_dich_detail();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+           
 
         }
+
+        private void insert_giao_dich_detail()
+        {
+            US_GD_GIAO_DICH_DETAIL v_us_gd_de = new US_GD_GIAO_DICH_DETAIL();
+            DS_GD_GIAO_DICH_DETAIL v_ds_gd_de = new DS_GD_GIAO_DICH_DETAIL();
+            //US_GD_GIAO_DICH v_us_gd = new US_GD_GIAO_DICH();
+            //DS_GD_GIAO_DICH v_ds_gd = new DS_GD_GIAO_DICH();
+            //string ma_giao_dich = m_lbl_Ma_GD_text.Text;
+            //decimal id_giao_dich;
+            //v_us_gd.FillDataset(v_ds_gd,"where MA_GIAO_DICH =" + ma_giao_dich);
+            //DataRow v_dr = v_ds_gd.Tables[0].Rows[0];
+            //id_giao_dich = CIPConvert.ToDecimal(v_dr[GD_GIAO_DICH.ID]);
+            foreach(data v_list in list)
+            {
+                v_us_gd_de.Insert_data_into_gd_giao_dich_detail(m_id_giao_dich,v_list.id_thuoc,v_list.id_don_vi_tinh_thuoc,v_list.so_luong_nhap,v_list.so_luong_ban_de,v_list.id_giao_dich_detail, v_list.id_nha_cung_cap, v_list.id_nha_san_xuat, v_list.id_hang_san_xuat,v_list.han_su_dung,v_list.gia_ban,v_list.gia_nhap);
+            }
+            
+        }
+
+        private void insert_gd_giao_dich()
+        {
+            US_GD_GIAO_DICH v_us = new US_GD_GIAO_DICH();
+            DS_GD_GIAO_DICH v_ds = new DS_GD_GIAO_DICH();
+            v_us.strMA_GIAO_DICH = m_lbl_Ma_GD_text.Text;
+            v_us.datNGAY_GIAO_DICH = m_dt_ngay_giao_dich.Value;
+            v_us.dcID_NGUOI_THUC_HIEN = CAppContext_201.getCurrentUserID();
+            ; //////////////// Id nguoi dang nhap
+            v_us.dcID_KHACH_HANG = CIPConvert.ToDecimal(m_cbo_ten_khach_hang.SelectedValue);
+            v_us.dcID_LOAI_GIAO_DICH = 2;
+            if (CIPConvert.ToDecimal(m_cbo_ten_bac_sy.SelectedValue) == -1)
+            {
+                v_us.dcID_BAC_SY = 14;
+            }
+            else
+            {
+                v_us.dcID_BAC_SY = CIPConvert.ToDecimal(m_cbo_ten_bac_sy.SelectedValue);
+            }
+            v_us.dcTI_LE_CHIET_KHAU = m_ti_le_chiet_khau;
+            v_us.Insert();
+            m_id_giao_dich = v_us.dcID;
+        }
+
+        private void m_cmd_sua_Click(object sender, EventArgs e)
+        {
+            load_data_grd_2_form();
+        }
+
+        private void load_data_grd_2_form()
+        {
+            int i_row=0;
+            txt_search_thuoc1.Text1 = m_grv_quan_ly_ban_thuoc.SelectedRows[i_row].Cells[1].ToString();
+            load_cbo_don_vi_tinh();
+            load_don_gia();
+        }
+
 
      }
 

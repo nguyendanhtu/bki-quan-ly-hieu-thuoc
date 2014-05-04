@@ -69,7 +69,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.m_dt_ngay_giao_dich = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_SDT = new System.Windows.Forms.Label();
             this.m_cbo_ten_bac_sy = new System.Windows.Forms.ComboBox();
             this.m_lbl_Ma_GD = new System.Windows.Forms.Label();
@@ -77,6 +77,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.m_lbl_Ma_GD_text = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi_text = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.m_cmd_sua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_quan_ly_ban_thuoc)).BeginInit();
             this.m_group_chi_tiet_thong_tin_ban.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,6 +103,7 @@
             this.m_grv_quan_ly_ban_thuoc.RowHeadersVisible = false;
             this.m_grv_quan_ly_ban_thuoc.Size = new System.Drawing.Size(1505, 295);
             this.m_grv_quan_ly_ban_thuoc.TabIndex = 9;
+            //this.m_grv_quan_ly_ban_thuoc.Click += new System.EventHandler(this.m_grv_quan_ly_ban_thuoc_Click);
             // 
             // STT
             // 
@@ -144,7 +147,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label15.Location = new System.Drawing.Point(552, 106);
+            this.label15.Location = new System.Drawing.Point(416, 105);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(165, 18);
             this.label15.TabIndex = 1;
@@ -155,7 +158,7 @@
             this.m_txt_tong_tien_thanh_toan.AutoSize = true;
             this.m_txt_tong_tien_thanh_toan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_txt_tong_tien_thanh_toan.ForeColor = System.Drawing.Color.Firebrick;
-            this.m_txt_tong_tien_thanh_toan.Location = new System.Drawing.Point(784, 106);
+            this.m_txt_tong_tien_thanh_toan.Location = new System.Drawing.Point(648, 105);
             this.m_txt_tong_tien_thanh_toan.Name = "m_txt_tong_tien_thanh_toan";
             this.m_txt_tong_tien_thanh_toan.Size = new System.Drawing.Size(152, 16);
             this.m_txt_tong_tien_thanh_toan.TabIndex = 1;
@@ -268,9 +271,11 @@
             // 
             // m_group_chi_tiet_thong_tin_ban
             // 
+            this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.m_cmd_sua);
             this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.m_cmd_luu);
             this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.m_cmd_huy);
             this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.m_cmd_thoat);
+            this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.label6);
             this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.m_cmd_in);
             this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.label17);
             this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.label3);
@@ -306,7 +311,7 @@
             this.m_cmd_luu.BackColor = System.Drawing.Color.Transparent;
             this.m_cmd_luu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_luu.BackgroundImage")));
             this.m_cmd_luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.m_cmd_luu.Location = new System.Drawing.Point(1068, 89);
+            this.m_cmd_luu.Location = new System.Drawing.Point(976, 89);
             this.m_cmd_luu.Name = "m_cmd_luu";
             this.m_cmd_luu.Size = new System.Drawing.Size(50, 33);
             this.m_cmd_luu.TabIndex = 20;
@@ -351,7 +356,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(1055, 126);
+            this.label17.Location = new System.Drawing.Point(963, 126);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 13);
             this.label17.TabIndex = 17;
@@ -474,7 +479,7 @@
             this.m_group_thong_tin_khach_hang.Controls.Add(this.label2);
             this.m_group_thong_tin_khach_hang.Controls.Add(this.label10);
             this.m_group_thong_tin_khach_hang.Controls.Add(this.m_lbl_dia_chi);
-            this.m_group_thong_tin_khach_hang.Controls.Add(this.dateTimePicker1);
+            this.m_group_thong_tin_khach_hang.Controls.Add(this.m_dt_ngay_giao_dich);
             this.m_group_thong_tin_khach_hang.Controls.Add(this.m_lbl_SDT);
             this.m_group_thong_tin_khach_hang.Controls.Add(this.m_cbo_ten_bac_sy);
             this.m_group_thong_tin_khach_hang.Controls.Add(this.m_lbl_Ma_GD);
@@ -537,15 +542,15 @@
             this.m_lbl_dia_chi.TabIndex = 1;
             this.m_lbl_dia_chi.Text = "Địa chỉ: ";
             // 
-            // dateTimePicker1
+            // m_dt_ngay_giao_dich
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(158, 56);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 23);
-            this.dateTimePicker1.TabIndex = 1;
+            this.m_dt_ngay_giao_dich.CalendarFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_dt_ngay_giao_dich.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_dt_ngay_giao_dich.Location = new System.Drawing.Point(158, 56);
+            this.m_dt_ngay_giao_dich.Margin = new System.Windows.Forms.Padding(4);
+            this.m_dt_ngay_giao_dich.Name = "m_dt_ngay_giao_dich";
+            this.m_dt_ngay_giao_dich.Size = new System.Drawing.Size(265, 23);
+            this.m_dt_ngay_giao_dich.TabIndex = 1;
             // 
             // m_lbl_SDT
             // 
@@ -623,6 +628,29 @@
             this.m_lbl_dia_chi_text.TabIndex = 1;
             this.m_lbl_dia_chi_text.Text = "................................................................";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1054, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Sửa (Ctrl+E)";
+            // 
+            // m_cmd_sua
+            // 
+            this.m_cmd_sua.BackColor = System.Drawing.Color.Transparent;
+            this.m_cmd_sua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("m_cmd_sua.BackgroundImage")));
+            this.m_cmd_sua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.m_cmd_sua.Location = new System.Drawing.Point(1067, 90);
+            this.m_cmd_sua.Name = "m_cmd_sua";
+            this.m_cmd_sua.Size = new System.Drawing.Size(50, 33);
+            this.m_cmd_sua.TabIndex = 20;
+            this.m_cmd_sua.UseVisualStyleBackColor = false;
+            this.m_cmd_sua.Click += new System.EventHandler(this.m_cmd_sua_Click);
+            // 
             // uc108_v_gd_giao_dich_detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -677,7 +705,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label m_lbl_dia_chi;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker m_dt_ngay_giao_dich;
         private System.Windows.Forms.Label m_lbl_SDT;
         private System.Windows.Forms.ComboBox m_cbo_ten_bac_sy;
         private System.Windows.Forms.Label m_lbl_Ma_GD;
@@ -695,5 +723,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button m_cmd_sua;
+        private System.Windows.Forms.Label label6;
     }
 }
