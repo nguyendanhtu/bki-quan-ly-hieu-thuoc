@@ -79,6 +79,7 @@
     <Compile Include="US_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX.cs" />
     <Compile Include="US_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.cs" />
     <Compile Include="US_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.cs" />
+    <Compile Include="US_V_BAO_CAO_KIEM_KE_KHO.cs" />
     <Compile Include="US_V_DM_BAC_SY.cs" />
     <Compile Include="US_V_DM_DON_VI.cs" />
     <Compile Include="US_V_DM_DON_VI_TINH.cs" />
