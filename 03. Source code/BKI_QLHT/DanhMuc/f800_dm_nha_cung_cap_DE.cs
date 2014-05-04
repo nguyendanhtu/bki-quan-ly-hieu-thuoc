@@ -50,7 +50,7 @@ namespace BKI_QLHT
         private void form_2_us_obj()
         {
             m_us_dm_ncc.strTEN_NCC =m_txt_ten_nha_cung_cap.Text ;
-            m_us_dm_ncc.strMA_NCC = m_txt_ma_nha_cung_cap.Text;
+            m_us_dm_ncc.strMA_NCC = "NCC_" + m_txt_sdt.Text;
             m_us_dm_ncc.strSDT = m_txt_sdt.Text;
             m_us_dm_ncc.strDIA_CHI = m_txt_dia_chi.Text;
             m_us_dm_ncc.dcID_LOAI_DM = 1;
@@ -58,7 +58,6 @@ namespace BKI_QLHT
         private void us_obj_2_form()
         {
             m_txt_ten_nha_cung_cap.Text = m_us_dm_ncc.strTEN_NCC;
-            m_txt_ma_nha_cung_cap.Text = m_us_dm_ncc.strMA_NCC;
             m_txt_sdt.Text = m_us_dm_ncc.strSDT;
             m_txt_dia_chi.Text = m_us_dm_ncc.strDIA_CHI;
         }
