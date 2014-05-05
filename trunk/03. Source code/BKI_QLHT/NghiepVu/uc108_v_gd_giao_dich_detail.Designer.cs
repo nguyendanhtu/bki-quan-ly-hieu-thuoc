@@ -159,9 +159,9 @@
             this.m_txt_tong_tien_thanh_toan.ForeColor = System.Drawing.Color.Firebrick;
             this.m_txt_tong_tien_thanh_toan.Location = new System.Drawing.Point(648, 105);
             this.m_txt_tong_tien_thanh_toan.Name = "m_txt_tong_tien_thanh_toan";
-            this.m_txt_tong_tien_thanh_toan.Size = new System.Drawing.Size(152, 16);
+            this.m_txt_tong_tien_thanh_toan.Size = new System.Drawing.Size(51, 16);
             this.m_txt_tong_tien_thanh_toan.TabIndex = 1;
-            this.m_txt_tong_tien_thanh_toan.Text = "....................................";
+            this.m_txt_tong_tien_thanh_toan.Text = "0  VNĐ";
             // 
             // label20
             // 
@@ -201,9 +201,9 @@
             this.m_txt_tong_tien.ForeColor = System.Drawing.Color.Firebrick;
             this.m_txt_tong_tien.Location = new System.Drawing.Point(156, 101);
             this.m_txt_tong_tien.Name = "m_txt_tong_tien";
-            this.m_txt_tong_tien.Size = new System.Drawing.Size(152, 16);
+            this.m_txt_tong_tien.Size = new System.Drawing.Size(51, 16);
             this.m_txt_tong_tien.TabIndex = 11;
-            this.m_txt_tong_tien.Text = "....................................";
+            this.m_txt_tong_tien.Text = "0  VNĐ";
             // 
             // label13
             // 
