@@ -24,6 +24,8 @@ using BKI_QLHT.DanhMuc;
 using BKI_QLHT.DS.CDBNames;
 using System.Web;
 using C1.Win.C1FlexGrid;
+using System.Globalization;
+
 
 
 namespace BKI_QLHT
@@ -38,13 +40,15 @@ namespace BKI_QLHT
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
-        private Label m_lbl_nguoi_lam_bc;
-        private Label m_lbl_ngay_lam_bc;
-        private Label label3;
-        private Label label2;
-        private Label m_lbl_nguoi_lam_bao_cao;
-        internal SIS.Controls.Button.SiSButton m_cmd_search;
         private TextBox m_txt_tim_kiem;
+        internal SIS.Controls.Button.SiSButton m_cmd_search;
+        private Label m_lbl_nguoi_lam_bao_cao;
+        private Label label2;
+        private Label label3;
+        private Label m_lbl_ngay_lam_bc;
+        private Label m_lbl_nguoi_lam_bc;
+        private Label label1;
+        private Label m_lbl_count;
 		private System.ComponentModel.IContainer components;
 
 		public f413_v_bao_cao_danh_muc_bac_sy()
@@ -89,13 +93,15 @@ namespace BKI_QLHT
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_lbl_nguoi_lam_bc = new System.Windows.Forms.Label();
-            this.m_lbl_ngay_lam_bc = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.m_lbl_nguoi_lam_bao_cao = new System.Windows.Forms.Label();
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
+            this.m_lbl_nguoi_lam_bao_cao = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.m_lbl_ngay_lam_bc = new System.Windows.Forms.Label();
+            this.m_lbl_nguoi_lam_bc = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_lbl_count = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -132,7 +138,7 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 411);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(815, 36);
@@ -173,56 +179,21 @@ namespace BKI_QLHT
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 86);
+            this.m_fg.Location = new System.Drawing.Point(0, 111);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(815, 287);
+            this.m_fg.Size = new System.Drawing.Size(815, 300);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
-            // m_lbl_nguoi_lam_bc
+            // m_txt_tim_kiem
             // 
-            this.m_lbl_nguoi_lam_bc.AutoSize = true;
-            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(138, 67);
-            this.m_lbl_nguoi_lam_bc.Name = "m_lbl_nguoi_lam_bc";
-            this.m_lbl_nguoi_lam_bc.Size = new System.Drawing.Size(63, 13);
-            this.m_lbl_nguoi_lam_bc.TabIndex = 2737;
-            this.m_lbl_nguoi_lam_bc.Text = "m_lbl_nguoi";
-            // 
-            // m_lbl_ngay_lam_bc
-            // 
-            this.m_lbl_ngay_lam_bc.AutoSize = true;
-            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(742, 67);
-            this.m_lbl_ngay_lam_bc.Name = "m_lbl_ngay_lam_bc";
-            this.m_lbl_ngay_lam_bc.Size = new System.Drawing.Size(60, 13);
-            this.m_lbl_ngay_lam_bc.TabIndex = 2736;
-            this.m_lbl_ngay_lam_bc.Text = "m_lbl_ngay";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(608, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
-            this.label3.TabIndex = 2735;
-            this.label3.Text = "Ngày làm báo cáo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(136, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 2734;
-            this.label2.Text = "Tìm kiếm";
-            // 
-            // m_lbl_nguoi_lam_bao_cao
-            // 
-            this.m_lbl_nguoi_lam_bao_cao.AutoSize = true;
-            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(16, 67);
-            this.m_lbl_nguoi_lam_bao_cao.Name = "m_lbl_nguoi_lam_bao_cao";
-            this.m_lbl_nguoi_lam_bao_cao.Size = new System.Drawing.Size(96, 13);
-            this.m_lbl_nguoi_lam_bao_cao.TabIndex = 2733;
-            this.m_lbl_nguoi_lam_bao_cao.Text = "Người làm báo cáo";
+            this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.m_txt_tim_kiem.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(214, 28);
+            this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
+            this.m_txt_tim_kiem.Size = new System.Drawing.Size(401, 20);
+            this.m_txt_tim_kiem.TabIndex = 2731;
             // 
             // m_cmd_search
             // 
@@ -238,20 +209,76 @@ namespace BKI_QLHT
             this.m_cmd_search.TabIndex = 2732;
             this.m_cmd_search.Text = "Tìm kiếm";
             // 
-            // m_txt_tim_kiem
+            // m_lbl_nguoi_lam_bao_cao
             // 
-            this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.m_txt_tim_kiem.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(214, 28);
-            this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
-            this.m_txt_tim_kiem.Size = new System.Drawing.Size(401, 20);
-            this.m_txt_tim_kiem.TabIndex = 2731;
+            this.m_lbl_nguoi_lam_bao_cao.AutoSize = true;
+            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(585, 63);
+            this.m_lbl_nguoi_lam_bao_cao.Name = "m_lbl_nguoi_lam_bao_cao";
+            this.m_lbl_nguoi_lam_bao_cao.Size = new System.Drawing.Size(96, 13);
+            this.m_lbl_nguoi_lam_bao_cao.TabIndex = 2733;
+            this.m_lbl_nguoi_lam_bao_cao.Text = "Người làm báo cáo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(136, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 2734;
+            this.label2.Text = "Tìm kiếm";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(585, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.TabIndex = 2735;
+            this.label3.Text = "Ngày làm báo cáo";
+            // 
+            // m_lbl_ngay_lam_bc
+            // 
+            this.m_lbl_ngay_lam_bc.AutoSize = true;
+            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(719, 85);
+            this.m_lbl_ngay_lam_bc.Name = "m_lbl_ngay_lam_bc";
+            this.m_lbl_ngay_lam_bc.Size = new System.Drawing.Size(60, 13);
+            this.m_lbl_ngay_lam_bc.TabIndex = 2736;
+            this.m_lbl_ngay_lam_bc.Text = "m_lbl_ngay";
+            // 
+            // m_lbl_nguoi_lam_bc
+            // 
+            this.m_lbl_nguoi_lam_bc.AutoSize = true;
+            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(719, 63);
+            this.m_lbl_nguoi_lam_bc.Name = "m_lbl_nguoi_lam_bc";
+            this.m_lbl_nguoi_lam_bc.Size = new System.Drawing.Size(63, 13);
+            this.m_lbl_nguoi_lam_bc.TabIndex = 2737;
+            this.m_lbl_nguoi_lam_bc.Text = "m_lbl_nguoi";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 13);
+            this.label1.TabIndex = 2738;
+            this.label1.Text = "Số bác sỹ trong báo cáo: ";
+            // 
+            // m_lbl_count
+            // 
+            this.m_lbl_count.AutoSize = true;
+            this.m_lbl_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_count.Location = new System.Drawing.Point(190, 85);
+            this.m_lbl_count.Name = "m_lbl_count";
+            this.m_lbl_count.Size = new System.Drawing.Size(28, 13);
+            this.m_lbl_count.TabIndex = 2739;
+            this.m_lbl_count.Text = "000";
             // 
             // f413_v_bao_cao_danh_muc_bac_sy
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(815, 409);
+            this.ClientSize = new System.Drawing.Size(815, 447);
+            this.Controls.Add(this.m_lbl_count);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.m_lbl_nguoi_lam_bc);
             this.Controls.Add(this.m_lbl_ngay_lam_bc);
             this.Controls.Add(this.label3);
@@ -303,6 +330,7 @@ namespace BKI_QLHT
             IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG v_us = new IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG(CUI);
             m_lbl_ngay_lam_bc.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
+            m_lbl_count.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.Text = v_us.strTEN.Trim();
             m_lbl_ngay_lam_bc.Text = DateTime.Now.Date.ToShortDateString();
         }
@@ -367,7 +395,7 @@ namespace BKI_QLHT
               , (int)e_col_Number.HO_TEN // chỗ này là tên trường mà mình Count
               , "{0}"
               );
-
+            m_lbl_count.Text = m_v_ds.V_DM_BAC_SY.Count.ToString(CultureInfo.InvariantCulture);
             m_fg.Redraw = true;
             set_search_format_before();
 		}
