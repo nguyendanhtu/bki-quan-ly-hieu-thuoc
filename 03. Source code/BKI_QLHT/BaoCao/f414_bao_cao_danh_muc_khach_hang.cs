@@ -353,7 +353,7 @@ namespace BKI_QLHT
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
-            m_fg.Tree.Column = (int)e_col_Number.TEN_NHOM;
+            m_fg.Tree.Column = (int)e_col_Number.TEN_KHACH_HANG;
             m_fg.Cols[(int)e_col_Number.TEN_NHOM].Visible = false;
             m_fg.Cols[0].Caption = "STT";
             m_fg.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
