@@ -77,11 +77,7 @@ namespace BKI_QLHT
         {
             
         }
-        #endregion
-
-
-        #region events  
-        private void m_cmd_save_Click_1(object sender, EventArgs e)
+        private void save_data()
         {
             form_2_us_obj();
             switch (m_e_form_mode)
@@ -103,9 +99,79 @@ namespace BKI_QLHT
             }
         }
 
+        #endregion
+
+
+        #region events  
+        private void m_txt_sdt_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    save_data();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_txt_ten_nha_cung_cap_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    m_txt_sdt.Focus();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_save_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                form_2_us_obj();
+                switch (m_e_form_mode)
+                {
+                    case DataEntryFormMode.InsertDataState:
+                        m_us_dm_ncc.Insert();
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.SelectDataState:
+                        break;
+                    case DataEntryFormMode.UpdateDataState:
+                        m_us_dm_ncc.Update();
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.ViewDataState:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
         private void m_cmd_thoat_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         #endregion
@@ -175,7 +241,7 @@ namespace BKI_QLHT
             this.m_cmd_thoat.Location = new System.Drawing.Point(389, 22);
             this.m_cmd_thoat.Name = "m_cmd_thoat";
             this.m_cmd_thoat.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_thoat.TabIndex = 12;
+            this.m_cmd_thoat.TabIndex = 4;
             this.m_cmd_thoat.Text = "Thoát (Esc)";
             this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click_1);
             // 
@@ -200,7 +266,7 @@ namespace BKI_QLHT
             this.m_cmd_save.Location = new System.Drawing.Point(98, 22);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 13;
+            this.m_cmd_save.TabIndex = 3;
             this.m_cmd_save.Text = "Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click_1);
             // 
@@ -209,7 +275,7 @@ namespace BKI_QLHT
             this.m_txt_sdt.Location = new System.Drawing.Point(207, 137);
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(284, 20);
-            this.m_txt_sdt.TabIndex = 23;
+            this.m_txt_sdt.TabIndex = 2;
             this.m_txt_sdt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_sdt_KeyUp);
             // 
             // m_txt_ten_nha_cung_cap
@@ -217,14 +283,14 @@ namespace BKI_QLHT
             this.m_txt_ten_nha_cung_cap.Location = new System.Drawing.Point(207, 83);
             this.m_txt_ten_nha_cung_cap.Name = "m_txt_ten_nha_cung_cap";
             this.m_txt_ten_nha_cung_cap.Size = new System.Drawing.Size(284, 20);
-            this.m_txt_ten_nha_cung_cap.TabIndex = 20;
+            this.m_txt_ten_nha_cung_cap.TabIndex = 1;
             this.m_txt_ten_nha_cung_cap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_ten_nha_cung_cap_KeyUp);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label5.Location = new System.Drawing.Point(69, 137);
+            this.label5.Location = new System.Drawing.Point(133, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 16);
             this.label5.TabIndex = 19;
@@ -259,43 +325,10 @@ namespace BKI_QLHT
         private Label label5;
         private Label label2;
 
-        private void m_txt_ten_nha_cung_cap_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                save_data();
-            }
-        }
+       
 
-        private void save_data()
-        {
-            form_2_us_obj();
-            switch (m_e_form_mode)
-            {
-                case DataEntryFormMode.InsertDataState:
-                    m_us_dm_ncc.Insert();
-                    this.Close();
-                    break;
-                case DataEntryFormMode.SelectDataState:
-                    break;
-                case DataEntryFormMode.UpdateDataState:
-                    m_us_dm_ncc.Update();
-                    this.Close();
-                    break;
-                case DataEntryFormMode.ViewDataState:
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void m_txt_sdt_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                save_data();
-            }
-        }
+        
+        
 
     }
 }

@@ -67,7 +67,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(69, 146);
+            this.label4.Location = new System.Drawing.Point(124, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 3;
@@ -76,7 +76,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 192);
+            this.label5.Location = new System.Drawing.Point(94, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 4;
@@ -87,7 +87,7 @@
             this.m_txt_ten_nha_cung_cap.Location = new System.Drawing.Point(207, 101);
             this.m_txt_ten_nha_cung_cap.Name = "m_txt_ten_nha_cung_cap";
             this.m_txt_ten_nha_cung_cap.Size = new System.Drawing.Size(284, 20);
-            this.m_txt_ten_nha_cung_cap.TabIndex = 5;
+            this.m_txt_ten_nha_cung_cap.TabIndex = 1;
             this.m_txt_ten_nha_cung_cap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_ten_nha_cung_cap_KeyUp);
             // 
             // m_txt_dia_chi
@@ -95,7 +95,7 @@
             this.m_txt_dia_chi.Location = new System.Drawing.Point(207, 143);
             this.m_txt_dia_chi.Name = "m_txt_dia_chi";
             this.m_txt_dia_chi.Size = new System.Drawing.Size(284, 20);
-            this.m_txt_dia_chi.TabIndex = 8;
+            this.m_txt_dia_chi.TabIndex = 2;
             this.m_txt_dia_chi.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_dia_chi_KeyUp);
             // 
             // m_txt_sdt
@@ -103,7 +103,7 @@
             this.m_txt_sdt.Location = new System.Drawing.Point(207, 192);
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(284, 20);
-            this.m_txt_sdt.TabIndex = 9;
+            this.m_txt_sdt.TabIndex = 3;
             this.m_txt_sdt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_sdt_KeyDown);
             // 
             // m_cmd_thoat
@@ -117,7 +117,7 @@
             this.m_cmd_thoat.Location = new System.Drawing.Point(389, 22);
             this.m_cmd_thoat.Name = "m_cmd_thoat";
             this.m_cmd_thoat.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_thoat.TabIndex = 12;
+            this.m_cmd_thoat.TabIndex = 5;
             this.m_cmd_thoat.Text = "Thoát (Esc)";
             this.m_cmd_thoat.Click += new System.EventHandler(this.m_cmd_thoat_Click_1);
             // 
@@ -159,7 +159,7 @@
             this.m_cmd_save.Location = new System.Drawing.Point(98, 22);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 13;
+            this.m_cmd_save.TabIndex = 4;
             this.m_cmd_save.Text = "Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click_1);
             // 

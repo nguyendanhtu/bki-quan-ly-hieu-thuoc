@@ -142,6 +142,7 @@
             this.m_grv_dm_khach_hang.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_dm_khach_hang.Styles"));
             this.m_grv_dm_khach_hang.TabIndex = 25;
             this.m_grv_dm_khach_hang.Click += new System.EventHandler(this.m_grv_dm_khach_hang_Click);
+            this.m_grv_dm_khach_hang.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_grv_dm_khach_hang_KeyUp);
             // 
             // m_pnl_control
             // 

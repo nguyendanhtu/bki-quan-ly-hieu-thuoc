@@ -107,7 +107,7 @@
             this.m_cmd_exit.Location = new System.Drawing.Point(425, 13);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 15;
+            this.m_cmd_exit.TabIndex = 3;
             this.m_cmd_exit.Text = "Thoát";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
@@ -149,7 +149,7 @@
             this.m_cmd_update.Location = new System.Drawing.Point(136, 13);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 14;
+            this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "Lưu";
             this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
@@ -158,7 +158,7 @@
             this.m_txt_gia.Location = new System.Drawing.Point(198, 229);
             this.m_txt_gia.Name = "m_txt_gia";
             this.m_txt_gia.Size = new System.Drawing.Size(326, 20);
-            this.m_txt_gia.TabIndex = 6;
+            this.m_txt_gia.TabIndex = 1;
             // 
             // m_lbl_ten_don_vi
             // 

@@ -45,12 +45,9 @@ namespace BKI_QLHT.DanhMuc
         DS_V_DM_NUOC_SX m_ds = new DS_V_DM_NUOC_SX();
         US_V_DM_NUOC_SX m_us = new US_V_DM_NUOC_SX();
         US_DM_NCC_NSX_NHASX m_us_dm_ncc = new US_DM_NCC_NSX_NHASX();
-        private Label m_lbl_ten_nha_cung_cap;
-        private Label label4;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal ImageList ImageList;
         private IContainer components;
-        private Label label3;
         internal SIS.Controls.Button.SiSButton m_cmd_tim_kiem;
         private TextBox m_txt_tu_khoa;
         internal SIS.Controls.Button.SiSButton m_cmd_update;
@@ -59,9 +56,7 @@ namespace BKI_QLHT.DanhMuc
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private Label label2;
         private Label label1;
-        internal Panel m_pnl_out_place_dm;
-        private Label label7;
-        private Label m_lbl_ghi_chu;
+        internal Panel m_pnl_control;
         DS_DM_NCC_NSX_NHASX m_ds_dm_ncc = new DS_DM_NCC_NSX_NHASX();
         #endregion
 
@@ -78,13 +73,6 @@ namespace BKI_QLHT.DanhMuc
             load_data_2_grid();
             grid2us_object(m_us_dm_ncc,m_grv_nha_cung_cap.Row);
             m_us = new US_V_DM_NUOC_SX(m_us_dm_ncc.dcID);
-            load_data_2_thong_tin_chi_tiet(m_us);
-        }
-
-        private void load_data_2_thong_tin_chi_tiet(US_V_DM_NUOC_SX m_us)
-        {
-            m_lbl_ten_nha_cung_cap.Text = m_us.strTEN_NCC;
-            m_lbl_ghi_chu.Text = m_us.strSDT;
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -197,6 +185,70 @@ namespace BKI_QLHT.DanhMuc
         //
 
         #region events
+        private void m_grv_nha_cung_cap_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+                m_us = new US_V_DM_NUOC_SX(m_us_dm_ncc.dcID);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_cmd_tim_kiem_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                US_V_DM_NUOC_SX v_us_v_dm_ncc = new US_V_DM_NUOC_SX();
+                DS_V_DM_NUOC_SX v_ds_v_dm_ncc = new DS_V_DM_NUOC_SX();
+                v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text);
+                m_grv_nha_cung_cap.Redraw = false;
+                CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
+                m_grv_nha_cung_cap.Redraw = true;
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    US_V_DM_NUOC_SX v_us_v_dm_ncc = new US_V_DM_NUOC_SX();
+                    DS_V_DM_NUOC_SX v_ds_v_dm_ncc = new DS_V_DM_NUOC_SX();
+                    v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text);
+                    m_grv_nha_cung_cap.Redraw = false;
+                    CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
+                    m_grv_nha_cung_cap.Redraw = true;
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_grv_nha_cung_cap_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+                {
+                    grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+                    m_us = new US_V_DM_NUOC_SX(m_us_dm_ncc.dcID);
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         private void f800_DM_NHA_CUNG_CAP_Load(object sender, System.EventArgs e)
         {
             try
@@ -214,6 +266,7 @@ namespace BKI_QLHT.DanhMuc
         {
             try
             {
+                this.Visible = false;
                 this.Controls.Clear();
                // this.Close();
             }
@@ -272,22 +325,14 @@ namespace BKI_QLHT.DanhMuc
         }
         #endregion
 
-        private void m_grv_nha_cung_cap_Click(object sender, EventArgs e)
-        {
-            grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
-            m_us = new US_V_DM_NUOC_SX(m_us_dm_ncc.dcID);
-            load_data_2_thong_tin_chi_tiet(m_us);
-        }
+        
 
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc805_dm_nuoc_san_xuat));
-            this.m_lbl_ten_nha_cung_cap = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
             this.m_txt_tu_khoa = new System.Windows.Forms.TextBox();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -296,32 +341,10 @@ namespace BKI_QLHT.DanhMuc
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.m_lbl_ghi_chu = new System.Windows.Forms.Label();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nha_cung_cap)).BeginInit();
-            this.m_pnl_out_place_dm.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // m_lbl_ten_nha_cung_cap
-            // 
-            this.m_lbl_ten_nha_cung_cap.AutoSize = true;
-            this.m_lbl_ten_nha_cung_cap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_ten_nha_cung_cap.Location = new System.Drawing.Point(169, 391);
-            this.m_lbl_ten_nha_cung_cap.Name = "m_lbl_ten_nha_cung_cap";
-            this.m_lbl_ten_nha_cung_cap.Size = new System.Drawing.Size(64, 16);
-            this.m_lbl_ten_nha_cung_cap.TabIndex = 48;
-            this.m_lbl_ten_nha_cung_cap.Text = "Từ khóa :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(92, 391);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 16);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Tên nước :";
             // 
             // m_cmd_insert
             // 
@@ -364,16 +387,6 @@ namespace BKI_QLHT.DanhMuc
             this.ImageList.Images.SetKeyName(19, "");
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(305, 313);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 23);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Thông tin chi tiết";
             // 
             // m_cmd_tim_kiem
             // 
@@ -418,10 +431,11 @@ namespace BKI_QLHT.DanhMuc
             this.m_grv_nha_cung_cap.ColumnInfo = resources.GetString("m_grv_nha_cung_cap.ColumnInfo");
             this.m_grv_nha_cung_cap.Location = new System.Drawing.Point(0, 99);
             this.m_grv_nha_cung_cap.Name = "m_grv_nha_cung_cap";
-            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(754, 191);
+            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(754, 341);
             this.m_grv_nha_cung_cap.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nha_cung_cap.Styles"));
             this.m_grv_nha_cung_cap.TabIndex = 38;
             this.m_grv_nha_cung_cap.Click += new System.EventHandler(this.m_grv_nha_cung_cap_Click);
+            this.m_grv_nha_cung_cap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_grv_nha_cung_cap_KeyUp);
             // 
             // m_cmd_delete
             // 
@@ -473,84 +487,37 @@ namespace BKI_QLHT.DanhMuc
             this.label1.TabIndex = 39;
             this.label1.Text = "Thông tin nước sản xuất ";
             // 
-            // m_pnl_out_place_dm
+            // m_pnl_control
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
-            this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 442);
-            this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
-            this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(765, 36);
-            this.m_pnl_out_place_dm.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(537, 391);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 16);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "Ghi chú :";
-            // 
-            // m_lbl_ghi_chu
-            // 
-            this.m_lbl_ghi_chu.AutoSize = true;
-            this.m_lbl_ghi_chu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_ghi_chu.Location = new System.Drawing.Point(602, 391);
-            this.m_lbl_ghi_chu.Name = "m_lbl_ghi_chu";
-            this.m_lbl_ghi_chu.Size = new System.Drawing.Size(71, 16);
-            this.m_lbl_ghi_chu.TabIndex = 50;
-            this.m_lbl_ghi_chu.Text = "Tên nước :";
+            this.m_pnl_control.Controls.Add(this.m_cmd_insert);
+            this.m_pnl_control.Controls.Add(this.m_cmd_update);
+            this.m_pnl_control.Controls.Add(this.m_cmd_delete);
+            this.m_pnl_control.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 442);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_control.Size = new System.Drawing.Size(765, 36);
+            this.m_pnl_control.TabIndex = 37;
             // 
             // uc805_dm_nuoc_san_xuat
             // 
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.m_lbl_ghi_chu);
-            this.Controls.Add(this.m_lbl_ten_nha_cung_cap);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.m_cmd_tim_kiem);
             this.Controls.Add(this.m_txt_tu_khoa);
             this.Controls.Add(this.m_grv_nha_cung_cap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Controls.Add(this.m_pnl_control);
             this.Name = "uc805_dm_nuoc_san_xuat";
             this.Size = new System.Drawing.Size(765, 478);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nha_cung_cap)).EndInit();
-            this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void m_cmd_tim_kiem_Click_1(object sender, EventArgs e)
-        {
-
-            US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
-            DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
-            v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text, 2);
-            m_grv_nha_cung_cap.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
-            m_grv_nha_cung_cap.Redraw = true;
-        }
-
-        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
-                DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
-                v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text, 2);
-                m_grv_nha_cung_cap.Redraw = false;
-                CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
-                m_grv_nha_cung_cap.Redraw = true;
-            }
-        }
+       
 
     }
 }

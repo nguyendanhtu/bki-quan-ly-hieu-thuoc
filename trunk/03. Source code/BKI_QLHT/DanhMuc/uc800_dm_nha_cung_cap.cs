@@ -199,6 +199,7 @@ namespace BKI_QLHT.DanhMuc
         {
             try
             {
+                this.Visible = false;
                 this.Controls.Clear();
                // this.Close();
             }
@@ -255,37 +256,76 @@ namespace BKI_QLHT.DanhMuc
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        #endregion
 
         private void m_grv_nha_cung_cap_Click(object sender, EventArgs e)
         {
-            grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
-            m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
-            load_data_2_thong_tin_chi_tiet(m_us);
+            try
+            {
+                grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+                m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+                load_data_2_thong_tin_chi_tiet(m_us);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_tim_kiem_Click(object sender, EventArgs e)
         {
-            US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
-            DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
-            v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text,1);
-            m_grv_nha_cung_cap.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
-            m_grv_nha_cung_cap.Redraw = true;
+            try
+            {
+                US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
+                DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
+                v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text, 1);
+                m_grv_nha_cung_cap.Redraw = false;
+                CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
+                m_grv_nha_cung_cap.Redraw = true;
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.Enter)
+            try
             {
-                US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
-            DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
-            v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text,1);
-            m_grv_nha_cung_cap.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
-            m_grv_nha_cung_cap.Redraw = true;
+                if (e.KeyCode == Keys.Enter)
+                {
+                    US_V_DM_NCC_NSX_NHASX_1 v_us_v_dm_ncc = new US_V_DM_NCC_NSX_NHASX_1();
+                    DS_V_DM_NCC_NSX_NHASX_1 v_ds_v_dm_ncc = new DS_V_DM_NCC_NSX_NHASX_1();
+                    v_us_v_dm_ncc.FillDatasetSearch(v_ds_v_dm_ncc, m_txt_tu_khoa.Text, 1);
+                    m_grv_nha_cung_cap.Redraw = false;
+                    CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
+                    m_grv_nha_cung_cap.Redraw = true;
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+        private void m_grv_nha_cung_cap_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Up)
+                {
+                    grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+                    m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+                    load_data_2_thong_tin_chi_tiet(m_us);
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+        #endregion
 
     }
 }
