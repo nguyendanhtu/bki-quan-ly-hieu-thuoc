@@ -453,7 +453,7 @@ namespace BKI_QLHT
                                     }
                                 }
                             }
-                            else if (v_control.GetType().Name == "RibbonControl")
+                            else if (v_control.GetType().Name == "RibbonControl" | v_control.GetType().Name == "GroupBox")
                             {
                                 foreach (Control v_sub_control in v_control.Controls)
                                 {
@@ -522,7 +522,7 @@ namespace BKI_QLHT
                                 }
 
                             }
-                            else if (v_control.GetType().Name == "Panel")
+                            else if (v_control.GetType().Name == "Panel"|v_control.GetType().Name=="GroupBox")
                             {
                                 foreach (Control v_control_child in v_control.Controls)
                                 {
