@@ -10,6 +10,7 @@ using BKI_QLHT.US;
 using IP.Core.IPCommon;
 using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
+using IP.Core.IPSystemAdmin;
 namespace BKI_QLHT
 {
     public partial class f801_dm_khach_hang_DE : Form
@@ -17,6 +18,7 @@ namespace BKI_QLHT
         public f801_dm_khach_hang_DE()
         {
             InitializeComponent();
+            format_controls();
             Load_Data_to_m_cbo_nhom_khach_hang();
         }
 
@@ -26,6 +28,7 @@ namespace BKI_QLHT
         {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
+            m_txt_ten_khach_hang.Focus();
 
         }
         public void display_for_update(US_V_DM_KHACH_HANG m_us)
@@ -40,6 +43,7 @@ namespace BKI_QLHT
             m_us_dm_khach_hang.dcID_NHOM_KHACH_HANG = m_us.dcID_NHOM_KHACH_HANG;
             us_obj_2_form();
             this.ShowDialog();
+            m_txt_ten_khach_hang.Focus();
         }
 
         
@@ -53,6 +57,10 @@ namespace BKI_QLHT
 
 
         #region private methods
+        private void format_controls()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+        }
        private void form_2_us_obj()
         {
             m_us_dm_khach_hang.strTEN_KHACH_HANG = m_txt_ten_khach_hang.Text;
@@ -88,30 +96,138 @@ namespace BKI_QLHT
         #region events
        private void m_cmd_save_Click(object sender, EventArgs e)
        {
-           form_2_us_obj();
-           switch (m_e_form_mode)
+           try
            {
-               case DataEntryFormMode.InsertDataState:
-                   m_us_dm_khach_hang.Insert();
-                   this.Close();
-                   break;
-               case DataEntryFormMode.SelectDataState:
-                   break;
-               case DataEntryFormMode.UpdateDataState:
-                   m_us_dm_khach_hang.Update();
-                   this.Close();
-                   break;
-               case DataEntryFormMode.ViewDataState:
-                   break;
-               default:
-                   break;
+               form_2_us_obj();
+               switch (m_e_form_mode)
+               {
+                   case DataEntryFormMode.InsertDataState:
+                       m_us_dm_khach_hang.Insert();
+                       this.Close();
+                       break;
+                   case DataEntryFormMode.SelectDataState:
+                       break;
+                   case DataEntryFormMode.UpdateDataState:
+                       m_us_dm_khach_hang.Update();
+                       this.Close();
+                       break;
+                   case DataEntryFormMode.ViewDataState:
+                       break;
+                   default:
+                       break;
+               }
+           }
+           catch (Exception v_e)
+           {
+               CSystemLog_301.ExceptionHandle(v_e);
            }
        }
        private void m_cmd_exit_Click(object sender, EventArgs e)
        {
-           this.Close();
+           try
+           {
+               this.Close();
+           }
+           catch (Exception v_e)
+           {
+               CSystemLog_301.ExceptionHandle(v_e);
+           }
+       }
+       private void m_txt_ten_khach_hang_KeyUp(object sender, KeyEventArgs e)
+       {
+           try
+           {
+               if (e.KeyCode == Keys.Enter)
+               {
+                   m_txt_so_dien_thoai.Focus();
+               }
+           }
+           catch(Exception v_e)
+           {
+               CSystemLog_301.ExceptionHandle(v_e);
+           }
+
+       }
+
+       private void m_txt_so_dien_thoai_KeyUp(object sender, KeyEventArgs e)
+       {
+           try
+           {
+               if (e.KeyCode == Keys.Enter)
+               {
+                   m_txt_dia_chi.Focus();
+               }
+           }
+           catch (Exception v_e)
+           {
+               CSystemLog_301.ExceptionHandle(v_e);
+           }
+       }
+
+       private void m_txt_dia_chi_KeyUp(object sender, KeyEventArgs e)
+       {
+           try
+           {
+               if (e.KeyCode == Keys.Enter)
+               {
+                   m_txt_ma_so_thue.Focus();
+               }
+           }
+           catch (Exception v_e)
+           {
+               CSystemLog_301.ExceptionHandle(v_e);
+           }
+       }
+
+       private void m_txt_ma_so_thue_KeyUp(object sender, KeyEventArgs e)
+       {
+           try
+           {
+               if (e.KeyCode == Keys.Enter)
+               {
+                   m_cbo_nhom_khach_hang.Focus();
+               }
+           }
+           catch (Exception v_e)
+           {
+               CSystemLog_301.ExceptionHandle(v_e);
+           }
+       }
+
+       private void m_cbo_nhom_khach_hang_KeyUp(object sender, KeyEventArgs e)
+       {
+           try
+           {
+               if (e.KeyCode == Keys.Enter)
+               {
+                   form_2_us_obj();
+                   switch (m_e_form_mode)
+                   {
+                       case DataEntryFormMode.InsertDataState:
+                           m_us_dm_khach_hang.Insert();
+                           this.Close();
+                           break;
+                       case DataEntryFormMode.SelectDataState:
+                           break;
+                       case DataEntryFormMode.UpdateDataState:
+                           m_us_dm_khach_hang.Update();
+                           this.Close();
+                           break;
+                       case DataEntryFormMode.ViewDataState:
+                           break;
+                       default:
+                           break;
+                   }
+               }
+           }
+           catch (Exception v_e)
+           {
+               CSystemLog_301.ExceptionHandle(v_e);
+           }
        }
         #endregion
+
+      
 
        
     }

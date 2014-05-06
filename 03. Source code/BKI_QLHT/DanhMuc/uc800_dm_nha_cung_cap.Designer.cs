@@ -36,7 +36,7 @@
             this.m_grv_nha_cung_cap = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.m_txt_tu_khoa = new System.Windows.Forms.TextBox();
@@ -51,7 +51,7 @@
             this.m_lbl_dia_chi = new System.Windows.Forms.Label();
             this.m_lbl_sdt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nha_cung_cap)).BeginInit();
-            this.m_pnl_out_place_dm.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_cmd_insert
@@ -120,6 +120,7 @@
             this.m_grv_nha_cung_cap.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nha_cung_cap.Styles"));
             this.m_grv_nha_cung_cap.TabIndex = 22;
             this.m_grv_nha_cung_cap.Click += new System.EventHandler(this.m_grv_nha_cung_cap_Click);
+            this.m_grv_nha_cung_cap.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_grv_nha_cung_cap_KeyUp);
             // 
             // m_cmd_delete
             // 
@@ -151,18 +152,18 @@
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
-            // m_pnl_out_place_dm
+            // m_pnl_control
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
-            this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 525);
-            this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
-            this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(761, 36);
-            this.m_pnl_out_place_dm.TabIndex = 21;
+            this.m_pnl_control.Controls.Add(this.m_cmd_insert);
+            this.m_pnl_control.Controls.Add(this.m_cmd_update);
+            this.m_pnl_control.Controls.Add(this.m_cmd_delete);
+            this.m_pnl_control.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 525);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_control.Size = new System.Drawing.Size(761, 36);
+            this.m_pnl_control.TabIndex = 21;
             // 
             // label1
             // 
@@ -315,11 +316,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_grv_nha_cung_cap);
-            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Controls.Add(this.m_pnl_control);
             this.Name = "uc800_dm_nha_cung_cap";
             this.Size = new System.Drawing.Size(761, 561);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nha_cung_cap)).EndInit();
-            this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,7 +334,7 @@
         private C1.Win.C1FlexGrid.C1FlexGrid m_grv_nha_cung_cap;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
-        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
+        internal System.Windows.Forms.Panel m_pnl_control;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox m_txt_tu_khoa;

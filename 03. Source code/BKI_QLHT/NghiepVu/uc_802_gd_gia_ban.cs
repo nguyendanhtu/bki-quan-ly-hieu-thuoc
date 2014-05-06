@@ -95,6 +95,13 @@ namespace BKI_QLHT
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
 
+        private void load_data_to_text_box_search()
+        {
+            US_V_DM_THUOC v_us = new US_V_DM_THUOC();
+            DS_V_DM_THUOC v_ds = new DS_V_DM_THUOC();
+            v_us.FillDataset(v_ds);
+            m_txts_ten_thuoc.load_data_to_list(v_ds, V_DM_THUOC.DISPLAY, V_DM_THUOC.ID);
+        }
 
         private void insert_v_gd_gia_ban()
         {
@@ -165,6 +172,7 @@ namespace BKI_QLHT
             {
                 set_initial_form_load();
                 load_data_to_text_box_search();
+                m_txts_ten_thuoc.Focus();
             }
             catch (Exception v_e)
             {
@@ -173,18 +181,13 @@ namespace BKI_QLHT
 
         }
 
-        private void load_data_to_text_box_search()
-        {
-            US_V_DM_THUOC v_us = new US_V_DM_THUOC();
-            DS_V_DM_THUOC v_ds = new DS_V_DM_THUOC();
-            v_us.FillDataset(v_ds);
-            m_txts_ten_thuoc.load_data_to_list(v_ds,V_DM_THUOC.DISPLAY, V_DM_THUOC.ID);
-        }
+       
 
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
             try
             {
+                this.Visible = false;
                 this.Controls.Clear();
             }
             catch (Exception v_e)
@@ -240,28 +243,52 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        #endregion
 
         private void m_cmd_exit_Click_1(object sender, EventArgs e)
         {
-            this.Controls.Clear();
+            try
+            {
+                this.Visible = false;
+                this.Controls.Clear();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_refresh_Click(object sender, EventArgs e)
         {
-            load_data_to_text_box_search();
+            try
+            {
+                load_data_to_text_box_search();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_txts_ten_thuoc_KeyDown(object sender, KeyEventArgs e)
         {
-            decimal dc_id = m_txts_ten_thuoc.dcID;
-            US_V_GD_GIA_BAN v_us_v_gd_gia_ban = new US_V_GD_GIA_BAN();
-            DS_V_GD_GIA_BAN v_ds_v_gd_gia_ban = new DS_V_GD_GIA_BAN();
-            v_us_v_gd_gia_ban.FillDatasetbyTenThuoc(v_ds_v_gd_gia_ban,dc_id);
-            m_grv_v_gd_gia.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds_v_gd_gia_ban, m_grv_v_gd_gia, m_obj_trans);
-            m_grv_v_gd_gia.Redraw = true;
+            try
+            {
+                decimal dc_id = m_txts_ten_thuoc.dcID;
+                US_V_GD_GIA_BAN v_us_v_gd_gia_ban = new US_V_GD_GIA_BAN();
+                DS_V_GD_GIA_BAN v_ds_v_gd_gia_ban = new DS_V_GD_GIA_BAN();
+                v_us_v_gd_gia_ban.FillDatasetbyTenThuoc(v_ds_v_gd_gia_ban, dc_id);
+                m_grv_v_gd_gia.Redraw = false;
+                CGridUtils.Dataset2C1Grid(v_ds_v_gd_gia_ban, m_grv_v_gd_gia, m_obj_trans);
+                m_grv_v_gd_gia.Redraw = true;
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
+        #endregion
+
+        
 
         //private void m_cmd_update_Click_1(object sender, EventArgs e)
         //{

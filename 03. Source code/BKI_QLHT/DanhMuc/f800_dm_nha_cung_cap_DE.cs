@@ -73,83 +73,129 @@ namespace BKI_QLHT
         {
             
         }
+        private void save_data()
+        {
+            try
+            {
+                form_2_us_obj();
+                switch (m_e_form_mode)
+                {
+                    case DataEntryFormMode.InsertDataState:
+                        m_us_dm_ncc.Insert();
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.SelectDataState:
+                        break;
+                    case DataEntryFormMode.UpdateDataState:
+                        m_us_dm_ncc.Update();
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.ViewDataState:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         #endregion
 
 
         #region events  
         private void m_cmd_save_Click_1(object sender, EventArgs e)
         {
-            form_2_us_obj();
-            switch (m_e_form_mode)
+            try
             {
-                case DataEntryFormMode.InsertDataState:
-                    m_us_dm_ncc.Insert();
-                    this.Close();
-                    break;
-                case DataEntryFormMode.SelectDataState:
-                    break;
-                case DataEntryFormMode.UpdateDataState:
-                    m_us_dm_ncc.Update();
-                    this.Close();
-                    break;
-                case DataEntryFormMode.ViewDataState:
-                    break;
-                default:
-                    break;
+                form_2_us_obj();
+                switch (m_e_form_mode)
+                {
+                    case DataEntryFormMode.InsertDataState:
+                        m_us_dm_ncc.Insert();
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.SelectDataState:
+                        break;
+                    case DataEntryFormMode.UpdateDataState:
+                        m_us_dm_ncc.Update();
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.ViewDataState:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
         private void m_cmd_thoat_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
         }
 
-        #endregion
-
-        private void save_data()
-        {
-             form_2_us_obj();
-             switch (m_e_form_mode)
-             {
-                 case DataEntryFormMode.InsertDataState:
-                     m_us_dm_ncc.Insert();
-                     this.Close();
-                     break;
-                 case DataEntryFormMode.SelectDataState:
-                     break;
-                 case DataEntryFormMode.UpdateDataState:
-                     m_us_dm_ncc.Update();
-                     this.Close();
-                     break;
-                 case DataEntryFormMode.ViewDataState:
-                     break;
-                 default:
-                     break;
-             }
-        }
         private void m_txt_sdt_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                save_data();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    save_data();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
         private void m_txt_dia_chi_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                save_data();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    m_txt_sdt.Focus();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
         private void m_txt_ten_nha_cung_cap_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
-                save_data();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    m_txt_dia_chi.Focus();
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        #endregion
+
+       
+        
 
 
     }

@@ -197,6 +197,42 @@ namespace BKI_QLHT
         //
         //
         #region events
+        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    string v_str_tu_khoa = m_txt_tu_khoa.Text;
+                    US_V_DM_KHACH_HANG v_us_v_dm_khach_hang = new US_V_DM_KHACH_HANG();
+                    DS_V_DM_KHACH_HANG v_ds_v_dm_khach_hang = new DS_V_DM_KHACH_HANG();
+                    v_us_v_dm_khach_hang.FillDatasetSearch(v_ds_v_dm_khach_hang, v_str_tu_khoa);
+                    m_grv_dm_khach_hang.Redraw = false;
+                    CGridUtils.Dataset2C1Grid(v_ds_v_dm_khach_hang, m_grv_dm_khach_hang, m_obj_trans);
+                    m_grv_dm_khach_hang.Redraw = true;
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_grv_dm_khach_hang_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+                {
+                    grid2us_object(m_us, m_grv_dm_khach_hang.Row);
+                    load_data_2_thong_tin_chi_tiet(m_us);
+                }
+            }
+            catch(Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
         private void uc801_dm_khach_hang_Load(object sender, System.EventArgs e)
         {
             try
@@ -214,6 +250,7 @@ namespace BKI_QLHT
         {
             try
             {
+                this.Controls.Clear();
                 //this.Close();
             }
             catch (Exception v_e)
@@ -272,28 +309,7 @@ namespace BKI_QLHT
 
         private void m_cmd_search_Click_1(object sender, EventArgs e)
         {
-            string v_str_tu_khoa = m_txt_tu_khoa.Text;
-            US_V_DM_KHACH_HANG v_us_v_dm_khach_hang = new US_V_DM_KHACH_HANG();
-            DS_V_DM_KHACH_HANG v_ds_v_dm_khach_hang = new DS_V_DM_KHACH_HANG();
-            v_us_v_dm_khach_hang.FillDatasetSearch(v_ds_v_dm_khach_hang, v_str_tu_khoa);
-            m_grv_dm_khach_hang.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds_v_dm_khach_hang, m_grv_dm_khach_hang, m_obj_trans);
-            m_grv_dm_khach_hang.Redraw = true;
-        }
-        private void m_grv_dm_khach_hang_Click(object sender, EventArgs e)
-        {
-            grid2us_object(m_us, m_grv_dm_khach_hang.Row);
-            load_data_2_thong_tin_chi_tiet(m_us);
-        }
-        private void m_cmd_exit_Click_1(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-        }
-        #endregion
-
-        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
                 string v_str_tu_khoa = m_txt_tu_khoa.Text;
                 US_V_DM_KHACH_HANG v_us_v_dm_khach_hang = new US_V_DM_KHACH_HANG();
@@ -303,6 +319,37 @@ namespace BKI_QLHT
                 CGridUtils.Dataset2C1Grid(v_ds_v_dm_khach_hang, m_grv_dm_khach_hang, m_obj_trans);
                 m_grv_dm_khach_hang.Redraw = true;
             }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
+        private void m_grv_dm_khach_hang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                grid2us_object(m_us, m_grv_dm_khach_hang.Row);
+                load_data_2_thong_tin_chi_tiet(m_us);
+            }
+            catch(Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_cmd_exit_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Visible = false;
+                this.Controls.Clear();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        #endregion
+
+       
     }
 }
