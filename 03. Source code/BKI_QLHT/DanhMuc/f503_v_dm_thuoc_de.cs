@@ -63,7 +63,7 @@ namespace BKI_QLHT
             this.m_cbo_danh_muc_thuoc.SelectedIndexChanged += new System.EventHandler(this.m_cbo_danh_muc_thuoc_SelectedIndexChanged);
         }
 
-        public void load_data_2_cbo_danh_muc()
+        private void load_data_2_cbo_danh_muc()
         {
             US_DM_DANH_MUC_THUOC v_us = new US_DM_DANH_MUC_THUOC();
             DS_DM_DANH_MUC_THUOC v_ds = new DS_DM_DANH_MUC_THUOC();
@@ -75,7 +75,7 @@ namespace BKI_QLHT
             this.m_cbo_danh_muc_thuoc.SelectedIndexChanged += new System.EventHandler(this.m_cbo_danh_muc_thuoc_SelectedIndexChanged);
             
         }
-        public void load_data_2_cbo_nhom_thuoc()
+        private void load_data_2_cbo_nhom_thuoc()
         {
             US_DM_NHOM_THUOC v_us = new US_DM_NHOM_THUOC();
             DS_DM_NHOM_THUOC v_ds = new DS_DM_NHOM_THUOC();
@@ -86,7 +86,7 @@ namespace BKI_QLHT
            
 
         }
-        public void load_nhom_thuoc_2_danh_muc(object ip_dc_id_danh_muc)
+        private void load_nhom_thuoc_2_danh_muc(object ip_dc_id_danh_muc)
         {
             US_DM_NHOM_THUOC v_us = new US_DM_NHOM_THUOC();
             DS_DM_NHOM_THUOC v_ds = new DS_DM_NHOM_THUOC();
@@ -96,7 +96,7 @@ namespace BKI_QLHT
             m_cbo_nhom_thuoc.ValueMember = DM_NHOM_THUOC.ID;
             m_cbo_nhom_thuoc.DisplayMember = DM_NHOM_THUOC.TEN_NHOM;
         }
-        public void form_2_us_obj()
+        private void form_2_us_obj()
         {
             m_us_dm_thuoc.strTEN_THUOC = m_txt_ten_thuoc.Text;
             m_us_dm_thuoc.strTHUOC_THAY_THE = m_txt_thuoc_thay_the.Text;
@@ -107,8 +107,8 @@ namespace BKI_QLHT
             //m_us_dm_thuoc.strTUYEN_SU_DUNG_6 = m_txt_tuyen_su_dung.Text;
             //m_us_dm_thuoc.strTUYEN_SU_DUNG_7 = m_txt_tuyen_su_dung.Text;
             //m_us_dm_thuoc.strTUYEN_SU_DUNG_8 = m_txt_tuyen_su_dung.Text;
-            m_us_dm_thuoc.dcTT_THUOC = CIPConvert.ToDecimal(m_txt_tt_thuoc.Text);
-            m_us_dm_thuoc.dcTT_HOAT_CHAT = CIPConvert.ToDecimal(m_txt_tt_hoat_chat.Text);
+            m_us_dm_thuoc.dcTT_THUOC = 1;
+            m_us_dm_thuoc.dcTT_HOAT_CHAT = 1;
             if (m_chk_tuyen_su_dung_5.Checked == true) m_us_dm_thuoc.strTUYEN_SU_DUNG_5 = "+";
             else m_us_dm_thuoc.strTUYEN_SU_DUNG_5 = "";
             if (m_chk_tuyen_su_dung_6.Checked == true) m_us_dm_thuoc.strTUYEN_SU_DUNG_6 = "+";
@@ -118,7 +118,7 @@ namespace BKI_QLHT
             if (m_chk_tuyen_su_dung_8.Checked == true) m_us_dm_thuoc.strTUYEN_SU_DUNG_8 = "+";
             else m_us_dm_thuoc.strTUYEN_SU_DUNG_8 = "";
         }
-        public void us_obj_2_form(US_DM_THUOC ip_us_dm_thuoc)
+        private void us_obj_2_form(US_DM_THUOC ip_us_dm_thuoc)
         {
 
             m_txt_ten_thuoc.Text = ip_us_dm_thuoc.strTEN_THUOC;
@@ -126,8 +126,8 @@ namespace BKI_QLHT
             m_cbo_nhom_thuoc.SelectedValue = ip_us_dm_thuoc.dcID_NHOM_THUOC;
             m_cbo_danh_muc_thuoc.SelectedValue = ip_us_dm_thuoc.dcID_DANH_MUC_THUOC;
             m_txt_cach_dung.Text = ip_us_dm_thuoc.strDUONG_DUNG_DANG_DUNG;
-            m_txt_tt_hoat_chat.Text = CIPConvert.ToStr(ip_us_dm_thuoc.dcTT_HOAT_CHAT);
-            m_txt_tt_thuoc.Text = CIPConvert.ToStr(ip_us_dm_thuoc.dcTT_THUOC);
+            //m_txt_tt_hoat_chat.Text = CIPConvert.ToStr(ip_us_dm_thuoc.dcTT_HOAT_CHAT);
+            //m_txt_tt_thuoc.Text = CIPConvert.ToStr(ip_us_dm_thuoc.dcTT_THUOC);
             //m_txt_tuyen_su_dung.Text = ip_us_dm_thuoc.strTUYEN_SU_DUNG_5;
 
             if (m_us_dm_thuoc.strTUYEN_SU_DUNG_5 == "+") m_chk_tuyen_su_dung_5.Checked = true;
@@ -137,9 +137,9 @@ namespace BKI_QLHT
            
 
         }
-        public void save_data()
+        private void save_data()
         {
-
+            if (!check_validate()) return;
             form_2_us_obj();
             switch (m_e_form_mode)
             {
@@ -154,10 +154,16 @@ namespace BKI_QLHT
             }
             this.Close();
         }
-        public void set_inital_form_load()
+        private void set_inital_form_load()
         {
             load_data_2_cbo_danh_muc();
             load_nhom_thuoc_2_danh_muc(m_cbo_danh_muc_thuoc.SelectedValue.ToString());
+        }
+        private bool check_validate() {
+            if (!CValidateTextBox.IsValid(m_txt_ten_thuoc, DataType.StringType, allowNull.NO, true)) return false;
+            if (!CValidateTextBox.IsValid(m_txt_cach_dung, DataType.StringType, allowNull.NO, true)) return false;
+            return true;
+
         }
         #endregion
 

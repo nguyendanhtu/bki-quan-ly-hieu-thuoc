@@ -125,16 +125,14 @@ namespace BKI_QLHT
         }
 
 
-        private void grid2us_object(US_V_DM_THUOC i_us
-            , int i_grid_row)
+        private void grid2us_object(US_V_DM_THUOC i_us, int i_grid_row)
         {
             DataRow v_dr;
             v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
             i_us.DataRow2Me(v_dr);
         }
-        private void dm_grid2us_object(US_DM_THUOC i_us
-            , int i_grid_row)
+        private void dm_grid2us_object(US_DM_THUOC i_us , int i_grid_row)
         {
             DataRow v_dr;
             v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
@@ -143,8 +141,7 @@ namespace BKI_QLHT
         }
 
 
-        private void us_object2grid(US_V_DM_THUOC i_us
-            , int i_grid_row)
+        private void us_object2grid(US_V_DM_THUOC i_us, int i_grid_row)
         {
             DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             i_us.Me2DataRow(v_dr);
@@ -246,8 +243,8 @@ namespace BKI_QLHT
             m_lbl_nhom_thuoc.Text = m_us.strTEN_NHOM;
             m_lbl_thuoc_thay_the.Text = m_us.strTHUOC_THAY_THE;
             //m_lbl_tuyen_su_dung.Text = m_us.strTUYEN_SU_DUNG_5;
-            m_lbl_tt_hoat_chat.Text = CIPConvert.ToStr(m_us.dcTT_HOAT_CHAT);
-            m_lbl_tt_thuoc.Text = CIPConvert.ToStr(m_us.dcTT_THUOC);
+            //m_lbl_tt_hoat_chat.Text = CIPConvert.ToStr(m_us.dcTT_HOAT_CHAT);
+            //m_lbl_tt_thuoc.Text = CIPConvert.ToStr(m_us.dcTT_THUOC);
             m_lbl_duong_dung.Text = m_us.strDUONG_DUNG_DANG_DUNG;
             if (m_us.strTUYEN_SU_DUNG_5 == "+") m_chk_tuyen_su_dung_5.Checked = true;
             else m_chk_tuyen_su_dung_5.Checked = false;
@@ -285,6 +282,7 @@ namespace BKI_QLHT
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             m_fg.Redraw = true;
+            //load_data_2_thong_tin();
         }
         //private void load_data_2_grid_from_nhom_thuoc(decimal ip_dc_id_nhom_thuoc)
         //{
@@ -306,6 +304,7 @@ namespace BKI_QLHT
         }
 
         #endregion
+
         #region Event
         private void uc502_v_dm_Load(object sender, System.EventArgs e)
         {
@@ -457,9 +456,17 @@ namespace BKI_QLHT
         }
         private void m_txt_tu_khoa_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+        }
+        #endregion
+
+        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
+        {
             try
             {
-                load_grid_search();
+                if (e.KeyCode == Keys.Enter) {
+                    load_grid_search();
+                }
             }
             catch (Exception v_e)
             {
@@ -467,7 +474,6 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        #endregion
 
         
 

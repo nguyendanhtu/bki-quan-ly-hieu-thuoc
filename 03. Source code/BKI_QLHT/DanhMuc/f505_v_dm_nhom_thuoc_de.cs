@@ -84,6 +84,7 @@ namespace BKI_QLHT
         }
         private void save_data()
         {
+            if (!check_validate()) return;
             form_2_us_obj();
             switch (m_e_for_mode)
             {
@@ -113,6 +114,10 @@ namespace BKI_QLHT
         public void set_inital_form_load()
         {
             load_data_2_cbo();
+        }
+        private bool check_validate() {
+            if (!CValidateTextBox.IsValid(m_txt_nhom_thuoc, DataType.StringType, allowNull.NO, true)) return false;
+            return true;
         }
         #endregion
 

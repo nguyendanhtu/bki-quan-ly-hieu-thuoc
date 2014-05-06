@@ -64,7 +64,7 @@ namespace BKI_QLHT
             m_obj_trans = get_trans_object(m_grv_danh_muc_thuoc);
             load_data_2_grid();
             grid2us_object(m_us, m_grv_danh_muc_thuoc.Row);
-            load_data_2_thong_tin();
+            //load_data_2_thong_tin();
 
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
@@ -142,6 +142,15 @@ namespace BKI_QLHT
                 v_objErrHandler.showErrorMessage();
             }
         }
+        private void load_grid_search() {
+            string v_str_tu_khoa = m_txt_tu_khoa.Text;
+            US_DM_DANH_MUC_THUOC v_us_danh_muc_thuoc = new US_DM_DANH_MUC_THUOC();
+            DS_DM_DANH_MUC_THUOC v_ds_danh_muc_thuoc = new DS_DM_DANH_MUC_THUOC();
+            v_us_danh_muc_thuoc.FillDataseSearch(v_ds_danh_muc_thuoc, v_str_tu_khoa);
+            m_grv_danh_muc_thuoc.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds_danh_muc_thuoc, m_grv_danh_muc_thuoc, m_obj_trans);
+            m_grv_danh_muc_thuoc.Redraw = true;
+        }
 
         //private void view_dm_danh_muc_thuoc()
         //{
@@ -160,13 +169,13 @@ namespace BKI_QLHT
             //m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
             this.Load += new System.EventHandler(this.usercontrol_Load);
         }
-        private void load_data_2_thong_tin() {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_danh_muc_thuoc)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_danh_muc_thuoc, m_grv_danh_muc_thuoc.Row)) return;
-            grid2us_object(m_us, m_grv_danh_muc_thuoc.Row);
-            m_lbl_ten_danh_mục.Text = m_us.strTEN_DANH_MUC;
-            m_lbl_ghi_chu.Text = m_us.strGHI_CHU;
-        }
+        //private void load_data_2_thong_tin() {
+        //    if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_danh_muc_thuoc)) return;
+        //    if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_danh_muc_thuoc, m_grv_danh_muc_thuoc.Row)) return;
+        //    grid2us_object(m_us, m_grv_danh_muc_thuoc.Row);
+        //    m_lbl_ten_danh_mục.Text = m_us.strTEN_DANH_MUC;
+        //    m_lbl_ghi_chu.Text = m_us.strGHI_CHU;
+        //}
         #endregion
 
         //
@@ -207,7 +216,7 @@ namespace BKI_QLHT
             try
             {
                 insert_dm_danh_muc_thuoc();
-                load_data_2_thong_tin();
+                //load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -220,7 +229,7 @@ namespace BKI_QLHT
             try
             {
                 update_dm_danh_muc_thuoc();
-                load_data_2_thong_tin();
+                //load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -233,7 +242,7 @@ namespace BKI_QLHT
             try
             {
                 delete_dm_danh_muc_thuoc();
-                load_data_2_thong_tin();
+                //load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -280,13 +289,15 @@ namespace BKI_QLHT
 
         private void m_cmd_search_Click(object sender, EventArgs e)
         {
-            string v_str_tu_khoa = m_txt_tu_khoa.Text;
-            US_DM_DANH_MUC_THUOC v_us_danh_muc_thuoc = new US_DM_DANH_MUC_THUOC();
-            DS_DM_DANH_MUC_THUOC v_ds_danh_muc_thuoc = new DS_DM_DANH_MUC_THUOC();
-            v_us_danh_muc_thuoc.FillDataseSearch(v_ds_danh_muc_thuoc, v_str_tu_khoa);
-            m_grv_danh_muc_thuoc.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds_danh_muc_thuoc, m_grv_danh_muc_thuoc, m_obj_trans);
-            m_grv_danh_muc_thuoc.Redraw = true;
+            try
+            {
+                load_grid_search();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_grv_danh_muc_thuoc_Click(object sender, EventArgs e)
@@ -294,7 +305,7 @@ namespace BKI_QLHT
             try
             {
                 grid2us_object(m_us, m_grv_danh_muc_thuoc.Row);
-                load_data_2_thong_tin();
+                //load_data_2_thong_tin();
             }
             catch (Exception v_e)
             {
@@ -316,16 +327,23 @@ namespace BKI_QLHT
             }
         }
 
-        private void m_txt_tu_khoa_KeyPress(object sender, KeyPressEventArgs e)
+        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
         {
-            string v_str_tu_khoa = m_txt_tu_khoa.Text;
-            US_DM_DANH_MUC_THUOC v_us_danh_muc_thuoc = new US_DM_DANH_MUC_THUOC();
-            DS_DM_DANH_MUC_THUOC v_ds_danh_muc_thuoc = new DS_DM_DANH_MUC_THUOC();
-            v_us_danh_muc_thuoc.FillDataseSearch(v_ds_danh_muc_thuoc, v_str_tu_khoa);
-            m_grv_danh_muc_thuoc.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds_danh_muc_thuoc, m_grv_danh_muc_thuoc, m_obj_trans);
-            m_grv_danh_muc_thuoc.Redraw = true;
+            if (e.KeyCode == Keys.Enter) {
+                load_grid_search();
+            }
         }
+
+        //private void m_txt_tu_khoa_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+        //    string v_str_tu_khoa = m_txt_tu_khoa.Text;
+        //    US_DM_DANH_MUC_THUOC v_us_danh_muc_thuoc = new US_DM_DANH_MUC_THUOC();
+        //    DS_DM_DANH_MUC_THUOC v_ds_danh_muc_thuoc = new DS_DM_DANH_MUC_THUOC();
+        //    v_us_danh_muc_thuoc.FillDataseSearch(v_ds_danh_muc_thuoc, v_str_tu_khoa);
+        //    m_grv_danh_muc_thuoc.Redraw = false;
+        //    CGridUtils.Dataset2C1Grid(v_ds_danh_muc_thuoc, m_grv_danh_muc_thuoc, m_obj_trans);
+        //    m_grv_danh_muc_thuoc.Redraw = true;
+        //}
         #endregion
        
     }
