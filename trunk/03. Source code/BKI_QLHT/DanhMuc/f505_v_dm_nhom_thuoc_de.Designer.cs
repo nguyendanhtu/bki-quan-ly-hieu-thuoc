@@ -103,9 +103,9 @@
             this.m_pnl_control.Controls.Add(this.m_cmd_save);
             this.m_pnl_control.Controls.Add(this.m_cmd_huy);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 220);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 210);
             this.m_pnl_control.Name = "m_pnl_control";
-            this.m_pnl_control.Size = new System.Drawing.Size(572, 72);
+            this.m_pnl_control.Size = new System.Drawing.Size(572, 47);
             this.m_pnl_control.TabIndex = 55;
             // 
             // m_cmd_save
@@ -117,7 +117,7 @@
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(183, 22);
+            this.m_cmd_save.Location = new System.Drawing.Point(176, 3);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(92, 28);
             this.m_cmd_save.TabIndex = 4;
@@ -159,7 +159,7 @@
             this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_huy.ImageIndex = 11;
             this.m_cmd_huy.ImageList = this.ImageList;
-            this.m_cmd_huy.Location = new System.Drawing.Point(306, 22);
+            this.m_cmd_huy.Location = new System.Drawing.Point(299, 3);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Size = new System.Drawing.Size(97, 28);
             this.m_cmd_huy.TabIndex = 5;
@@ -178,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 292);
+            this.ClientSize = new System.Drawing.Size(572, 257);
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_txt_nhom_thuoc);
             this.Controls.Add(this.label4);

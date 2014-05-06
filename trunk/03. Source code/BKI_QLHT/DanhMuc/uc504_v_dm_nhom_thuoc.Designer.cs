@@ -37,27 +37,16 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.m_cbo_tk_danh_muc = new System.Windows.Forms.ComboBox();
+            this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.m_grv_nhom_thuoc = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.m_lbl_ghi_chu = new System.Windows.Forms.Label();
-            this.m_lbl_nhom_thuoc = new System.Windows.Forms.Label();
-            this.m_lbl_danh_muc_thuoc = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.m_pnl_control.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhom_thuoc)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // m_pnl_control
@@ -67,10 +56,10 @@
             this.m_pnl_control.Controls.Add(this.m_cmd_delete);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 451);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 538);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(1282, 36);
+            this.m_pnl_control.Size = new System.Drawing.Size(1144, 36);
             this.m_pnl_control.TabIndex = 22;
             // 
             // m_cmd_insert
@@ -82,7 +71,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(926, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(788, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 15;
@@ -124,7 +113,7 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(1014, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(876, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -139,7 +128,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(1102, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(964, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -154,7 +143,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(1190, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1052, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -162,55 +151,46 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.m_cmd_search);
+            this.panel1.Controls.Add(this.m_cbo_tk_danh_muc);
+            this.panel1.Controls.Add(this.m_txt_tim_kiem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1282, 34);
+            this.panel1.Size = new System.Drawing.Size(1144, 117);
             this.panel1.TabIndex = 63;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(398, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 23);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Danh sách nhóm thuốc";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.m_cmd_search);
-            this.panel2.Controls.Add(this.m_txt_tim_kiem);
-            this.panel2.Controls.Add(this.m_cbo_tk_danh_muc);
-            this.panel2.Controls.Add(this.m_grv_nhom_thuoc);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 34);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1282, 417);
-            this.panel2.TabIndex = 64;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(285, 56);
+            this.label7.Location = new System.Drawing.Point(326, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 16);
             this.label7.TabIndex = 59;
             this.label7.Text = "Từ khóa";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(422, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(206, 23);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Danh sách nhóm thuốc";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(240, 25);
+            this.label5.Location = new System.Drawing.Point(281, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 16);
             this.label5.TabIndex = 60;
@@ -224,145 +204,57 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(640, 44);
+            this.m_cmd_search.Location = new System.Drawing.Point(681, 67);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 58;
             this.m_cmd_search.Text = "&Tìm kiếm";
             this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
-            // m_txt_tim_kiem
-            // 
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(359, 52);
-            this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
-            this.m_txt_tim_kiem.Size = new System.Drawing.Size(258, 20);
-            this.m_txt_tim_kiem.TabIndex = 57;
-            this.m_txt_tim_kiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_tim_kiem_KeyPress);
-            // 
             // m_cbo_tk_danh_muc
             // 
             this.m_cbo_tk_danh_muc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_tk_danh_muc.FormattingEnabled = true;
-            this.m_cbo_tk_danh_muc.Location = new System.Drawing.Point(359, 25);
+            this.m_cbo_tk_danh_muc.Location = new System.Drawing.Point(400, 48);
             this.m_cbo_tk_danh_muc.Name = "m_cbo_tk_danh_muc";
             this.m_cbo_tk_danh_muc.Size = new System.Drawing.Size(260, 21);
             this.m_cbo_tk_danh_muc.TabIndex = 56;
             this.m_cbo_tk_danh_muc.SelectedIndexChanged += new System.EventHandler(this.m_cbo_tk_danh_muc_SelectedIndexChanged);
             // 
+            // m_txt_tim_kiem
+            // 
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(400, 75);
+            this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
+            this.m_txt_tim_kiem.Size = new System.Drawing.Size(258, 20);
+            this.m_txt_tim_kiem.TabIndex = 57;
+            this.m_txt_tim_kiem.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_tim_kiem_KeyUp);
+            // 
             // m_grv_nhom_thuoc
             // 
             this.m_grv_nhom_thuoc.ColumnInfo = resources.GetString("m_grv_nhom_thuoc.ColumnInfo");
-            this.m_grv_nhom_thuoc.Location = new System.Drawing.Point(3, 84);
+            this.m_grv_nhom_thuoc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_grv_nhom_thuoc.Location = new System.Drawing.Point(0, 123);
             this.m_grv_nhom_thuoc.Name = "m_grv_nhom_thuoc";
-            this.m_grv_nhom_thuoc.Size = new System.Drawing.Size(1279, 140);
+            this.m_grv_nhom_thuoc.Size = new System.Drawing.Size(1144, 415);
             this.m_grv_nhom_thuoc.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nhom_thuoc.Styles"));
             this.m_grv_nhom_thuoc.TabIndex = 55;
             this.m_grv_nhom_thuoc.Click += new System.EventHandler(this.m_grv_nhom_thuoc_Click);
             this.m_grv_nhom_thuoc.DoubleClick += new System.EventHandler(this.m_grv_nhom_thuoc_DoubleClick);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.m_lbl_ghi_chu);
-            this.panel3.Controls.Add(this.m_lbl_nhom_thuoc);
-            this.panel3.Controls.Add(this.m_lbl_danh_muc_thuoc);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 264);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1282, 187);
-            this.panel3.TabIndex = 65;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(281, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Ghi chú :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(255, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
-            this.label4.TabIndex = 68;
-            this.label4.Text = "Nhóm thuốc :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(227, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 16);
-            this.label6.TabIndex = 67;
-            this.label6.Text = "Danh mục thuốc  :";
-            // 
-            // m_lbl_ghi_chu
-            // 
-            this.m_lbl_ghi_chu.AutoSize = true;
-            this.m_lbl_ghi_chu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_ghi_chu.Location = new System.Drawing.Point(346, 116);
-            this.m_lbl_ghi_chu.Name = "m_lbl_ghi_chu";
-            this.m_lbl_ghi_chu.Size = new System.Drawing.Size(36, 16);
-            this.m_lbl_ghi_chu.TabIndex = 66;
-            this.m_lbl_ghi_chu.Text = ".......";
-            // 
-            // m_lbl_nhom_thuoc
-            // 
-            this.m_lbl_nhom_thuoc.AutoSize = true;
-            this.m_lbl_nhom_thuoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_nhom_thuoc.Location = new System.Drawing.Point(346, 78);
-            this.m_lbl_nhom_thuoc.Name = "m_lbl_nhom_thuoc";
-            this.m_lbl_nhom_thuoc.Size = new System.Drawing.Size(36, 16);
-            this.m_lbl_nhom_thuoc.TabIndex = 65;
-            this.m_lbl_nhom_thuoc.Text = ".......";
-            // 
-            // m_lbl_danh_muc_thuoc
-            // 
-            this.m_lbl_danh_muc_thuoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_danh_muc_thuoc.Location = new System.Drawing.Point(346, 43);
-            this.m_lbl_danh_muc_thuoc.Name = "m_lbl_danh_muc_thuoc";
-            this.m_lbl_danh_muc_thuoc.Size = new System.Drawing.Size(482, 35);
-            this.m_lbl_danh_muc_thuoc.TabIndex = 64;
-            this.m_lbl_danh_muc_thuoc.Text = ".......";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(398, 2);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 23);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Thông tin chi tiết";
-            // 
             // uc504_v_dm_nhom_thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.m_grv_nhom_thuoc);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "uc504_v_dm_nhom_thuoc";
-            this.Size = new System.Drawing.Size(1282, 487);
+            this.Size = new System.Drawing.Size(1144, 574);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uc504_v_dm_nhom_thuoc_KeyDown);
             this.m_pnl_control.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhom_thuoc)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -377,20 +269,11 @@
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private System.Windows.Forms.TextBox m_txt_tim_kiem;
         private System.Windows.Forms.ComboBox m_cbo_tk_danh_muc;
         private C1.Win.C1FlexGrid.C1FlexGrid m_grv_nhom_thuoc;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label m_lbl_ghi_chu;
-        private System.Windows.Forms.Label m_lbl_nhom_thuoc;
-        private System.Windows.Forms.Label m_lbl_danh_muc_thuoc;
-        private System.Windows.Forms.Label label2;
     }
 }
