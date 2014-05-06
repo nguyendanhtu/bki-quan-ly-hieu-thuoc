@@ -26,7 +26,6 @@ namespace BKI_QLHT
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal System.Windows.Forms.ImageList ImageList;
         internal SIS.Controls.Button.SiSButton m_cmd_save;
-        private CheckBox m_chk_is_admin;
         private Label label1;
         private Label label2;
         private Label label10;
@@ -84,7 +83,6 @@ namespace BKI_QLHT
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_chk_is_admin = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -169,14 +167,6 @@ namespace BKI_QLHT
             this.m_cmd_exit.TabIndex = 1;
             this.m_cmd_exit.Text = "Trở về (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
-            // 
-            // m_chk_is_admin
-            // 
-            this.m_chk_is_admin.Location = new System.Drawing.Point(262, 169);
-            this.m_chk_is_admin.Name = "m_chk_is_admin";
-            this.m_chk_is_admin.Size = new System.Drawing.Size(149, 20);
-            this.m_chk_is_admin.TabIndex = 27;
-            this.m_chk_is_admin.Text = "Không có quyền admin?";
             // 
             // label1
             // 
@@ -312,7 +302,6 @@ namespace BKI_QLHT
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(464, 287);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.m_chk_is_admin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label10);
@@ -383,7 +372,7 @@ namespace BKI_QLHT
         private void form_2_us_object()
         {
             m_us_user.strBUILT_IN_YN
-                = CIPConvert.ToYNString(m_chk_is_admin.Checked);
+                = "Y";
             m_us_user.strTEN_TRUY_CAP = m_txt_ten_truy_cap.Text.Trim();
             m_us_user.strTEN = m_txt_ten.Text.Trim();
             m_us_user.strMAT_KHAU = m_txt_mat_khau.Text.Trim();
@@ -397,15 +386,15 @@ namespace BKI_QLHT
         }
         private void us_object_2_form()
         {
-            m_chk_is_admin.Checked = CIPConvert.ToBoolean(m_us_user.strBUILT_IN_YN);
-            if (m_chk_is_admin.Checked)
-            {
-                m_chk_is_admin.Text = "có";
-            }
-            else
-            {
-                m_chk_is_admin.Text = "Không";
-            }
+            //m_chk_is_admin.Checked = CIPConvert.ToBoolean(m_us_user.strBUILT_IN_YN);
+            //if (m_chk_is_admin.Checked)
+            //{
+            //    m_chk_is_admin.Text = "có";
+            //}
+            //else
+            //{
+            //    m_chk_is_admin.Text = "Không";
+            //}
             m_txt_ten_truy_cap.Text = m_us_user.strTEN_TRUY_CAP;
             m_txt_ten.Text = m_us_user.strTEN;
             //			m_txt_mat_khau.Text = m_us_user.strMAT_KHAU;
@@ -450,7 +439,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             this.m_cmd_save.Click += new EventHandler(m_cmd_save_Click);
             this.Load += new EventHandler(f998_ht_nguoi_su_dung_de_Load);
-            this.m_chk_is_admin.Click += new EventHandler(m_chk_is_admin_Click);
+            //this.m_chk_is_admin.Click += new EventHandler(m_chk_is_admin_Click);
             this.KeyDown += new KeyEventHandler(f998_ht_nguoi_su_dung_de_KeyDown);
         }
         #endregion
@@ -493,25 +482,6 @@ namespace BKI_QLHT
                     case DataEntryFormMode.UpdateDataState:
                         us_object_2_form();
                         break;
-                }
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_chk_is_admin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (m_chk_is_admin.Checked)
-                {
-                    m_chk_is_admin.Text = "Có quyền admin";
-                }
-                else
-                {
-                    m_chk_is_admin.Text = "Không có quyền admin";
                 }
             }
             catch (Exception v_e)

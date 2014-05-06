@@ -247,13 +247,13 @@ namespace BKI_QLHT
             this.m_lbl_form_title.Name = "m_lbl_form_title";
             this.m_lbl_form_title.Size = new System.Drawing.Size(694, 56);
             this.m_lbl_form_title.TabIndex = 27;
-            this.m_lbl_form_title.Text = "PHÂN LOẠI CONTROL TRONG FORM";
+            this.m_lbl_form_title.Text = "PHÂN LOẠI CONTROL TRONG FORM THEO CHỨC NĂNG";
             this.m_lbl_form_title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // m_lbl_form_name
             // 
             this.m_lbl_form_name.AutoSize = true;
-            this.m_lbl_form_name.Location = new System.Drawing.Point(183, 67);
+            this.m_lbl_form_name.Location = new System.Drawing.Point(189, 106);
             this.m_lbl_form_name.Name = "m_lbl_form_name";
             this.m_lbl_form_name.Size = new System.Drawing.Size(50, 14);
             this.m_lbl_form_name.TabIndex = 28;
@@ -263,7 +263,7 @@ namespace BKI_QLHT
             // 
             this.m_cbo_ten_form.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_ten_form.FormattingEnabled = true;
-            this.m_cbo_ten_form.Location = new System.Drawing.Point(242, 64);
+            this.m_cbo_ten_form.Location = new System.Drawing.Point(248, 103);
             this.m_cbo_ten_form.Name = "m_cbo_ten_form";
             this.m_cbo_ten_form.Size = new System.Drawing.Size(281, 22);
             this.m_cbo_ten_form.TabIndex = 29;
@@ -271,7 +271,7 @@ namespace BKI_QLHT
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(173, 105);
+            this.label3.Location = new System.Drawing.Point(179, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 14);
             this.label3.TabIndex = 28;
@@ -281,7 +281,7 @@ namespace BKI_QLHT
             // 
             this.m_cbo_chuc_nang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_chuc_nang.FormattingEnabled = true;
-            this.m_cbo_chuc_nang.Location = new System.Drawing.Point(242, 102);
+            this.m_cbo_chuc_nang.Location = new System.Drawing.Point(248, 64);
             this.m_cbo_chuc_nang.Name = "m_cbo_chuc_nang";
             this.m_cbo_chuc_nang.Size = new System.Drawing.Size(281, 22);
             this.m_cbo_chuc_nang.TabIndex = 29;
@@ -313,7 +313,7 @@ namespace BKI_QLHT
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(400, 197);
+            this.m_cmd_save.Location = new System.Drawing.Point(419, 210);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(75, 30);
             this.m_cmd_save.TabIndex = 39;
@@ -321,7 +321,7 @@ namespace BKI_QLHT
             // 
             // m_txt_loc_ten_form
             // 
-            this.m_txt_loc_ten_form.Location = new System.Drawing.Point(77, 64);
+            this.m_txt_loc_ten_form.Location = new System.Drawing.Point(72, 103);
             this.m_txt_loc_ten_form.Name = "m_txt_loc_ten_form";
             this.m_txt_loc_ten_form.Size = new System.Drawing.Size(100, 20);
             this.m_txt_loc_ten_form.TabIndex = 40;

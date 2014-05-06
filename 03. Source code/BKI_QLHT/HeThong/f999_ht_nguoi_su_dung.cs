@@ -294,7 +294,7 @@ namespace BKI_QLHT
             v_htb.Add(HT_NGUOI_SU_DUNG.NGUOI_TAO, e_col_Number.NGUOI_TAO);
             v_htb.Add(HT_NGUOI_SU_DUNG.TEN, e_col_Number.TEN);
             v_htb.Add(HT_NGUOI_SU_DUNG.TEN_TRUY_CAP, e_col_Number.TEN_TRUY_CAP);
-            v_htb.Add(HT_NGUOI_SU_DUNG.BUILT_IN_YN, e_col_Number.BUILT_IN_YN);
+           // v_htb.Add(HT_NGUOI_SU_DUNG.BUILT_IN_YN, e_col_Number.BUILT_IN_YN);
             v_htb.Add(HT_NGUOI_SU_DUNG.NGAY_TAO, e_col_Number.NGAY_TAO);
 
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.HT_NGUOI_SU_DUNG.NewRow());
