@@ -10,6 +10,16 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_BAO_CAO_DANH_MUC_KHACH_HANG
+    {
+        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+        public const string MA_KHACH_HANG = "MA_KHACH_HANG";
+        public const string SDT = "SDT";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string MA_SO_THUE = "MA_SO_THUE";
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string TI_LE_CHIET_KHAU_NHOM_KH = "TI_LE_CHIET_KHAU_NHOM_KH";
+    }
 
     public class V_GD_DON_VI_TINH_THUOC
     {

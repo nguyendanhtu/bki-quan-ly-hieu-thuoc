@@ -597,6 +597,20 @@ namespace BKI_QLHT
             }
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f414_bao_cao_danh_muc_khach_hang v_frm = new f414_bao_cao_danh_muc_khach_hang();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
 
 
