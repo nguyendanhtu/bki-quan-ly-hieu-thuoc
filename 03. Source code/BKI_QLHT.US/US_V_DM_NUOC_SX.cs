@@ -204,5 +204,12 @@ public class US_V_DM_NUOC_SX : US_Object
         pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
     }
     #endregion
-	}
+
+    public void FillDatasetSearch(DS.DS_V_DM_NUOC_SX ip_ds_v_dm_ncc, string ip_tu_khoa)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_V_DM_NUOC_SX_Search");
+        v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_tu_khoa);
+        v_stored_proc.fillDataSetByCommand(this, ip_ds_v_dm_ncc);
+    }
+}
 }
