@@ -250,7 +250,7 @@ namespace BKI_QLHT
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(633, 56);
             this.label1.TabIndex = 26;
-            this.label1.Text = "DANH MỤC FORM";
+            this.label1.Text = "DANH SÁCH FORM TRONG PROJECT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // m_cmd_save
