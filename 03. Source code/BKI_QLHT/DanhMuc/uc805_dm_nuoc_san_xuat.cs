@@ -189,6 +189,8 @@ namespace BKI_QLHT.DanhMuc
         {
             try
             {
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_nha_cung_cap)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_nha_cung_cap, m_grv_nha_cung_cap.Row)) return;
                 grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
                 m_us = new US_V_DM_NUOC_SX(m_us_dm_ncc.dcID);
             }

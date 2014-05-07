@@ -101,6 +101,11 @@ namespace BKI_QLHT
                     break;
             }
         }
+        private bool check_validate()
+        {
+            if (!CValidateTextBox.IsValid(m_txt_ten_nha_cung_cap, DataType.StringType, allowNull.NO, true)) return false;
+            return true;
+        }
         #endregion
 
 
@@ -111,7 +116,14 @@ namespace BKI_QLHT
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    save_data();
+                    if (check_validate())
+                    {
+                        save_data();
+                    }
+                    else
+                    {
+                        BaseMessages.MsgBox_Infor("Bạn cần nhập tên nhà sản xuất");
+                    }
                 }
             }
             catch (Exception v_e)
@@ -167,23 +179,30 @@ namespace BKI_QLHT
         {
             try
             {
-                form_2_us_obj();
-                switch (m_e_form_mode)
+                if (check_validate())
                 {
-                    case DataEntryFormMode.InsertDataState:
-                        m_us_dm_ncc.Insert();
-                        this.Close();
-                        break;
-                    case DataEntryFormMode.SelectDataState:
-                        break;
-                    case DataEntryFormMode.UpdateDataState:
-                        m_us_dm_ncc.Update();
-                        this.Close();
-                        break;
-                    case DataEntryFormMode.ViewDataState:
-                        break;
-                    default:
-                        break;
+                    form_2_us_obj();
+                    switch (m_e_form_mode)
+                    {
+                        case DataEntryFormMode.InsertDataState:
+                            m_us_dm_ncc.Insert();
+                            this.Close();
+                            break;
+                        case DataEntryFormMode.SelectDataState:
+                            break;
+                        case DataEntryFormMode.UpdateDataState:
+                            m_us_dm_ncc.Update();
+                            this.Close();
+                            break;
+                        case DataEntryFormMode.ViewDataState:
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    BaseMessages.MsgBox_Infor("Bạn cần nhập tên nhà sản xuất");
                 }
             }
             catch (Exception v_e)

@@ -328,6 +328,8 @@ namespace BKI_QLHT
         {
             try
             {
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_dm_khach_hang)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_dm_khach_hang, m_grv_dm_khach_hang.Row)) return;
                 grid2us_object(m_us, m_grv_dm_khach_hang.Row);
                 load_data_2_thong_tin_chi_tiet(m_us);
             }
