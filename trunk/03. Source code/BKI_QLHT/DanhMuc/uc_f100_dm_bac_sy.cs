@@ -212,6 +212,7 @@ namespace BKI_QLHT.DanhMuc
             m_cbo_tk_bac_sy.SelectedIndex = 0;
             m_trang_thai = true;
         }
+     
         #endregion
 
         #region Event
@@ -385,6 +386,8 @@ namespace BKI_QLHT.DanhMuc
                 CGridUtils.Dataset2C1Grid(v_ds_v_dm_bac_sy, m_fg, m_obj_trans);
                 m_fg.Redraw = true;
             }
+       
+
         }
 
        
