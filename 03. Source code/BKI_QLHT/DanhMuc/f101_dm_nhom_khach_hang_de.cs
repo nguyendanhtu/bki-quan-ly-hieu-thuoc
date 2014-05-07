@@ -61,7 +61,12 @@ namespace BKI_QLHT
             m_txt_ma_nhom.Text = m_us_dm_nhom_khach_hang.strMA_NHOM;
             m_txt_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
         }
-
+        private bool check_validate()
+        {
+            if (!CValidateTextBox.IsValid(m_txt_ma_nhom, DataType.StringType, allowNull.NO, true)) return false;
+            if (!CValidateTextBox.IsValid(m_txt_ten_nhom, DataType.StringType, allowNull.NO, true)) return false;
+            return true;
+        }
         #endregion
 
         #region Event
@@ -71,6 +76,7 @@ namespace BKI_QLHT
         }
         private void m_cmd_Cap_Nhat_Click(object sender, EventArgs e)
         {
+            if (!check_validate()) return;
             m_form_to_us_obj();
             try
             {
