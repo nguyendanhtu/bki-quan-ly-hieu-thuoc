@@ -420,6 +420,8 @@ namespace BKI_QLHT
         {
             try
             {
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                 grid2us_object(m_us, m_fg.Row);
                 load_data_2_thong_tin();
             }
