@@ -191,7 +191,7 @@ namespace BKI_QLHT.DanhMuc
         {
             try
             {
-               
+               this.Controls.Clear();
             }
             catch (Exception v_e)
             {
