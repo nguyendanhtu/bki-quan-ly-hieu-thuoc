@@ -86,6 +86,7 @@ namespace BKI_QLHT.NghiepVu
             v_data.so_luong_ban_min = q.QuyDoi(Convert.ToDecimal(m_txt_so_luong.Text), CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue), txt_search_thuoc1.dcID);
             v_data.id_don_vi_tinh_thuoc = CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue);
             v_data.id_don_vi_tinh_thuoc_min = quy_doi_doi_don_vi_tinh(v_data.id_thuoc);
+            if (v_data.id_don_vi_tinh_thuoc_min == 0) return; // chưa có dữ liệu, id_don_vi_tinh_thuoc_min = 0; thoát hàm!
             v_data.gia_ban = CIPConvert.ToDecimal(m_txt_don_gia.Text);
             v_data.gia_ban_min = quy_doi_gia_ban(v_data.id_don_vi_tinh_thuoc_min);
             v_data.gia_nhap = 0;
@@ -123,8 +124,16 @@ namespace BKI_QLHT.NghiepVu
             US_GD_SO_DU v_us = new US_GD_SO_DU();
             DS_GD_SO_DU v_ds = new DS_GD_SO_DU();
             v_us.FillDataset(v_ds,"where id_thuoc ="+ip_id_thuoc);
-            DataRow v_dr = v_ds.Tables[0].Rows[0];
-            return CIPConvert.ToDecimal(v_dr["ID_DON_VI_THUOC"]);
+            if (v_ds.Tables[0].Rows.Count != 0)
+            {
+                DataRow v_dr = v_ds.Tables[0].Rows[0];
+                return CIPConvert.ToDecimal(v_dr["ID_DON_VI_THUOC"]);
+            }
+            else
+            { 
+                txt_search_thuoc1.Focus();
+                return 0;
+            }
         }
         private decimal quy_doi_gia_ban(decimal ip_don_vi_tinh)
         {
@@ -362,6 +371,7 @@ namespace BKI_QLHT.NghiepVu
         {
             if (!check_validate()) return;
             add_list();
+            if (list.Count == 0) { BaseMessages.MsgBox_Infor("Bạn chưa nhập đúng dữ liệu"); return;};
             int n = m_grv_quan_ly_ban_thuoc.Rows.Add();
             m_grv_quan_ly_ban_thuoc.Rows[n].Cells[0].Value = n + 1;
             m_grv_quan_ly_ban_thuoc.Rows[n].Cells[1].Value = txt_search_thuoc1.Text1;
@@ -512,11 +522,8 @@ namespace BKI_QLHT.NghiepVu
 
         private void m_cmd_huy_Click(object sender, EventArgs e)
         {
-            txt_search_thuoc1.Text1 = "";
-            m_cbo_don_vi_tinh.DisplayMember ="";
-            m_txt_don_gia.Text = "";
-            list.Clear();
-            m_grv_quan_ly_ban_thuoc.Rows.Clear();
+            restart_data();
+            txt_search_thuoc1.Focus();
         }
 
         private void m_cmd_thoat_Click(object sender, EventArgs e)
