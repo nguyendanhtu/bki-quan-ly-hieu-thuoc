@@ -55,6 +55,7 @@ namespace BKI_QLHT
         internal SIS.Controls.Button.SiSButton m_cmd_thoat;
         internal Panel m_pnl_control;
         internal SIS.Controls.Button.SiSButton m_cmd_huy;
+        internal SIS.Controls.Button.SiSButton m_cmd_them_tat_ca;
         private System.ComponentModel.IContainer components;
         public class list_form
         {
@@ -141,6 +142,7 @@ namespace BKI_QLHT
             this.m_cmd_thoat = new SIS.Controls.Button.SiSButton();
             this.m_pnl_control = new System.Windows.Forms.Panel();
             this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_them_tat_ca = new SIS.Controls.Button.SiSButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -420,6 +422,21 @@ namespace BKI_QLHT
             this.m_cmd_huy.Text = "&Huỷ";
             this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
             // 
+            // m_cmd_them_tat_ca
+            // 
+            this.m_cmd_them_tat_ca.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_them_tat_ca.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_them_tat_ca.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_them_tat_ca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_them_tat_ca.ImageIndex = 16;
+            this.m_cmd_them_tat_ca.ImageList = this.ImageList;
+            this.m_cmd_them_tat_ca.Location = new System.Drawing.Point(466, 144);
+            this.m_cmd_them_tat_ca.Name = "m_cmd_them_tat_ca";
+            this.m_cmd_them_tat_ca.Size = new System.Drawing.Size(89, 30);
+            this.m_cmd_them_tat_ca.TabIndex = 38;
+            this.m_cmd_them_tat_ca.Text = "&Thêm tất cả";
+            this.m_cmd_them_tat_ca.Click += new System.EventHandler(this.m_cmd_them_tat_ca_Click);
+            // 
             // f990_ht_form
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -431,6 +448,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.label2);
             this.Controls.Add(this.m_cmd_huy);
             this.Controls.Add(this.m_cmd_cap_nhat);
+            this.Controls.Add(this.m_cmd_them_tat_ca);
             this.Controls.Add(this.m_cmd_save);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -803,7 +821,7 @@ namespace BKI_QLHT
 
                 }
                 else BaseMessages.MsgBox_Infor("Không có form mới nào!");
-                
+
             }
             catch (System.Exception v_e)
             {
@@ -903,6 +921,32 @@ namespace BKI_QLHT
                     m_txt_form_name.Text = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_name;
 
                 }
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_them_tat_ca_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m_e_form_mode = DataEntryFormMode.InsertDataState;
+                if (m_list.Count != 0)
+                {
+                    foreach (list_form v_item in m_list)
+                    {
+                        m_us.strFORM_NAME = v_item.Form_name;
+                        m_us.strDISPLAY_NAME = v_item.Form_text;
+                        m_us.Insert();
+                        
+                    }
+                    load_form_name_unsaved();
+                    load_data_2_grid();
+                    BaseMessages.MsgBox_Infor("Đã cập nhập dữ liệu thành công!");
+                }
+                else BaseMessages.MsgBox_Infor("Không có form mới nào!");
             }
             catch (System.Exception v_e)
             {

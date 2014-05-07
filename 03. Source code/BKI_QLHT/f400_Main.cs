@@ -15,6 +15,7 @@ using IP.Core.IPSystemAdmin;
 using BKI_QLHT.DanhMuc;
 using BKI_QLHT.NghiepVu;
 using DevComponents.DotNetBar;
+using BKI_QLHT.HeThong;
 
 
 
@@ -250,7 +251,8 @@ namespace BKI_QLHT
         {
            try
            {
-               test v_frm = new test();
+               //test v_frm = new test();
+               f1000_phan_quyen_tong_hop v_frm = new f1000_phan_quyen_tong_hop();
                v_frm.ShowDialog();
            }
            catch (System.Exception v_e)
