@@ -33,14 +33,16 @@ namespace BKI_QLHT.NghiepVu
             public decimal id_thuoc;
             public decimal id_giao_dich;
             public decimal id_don_vi_tinh_thuoc;
+            public decimal id_don_vi_tinh_thuoc_min;
             public decimal so_luong_ban;
-            public decimal so_luong_ban_de;
+            public decimal so_luong_ban_min;
             public decimal so_luong_nhap;
             public decimal id_nha_cung_cap;
             public decimal id_nha_san_xuat;
             public decimal id_hang_san_xuat;
             public DateTime han_su_dung;
             public decimal gia_ban;
+            public decimal gia_ban_min;
             public decimal gia_nhap;
             public decimal id_lo_thuoc;
         }
@@ -81,15 +83,17 @@ namespace BKI_QLHT.NghiepVu
             v_data.id_thuoc = txt_search_thuoc1.dcID;
             v_data.so_luong_ban = Convert.ToDecimal(m_txt_so_luong.Text);
             v_data.so_luong_nhap = 0;
-            v_data.so_luong_ban_de = q.QuyDoi(Convert.ToDecimal(m_txt_so_luong.Text), CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue), txt_search_thuoc1.dcID);
+            v_data.so_luong_ban_min = q.QuyDoi(Convert.ToDecimal(m_txt_so_luong.Text), CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue), txt_search_thuoc1.dcID);
             v_data.id_don_vi_tinh_thuoc = CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue);
+            v_data.id_don_vi_tinh_thuoc_min = quy_doi_doi_don_vi_tinh(v_data.id_thuoc);
             v_data.gia_ban = CIPConvert.ToDecimal(m_txt_don_gia.Text);
+            v_data.gia_ban_min = quy_doi_gia_ban(v_data.id_don_vi_tinh_thuoc_min);
             v_data.gia_nhap = 0;
             v_data.id_hang_san_xuat = 2;
             v_data.id_nha_cung_cap = 2;
             v_data.id_nha_san_xuat = 2;
             v_data.han_su_dung = DateTime.Now;
-            v_data.id_lo_thuoc = 1;
+            v_data.id_lo_thuoc = 0;
             list.Add(v_data);
         }
         private void format_control()
@@ -114,7 +118,23 @@ namespace BKI_QLHT.NghiepVu
             load_cbo_bac_sy();
             load_ten_thuoc();
         }
-
+        private decimal quy_doi_doi_don_vi_tinh(decimal ip_id_thuoc)
+        {
+            US_GD_SO_DU v_us = new US_GD_SO_DU();
+            DS_GD_SO_DU v_ds = new DS_GD_SO_DU();
+            v_us.FillDataset(v_ds,"where id_thuoc ="+ip_id_thuoc);
+            DataRow v_dr = v_ds.Tables[0].Rows[0];
+            return CIPConvert.ToDecimal(v_dr["ID_DON_VI_THUOC"]);
+        }
+        private decimal quy_doi_gia_ban(decimal ip_don_vi_tinh)
+        {
+            decimal gia_ban;
+            US_GD_GIA_BAN v_us = new US_GD_GIA_BAN();
+            DS_GD_GIA_BAN v_ds = new DS_GD_GIA_BAN();
+            v_us.FillDataset(v_ds,"where ID_DON_VI_TINH ="+ip_don_vi_tinh);
+            DataRow v_dr = v_ds.Tables[0].Rows[0];
+            return gia_ban = CIPConvert.ToDecimal(v_dr["GIA_BAN"]);
+        }
         private void load_ten_thuoc()
         {
             US_V_DM_THUOC v_us = new US_V_DM_THUOC();
@@ -397,14 +417,14 @@ namespace BKI_QLHT.NghiepVu
                     v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
                     v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
                     v_us_sd.strMOI_NHAT_YN = "Y";
-                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) - v_list.so_luong_ban_de;
+                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) - v_list.so_luong_ban_min;
                     v_us_sd.Insert();
                 }
                 else
                 {
                     v_us_sd.dcID = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID"]);
                     v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
-                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) - v_list.so_luong_ban_de;
+                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) - v_list.so_luong_ban_min;
                     v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
                     //v_us_sd.datNGAY_PHAT_SINH = CIPConvert.ToDatetime( v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"].ToString(),"dd/MM/yyyy");
                     v_us_sd.datNGAY_PHAT_SINH = DateTime.Now;
@@ -420,7 +440,7 @@ namespace BKI_QLHT.NghiepVu
             DS_GD_GIAO_DICH_DETAIL v_ds_gd_de = new DS_GD_GIAO_DICH_DETAIL();
             foreach(data v_list in list)
             {
-                v_us_gd_de.Insert_data_into_gd_giao_dich_detail(m_id_giao_dich,v_list.id_thuoc,v_list.id_don_vi_tinh_thuoc,v_list.so_luong_nhap,v_list.so_luong_ban,v_list.id_giao_dich_detail, v_list.id_nha_cung_cap, v_list.id_nha_san_xuat, v_list.id_hang_san_xuat,v_list.han_su_dung,v_list.gia_ban,v_list.gia_nhap);
+                v_us_gd_de.Insert_data_into_gd_giao_dich_detail(m_id_giao_dich,v_list.id_thuoc,v_list.id_don_vi_tinh_thuoc_min,v_list.so_luong_nhap,v_list.so_luong_ban_min,v_list.id_giao_dich_detail, v_list.id_nha_cung_cap, v_list.id_nha_san_xuat, v_list.id_hang_san_xuat,v_list.han_su_dung,v_list.gia_ban_min,v_list.gia_nhap);
             }
             
         }
