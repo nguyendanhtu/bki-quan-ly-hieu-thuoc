@@ -158,18 +158,18 @@ namespace BKI_QLHT.DanhMuc
         }
         private void set_define_events()
         {
-            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
-            m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
-            m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            //m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            //m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            //m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
+            //m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             //m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
         }
-        private void Load_thong_tin_chi_tiet()
-        {
-            grid2us_object(m_us_dm_nhom_khach_hang, m_fg.Row);
-            m_lbl_ma_nhom.Text = m_us_dm_nhom_khach_hang.strMA_NHOM;
-            m_lbl_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
-        }
+        //private void Load_thong_tin_chi_tiet()
+        //{
+        //    grid2us_object(m_us_dm_nhom_khach_hang, m_fg.Row);
+        //    m_lbl_ma_nhom.Text = m_us_dm_nhom_khach_hang.strMA_NHOM;
+        //    m_lbl_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
+        //}
         #endregion
 
         #region Event
@@ -178,7 +178,7 @@ namespace BKI_QLHT.DanhMuc
             try
             {
                 set_initial_form_load();
-                Load_thong_tin_chi_tiet();
+                //Load_thong_tin_chi_tiet();
             }
             catch (Exception v_e)
             {
@@ -262,8 +262,8 @@ namespace BKI_QLHT.DanhMuc
         private void m_fg_Click(object sender, EventArgs e)
         {
             grid2us_object(m_us_dm_nhom_khach_hang, m_fg.Row);
-            m_lbl_ma_nhom.Text = m_us_dm_nhom_khach_hang.strMA_NHOM;
-            m_lbl_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
+            //m_lbl_ma_nhom.Text = m_us_dm_nhom_khach_hang.strMA_NHOM;
+            //m_lbl_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
         }
         #endregion
 
