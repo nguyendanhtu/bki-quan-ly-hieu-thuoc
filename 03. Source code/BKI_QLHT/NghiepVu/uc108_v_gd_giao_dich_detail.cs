@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Collections.Generic;
+
 
 
 using IP.Core.IPSystemAdmin;
@@ -167,7 +167,8 @@ namespace BKI_QLHT.NghiepVu
             }
             else
             {
-                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows[0];
+                BaseMessages.MsgBox_Infor("Chưa có dữ liệu của loại thuốc này");
+                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].NewRow();
                 v_dr[V_GD_DON_VI_TINH_THUOC.ID] = -1;
                 v_dr[V_GD_DON_VI_TINH_THUOC.TEN_DON_VI] = "Chưa nhập";
                 v_dr[V_GD_DON_VI_TINH_THUOC.ID_THUOC] = -1;
@@ -179,7 +180,7 @@ namespace BKI_QLHT.NghiepVu
                 m_cbo_don_vi_tinh.ValueMember = V_GD_DON_VI_TINH_THUOC.ID;
                 m_cbo_don_vi_tinh.DisplayMember = V_GD_DON_VI_TINH_THUOC.TEN_DON_VI;
                 m_txt_don_gia.Text = "Chưa nhập";
-              
+
             }
             trang_thai = true;
         }
@@ -279,7 +280,7 @@ namespace BKI_QLHT.NghiepVu
             }
             else
             {
-                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].Rows[0];
+                DataRow v_dr = v_ds_v_gd_don_vi_tinh_thuoc.Tables[0].NewRow();
                 v_dr[V_GD_DON_VI_TINH_THUOC.ID] = -1;
                 v_dr[V_GD_DON_VI_TINH_THUOC.TEN_DON_VI] = "Chưa nhập";
                 v_dr[V_GD_DON_VI_TINH_THUOC.ID_THUOC] = -1;
@@ -315,6 +316,10 @@ namespace BKI_QLHT.NghiepVu
             m_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
             tong_tien_thanh_toan = tong_tien - (tong_tien * m_ti_le_chiet_khau) / 100;
             m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
+            if (m_txt_ti_le_chiet_khau.Text == "" || m_txt_ti_le_chiet_khau.Text == "0")
+            {
+                m_ti_le_chiet_khau = 0;
+            }
         }
         private void set_initial_form_load()
         {
@@ -340,9 +345,22 @@ namespace BKI_QLHT.NghiepVu
 
             }
         }
+        private bool check_validate()
+        {
+            if (txt_search_thuoc1.Text1 == null)
+            {
+                BaseMessages.MsgBox_Infor("Bạn cần nhập tên thuốc");
+                txt_search_thuoc1.Focus();
+                return false;
+            }
+            if (!CValidateTextBox.IsValid(m_txt_don_gia, DataType.StringType, allowNull.NO, true)) return false;
+            if (!CValidateTextBox.IsValid(m_txt_so_luong, DataType.StringType, allowNull.NO, true))  return false;
+            return true;
+        }
 
         private void m_cmd_them_Click(object sender, EventArgs e)
         {
+            if (!check_validate()) return;
             add_list();
             int n = m_grv_quan_ly_ban_thuoc.Rows.Add();
             m_grv_quan_ly_ban_thuoc.Rows[n].Cells[0].Value = n + 1;
@@ -363,11 +381,13 @@ namespace BKI_QLHT.NghiepVu
         {
             list.Clear();
             m_grv_quan_ly_ban_thuoc.Rows.Clear();
-            txt_search_thuoc1.Refresh();
-            m_txt_don_gia.Clear();
-            m_cbo_don_vi_tinh.Refresh();
+            txt_search_thuoc1.Text1 ="";
+            m_txt_don_gia.Text="";
+            m_cbo_don_vi_tinh.Text ="";
             tong_tien = 0;
             tong_tien_thanh_toan = 0;
+            m_txt_tong_tien.Text = "0 VNĐ";
+            m_txt_tong_tien_thanh_toan.Text = "0 VNĐ";
         }
 
      
@@ -377,13 +397,23 @@ namespace BKI_QLHT.NghiepVu
         {
             try
             {
-                DialogResult result1 = MessageBox.Show("Bạn có muốn lưu lại không?",
+                if (MessageBox.Show("Bạn có muốn lưu lại không?",
                 "Quản lý bán thuốc",
-                MessageBoxButtons.YesNo);
-                insert_gd_giao_dich();
-                insert_giao_dich_detail();
-                insert_so_du();
-                restart_data();
+                MessageBoxButtons.YesNo) == DialogResult.Yes) ;
+                {
+                    insert_gd_giao_dich();
+                    insert_giao_dich_detail();
+                    insert_so_du();
+                    BaseMessages.MsgBox_Infor("Đã lưu xong");
+                    restart_data();
+                }
+                 if (MessageBox.Show("Bạn có muốn lưu lại không?",
+                "Quản lý bán thuốc",
+                MessageBoxButtons.YesNo) == DialogResult.No) 
+                {
+                    restart_data();
+                }
+            
             }
             catch (Exception v_e)
             {
