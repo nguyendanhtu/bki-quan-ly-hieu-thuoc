@@ -78,12 +78,21 @@ namespace BKI_QLHT.DanhMuc
             m_us_dm_bac_sy.strDIEN_THOAI = m_txt_dien_thoai.Text;
             m_us_dm_bac_sy.dcBENH_VIEN = Convert.ToDecimal(m_cbo_benh_vien.SelectedValue);
         }
+        private bool check_validate()
+        {
+
+            if (!CValidateTextBox.IsValid(m_txt_ho_ten, DataType.StringType, allowNull.NO, true)) return false;
+            if (!CValidateTextBox.IsValid(m_txt_dia_chi, DataType.StringType, allowNull.NO, true)) return false;
+            if (!CValidateTextBox.IsValid(m_txt_dien_thoai, DataType.StringType, allowNull.NO, true)) return false;
+            return true;
+        }
         #endregion
 
         #region Event
    
         private void m_cmd_cap_nhat_Click(object sender, EventArgs e)
         {
+            if (!check_validate()) return;
             m_form_to_us_obj();
             switch (m_e)
             {
