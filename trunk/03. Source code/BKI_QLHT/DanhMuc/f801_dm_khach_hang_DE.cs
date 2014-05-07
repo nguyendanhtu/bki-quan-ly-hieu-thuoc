@@ -87,7 +87,11 @@ namespace BKI_QLHT
            m_cbo_nhom_khach_hang.ValueMember = DM_NHOM_KHACH_HANG.ID;
            m_cbo_nhom_khach_hang.DisplayMember = DM_NHOM_KHACH_HANG.TEN_NHOM;
        }
-        
+       private bool check_validate()
+       {
+           if (!CValidateTextBox.IsValid(m_txt_ten_khach_hang, DataType.StringType, allowNull.NO, true)) return false;
+           return true;
+       }
 
         #endregion
 
@@ -98,23 +102,30 @@ namespace BKI_QLHT
        {
            try
            {
-               form_2_us_obj();
-               switch (m_e_form_mode)
+               if (check_validate())
                {
-                   case DataEntryFormMode.InsertDataState:
-                       m_us_dm_khach_hang.Insert();
-                       this.Close();
-                       break;
-                   case DataEntryFormMode.SelectDataState:
-                       break;
-                   case DataEntryFormMode.UpdateDataState:
-                       m_us_dm_khach_hang.Update();
-                       this.Close();
-                       break;
-                   case DataEntryFormMode.ViewDataState:
-                       break;
-                   default:
-                       break;
+                   form_2_us_obj();
+                   switch (m_e_form_mode)
+                   {
+                       case DataEntryFormMode.InsertDataState:
+                           m_us_dm_khach_hang.Insert();
+                           this.Close();
+                           break;
+                       case DataEntryFormMode.SelectDataState:
+                           break;
+                       case DataEntryFormMode.UpdateDataState:
+                           m_us_dm_khach_hang.Update();
+                           this.Close();
+                           break;
+                       case DataEntryFormMode.ViewDataState:
+                           break;
+                       default:
+                           break;
+                   }
+               }
+               else
+               {
+                   BaseMessages.MsgBox_Infor("Bạn cần nhập tên khách hàng");
                }
            }
            catch (Exception v_e)
@@ -200,23 +211,30 @@ namespace BKI_QLHT
            {
                if (e.KeyCode == Keys.Enter)
                {
-                   form_2_us_obj();
-                   switch (m_e_form_mode)
+                   if (check_validate())
                    {
-                       case DataEntryFormMode.InsertDataState:
-                           m_us_dm_khach_hang.Insert();
-                           this.Close();
-                           break;
-                       case DataEntryFormMode.SelectDataState:
-                           break;
-                       case DataEntryFormMode.UpdateDataState:
-                           m_us_dm_khach_hang.Update();
-                           this.Close();
-                           break;
-                       case DataEntryFormMode.ViewDataState:
-                           break;
-                       default:
-                           break;
+                       form_2_us_obj();
+                       switch (m_e_form_mode)
+                       {
+                           case DataEntryFormMode.InsertDataState:
+                               m_us_dm_khach_hang.Insert();
+                               this.Close();
+                               break;
+                           case DataEntryFormMode.SelectDataState:
+                               break;
+                           case DataEntryFormMode.UpdateDataState:
+                               m_us_dm_khach_hang.Update();
+                               this.Close();
+                               break;
+                           case DataEntryFormMode.ViewDataState:
+                               break;
+                           default:
+                               break;
+                       }
+                   }
+                   else
+                   {
+                       BaseMessages.MsgBox_Infor("Bạn cần nhập tên khách hàng");
                    }
                }
            }
@@ -227,8 +245,5 @@ namespace BKI_QLHT
        }
         #endregion
 
-      
-
-       
     }
 }

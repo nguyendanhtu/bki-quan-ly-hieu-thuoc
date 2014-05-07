@@ -209,6 +209,8 @@ namespace BKI_QLHT.DanhMuc
         {
             try
             {
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_dm_nha_san_xuat)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_dm_nha_san_xuat, m_grv_dm_nha_san_xuat.Row)) return;
                 grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
                 m_us = new US_V_DM_HANG_SX(m_us_dm_ncc.dcID);
                 load_data_2_thong_tin_chi_tiet(m_us);
@@ -252,6 +254,8 @@ namespace BKI_QLHT.DanhMuc
         {
             try
             {
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_dm_nha_san_xuat)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_dm_nha_san_xuat, m_grv_dm_nha_san_xuat.Row)) return;
                 grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
                 m_us = new US_V_DM_HANG_SX(m_us_dm_ncc.dcID);
                 load_data_2_thong_tin_chi_tiet(m_us);
