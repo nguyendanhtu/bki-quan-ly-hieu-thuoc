@@ -295,9 +295,7 @@ namespace BKI_QLHT
             m_txt_gia_nhap.Clear();
             m_txt_gia_ban.Clear();
             m_txt_so_luong.Clear();
-            m_txt_quy_doi_1.Clear();
-            m_txt_quy_doi_2.Clear();
-            m_txt_quy_doi_3.Clear();
+            restart_quy_doi();
             load_data_2_label();
         }
         private void restart_quy_doi()
@@ -493,14 +491,7 @@ namespace BKI_QLHT
                     m_cbo_dv_cap_4.SelectedValue = v_list.ID_dv_cap_4;
                 }
                 else
-                {
-                    //load_cbo_don_vi_tinh(v_list.ID_nhom_dv_tinh);
-                    //load_cbo_dv_cap_2(v_list.ID_nhom_dv_tinh);
-                    //load_cbo_dv_cap_3(v_list.ID_nhom_dv_tinh);
-                    //load_cbo_dv_cap_4(v_list.ID_nhom_dv_tinh);
-                    //v_list.ID_dv_cap_2 = CIPConvert.ToDecimal(m_cbo_dv_cap_2.SelectedValue);
-                    //v_list.ID_dv_cap_3 = CIPConvert.ToDecimal(m_cbo_dv_cap_3.SelectedValue);
-                    //v_list.ID_dv_cap_4 = CIPConvert.ToDecimal(m_cbo_dv_cap_4.SelectedValue);
+                {     
                     v_list.id_don_vi_thuoc_nhap = CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue);
                     v_ds_gd_dv_tinh_thuoc.Clear();
                     v_us_gd_dv_tinh_thuoc.FillDataset(v_ds_gd_dv_tinh_thuoc, "where  id_nhom_don_vi_tinh='" + v_list.ID_nhom_dv_tinh + "' and ten_don_vi like N'%" + v_list.don_vi_cap_1 + "%'");
