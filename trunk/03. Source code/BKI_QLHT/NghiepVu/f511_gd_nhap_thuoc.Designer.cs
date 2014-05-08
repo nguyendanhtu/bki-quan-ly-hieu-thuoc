@@ -350,6 +350,7 @@
             this.m_dtp_ngay_san_xuat.Name = "m_dtp_ngay_san_xuat";
             this.m_dtp_ngay_san_xuat.Size = new System.Drawing.Size(239, 20);
             this.m_dtp_ngay_san_xuat.TabIndex = 5;
+            this.m_dtp_ngay_san_xuat.ValueChanged += new System.EventHandler(this.m_dtp_ngay_san_xuat_ValueChanged);
             // 
             // m_cbo_nha_cung_cap
             // 
@@ -436,8 +437,6 @@
             this.m_txt_so_luong.Name = "m_txt_so_luong";
             this.m_txt_so_luong.Size = new System.Drawing.Size(151, 20);
             this.m_txt_so_luong.TabIndex = 3;
-            //this.m_txt_so_luong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_so_luong_KeyDown);
-            //this.m_txt_so_luong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_so_luong_KeyPress);
             // 
             // label1
             // 
