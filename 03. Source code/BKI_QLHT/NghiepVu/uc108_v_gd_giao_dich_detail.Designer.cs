@@ -187,7 +187,8 @@
             this.m_txt_ti_le_chiet_khau.Size = new System.Drawing.Size(52, 23);
             this.m_txt_ti_le_chiet_khau.TabIndex = 4;
             this.m_txt_ti_le_chiet_khau.Text = "0";
-            this.m_txt_ti_le_chiet_khau.TextChanged += new System.EventHandler(this.m_txt_ti_le_chiet_khau_TextChanged);
+            //this.m_txt_ti_le_chiet_khau.TextChanged += new System.EventHandler(this.m_txt_ti_le_chiet_khau_TextChanged);
+            this.m_txt_ti_le_chiet_khau.Leave += new System.EventHandler(this.m_txt_ti_le_chiet_khau_Leave);
             // 
             // label22
             // 
@@ -381,6 +382,7 @@
             this.m_cmd_in.Size = new System.Drawing.Size(51, 33);
             this.m_cmd_in.TabIndex = 22;
             this.m_cmd_in.UseVisualStyleBackColor = false;
+            this.m_cmd_in.Click += new System.EventHandler(this.m_cmd_in_Click);
             // 
             // label17
             // 
