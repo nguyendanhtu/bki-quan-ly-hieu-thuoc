@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc108_v_gd_giao_dich_detail));
             this.m_grv_quan_ly_ban_thuoc = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEN_THUOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_LUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TEN_DON_VI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIA_BAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.THANH_TIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien_thanh_toan = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -54,6 +60,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.m_txt_don_gia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -72,13 +79,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.m_lbl_Ma_GD_text = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi_text = new System.Windows.Forms.Label();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TEN_THUOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SO_LUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TEN_DON_VI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIA_BAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.THANH_TIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_quan_ly_ban_thuoc)).BeginInit();
             this.m_group_chi_tiet_thong_tin_ban.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -103,6 +103,48 @@
             this.m_grv_quan_ly_ban_thuoc.RowHeadersVisible = false;
             this.m_grv_quan_ly_ban_thuoc.Size = new System.Drawing.Size(1505, 295);
             this.m_grv_quan_ly_ban_thuoc.TabIndex = 9;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            this.STT.Width = 50;
+            // 
+            // TEN_THUOC
+            // 
+            this.TEN_THUOC.HeaderText = "Tên thuốc";
+            this.TEN_THUOC.Name = "TEN_THUOC";
+            this.TEN_THUOC.ReadOnly = true;
+            this.TEN_THUOC.Width = 300;
+            // 
+            // SO_LUONG
+            // 
+            this.SO_LUONG.HeaderText = "Số lượng";
+            this.SO_LUONG.Name = "SO_LUONG";
+            this.SO_LUONG.ReadOnly = true;
+            this.SO_LUONG.Width = 150;
+            // 
+            // TEN_DON_VI
+            // 
+            this.TEN_DON_VI.HeaderText = "Tên đơn vị";
+            this.TEN_DON_VI.Name = "TEN_DON_VI";
+            this.TEN_DON_VI.ReadOnly = true;
+            this.TEN_DON_VI.Width = 150;
+            // 
+            // GIA_BAN
+            // 
+            this.GIA_BAN.HeaderText = "Đơn giá";
+            this.GIA_BAN.Name = "GIA_BAN";
+            this.GIA_BAN.ReadOnly = true;
+            this.GIA_BAN.Width = 300;
+            // 
+            // THANH_TIEN
+            // 
+            this.THANH_TIEN.HeaderText = "Thành tiền";
+            this.THANH_TIEN.Name = "THANH_TIEN";
+            this.THANH_TIEN.ReadOnly = true;
+            this.THANH_TIEN.Width = 350;
             // 
             // label15
             // 
@@ -209,6 +251,7 @@
             this.m_txt_so_luong.Name = "m_txt_so_luong";
             this.m_txt_so_luong.Size = new System.Drawing.Size(83, 23);
             this.m_txt_so_luong.TabIndex = 2;
+            this.m_txt_so_luong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_so_luong_KeyPress);
             // 
             // label11
             // 
@@ -394,6 +437,24 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Đơn giá";
             // 
+            // txt_search_thuoc1
+            // 
+            this.txt_search_thuoc1.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txt_search_thuoc1.DisplayMember = null;
+            this.txt_search_thuoc1.Location = new System.Drawing.Point(157, 24);
+            this.txt_search_thuoc1.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_search_thuoc1.Name = "txt_search_thuoc1";
+            this.txt_search_thuoc1.Size = new System.Drawing.Size(321, 25);
+            this.txt_search_thuoc1.str_query = null;
+            this.txt_search_thuoc1.TabIndex = 0;
+            this.txt_search_thuoc1.Text1 = null;
+            this.txt_search_thuoc1.ValueMember = null;
+            this.txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_thuoc1_KeyDown);
+            // 
             // m_txt_don_gia
             // 
             this.m_txt_don_gia.Location = new System.Drawing.Point(909, 30);
@@ -401,6 +462,7 @@
             this.m_txt_don_gia.Name = "m_txt_don_gia";
             this.m_txt_don_gia.Size = new System.Drawing.Size(208, 23);
             this.m_txt_don_gia.TabIndex = 2;
+            this.m_txt_don_gia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_don_gia_KeyPress);
             // 
             // label5
             // 
@@ -597,66 +659,6 @@
             this.m_lbl_dia_chi_text.Size = new System.Drawing.Size(264, 16);
             this.m_lbl_dia_chi_text.TabIndex = 1;
             this.m_lbl_dia_chi_text.Text = "................................................................";
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            this.STT.Width = 50;
-            // 
-            // TEN_THUOC
-            // 
-            this.TEN_THUOC.HeaderText = "Tên thuốc";
-            this.TEN_THUOC.Name = "TEN_THUOC";
-            this.TEN_THUOC.ReadOnly = true;
-            this.TEN_THUOC.Width = 300;
-            // 
-            // SO_LUONG
-            // 
-            this.SO_LUONG.HeaderText = "Số lượng";
-            this.SO_LUONG.Name = "SO_LUONG";
-            this.SO_LUONG.ReadOnly = true;
-            this.SO_LUONG.Width = 150;
-            // 
-            // TEN_DON_VI
-            // 
-            this.TEN_DON_VI.HeaderText = "Tên đơn vị";
-            this.TEN_DON_VI.Name = "TEN_DON_VI";
-            this.TEN_DON_VI.ReadOnly = true;
-            this.TEN_DON_VI.Width = 150;
-            // 
-            // GIA_BAN
-            // 
-            this.GIA_BAN.HeaderText = "Đơn giá";
-            this.GIA_BAN.Name = "GIA_BAN";
-            this.GIA_BAN.ReadOnly = true;
-            this.GIA_BAN.Width = 300;
-            // 
-            // THANH_TIEN
-            // 
-            this.THANH_TIEN.HeaderText = "Thành tiền";
-            this.THANH_TIEN.Name = "THANH_TIEN";
-            this.THANH_TIEN.ReadOnly = true;
-            this.THANH_TIEN.Width = 350;
-            // 
-            // txt_search_thuoc1
-            // 
-            this.txt_search_thuoc1.dcID = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txt_search_thuoc1.DisplayMember = null;
-            this.txt_search_thuoc1.Location = new System.Drawing.Point(157, 24);
-            this.txt_search_thuoc1.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_search_thuoc1.Name = "txt_search_thuoc1";
-            this.txt_search_thuoc1.Size = new System.Drawing.Size(321, 25);
-            this.txt_search_thuoc1.str_query = null;
-            this.txt_search_thuoc1.TabIndex = 0;
-            this.txt_search_thuoc1.Text1 = null;
-            this.txt_search_thuoc1.ValueMember = null;
-            this.txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_thuoc1_KeyDown);
             // 
             // uc108_v_gd_giao_dich_detail
             // 

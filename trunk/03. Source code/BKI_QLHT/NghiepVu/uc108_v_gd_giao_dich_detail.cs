@@ -16,6 +16,7 @@ using BKI_QLHT.US;
 using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 
+
 namespace BKI_QLHT.NghiepVu
 {
     public partial class uc108_v_gd_giao_dich_detail : UserControl
@@ -252,6 +253,7 @@ namespace BKI_QLHT.NghiepVu
                 m_txt_don_gia.Text = "Chưa nhập";
             }
         }
+
         #endregion
 
 
@@ -358,7 +360,7 @@ namespace BKI_QLHT.NghiepVu
         {
             if (txt_search_thuoc1.Text1 == null)
             {
-                BaseMessages.MsgBox_Infor("Bạn cần nhập tên thuốc");
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập tên thuốc");
                 txt_search_thuoc1.Focus();
                 return false;
             }
@@ -370,8 +372,10 @@ namespace BKI_QLHT.NghiepVu
         private void m_cmd_them_Click(object sender, EventArgs e)
         {
             if (!check_validate()) return;
+            if (!check_so_luong()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_so_luong.Focus(); return; }
+            if (!check_don_gia()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_don_gia.Focus(); return; }
             add_list();
-            if (list.Count == 0) { BaseMessages.MsgBox_Infor("Bạn chưa nhập đúng dữ liệu"); return;};
+            if (list.Count == 0) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); return;};
             int n = m_grv_quan_ly_ban_thuoc.Rows.Add();
             m_grv_quan_ly_ban_thuoc.Rows[n].Cells[0].Value = n + 1;
             m_grv_quan_ly_ban_thuoc.Rows[n].Cells[1].Value = txt_search_thuoc1.Text1;
@@ -385,6 +389,29 @@ namespace BKI_QLHT.NghiepVu
             txt_search_thuoc1.Focus();
             m_cbo_don_vi_tinh.Refresh();
             m_txt_don_gia.Clear();
+        }
+
+        private bool check_so_luong()
+        {
+            decimal num;
+            bool isNumberic = decimal.TryParse(m_txt_so_luong.Text, out num);
+          
+            if (!isNumberic)
+            {
+                return false;
+            }
+            else return true;
+        }
+        private bool check_don_gia()
+        {
+            decimal num;
+            bool isNumberic = decimal.TryParse(m_txt_don_gia.Text, out num);
+
+            if (!isNumberic)
+            {
+                return false;
+            }
+            else return true;
         }
 
         private void restart_data()
@@ -538,6 +565,42 @@ namespace BKI_QLHT.NghiepVu
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void m_txt_don_gia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
+            {
+                BaseMessages.MsgBox_Error("Bạn chỉ được nhập số!");
+                m_txt_don_gia.Focus();
+
+            }
+
+        }
+
+        private void m_txt_so_luong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
+            {
+                    BaseMessages.MsgBox_Error("Bạn chỉ được nhập số!");
+                    m_txt_so_luong.Focus();
+            }
+        }
+
+        //private void m_cbo_don_vi_tinh_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (e.KeyData == Keys.Enter)
+        //            load_cbo_don_vi_tinh();
+        //            load_don_gia();
+        //    }
+        //    catch (Exception v_e)
+        //    {
+
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
 
 
