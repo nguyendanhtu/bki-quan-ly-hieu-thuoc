@@ -15,6 +15,7 @@ using IP.Core.IPCommon;
 using BKI_QLHT.US;
 using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
+using BKI_QLHT.DanhMuc;
 
 
 namespace BKI_QLHT.NghiepVu
@@ -310,9 +311,9 @@ namespace BKI_QLHT.NghiepVu
         {
             try
             {
-                if (MessageBox.Show("Bạn có muốn lưu lại không?",
-                "Quản lý bán thuốc",
-                MessageBoxButtons.YesNo) == DialogResult.Yes) ;
+                DialogResult result = MessageBox.Show("Bạn có muốn lưu lại không?",
+                "Quản lý bán thuốc", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes) 
                 {
                     insert_gd_giao_dich();
                     insert_giao_dich_detail();
@@ -320,9 +321,7 @@ namespace BKI_QLHT.NghiepVu
                     BaseMessages.MsgBox_Infor("Đã lưu xong");
                     restart_data();
                 }
-                if (MessageBox.Show("Bạn có muốn lưu lại không?",
-               "Quản lý bán thuốc",
-               MessageBoxButtons.YesNo) == DialogResult.No)
+                if (result == DialogResult.No)
                 {
                     restart_data();
                 }
@@ -477,16 +476,6 @@ namespace BKI_QLHT.NghiepVu
             }
         }
 
-        private void m_txt_ti_le_chiet_khau_TextChanged(object sender, EventArgs e)
-        {
-            m_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
-            tong_tien_thanh_toan = tong_tien - (tong_tien * m_ti_le_chiet_khau) / 100;
-            m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
-            if (m_txt_ti_le_chiet_khau.Text == "" || m_txt_ti_le_chiet_khau.Text == "0")
-            {
-                m_ti_le_chiet_khau = 0;
-            }
-        }
         private void set_initial_form_load()
         {
 
@@ -529,6 +518,8 @@ namespace BKI_QLHT.NghiepVu
             if (!check_validate()) return;
             if (!check_so_luong()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_so_luong.Focus(); return; }
             if (!check_don_gia()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_don_gia.Focus(); return; }
+            if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_ti_le_chiet_khau.Focus(); return; }
+            if (!check_so_luong_va_so_du()) return;
             add_list();
             if (list.Count == 0) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); return;};
             int n = m_grv_quan_ly_ban_thuoc.Rows.Add();
@@ -568,6 +559,17 @@ namespace BKI_QLHT.NghiepVu
             }
             else return true;
         }
+        private bool check_chiet_khau()
+        {
+            decimal num;
+            bool isNumberic = decimal.TryParse(m_txt_ti_le_chiet_khau.Text, out num);
+
+            if (!isNumberic)
+            {
+                return false;
+            }
+            else return true;
+        }
 
         private void restart_data()
         {
@@ -585,6 +587,65 @@ namespace BKI_QLHT.NghiepVu
      
         #endregion
 
+        private void m_cmd_in_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f115_REPORT_GD_GIAO_DICH_DETIAL frm = new f115_REPORT_GD_GIAO_DICH_DETIAL();
+                frm.Show();
+
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private bool check_so_luong_va_so_du()
+        {
+         if (!check_validate()) return false;
+            US_GD_SO_DU v_us = new US_GD_SO_DU();
+            DS_GD_SO_DU v_ds = new DS_GD_SO_DU();
+            v_us.FillDataset(v_ds, "where id_thuoc = " + txt_search_thuoc1.dcID+ "and moi_nhat_yn = 'y'");
+            DataRow v_dr = v_ds.Tables[0].Rows[0];
+            if (CIPConvert.ToDecimal(m_txt_so_luong.Text) > CIPConvert.ToDecimal(v_dr["SO_DU"]))
+            {
+                DialogResult result = MessageBox.Show("Số lượng vừa nhập vượt số dư trong kho. Bạn có muốn bán hết số dư không?",
+               "Thông báo",
+               MessageBoxButtons.YesNo);
+
+                   if (result == DialogResult.Yes) 
+                {
+                    m_txt_so_luong.Text = v_dr["SO_DU"].ToString();
+                    return true;
+                }
+                   if (result == DialogResult.No)
+                   {
+                       m_txt_so_luong.Text ="";
+                       m_txt_so_luong.Focus();
+                       return false;
+                   }
+            }
+            if (CIPConvert.ToDecimal(m_txt_so_luong.Text)  <= CIPConvert.ToDecimal(v_dr["SO_DU"]))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void m_txt_ti_le_chiet_khau_Leave(object sender, EventArgs e)
+        {
+            if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn phải nhập kiểu số"); m_txt_ti_le_chiet_khau.Text = "0"; m_txt_ti_le_chiet_khau.Focus(); return; }
+            if (m_txt_ti_le_chiet_khau.Text == "" || m_txt_ti_le_chiet_khau.Text == "0")
+            {
+                m_ti_le_chiet_khau = 0;
+            }
+            m_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
+            tong_tien_thanh_toan = tong_tien - (tong_tien * m_ti_le_chiet_khau) / 100;
+            m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
+    
+        }
        
 
         //private void m_cbo_don_vi_tinh_KeyDown(object sender, KeyEventArgs e)
