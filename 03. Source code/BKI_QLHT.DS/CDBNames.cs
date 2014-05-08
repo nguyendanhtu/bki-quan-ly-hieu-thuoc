@@ -476,20 +476,39 @@
         public const string ID_GIAO_DICH = "ID_GIAO_DICH";
         public const string ID_THUOC = "ID_THUOC";
         public const string ID_DON_VI_THUOC = "ID_DON_VI_THUOC";
-        public const string SO_LUONG = "SO_LUONG";
+        public const string SO_LUONG_NHAP = "SO_LUONG_NHAP";
+        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
         public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
         public const string ID_NUOC_SX = "ID_NUOC_SX";
         public const string ID_HANG_SX = "ID_HANG_SX";
         public const string HAN_SU_DUNG = "HAN_SU_DUNG";
-        public const string GIA = "GIA";
-        public const string ID_V_DM_THUOC = "ID_V_DM_THUOC";
-        public const string DISPLAY = "DISPLAY";
-        public const string ID_DON_VI_TINH_THUOC = "ID_DON_VI_TINH_THUOC";
-        public const string TEN_DON_VI = "TEN_DON_VI";
-        public const string GD_GIA_BAN_ID_THUOC = "GD_GIA_BAN_ID_THUOC";
+        public const string GIA_NHAP = "GIA_NHAP";
         public const string GIA_BAN = "GIA_BAN";
+        public const string ID_LO_THUOC = "ID_LO_THUOC";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string DUONG_DUNG_DANG_DUNG = "DUONG_DUNG_DANG_DUNG";
+        public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string ID_DON_VI_CHA = "ID_DON_VI_CHA";
+        public const string QUY_DOI = "QUY_DOI";
+        public const string GIA_BAN_GD_GIA_BAN = "GIA_BAN_GD_GIA_BAN";
         public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
+        public const string ID_GD_GIAO_DICH = "ID_GD_GIAO_DICH";
+        public const string MA_GIAO_DICH = "MA_GIAO_DICH";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string ID_NGUOI_THUC_HIEN = "ID_NGUOI_THUC_HIEN";
+        public const string ID_KHACH_HANG = "ID_KHACH_HANG";
+        public const string ID_LOAI_GIAO_DICH = "ID_LOAI_GIAO_DICH";
+        public const string TI_LE_CHIET_KHAU = "TI_LE_CHIET_KHAU";
+        public const string ID_DM_KHACH_HANG = "ID_DM_KHACH_HANG";
+        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+        public const string SDT_KH = "SDT_KH";
+        public const string DIA_CHI_KH = "DIA_CHI_KH";
+        public const string ID_DV_KINH_DOANH = "ID_DV_KINH_DOANH";
+        public const string TEN_DAY_DU = "TEN_DAY_DU";
+        public const string DIA_CHI_DV = "DIA_CHI_DV";
+        public const string SD = "SD";
     }
+
 
     public class GD_GIA_BAN
     {
