@@ -306,7 +306,162 @@ namespace BKI_QLHT.NghiepVu
             }
         }
         }
+        private void m_cmd_luu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Bạn có muốn lưu lại không?",
+                "Quản lý bán thuốc",
+                MessageBoxButtons.YesNo) == DialogResult.Yes) ;
+                {
+                    insert_gd_giao_dich();
+                    insert_giao_dich_detail();
+                    insert_so_du();
+                    BaseMessages.MsgBox_Infor("Đã lưu xong");
+                    restart_data();
+                }
+                if (MessageBox.Show("Bạn có muốn lưu lại không?",
+               "Quản lý bán thuốc",
+               MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    restart_data();
+                }
 
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+
+        }
+
+        private void insert_so_du()
+        {
+            US_GD_SO_DU v_us_sd = new US_GD_SO_DU();
+            DS_GD_SO_DU v_ds_sd = new DS_GD_SO_DU();
+            foreach (data v_list in list)
+            {
+                v_ds_sd.Clear();
+                v_us_sd.FillDataset(v_ds_sd, "where ID_THUOC =" + v_list.id_thuoc + "and MOI_NHAT_YN = 'Y' ");
+                DateTime v_dat_nps = (DateTime)(v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"]);
+                if (v_dat_nps.Date != DateTime.Now.Date)
+                {
+                    v_us_sd.dcID = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID"]);
+                    v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
+                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]);
+                    v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
+                    //v_us_sd.datNGAY_PHAT_SINH = CIPConvert.ToDatetime( v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"].ToString(),"dd/MM/yyyy");
+                    v_us_sd.datNGAY_PHAT_SINH = DateTime.Now;
+                    v_us_sd.strMOI_NHAT_YN = v_ds_sd.Tables[0].Rows[0]["MOI_NHAT_YN"].ToString();
+                    v_us_sd.strMOI_NHAT_YN = "N";
+                    v_us_sd.Update();
+                    v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
+                    v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
+                    v_us_sd.strMOI_NHAT_YN = "Y";
+                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) - v_list.so_luong_ban_min;
+                    v_us_sd.Insert();
+                }
+                else
+                {
+                    v_us_sd.dcID = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID"]);
+                    v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
+                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) - v_list.so_luong_ban_min;
+                    v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
+                    //v_us_sd.datNGAY_PHAT_SINH = CIPConvert.ToDatetime( v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"].ToString(),"dd/MM/yyyy");
+                    v_us_sd.datNGAY_PHAT_SINH = DateTime.Now;
+                    v_us_sd.strMOI_NHAT_YN = v_ds_sd.Tables[0].Rows[0]["MOI_NHAT_YN"].ToString();
+                    v_us_sd.Update();
+                }
+            }
+        }
+
+        private void insert_giao_dich_detail()
+        {
+            US_GD_GIAO_DICH_DETAIL v_us_gd_de = new US_GD_GIAO_DICH_DETAIL();
+            DS_GD_GIAO_DICH_DETAIL v_ds_gd_de = new DS_GD_GIAO_DICH_DETAIL();
+            foreach (data v_list in list)
+            {
+                v_us_gd_de.Insert_data_into_gd_giao_dich_detail(m_id_giao_dich, v_list.id_thuoc, v_list.id_don_vi_tinh_thuoc_min, v_list.so_luong_nhap, v_list.so_luong_ban_min, v_list.id_giao_dich_detail, v_list.id_nha_cung_cap, v_list.id_nha_san_xuat, v_list.id_hang_san_xuat, v_list.han_su_dung, v_list.gia_ban_min, v_list.gia_nhap);
+            }
+
+        }
+
+        private void insert_gd_giao_dich()
+        {
+            US_GD_GIAO_DICH v_us = new US_GD_GIAO_DICH();
+            DS_GD_GIAO_DICH v_ds = new DS_GD_GIAO_DICH();
+            v_us.strMA_GIAO_DICH = m_lbl_Ma_GD_text.Text;
+            v_us.datNGAY_GIAO_DICH = m_dt_ngay_giao_dich.Value;
+            v_us.dcID_NGUOI_THUC_HIEN = CAppContext_201.getCurrentUserID();
+            v_us.dcID_KHACH_HANG = CIPConvert.ToDecimal(m_cbo_ten_khach_hang.SelectedValue);
+            v_us.dcID_LOAI_GIAO_DICH = 2;
+            if (CIPConvert.ToDecimal(m_cbo_ten_bac_sy.SelectedValue) == -1)
+            {
+                v_us.dcID_BAC_SY = 14;
+            }
+            else
+            {
+                v_us.dcID_BAC_SY = CIPConvert.ToDecimal(m_cbo_ten_bac_sy.SelectedValue);
+            }
+            v_us.dcTI_LE_CHIET_KHAU = m_ti_le_chiet_khau;
+            v_us.Insert();
+            m_id_giao_dich = v_us.dcID;
+        }
+
+        private void m_cmd_sua_Click(object sender, EventArgs e)
+        {
+            load_data_grd_2_form();
+        }
+
+        private void load_data_grd_2_form()
+        {
+            int i_row = 0;
+            txt_search_thuoc1.Text1 = m_grv_quan_ly_ban_thuoc.SelectedRows[i_row].Cells[1].ToString();
+            load_cbo_don_vi_tinh();
+            load_don_gia();
+        }
+
+        private void m_cmd_huy_Click(object sender, EventArgs e)
+        {
+            restart_data();
+            txt_search_thuoc1.Focus();
+        }
+
+        private void m_cmd_thoat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Controls.Clear();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_txt_don_gia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
+            {
+                BaseMessages.MsgBox_Error("Bạn chỉ được nhập số!");
+                m_txt_don_gia.Focus();
+
+            }
+
+        }
+
+        private void m_txt_so_luong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
+            {
+                BaseMessages.MsgBox_Error("Bạn chỉ được nhập số!");
+                m_txt_so_luong.Focus();
+            }
+        }
         private void txt_search_thuoc1_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -430,162 +585,7 @@ namespace BKI_QLHT.NghiepVu
      
         #endregion
 
-        private void m_cmd_luu_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("Bạn có muốn lưu lại không?",
-                "Quản lý bán thuốc",
-                MessageBoxButtons.YesNo) == DialogResult.Yes) ;
-                {
-                    insert_gd_giao_dich();
-                    insert_giao_dich_detail();
-                    insert_so_du();
-                    BaseMessages.MsgBox_Infor("Đã lưu xong");
-                    restart_data();
-                }
-                 if (MessageBox.Show("Bạn có muốn lưu lại không?",
-                "Quản lý bán thuốc",
-                MessageBoxButtons.YesNo) == DialogResult.No) 
-                {
-                    restart_data();
-                }
-            
-            }
-            catch (Exception v_e)
-            {
-
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-           
-
-        }
-
-        private void insert_so_du()
-        {
-            US_GD_SO_DU v_us_sd = new US_GD_SO_DU();
-            DS_GD_SO_DU v_ds_sd = new DS_GD_SO_DU();
-            foreach (data v_list in list)
-            {
-                v_ds_sd.Clear();
-                v_us_sd.FillDataset(v_ds_sd, "where ID_THUOC =" + v_list.id_thuoc + "and MOI_NHAT_YN = 'Y' ");
-                DateTime v_dat_nps = (DateTime)(v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"]);
-                if (v_dat_nps.Date != DateTime.Now.Date)
-                {
-                    v_us_sd.dcID = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID"]);
-                    v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
-                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]);
-                    v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
-                    //v_us_sd.datNGAY_PHAT_SINH = CIPConvert.ToDatetime( v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"].ToString(),"dd/MM/yyyy");
-                    v_us_sd.datNGAY_PHAT_SINH = DateTime.Now;
-                    v_us_sd.strMOI_NHAT_YN = v_ds_sd.Tables[0].Rows[0]["MOI_NHAT_YN"].ToString();
-                    v_us_sd.strMOI_NHAT_YN = "N";
-                    v_us_sd.Update();
-                    v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
-                    v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
-                    v_us_sd.strMOI_NHAT_YN = "Y";
-                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) - v_list.so_luong_ban_min;
-                    v_us_sd.Insert();
-                }
-                else
-                {
-                    v_us_sd.dcID = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID"]);
-                    v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
-                    v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) - v_list.so_luong_ban_min;
-                    v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
-                    //v_us_sd.datNGAY_PHAT_SINH = CIPConvert.ToDatetime( v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"].ToString(),"dd/MM/yyyy");
-                    v_us_sd.datNGAY_PHAT_SINH = DateTime.Now;
-                    v_us_sd.strMOI_NHAT_YN = v_ds_sd.Tables[0].Rows[0]["MOI_NHAT_YN"].ToString();
-                    v_us_sd.Update();
-                }
-            }
-        }
-
-        private void insert_giao_dich_detail()
-        {
-            US_GD_GIAO_DICH_DETAIL v_us_gd_de = new US_GD_GIAO_DICH_DETAIL();
-            DS_GD_GIAO_DICH_DETAIL v_ds_gd_de = new DS_GD_GIAO_DICH_DETAIL();
-            foreach(data v_list in list)
-            {
-                v_us_gd_de.Insert_data_into_gd_giao_dich_detail(m_id_giao_dich,v_list.id_thuoc,v_list.id_don_vi_tinh_thuoc_min,v_list.so_luong_nhap,v_list.so_luong_ban_min,v_list.id_giao_dich_detail, v_list.id_nha_cung_cap, v_list.id_nha_san_xuat, v_list.id_hang_san_xuat,v_list.han_su_dung,v_list.gia_ban_min,v_list.gia_nhap);
-            }
-            
-        }
-
-        private void insert_gd_giao_dich()
-        {
-            US_GD_GIAO_DICH v_us = new US_GD_GIAO_DICH();
-            DS_GD_GIAO_DICH v_ds = new DS_GD_GIAO_DICH();
-            v_us.strMA_GIAO_DICH = m_lbl_Ma_GD_text.Text;
-            v_us.datNGAY_GIAO_DICH = m_dt_ngay_giao_dich.Value;
-            v_us.dcID_NGUOI_THUC_HIEN = CAppContext_201.getCurrentUserID();
-            v_us.dcID_KHACH_HANG = CIPConvert.ToDecimal(m_cbo_ten_khach_hang.SelectedValue);
-            v_us.dcID_LOAI_GIAO_DICH = 2;
-            if (CIPConvert.ToDecimal(m_cbo_ten_bac_sy.SelectedValue) == -1)
-            {
-                v_us.dcID_BAC_SY = 14;
-            }
-            else
-            {
-                v_us.dcID_BAC_SY = CIPConvert.ToDecimal(m_cbo_ten_bac_sy.SelectedValue);
-            }
-            v_us.dcTI_LE_CHIET_KHAU = m_ti_le_chiet_khau;
-            v_us.Insert();
-            m_id_giao_dich = v_us.dcID;
-        }
-
-        private void m_cmd_sua_Click(object sender, EventArgs e)
-        {
-            load_data_grd_2_form();
-        }
-
-        private void load_data_grd_2_form()
-        {
-            int i_row=0;
-            txt_search_thuoc1.Text1 = m_grv_quan_ly_ban_thuoc.SelectedRows[i_row].Cells[1].ToString();
-            load_cbo_don_vi_tinh();
-            load_don_gia();
-        }
-
-        private void m_cmd_huy_Click(object sender, EventArgs e)
-        {
-            restart_data();
-            txt_search_thuoc1.Focus();
-        }
-
-        private void m_cmd_thoat_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.Controls.Clear();
-            }
-            catch (Exception v_e)
-            {
-
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_txt_don_gia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
-            {
-                BaseMessages.MsgBox_Error("Bạn chỉ được nhập số!");
-                m_txt_don_gia.Focus();
-
-            }
-
-        }
-
-        private void m_txt_so_luong_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
-            {
-                    BaseMessages.MsgBox_Error("Bạn chỉ được nhập số!");
-                    m_txt_so_luong.Focus();
-            }
-        }
+       
 
         //private void m_cbo_don_vi_tinh_KeyDown(object sender, KeyEventArgs e)
         //{

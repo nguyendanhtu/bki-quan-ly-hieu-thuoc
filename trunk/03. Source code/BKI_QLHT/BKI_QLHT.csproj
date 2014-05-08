@@ -136,6 +136,12 @@
     <Compile Include="DanhMuc\f102_v_dm_don_vi_tinh_de.Designer.cs">
       <DependentUpon>f102_v_dm_don_vi_tinh_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f115_REPORT_GD_GIAO_DICH_DETIAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f115_REPORT_GD_GIAO_DICH_DETIAL.Designer.cs">
+      <DependentUpon>f115_REPORT_GD_GIAO_DICH_DETIAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f404_v_dm_nhasx.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -440,6 +446,9 @@
     <EmbeddedResource Include="DanhMuc\f102_v_dm_don_vi_tinh_de.resx">
       <DependentUpon>f102_v_dm_don_vi_tinh_de.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f115_REPORT_GD_GIAO_DICH_DETIAL.resx">
+      <DependentUpon>f115_REPORT_GD_GIAO_DICH_DETIAL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f404_v_dm_nhasx.resx">
       <DependentUpon>f404_v_dm_nhasx.cs</DependentUpon>
     </EmbeddedResource>
@@ -629,6 +638,8 @@
       <DependentUpon>BKI_QLHTDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BKI_QLHT.BaoCao.Demo_Report.DataSet1.datasource" />
+    <None Include="Properties\DataSources\BKI_QLHT.NghiepVu.uc108_v_gd_giao_dich_detail+data1.datasource" />
+    <None Include="Properties\DataSources\BKI_QLHT.NghiepVu.uc108_v_gd_giao_dich_detail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
