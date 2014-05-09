@@ -10,6 +10,59 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class v_BAO_CAO_DOANH_THU_THEO_NGAY
+    {
+        public const string NGAY_GD = "NGAY_GD";
+        public const string ID_THUOC = "ID_THUOC";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+    public class V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN
+    {
+        public const string ID_NGUOI_THUC_HIEN = "ID_NGUOI_THUC_HIEN";
+        public const string TEN = "TEN";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+    public class V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC
+    {
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG
+    {
+        public const string ID = "ID";
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string MA_KHACH_HANG = "MA_KHACH_HANG";
+        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BAO_CAO_DOANH_THU_THEO_NCC
+    {
+        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BAO_CAO_DOANH_THU_THEO_BAC_SY
+    {
+        public const string ID_BAC_SY = "ID_BAC_SY";
+        public const string HO_TEN = "HO_TEN";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
     public class V_BAO_CAO_DANH_MUC_KHACH_HANG
     {
         public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
