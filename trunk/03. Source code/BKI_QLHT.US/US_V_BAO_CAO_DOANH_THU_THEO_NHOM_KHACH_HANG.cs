@@ -168,6 +168,12 @@ public class US_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG : US_Object
 
 #endregion
 #region "Init Functions"
+    public void FillDatasetSearch(DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG ip_ds, string ip_str_search)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_search");
+        v_store_proc.addNVarcharInputParam("@STR_SEARCH", ip_str_search);
+        v_store_proc.fillDataSetByCommand(this, ip_ds);
+    }
 	public US_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG() 
 	{
 		pm_objDS = new DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG();

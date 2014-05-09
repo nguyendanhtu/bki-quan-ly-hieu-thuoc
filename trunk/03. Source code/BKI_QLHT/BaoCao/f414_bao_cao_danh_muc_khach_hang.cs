@@ -379,7 +379,7 @@ namespace BKI_QLHT
 			return v_obj_trans;			
 		}
 		private void load_data_2_grid(){
-            m_v_ds.Clear();
+                m_v_ds.Clear();
 
             if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "");
             else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
