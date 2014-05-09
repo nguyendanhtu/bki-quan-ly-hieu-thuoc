@@ -373,11 +373,11 @@ namespace BKI_QLHT
         }
         private void load_custom_source_2_m_txt_tim_kiem()
         {
-            int count = m_v_ds.Tables["V_BAO_CAO_DANH_MUC_KHACH_HANG"].Rows.Count;
+            int count = m_v_ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG"].Rows.Count;
             AutoCompleteStringCollection v_acsc_search = new AutoCompleteStringCollection();
             foreach (DataRow dr in m_v_ds.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG)
             {
-                v_acsc_search.Add(dr[V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.MA_KHACH_HANG].ToString());
+                //v_acsc_search.Add(dr[V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.MA_KHACH_HANG].ToString());
                 v_acsc_search.Add(dr[V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.TEN_KHACH_HANG].ToString());
                 v_acsc_search.Add(dr[V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.TEN_NHOM].ToString());
                 v_acsc_search.Add(dr[V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.TEN_THUOC].ToString());
@@ -392,8 +392,9 @@ namespace BKI_QLHT
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
-            m_fg.Tree.Column = (int)e_col_Number.TEN_KHACH_HANG;
+            m_fg.Tree.Column = (int)e_col_Number.MA_KHACH_HANG;
             m_fg.Cols[(int)e_col_Number.TEN_NHOM].Visible = false;
+            m_fg.Cols[(int)e_col_Number.MA_KHACH_HANG].Visible = true;
             m_fg.Cols[0].Caption = "STT";
             m_fg.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
 
@@ -419,9 +420,9 @@ namespace BKI_QLHT
 		private void load_data_2_grid(){
             m_v_ds.Clear();
 
-            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "");
-            else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
-
+            //if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "");
+            //else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim());
+            m_v_us.FillDataset(m_v_ds);
             var v_str_search = m_txt_tim_kiem.Text.Trim();
             if (v_str_search.Equals(m_str_tim_kiem))
             {
@@ -433,7 +434,7 @@ namespace BKI_QLHT
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
               , 0
               , (int)e_col_Number.TEN_NHOM // chỗ này là tên trường mà mình nhóm
-              , (int)e_col_Number.TEN_KHACH_HANG // chỗ này là tên trường mà mình Count
+              , (int)e_col_Number.MA_KHACH_HANG // chỗ này là tên trường mà mình Count
               , "{0}"
               );
             m_lbl_count.Text = m_v_ds.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.Count.ToString(CultureInfo.InvariantCulture);

@@ -22,25 +22,7 @@ public class US_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG : US_Object
 {
 	private const string c_TableName = "V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG";
 #region "Public Properties"
-	public decimal dcID 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID"] = value;
-		}
-	}
-
-	public bool IsIDNull()	{
-		return pm_objDR.IsNull("ID");
-	}
-
-	public void SetIDNull() {
-		pm_objDR["ID"] = System.Convert.DBNull;
-	}
+	
 
 	public string strTEN_NHOM 
 	{
@@ -174,6 +156,7 @@ public class US_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG : US_Object
         v_store_proc.addNVarcharInputParam("@STR_SEARCH", ip_str_search);
         v_store_proc.fillDataSetByCommand(this, ip_ds);
     }
+    
 	public US_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG() 
 	{
 		pm_objDS = new DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG();
