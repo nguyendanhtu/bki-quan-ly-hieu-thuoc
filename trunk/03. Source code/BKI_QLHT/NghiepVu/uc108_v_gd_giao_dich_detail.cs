@@ -212,7 +212,13 @@ namespace BKI_QLHT.NghiepVu
             m_cbo_ten_bac_sy.SelectedIndex = 0;
         }
 
-     
+        private void load_data_grid_2_form()
+        {
+            int i_row = 0;
+            txt_search_thuoc1.Text1 = m_grv_quan_ly_ban_thuoc.SelectedRows[i_row].Cells[1].ToString();
+            load_cbo_don_vi_tinh();
+            load_don_gia();
+        }
         private void load_cbo_ten_khach_hang()
         {
             US_DM_KHACH_HANG v_us = new US_DM_KHACH_HANG();
@@ -253,6 +259,82 @@ namespace BKI_QLHT.NghiepVu
             { 
                 m_txt_don_gia.Text = "Chưa nhập";
             }
+        }
+        private bool check_so_luong()
+        {
+            decimal num;
+            bool isNumberic = decimal.TryParse(m_txt_so_luong.Text, out num);
+
+            if (!isNumberic)
+            {
+                return false;
+            }
+            else return true;
+        }
+        private bool check_don_gia()
+        {
+            decimal num;
+            bool isNumberic = decimal.TryParse(m_txt_don_gia.Text, out num);
+
+            if (!isNumberic)
+            {
+                return false;
+            }
+            else return true;
+        }
+        private bool check_chiet_khau()
+        {
+            decimal num;
+            bool isNumberic = decimal.TryParse(m_txt_ti_le_chiet_khau.Text, out num);
+
+            if (!isNumberic)
+            {
+                return false;
+            }
+            else return true;
+        }
+        private bool check_so_luong_va_so_du()
+        {
+            if (!check_validate()) return false;
+            US_GD_SO_DU v_us = new US_GD_SO_DU();
+            DS_GD_SO_DU v_ds = new DS_GD_SO_DU();
+            v_us.FillDataset(v_ds, "where id_thuoc = " + txt_search_thuoc1.dcID + "and moi_nhat_yn = 'y'");
+            DataRow v_dr = v_ds.Tables[0].Rows[0];
+            if (CIPConvert.ToDecimal(m_txt_so_luong.Text) > CIPConvert.ToDecimal(v_dr["SO_DU"]))
+            {
+                DialogResult result = MessageBox.Show("Số lượng vừa nhập vượt số dư trong kho. Bạn có muốn bán hết số dư không?",
+               "Thông báo",
+               MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    m_txt_so_luong.Text = v_dr["SO_DU"].ToString();
+                    return true;
+                }
+                if (result == DialogResult.No)
+                {
+                    m_txt_so_luong.Text = "";
+                    m_txt_so_luong.Focus();
+                    return false;
+                }
+            }
+            if (CIPConvert.ToDecimal(m_txt_so_luong.Text) <= CIPConvert.ToDecimal(v_dr["SO_DU"]))
+            {
+                return true;
+            }
+            return false;
+        }
+        private void restart_data()
+        {
+            list.Clear();
+            m_grv_quan_ly_ban_thuoc.Rows.Clear();
+            txt_search_thuoc1.Text1 = "";
+            m_txt_don_gia.Text = "";
+            m_cbo_don_vi_tinh.Text = "";
+            tong_tien = 0;
+            tong_tien_thanh_toan = 0;
+            m_txt_tong_tien.Text = "0 VNĐ";
+            m_txt_tong_tien_thanh_toan.Text = "0 VNĐ";
         }
 
         #endregion
@@ -411,15 +493,7 @@ namespace BKI_QLHT.NghiepVu
 
         private void m_cmd_sua_Click(object sender, EventArgs e)
         {
-            load_data_grd_2_form();
-        }
-
-        private void load_data_grd_2_form()
-        {
-            int i_row = 0;
-            txt_search_thuoc1.Text1 = m_grv_quan_ly_ban_thuoc.SelectedRows[i_row].Cells[1].ToString();
-            load_cbo_don_vi_tinh();
-            load_don_gia();
+            load_data_grid_2_form();
         }
 
         private void m_cmd_huy_Click(object sender, EventArgs e)
@@ -536,57 +610,6 @@ namespace BKI_QLHT.NghiepVu
             m_cbo_don_vi_tinh.Refresh();
             m_txt_don_gia.Clear();
         }
-
-        private bool check_so_luong()
-        {
-            decimal num;
-            bool isNumberic = decimal.TryParse(m_txt_so_luong.Text, out num);
-          
-            if (!isNumberic)
-            {
-                return false;
-            }
-            else return true;
-        }
-        private bool check_don_gia()
-        {
-            decimal num;
-            bool isNumberic = decimal.TryParse(m_txt_don_gia.Text, out num);
-
-            if (!isNumberic)
-            {
-                return false;
-            }
-            else return true;
-        }
-        private bool check_chiet_khau()
-        {
-            decimal num;
-            bool isNumberic = decimal.TryParse(m_txt_ti_le_chiet_khau.Text, out num);
-
-            if (!isNumberic)
-            {
-                return false;
-            }
-            else return true;
-        }
-
-        private void restart_data()
-        {
-            list.Clear();
-            m_grv_quan_ly_ban_thuoc.Rows.Clear();
-            txt_search_thuoc1.Text1 ="";
-            m_txt_don_gia.Text="";
-            m_cbo_don_vi_tinh.Text ="";
-            tong_tien = 0;
-            tong_tien_thanh_toan = 0;
-            m_txt_tong_tien.Text = "0 VNĐ";
-            m_txt_tong_tien_thanh_toan.Text = "0 VNĐ";
-        }
-
-     
-        #endregion
-
         private void m_cmd_in_Click(object sender, EventArgs e)
         {
             try
@@ -602,37 +625,7 @@ namespace BKI_QLHT.NghiepVu
             }
         }
 
-        private bool check_so_luong_va_so_du()
-        {
-         if (!check_validate()) return false;
-            US_GD_SO_DU v_us = new US_GD_SO_DU();
-            DS_GD_SO_DU v_ds = new DS_GD_SO_DU();
-            v_us.FillDataset(v_ds, "where id_thuoc = " + txt_search_thuoc1.dcID+ "and moi_nhat_yn = 'y'");
-            DataRow v_dr = v_ds.Tables[0].Rows[0];
-            if (CIPConvert.ToDecimal(m_txt_so_luong.Text) > CIPConvert.ToDecimal(v_dr["SO_DU"]))
-            {
-                DialogResult result = MessageBox.Show("Số lượng vừa nhập vượt số dư trong kho. Bạn có muốn bán hết số dư không?",
-               "Thông báo",
-               MessageBoxButtons.YesNo);
 
-                   if (result == DialogResult.Yes) 
-                {
-                    m_txt_so_luong.Text = v_dr["SO_DU"].ToString();
-                    return true;
-                }
-                   if (result == DialogResult.No)
-                   {
-                       m_txt_so_luong.Text ="";
-                       m_txt_so_luong.Focus();
-                       return false;
-                   }
-            }
-            if (CIPConvert.ToDecimal(m_txt_so_luong.Text)  <= CIPConvert.ToDecimal(v_dr["SO_DU"]))
-            {
-                return true;
-            }
-            return false;
-        }
 
         private void m_txt_ti_le_chiet_khau_Leave(object sender, EventArgs e)
         {
@@ -644,9 +637,52 @@ namespace BKI_QLHT.NghiepVu
             m_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
             tong_tien_thanh_toan = tong_tien - (tong_tien * m_ti_le_chiet_khau) / 100;
             m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
-    
+
         }
        
+       
+     
+        #endregion
+
+        private void m_grv_quan_ly_ban_thuoc_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_search_thuoc1.Text1 = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[1].Value.ToString();
+            m_txt_so_luong.Text = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[2].Value.ToString();
+            m_cbo_don_vi_tinh.Text = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value.ToString();
+            m_txt_don_gia.Text = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value.ToString();   
+        }
+
+        //private void m_grv_quan_ly_ban_thuoc_SelectionChanged(object sender, EventArgs e)
+        //{
+        //  m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[1].Value = txt_search_thuoc1.Text1;
+        //  m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[2].Value = m_txt_so_luong.Text;
+        //  m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value = m_cbo_don_vi_tinh.Text;
+        //  m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value = m_txt_don_gia.Text;
+        //}
+        private void load_data_2_grid()
+        {
+          m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[1].Value = txt_search_thuoc1.Text1;
+          m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[1].Value = m_txt_so_luong.Text;
+          m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[1].Value = m_cbo_don_vi_tinh.Text;
+          m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[1].Value = m_txt_don_gia.Text;
+        }
+
+        private void m_txt_ti_le_chiet_khau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Tab || e.KeyData == Keys.Enter)
+            {
+                if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn phải nhập kiểu số"); m_txt_ti_le_chiet_khau.Text = "0"; m_txt_ti_le_chiet_khau.Focus(); return; }
+                if (m_txt_ti_le_chiet_khau.Text == "" || m_txt_ti_le_chiet_khau.Text == "0")
+                {
+                    m_ti_le_chiet_khau = 0;
+                }
+                m_ti_le_chiet_khau = CIPConvert.ToDecimal(m_txt_ti_le_chiet_khau.Text);
+                tong_tien_thanh_toan = tong_tien - (tong_tien * m_ti_le_chiet_khau) / 100;
+                m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien_thanh_toan)) + " " + "VNĐ";
+            }
+        }
+        
+     
 
         //private void m_cbo_don_vi_tinh_KeyDown(object sender, KeyEventArgs e)
         //{

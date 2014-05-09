@@ -136,12 +136,6 @@
     <Compile Include="DanhMuc\f102_v_dm_don_vi_tinh_de.Designer.cs">
       <DependentUpon>f102_v_dm_don_vi_tinh_de.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f115_REPORT_GD_GIAO_DICH_DETIAL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f115_REPORT_GD_GIAO_DICH_DETIAL.Designer.cs">
-      <DependentUpon>f115_REPORT_GD_GIAO_DICH_DETIAL.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhMuc\f404_v_dm_nhasx.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +341,12 @@
     <Compile Include="HeThong\f999_ht_nguoi_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NghiepVu\f115_REPORT_GD_GIAO_DICH_DETIAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f115_REPORT_GD_GIAO_DICH_DETIAL.Designer.cs">
+      <DependentUpon>f115_REPORT_GD_GIAO_DICH_DETIAL.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\f511_gd_nhap_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -445,9 +445,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f102_v_dm_don_vi_tinh_de.resx">
       <DependentUpon>f102_v_dm_don_vi_tinh_de.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f115_REPORT_GD_GIAO_DICH_DETIAL.resx">
-      <DependentUpon>f115_REPORT_GD_GIAO_DICH_DETIAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f404_v_dm_nhasx.resx">
       <DependentUpon>f404_v_dm_nhasx.cs</DependentUpon>
@@ -579,6 +576,9 @@
     <EmbeddedResource Include="HeThong\f999_ht_nguoi_su_dung.resx">
       <DependentUpon>f999_ht_nguoi_su_dung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f115_REPORT_GD_GIAO_DICH_DETIAL.resx">
+      <DependentUpon>f115_REPORT_GD_GIAO_DICH_DETIAL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f511_gd_nhap_thuoc.resx">
       <DependentUpon>f511_gd_nhap_thuoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -597,6 +597,7 @@
     <EmbeddedResource Include="NghiepVu\f_804_han_su_dung.resx">
       <DependentUpon>f_804_han_su_dung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\Report1.rdlc" />
     <EmbeddedResource Include="NghiepVu\uc108_v_gd_giao_dich_detail.resx">
       <DependentUpon>uc108_v_gd_giao_dich_detail.cs</DependentUpon>
     </EmbeddedResource>

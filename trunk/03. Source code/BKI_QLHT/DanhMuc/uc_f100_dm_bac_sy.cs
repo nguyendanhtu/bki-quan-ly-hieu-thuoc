@@ -338,10 +338,6 @@ namespace BKI_QLHT.DanhMuc
             }
 
         }
-
-
-        #endregion
-
         private void uc_f100_dm_bac_sy_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -386,10 +382,14 @@ namespace BKI_QLHT.DanhMuc
                 CGridUtils.Dataset2C1Grid(v_ds_v_dm_bac_sy, m_fg, m_obj_trans);
                 m_fg.Redraw = true;
             }
-       
+
 
         }
 
+
+        #endregion
+
+        
        
     }
 }
