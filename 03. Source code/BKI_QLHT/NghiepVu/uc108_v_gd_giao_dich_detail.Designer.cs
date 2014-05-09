@@ -101,8 +101,10 @@
             this.m_grv_quan_ly_ban_thuoc.Location = new System.Drawing.Point(3, 194);
             this.m_grv_quan_ly_ban_thuoc.Name = "m_grv_quan_ly_ban_thuoc";
             this.m_grv_quan_ly_ban_thuoc.RowHeadersVisible = false;
+            this.m_grv_quan_ly_ban_thuoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.m_grv_quan_ly_ban_thuoc.Size = new System.Drawing.Size(1505, 295);
             this.m_grv_quan_ly_ban_thuoc.TabIndex = 9;
+            this.m_grv_quan_ly_ban_thuoc.MouseClick += new System.Windows.Forms.MouseEventHandler(this.m_grv_quan_ly_ban_thuoc_MouseClick);
             // 
             // STT
             // 
@@ -187,7 +189,7 @@
             this.m_txt_ti_le_chiet_khau.Size = new System.Drawing.Size(52, 23);
             this.m_txt_ti_le_chiet_khau.TabIndex = 4;
             this.m_txt_ti_le_chiet_khau.Text = "0";
-            //this.m_txt_ti_le_chiet_khau.TextChanged += new System.EventHandler(this.m_txt_ti_le_chiet_khau_TextChanged);
+            this.m_txt_ti_le_chiet_khau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_ti_le_chiet_khau_KeyDown);
             this.m_txt_ti_le_chiet_khau.Leave += new System.EventHandler(this.m_txt_ti_le_chiet_khau_Leave);
             // 
             // label22
