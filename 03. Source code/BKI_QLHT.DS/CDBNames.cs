@@ -10,6 +10,39 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_BAO_CAO_DOANH_THU_THEO_BAC_SY_0
+    {
+        public const string ID_BAC_SY = "ID_BAC_SY";
+        public const string HO_TEN = "HO_TEN";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+    public class V_BAO_CAO_DOANH_THU_THEO_NCC_0
+    {
+        public const string ID_NHA_CUNG_CAP = "ID_NHA_CUNG_CAP";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+    public class V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0
+    {
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0
+    {
+        public const string TEN_NHOM = "TEN_NHOM";
+        public const string MA_KHACH_HANG = "MA_KHACH_HANG";
+        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0
+    {
+        public const string ID_NGUOI_THUC_HIEN = "ID_NGUOI_THUC_HIEN";
+        public const string TEN = "TEN";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
     public class v_BAO_CAO_DOANH_THU_THEO_NGAY
     {
         public const string NGAY_GD = "NGAY_GD";
