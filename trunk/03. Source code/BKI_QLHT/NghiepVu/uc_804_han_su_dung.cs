@@ -26,16 +26,17 @@ namespace BKI_QLHT
             InitializeComponent();
             format_controls();
         }
-
         #region Data Structure
         private enum e_col_Number
         {
-            TEN_DON_VI = 4
+            tdvsd = 3
 ,
-            HAN_SU_DUNG = 2
+            tdvgd = 4
+                ,
+            HAN_SU_DUNG = 5
                 ,
             TEN_THUOC = 1
-                , SO_DU = 3
+                , SO_DU = 2
 
         }
         #endregion
@@ -51,17 +52,24 @@ namespace BKI_QLHT
         {
             CControlFormat.setUserControlStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_grv_han_su_dung);
+            m_fg.Tree.Column = (int)e_col_Number.TEN_THUOC;
+            m_fg.Cols[(int)e_col_Number.tdvsd].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TEN_DANH_MUC].Visible = false;
+            //m_fg.Cols[0].Caption = "STT";
+            //m_fg.Cols[6].Caption = "Số dư";
+            m_fg.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
             set_define_events();
         }
         private void set_initial_form_load()
         {
-            m_obj_trans = get_trans_object(m_grv_han_su_dung);
+            m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
-            v_htb.Add(V_HAN_SU_DUNG.TEN_DON_VI, e_col_Number.TEN_DON_VI);
+            //v_htb.Add(V_HAN_SU_DUNG.tdvsd, e_col_Number.tdvsd);
+            //v_htb.Add(V_HAN_SU_DUNG.tdvgd, e_col_Number.tdvgd);
             v_htb.Add(V_HAN_SU_DUNG.HAN_SU_DUNG, e_col_Number.HAN_SU_DUNG);
             v_htb.Add(V_HAN_SU_DUNG.TEN_THUOC, e_col_Number.TEN_THUOC);
             v_htb.Add(V_HAN_SU_DUNG.SO_DU, e_col_Number.SO_DU);
@@ -72,16 +80,24 @@ namespace BKI_QLHT
         private void load_data_2_grid()
         {
             m_ds = new DS_V_HAN_SU_DUNG();
+            m_us.dcSO_DU = m_us.dcSO_LUONG_NHAP - m_us.dcSO_LUONG_BAN;
             m_us.FillDataset(m_ds);
-            m_grv_han_su_dung.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_grv_han_su_dung, m_obj_trans);
-            m_grv_han_su_dung.Redraw = true;
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_fg);
+            m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Sum // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
+              , 0
+              , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình nhóm
+              , (int)e_col_Number.SO_DU // chỗ này là tên trường mà mình Count
+              , "{0}"
+              );
+            m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_HAN_SU_DUNG i_us
             , int i_grid_row)
         {
             DataRow v_dr;
-            v_dr = (DataRow)m_grv_han_su_dung.Rows[i_grid_row].UserData;
+            v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
             i_us.DataRow2Me(v_dr);
         }
@@ -90,7 +106,7 @@ namespace BKI_QLHT
         private void us_object2grid(US_V_HAN_SU_DUNG i_us
             , int i_grid_row)
         {
-            DataRow v_dr = (DataRow)m_grv_han_su_dung.Rows[i_grid_row].UserData;
+            DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
@@ -98,34 +114,34 @@ namespace BKI_QLHT
 
         private void insert_v_han_su_dung()
         {
-            //	f_804_han_su_dung_DE v_fDE = new  f_804_han_su_dung_DE();								
+            //	frm_V_HAN_SU_DUNG_DE v_fDE = new  frm_V_HAN_SU_DUNG_DE();								
             //	v_fDE.display();
             load_data_2_grid();
         }
 
         private void update_v_han_su_dung()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_han_su_dung)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_han_su_dung, m_grv_han_su_dung.Row)) return;
-            grid2us_object(m_us, m_grv_han_su_dung.Row);
-            //	f_804_han_su_dung_DE v_fDE = new f_804_han_su_dung_DE();
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            //	frm_V_HAN_SU_DUNG_DE v_fDE = new frm_V_HAN_SU_DUNG_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();
         }
 
         private void delete_v_han_su_dung()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_han_su_dung)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_han_su_dung, m_grv_han_su_dung.Row)) return;
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
             US_V_HAN_SU_DUNG v_us = new US_V_HAN_SU_DUNG();
-            grid2us_object(v_us, m_grv_han_su_dung.Row);
+            grid2us_object(v_us, m_fg.Row);
             try
             {
                 v_us.BeginTransaction();
                 v_us.Delete();
                 v_us.CommitTransaction();
-                m_grv_han_su_dung.Rows.Remove(m_grv_han_su_dung.Row);
+                m_fg.Rows.Remove(m_fg.Row);
             }
             catch (Exception v_e)
             {
@@ -138,16 +154,16 @@ namespace BKI_QLHT
 
         private void view_v_han_su_dung()
         {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_han_su_dung)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_han_su_dung, m_grv_han_su_dung.Row)) return;
-            grid2us_object(m_us, m_grv_han_su_dung.Row);
-            //	f_804_han_su_dung_DE v_fDE = new f_804_han_su_dung_DE();			
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            //	frm_V_HAN_SU_DUNG_DE v_fDE = new frm_V_HAN_SU_DUNG_DE();			
             //	v_fDE.display(m_us);
         }
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-            this.Load += new EventHandler(f_804_han_su_dung_Load);
+            this.Load += new EventHandler(frm_V_HAN_SU_DUNG_Load);
         }
         #endregion
 
@@ -156,8 +172,9 @@ namespace BKI_QLHT
         //		EVENT HANLDERS
         //
         //
+
         #region events
-        private void f_804_han_su_dung_Load(object sender, System.EventArgs e)
+        private void frm_V_HAN_SU_DUNG_Load(object sender, System.EventArgs e)
         {
             try
             {
@@ -173,7 +190,6 @@ namespace BKI_QLHT
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {
             try
-
             {
                 this.Controls.Clear();
                 //this.Close();
@@ -255,6 +271,6 @@ namespace BKI_QLHT
 
         }
 
-       
+        
     }
 }

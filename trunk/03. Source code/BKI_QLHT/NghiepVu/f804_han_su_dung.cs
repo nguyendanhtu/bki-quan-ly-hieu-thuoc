@@ -218,7 +218,11 @@ namespace BKI_QLHT
 
 		#region Data Structure
 		private enum e_col_Number{
-			TEN_DON_VI = 3,HAN_SU_DUNG = 2,TEN_THUOC = 1,SO_DU = 4
+			TEN_DON_VI = 3
+,HAN_SU_DUNG = 2
+,TEN_THUOC = 1
+,SO_DU = 4
+
 		}			
 		#endregion
 
@@ -241,7 +245,11 @@ namespace BKI_QLHT
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(V_HAN_SU_DUNG.TEN_DON_VI, e_col_Number.TEN_DON_VI);			v_htb.Add(V_HAN_SU_DUNG.HAN_SU_DUNG, e_col_Number.HAN_SU_DUNG);			v_htb.Add(V_HAN_SU_DUNG.TEN_THUOC, e_col_Number.TEN_THUOC);			v_htb.Add(V_HAN_SU_DUNG.SO_DU, e_col_Number.SO_DU);									
+			//v_htb.Add(V_HAN_SU_DUNG.tdvsd, e_col_Number.TEN_DON_VI);
+			v_htb.Add(V_HAN_SU_DUNG.HAN_SU_DUNG, e_col_Number.HAN_SU_DUNG);
+			v_htb.Add(V_HAN_SU_DUNG.TEN_THUOC, e_col_Number.TEN_THUOC);
+			v_htb.Add(V_HAN_SU_DUNG.SO_DU, e_col_Number.SO_DU);
+									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_HAN_SU_DUNG.NewRow());
 			return v_obj_trans;			
 		}

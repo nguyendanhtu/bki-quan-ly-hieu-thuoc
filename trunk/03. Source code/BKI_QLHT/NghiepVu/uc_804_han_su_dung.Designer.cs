@@ -39,8 +39,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.m_cbo_thoi_gian = new System.Windows.Forms.ComboBox();
             this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
+            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_han_su_dung)).BeginInit();
             this.m_pnl_control.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -178,10 +180,20 @@
             this.m_cmd_tim_kiem.Text = "Tìm kiếm";
             this.m_cmd_tim_kiem.Click += new System.EventHandler(this.m_cmd_tim_kiem_Click);
             // 
+            // m_fg
+            // 
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Location = new System.Drawing.Point(8, 137);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(663, 244);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 27;
+            // 
             // uc_804_han_su_dung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_cmd_tim_kiem);
             this.Controls.Add(this.m_cbo_thoi_gian);
             this.Controls.Add(this.label2);
@@ -192,6 +204,7 @@
             this.Size = new System.Drawing.Size(671, 425);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_han_su_dung)).EndInit();
             this.m_pnl_control.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +221,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox m_cbo_thoi_gian;
         internal SIS.Controls.Button.SiSButton m_cmd_tim_kiem;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
     }
 }
