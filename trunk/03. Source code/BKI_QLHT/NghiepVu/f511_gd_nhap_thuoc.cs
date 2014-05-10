@@ -141,6 +141,7 @@ namespace BKI_QLHT
             m_cbo_don_vi_tinh.DataSource = v_ds_tu_dien.CM_DM_TU_DIEN;
             m_cbo_don_vi_tinh.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_don_vi_tinh.DisplayMember = CM_DM_TU_DIEN.TEN;
+            m_cbo_don_vi_tinh.Enabled = true;
         }
         private void load_cbo_dv_cap_2_start()
         {
@@ -150,6 +151,7 @@ namespace BKI_QLHT
             m_cbo_dv_cap_2.DataSource = v_ds_tu_dien.CM_DM_TU_DIEN;
             m_cbo_dv_cap_2.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_dv_cap_2.DisplayMember = CM_DM_TU_DIEN.TEN;
+            m_cbo_dv_cap_2.Enabled = true;
         }
         private void load_cbo_dv_cap_3_start()
         {
@@ -159,6 +161,7 @@ namespace BKI_QLHT
             m_cbo_dv_cap_3.DataSource = v_ds_tu_dien.CM_DM_TU_DIEN;
             m_cbo_dv_cap_3.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_dv_cap_3.DisplayMember = CM_DM_TU_DIEN.TEN;
+            m_cbo_dv_cap_3.Enabled = true;
         }
         private void load_cbo_dv_cap_4_start()
         {
@@ -168,6 +171,7 @@ namespace BKI_QLHT
             m_cbo_dv_cap_4.DataSource = v_ds_tu_dien.CM_DM_TU_DIEN;
             m_cbo_dv_cap_4.ValueMember = CM_DM_TU_DIEN.ID;
             m_cbo_dv_cap_4.DisplayMember = CM_DM_TU_DIEN.TEN;
+            m_cbo_dv_cap_4.Enabled = true;
         }
         private void load_data_2_cbo_don_vi()
         {
@@ -419,7 +423,7 @@ namespace BKI_QLHT
         {
             US_GD_DON_VI_TINH_THUOC v_us_gd_dv_tinh_thuoc = new US_GD_DON_VI_TINH_THUOC();
             DS_GD_DON_VI_TINH_THUOC v_ds_gd_dv_tinh_thuoc = new DS_GD_DON_VI_TINH_THUOC();
-            foreach (data v_list  in list)
+            foreach (data v_list in list)
             {
 
                 v_us_gd_dv_tinh_thuoc.FillDataset(v_ds_gd_dv_tinh_thuoc, "where id_nhom_don_vi_tinh=" + v_list.ID_nhom_dv_tinh);
@@ -491,8 +495,8 @@ namespace BKI_QLHT
                     m_cbo_dv_cap_4.SelectedValue = v_list.ID_dv_cap_4;
                 }
                 else
-                {     
-                    
+                {
+
                     v_ds_gd_dv_tinh_thuoc.Clear();
                     v_us_gd_dv_tinh_thuoc.FillDataset(v_ds_gd_dv_tinh_thuoc, "where  id_nhom_don_vi_tinh='" + v_list.ID_nhom_dv_tinh + "' and ten_don_vi like N'%Thùng%'");
                     v_list.ID_dv_cap_1 = CIPConvert.ToDecimal(v_ds_gd_dv_tinh_thuoc.Tables[0].Rows[0]["ID"]);
@@ -738,7 +742,7 @@ namespace BKI_QLHT
                     m_txt_quy_doi_3.Text = "1";
                 }
 
-                
+
             }
             else
             {
@@ -1006,7 +1010,8 @@ namespace BKI_QLHT
                     list.Clear();
                     m_grv_nhap_thuoc.Rows.Clear();
                 }
-                else {
+                else
+                {
                     BaseMessages.MsgBox_Infor("Bạn cần nhấn nút thêm trước khi lưu");
                     m_cmd_add.Focus();
                 }
@@ -1048,8 +1053,8 @@ namespace BKI_QLHT
             try
             {
                 if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
-                list.RemoveAt(m_grv_nhap_thuoc.Rows[0].Index);
-                m_grv_nhap_thuoc.Rows.RemoveAt(m_grv_nhap_thuoc.Rows[0].Index);
+                list.RemoveAt(m_grv_nhap_thuoc.SelectedRows[0].Index);
+                m_grv_nhap_thuoc.Rows.RemoveAt(m_grv_nhap_thuoc.SelectedRows[0].Index);
                 restart_form();
             }
             catch (Exception v_e)
@@ -1102,7 +1107,7 @@ namespace BKI_QLHT
         }
         #endregion
 
-        
+
 
         //private void m_txt_so_luong_KeyPress(object sender, KeyPressEventArgs e)
         //{
@@ -1118,7 +1123,7 @@ namespace BKI_QLHT
 
         //}
 
-       
+
 
     }
 }
