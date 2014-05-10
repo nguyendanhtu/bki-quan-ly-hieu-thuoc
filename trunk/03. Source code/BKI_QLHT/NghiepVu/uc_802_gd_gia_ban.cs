@@ -71,10 +71,17 @@ namespace BKI_QLHT
         }
         private void load_data_2_grid()
         {
-            m_ds = new DS_V_GD_GIA_BAN();
-            m_us.FillDataset(m_ds);
+            //m_ds = new DS_V_GD_GIA_BAN();
+            //m_us.FillDataset(m_ds);
+            //m_grv_v_gd_gia.Redraw = false;
+            //CGridUtils.Dataset2C1Grid(m_ds, m_grv_v_gd_gia, m_obj_trans);
+            //m_grv_v_gd_gia.Redraw = true;
+            decimal dc_id = m_txts_ten_thuoc.dcID;
+            US_V_GD_GIA_BAN v_us_v_gd_gia_ban = new US_V_GD_GIA_BAN();
+            DS_V_GD_GIA_BAN v_ds_v_gd_gia_ban = new DS_V_GD_GIA_BAN();
+            v_us_v_gd_gia_ban.FillDatasetbyTenThuoc(v_ds_v_gd_gia_ban, dc_id);
             m_grv_v_gd_gia.Redraw = false;
-            CGridUtils.Dataset2C1Grid(m_ds, m_grv_v_gd_gia, m_obj_trans);
+            CGridUtils.Dataset2C1Grid(v_ds_v_gd_gia_ban, m_grv_v_gd_gia, m_obj_trans);
             m_grv_v_gd_gia.Redraw = true;
         }
         private void grid2us_object(US_V_GD_GIA_BAN i_us
