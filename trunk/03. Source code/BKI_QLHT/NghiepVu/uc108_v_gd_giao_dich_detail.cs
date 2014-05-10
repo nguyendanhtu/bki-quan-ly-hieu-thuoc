@@ -94,7 +94,7 @@ namespace BKI_QLHT.NghiepVu
         US_GD_GIAO_DICH_DETAIL m_us_giao_dich_detail = new US_GD_GIAO_DICH_DETAIL();
         DS_GD_GIAO_DICH_DETAIL m_ds_giao_dich_detail = new DS_GD_GIAO_DICH_DETAIL();
         bool trang_thai = false;
-        bool flag = false;
+        bool flag_sua = false;
         List<data> list = new List<data>();
         
         #endregion
@@ -128,6 +128,7 @@ namespace BKI_QLHT.NghiepVu
         private void format_control()
         {
             m_lbl_Ma_GD_text.Text = gen_Ma_GD();
+            m_lbl_ngay_GD.Text = CIPConvert.ToStr(CAppContext_201.getCurentDate());
             //CControlFormat.setFormStyle(this);
             CControlFormat.setUserControlStyle(this, new CAppContext_201());
             m_grv_quan_ly_ban_thuoc.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -521,7 +522,7 @@ namespace BKI_QLHT.NghiepVu
             US_GD_GIAO_DICH v_us = new US_GD_GIAO_DICH();
             DS_GD_GIAO_DICH v_ds = new DS_GD_GIAO_DICH();
             v_us.strMA_GIAO_DICH = m_lbl_Ma_GD_text.Text;
-            v_us.datNGAY_GIAO_DICH = m_dt_ngay_giao_dich.Value;
+            v_us.datNGAY_GIAO_DICH = CIPConvert.ToDatetime(m_lbl_ngay_GD.Text);
             v_us.dcID_NGUOI_THUC_HIEN = CAppContext_201.getCurrentUserID();
             v_us.dcID_KHACH_HANG = CIPConvert.ToDecimal(m_cbo_ten_khach_hang.SelectedValue);
             v_us.dcID_LOAI_GIAO_DICH = 2;
@@ -542,6 +543,7 @@ namespace BKI_QLHT.NghiepVu
         {
             try
             {
+                flag_sua = true;
                 m_cmd_them.Visible = false;
                 m_cmd_luu.Visible = false;
                 m_lbl_luu.Visible = false;
@@ -823,6 +825,7 @@ namespace BKI_QLHT.NghiepVu
         {
             try
             {
+                flag_sua = false;
                 m_cmd_them.Visible = true;
                 m_cmd_luu.Visible = true;
                 m_lbl_luu.Visible = true;
@@ -844,8 +847,160 @@ namespace BKI_QLHT.NghiepVu
             }
    
         }
-        
-     
+
+        private void m_txt_so_luong_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+                    if (flag_sua == false)
+                    {
+                        if (!check_validate()) return;
+                        if (!check_so_luong()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_so_luong.Focus(); return; }
+                        if (!check_don_gia()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_don_gia.Focus(); return; }
+                        if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_ti_le_chiet_khau.Focus(); return; }
+                        if (!check_so_luong_va_so_du()) return;
+                        add_list();
+                        if (list.Count == 0) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); return; };
+                        int n = m_grv_quan_ly_ban_thuoc.Rows.Add();
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[0].Value = n + 1;
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[1].Value = txt_search_thuoc1.Text1;
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.ToString().Replace(",", ""))) + " " + "VNĐ";
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",", "")))) + " " + "VNĐ";
+                        tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", ""));
+                        m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+                        m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+                        txt_search_thuoc1.Focus();
+                        m_cbo_don_vi_tinh.Refresh();
+                        m_txt_don_gia.Clear();
+                    }
+                    else
+                    {
+                        if (!check_validate()) return;
+                        if (!check_so_luong()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_so_luong.Focus(); return; }
+                        if (!check_don_gia()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_don_gia.Focus(); return; }
+                        if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_ti_le_chiet_khau.Focus(); return; }
+                        if (!check_so_luong_va_so_du()) return;
+                        //tính tổng cũ
+                        decimal tong_cu;
+                        tong_cu = list[m_i_fg].so_luong_ban * list[m_i_fg].gia_ban;
+                        // sửa dữ liệu trong list
+                        list[m_i_fg].so_luong_ban = CIPConvert.ToDecimal(m_txt_so_luong.Text);
+                        list[m_i_fg].ten_don_vi_tinh = m_cbo_don_vi_tinh.Text;
+                        list[m_i_fg].gia_ban = CIPConvert.ToDecimal(m_txt_don_gia.Text);
+                        //load dữ liệu xuống grid
+                        m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[2].Value = m_txt_so_luong.Text;
+                        m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value = m_cbo_don_vi_tinh.Text;
+                        m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value = m_txt_don_gia.Text;
+                        m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[5].Value = CIPConvert.ToDecimal(m_txt_don_gia.Text) * CIPConvert.ToDecimal(m_txt_so_luong.Text);
+                        tong_tien = (tong_tien - tong_cu) + (int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "")));
+                        m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+                        m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+                        //thông báo và thoát khỏi chế độ sửa
+                        BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
+                        m_cmd_them.Visible = true;
+                        m_cmd_luu.Visible = true;
+                        m_lbl_luu.Visible = true;
+                        m_cmd_sua.Visible = true;
+                        m_lbl_sua.Visible = true;
+                        m_cmd_in.Visible = true;
+                        m_lbl_in.Visible = true;
+                        txt_search_thuoc1.Visible = true;
+                        m_cmd_tro_ve.Visible = false;
+                        m_lbl_tro_lai.Visible = false;
+                        m_cmd_cap_nhat.Visible = false;
+                        m_lbl_cap_nhat.Visible = false;
+                        m_txt_cap_nhat_ten_thuoc.Visible = false;
+                    }
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+            
+        }
+
+        private void m_txt_don_gia_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Enter)
+                {
+                    if (flag_sua == false)
+                    {
+                        if (!check_validate()) return;
+                        if (!check_so_luong()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_so_luong.Focus(); return; }
+                        if (!check_don_gia()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_don_gia.Focus(); return; }
+                        if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_ti_le_chiet_khau.Focus(); return; }
+                        if (!check_so_luong_va_so_du()) return;
+                        add_list();
+                        if (list.Count == 0) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); return; };
+                        int n = m_grv_quan_ly_ban_thuoc.Rows.Add();
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[0].Value = n + 1;
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[1].Value = txt_search_thuoc1.Text1;
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.ToString().Replace(",", ""))) + " " + "VNĐ";
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",", "")))) + " " + "VNĐ";
+                        tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", ""));
+                        m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+                        m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+                        txt_search_thuoc1.Focus();
+                        m_cbo_don_vi_tinh.Refresh();
+                        m_txt_don_gia.Clear();
+                    }
+                    else
+                    {
+                        if (!check_validate()) return;
+                        if (!check_so_luong()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_so_luong.Focus(); return; }
+                        if (!check_don_gia()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_don_gia.Focus(); return; }
+                        if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn nhập dữ liệu chưa đúng!"); m_txt_ti_le_chiet_khau.Focus(); return; }
+                        if (!check_so_luong_va_so_du()) return;
+                        //tính tổng cũ
+                        decimal tong_cu;
+                        tong_cu = list[m_i_fg].so_luong_ban * list[m_i_fg].gia_ban;
+                        // sửa dữ liệu trong list
+                        list[m_i_fg].so_luong_ban = CIPConvert.ToDecimal(m_txt_so_luong.Text);
+                        list[m_i_fg].ten_don_vi_tinh = m_cbo_don_vi_tinh.Text;
+                        list[m_i_fg].gia_ban = CIPConvert.ToDecimal(m_txt_don_gia.Text);
+                        //load dữ liệu xuống grid
+                        m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[2].Value = m_txt_so_luong.Text;
+                        m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value = m_cbo_don_vi_tinh.Text;
+                        m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value = m_txt_don_gia.Text;
+                        m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[5].Value = CIPConvert.ToDecimal(m_txt_don_gia.Text) * CIPConvert.ToDecimal(m_txt_so_luong.Text);
+                        tong_tien = (tong_tien - tong_cu) + (int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "")));
+                        m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+                        m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
+                        //thông báo và thoát khỏi chế độ sửa
+                        BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
+                        m_cmd_them.Visible = true;
+                        m_cmd_luu.Visible = true;
+                        m_lbl_luu.Visible = true;
+                        m_cmd_sua.Visible = true;
+                        m_lbl_sua.Visible = true;
+                        m_cmd_in.Visible = true;
+                        m_lbl_in.Visible = true;
+                        txt_search_thuoc1.Visible = true;
+                        m_cmd_tro_ve.Visible = false;
+                        m_lbl_tro_lai.Visible = false;
+                        m_cmd_cap_nhat.Visible = false;
+                        m_lbl_cap_nhat.Visible = false;
+                        m_txt_cap_nhat_ten_thuoc.Visible = false;
+                    }
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
         //private void m_cbo_don_vi_tinh_KeyDown(object sender, KeyEventArgs e)
         //{
