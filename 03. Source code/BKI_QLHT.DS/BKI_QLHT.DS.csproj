@@ -235,6 +235,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NCC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -747,6 +752,17 @@
     </None>
     <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NCC.xss">
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0.xsc">
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0.xss">
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0.xsd</DependentUpon>
     </None>
     <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.xsc">
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.xsd</DependentUpon>
