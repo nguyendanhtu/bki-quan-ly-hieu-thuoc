@@ -109,12 +109,14 @@ namespace BKI_QLHT
                    {
                        case DataEntryFormMode.InsertDataState:
                            m_us_dm_khach_hang.Insert();
+                           BaseMessages.MsgBox_Infor("Thêm mới thành công");
                            this.Close();
                            break;
                        case DataEntryFormMode.SelectDataState:
                            break;
                        case DataEntryFormMode.UpdateDataState:
                            m_us_dm_khach_hang.Update();
+                           BaseMessages.MsgBox_Infor("Thay đổi thành công");
                            this.Close();
                            break;
                        case DataEntryFormMode.ViewDataState:
@@ -218,12 +220,14 @@ namespace BKI_QLHT
                        {
                            case DataEntryFormMode.InsertDataState:
                                m_us_dm_khach_hang.Insert();
+                               BaseMessages.MsgBox_Infor("Thêm mới thành công");
                                this.Close();
                                break;
                            case DataEntryFormMode.SelectDataState:
                                break;
                            case DataEntryFormMode.UpdateDataState:
                                m_us_dm_khach_hang.Update();
+                               BaseMessages.MsgBox_Infor("Thay đổi thành công");
                                this.Close();
                                break;
                            case DataEntryFormMode.ViewDataState:

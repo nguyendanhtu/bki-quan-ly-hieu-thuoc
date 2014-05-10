@@ -128,6 +128,7 @@ namespace BKI_QLHT
                 break;
             case DataEntryFormMode.UpdateDataState:
                 m_us_v_dm_gia.Update();
+                BaseMessages.MsgBox_Infor("Thay đổi thành công");
                 this.Close();
                 break;
             case DataEntryFormMode.ViewDataState:
