@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc108_v_gd_giao_dich_detail));
             this.m_grv_quan_ly_ban_thuoc = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +65,7 @@
             this.m_lbl_in = new System.Windows.Forms.Label();
             this.m_lbl_xoa = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.m_txt_don_gia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -84,17 +84,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.m_lbl_Ma_GD_text = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi_text = new System.Windows.Forms.Label();
-            this.bKI_QLHTDataSet1 = new BKI_QLHT.BKI_QLHTDataSet1();
-            this.vDMTHUOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.v_DM_THUOCTableAdapter = new BKI_QLHT.BKI_QLHTDataSet1TableAdapters.V_DM_THUOCTableAdapter();
-            this.txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_quan_ly_ban_thuoc)).BeginInit();
             this.m_group_chi_tiet_thong_tin_ban.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.m_group_thong_tin_khach_hang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bKI_QLHTDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vDMTHUOCBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // m_grv_quan_ly_ban_thuoc
@@ -515,6 +509,24 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Đơn giá";
             // 
+            // txt_search_thuoc1
+            // 
+            this.txt_search_thuoc1.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txt_search_thuoc1.DisplayMember = null;
+            this.txt_search_thuoc1.Location = new System.Drawing.Point(157, 24);
+            this.txt_search_thuoc1.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_search_thuoc1.Name = "txt_search_thuoc1";
+            this.txt_search_thuoc1.Size = new System.Drawing.Size(321, 25);
+            this.txt_search_thuoc1.str_query = null;
+            this.txt_search_thuoc1.TabIndex = 0;
+            this.txt_search_thuoc1.Text1 = null;
+            this.txt_search_thuoc1.ValueMember = null;
+            this.txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_thuoc1_KeyDown);
+            // 
             // m_txt_don_gia
             // 
             this.m_txt_don_gia.Location = new System.Drawing.Point(909, 30);
@@ -720,38 +732,6 @@
             this.m_lbl_dia_chi_text.TabIndex = 1;
             this.m_lbl_dia_chi_text.Text = "................................................................";
             // 
-            // bKI_QLHTDataSet1
-            // 
-            this.bKI_QLHTDataSet1.DataSetName = "BKI_QLHTDataSet1";
-            this.bKI_QLHTDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vDMTHUOCBindingSource
-            // 
-            this.vDMTHUOCBindingSource.DataMember = "V_DM_THUOC";
-            this.vDMTHUOCBindingSource.DataSource = this.bKI_QLHTDataSet1;
-            // 
-            // v_DM_THUOCTableAdapter
-            // 
-            this.v_DM_THUOCTableAdapter.ClearBeforeFill = true;
-            // 
-            // txt_search_thuoc1
-            // 
-            this.txt_search_thuoc1.dcID = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txt_search_thuoc1.DisplayMember = null;
-            this.txt_search_thuoc1.Location = new System.Drawing.Point(157, 24);
-            this.txt_search_thuoc1.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_search_thuoc1.Name = "txt_search_thuoc1";
-            this.txt_search_thuoc1.Size = new System.Drawing.Size(321, 25);
-            this.txt_search_thuoc1.str_query = null;
-            this.txt_search_thuoc1.TabIndex = 0;
-            this.txt_search_thuoc1.Text1 = null;
-            this.txt_search_thuoc1.ValueMember = null;
-            this.txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_thuoc1_KeyDown);
-            // 
             // uc108_v_gd_giao_dich_detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -770,8 +750,6 @@
             this.panel2.PerformLayout();
             this.m_group_thong_tin_khach_hang.ResumeLayout(false);
             this.m_group_thong_tin_khach_hang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bKI_QLHTDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vDMTHUOCBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -825,9 +803,8 @@
         private System.Windows.Forms.Button m_cmd_cap_nhat;
         private System.Windows.Forms.Label m_lbl_cap_nhat;
         private System.Windows.Forms.TextBox m_txt_cap_nhat_ten_thuoc;
-        private System.Windows.Forms.BindingSource vDMTHUOCBindingSource;
-        private BKI_QLHTDataSet1 bKI_QLHTDataSet1;
-        private BKI_QLHTDataSet1TableAdapters.V_DM_THUOCTableAdapter v_DM_THUOCTableAdapter;
+        //private BKI_QLHTDataSet1 bKI_QLHTDataSet1;
+        //private BKI_QLHTDataSet1TableAdapters.V_DM_THUOCTableAdapter v_DM_THUOCTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TEN_THUOC;
         private System.Windows.Forms.DataGridViewTextBoxColumn SO_LUONG;
