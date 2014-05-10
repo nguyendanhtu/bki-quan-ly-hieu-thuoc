@@ -32,17 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_804_han_su_dung));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_grv_han_su_dung = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.m_cbo_thoi_gian = new System.Windows.Forms.ComboBox();
             this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            ((System.ComponentModel.ISupportInitialize)(this.m_grv_han_su_dung)).BeginInit();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.m_grv_han_su_dung = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_pnl_control.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grv_han_su_dung)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -99,14 +98,15 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
-            // m_grv_han_su_dung
+            // m_pnl_control
             // 
-            this.m_grv_han_su_dung.ColumnInfo = resources.GetString("m_grv_han_su_dung.ColumnInfo");
-            this.m_grv_han_su_dung.Location = new System.Drawing.Point(0, 137);
-            this.m_grv_han_su_dung.Name = "m_grv_han_su_dung";
-            this.m_grv_han_su_dung.Size = new System.Drawing.Size(667, 236);
-            this.m_grv_han_su_dung.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_han_su_dung.Styles"));
-            this.m_grv_han_su_dung.TabIndex = 22;
+            this.m_pnl_control.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 389);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_control.Size = new System.Drawing.Size(671, 36);
+            this.m_pnl_control.TabIndex = 21;
             // 
             // m_cmd_exit
             // 
@@ -122,16 +122,6 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            // 
-            // m_pnl_control
-            // 
-            this.m_pnl_control.Controls.Add(this.m_cmd_exit);
-            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 389);
-            this.m_pnl_control.Name = "m_pnl_control";
-            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(671, 36);
-            this.m_pnl_control.TabIndex = 21;
             // 
             // label1
             // 
@@ -180,31 +170,56 @@
             this.m_cmd_tim_kiem.Text = "Tìm kiếm";
             this.m_cmd_tim_kiem.Click += new System.EventHandler(this.m_cmd_tim_kiem_Click);
             // 
-            // m_fg
+            // imageList2
             // 
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(8, 137);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(663, 244);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 27;
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "");
+            this.imageList2.Images.SetKeyName(1, "");
+            this.imageList2.Images.SetKeyName(2, "");
+            this.imageList2.Images.SetKeyName(3, "");
+            this.imageList2.Images.SetKeyName(4, "");
+            this.imageList2.Images.SetKeyName(5, "");
+            this.imageList2.Images.SetKeyName(6, "");
+            this.imageList2.Images.SetKeyName(7, "");
+            this.imageList2.Images.SetKeyName(8, "");
+            this.imageList2.Images.SetKeyName(9, "");
+            this.imageList2.Images.SetKeyName(10, "");
+            this.imageList2.Images.SetKeyName(11, "");
+            this.imageList2.Images.SetKeyName(12, "");
+            this.imageList2.Images.SetKeyName(13, "");
+            this.imageList2.Images.SetKeyName(14, "");
+            this.imageList2.Images.SetKeyName(15, "");
+            this.imageList2.Images.SetKeyName(16, "");
+            this.imageList2.Images.SetKeyName(17, "");
+            this.imageList2.Images.SetKeyName(18, "");
+            this.imageList2.Images.SetKeyName(19, "");
+            this.imageList2.Images.SetKeyName(20, "");
+            this.imageList2.Images.SetKeyName(21, "");
+            // 
+            // m_grv_han_su_dung
+            // 
+            this.m_grv_han_su_dung.ColumnInfo = resources.GetString("m_grv_han_su_dung.ColumnInfo");
+            this.m_grv_han_su_dung.Location = new System.Drawing.Point(0, 136);
+            this.m_grv_han_su_dung.Name = "m_grv_han_su_dung";
+            this.m_grv_han_su_dung.Size = new System.Drawing.Size(668, 251);
+            this.m_grv_han_su_dung.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_han_su_dung.Styles"));
+            this.m_grv_han_su_dung.TabIndex = 28;
             // 
             // uc_804_han_su_dung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.m_fg);
+            this.Controls.Add(this.m_grv_han_su_dung);
             this.Controls.Add(this.m_cmd_tim_kiem);
             this.Controls.Add(this.m_cbo_thoi_gian);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.m_grv_han_su_dung);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "uc_804_han_su_dung";
             this.Size = new System.Drawing.Size(671, 425);
-            ((System.ComponentModel.ISupportInitialize)(this.m_grv_han_su_dung)).EndInit();
             this.m_pnl_control.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_grv_han_su_dung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,13 +229,13 @@
 
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.ImageList imageList1;
-        private C1.Win.C1FlexGrid.C1FlexGrid m_grv_han_su_dung;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal System.Windows.Forms.Panel m_pnl_control;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox m_cbo_thoi_gian;
         internal SIS.Controls.Button.SiSButton m_cmd_tim_kiem;
-        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        internal System.Windows.Forms.ImageList imageList2;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_grv_han_su_dung;
     }
 }
