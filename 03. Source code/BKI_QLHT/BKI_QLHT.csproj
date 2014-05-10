@@ -377,7 +377,9 @@
     <Compile Include="NghiepVu\f804_han_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\frm_V_HAN_SU_DUNG.cs" />
+    <Compile Include="NghiepVu\frm_V_HAN_SU_DUNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NghiepVu\f_804_han_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
