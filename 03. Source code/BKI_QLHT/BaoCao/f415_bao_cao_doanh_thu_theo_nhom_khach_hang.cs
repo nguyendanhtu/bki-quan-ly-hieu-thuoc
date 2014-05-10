@@ -39,7 +39,7 @@ namespace BKI_QLHT
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private Label label1;
         private Label label2;
-        private Label m_lbl_tong_doanh_thu;
+        private Label m_lbl_doanh_thu;
         internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         private Label label3;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
@@ -96,7 +96,7 @@ namespace BKI_QLHT
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.m_lbl_tong_doanh_thu = new System.Windows.Forms.Label();
+            this.m_lbl_doanh_thu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
@@ -145,7 +145,7 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(713, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(819, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_xuat_excel
@@ -172,7 +172,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(621, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(727, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -184,7 +184,7 @@ namespace BKI_QLHT
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_fg.Location = new System.Drawing.Point(0, 97);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(713, 276);
+            this.m_fg.Size = new System.Drawing.Size(819, 276);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -206,20 +206,20 @@ namespace BKI_QLHT
             this.label2.TabIndex = 22;
             this.label2.Text = "Tổng doanh thu trong báo cáo: ";
             // 
-            // m_lbl_tong_doanh_thu
+            // m_lbl_doanh_thu
             // 
-            this.m_lbl_tong_doanh_thu.AutoSize = true;
-            this.m_lbl_tong_doanh_thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_tong_doanh_thu.Location = new System.Drawing.Point(181, 78);
-            this.m_lbl_tong_doanh_thu.Name = "m_lbl_tong_doanh_thu";
-            this.m_lbl_tong_doanh_thu.Size = new System.Drawing.Size(56, 13);
-            this.m_lbl_tong_doanh_thu.TabIndex = 23;
-            this.m_lbl_tong_doanh_thu.Text = "0000000";
+            this.m_lbl_doanh_thu.AutoSize = true;
+            this.m_lbl_doanh_thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_doanh_thu.Location = new System.Drawing.Point(181, 78);
+            this.m_lbl_doanh_thu.Name = "m_lbl_doanh_thu";
+            this.m_lbl_doanh_thu.Size = new System.Drawing.Size(56, 13);
+            this.m_lbl_doanh_thu.TabIndex = 23;
+            this.m_lbl_doanh_thu.Text = "0000000";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 20);
+            this.label3.Location = new System.Drawing.Point(191, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2753;
@@ -233,7 +233,7 @@ namespace BKI_QLHT
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 18;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(564, 12);
+            this.m_cmd_search.Location = new System.Drawing.Point(690, 12);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 2752;
@@ -244,7 +244,7 @@ namespace BKI_QLHT
             this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_tim_kiem.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(143, 17);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(269, 17);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(401, 20);
             this.m_txt_tim_kiem.TabIndex = 2751;
@@ -252,7 +252,7 @@ namespace BKI_QLHT
             // m_lbl_nguoi_lam_bc
             // 
             this.m_lbl_nguoi_lam_bc.AutoSize = true;
-            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(627, 56);
+            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(708, 56);
             this.m_lbl_nguoi_lam_bc.Name = "m_lbl_nguoi_lam_bc";
             this.m_lbl_nguoi_lam_bc.Size = new System.Drawing.Size(63, 13);
             this.m_lbl_nguoi_lam_bc.TabIndex = 2757;
@@ -261,7 +261,7 @@ namespace BKI_QLHT
             // m_lbl_ngay_lam_bc
             // 
             this.m_lbl_ngay_lam_bc.AutoSize = true;
-            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(627, 78);
+            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(708, 78);
             this.m_lbl_ngay_lam_bc.Name = "m_lbl_ngay_lam_bc";
             this.m_lbl_ngay_lam_bc.Size = new System.Drawing.Size(60, 13);
             this.m_lbl_ngay_lam_bc.TabIndex = 2756;
@@ -270,7 +270,7 @@ namespace BKI_QLHT
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(487, 78);
+            this.label4.Location = new System.Drawing.Point(568, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 2755;
@@ -279,7 +279,7 @@ namespace BKI_QLHT
             // m_lbl_nguoi_lam_bao_cao
             // 
             this.m_lbl_nguoi_lam_bao_cao.AutoSize = true;
-            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(487, 56);
+            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(568, 56);
             this.m_lbl_nguoi_lam_bao_cao.Name = "m_lbl_nguoi_lam_bao_cao";
             this.m_lbl_nguoi_lam_bao_cao.Size = new System.Drawing.Size(96, 13);
             this.m_lbl_nguoi_lam_bao_cao.TabIndex = 2754;
@@ -307,7 +307,7 @@ namespace BKI_QLHT
             // f415_bao_cao_doanh_thu_theo_nhom_khach_hang
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(713, 409);
+            this.ClientSize = new System.Drawing.Size(819, 409);
             this.Controls.Add(this.m_lbl_count);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.m_lbl_nguoi_lam_bc);
@@ -317,7 +317,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.label3);
             this.Controls.Add(this.m_cmd_search);
             this.Controls.Add(this.m_txt_tim_kiem);
-            this.Controls.Add(this.m_lbl_tong_doanh_thu);
+            this.Controls.Add(this.m_lbl_doanh_thu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_fg);
@@ -367,6 +367,7 @@ namespace BKI_QLHT
             m_lbl_ngay_lam_bc.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
             m_lbl_count.ForeColor = Color.Red;
+            m_lbl_doanh_thu.ForeColor = Color.Red;
             //m_lbl_count.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.Text = v_us.strTEN.Trim();
             m_lbl_ngay_lam_bc.Text = DateTime.Now.Date.ToShortDateString();
@@ -438,6 +439,14 @@ namespace BKI_QLHT
               , "{0}"
               );
             m_lbl_count.Text = m_v_ds.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.Count.ToString(CultureInfo.InvariantCulture);
+            decimal v_dc_tong_doanh_thu = 0;
+            //m_v_us.get_tong_doanh_thu(v_dc_tong_doanh_thu);
+            for (int i = 0; i < m_v_ds.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.Count; i++)
+            {
+                v_dc_tong_doanh_thu += CIPConvert.ToDecimal(m_v_ds.Tables[0].Rows[i][V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.DOANH_THU]);
+            }
+            m_lbl_doanh_thu.Text = CIPConvert.ToStr(v_dc_tong_doanh_thu, "#,###.##");
+            
             m_fg.Redraw = true;
             set_search_format_before();
         }

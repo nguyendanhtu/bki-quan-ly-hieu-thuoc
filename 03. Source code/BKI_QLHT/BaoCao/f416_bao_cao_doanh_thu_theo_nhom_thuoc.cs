@@ -378,7 +378,7 @@ namespace BKI_QLHT
             foreach (DataRow dr in m_v_ds.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC)
             {
                 v_acsc_search.Add(dr[V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.TEN_NHOM].ToString());
-                //v_acsc_search.Add(dr[V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.TEN_THUOC].ToString());
+                v_acsc_search.Add(dr[V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.TEN_THUOC].ToString());
                 
             }
             m_txt_tim_kiem.AutoCompleteCustomSource = v_acsc_search;
