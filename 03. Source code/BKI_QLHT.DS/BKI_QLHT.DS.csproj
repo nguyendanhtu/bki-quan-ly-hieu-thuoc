@@ -47,6 +47,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_DM_BAC_SY.cs">
       <DependentUpon>DS_DM_BAC_SY.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -259,10 +264,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_V_BAO_CAO_KIEM_KE_KHO.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -394,6 +409,17 @@
     </None>
     <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.xss">
       <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsc">
+      <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xss">
+      <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsd</DependentUpon>
     </None>
     <None Include="DS_DM_BAC_SY.xsc">
       <DependentUpon>DS_DM_BAC_SY.xsd</DependentUpon>
@@ -802,6 +828,17 @@
     <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.xss">
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.xsd</DependentUpon>
     </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.xsc">
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.xss">
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.xsd</DependentUpon>
+    </None>
     <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.xsc">
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.xsd</DependentUpon>
     </None>
@@ -812,6 +849,17 @@
     </None>
     <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.xss">
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xsc">
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xss">
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xsd</DependentUpon>
     </None>
     <None Include="DS_V_BAO_CAO_KIEM_KE_KHO.xsc">
       <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>

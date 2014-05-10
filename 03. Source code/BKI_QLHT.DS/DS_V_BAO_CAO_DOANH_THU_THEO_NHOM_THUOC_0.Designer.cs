@@ -20,17 +20,17 @@ namespace BKI_QLHT.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0 : global::System.Data.DataSet {
+    public partial class DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 : global::System.Data.DataSet {
         
-        private V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0;
+        private V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0() {
+        public DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BKI_QLHT.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace BKI_QLHT.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0"] != null)) {
-                    base.Tables.Add(new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable(ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0"]));
+                if ((ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0"] != null)) {
+                    base.Tables.Add(new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable(ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace BKI_QLHT.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0 {
+        public V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 {
             get {
-                return this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0;
+                return this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0;
             }
         }
         
@@ -127,7 +127,7 @@ namespace BKI_QLHT.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0 cln = ((DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0)(base.Clone()));
+            DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 cln = ((DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace BKI_QLHT.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0"] != null)) {
-                    base.Tables.Add(new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable(ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0"]));
+                if ((ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0"] != null)) {
+                    base.Tables.Add(new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable(ds.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace BKI_QLHT.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0 = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable)(base.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0"]));
+            this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable)(base.Tables["V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0"]));
             if ((initTable == true)) {
-                if ((this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0 != null)) {
-                    this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.InitVars();
+                if ((this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 != null)) {
+                    this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace BKI_QLHT.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0";
+            this.DataSetName = "DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0.xsd";
+            this.Namespace = "http://tempuri.org/DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0 = new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable();
-            base.Tables.Add(this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0);
+            this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 = new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable();
+            base.Tables.Add(this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0() {
+        private bool ShouldSerializeV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace BKI_QLHT.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0 ds = new DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0();
+            DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 ds = new DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,23 @@ namespace BKI_QLHT.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEventHandler(object sender, V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEvent e);
+        public delegate void V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEventHandler(object sender, V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
             
             private global::System.Data.DataColumn columnTEN_NHOM;
-            
-            private global::System.Data.DataColumn columnMA_KHACH_HANG;
-            
-            private global::System.Data.DataColumn columnTEN_KHACH_HANG;
             
             private global::System.Data.DataColumn columnDOANH_THU;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable() {
-                this.TableName = "V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0";
+            public V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable() {
+                this.TableName = "V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +294,7 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable(global::System.Data.DataTable table) {
+            internal V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +311,7 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -325,22 +321,6 @@ namespace BKI_QLHT.DS {
             public global::System.Data.DataColumn TEN_NHOMColumn {
                 get {
                     return this.columnTEN_NHOM;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MA_KHACH_HANGColumn {
-                get {
-                    return this.columnMA_KHACH_HANG;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TEN_KHACH_HANGColumn {
-                get {
-                    return this.columnTEN_KHACH_HANG;
                 }
             }
             
@@ -363,42 +343,40 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row this[int index] {
+            public V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row this[int index] {
                 get {
-                    return ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row)(this.Rows[index]));
+                    return ((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEventHandler V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChanging;
+            public event V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEventHandler V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEventHandler V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChanged;
+            public event V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEventHandler V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEventHandler V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowDeleting;
+            public event V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEventHandler V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEventHandler V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowDeleted;
+            public event V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEventHandler V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row(V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row row) {
+            public void AddV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row(V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row AddV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row(string TEN_NHOM, string MA_KHACH_HANG, string TEN_KHACH_HANG, decimal DOANH_THU) {
-                V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row rowV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row)(this.NewRow()));
+            public V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row AddV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row(string TEN_NHOM, decimal DOANH_THU) {
+                V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row rowV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TEN_NHOM,
-                        MA_KHACH_HANG,
-                        TEN_KHACH_HANG,
                         DOANH_THU};
-                rowV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row);
-                return rowV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row;
+                rowV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row);
+                return rowV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -410,7 +388,7 @@ namespace BKI_QLHT.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable cln = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable)(base.Clone()));
+                V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable cln = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -418,15 +396,13 @@ namespace BKI_QLHT.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable();
+                return new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnTEN_NHOM = base.Columns["TEN_NHOM"];
-                this.columnMA_KHACH_HANG = base.Columns["MA_KHACH_HANG"];
-                this.columnTEN_KHACH_HANG = base.Columns["TEN_KHACH_HANG"];
                 this.columnDOANH_THU = base.Columns["DOANH_THU"];
             }
             
@@ -435,44 +411,36 @@ namespace BKI_QLHT.DS {
             private void InitClass() {
                 this.columnTEN_NHOM = new global::System.Data.DataColumn("TEN_NHOM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTEN_NHOM);
-                this.columnMA_KHACH_HANG = new global::System.Data.DataColumn("MA_KHACH_HANG", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMA_KHACH_HANG);
-                this.columnTEN_KHACH_HANG = new global::System.Data.DataColumn("TEN_KHACH_HANG", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTEN_KHACH_HANG);
                 this.columnDOANH_THU = new global::System.Data.DataColumn("DOANH_THU", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDOANH_THU);
                 this.columnTEN_NHOM.AllowDBNull = false;
-                this.columnTEN_NHOM.MaxLength = 50;
-                this.columnMA_KHACH_HANG.AllowDBNull = false;
-                this.columnMA_KHACH_HANG.MaxLength = 50;
-                this.columnTEN_KHACH_HANG.AllowDBNull = false;
-                this.columnTEN_KHACH_HANG.MaxLength = 50;
+                this.columnTEN_NHOM.MaxLength = 250;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row NewV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row() {
-                return ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row)(this.NewRow()));
+            public V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row NewV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row() {
+                return ((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row(builder);
+                return new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row);
+                return typeof(V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChanged != null)) {
-                    this.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChanged(this, new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEvent(((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row)(e.Row)), e.Action));
+                if ((this.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChanged != null)) {
+                    this.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChanged(this, new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEvent(((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row)(e.Row)), e.Action));
                 }
             }
             
@@ -480,8 +448,8 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChanging != null)) {
-                    this.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChanging(this, new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEvent(((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row)(e.Row)), e.Action));
+                if ((this.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChanging != null)) {
+                    this.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChanging(this, new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEvent(((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row)(e.Row)), e.Action));
                 }
             }
             
@@ -489,8 +457,8 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowDeleted != null)) {
-                    this.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowDeleted(this, new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEvent(((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row)(e.Row)), e.Action));
+                if ((this.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowDeleted != null)) {
+                    this.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowDeleted(this, new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEvent(((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row)(e.Row)), e.Action));
                 }
             }
             
@@ -498,14 +466,14 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowDeleting != null)) {
-                    this.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowDeleting(this, new V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEvent(((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row)(e.Row)), e.Action));
+                if ((this.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowDeleting != null)) {
+                    this.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowDeleting(this, new V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEvent(((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row(V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row row) {
+            public void RemoveV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row(V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -514,7 +482,7 @@ namespace BKI_QLHT.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0 ds = new DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0();
+                DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 ds = new DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -532,7 +500,7 @@ namespace BKI_QLHT.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable";
+                attribute2.FixedValue = "V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -576,47 +544,25 @@ namespace BKI_QLHT.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row : global::System.Data.DataRow {
+        public partial class V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row : global::System.Data.DataRow {
             
-            private V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0;
+            private V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row(global::System.Data.DataRowBuilder rb) : 
+            internal V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0 = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable)(this.Table));
+                this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TEN_NHOM {
                 get {
-                    return ((string)(this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.TEN_NHOMColumn]));
+                    return ((string)(this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.TEN_NHOMColumn]));
                 }
                 set {
-                    this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.TEN_NHOMColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MA_KHACH_HANG {
-                get {
-                    return ((string)(this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.MA_KHACH_HANGColumn]));
-                }
-                set {
-                    this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.MA_KHACH_HANGColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TEN_KHACH_HANG {
-                get {
-                    return ((string)(this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.TEN_KHACH_HANGColumn]));
-                }
-                set {
-                    this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.TEN_KHACH_HANGColumn] = value;
+                    this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.TEN_NHOMColumn] = value;
                 }
             }
             
@@ -625,28 +571,28 @@ namespace BKI_QLHT.DS {
             public decimal DOANH_THU {
                 get {
                     try {
-                        return ((decimal)(this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.DOANH_THUColumn]));
+                        return ((decimal)(this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.DOANH_THUColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DOANH_THU\' in table \'V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HA" +
-                                "NG_0\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DOANH_THU\' in table \'V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0\'" +
+                                " is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.DOANH_THUColumn] = value;
+                    this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.DOANH_THUColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsDOANH_THUNull() {
-                return this.IsNull(this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.DOANH_THUColumn);
+                return this.IsNull(this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.DOANH_THUColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDOANH_THUNull() {
-                this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.DOANH_THUColumn] = global::System.Convert.DBNull;
+                this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.DOANH_THUColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -654,22 +600,22 @@ namespace BKI_QLHT.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEvent : global::System.EventArgs {
+        public class V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEvent : global::System.EventArgs {
             
-            private V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row eventRow;
+            private V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0RowChangeEvent(V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row row, global::System.Data.DataRowAction action) {
+            public V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0RowChangeEvent(V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0Row Row {
+            public V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -685,7 +631,7 @@ namespace BKI_QLHT.DS {
         }
     }
 }
-namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
+namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0TableAdapters {
     
     
     /// <summary>
@@ -697,7 +643,7 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0TableAdapter : global::System.ComponentModel.Component {
+    public partial class V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -711,7 +657,7 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0TableAdapter() {
+        public V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -808,10 +754,8 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0";
+            tableMapping.DataSetTable = "V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0";
             tableMapping.ColumnMappings.Add("TEN_NHOM", "TEN_NHOM");
-            tableMapping.ColumnMappings.Add("MA_KHACH_HANG", "MA_KHACH_HANG");
-            tableMapping.ColumnMappings.Add("TEN_KHACH_HANG", "TEN_KHACH_HANG");
             tableMapping.ColumnMappings.Add("DOANH_THU", "DOANH_THU");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -829,8 +773,7 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TEN_NHOM, MA_KHACH_HANG, TEN_KHACH_HANG, DOANH_THU FROM dbo.V_BAO_CAO_DOAN" +
-                "H_THU_THEO_NHOM_KHACH_HANG_0";
+            this._commandCollection[0].CommandText = "SELECT TEN_NHOM, DOANH_THU FROM dbo.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -838,7 +781,7 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable dataTable) {
+        public virtual int Fill(DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -851,9 +794,9 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable GetData() {
+        public virtual DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable dataTable = new DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0DataTable();
+            DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable dataTable = new DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -927,7 +870,7 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -937,7 +880,7 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -947,7 +890,7 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -981,7 +924,7 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DS_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0 dataSet) {
+        public virtual int UpdateAll(DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
