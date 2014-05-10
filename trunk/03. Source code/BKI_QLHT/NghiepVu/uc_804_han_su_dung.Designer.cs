@@ -102,10 +102,10 @@
             // 
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 389);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 534);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(671, 36);
+            this.m_pnl_control.Size = new System.Drawing.Size(1145, 36);
             this.m_pnl_control.TabIndex = 21;
             // 
             // m_cmd_exit
@@ -117,7 +117,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.imageList1;
-            this.m_cmd_exit.Location = new System.Drawing.Point(579, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1053, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -127,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(243, 32);
+            this.label1.Location = new System.Drawing.Point(496, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 23);
             this.label1.TabIndex = 23;
@@ -137,7 +137,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(61, 85);
+            this.label2.Location = new System.Drawing.Point(315, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
             this.label2.TabIndex = 24;
@@ -150,7 +150,7 @@
             "Dưới 1 tháng",
             "Từ  1 tháng đến 3 tháng",
             "Trên 3 tháng"});
-            this.m_cbo_thoi_gian.Location = new System.Drawing.Point(166, 85);
+            this.m_cbo_thoi_gian.Location = new System.Drawing.Point(429, 80);
             this.m_cbo_thoi_gian.Name = "m_cbo_thoi_gian";
             this.m_cbo_thoi_gian.Size = new System.Drawing.Size(315, 21);
             this.m_cbo_thoi_gian.TabIndex = 25;
@@ -163,7 +163,7 @@
             this.m_cmd_tim_kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_tim_kiem.ImageIndex = 5;
             this.m_cmd_tim_kiem.ImageList = this.imageList1;
-            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(507, 85);
+            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(768, 78);
             this.m_cmd_tim_kiem.Name = "m_cmd_tim_kiem";
             this.m_cmd_tim_kiem.Size = new System.Drawing.Size(88, 23);
             this.m_cmd_tim_kiem.TabIndex = 26;
@@ -202,7 +202,7 @@
             this.m_grv_han_su_dung.ColumnInfo = resources.GetString("m_grv_han_su_dung.ColumnInfo");
             this.m_grv_han_su_dung.Location = new System.Drawing.Point(0, 136);
             this.m_grv_han_su_dung.Name = "m_grv_han_su_dung";
-            this.m_grv_han_su_dung.Size = new System.Drawing.Size(668, 251);
+            this.m_grv_han_su_dung.Size = new System.Drawing.Size(1124, 396);
             this.m_grv_han_su_dung.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_han_su_dung.Styles"));
             this.m_grv_han_su_dung.TabIndex = 28;
             // 
@@ -217,7 +217,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "uc_804_han_su_dung";
-            this.Size = new System.Drawing.Size(671, 425);
+            this.Size = new System.Drawing.Size(1145, 570);
             this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_han_su_dung)).EndInit();
             this.ResumeLayout(false);

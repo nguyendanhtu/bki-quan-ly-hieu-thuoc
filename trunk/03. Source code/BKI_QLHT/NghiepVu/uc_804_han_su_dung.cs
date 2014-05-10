@@ -262,6 +262,13 @@ namespace BKI_QLHT
             }
             m_grv_han_su_dung.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds_v_han_su_dung, m_grv_han_su_dung, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_grv_han_su_dung);
+            m_grv_han_su_dung.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
+              , 0
+              , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình nhóm
+              , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
+              , "{0}"
+              );
             m_grv_han_su_dung.Redraw = true;
 
         }    
