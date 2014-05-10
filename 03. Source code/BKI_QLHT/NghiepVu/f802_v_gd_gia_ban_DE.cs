@@ -147,5 +147,70 @@ namespace BKI_QLHT
             }
         }
         #endregion
+
+        private void m_txt_gia_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    form_2_us_obj();
+                    switch (m_e_form_mode)
+                    {
+                        case DataEntryFormMode.InsertDataState:
+                            break;
+                        case DataEntryFormMode.SelectDataState:
+                            break;
+                        case DataEntryFormMode.UpdateDataState:
+                            m_us_gd_gia_ban.Update();
+                            m_us_gd_gia_ban_2 = m_us_gd_gia_ban;
+                            US_V_GD_GIA_BAN v_v_gd_gia_ban = new US_V_GD_GIA_BAN(m_us_gd_gia_ban.dcID);
+                            US_V_GD_GIA_BAN v_v_gd_gia_ban_2 = new US_V_GD_GIA_BAN(m_us_gd_gia_ban_2.dcID);
+
+                            for (int i = 1; i <= 3; i++)
+                            {
+                                decimal v_gia_ban = m_us_gd_gia_ban.dcGIA_BAN;
+                                //if (v_v_gd_gia_ban.dcID_DON_VI_CHA != null)
+                                //{            
+                                m_ds_v_gd_gia_ban.Clear();
+                                v_v_gd_gia_ban.FillDataset(m_ds_v_gd_gia_ban, "where V_GD_GIA_BAN.ID_DON_VI_TINH=" + v_v_gd_gia_ban.dcID_DON_VI_CHA);
+                                if (m_ds_v_gd_gia_ban.V_GD_GIA_BAN.Count != 0)
+                                {
+                                    decimal id = CIPConvert.ToDecimal(m_ds_v_gd_gia_ban.Tables[0].Rows[0]["ID"]);
+                                    m_us_gd_gia_ban = new US_GD_GIA_BAN(id);
+                                    m_us_gd_gia_ban.dcGIA_BAN = v_gia_ban * v_v_gd_gia_ban.dcQUY_DOI;
+                                    m_us_gd_gia_ban.Update();
+                                    v_v_gd_gia_ban = new US_V_GD_GIA_BAN(m_us_gd_gia_ban.dcID);
+                                }
+                            }
+                            for (int i = 1; i <= 3; i++)
+                            {
+
+                                decimal v_gia_ban = m_us_gd_gia_ban_2.dcGIA_BAN;
+                                m_ds_v_gd_gia_ban.Clear();
+                                v_v_gd_gia_ban_2.FillDataset(m_ds_v_gd_gia_ban, "where V_GD_GIA_BAN.ID_DON_VI_CHA=" + v_v_gd_gia_ban_2.dcID_DON_VI_TINH);
+                                if (m_ds_v_gd_gia_ban.V_GD_GIA_BAN.Count != 0)
+                                {
+                                    decimal id = CIPConvert.ToDecimal(m_ds_v_gd_gia_ban.Tables[0].Rows[0]["ID"]);
+                                    m_us_gd_gia_ban_2 = new US_GD_GIA_BAN(id);
+                                    v_v_gd_gia_ban_2 = new US_V_GD_GIA_BAN(m_us_gd_gia_ban_2.dcID);
+                                    m_us_gd_gia_ban_2.dcGIA_BAN = v_gia_ban / v_v_gd_gia_ban_2.dcQUY_DOI;
+                                    m_us_gd_gia_ban_2.Update();
+                                }
+                            }
+                            this.Close();
+                            break;
+                        case DataEntryFormMode.ViewDataState:
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                catch (Exception v_e)
+                {
+                    CSystemLog_301.ExceptionHandle(v_e);
+                }
+            }
+        }
     }
 }

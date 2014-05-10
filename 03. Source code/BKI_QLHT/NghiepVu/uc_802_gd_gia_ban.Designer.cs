@@ -75,10 +75,10 @@
             this.m_pnl_control.Controls.Add(this.m_cmd_update);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 403);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 534);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(696, 36);
+            this.m_pnl_control.Size = new System.Drawing.Size(1145, 36);
             this.m_pnl_control.TabIndex = 21;
             // 
             // m_cmd_update
@@ -90,7 +90,7 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(516, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(965, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -105,7 +105,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(604, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1053, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -117,7 +117,7 @@
             this.m_grv_v_gd_gia.ColumnInfo = resources.GetString("m_grv_v_gd_gia.ColumnInfo");
             this.m_grv_v_gd_gia.Location = new System.Drawing.Point(0, 161);
             this.m_grv_v_gd_gia.Name = "m_grv_v_gd_gia";
-            this.m_grv_v_gd_gia.Size = new System.Drawing.Size(693, 240);
+            this.m_grv_v_gd_gia.Size = new System.Drawing.Size(1141, 371);
             this.m_grv_v_gd_gia.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_v_gd_gia.Styles"));
             this.m_grv_v_gd_gia.TabIndex = 22;
             // 
@@ -125,7 +125,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(261, 33);
+            this.label1.Location = new System.Drawing.Point(468, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 23);
             this.label1.TabIndex = 23;
@@ -135,7 +135,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(129, 92);
+            this.label2.Location = new System.Drawing.Point(303, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 24;
@@ -149,7 +149,7 @@
             this.m_cmd_refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_refresh.ImageIndex = 9;
             this.m_cmd_refresh.ImageList = this.ImageList;
-            this.m_cmd_refresh.Location = new System.Drawing.Point(506, 92);
+            this.m_cmd_refresh.Location = new System.Drawing.Point(764, 103);
             this.m_cmd_refresh.Name = "m_cmd_refresh";
             this.m_cmd_refresh.Size = new System.Drawing.Size(88, 22);
             this.m_cmd_refresh.TabIndex = 26;
@@ -164,9 +164,9 @@
             0,
             0});
             this.m_txts_ten_thuoc.DisplayMember = null;
-            this.m_txts_ten_thuoc.Location = new System.Drawing.Point(209, 92);
+            this.m_txts_ten_thuoc.Location = new System.Drawing.Point(393, 105);
             this.m_txts_ten_thuoc.Name = "m_txts_ten_thuoc";
-            this.m_txts_ten_thuoc.Size = new System.Drawing.Size(276, 20);
+            this.m_txts_ten_thuoc.Size = new System.Drawing.Size(335, 20);
             this.m_txts_ten_thuoc.str_query = null;
             this.m_txts_ten_thuoc.TabIndex = 25;
             this.m_txts_ten_thuoc.Text1 = null;
@@ -184,7 +184,7 @@
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.m_grv_v_gd_gia);
             this.Name = "uc_802_gd_gia_ban";
-            this.Size = new System.Drawing.Size(696, 439);
+            this.Size = new System.Drawing.Size(1145, 570);
             this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_v_gd_gia)).EndInit();
             this.ResumeLayout(false);
