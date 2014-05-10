@@ -279,8 +279,6 @@ namespace BKI_QLHT.DS {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
             
-            private global::System.Data.DataColumn columnID;
-            
             private global::System.Data.DataColumn columnTEN_NHOM;
             
             private global::System.Data.DataColumn columnMA_KHACH_HANG;
@@ -324,14 +322,6 @@ namespace BKI_QLHT.DS {
             protected V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
-                get {
-                    return this.columnID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -419,10 +409,9 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow AddV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow(decimal ID, string TEN_NHOM, string MA_KHACH_HANG, string TEN_KHACH_HANG, string TEN_THUOC, decimal SO_LUONG_BAN, decimal DOANH_THU) {
+            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow AddV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow(string TEN_NHOM, string MA_KHACH_HANG, string TEN_KHACH_HANG, string TEN_THUOC, decimal SO_LUONG_BAN, decimal DOANH_THU) {
                 V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow rowV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
                         TEN_NHOM,
                         MA_KHACH_HANG,
                         TEN_KHACH_HANG,
@@ -432,13 +421,6 @@ namespace BKI_QLHT.DS {
                 rowV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow);
                 return rowV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow FindByID(decimal ID) {
-                return ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow)(this.Rows.Find(new object[] {
-                            ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -464,7 +446,6 @@ namespace BKI_QLHT.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
                 this.columnTEN_NHOM = base.Columns["TEN_NHOM"];
                 this.columnMA_KHACH_HANG = base.Columns["MA_KHACH_HANG"];
                 this.columnTEN_KHACH_HANG = base.Columns["TEN_KHACH_HANG"];
@@ -476,8 +457,6 @@ namespace BKI_QLHT.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
                 this.columnTEN_NHOM = new global::System.Data.DataColumn("TEN_NHOM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTEN_NHOM);
                 this.columnMA_KHACH_HANG = new global::System.Data.DataColumn("MA_KHACH_HANG", typeof(string), null, global::System.Data.MappingType.Element);
@@ -490,10 +469,6 @@ namespace BKI_QLHT.DS {
                 base.Columns.Add(this.columnSO_LUONG_BAN);
                 this.columnDOANH_THU = new global::System.Data.DataColumn("DOANH_THU", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDOANH_THU);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
                 this.columnTEN_NHOM.AllowDBNull = false;
                 this.columnTEN_NHOM.MaxLength = 50;
                 this.columnMA_KHACH_HANG.AllowDBNull = false;
@@ -640,17 +615,6 @@ namespace BKI_QLHT.DS {
             internal V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG = ((V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal ID {
-                get {
-                    return ((decimal)(this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.IDColumn]));
-                }
-                set {
-                    this[this.tableV_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.IDColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -915,7 +879,6 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG";
-            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("TEN_NHOM", "TEN_NHOM");
             tableMapping.ColumnMappings.Add("MA_KHACH_HANG", "MA_KHACH_HANG");
             tableMapping.ColumnMappings.Add("TEN_KHACH_HANG", "TEN_KHACH_HANG");
@@ -938,8 +901,8 @@ namespace BKI_QLHT.DS.DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANGTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, TEN_NHOM, MA_KHACH_HANG, TEN_KHACH_HANG, TEN_THUOC, SO_LUONG_BAN, DOAN" +
-                "H_THU FROM dbo.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG";
+            this._commandCollection[0].CommandText = "SELECT TEN_NHOM, MA_KHACH_HANG, TEN_KHACH_HANG, TEN_THUOC, SO_LUONG_BAN, DOANH_TH" +
+                "U FROM dbo.V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
