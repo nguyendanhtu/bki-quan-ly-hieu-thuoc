@@ -119,6 +119,8 @@
             // 
             // m_cbo_nhom_thuoc
             // 
+            this.m_cbo_nhom_thuoc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.m_cbo_nhom_thuoc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.m_cbo_nhom_thuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhom_thuoc.FormattingEnabled = true;
             this.m_cbo_nhom_thuoc.Location = new System.Drawing.Point(134, 117);
@@ -128,6 +130,8 @@
             // 
             // m_cbo_danh_muc_thuoc
             // 
+            this.m_cbo_danh_muc_thuoc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.m_cbo_danh_muc_thuoc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.m_cbo_danh_muc_thuoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_danh_muc_thuoc.FormattingEnabled = true;
             this.m_cbo_danh_muc_thuoc.Location = new System.Drawing.Point(134, 88);
