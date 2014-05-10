@@ -154,6 +154,7 @@
             this.m_cbo_thoi_gian.Name = "m_cbo_thoi_gian";
             this.m_cbo_thoi_gian.Size = new System.Drawing.Size(315, 21);
             this.m_cbo_thoi_gian.TabIndex = 25;
+            this.m_cbo_thoi_gian.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_cbo_thoi_gian_KeyUp);
             // 
             // m_cmd_tim_kiem
             // 

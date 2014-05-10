@@ -271,6 +271,46 @@ namespace BKI_QLHT
               );
             m_grv_han_su_dung.Redraw = true;
 
+        }
+
+        private void m_cbo_thoi_gian_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    US_V_HAN_SU_DUNG v_us_v_han_su_dung = new US_V_HAN_SU_DUNG();
+                    DS_V_HAN_SU_DUNG v_ds_v_han_su_dung = new DS_V_HAN_SU_DUNG();
+                    if (m_cbo_thoi_gian.Text == "Dưới 1 tháng")
+                    {
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0");
+                    }
+                    if (m_cbo_thoi_gian.Text == "Từ  1 tháng đến 3 tháng")
+                    {
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90");
+                    }
+                    if (m_cbo_thoi_gian.Text == "Trên 3 tháng")
+                    {
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90");
+                    }
+                    m_grv_han_su_dung.Redraw = false;
+                    CGridUtils.Dataset2C1Grid(v_ds_v_han_su_dung, m_grv_han_su_dung, m_obj_trans);
+                    CGridUtils.MakeSoTT(0, m_grv_han_su_dung);
+                    m_grv_han_su_dung.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
+                      , 0
+                      , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình nhóm
+                      , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
+                      , "{0}"
+                      );
+                    m_grv_han_su_dung.Redraw = true;
+                }
+
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }    
     }
 }

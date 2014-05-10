@@ -357,7 +357,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(409, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(789, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -398,7 +398,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_cmd_tim_kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_tim_kiem.ImageIndex = 5;
             this.m_cmd_tim_kiem.ImageList = this.ImageList;
-            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(567, 52);
+            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(789, 57);
             this.m_cmd_tim_kiem.Name = "m_cmd_tim_kiem";
             this.m_cmd_tim_kiem.Size = new System.Drawing.Size(88, 22);
             this.m_cmd_tim_kiem.TabIndex = 42;
@@ -407,7 +407,7 @@ namespace BKI_QLHT.DanhMuc
             // 
             // m_txt_tu_khoa
             // 
-            this.m_txt_tu_khoa.Location = new System.Drawing.Point(220, 54);
+            this.m_txt_tu_khoa.Location = new System.Drawing.Point(419, 56);
             this.m_txt_tu_khoa.Name = "m_txt_tu_khoa";
             this.m_txt_tu_khoa.Size = new System.Drawing.Size(328, 20);
             this.m_txt_tu_khoa.TabIndex = 41;
@@ -422,7 +422,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(497, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(877, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -433,7 +433,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_grv_nha_cung_cap.ColumnInfo = resources.GetString("m_grv_nha_cung_cap.ColumnInfo");
             this.m_grv_nha_cung_cap.Location = new System.Drawing.Point(0, 99);
             this.m_grv_nha_cung_cap.Name = "m_grv_nha_cung_cap";
-            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(754, 341);
+            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1141, 429);
             this.m_grv_nha_cung_cap.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nha_cung_cap.Styles"));
             this.m_grv_nha_cung_cap.TabIndex = 38;
             this.m_grv_nha_cung_cap.Click += new System.EventHandler(this.m_grv_nha_cung_cap_Click);
@@ -448,7 +448,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(585, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(965, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -463,7 +463,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(673, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1053, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -473,7 +473,7 @@ namespace BKI_QLHT.DanhMuc
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(138, 54);
+            this.label2.Location = new System.Drawing.Point(320, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 40;
@@ -483,7 +483,7 @@ namespace BKI_QLHT.DanhMuc
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(270, 3);
+            this.label1.Location = new System.Drawing.Point(459, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(248, 23);
             this.label1.TabIndex = 39;
@@ -496,10 +496,10 @@ namespace BKI_QLHT.DanhMuc
             this.m_pnl_control.Controls.Add(this.m_cmd_delete);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 442);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 534);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(765, 36);
+            this.m_pnl_control.Size = new System.Drawing.Size(1145, 36);
             this.m_pnl_control.TabIndex = 37;
             // 
             // uc805_dm_nuoc_san_xuat
@@ -511,7 +511,7 @@ namespace BKI_QLHT.DanhMuc
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "uc805_dm_nuoc_san_xuat";
-            this.Size = new System.Drawing.Size(765, 478);
+            this.Size = new System.Drawing.Size(1145, 570);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nha_cung_cap)).EndInit();
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);

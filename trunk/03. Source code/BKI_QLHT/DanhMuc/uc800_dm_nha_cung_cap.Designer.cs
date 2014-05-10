@@ -63,7 +63,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(405, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(789, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -105,7 +105,7 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(493, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(877, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -116,7 +116,7 @@
             this.m_grv_nha_cung_cap.ColumnInfo = resources.GetString("m_grv_nha_cung_cap.ColumnInfo");
             this.m_grv_nha_cung_cap.Location = new System.Drawing.Point(0, 117);
             this.m_grv_nha_cung_cap.Name = "m_grv_nha_cung_cap";
-            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(754, 191);
+            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1145, 191);
             this.m_grv_nha_cung_cap.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nha_cung_cap.Styles"));
             this.m_grv_nha_cung_cap.TabIndex = 22;
             this.m_grv_nha_cung_cap.Click += new System.EventHandler(this.m_grv_nha_cung_cap_Click);
@@ -131,7 +131,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(581, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(965, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -146,7 +146,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(669, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1053, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -159,17 +159,17 @@
             this.m_pnl_control.Controls.Add(this.m_cmd_delete);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 525);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 534);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(761, 36);
+            this.m_pnl_control.Size = new System.Drawing.Size(1145, 36);
             this.m_pnl_control.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(270, 21);
+            this.label1.Location = new System.Drawing.Point(440, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 23);
             this.label1.TabIndex = 23;
@@ -179,7 +179,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(138, 72);
+            this.label2.Location = new System.Drawing.Point(297, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 24;
@@ -187,7 +187,7 @@
             // 
             // m_txt_tu_khoa
             // 
-            this.m_txt_tu_khoa.Location = new System.Drawing.Point(220, 72);
+            this.m_txt_tu_khoa.Location = new System.Drawing.Point(403, 65);
             this.m_txt_tu_khoa.Name = "m_txt_tu_khoa";
             this.m_txt_tu_khoa.Size = new System.Drawing.Size(328, 20);
             this.m_txt_tu_khoa.TabIndex = 26;
@@ -201,7 +201,7 @@
             this.m_cmd_tim_kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_tim_kiem.ImageIndex = 5;
             this.m_cmd_tim_kiem.ImageList = this.ImageList;
-            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(567, 70);
+            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(776, 63);
             this.m_cmd_tim_kiem.Name = "m_cmd_tim_kiem";
             this.m_cmd_tim_kiem.Size = new System.Drawing.Size(88, 22);
             this.m_cmd_tim_kiem.TabIndex = 27;
@@ -212,7 +212,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(305, 331);
+            this.label3.Location = new System.Drawing.Point(490, 332);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 23);
             this.label3.TabIndex = 28;
@@ -222,7 +222,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(92, 409);
+            this.label4.Location = new System.Drawing.Point(136, 409);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 16);
             this.label4.TabIndex = 29;
@@ -232,7 +232,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(97, 468);
+            this.label5.Location = new System.Drawing.Point(141, 468);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 16);
             this.label5.TabIndex = 30;
@@ -242,7 +242,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(517, 409);
+            this.label6.Location = new System.Drawing.Point(835, 409);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 16);
             this.label6.TabIndex = 31;
@@ -252,7 +252,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(531, 468);
+            this.label7.Location = new System.Drawing.Point(849, 468);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 16);
             this.label7.TabIndex = 32;
@@ -262,7 +262,7 @@
             // 
             this.m_lbl_ten_nha_cung_cap.AutoSize = true;
             this.m_lbl_ten_nha_cung_cap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_ten_nha_cung_cap.Location = new System.Drawing.Point(217, 409);
+            this.m_lbl_ten_nha_cung_cap.Location = new System.Drawing.Point(261, 409);
             this.m_lbl_ten_nha_cung_cap.Name = "m_lbl_ten_nha_cung_cap";
             this.m_lbl_ten_nha_cung_cap.Size = new System.Drawing.Size(64, 16);
             this.m_lbl_ten_nha_cung_cap.TabIndex = 33;
@@ -272,7 +272,7 @@
             // 
             this.m_lbl_ma_nha_cung_cap.AutoSize = true;
             this.m_lbl_ma_nha_cung_cap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_ma_nha_cung_cap.Location = new System.Drawing.Point(217, 468);
+            this.m_lbl_ma_nha_cung_cap.Location = new System.Drawing.Point(261, 468);
             this.m_lbl_ma_nha_cung_cap.Name = "m_lbl_ma_nha_cung_cap";
             this.m_lbl_ma_nha_cung_cap.Size = new System.Drawing.Size(64, 16);
             this.m_lbl_ma_nha_cung_cap.TabIndex = 34;
@@ -282,7 +282,7 @@
             // 
             this.m_lbl_dia_chi.AutoSize = true;
             this.m_lbl_dia_chi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_dia_chi.Location = new System.Drawing.Point(579, 409);
+            this.m_lbl_dia_chi.Location = new System.Drawing.Point(913, 409);
             this.m_lbl_dia_chi.Name = "m_lbl_dia_chi";
             this.m_lbl_dia_chi.Size = new System.Drawing.Size(64, 16);
             this.m_lbl_dia_chi.TabIndex = 35;
@@ -292,7 +292,7 @@
             // 
             this.m_lbl_sdt.AutoSize = true;
             this.m_lbl_sdt.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_sdt.Location = new System.Drawing.Point(579, 468);
+            this.m_lbl_sdt.Location = new System.Drawing.Point(913, 468);
             this.m_lbl_sdt.Name = "m_lbl_sdt";
             this.m_lbl_sdt.Size = new System.Drawing.Size(64, 16);
             this.m_lbl_sdt.TabIndex = 36;
@@ -318,7 +318,7 @@
             this.Controls.Add(this.m_grv_nha_cung_cap);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "uc800_dm_nha_cung_cap";
-            this.Size = new System.Drawing.Size(761, 561);
+            this.Size = new System.Drawing.Size(1145, 570);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nha_cung_cap)).EndInit();
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
