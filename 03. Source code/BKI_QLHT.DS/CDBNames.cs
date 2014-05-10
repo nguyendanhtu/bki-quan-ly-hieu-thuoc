@@ -606,16 +606,11 @@
     {
         public const string ID_THUOC = "ID_THUOC";
         public const string TEN_THUOC = "TEN_THUOC";
-        public const string ID_GIAO_DICH = "ID_GIAO_DICH";
-        public const string ID_DON_VI_THUOC = "ID_DON_VI_THUOC";
-        public const string TEN_DON_VI = "TEN_DON_VI";
-        public const string SO_LUONG_NHAP = "SO_LUONG_NHAP";
-        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
-        public const string HAN_SU_DUNG = "HAN_SU_DUNG";
-        public const string ID_LO_THUOC = "ID_LO_THUOC";
+        public const string HAN_SD = "HAN_SD";
         public const string SO_DU = "SO_DU";
-        public const string ID_LOAI_GIAO_DICH = "ID_LOAI_GIAO_DICH";
+        public const string TEN_DON_VI = "TEN_DON_VI";
     }
+
 
     public class V_DM_NCC_NSX_NHASX_1
     {
