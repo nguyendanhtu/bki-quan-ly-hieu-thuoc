@@ -627,6 +627,20 @@ namespace BKI_QLHT
             }
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f416_bao_cao_doanh_thu_theo_nhom_thuoc v_frm = new f416_bao_cao_doanh_thu_theo_nhom_thuoc();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
 
 
 

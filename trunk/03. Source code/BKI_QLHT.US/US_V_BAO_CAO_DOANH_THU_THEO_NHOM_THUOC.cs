@@ -106,6 +106,19 @@ public class US_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC : US_Object
 
 #endregion
 #region "Init Functions"
+    public void get_tong_doanh_thu(Decimal op_dc_tong_doanh_thu)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_tong_doanh_thu");
+        SqlParameter v_sql = v_store_proc.addDecimalOutputParam("@tong_doanh_thu",op_dc_tong_doanh_thu);
+        v_store_proc.ExecuteCommand(this);
+        //op_dc_tong_doanh_thu = CIPConvert.ToDecimal(v_sql.Value);
+    }
+    public void FillDatasetSearch(DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC ip_ds, string ip_str_search)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_search");
+        v_store_proc.addNVarcharInputParam("@STR_SEARCH", ip_str_search);
+        v_store_proc.fillDataSetByCommand(this, ip_ds);
+    }
 	public US_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC() 
 	{
 		pm_objDS = new DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC();
