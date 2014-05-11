@@ -65,6 +65,7 @@
             this.m_lbl_in = new System.Windows.Forms.Label();
             this.m_lbl_xoa = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.m_txt_don_gia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -82,7 +83,6 @@
             this.m_lbl_ngay_GD = new System.Windows.Forms.Label();
             this.m_lbl_Ma_GD_text = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi_text = new System.Windows.Forms.Label();
-            this.txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_quan_ly_ban_thuoc)).BeginInit();
             this.m_group_chi_tiet_thong_tin_ban.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -220,7 +220,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1158, 39);
+            this.label13.Location = new System.Drawing.Point(1163, 39);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(59, 16);
@@ -231,7 +231,7 @@
             // 
             this.m_cbo_don_vi_tinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_don_vi_tinh.FormattingEnabled = true;
-            this.m_cbo_don_vi_tinh.Location = new System.Drawing.Point(665, 34);
+            this.m_cbo_don_vi_tinh.Location = new System.Drawing.Point(650, 33);
             this.m_cbo_don_vi_tinh.Margin = new System.Windows.Forms.Padding(4);
             this.m_cbo_don_vi_tinh.Name = "m_cbo_don_vi_tinh";
             this.m_cbo_don_vi_tinh.Size = new System.Drawing.Size(123, 24);
@@ -242,7 +242,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(543, 42);
+            this.label12.Location = new System.Drawing.Point(528, 41);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 16);
@@ -251,7 +251,7 @@
             // 
             // m_txt_so_luong
             // 
-            this.m_txt_so_luong.Location = new System.Drawing.Point(1242, 34);
+            this.m_txt_so_luong.Location = new System.Drawing.Point(1247, 34);
             this.m_txt_so_luong.Margin = new System.Windows.Forms.Padding(4);
             this.m_txt_so_luong.Name = "m_txt_so_luong";
             this.m_txt_so_luong.Size = new System.Drawing.Size(83, 23);
@@ -350,7 +350,7 @@
             // 
             // m_txt_cap_nhat_ten_thuoc
             // 
-            this.m_txt_cap_nhat_ten_thuoc.Location = new System.Drawing.Point(144, 33);
+            this.m_txt_cap_nhat_ten_thuoc.Location = new System.Drawing.Point(125, 32);
             this.m_txt_cap_nhat_ten_thuoc.Name = "m_txt_cap_nhat_ten_thuoc";
             this.m_txt_cap_nhat_ten_thuoc.ReadOnly = true;
             this.m_txt_cap_nhat_ten_thuoc.Size = new System.Drawing.Size(321, 23);
@@ -501,16 +501,34 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(832, 39);
+            this.label4.Location = new System.Drawing.Point(811, 39);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Đơn giá";
             // 
+            // txt_search_thuoc1
+            // 
+            this.txt_search_thuoc1.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txt_search_thuoc1.DisplayMember = null;
+            this.txt_search_thuoc1.Location = new System.Drawing.Point(125, 32);
+            this.txt_search_thuoc1.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_search_thuoc1.Name = "txt_search_thuoc1";
+            this.txt_search_thuoc1.Size = new System.Drawing.Size(321, 25);
+            this.txt_search_thuoc1.str_query = null;
+            this.txt_search_thuoc1.TabIndex = 0;
+            this.txt_search_thuoc1.Text1 = null;
+            this.txt_search_thuoc1.ValueMember = null;
+            this.txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_thuoc1_KeyDown);
+            // 
             // m_txt_don_gia
             // 
-            this.m_txt_don_gia.Location = new System.Drawing.Point(909, 36);
+            this.m_txt_don_gia.Location = new System.Drawing.Point(888, 36);
             this.m_txt_don_gia.Margin = new System.Windows.Forms.Padding(4);
             this.m_txt_don_gia.Name = "m_txt_don_gia";
             this.m_txt_don_gia.Size = new System.Drawing.Size(208, 23);
@@ -705,24 +723,6 @@
             this.m_lbl_dia_chi_text.Size = new System.Drawing.Size(264, 16);
             this.m_lbl_dia_chi_text.TabIndex = 3;
             this.m_lbl_dia_chi_text.Text = "................................................................";
-            // 
-            // txt_search_thuoc1
-            // 
-            this.txt_search_thuoc1.dcID = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txt_search_thuoc1.DisplayMember = null;
-            this.txt_search_thuoc1.Location = new System.Drawing.Point(144, 33);
-            this.txt_search_thuoc1.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_search_thuoc1.Name = "txt_search_thuoc1";
-            this.txt_search_thuoc1.Size = new System.Drawing.Size(321, 25);
-            this.txt_search_thuoc1.str_query = null;
-            this.txt_search_thuoc1.TabIndex = 0;
-            this.txt_search_thuoc1.Text1 = null;
-            this.txt_search_thuoc1.ValueMember = null;
-            this.txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_thuoc1_KeyDown);
             // 
             // uc108_v_gd_giao_dich_detail
             // 
