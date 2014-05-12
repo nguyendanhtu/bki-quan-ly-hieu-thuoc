@@ -18,6 +18,8 @@ namespace BKI_QLHT.DanhMuc
 
         private void f115_REPORT_GD_GIAO_DICH_DETIAL_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'bKI_QLHTDataSet2.V_GD_GIAO_DICH_DETAIL' table. You can move, or remove it, as needed.
+            this.v_GD_GIAO_DICH_DETAILTableAdapter.Fill(this.bKI_QLHTDataSet2.V_GD_GIAO_DICH_DETAIL);
 
             this.reportViewer1.RefreshReport();
             

@@ -30,34 +30,53 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.bKI_QLHTDataSet = new BKI_QLHT.BKI_QLHTDataSet();
             this.bKIQLHTDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bKI_QLHTDataSet)).BeginInit();
+            this.bKI_QLHTDataSet = new BKI_QLHT.BKI_QLHTDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.bKI_QLHTDataSet2 = new BKI_QLHT.BKI_QLHTDataSet2();
+            this.vGDGIAODICHDETAILBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.v_GD_GIAO_DICH_DETAILTableAdapter = new BKI_QLHT.BKI_QLHTDataSet2TableAdapters.V_GD_GIAO_DICH_DETAILTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bKIQLHTDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bKI_QLHTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bKI_QLHTDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vGDGIAODICHDETAILBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // bKIQLHTDataSetBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DS_Report_ban_thuoc";
-            reportDataSource1.Value = this.bKIQLHTDataSetBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "BKI_QLHT.NghiepVu.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(742, 478);
-            this.reportViewer1.TabIndex = 0;
+            this.bKIQLHTDataSetBindingSource.DataSource = this.bKI_QLHTDataSet;
+            this.bKIQLHTDataSetBindingSource.Position = 0;
             // 
             // bKI_QLHTDataSet
             // 
             this.bKI_QLHTDataSet.DataSetName = "BKI_QLHTDataSet";
             this.bKI_QLHTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bKIQLHTDataSetBindingSource
+            // reportViewer1
             // 
-            this.bKIQLHTDataSetBindingSource.DataSource = this.bKI_QLHTDataSet;
-            this.bKIQLHTDataSetBindingSource.Position = 0;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DS_Report115";
+            reportDataSource1.Value = this.vGDGIAODICHDETAILBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "BKI_QLHT.NghiepVu.Report2.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(742, 478);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // bKI_QLHTDataSet2
+            // 
+            this.bKI_QLHTDataSet2.DataSetName = "BKI_QLHTDataSet2";
+            this.bKI_QLHTDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vGDGIAODICHDETAILBindingSource
+            // 
+            this.vGDGIAODICHDETAILBindingSource.DataMember = "V_GD_GIAO_DICH_DETAIL";
+            this.vGDGIAODICHDETAILBindingSource.DataSource = this.bKI_QLHTDataSet2;
+            // 
+            // v_GD_GIAO_DICH_DETAILTableAdapter
+            // 
+            this.v_GD_GIAO_DICH_DETAILTableAdapter.ClearBeforeFill = true;
             // 
             // f115_REPORT_GD_GIAO_DICH_DETIAL
             // 
@@ -68,8 +87,10 @@
             this.Name = "f115_REPORT_GD_GIAO_DICH_DETIAL";
             this.Text = "f115_REPORT_GD_GIAO_DICH_DETIAL";
             this.Load += new System.EventHandler(this.f115_REPORT_GD_GIAO_DICH_DETIAL_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bKI_QLHTDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bKIQLHTDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bKI_QLHTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bKI_QLHTDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vGDGIAODICHDETAILBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -79,5 +100,8 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource bKIQLHTDataSetBindingSource;
         private BKI_QLHTDataSet bKI_QLHTDataSet;
+        private BKI_QLHTDataSet2 bKI_QLHTDataSet2;
+        private System.Windows.Forms.BindingSource vGDGIAODICHDETAILBindingSource;
+        private BKI_QLHTDataSet2TableAdapters.V_GD_GIAO_DICH_DETAILTableAdapter v_GD_GIAO_DICH_DETAILTableAdapter;
     }
 }
