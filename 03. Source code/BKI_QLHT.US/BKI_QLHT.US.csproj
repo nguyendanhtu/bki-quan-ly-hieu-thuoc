@@ -81,9 +81,13 @@
     <Compile Include="US_V_BAO_CAO_DANH_MUC_THUOC_THEO_NCC.cs" />
     <Compile Include="US_V_BAO_CAO_DANH_MUC_THUOC_THEO_NSX.cs" />
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_BAC_SY_0.cs" />
+    <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NCC_0.cs" />
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN.cs" />
+    <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHAN_VIEN_0.cs" />
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.cs" />
+    <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.cs" />
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.cs" />
+    <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.cs" />
     <Compile Include="US_V_BAO_CAO_KIEM_KE_KHO.cs" />
     <Compile Include="US_V_DM_BAC_SY.cs" />
     <Compile Include="US_V_DM_DON_VI.cs" />
