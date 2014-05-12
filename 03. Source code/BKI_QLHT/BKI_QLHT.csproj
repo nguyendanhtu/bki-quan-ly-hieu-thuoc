@@ -127,6 +127,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BKI_QLHTDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BKI_QLHTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BKI_QLHTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BKI_QLHTDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f100_v_dm_bac_sy_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -627,7 +637,7 @@
     <EmbeddedResource Include="NghiepVu\f_804_han_su_dung.resx">
       <DependentUpon>f_804_han_su_dung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\Report1.rdlc" />
+    <EmbeddedResource Include="NghiepVu\f115_Report.rdlc" />
     <EmbeddedResource Include="NghiepVu\uc108_v_gd_giao_dich_detail.resx">
       <DependentUpon>uc108_v_gd_giao_dich_detail.cs</DependentUpon>
     </EmbeddedResource>
@@ -667,6 +677,28 @@
     </None>
     <None Include="BKI_QLHTDataSet.xss">
       <DependentUpon>BKI_QLHTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHTDataSet1.xsc">
+      <DependentUpon>BKI_QLHTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BKI_QLHTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BKI_QLHTDataSet1.xss">
+      <DependentUpon>BKI_QLHTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHTDataSet2.xsc">
+      <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHTDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BKI_QLHTDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BKI_QLHTDataSet2.xss">
+      <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BKI_QLHT.BaoCao.Demo_Report.DataSet1.datasource" />
     <None Include="Properties\DataSources\BKI_QLHT.NghiepVu.uc108_v_gd_giao_dich_detail+data1.datasource" />
