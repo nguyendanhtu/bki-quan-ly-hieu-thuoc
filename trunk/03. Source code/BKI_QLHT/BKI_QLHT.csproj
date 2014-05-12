@@ -119,6 +119,9 @@
     <Compile Include="BaoCao\f418_bao_cao_doanh_thu_theo_bac_sy_0.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f419_bao_cao_doanh_thu_theo_ncc_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BKI_QLHTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -451,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f418_bao_cao_doanh_thu_theo_bac_sy_0.resx">
       <DependentUpon>f418_bao_cao_doanh_thu_theo_bac_sy_0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f419_bao_cao_doanh_thu_theo_ncc_0.resx">
+      <DependentUpon>f419_bao_cao_doanh_thu_theo_ncc_0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f100_v_dm_bac_sy_de.resx">
       <DependentUpon>f100_v_dm_bac_sy_de.cs</DependentUpon>
