@@ -65,7 +65,6 @@
             this.m_lbl_in = new System.Windows.Forms.Label();
             this.m_lbl_xoa = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.m_txt_don_gia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -83,6 +82,7 @@
             this.m_lbl_ngay_GD = new System.Windows.Forms.Label();
             this.m_lbl_Ma_GD_text = new System.Windows.Forms.Label();
             this.m_lbl_dia_chi_text = new System.Windows.Forms.Label();
+            this.txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_quan_ly_ban_thuoc)).BeginInit();
             this.m_group_chi_tiet_thong_tin_ban.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -107,6 +107,7 @@
             this.m_grv_quan_ly_ban_thuoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.m_grv_quan_ly_ban_thuoc.Size = new System.Drawing.Size(1505, 382);
             this.m_grv_quan_ly_ban_thuoc.TabIndex = 22;
+            this.m_grv_quan_ly_ban_thuoc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.m_grv_quan_ly_ban_thuoc_MouseDoubleClick);
             // 
             // STT
             // 
@@ -155,8 +156,8 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label15.Location = new System.Drawing.Point(500, 104);
+            this.label15.ForeColor = System.Drawing.Color.Firebrick;
+            this.label15.Location = new System.Drawing.Point(14, 133);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(165, 18);
             this.label15.TabIndex = 15;
@@ -165,9 +166,10 @@
             // m_txt_tong_tien_thanh_toan
             // 
             this.m_txt_tong_tien_thanh_toan.AutoSize = true;
+            this.m_txt_tong_tien_thanh_toan.BackColor = System.Drawing.Color.White;
             this.m_txt_tong_tien_thanh_toan.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_txt_tong_tien_thanh_toan.ForeColor = System.Drawing.Color.Firebrick;
-            this.m_txt_tong_tien_thanh_toan.Location = new System.Drawing.Point(745, 104);
+            this.m_txt_tong_tien_thanh_toan.Location = new System.Drawing.Point(253, 135);
             this.m_txt_tong_tien_thanh_toan.Name = "m_txt_tong_tien_thanh_toan";
             this.m_txt_tong_tien_thanh_toan.Size = new System.Drawing.Size(51, 16);
             this.m_txt_tong_tien_thanh_toan.TabIndex = 16;
@@ -177,7 +179,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(260, 108);
+            this.label20.Location = new System.Drawing.Point(529, 94);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(68, 16);
@@ -186,12 +188,13 @@
             // 
             // m_txt_ti_le_chiet_khau
             // 
-            this.m_txt_ti_le_chiet_khau.Location = new System.Drawing.Point(371, 102);
+            this.m_txt_ti_le_chiet_khau.Location = new System.Drawing.Point(650, 86);
             this.m_txt_ti_le_chiet_khau.Margin = new System.Windows.Forms.Padding(4);
             this.m_txt_ti_le_chiet_khau.Name = "m_txt_ti_le_chiet_khau";
             this.m_txt_ti_le_chiet_khau.Size = new System.Drawing.Size(52, 23);
             this.m_txt_ti_le_chiet_khau.TabIndex = 13;
             this.m_txt_ti_le_chiet_khau.Text = "0";
+            this.m_txt_ti_le_chiet_khau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_ti_le_chiet_khau_KeyDown);
             this.m_txt_ti_le_chiet_khau.Leave += new System.EventHandler(this.m_txt_ti_le_chiet_khau_Leave);
             // 
             // label22
@@ -199,7 +202,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label22.Location = new System.Drawing.Point(14, 104);
+            this.label22.Location = new System.Drawing.Point(14, 94);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(82, 18);
             this.label22.TabIndex = 10;
@@ -208,9 +211,10 @@
             // m_txt_tong_tien
             // 
             this.m_txt_tong_tien.AutoSize = true;
+            this.m_txt_tong_tien.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.m_txt_tong_tien.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_txt_tong_tien.ForeColor = System.Drawing.Color.Firebrick;
-            this.m_txt_tong_tien.Location = new System.Drawing.Point(143, 106);
+            this.m_txt_tong_tien.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.m_txt_tong_tien.Location = new System.Drawing.Point(128, 93);
             this.m_txt_tong_tien.Name = "m_txt_tong_tien";
             this.m_txt_tong_tien.Size = new System.Drawing.Size(51, 16);
             this.m_txt_tong_tien.TabIndex = 11;
@@ -508,24 +512,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Đơn giá";
             // 
-            // txt_search_thuoc1
-            // 
-            this.txt_search_thuoc1.dcID = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txt_search_thuoc1.DisplayMember = null;
-            this.txt_search_thuoc1.Location = new System.Drawing.Point(125, 32);
-            this.txt_search_thuoc1.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_search_thuoc1.Name = "txt_search_thuoc1";
-            this.txt_search_thuoc1.Size = new System.Drawing.Size(321, 25);
-            this.txt_search_thuoc1.str_query = null;
-            this.txt_search_thuoc1.TabIndex = 0;
-            this.txt_search_thuoc1.Text1 = null;
-            this.txt_search_thuoc1.ValueMember = null;
-            this.txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_thuoc1_KeyDown);
-            // 
             // m_txt_don_gia
             // 
             this.m_txt_don_gia.Location = new System.Drawing.Point(888, 36);
@@ -540,7 +526,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(431, 105);
+            this.label5.Location = new System.Drawing.Point(710, 89);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 16);
@@ -723,6 +709,24 @@
             this.m_lbl_dia_chi_text.Size = new System.Drawing.Size(264, 16);
             this.m_lbl_dia_chi_text.TabIndex = 3;
             this.m_lbl_dia_chi_text.Text = "................................................................";
+            // 
+            // txt_search_thuoc1
+            // 
+            this.txt_search_thuoc1.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txt_search_thuoc1.DisplayMember = null;
+            this.txt_search_thuoc1.Location = new System.Drawing.Point(125, 32);
+            this.txt_search_thuoc1.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_search_thuoc1.Name = "txt_search_thuoc1";
+            this.txt_search_thuoc1.Size = new System.Drawing.Size(321, 25);
+            this.txt_search_thuoc1.str_query = null;
+            this.txt_search_thuoc1.TabIndex = 0;
+            this.txt_search_thuoc1.Text1 = null;
+            this.txt_search_thuoc1.ValueMember = null;
+            this.txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_thuoc1_KeyDown);
             // 
             // uc108_v_gd_giao_dich_detail
             // 
