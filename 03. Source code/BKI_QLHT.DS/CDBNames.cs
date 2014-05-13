@@ -10,6 +10,34 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_BC_DOANH_THU_THEO_CAC_BAC_SY
+    {
+        public const string TEN_BAC_SY = "TEN_BAC_SY";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BAO_CAO_DOANH_THU_TONG_HOP
+    {
+        public const string MA_GIAO_DICH = "MA_GIAO_DICH";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TEN_NHOM_KH = "TEN_NHOM_KH";
+        public const string MA_KHACH_HANG = "MA_KHACH_HANG";
+        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+        public const string TEN_BAC_SY = "TEN_BAC_SY";
+        public const string TEN_NHAN_VIEN = "TEN_NHAN_VIEN";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string TEN_NHOM_THUOC = "TEN_NHOM_THUOC";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string GIA_BAN = "GIA_BAN";
+        public const string TI_LE_CHIET_KHAU_NHOM_KH = "TI_LE_CHIET_KHAU_NHOM_KH";
+        public const string HAN_SU_DUNG = "HAN_SU_DUNG";
+    }
+
     public class V_BAO_CAO_DOANH_THU_THEO_BAC_SY_0
     {
         public const string ID_BAC_SY = "ID_BAC_SY";
