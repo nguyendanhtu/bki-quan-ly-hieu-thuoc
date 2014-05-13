@@ -49,6 +49,11 @@ namespace BKI_QLHT.DanhMuc
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            m_txts_ten_thuoc.xoa_trang();
+        }
+
 
     }
 }

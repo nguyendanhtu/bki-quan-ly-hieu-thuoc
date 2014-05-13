@@ -39,7 +39,7 @@
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(367, 20);
             this.m_txt_search.TabIndex = 0;
-            
+            this.m_txt_search.TextChanged += new System.EventHandler(this.m_txt_search_TextChanged);
             // 
             // m_list_suggest
             // 
@@ -49,15 +49,14 @@
             this.m_list_suggest.Name = "m_list_suggest";
             this.m_list_suggest.Size = new System.Drawing.Size(366, 88);
             this.m_list_suggest.TabIndex = 1;
-           
             // 
-            // txt_search
+            // txt_search_thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.m_list_suggest);
             this.Controls.Add(this.m_txt_search);
-            this.Name = "txt_search";
+            this.Name = "txt_search_thuoc";
             this.Size = new System.Drawing.Size(367, 20);
             this.ResumeLayout(false);
             this.PerformLayout();

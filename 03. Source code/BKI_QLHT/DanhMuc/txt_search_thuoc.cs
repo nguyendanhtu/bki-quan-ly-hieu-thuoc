@@ -22,6 +22,13 @@ namespace BKI_QLHT.DanhMuc
             get { return displayMember; }
             set { displayMember = value; }
         }
+        public void xoa_trang()
+        {
+            this.m_list_suggest.DataSource = null;
+            this.m_txt_search.Text = null;
+            m_list_suggest.Visible = false;
+            this.Height = m_txt_search.Height;
+        }
         private decimal DcID;
 
         public decimal dcID
@@ -83,10 +90,10 @@ namespace BKI_QLHT.DanhMuc
         #region Events
         private void m_txt_search_Click(object sender, EventArgs e)
         {
-            this.Height = m_txt_search.Width;
-            this.Width = m_txt_search.Width;
-            m_list_suggest.Visible = true;
-            m_list_suggest.Focus();
+            //this.Height = m_txt_search.Width;
+            //this.Width = m_txt_search.Width;
+            //m_list_suggest.Visible = true;
+            //m_list_suggest.Focus();
         }
         private void m_txt_search_KeyDown(object sender, KeyEventArgs e)
         {
@@ -96,56 +103,30 @@ namespace BKI_QLHT.DanhMuc
                 {
                     if (!m_txt_search.Text.Trim().Equals(""))
                     {
-                        //m_list_suggest.Items.Clear();
-
-                        //DataRow[] v_drows = m_ds.Tables[0].Select("ten_thuoc like '*vitamin*'");
-                        //DataSet v_ds = new DataSet();
-
                         DataTable dm_thuoc = m_ds.Tables[0];
                         var v_query =
                             from thuoc in dm_thuoc.AsEnumerable()
                             where (thuoc.Field<string>(DisplayMember).ToLower().Contains(m_txt_search.Text.Trim().ToLower()))
                             select thuoc;
-                        //int row_count = 0;
-                        //foreach (var v_thuoc in v_query)
-                        //{
-                        //    v_ds.Tables[0].Rows.Add((DataRow)v_thuoc);
-                        //    row_count++;
-                        //}
                         if (v_query.Count()>0)
                         {
                             DataTable v_dt = v_query.CopyToDataTable();
-                            //v_ds.Tables.Add(v_dt);
-                            //v_ds.Tables[0].Rows.Clear();
-                            //for (int i = 0; i < v_drows.Length; i++)
-                            //{
-                            //    v_ds.Tables[0].Rows.Add(v_drows[i]);
-                            //}
-
                             m_list_suggest.DataSource = v_dt;
                             m_list_suggest.DisplayMember = DisplayMember;
                             m_list_suggest.ValueMember = ValueMember;
                         }
                         else
                         {
-                            //m_list_suggest.Items.Clear();
                             m_list_suggest.DataSource = null;
                             m_txt_search.Focus();
                             return;
 
-                        }
-                       
-
-
-
-
-
+                        }                     
                     }
                     this.Height = m_txt_search.Width;
                     this.Width = m_txt_search.Width;
                     m_list_suggest.Visible = true;
                     m_list_suggest.Focus();
-                   // this.Focus();
                 }
                 if (e.KeyData == Keys.Down || e.KeyData == Keys.Up)
                 {
@@ -153,6 +134,12 @@ namespace BKI_QLHT.DanhMuc
                     this.Height = m_txt_search.Width;
                     this.Width = m_txt_search.Width;
                     m_list_suggest.Visible = true;
+                }
+                if (e.KeyData==Keys.Tab&&m_txt_search.Text.Trim().Equals(""))
+                {
+                    m_list_suggest.DataSource = null;
+                    m_list_suggest.Visible = false;
+                    this.Height = m_txt_search.Height;
                 }
             }
             catch (System.Exception v_e)
@@ -213,6 +200,11 @@ namespace BKI_QLHT.DanhMuc
                         this.Focus();
                     }
                 }
+                else if (e.KeyData!=Keys.Down && e.KeyData!=Keys.Up)
+                {
+                    m_txt_search.Select(m_txt_search.Text.Length, 0);
+                    m_txt_search.Focus();
+                }
             }
             catch (System.Exception v_e)
             {
@@ -222,5 +214,43 @@ namespace BKI_QLHT.DanhMuc
         }
 
         #endregion
+
+        private void m_txt_search_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!m_txt_search.Text.Trim().Equals(""))
+                {
+                    DataTable dm_thuoc = m_ds.Tables[0];
+                    var v_query =
+                        from thuoc in dm_thuoc.AsEnumerable()
+                        where (thuoc.Field<string>(DisplayMember).ToLower().Contains(m_txt_search.Text.Trim().ToLower()))
+                        select thuoc;
+                    if (v_query.Count() > 0)
+                    {
+                        DataTable v_dt = v_query.CopyToDataTable();
+                        m_list_suggest.DataSource = v_dt;
+                        m_list_suggest.DisplayMember = DisplayMember;
+                        m_list_suggest.ValueMember = ValueMember;
+                    }
+                    else
+                    {
+                        m_list_suggest.DataSource = null;
+                        m_txt_search.Focus();
+                        return;
+
+                    }
+                }
+                this.Height = m_txt_search.Width;
+                this.Width = m_txt_search.Width;
+                m_list_suggest.Visible = true;
+                //m_list_suggest.Focus();
+                m_txt_search.Focus();
+            }
+            catch (System.Exception v_e)
+            {
+            	CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }
