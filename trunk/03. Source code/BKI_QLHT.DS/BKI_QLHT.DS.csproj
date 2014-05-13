@@ -394,6 +394,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="V_BAO_CAO_DOANH_THU_TONG_HOP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BAO_CAO_DOANH_THU_TONG_HOP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_THEO_CAC_BAC_SY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -1095,6 +1105,28 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BAO_CAO_DOANH_THU_TONG_HOP.xsc">
+      <DependentUpon>V_BAO_CAO_DOANH_THU_TONG_HOP.xsd</DependentUpon>
+    </None>
+    <None Include="V_BAO_CAO_DOANH_THU_TONG_HOP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BAO_CAO_DOANH_THU_TONG_HOP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BAO_CAO_DOANH_THU_TONG_HOP.xss">
+      <DependentUpon>V_BAO_CAO_DOANH_THU_TONG_HOP.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsc">
+      <DependentUpon>V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_THEO_CAC_BAC_SY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_THEO_CAC_BAC_SY.xss">
+      <DependentUpon>V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
