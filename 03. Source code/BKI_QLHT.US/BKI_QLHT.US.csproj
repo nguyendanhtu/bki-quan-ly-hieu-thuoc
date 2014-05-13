@@ -88,6 +88,7 @@
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG_0.cs" />
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC.cs" />
     <Compile Include="US_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.cs" />
+    <Compile Include="US_V_BAO_CAO_DOANH_THU_TONG_HOP.cs" />
     <Compile Include="US_V_BAO_CAO_KIEM_KE_KHO.cs" />
     <Compile Include="US_V_DM_BAC_SY.cs" />
     <Compile Include="US_V_DM_DON_VI.cs" />
