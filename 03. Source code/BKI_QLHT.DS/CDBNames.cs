@@ -600,28 +600,21 @@
         public const string GIA_BAN = "GIA_BAN";
         public const string ID_LO_THUOC = "ID_LO_THUOC";
         public const string TEN_THUOC = "TEN_THUOC";
-        public const string DUONG_DUNG_DANG_DUNG = "DUONG_DUNG_DANG_DUNG";
         public const string TEN_DON_VI = "TEN_DON_VI";
-        public const string ID_DON_VI_CHA = "ID_DON_VI_CHA";
-        public const string QUY_DOI = "QUY_DOI";
-        public const string GIA_BAN_GD_GIA_BAN = "GIA_BAN_GD_GIA_BAN";
-        public const string ID_DON_VI_TINH = "ID_DON_VI_TINH";
-        public const string ID_GD_GIAO_DICH = "ID_GD_GIAO_DICH";
         public const string MA_GIAO_DICH = "MA_GIAO_DICH";
         public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
-        public const string ID_NGUOI_THUC_HIEN = "ID_NGUOI_THUC_HIEN";
-        public const string ID_KHACH_HANG = "ID_KHACH_HANG";
-        public const string ID_LOAI_GIAO_DICH = "ID_LOAI_GIAO_DICH";
         public const string TI_LE_CHIET_KHAU = "TI_LE_CHIET_KHAU";
-        public const string ID_DM_KHACH_HANG = "ID_DM_KHACH_HANG";
+        public const string GIA_BAN_GD_GIA = "GIA_BAN_GD_GIA";
         public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
         public const string SDT_KH = "SDT_KH";
         public const string DIA_CHI_KH = "DIA_CHI_KH";
-        public const string ID_DV_KINH_DOANH = "ID_DV_KINH_DOANH";
         public const string TEN_DAY_DU = "TEN_DAY_DU";
         public const string DIA_CHI_DV = "DIA_CHI_DV";
-        public const string SD = "SD";
+        public const string SDT_DV = "SDT_DV";
+        public const string TONG_TIEN = "TONG_TIEN";
+        public const string TONG_TIEN_THANH_TOAN = "TONG_TIEN_THANH_TOAN";
     }
+
 
 
     public class GD_GIA_BAN
