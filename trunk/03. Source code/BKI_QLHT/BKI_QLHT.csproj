@@ -86,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
+    <Compile Include="BaoCao\f401_bao_cao_doanh_thu_tong_hop.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BaoCao\f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +435,9 @@
       <DependentUpon>uc_f05_Image_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="WinFormControls.cs" />
+    <EmbeddedResource Include="BaoCao\f401_bao_cao_doanh_thu_tong_hop.resx">
+      <DependentUpon>f401_bao_cao_doanh_thu_tong_hop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc.resx">
       <DependentUpon>f407_v_bao_cao_dm_thuoc_theo_nhom_thuoc.cs</DependentUpon>
     </EmbeddedResource>
