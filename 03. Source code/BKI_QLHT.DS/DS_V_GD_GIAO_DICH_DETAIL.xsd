@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="BKI_QLHTConnectionString1 (Settings)" DbObjectName="BKI_QLHT.dbo.V_GD_GIAO_DICH_DETAIL" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, ID_GIAO_DICH, ID_THUOC, ID_DON_VI_THUOC, SO_LUONG_NHAP, SO_LUONG_BAN, ID_NHA_CUNG_CAP, ID_NUOC_SX, ID_HANG_SX, HAN_SU_DUNG, GIA_NHAP, GIA_BAN, ID_LO_THUOC, TEN_THUOC, TEN_DON_VI, MA_GIAO_DICH, NGAY_GIAO_DICH, TI_LE_CHIET_KHAU, GIA_BAN_GD_GIA, TEN_KHACH_HANG, SDT_KH, DIA_CHI_KH, TEN_DAY_DU, DIA_CHI_DV, SDT_DV, TONG_TIEN, TONG_TIEN_THANH_TOAN FROM dbo.V_GD_GIAO_DICH_DETAIL</CommandText>
+                    <CommandText>SELECT ID, ID_GIAO_DICH, ID_THUOC, ID_DON_VI_THUOC, SO_LUONG_NHAP, SO_LUONG_BAN, ID_NHA_CUNG_CAP, ID_NUOC_SX, ID_HANG_SX, HAN_SU_DUNG, GIA_NHAP, GIA_BAN, ID_LO_THUOC, TEN_THUOC, TEN_DON_VI, MA_GIAO_DICH, NGAY_GIAO_DICH, TI_LE_CHIET_KHAU, GIA_BAN_GD_GIA, TEN_KHACH_HANG, SDT_KH, DIA_CHI_KH, TEN_DAY_DU, DIA_CHI_DV, SDT_DV, TEN_NHAN_VIEN, THANH_TIEN, TONG_TIEN, TONG_TIEN_THANH_TOAN FROM dbo.V_GD_GIAO_DICH_DETAIL</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -44,6 +44,8 @@
               <Mapping SourceColumn="TEN_DAY_DU" DataSetColumn="TEN_DAY_DU" />
               <Mapping SourceColumn="DIA_CHI_DV" DataSetColumn="DIA_CHI_DV" />
               <Mapping SourceColumn="SDT_DV" DataSetColumn="SDT_DV" />
+              <Mapping SourceColumn="TEN_NHAN_VIEN" DataSetColumn="TEN_NHAN_VIEN" />
+              <Mapping SourceColumn="THANH_TIEN" DataSetColumn="THANH_TIEN" />
               <Mapping SourceColumn="TONG_TIEN" DataSetColumn="TONG_TIEN" />
               <Mapping SourceColumn="TONG_TIEN_THANH_TOAN" DataSetColumn="TONG_TIEN_THANH_TOAN" />
             </Mappings>
@@ -139,6 +141,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="TEN_NHAN_VIEN" msprop:Generator_ColumnVarNameInTable="columnTEN_NHAN_VIEN" msprop:Generator_ColumnPropNameInRow="TEN_NHAN_VIEN" msprop:Generator_ColumnPropNameInTable="TEN_NHAN_VIENColumn" msprop:Generator_UserColumnName="TEN_NHAN_VIEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="THANH_TIEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTHANH_TIEN" msprop:Generator_ColumnPropNameInRow="THANH_TIEN" msprop:Generator_ColumnPropNameInTable="THANH_TIENColumn" msprop:Generator_UserColumnName="THANH_TIEN" type="xs:decimal" minOccurs="0" />
               <xs:element name="TONG_TIEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTONG_TIEN" msprop:Generator_ColumnPropNameInRow="TONG_TIEN" msprop:Generator_ColumnPropNameInTable="TONG_TIENColumn" msprop:Generator_UserColumnName="TONG_TIEN" type="xs:decimal" minOccurs="0" />
               <xs:element name="TONG_TIEN_THANH_TOAN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTONG_TIEN_THANH_TOAN" msprop:Generator_ColumnPropNameInRow="TONG_TIEN_THANH_TOAN" msprop:Generator_ColumnPropNameInTable="TONG_TIEN_THANH_TOANColumn" msprop:Generator_UserColumnName="TONG_TIEN_THANH_TOAN" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
