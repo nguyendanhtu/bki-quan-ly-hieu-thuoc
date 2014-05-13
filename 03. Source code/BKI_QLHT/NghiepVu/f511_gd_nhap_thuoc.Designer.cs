@@ -90,6 +90,7 @@
             this.m_txt_add_thuoc = new System.Windows.Forms.Button();
             this.m_txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.m_cmd_upadate = new SIS.Controls.Button.SiSButton();
+            this.m_txt_ten_thuoc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhap_thuoc)).BeginInit();
             this.m_pnl_control.SuspendLayout();
@@ -749,11 +750,20 @@
             this.m_cmd_upadate.Text = "Cập nhật";
             this.m_cmd_upadate.Visible = false;
             // 
+            // m_txt_ten_thuoc
+            // 
+            this.m_txt_ten_thuoc.Location = new System.Drawing.Point(104, 94);
+            this.m_txt_ten_thuoc.Name = "m_txt_ten_thuoc";
+            this.m_txt_ten_thuoc.Size = new System.Drawing.Size(239, 20);
+            this.m_txt_ten_thuoc.TabIndex = 119;
+            this.m_txt_ten_thuoc.Visible = false;
+            // 
             // f511_gd_nhap_thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 579);
+            this.Controls.Add(this.m_txt_ten_thuoc);
             this.Controls.Add(this.m_cmd_upadate);
             this.Controls.Add(this.m_txt_add_thuoc);
             this.Controls.Add(this.m_txt_search_thuoc1);
@@ -862,5 +872,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         internal SIS.Controls.Button.SiSButton m_cmd_upadate;
+        private System.Windows.Forms.TextBox m_txt_ten_thuoc;
     }
 }
