@@ -211,5 +211,12 @@ namespace BKI_QLHT
             proc.addDecimalInputParam("@TU_KHOA",ip_v_id_kh);
             proc.fillDataSetByCommand(this,ip_v_ds);
         }
+
+        public void FillDatasetSearchByMaKH(DS_DM_KHACH_HANG ip_v_ds_dm_khach_hang, string ip_str_ma_khach_hang)
+        {
+            CStoredProc proc = new CStoredProc("pr_DM_KHACH_HANG_by_ma_khach_hang");
+            proc.addNVarcharInputParam("@TU_KHOA", ip_str_ma_khach_hang);
+            proc.fillDataSetByCommand(this, ip_v_ds_dm_khach_hang);
+        }
     }
 }
