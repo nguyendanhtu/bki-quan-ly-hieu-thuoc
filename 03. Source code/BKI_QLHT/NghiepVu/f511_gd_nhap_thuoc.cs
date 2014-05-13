@@ -87,6 +87,7 @@ namespace BKI_QLHT
         List<data> list = new List<data>();
         decimal m_id_giao_dich;
         bool m_trang_thai = false;
+        int m_grv_s_i;
         #endregion
 
         #region Private Method
@@ -378,6 +379,7 @@ namespace BKI_QLHT
             m_txt_gia_nhap.Clear();
             m_txt_gia_ban.Clear();
             m_txt_so_luong.Clear();
+            //m_txt_search_thuoc1.Text1 = "";
             restart_quy_doi();
             load_data_2_label();
         }
@@ -515,7 +517,7 @@ namespace BKI_QLHT
                     v_us_gd_dv_tinh_thuoc.dcID_DON_VI_CHA = v_us_gd_dv_tinh_thuoc.dcID;
                     v_us_gd_dv_tinh_thuoc.Update();
                     v_list.ID_dv_cap_1 = v_us_gd_dv_tinh_thuoc.dcID;
-                    if (m_cbo_don_vi_tinh.Text == v_us_gd_dv_tinh_thuoc.strTEN_DON_VI)
+                    if (v_list.ten_don_vi_tinh_thuoc == v_us_gd_dv_tinh_thuoc.strTEN_DON_VI)
                     {
                         v_list.id_don_vi_thuoc_nhap = v_us_gd_dv_tinh_thuoc.dcID;
                     }
@@ -526,7 +528,7 @@ namespace BKI_QLHT
                     v_us_gd_dv_tinh_thuoc.dcQUY_DOI = CIPConvert.ToDecimal(v_list.quy_doi_1);
                     v_us_gd_dv_tinh_thuoc.Insert();
                     v_list.ID_dv_cap_2 = v_us_gd_dv_tinh_thuoc.dcID;
-                    if (m_cbo_don_vi_tinh.Text == v_us_gd_dv_tinh_thuoc.strTEN_DON_VI.Trim())
+                    if (v_list.ten_don_vi_tinh_thuoc == v_us_gd_dv_tinh_thuoc.strTEN_DON_VI.Trim())
                     {
                         v_list.id_don_vi_thuoc_nhap = v_us_gd_dv_tinh_thuoc.dcID;
                     }
@@ -541,7 +543,7 @@ namespace BKI_QLHT
                         v_us_gd_dv_tinh_thuoc.Insert();
                         v_list.ID_don_vi_thuoc = v_us_gd_dv_tinh_thuoc.dcID;
 
-                        if (m_cbo_don_vi_tinh.Text == v_us_gd_dv_tinh_thuoc.strTEN_DON_VI.Trim())
+                        if (v_list.ten_don_vi_tinh_thuoc == v_us_gd_dv_tinh_thuoc.strTEN_DON_VI.Trim())
                         {
                             v_list.id_don_vi_thuoc_nhap = v_us_gd_dv_tinh_thuoc.dcID;
                         }
@@ -946,6 +948,7 @@ namespace BKI_QLHT
             this.m_txt_gia_nhap.TextChanged += new System.EventHandler(this.m_txt_gia_nhap_TextChanged);
             this.m_cmd_add.Click += new System.EventHandler(this.m_cmd_add_Click);
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+
         }
         //private void load_data_to_text_box_search()
         //{
@@ -956,6 +959,7 @@ namespace BKI_QLHT
 
         //}
         #endregion
+
         #region Event
         private void f511_gd_nhap_thuoc_Load(object sender, EventArgs e)
         {
@@ -1020,8 +1024,10 @@ namespace BKI_QLHT
                     load_data_2_gd_detial();
                     load_data_2_gd_gia_ban();
                     load_data_2_gd_so_du();
+                    restart_form();
                     list.Clear();
                     m_grv_nhap_thuoc.Rows.Clear();
+                    BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
                 }
                 else
                 {
@@ -1142,7 +1148,35 @@ namespace BKI_QLHT
                 }
             }
         }
+        private void m_grv_nhap_thuoc_DoubleClick(object sender, EventArgs e)
+        {
+            m_cmd_add.Visible = false;
+            m_cmd_upadate.Visible = true;
+            m_grv_s_i = m_grv_nhap_thuoc.SelectedRows[0].Index;
+            m_txt_search_thuoc1.dcID = list[m_grv_s_i].ID_thuoc;
+            m_txt_search_thuoc1.Text1 = list[m_grv_s_i].ten_thuoc;
+            load_data_2_cbo_don_vi();
+            load_quy_doi();
+            load_don_gia_ban();
+            m_txt_so_luong.Text = list[m_grv_s_i].so_luong.ToString();
+            m_dtp_ngay_san_xuat.Value = list[m_grv_s_i].ngay_sx;
+            m_dtp_han_su_dung.Value = list[m_grv_s_i].han_sd;
+            //m_cbo_don_vi_tinh.ValueMember = list[m_grv_s_i].id_don_vi_thuoc_nhap.ToString();
+            //m_cbo_dv_cap_2.Text = list[m_grv_s_i].don_vi_cap_2;
+            //m_cbo_dv_cap_3.Text = list[m_grv_s_i].don_vi_cap_3;
+            //m_cbo_dv_cap_3.Text = list[m_grv_s_i].don_vi_cap_3;
+            //m_txt_quy_doi_1.Text = list[m_grv_s_i].quy_doi_1;
+            //m_txt_quy_doi_2.Text = list[m_grv_s_i].quy_doi_2;
+            //m_txt_quy_doi_3.Text = list[m_grv_s_i].quy_doi_3;
+            m_txt_gia_nhap.Text = list[m_grv_s_i].gia.ToString();
+            m_cbo_nha_cung_cap.SelectedValue = list[m_grv_s_i].id_nha_cc;
+            m_cbo_nuoc_san_xuat.SelectedValue = list[m_grv_s_i].id_nuoc_sx;
+            m_cbo_hang_san_xuat.SelectedValue = list[m_grv_s_i].id_hang_sx;
+            m_txt_gia_nhap.Text = m_grv_nhap_thuoc.SelectedRows[0].Cells[4].Value.ToString();
+        }
         #endregion
+
+      
 
         //private void m_txt_so_luong_KeyPress(object sender, KeyPressEventArgs e)
         //{
