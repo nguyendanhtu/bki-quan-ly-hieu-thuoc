@@ -1193,12 +1193,27 @@ namespace BKI_QLHT
             m_grv_s_i = m_grv_nhap_thuoc.SelectedRows[0].Index;
             m_txt_search_thuoc1.dcID = list[m_grv_s_i].ID_thuoc;
             m_txt_search_thuoc1.Text1 = list[m_grv_s_i].ten_thuoc;
+            m_txt_ten_thuoc.Text = list[m_grv_s_i].ten_thuoc;
+            m_txt_ten_thuoc.Visible = true;
+            m_txt_search_thuoc1.Visible = false;
+            m_txt_ten_thuoc.Enabled = false;
             load_data_2_cbo_don_vi();
             load_quy_doi();
             load_don_gia_ban();
+            m_cbo_dv_cap_2.Enabled = false;
+            m_cbo_dv_cap_3.Enabled = false;
+            m_cbo_dv_cap_4.Enabled = false;
+            m_cbo_don_vi_tinh.Text = list[m_grv_s_i].ten_don_vi_tinh_thuoc;
+            m_cbo_dv_cap_2.Text = list[m_grv_s_i].don_vi_cap_2;
+            m_cbo_dv_cap_3.Text = list[m_grv_s_i].don_vi_cap_3;
+            m_cbo_dv_cap_4.Text = list[m_grv_s_i].don_vi_cap_4;
+            m_txt_quy_doi_1.Text = list[m_grv_s_i].quy_doi_1;
+            m_txt_quy_doi_2.Text = list[m_grv_s_i].quy_doi_2;
+            m_txt_quy_doi_3.Text = list[m_grv_s_i].quy_doi_3;
             m_txt_so_luong.Text = list[m_grv_s_i].so_luong.ToString();
             m_dtp_ngay_san_xuat.Value = list[m_grv_s_i].ngay_sx;
             m_dtp_han_su_dung.Value = list[m_grv_s_i].han_sd;
+            tong_tien -= (int.Parse(list[m_grv_s_i].so_luong.ToString()) * int.Parse(list[m_grv_s_i].gia.ToString()));
             //m_cbo_don_vi_tinh.ValueMember = list[m_grv_s_i].id_don_vi_thuoc_nhap.ToString();
             //m_cbo_dv_cap_2.Text = list[m_grv_s_i].don_vi_cap_2;
             //m_cbo_dv_cap_3.Text = list[m_grv_s_i].don_vi_cap_3;
@@ -1207,12 +1222,31 @@ namespace BKI_QLHT
             //m_txt_quy_doi_2.Text = list[m_grv_s_i].quy_doi_2;
             //m_txt_quy_doi_3.Text = list[m_grv_s_i].quy_doi_3;
             m_txt_gia_nhap.Text = list[m_grv_s_i].gia.ToString();
+            m_txt_gia_ban.Text = list[m_grv_s_i].gia_ban.ToString();
             m_cbo_nha_cung_cap.SelectedValue = list[m_grv_s_i].id_nha_cc;
             m_cbo_nuoc_san_xuat.SelectedValue = list[m_grv_s_i].id_nuoc_sx;
             m_cbo_hang_san_xuat.SelectedValue = list[m_grv_s_i].id_hang_sx;
             m_txt_gia_nhap.Text = m_grv_nhap_thuoc.SelectedRows[0].Cells[4].Value.ToString();
         }
+        private void m_cmd_upadate_Click(object sender, EventArgs e)
+        {
+            tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", ""));
+            m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", ""))));
+            m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(tong_tien));
+            list[m_grv_s_i].so_luong = int.Parse(m_txt_so_luong.Text);
+            list[m_grv_s_i].gia = int.Parse(m_txt_gia_nhap.Text.Replace(",", ""));
+            list[m_grv_s_i].gia_ban = int.Parse(m_txt_gia_ban.Text.Replace(",", ""));
+            m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", "")));
+            m_cmd_add.Visible = true;
+            m_cmd_upadate.Visible = false;
+            m_txt_ten_thuoc.Visible = false;
+            m_txt_search_thuoc1.Visible = true;
+            BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
+            restart_form();
+        }
         #endregion
+
+       
 
       
 

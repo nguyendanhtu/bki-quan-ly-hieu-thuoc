@@ -749,6 +749,7 @@
             this.m_cmd_upadate.TabIndex = 118;
             this.m_cmd_upadate.Text = "Cập nhật";
             this.m_cmd_upadate.Visible = false;
+            this.m_cmd_upadate.Click += new System.EventHandler(this.m_cmd_upadate_Click);
             // 
             // m_txt_ten_thuoc
             // 
