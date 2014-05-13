@@ -85,6 +85,14 @@ public class US_V_BAO_CAO_DOANH_THU_THEO_NCC_0 : US_Object
 
 #endregion
 #region "Init Functions"
+    public void FillDatasetSearch(DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0 op_ds_bc_da, string i_str_tu_khoa, DateTime i_dat_ngay_bd, DateTime i_dat_ngay_kt)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_BAO_CAO_DOANH_THU_THEO_NCC_0_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_tu_khoa);
+        v_sp.addDatetimeInputParam("@DAT_BD", i_dat_ngay_bd);
+        v_sp.addDatetimeInputParam("@DAT_KT", i_dat_ngay_kt);
+        v_sp.fillDataSetByCommand(this, op_ds_bc_da);
+    }
     public void FillDatasetSearch(DS_V_BAO_CAO_DOANH_THU_THEO_NCC_0 ip_ds, string ip_str_search)
     {
         CStoredProc v_store_proc = new CStoredProc("pr_V_BAO_CAO_DOANH_THU_THEO_NCC_0_search");
