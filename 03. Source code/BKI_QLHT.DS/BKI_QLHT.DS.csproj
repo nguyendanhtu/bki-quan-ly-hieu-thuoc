@@ -50,11 +50,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DS_DM_BAC_SY.cs">
       <DependentUpon>DS_DM_BAC_SY.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -437,17 +432,6 @@
     </None>
     <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.xss">
       <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.xsd</DependentUpon>
-    </None>
-    <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsc">
-      <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsd</DependentUpon>
-    </None>
-    <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xss">
-      <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAY_0.xsd</DependentUpon>
     </None>
     <None Include="DS_DM_BAC_SY.xsc">
       <DependentUpon>DS_DM_BAC_SY.xsd</DependentUpon>
