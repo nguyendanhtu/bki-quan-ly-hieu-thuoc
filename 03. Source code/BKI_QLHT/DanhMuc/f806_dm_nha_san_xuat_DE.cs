@@ -36,6 +36,10 @@ namespace BKI_QLHT
             us_obj_2_form();
             this.ShowDialog();
         }
+        public void get_us(ref US_DM_NCC_NSX_NHASX op_us)
+        {
+            op_us = m_us_dm_ncc;
+        }
         #endregion
 
 
