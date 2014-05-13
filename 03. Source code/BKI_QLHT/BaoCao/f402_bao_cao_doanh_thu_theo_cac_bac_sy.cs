@@ -422,7 +422,6 @@ namespace BKI_QLHT
             m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
             m_lbl_count.ForeColor = Color.Red;
             m_lbl_doanh_thu.ForeColor = Color.Red;
-            //m_lbl_count.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.Text = v_us.strTEN.Trim();
             m_lbl_ngay_lam_bc.Text = DateTime.Now.Date.ToShortDateString();
         }
@@ -433,7 +432,6 @@ namespace BKI_QLHT
             foreach (DataRow dr in m_v_ds.V_BC_DOANH_THU_THEO_CAC_BAC_SY)
             {
                 v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BC_DOANH_THU_THEO_CAC_BAC_SY.TEN_BAC_SY].ToString());
-                //v_acsc_search.Add(dr[V_DM_NHASX.MA_NSX].ToString());
             }
             m_txt_tim_kiem.AutoCompleteCustomSource = v_acsc_search;
         }
@@ -586,6 +584,7 @@ namespace BKI_QLHT
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_xuat_excel.Click += new EventHandler(m_cmd_xuat_excel_Click);
+            m_cmd_search.Click += new EventHandler(m_cmd_search_Click);
             m_txt_tim_kiem.KeyDown += m_txt_tim_kiem_KeyDown;
             m_txt_tim_kiem.MouseClick += m_txt_tim_kiem_MouseClick;
             m_txt_tim_kiem.Leave += m_txt_tim_kiem_Leave;
