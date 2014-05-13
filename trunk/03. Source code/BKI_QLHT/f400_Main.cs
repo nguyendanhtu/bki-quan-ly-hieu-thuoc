@@ -251,8 +251,8 @@ namespace BKI_QLHT
         {
            try
            {
-               //test v_frm = new test();
-               f1000_phan_quyen_tong_hop v_frm = new f1000_phan_quyen_tong_hop();
+               test v_frm = new test();
+               //f1000_phan_quyen_tong_hop v_frm = new f1000_phan_quyen_tong_hop();
                v_frm.ShowDialog();
            }
            catch (System.Exception v_e)
