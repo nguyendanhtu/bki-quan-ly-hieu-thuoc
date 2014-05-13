@@ -198,6 +198,8 @@ namespace BKI_QLHT
             // 
             // m_dat_den_ngay
             // 
+            this.m_dat_den_ngay.Checked = false;
+            this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.m_dat_den_ngay.Location = new System.Drawing.Point(517, 43);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
@@ -207,6 +209,8 @@ namespace BKI_QLHT
             // 
             // m_dat_tu_ngay
             // 
+            this.m_dat_tu_ngay.Checked = false;
+            this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(222, 44);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
@@ -436,8 +440,13 @@ namespace BKI_QLHT
             AutoCompleteStringCollection v_acsc_search = new AutoCompleteStringCollection();
             foreach (DataRow dr in m_v_ds.V_BAO_CAO_DOANH_THU_TONG_HOP)
             {
-                //v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BAO_CAO_DOANH_THU_TONG_HOP].ToString());
-
+                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BAO_CAO_DOANH_THU_TONG_HOP.TEN_THUOC].ToString());
+                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BAO_CAO_DOANH_THU_TONG_HOP.TEN_BAC_SY].ToString());
+                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BAO_CAO_DOANH_THU_TONG_HOP.TEN_KHACH_HANG].ToString());
+                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BAO_CAO_DOANH_THU_TONG_HOP.TEN_NCC].ToString());
+                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BAO_CAO_DOANH_THU_TONG_HOP.TEN_NHAN_VIEN].ToString());
+                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BAO_CAO_DOANH_THU_TONG_HOP.TEN_NHOM_KH].ToString());
+                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BAO_CAO_DOANH_THU_TONG_HOP.TEN_NHOM_THUOC].ToString());
             }
             m_txt_tim_kiem.AutoCompleteCustomSource = v_acsc_search;
 
@@ -503,9 +512,27 @@ namespace BKI_QLHT
         {
             m_v_ds.Clear();
 
-            //if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "",m_dat_tu_ngay.Value,m_dat_den_ngay.Value);
-            //else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(),m_dat_tu_ngay.Value,m_dat_den_ngay.Value);
-            m_v_us.FillDataset(m_v_ds);
+            if (!m_dat_tu_ngay.Checked)
+            {
+                v_dat_ngay_bd = new DateTime(1970, 1, 1);
+            }
+            else
+            {
+                v_dat_ngay_bd = m_dat_tu_ngay.Value;
+            }
+
+            if (!m_dat_den_ngay.Checked)
+            {
+                v_dat_ngay_kt = new DateTime(2050, 12, 31);
+            }
+            else
+            {
+                v_dat_ngay_kt = m_dat_den_ngay.Value;
+            }
+
+            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "", v_dat_ngay_bd, v_dat_ngay_kt);
+            else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
+            
             var v_str_search = m_txt_tim_kiem.Text.Trim();
             if (v_str_search.Equals(m_str_tim_kiem))
             {
@@ -584,6 +611,7 @@ namespace BKI_QLHT
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_xuat_excel.Click += new EventHandler(m_cmd_xuat_excel_Click);
+            m_cmd_search.Click += new EventHandler(m_cmd_search_Click);
             m_txt_tim_kiem.KeyDown += m_txt_tim_kiem_KeyDown;
             m_txt_tim_kiem.MouseClick += m_txt_tim_kiem_MouseClick;
             m_txt_tim_kiem.Leave += m_txt_tim_kiem_Leave;
@@ -672,7 +700,7 @@ namespace BKI_QLHT
         {
             try
             {
-                load_custom_source_2_m_txt_tim_kiem();
+                load_data_2_grid();
             }
             catch (Exception v_e)
             {
