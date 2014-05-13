@@ -611,9 +611,12 @@
         public const string TEN_DAY_DU = "TEN_DAY_DU";
         public const string DIA_CHI_DV = "DIA_CHI_DV";
         public const string SDT_DV = "SDT_DV";
+        public const string TEN_NHAN_VIEN = "TEN_NHAN_VIEN";
+        public const string THANH_TIEN = "THANH_TIEN";
         public const string TONG_TIEN = "TONG_TIEN";
         public const string TONG_TIEN_THANH_TOAN = "TONG_TIEN_THANH_TOAN";
     }
+
 
 
 
