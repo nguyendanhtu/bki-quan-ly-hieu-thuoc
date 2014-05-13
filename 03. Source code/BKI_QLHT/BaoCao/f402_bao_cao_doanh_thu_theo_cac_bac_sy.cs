@@ -150,7 +150,7 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 424);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 488);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(713, 36);
@@ -190,15 +190,17 @@ namespace BKI_QLHT
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 132);
+            this.m_fg.Location = new System.Drawing.Point(0, 137);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(713, 292);
+            this.m_fg.Size = new System.Drawing.Size(713, 351);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
             // m_dat_den_ngay
             // 
-            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.m_dat_den_ngay.Checked = false;
+            this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat_den_ngay.Location = new System.Drawing.Point(457, 48);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.ShowCheckBox = true;
@@ -207,7 +209,9 @@ namespace BKI_QLHT
             // 
             // m_dat_tu_ngay
             // 
-            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.m_dat_tu_ngay.Checked = false;
+            this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(162, 48);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.ShowCheckBox = true;
@@ -245,6 +249,7 @@ namespace BKI_QLHT
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 2811;
             this.m_cmd_search.Text = "Tìm kiếm";
+            this.m_cmd_search.Click += new System.EventHandler(this.m_cmd_search_Click);
             // 
             // m_txt_tim_kiem
             // 
@@ -351,7 +356,7 @@ namespace BKI_QLHT
             // f402_bao_cao_doanh_thu_theo_cac_bac_sy
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(713, 460);
+            this.ClientSize = new System.Drawing.Size(713, 524);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.m_dat_den_ngay);
             this.Controls.Add(this.m_dat_tu_ngay);
@@ -482,10 +487,10 @@ namespace BKI_QLHT
                 v_dat_ngay_kt = m_dat_den_ngay.Value;
             }
 
-            //if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "", v_dat_ngay_bd,v_dat_ngay_kt);
-            //else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
+            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "", v_dat_ngay_bd,v_dat_ngay_kt);
+            else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
             
-            m_v_us.FillDataset(m_v_ds);
+            //m_v_us.FillDataset(m_v_ds);
             var v_str_search = m_txt_tim_kiem.Text.Trim();
             if (v_str_search.Equals(m_str_tim_kiem))
             {
@@ -668,7 +673,8 @@ namespace BKI_QLHT
         {
             try
             {
-                load_custom_source_2_m_txt_tim_kiem();
+                
+                load_data_2_grid();
             }
             catch (Exception v_e)
             {
