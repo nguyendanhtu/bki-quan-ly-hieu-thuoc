@@ -337,6 +337,14 @@ public class US_V_BAO_CAO_DOANH_THU_TONG_HOP : US_Object
 
 #endregion
 #region "Init Functions"
+    public void FillDatasetSearch(DS_V_BAO_CAO_DOANH_THU_TONG_HOP op_ds_bc_da, string i_str_tu_khoa, DateTime i_dat_ngay_bd, DateTime i_dat_ngay_kt)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_BAO_CAO_DOANH_THU_TONG_HOP_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_tu_khoa);
+        v_sp.addDatetimeInputParam("@DAT_BD", i_dat_ngay_bd);
+        v_sp.addDatetimeInputParam("@DAT_KT", i_dat_ngay_kt);
+        v_sp.fillDataSetByCommand(this, op_ds_bc_da);
+    }
 	public US_V_BAO_CAO_DOANH_THU_TONG_HOP() 
 	{
 		pm_objDS = new DS_V_BAO_CAO_DOANH_THU_TONG_HOP();
