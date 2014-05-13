@@ -19,6 +19,7 @@ using IP.Core.IPSystemAdmin;
 using System.Web;
 
 
+
 namespace BKI_QLHT.DanhMuc
 {
     public partial class uc806_dm_nha_san_xuat : UserControl
@@ -136,6 +137,8 @@ namespace BKI_QLHT.DanhMuc
                 f806_nha_san_xuat_DE v_fDE = new  f806_nha_san_xuat_DE();								
                 v_fDE.display_for_insert();
             load_data_2_grid();
+            v_fDE.get_us(ref m_us_dm_ncc);
+            WinFormControls.set_focus_for_grid(m_grv_dm_nha_san_xuat, m_us_dm_ncc.strTEN_NCC, 1);
         }
 
         private void update_v_dm_ncc_nsx_nhasx_1()
@@ -625,7 +628,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_grv_dm_nha_san_xuat.ColumnInfo = resources.GetString("m_grv_dm_nha_san_xuat.ColumnInfo");
             this.m_grv_dm_nha_san_xuat.Location = new System.Drawing.Point(4, 114);
             this.m_grv_dm_nha_san_xuat.Name = "m_grv_dm_nha_san_xuat";
-            this.m_grv_dm_nha_san_xuat.Size = new System.Drawing.Size(1137, 178);
+            this.m_grv_dm_nha_san_xuat.Size = new System.Drawing.Size(1122, 178);
             this.m_grv_dm_nha_san_xuat.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_dm_nha_san_xuat.Styles"));
             this.m_grv_dm_nha_san_xuat.TabIndex = 52;
             this.m_grv_dm_nha_san_xuat.Click += new System.EventHandler(this.m_grv_dm_nha_san_xuat_Click);

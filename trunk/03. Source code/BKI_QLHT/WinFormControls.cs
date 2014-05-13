@@ -102,5 +102,12 @@ namespace BKI_QLHT
         //        ip_obj_cbo_trang_thai.SelectedIndex = 0;
         //    }
         //}
+
+        public static void set_focus_for_grid(C1.Win.C1FlexGrid.C1FlexGrid ip_fg, string ip_str_search, int ip_i_col_search)
+        {
+            ip_fg.Focus();
+            var s = ip_fg.FindRow(ip_str_search, ip_fg.Row, ip_i_col_search, true);
+            ip_fg.Row = s;
+        }
     }
 }
