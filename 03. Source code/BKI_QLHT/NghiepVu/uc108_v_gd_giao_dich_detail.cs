@@ -403,30 +403,38 @@ namespace BKI_QLHT.NghiepVu
             US_GD_SO_DU v_us = new US_GD_SO_DU();
             DS_GD_SO_DU v_ds = new DS_GD_SO_DU();
             v_us.FillDataset(v_ds, "where id_thuoc = " + txt_search_thuoc1.dcID + "and moi_nhat_yn = 'y'");
-            DataRow v_dr = v_ds.Tables[0].Rows[0];
-            if (CIPConvert.ToDecimal(m_txt_so_luong.Text) > CIPConvert.ToDecimal(v_dr["SO_DU"]))
+            if (v_ds.Tables[0].Rows.Count > 0)
             {
-                DialogResult result = MessageBox.Show("Số lượng vừa nhập vượt số dư trong kho. Bạn có muốn bán hết số dư không?",
-               "Thông báo",
-               MessageBoxButtons.YesNo);
-
-                if (result == DialogResult.Yes)
+                DataRow v_dr = v_ds.Tables[0].Rows[0];
+                if (CIPConvert.ToDecimal(m_txt_so_luong.Text) > CIPConvert.ToDecimal(v_dr["SO_DU"]))
                 {
-                    m_txt_so_luong.Text = v_dr["SO_DU"].ToString();
+                    DialogResult result = MessageBox.Show("Số lượng vừa nhập vượt số dư trong kho. Bạn có muốn bán hết số dư không?",
+                   "Thông báo",
+                   MessageBoxButtons.YesNo);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        m_txt_so_luong.Text = v_dr["SO_DU"].ToString();
+                        return true;
+                    }
+                    if (result == DialogResult.No)
+                    {
+                        m_txt_so_luong.Text = "";
+                        m_txt_so_luong.Focus();
+                        return false;
+                    }
+                }
+                if (CIPConvert.ToDecimal(m_txt_so_luong.Text) <= CIPConvert.ToDecimal(v_dr["SO_DU"]))
+                {
                     return true;
                 }
-                if (result == DialogResult.No)
-                {
-                    m_txt_so_luong.Text = "";
-                    m_txt_so_luong.Focus();
-                    return false;
-                }
+                return false;
             }
-            if (CIPConvert.ToDecimal(m_txt_so_luong.Text) <= CIPConvert.ToDecimal(v_dr["SO_DU"]))
+            else
             {
-                return true;
+                BaseMessages.MsgBox_Error("Chưa nhập đủ dữ liệu cho loại thuốc này!");
+                return false;
             }
-            return false;
         }
         private bool check_validate()
         {
