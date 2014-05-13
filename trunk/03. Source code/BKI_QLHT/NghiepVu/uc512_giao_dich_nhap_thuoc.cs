@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Data;
-using System.Drawing;
-using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
-
 using IP.Core.IPCommon;
 using IP.Core.IPException;
 using IP.Core.IPData;
@@ -18,17 +19,16 @@ using C1.Win.C1FlexGrid;
 using IP.Core.IPSystemAdmin;
 using System.Collections.Generic;
 
+
 namespace BKI_QLHT
 {
-    public partial class f511_gd_nhap_thuoc : Form
+    public partial class uc512_giao_dich_nhap_thuoc : UserControl
     {
-        public f511_gd_nhap_thuoc()
+        public uc512_giao_dich_nhap_thuoc()
         {
             InitializeComponent();
             format_control();
-
         }
-
 
         #region Public Interface
         public String gen_Ma_GD()
@@ -93,7 +93,8 @@ namespace BKI_QLHT
         #region Private Method
         private void format_control()
         {
-            CControlFormat.setFormStyle(this, new CAppContext_201());
+            //CControlFormat.setFormStyle(this, new CAppContext_201());
+            CControlFormat.setUserControlStyle(this, new CAppContext_201());
             set_define_event();
             m_grv_nhap_thuoc.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             m_grv_nhap_thuoc.DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
@@ -134,7 +135,7 @@ namespace BKI_QLHT
         //    DataGridViewComboBoxCell cell = new DataGridViewComboBoxCell();
         //    cell.DataSource = v_ds_dm_thuoc.V_DM_THUOC;
         //    //m_grv_nhap_thuoc.Cells[cbo_test].DataSource = v_ds_dm_thuoc.V_DM_THUOC;
-            
+
         //    cell.ValueMember = V_DM_THUOC.ID;
         //    cell.DisplayMember = V_DM_THUOC.DISPLAY;
 
@@ -255,7 +256,7 @@ namespace BKI_QLHT
             }
             else load_cbo_dv_cap_4_start();
 
-        }     
+        }
         private void load_cbo_don_vi_tinh(decimal ip_id_nhom_dv_tinh)
         {
             US_GD_DON_VI_TINH_THUOC v_us_v_gd_don_vi_tinh_thuoc = new US_GD_DON_VI_TINH_THUOC();
@@ -471,7 +472,7 @@ namespace BKI_QLHT
                         v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
                         //v_us_sd.datNGAY_PHAT_SINH = CIPConvert.ToDatetime( v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"].ToString(),"dd/MM/yyyy");
                         v_us_sd.datNGAY_PHAT_SINH = DateTime.Now;
-                        v_us_sd.strMOI_NHAT_YN ="Y";
+                        v_us_sd.strMOI_NHAT_YN = "Y";
                         v_us_sd.Update();
                     }
                 }
@@ -598,7 +599,7 @@ namespace BKI_QLHT
                     }
                     else
                     {
-                        
+
                         v_us_gd_dv_tinh_thuoc.FillDataset(v_ds_gd_dv_tinh_thuoc, "where  id_nhom_don_vi_tinh='" + v_list.ID_nhom_dv_tinh + "' and ten_don_vi like N'%" + v_list.don_vi_cap_2 + "%'");
                         v_us_gd_dv_tinh_thuoc.dcID = CIPConvert.ToDecimal(v_ds_gd_dv_tinh_thuoc.Tables[0].Rows[0]["ID"]);
                         v_list.ID_dv_cap_2 = CIPConvert.ToDecimal(v_ds_gd_dv_tinh_thuoc.Tables[0].Rows[0]["ID"]);
@@ -958,7 +959,8 @@ namespace BKI_QLHT
                 return false;
 
             }
-            if (m_cbo_dv_cap_4.Text == "Thùng" && m_cbo_dv_cap_3.Text != "Thùng") {
+            if (m_cbo_dv_cap_4.Text == "Thùng" && m_cbo_dv_cap_3.Text != "Thùng")
+            {
                 BaseMessages.MsgBox_Infor("Bạn nhập sai các đơn vị quy đổi!!");
                 m_cbo_dv_cap_4.Focus();
                 return false;
@@ -1049,7 +1051,7 @@ namespace BKI_QLHT
             m_grv_nhap_thuoc.Rows[n].Cells[1].Value = m_txt_search_thuoc1.Text1;
             m_grv_nhap_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
             m_grv_nhap_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
-            m_grv_nhap_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", ""))) ;
+            m_grv_nhap_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", "")));
             m_grv_nhap_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", ""))));
             tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", ""));
             m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(tong_tien));
@@ -1122,8 +1124,8 @@ namespace BKI_QLHT
             {
                 if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
                 list.RemoveAt(m_grv_nhap_thuoc.SelectedRows[0].Index);
-                m_lbl_tong_tien.Text= string.Format("{0:#,###}",CIPConvert.ToDecimal(m_lbl_tong_tien.Text.Replace(",",""))-CIPConvert.ToDecimal(m_grv_nhap_thuoc.SelectedRows[0].Cells[5].Value.ToString().Replace(",","")));
-                tong_tien-=int.Parse(m_grv_nhap_thuoc.SelectedRows[0].Cells[5].Value.ToString().Replace(",", ""));
+                m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_lbl_tong_tien.Text.Replace(",", "")) - CIPConvert.ToDecimal(m_grv_nhap_thuoc.SelectedRows[0].Cells[5].Value.ToString().Replace(",", "")));
+                tong_tien -= int.Parse(m_grv_nhap_thuoc.SelectedRows[0].Cells[5].Value.ToString().Replace(",", ""));
                 m_grv_nhap_thuoc.Rows.RemoveAt(m_grv_nhap_thuoc.SelectedRows[0].Index);
                 restart_form();
             }
@@ -1138,7 +1140,8 @@ namespace BKI_QLHT
             try
             {
                 list.Clear();
-                this.Close();
+                this.Visible = false;
+                this.Controls.Clear();
             }
             catch (Exception v_e)
             {
@@ -1256,25 +1259,5 @@ namespace BKI_QLHT
             restart_form();
         }
         #endregion
-
-       
-
-      
-
-        //private void m_txt_so_luong_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
-        //    {
-        //        DialogResult dgl = MessageBox.Show("Ban chi duoc nhap so", "Lỗi nhập chữ", MessageBoxButtons.OK);
-        //        if(dgl==DialogResult.OK){
-        //            m_txt_so_luong.Focus();
-        //            m_txt_so_luong.Clear();
-        //        }
-
-        //    }
-
-        //}
-
-
     }
 }

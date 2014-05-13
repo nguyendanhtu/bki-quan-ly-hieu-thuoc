@@ -398,9 +398,13 @@ namespace BKI_QLHT
 
         private void cmd_item_quan_ly_nhap_thuoc_Click(object sender, EventArgs e)
         {
-            f511_gd_nhap_thuoc frm = new f511_gd_nhap_thuoc();
-            //test frm = new test();
-            frm.ShowDialog();
+            //f511_gd_nhap_thuoc frm = new f511_gd_nhap_thuoc();
+            ////test frm = new test();
+            //frm.ShowDialog();
+            m_Panel_Content.Controls.Clear();
+            uc512_giao_dich_nhap_thuoc uc_frm = new uc512_giao_dich_nhap_thuoc();
+            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            m_Panel_Content.Controls.Add(uc_frm);
         }
 
 
