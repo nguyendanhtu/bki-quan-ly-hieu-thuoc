@@ -128,6 +128,14 @@ public class US_V_BC_DOANH_THU_THEO_CAC_BAC_SY : US_Object
 
 #endregion
 #region "Init Functions"
+    public void FillDatasetSearch(DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY op_ds_bc_da, string i_str_tu_khoa, DateTime i_dat_ngay_bd, DateTime i_dat_ngay_kt)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_BC_DOANH_THU_THEO_CAC_BAC_SY_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_tu_khoa);
+        v_sp.addDatetimeInputParam("@DAT_BD", i_dat_ngay_bd);
+        v_sp.addDatetimeInputParam("@DAT_KT", i_dat_ngay_kt);
+        v_sp.fillDataSetByCommand(this, op_ds_bc_da);
+    }
 	public US_V_BC_DOANH_THU_THEO_CAC_BAC_SY() 
 	{
 		pm_objDS = new DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY();
