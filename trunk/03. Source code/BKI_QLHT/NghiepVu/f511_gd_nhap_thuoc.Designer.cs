@@ -74,6 +74,12 @@
             this.m_lbl_ma_giao_dich = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_grv_nhap_thuoc = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ten_thuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.So_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.m_pnl_control = new System.Windows.Forms.Panel();
             this.m_lbl_tong_tien = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,12 +89,7 @@
             this.m_cmd_add = new SIS.Controls.Button.SiSButton();
             this.m_txt_add_thuoc = new System.Windows.Forms.Button();
             this.m_txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ten_thuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.So_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.m_cmd_upadate = new SIS.Controls.Button.SiSButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_nhap_thuoc)).BeginInit();
             this.m_pnl_control.SuspendLayout();
@@ -571,6 +572,43 @@
             this.m_grv_nhap_thuoc.RowHeadersVisible = false;
             this.m_grv_nhap_thuoc.Size = new System.Drawing.Size(754, 193);
             this.m_grv_nhap_thuoc.TabIndex = 115;
+            this.m_grv_nhap_thuoc.DoubleClick += new System.EventHandler(this.m_grv_nhap_thuoc_DoubleClick);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 90;
+            // 
+            // Ten_thuoc
+            // 
+            this.Ten_thuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ten_thuoc.HeaderText = "Tên thuốc";
+            this.Ten_thuoc.Name = "Ten_thuoc";
+            // 
+            // So_luong
+            // 
+            this.So_luong.HeaderText = "Số lượng";
+            this.So_luong.Name = "So_luong";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Đơn vị tính";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Giá nhập (VNĐ)";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 120;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Thành tiền (VNĐ)";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 120;
             // 
             // m_pnl_control
             // 
@@ -661,9 +699,9 @@
             this.m_cmd_add.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cmd_add.Image = global::BKI_QLHT.Properties.Resources.add;
             this.m_cmd_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_add.Location = new System.Drawing.Point(624, 292);
+            this.m_cmd_add.Location = new System.Drawing.Point(570, 292);
             this.m_cmd_add.Name = "m_cmd_add";
-            this.m_cmd_add.Size = new System.Drawing.Size(99, 30);
+            this.m_cmd_add.Size = new System.Drawing.Size(76, 33);
             this.m_cmd_add.TabIndex = 114;
             this.m_cmd_add.Text = "Thêm";
             // 
@@ -695,47 +733,28 @@
             this.m_txt_search_thuoc1.ValueMember = null;
             this.m_txt_search_thuoc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txt_search_thuoc1_KeyDown);
             // 
-            // STT
+            // m_cmd_upadate
             // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 90;
-            // 
-            // Ten_thuoc
-            // 
-            this.Ten_thuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ten_thuoc.HeaderText = "Tên thuốc";
-            this.Ten_thuoc.Name = "Ten_thuoc";
-            // 
-            // So_luong
-            // 
-            this.So_luong.HeaderText = "Số lượng";
-            this.So_luong.Name = "So_luong";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Đơn vị tính";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Giá nhập (VNĐ)";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 120;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Thành tiền (VNĐ)";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 120;
+            this.m_cmd_upadate.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_upadate.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_upadate.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_upadate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_cmd_upadate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_upadate.ImageIndex = 10;
+            this.m_cmd_upadate.ImageList = this.imageList1;
+            this.m_cmd_upadate.Location = new System.Drawing.Point(668, 292);
+            this.m_cmd_upadate.Name = "m_cmd_upadate";
+            this.m_cmd_upadate.Size = new System.Drawing.Size(83, 30);
+            this.m_cmd_upadate.TabIndex = 118;
+            this.m_cmd_upadate.Text = "Cập nhật";
+            this.m_cmd_upadate.Visible = false;
             // 
             // f511_gd_nhap_thuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 579);
+            this.Controls.Add(this.m_cmd_upadate);
             this.Controls.Add(this.m_txt_add_thuoc);
             this.Controls.Add(this.m_txt_search_thuoc1);
             this.Controls.Add(this.m_pnl_control);
@@ -842,5 +861,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        internal SIS.Controls.Button.SiSButton m_cmd_upadate;
     }
 }
