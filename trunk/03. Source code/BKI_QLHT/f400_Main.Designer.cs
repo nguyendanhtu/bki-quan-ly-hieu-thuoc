@@ -107,6 +107,7 @@ namespace BKI_QLHT
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
@@ -1209,6 +1210,16 @@ namespace BKI_QLHT
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(7, 337);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(207, 23);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "BC doanh thu theo các bác sỹ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1216,6 +1227,7 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(823, 587);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -1331,5 +1343,6 @@ namespace BKI_QLHT
         private Button button10;
         private Button button11;
         private Button button1;
+        private Button button2;
     }
 }

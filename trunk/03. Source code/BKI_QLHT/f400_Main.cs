@@ -680,6 +680,19 @@ namespace BKI_QLHT
             }
         }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                f402_bao_cao_doanh_thu_theo_cac_bac_sy v_frm = new f402_bao_cao_doanh_thu_theo_cac_bac_sy();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
 
 
 
