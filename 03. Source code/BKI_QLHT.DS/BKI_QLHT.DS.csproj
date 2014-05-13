@@ -32,8 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -279,10 +282,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_BAO_CAO_DOANH_THU_TONG_HOP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_TONG_HOP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_BAO_CAO_KIEM_KE_KHO.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_BC_DOANH_THU_THEO_CAC_NCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BC_DOANH_THU_THEO_CAC_NCC.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_V_DM_BAC_SY.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -871,6 +889,17 @@
     <None Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xss">
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_THUOC_0.xsd</DependentUpon>
     </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_TONG_HOP.xsc">
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_TONG_HOP.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_TONG_HOP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BAO_CAO_DOANH_THU_TONG_HOP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BAO_CAO_DOANH_THU_TONG_HOP.xss">
+      <DependentUpon>DS_V_BAO_CAO_DOANH_THU_TONG_HOP.xsd</DependentUpon>
+    </None>
     <None Include="DS_V_BAO_CAO_KIEM_KE_KHO.xsc">
       <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>
     </None>
@@ -881,6 +910,28 @@
     </None>
     <None Include="DS_V_BAO_CAO_KIEM_KE_KHO.xss">
       <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsc">
+      <DependentUpon>DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.xss">
+      <DependentUpon>DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_DOANH_THU_THEO_CAC_NCC.xsc">
+      <DependentUpon>DS_V_BC_DOANH_THU_THEO_CAC_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_DOANH_THU_THEO_CAC_NCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BC_DOANH_THU_THEO_CAC_NCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BC_DOANH_THU_THEO_CAC_NCC.xss">
+      <DependentUpon>DS_V_BC_DOANH_THU_THEO_CAC_NCC.xsd</DependentUpon>
     </None>
     <None Include="DS_V_DM_BAC_SY.xsc">
       <DependentUpon>DS_V_DM_BAC_SY.xsd</DependentUpon>
