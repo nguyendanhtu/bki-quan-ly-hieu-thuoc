@@ -405,6 +405,12 @@
     <Compile Include="NghiepVu\uc108_v_gd_giao_dich_detail.Designer.cs">
       <DependentUpon>uc108_v_gd_giao_dich_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\uc512_giao_dich_nhap_thuoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\uc512_giao_dich_nhap_thuoc.Designer.cs">
+      <DependentUpon>uc512_giao_dich_nhap_thuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\uc803_bang_gia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -643,6 +649,9 @@
     <EmbeddedResource Include="NghiepVu\f115_Report.rdlc" />
     <EmbeddedResource Include="NghiepVu\uc108_v_gd_giao_dich_detail.resx">
       <DependentUpon>uc108_v_gd_giao_dich_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\uc512_giao_dich_nhap_thuoc.resx">
+      <DependentUpon>uc512_giao_dich_nhap_thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\uc803_bang_gia.resx">
       <DependentUpon>uc803_bang_gia.cs</DependentUpon>
