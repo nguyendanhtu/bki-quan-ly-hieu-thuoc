@@ -502,8 +502,9 @@ namespace BKI_QLHT
         {
             try
             {
-                //f409_bao_cao_danh_muc_thuoc_theo_hsx v_frm = new f409_bao_cao_danh_muc_thuoc_theo_hsx();
-                //v_frm.ShowDialog();
+                
+                f409_bao_cao_danh_muc_thuoc_theo_hsx v_frm = new f409_bao_cao_danh_muc_thuoc_theo_hsx();
+                v_frm.ShowDialog();
             }
             catch (System.Exception ex)
             {
@@ -515,8 +516,8 @@ namespace BKI_QLHT
         {
             try
             {
-                //f410_bao_cao_danh_muc_thuoc_theo_ncc v_frm = new f410_bao_cao_danh_muc_thuoc_theo_ncc();
-                //v_frm.ShowDialog();
+                f410_bao_cao_danh_muc_thuoc_theo_ncc v_frm = new f410_bao_cao_danh_muc_thuoc_theo_ncc();
+                v_frm.ShowDialog();
             }
             catch (System.Exception ex)
             {
@@ -528,8 +529,8 @@ namespace BKI_QLHT
         {
             try
             {
-                //f410_bao_cao_danh_muc_thuoc_theo_ncc v_frm = new f410_bao_cao_danh_muc_thuoc_theo_ncc();
-                //v_frm.ShowDialog();
+                f411_bao_cao_danh_muc_thuoc_theo_nsx v_frm = new f411_bao_cao_danh_muc_thuoc_theo_nsx();
+                v_frm.ShowDialog();
             }
             catch (System.Exception ex)
             {
