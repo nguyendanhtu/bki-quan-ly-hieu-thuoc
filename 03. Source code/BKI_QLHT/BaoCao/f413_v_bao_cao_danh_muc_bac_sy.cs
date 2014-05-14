@@ -456,6 +456,7 @@ namespace BKI_QLHT
 
 		private void set_define_events(){
 			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            m_cmd_search.Click += new EventHandler(m_cmd_search_Click);
             m_txt_tim_kiem.KeyDown += m_txt_tim_kiem_KeyDown;
             m_txt_tim_kiem.MouseClick += m_txt_tim_kiem_MouseClick;
             m_txt_tim_kiem.Leave += m_txt_tim_kiem_Leave;
@@ -534,7 +535,7 @@ namespace BKI_QLHT
         {
             try
             {
-                load_custom_source_2_m_txt_tim_kiem();
+                load_data_2_grid();
             }
             catch (Exception v_e)
             {
