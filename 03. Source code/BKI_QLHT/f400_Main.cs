@@ -658,6 +658,19 @@ namespace BKI_QLHT
             }
         }
 
+        private void button13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f407_bcdt_theo_ngay_n_nhan_vien v_frm = new f407_bcdt_theo_ngay_n_nhan_vien();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
 
 
 
