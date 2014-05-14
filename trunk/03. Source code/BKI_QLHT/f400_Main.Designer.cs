@@ -1045,6 +1045,10 @@ namespace BKI_QLHT
             // 
             // m_cmd_lich_su_gia_ban
             // 
+            this.m_cmd_lich_su_gia_ban.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.m_cmd_lich_su_gia_ban.Location = new System.Drawing.Point(0, 0);
+            this.m_cmd_lich_su_gia_ban.Name = "m_cmd_lich_su_gia_ban";
+            this.m_cmd_lich_su_gia_ban.TabIndex = 2;
             // 
             // dockContainerItem1
             // 
@@ -1138,6 +1142,7 @@ namespace BKI_QLHT
             this.button2.TabIndex = 18;
             this.button2.Text = "BC Danh mục thuốc theo hãng sx";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -1147,6 +1152,7 @@ namespace BKI_QLHT
             this.button3.TabIndex = 19;
             this.button3.Text = "BC Danh mục thuốc theo ncc";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -1156,6 +1162,7 @@ namespace BKI_QLHT
             this.button4.TabIndex = 20;
             this.button4.Text = "BC Danh mục thuốc theo nước sx\r\n";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -1165,6 +1172,7 @@ namespace BKI_QLHT
             this.button5.TabIndex = 21;
             this.button5.Text = "BC Kiểm kê kho";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -1174,6 +1182,7 @@ namespace BKI_QLHT
             this.button6.TabIndex = 22;
             this.button6.Text = "BC Danh mục bác sỹ";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -1183,6 +1192,7 @@ namespace BKI_QLHT
             this.button7.TabIndex = 23;
             this.button7.Text = "BC Danh mục khách hàng";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -1192,6 +1202,7 @@ namespace BKI_QLHT
             this.button8.TabIndex = 24;
             this.button8.Text = "402";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -1201,6 +1212,7 @@ namespace BKI_QLHT
             this.button9.TabIndex = 25;
             this.button9.Text = "403";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // f400_Main
             // 
