@@ -418,7 +418,7 @@ namespace BKI_QLHT
             AutoCompleteStringCollection v_acsc_search = new AutoCompleteStringCollection();
             foreach (DataRow dr in m_v_ds.V_BC_DOANH_THU_THEO_CAC_NCC)
             {
-                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BC_DOANH_THU_THEO_CAC_BAC_SY.TEN_BAC_SY].ToString());
+                v_acsc_search.Add(dr[BKI_QLHT.DS.CDBNames.V_BC_DOANH_THU_THEO_CAC_NCC.TEN_NCC].ToString());
             }
             m_txt_tim_kiem.AutoCompleteCustomSource = v_acsc_search;
         }
