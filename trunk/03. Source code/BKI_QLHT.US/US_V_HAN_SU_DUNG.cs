@@ -133,6 +133,28 @@ public class US_V_HAN_SU_DUNG : US_Object
         pm_objDR["TEN_DON_VI"] = System.Convert.DBNull;
     }
 
+    public string strMA_GIAO_DICH
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "MA_GIAO_DICH", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["MA_GIAO_DICH"] = value;
+        }
+    }
+
+    public bool IsMA_GIAO_DICHNull()
+    {
+        return pm_objDR.IsNull("MA_GIAO_DICH");
+    }
+
+    public void SetMA_GIAO_DICHNull()
+    {
+        pm_objDR["MA_GIAO_DICH"] = System.Convert.DBNull;
+    }
+
     #endregion
     #region "Init Functions"
     public US_V_HAN_SU_DUNG()
