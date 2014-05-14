@@ -390,6 +390,8 @@ namespace BKI_QLHT
             load_cbo_dv_cap_2_start();
             load_cbo_dv_cap_3_start();
             load_cbo_dv_cap_4_start();
+            m_txt_quy_doi_2.Enabled = true;
+            m_txt_quy_doi_3.Enabled = true;
             m_txt_quy_doi_1.Text = "1";
             m_txt_quy_doi_2.Text = "1";
             m_txt_quy_doi_3.Text = "1";
@@ -755,6 +757,7 @@ namespace BKI_QLHT
                 {
                     m_cbo_dv_cap_3.SelectedValue = m_cbo_dv_cap_2.SelectedValue;
                     m_txt_quy_doi_2.Text = "1";
+                    m_txt_quy_doi_2.Enabled = false;
                 }
                 if (count == 4)
                 {
@@ -765,6 +768,7 @@ namespace BKI_QLHT
                 {
                     m_cbo_dv_cap_4.SelectedValue = m_cbo_dv_cap_3.SelectedValue;
                     m_txt_quy_doi_3.Text = "1";
+                    m_txt_quy_doi_3.Enabled = false;
                 }
 
 
