@@ -200,7 +200,7 @@ namespace BKI_QLHT
             // 
             this.m_dat_den_ngay.Checked = false;
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
-            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat_den_ngay.Location = new System.Drawing.Point(517, 43);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.ShowCheckBox = true;
@@ -211,7 +211,7 @@ namespace BKI_QLHT
             // 
             this.m_dat_tu_ngay.Checked = false;
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
-            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.m_dat_tu_ngay.Location = new System.Drawing.Point(222, 44);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.ShowCheckBox = true;

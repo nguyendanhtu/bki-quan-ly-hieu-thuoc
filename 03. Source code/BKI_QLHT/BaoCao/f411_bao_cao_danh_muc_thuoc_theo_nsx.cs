@@ -35,12 +35,22 @@ namespace BKI_QLHT
 	{
 		internal System.Windows.Forms.ImageList ImageList;
 		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
-		private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
-		internal SIS.Controls.Button.SiSButton m_cmd_delete;
-		internal SIS.Controls.Button.SiSButton m_cmd_update;
-		internal SIS.Controls.Button.SiSButton m_cmd_insert;
-		internal SIS.Controls.Button.SiSButton m_cmd_exit;
-		internal SIS.Controls.Button.SiSButton m_cmd_view;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        private DateTimePicker m_dat_den_ngay;
+        private DateTimePicker m_dat_tu_ngay;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        internal SIS.Controls.Button.SiSButton m_cmd_search;
+        private TextBox m_txt_tim_kiem;
+        private Label m_lbl_nguoi_lam_bc;
+        private Label m_lbl_ngay_lam_bc;
+        private Label label3;
+        private Label m_lbl_nguoi_lam_bao_cao;
+        private Label m_lbl_count;
+        private Label label1;
+        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
 		private System.ComponentModel.IContainer components;
 
 		public f409_bao_cao_danh_muc_thuoc_theo_nsx()
@@ -78,137 +88,262 @@ namespace BKI_QLHT
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(f409_bao_cao_danh_muc_thuoc_theo_nsx));
-			this.ImageList = new System.Windows.Forms.ImageList(this.components);
-			this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-			this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
-			this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-			this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
-			this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-			this.m_cmd_view = new SIS.Controls.Button.SiSButton();
-			this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-			this.m_pnl_out_place_dm.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// ImageList
-			// 
-			this.ImageList.ImageSize = new System.Drawing.Size(16, 16);
-			this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
-			this.ImageList.TransparentColor = System.Drawing.Color.Transparent;
-			// 
-			// m_pnl_out_place_dm
-			// 
-			this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
-			this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-			this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
-			this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
-			this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
-			this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.m_pnl_out_place_dm.DockPadding.All = 4;
-			this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
-			this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
-			this.m_pnl_out_place_dm.Size = new System.Drawing.Size(686, 36);
-			this.m_pnl_out_place_dm.TabIndex = 19;
-			// 
-			// m_cmd_delete
-			// 
-			this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
-			this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-			this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-			this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Right;
-			this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.m_cmd_delete.ImageIndex = 4;
-			this.m_cmd_delete.ImageList = this.ImageList;
-			this.m_cmd_delete.Location = new System.Drawing.Point(506, 4);
-			this.m_cmd_delete.Name = "m_cmd_delete";
-			this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
-			this.m_cmd_delete.TabIndex = 14;
-			this.m_cmd_delete.Text = "&Xoá";
-			// 
-			// m_cmd_update
-			// 
-			this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
-			this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-			this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-			this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Right;
-			this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.m_cmd_update.ImageIndex = 3;
-			this.m_cmd_update.ImageList = this.ImageList;
-			this.m_cmd_update.Location = new System.Drawing.Point(418, 4);
-			this.m_cmd_update.Name = "m_cmd_update";
-			this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-			this.m_cmd_update.TabIndex = 13;
-			this.m_cmd_update.Text = "&Sửa";
-			// 
-			// m_cmd_insert
-			// 
-			this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
-			this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-			this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-			this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
-			this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.m_cmd_insert.ImageIndex = 2;
-			this.m_cmd_insert.ImageList = this.ImageList;
-			this.m_cmd_insert.Location = new System.Drawing.Point(330, 4);
-			this.m_cmd_insert.Name = "m_cmd_insert";
-			this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
-			this.m_cmd_insert.TabIndex = 12;
-			this.m_cmd_insert.Text = "&Thêm";
-			// 
-			// m_cmd_exit
-			// 
-			this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
-			this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-			this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-			this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
-			this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.m_cmd_exit.ImageIndex = 12;
-			this.m_cmd_exit.ImageList = this.ImageList;
-			this.m_cmd_exit.Location = new System.Drawing.Point(594, 4);
-			this.m_cmd_exit.Name = "m_cmd_exit";
-			this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-			this.m_cmd_exit.TabIndex = 11;
-			this.m_cmd_exit.Text = "Thoát (Esc)";
-			// 
-			// m_cmd_view
-			// 
-			this.m_cmd_view.AdjustImageLocation = new System.Drawing.Point(0, 0);
-			this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-			this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-			this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
-			this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.m_cmd_view.ImageIndex = 18;
-			this.m_cmd_view.ImageList = this.ImageList;
-			this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
-			this.m_cmd_view.Name = "m_cmd_view";
-			this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
-			this.m_cmd_view.TabIndex = 21;
-			this.m_cmd_view.Text = "Xem";
-			// 
-			// m_fg
-			// 
-			this.m_fg.ColumnInfo = @"10,1,0,0,0,85,Columns:0{Width:13;}	 1{Caption:""Tên nước sản xuất"";Visible:True;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}3{Caption:""TT thuốc"";Visible:True;DataType:System.Decimal;TextAlign:RightCenter;TextAlignFixed:CenterCenter;}9{Caption:""Tuyến sử dụng 8"";Visible:True;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}8{Caption:""Tuyến sử dụng 7"";Visible:True;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}2{Caption:""TT hoạt chất"";Visible:True;DataType:System.Decimal;TextAlign:RightCenter;TextAlignFixed:CenterCenter;}6{Caption:""Tuyến sử dụng 5"";Visible:True;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}5{Caption:""Đường dùng dạng dùng"";Visible:True;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}4{Caption:""Tên thuốc hay hoạt chất"";Visible:True;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}7{Caption:""Tuyến sử dụng 6"";Visible:True;DataType:System.String;TextAlign:LeftCenter;TextAlignFixed:CenterCenter;}	";
-			this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.m_fg.Location = new System.Drawing.Point(0, 0);
-			this.m_fg.Name = "m_fg";
-			this.m_fg.Size = new System.Drawing.Size(686, 373);
-			this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(@"Normal{Font:Microsoft Sans Serif, 8.25pt;}	Alternate{BackColor:Info;}	Fixed{BackColor:Control;ForeColor:ControlText;Border:Flat,1,ControlDark,Both;}	Highlight{BackColor:Highlight;ForeColor:HighlightText;}	Search{BackColor:Highlight;ForeColor:HighlightText;}	Frozen{BackColor:Beige;}	EmptyArea{BackColor:AppWorkspace;Border:Flat,1,ControlDarkDark,Both;}	GrandTotal{BackColor:Black;ForeColor:White;}	Subtotal0{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal1{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal2{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal3{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal4{BackColor:ControlDarkDark;ForeColor:White;}	Subtotal5{BackColor:ControlDarkDark;ForeColor:White;}	");
-			this.m_fg.TabIndex = 20;
-			// 
-			// f409_bao_cao_danh_muc_thuoc_theo_nsx
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(686, 409);
-			this.Controls.Add(this.m_fg);
-			this.Controls.Add(this.m_pnl_out_place_dm);
-			this.Name = "f409_bao_cao_danh_muc_thuoc_theo_nsx";
-			this.Text = "f409_bao_cao_danh_muc_thuoc_theo_nsx";
-			this.Load += new System.EventHandler(this.f409_bao_cao_danh_muc_thuoc_theo_nsx_Load);
-			this.m_pnl_out_place_dm.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
-			this.ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f409_bao_cao_danh_muc_thuoc_theo_nsx));
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
+            this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
+            this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
+            this.m_lbl_nguoi_lam_bc = new System.Windows.Forms.Label();
+            this.m_lbl_ngay_lam_bc = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.m_lbl_nguoi_lam_bao_cao = new System.Windows.Forms.Label();
+            this.m_lbl_count = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
+            this.m_pnl_out_place_dm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // ImageList
+            // 
+            this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
+            this.ImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList.Images.SetKeyName(0, "");
+            this.ImageList.Images.SetKeyName(1, "");
+            this.ImageList.Images.SetKeyName(2, "");
+            this.ImageList.Images.SetKeyName(3, "");
+            this.ImageList.Images.SetKeyName(4, "");
+            this.ImageList.Images.SetKeyName(5, "");
+            this.ImageList.Images.SetKeyName(6, "");
+            this.ImageList.Images.SetKeyName(7, "");
+            this.ImageList.Images.SetKeyName(8, "");
+            this.ImageList.Images.SetKeyName(9, "");
+            this.ImageList.Images.SetKeyName(10, "");
+            this.ImageList.Images.SetKeyName(11, "");
+            this.ImageList.Images.SetKeyName(12, "");
+            this.ImageList.Images.SetKeyName(13, "");
+            this.ImageList.Images.SetKeyName(14, "");
+            this.ImageList.Images.SetKeyName(15, "");
+            this.ImageList.Images.SetKeyName(16, "");
+            this.ImageList.Images.SetKeyName(17, "");
+            this.ImageList.Images.SetKeyName(18, "");
+            this.ImageList.Images.SetKeyName(19, "");
+            this.ImageList.Images.SetKeyName(20, "");
+            this.ImageList.Images.SetKeyName(21, "");
+            // 
+            // m_pnl_out_place_dm
+            // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 501);
+            this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
+            this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(927, 36);
+            this.m_pnl_out_place_dm.TabIndex = 19;
+            // 
+            // m_cmd_exit
+            // 
+            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_exit.ImageIndex = 12;
+            this.m_cmd_exit.ImageList = this.ImageList;
+            this.m_cmd_exit.Location = new System.Drawing.Point(835, 4);
+            this.m_cmd_exit.Name = "m_cmd_exit";
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.Text = "Thoát (Esc)";
+            // 
+            // m_fg
+            // 
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_fg.Location = new System.Drawing.Point(0, 139);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(927, 362);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 20;
+            // 
+            // m_dat_den_ngay
+            // 
+            this.m_dat_den_ngay.Checked = false;
+            this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(483, 55);
+            this.m_dat_den_ngay.Name = "m_dat_den_ngay";
+            this.m_dat_den_ngay.ShowCheckBox = true;
+            this.m_dat_den_ngay.Size = new System.Drawing.Size(106, 20);
+            this.m_dat_den_ngay.TabIndex = 2813;
+            // 
+            // m_dat_tu_ngay
+            // 
+            this.m_dat_tu_ngay.Checked = false;
+            this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(188, 56);
+            this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
+            this.m_dat_tu_ngay.ShowCheckBox = true;
+            this.m_dat_tu_ngay.Size = new System.Drawing.Size(106, 20);
+            this.m_dat_tu_ngay.TabIndex = 2812;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(409, 62);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 13);
+            this.label7.TabIndex = 2811;
+            this.label7.Text = "Đến ngày";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(110, 62);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 2810;
+            this.label6.Text = "Từ ngày";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(110, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 2809;
+            this.label5.Text = "Tìm kiếm";
+            // 
+            // m_cmd_search
+            // 
+            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_search.ImageIndex = 18;
+            this.m_cmd_search.ImageList = this.ImageList;
+            this.m_cmd_search.Location = new System.Drawing.Point(609, 20);
+            this.m_cmd_search.Name = "m_cmd_search";
+            this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_search.TabIndex = 2808;
+            this.m_cmd_search.Text = "Tìm kiếm";
+            // 
+            // m_txt_tim_kiem
+            // 
+            this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.m_txt_tim_kiem.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(188, 25);
+            this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
+            this.m_txt_tim_kiem.Size = new System.Drawing.Size(401, 20);
+            this.m_txt_tim_kiem.TabIndex = 2807;
+            // 
+            // m_lbl_nguoi_lam_bc
+            // 
+            this.m_lbl_nguoi_lam_bc.AutoSize = true;
+            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(659, 95);
+            this.m_lbl_nguoi_lam_bc.Name = "m_lbl_nguoi_lam_bc";
+            this.m_lbl_nguoi_lam_bc.Size = new System.Drawing.Size(63, 13);
+            this.m_lbl_nguoi_lam_bc.TabIndex = 2806;
+            this.m_lbl_nguoi_lam_bc.Text = "m_lbl_nguoi";
+            // 
+            // m_lbl_ngay_lam_bc
+            // 
+            this.m_lbl_ngay_lam_bc.AutoSize = true;
+            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(659, 117);
+            this.m_lbl_ngay_lam_bc.Name = "m_lbl_ngay_lam_bc";
+            this.m_lbl_ngay_lam_bc.Size = new System.Drawing.Size(60, 13);
+            this.m_lbl_ngay_lam_bc.TabIndex = 2805;
+            this.m_lbl_ngay_lam_bc.Text = "m_lbl_ngay";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(534, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.TabIndex = 2804;
+            this.label3.Text = "Ngày làm báo cáo";
+            // 
+            // m_lbl_nguoi_lam_bao_cao
+            // 
+            this.m_lbl_nguoi_lam_bao_cao.AutoSize = true;
+            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(534, 95);
+            this.m_lbl_nguoi_lam_bao_cao.Name = "m_lbl_nguoi_lam_bao_cao";
+            this.m_lbl_nguoi_lam_bao_cao.Size = new System.Drawing.Size(96, 13);
+            this.m_lbl_nguoi_lam_bao_cao.TabIndex = 2803;
+            this.m_lbl_nguoi_lam_bao_cao.Text = "Người làm báo cáo";
+            // 
+            // m_lbl_count
+            // 
+            this.m_lbl_count.AutoSize = true;
+            this.m_lbl_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_count.Location = new System.Drawing.Point(236, 95);
+            this.m_lbl_count.Name = "m_lbl_count";
+            this.m_lbl_count.Size = new System.Drawing.Size(28, 13);
+            this.m_lbl_count.TabIndex = 2802;
+            this.m_lbl_count.Text = "000";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(82, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 13);
+            this.label1.TabIndex = 2801;
+            this.label1.Text = "Số kết quả trong báo cáo: ";
+            // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(115, 28);
+            this.m_cmd_xuat_excel.TabIndex = 31;
+            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
+            // 
+            // f409_bao_cao_danh_muc_thuoc_theo_nsx
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(927, 537);
+            this.Controls.Add(this.m_dat_den_ngay);
+            this.Controls.Add(this.m_dat_tu_ngay);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.m_cmd_search);
+            this.Controls.Add(this.m_txt_tim_kiem);
+            this.Controls.Add(this.m_lbl_nguoi_lam_bc);
+            this.Controls.Add(this.m_lbl_ngay_lam_bc);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.m_lbl_nguoi_lam_bao_cao);
+            this.Controls.Add(this.m_lbl_count);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.m_fg);
+            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Name = "f409_bao_cao_danh_muc_thuoc_theo_nsx";
+            this.Text = "f409_bao_cao_danh_muc_thuoc_theo_nsx";
+            this.Load += new System.EventHandler(this.f409_bao_cao_danh_muc_thuoc_theo_nsx_Load);
+            this.m_pnl_out_place_dm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 		#endregion
