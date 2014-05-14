@@ -24,6 +24,7 @@ using BKI_QLHT.DanhMuc;
 using BKI_QLHT.DS.CDBNames;
 using System.Web;
 using C1.Win.C1FlexGrid;
+using System.Globalization;
 
 
 namespace BKI_QLHT
@@ -329,6 +330,7 @@ namespace BKI_QLHT
             IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG v_us = new IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG(CUI);
             m_lbl_ngay_lam_bc.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
+            m_lbl_count.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.Text = v_us.strTEN.Trim();
             m_lbl_ngay_lam_bc.Text = DateTime.Now.Date.ToShortDateString();
         }
@@ -394,7 +396,7 @@ namespace BKI_QLHT
               , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
               , "{0}"
               );
-
+            m_lbl_count.Text = m_v_ds.V_BAO_CAO_KIEM_KE_KHO.Count.ToString(CultureInfo.InvariantCulture);
             m_fg.Redraw = true;
             set_search_format_before();
 		}
