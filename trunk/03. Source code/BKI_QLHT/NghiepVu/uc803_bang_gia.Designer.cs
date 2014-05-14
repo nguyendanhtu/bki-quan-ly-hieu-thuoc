@@ -33,9 +33,13 @@
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_grv_bang_gia = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.siSButton1 = new SIS.Controls.Button.SiSButton();
+            this.m_txts_ten_thuoc = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_bang_gia)).BeginInit();
-            this.m_pnl_out_place_dm.SuspendLayout();
+            this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -89,27 +93,83 @@
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
-            // m_pnl_out_place_dm
+            // m_pnl_control
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
-            this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 534);
-            this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
-            this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1145, 36);
-            this.m_pnl_out_place_dm.TabIndex = 21;
+            this.m_pnl_control.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 534);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_control.Size = new System.Drawing.Size(1145, 36);
+            this.m_pnl_control.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(522, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Bảng giá";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(299, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 16);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Tên thuốc :";
+            // 
+            // siSButton1
+            // 
+            this.siSButton1.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.siSButton1.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.siSButton1.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.siSButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.siSButton1.ImageIndex = 5;
+            this.siSButton1.ImageList = this.ImageList;
+            this.siSButton1.Location = new System.Drawing.Point(796, 85);
+            this.siSButton1.Name = "siSButton1";
+            this.siSButton1.Size = new System.Drawing.Size(88, 21);
+            this.siSButton1.TabIndex = 26;
+            this.siSButton1.Text = "Tìm kiếm";
+            // 
+            // m_txts_ten_thuoc
+            // 
+            this.m_txts_ten_thuoc.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.m_txts_ten_thuoc.DisplayMember = null;
+            this.m_txts_ten_thuoc.Location = new System.Drawing.Point(395, 86);
+            this.m_txts_ten_thuoc.Name = "m_txts_ten_thuoc";
+            this.m_txts_ten_thuoc.Size = new System.Drawing.Size(367, 20);
+            this.m_txts_ten_thuoc.str_query = null;
+            this.m_txts_ten_thuoc.TabIndex = 24;
+            this.m_txts_ten_thuoc.Text1 = null;
+            this.m_txts_ten_thuoc.ValueMember = null;
+            this.m_txts_ten_thuoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txts_ten_thuoc_KeyDown);
             // 
             // uc803_bang_gia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.siSButton1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.m_txts_ten_thuoc);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.m_grv_bang_gia);
-            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Controls.Add(this.m_pnl_control);
             this.Name = "uc803_bang_gia";
             this.Size = new System.Drawing.Size(1145, 570);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_bang_gia)).EndInit();
-            this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,6 +178,10 @@
         internal System.Windows.Forms.ImageList ImageList;
         private C1.Win.C1FlexGrid.C1FlexGrid m_grv_bang_gia;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
-        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
+        internal System.Windows.Forms.Panel m_pnl_control;
+        private System.Windows.Forms.Label label1;
+        private DanhMuc.txt_search_thuoc m_txts_ten_thuoc;
+        private System.Windows.Forms.Label label2;
+        internal SIS.Controls.Button.SiSButton siSButton1;
     }
 }
