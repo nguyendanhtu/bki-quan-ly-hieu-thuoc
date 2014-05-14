@@ -667,6 +667,7 @@
         public const string NGAY_LAP = "NGAY_LAP";
         public const string ID_THUOC = "ID_THUOC";
     }
+
     public class V_HAN_SU_DUNG
     {
         public const string ID_THUOC = "ID_THUOC";
@@ -674,6 +675,7 @@
         public const string HAN_SD = "HAN_SD";
         public const string SO_DU = "SO_DU";
         public const string TEN_DON_VI = "TEN_DON_VI";
+        public const string MA_GIAO_DICH = "MA_GIAO_DICH";
     }
 
 
