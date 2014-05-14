@@ -472,7 +472,6 @@ namespace BKI_QLHT
 			try{
 				set_initial_form_load();
                 load_data_2_lbl();
-
                 load_custom_source_2_m_txt_tim_kiem();
 			}
 			catch (Exception v_e){

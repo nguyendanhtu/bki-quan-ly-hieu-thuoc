@@ -253,6 +253,12 @@ public class US_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX : US_Object
 
 #endregion
 #region "Init Functions"
+    public void FillDatasetSearch(DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX ip_ds, string ip_str_search)
+    {
+        CStoredProc v_store_proc = new CStoredProc("pr_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX_search");
+        v_store_proc.addNVarcharInputParam("@STR_SEARCH", ip_str_search);
+        v_store_proc.fillDataSetByCommand(this, ip_ds);
+    }
 	public US_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX() 
 	{
 		pm_objDS = new DS_V_BAO_CAO_DANH_MUC_THUOC_THEO_HSX();
