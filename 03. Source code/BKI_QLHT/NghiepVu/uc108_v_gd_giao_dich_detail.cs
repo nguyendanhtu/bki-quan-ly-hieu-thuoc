@@ -557,8 +557,8 @@ namespace BKI_QLHT.NghiepVu
         {
             try
             {
-                //f115_REPORT_GD_GIAO_DICH_DETIAL frm = new f115_REPORT_GD_GIAO_DICH_DETIAL();
-                //frm.Show();
+                f115_report_ban_thuoc frm = new f115_report_ban_thuoc();
+                frm.Show();
 
             }
             catch (Exception v_e)

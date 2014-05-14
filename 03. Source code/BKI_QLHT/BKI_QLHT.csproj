@@ -146,6 +146,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BKI_QLHT_REPORT_BAN_THUOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\f100_v_dm_bac_sy_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +321,12 @@
     </Compile>
     <Compile Include="DanhMuc\f101_dm_nhom_khach_hang_de.Designer.cs">
       <DependentUpon>f101_dm_nhom_khach_hang_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f115_report_ban_thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f115_report_ban_thuoc.Designer.cs">
+      <DependentUpon>f115_report_ban_thuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
@@ -594,6 +605,9 @@
     <EmbeddedResource Include="DanhMuc\f101_dm_nhom_khach_hang_de.resx">
       <DependentUpon>f101_dm_nhom_khach_hang_de.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="f115_report_ban_thuoc.resx">
+      <DependentUpon>f115_report_ban_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -652,7 +666,6 @@
     <EmbeddedResource Include="NghiepVu\f_804_han_su_dung.resx">
       <DependentUpon>f_804_han_su_dung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\f115_Report.rdlc" />
     <EmbeddedResource Include="NghiepVu\uc108_v_gd_giao_dich_detail.resx">
       <DependentUpon>uc108_v_gd_giao_dich_detail.cs</DependentUpon>
     </EmbeddedResource>
@@ -679,6 +692,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="uc_f05_Image_Main.resx">
       <DependentUpon>uc_f05_Image_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -717,6 +731,17 @@
     </None>
     <None Include="BKI_QLHTDataSet2.xss">
       <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHT_REPORT_BAN_THUOC.xsc">
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHT_REPORT_BAN_THUOC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BKI_QLHT_REPORT_BAN_THUOC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BKI_QLHT_REPORT_BAN_THUOC.xss">
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BKI_QLHT.BaoCao.Demo_Report.DataSet1.datasource" />
     <None Include="Properties\DataSources\BKI_QLHT.NghiepVu.uc108_v_gd_giao_dich_detail+data1.datasource" />
