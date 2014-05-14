@@ -404,6 +404,7 @@
     <Compile Include="NghiepVu\f802_v_gd_gia_DE.Designer.cs">
       <DependentUpon>f802_v_gd_gia_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\f803_bang_gia.cs" />
     <Compile Include="NghiepVu\f804_han_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -656,6 +657,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f802_v_gd_gia_DE.resx">
       <DependentUpon>f802_v_gd_gia_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f803_bang_gia.resx">
+      <DependentUpon>f803_bang_gia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f804_han_su_dung.resx">
       <DependentUpon>f804_han_su_dung.cs</DependentUpon>
