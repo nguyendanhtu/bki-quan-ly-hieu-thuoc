@@ -388,23 +388,7 @@ namespace BKI_QLHT
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_v_ds.V_DM_THUOC.NewRow());
 			return v_obj_trans;			
 		}
-        //private void load_data_2_cbo_nguoi_lam_bc()
-        //{
-        //    US_CM_DM_TU_DIEN v_us_dm_tu_dien = new US_CM_DM_TU_DIEN();
-        //    DS_CM_DM_TU_DIEN v_ds_dm_tu_dien = new DS_CM_DM_TU_DIEN();
-        //    v_us_dm_tu_dien.FillDatasetByIdLoaiTuDien(v_ds_dm_tu_dien, 3);
-        //    DataRow v_dr = v_ds_dm_tu_dien.CM_DM_TU_DIEN.NewRow();
-        //    v_dr[CM_DM_TU_DIEN.ID] = -1;
-        //    v_dr[CM_DM_TU_DIEN.TEN] = "------------Tất cả------------";
-        //    v_dr[CM_DM_TU_DIEN.MA_TU_DIEN] = "";
-        //    v_dr[CM_DM_TU_DIEN.ID_LOAI_TU_DIEN] = "3";
-        //    v_dr[CM_DM_TU_DIEN.TEN_NGAN] = "";
-        //    v_ds_dm_tu_dien.CM_DM_TU_DIEN.Rows.InsertAt(v_dr, 0);
-        //    m_cbo_tim_kiem_trang_thai.DataSource = v_ds_dm_tu_dien.CM_DM_TU_DIEN;
-        //    m_cbo_tim_kiem_trang_thai.ValueMember = CM_DM_TU_DIEN.ID;
-        //    m_cbo_tim_kiem_trang_thai.DisplayMember = CM_DM_TU_DIEN.TEN;
-        //    m_cbo_tim_kiem_trang_thai.SelectedIndex = 0;
-        //}
+       
 		private void load_data_2_grid(){
             m_v_ds.Clear();
             //m_v_ds = new DS_V_DM_NHASX();
@@ -468,6 +452,7 @@ namespace BKI_QLHT
 		
 		private void set_define_events(){
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            m_cmd_search.Click += new EventHandler(m_cmd_search_Click);
             m_cmd_xuat_excel.Click += new EventHandler(m_cmd_xuat_excel_Click);
             m_txt_tim_kiem.KeyDown += m_txt_tim_kiem_KeyDown;
             m_txt_tim_kiem.MouseClick += m_txt_tim_kiem_MouseClick;
@@ -557,7 +542,7 @@ namespace BKI_QLHT
         {
             try
             {
-                load_custom_source_2_m_txt_tim_kiem();
+                load_data_2_grid();
             }
             catch (Exception v_e)
             {
