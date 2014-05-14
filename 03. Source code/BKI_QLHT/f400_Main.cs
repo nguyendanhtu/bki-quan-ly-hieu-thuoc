@@ -618,6 +618,19 @@ namespace BKI_QLHT
             }
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f404_bcdt_theo_cac_ncc_n_nhom_thuoc v_frm = new f404_bcdt_theo_cac_ncc_n_nhom_thuoc();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
 
 
 
