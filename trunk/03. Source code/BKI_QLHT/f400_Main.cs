@@ -631,6 +631,19 @@ namespace BKI_QLHT
             }
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f405_bcdt_theo_cac_ngay v_frm = new f405_bcdt_theo_cac_ngay();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
 
 
 
