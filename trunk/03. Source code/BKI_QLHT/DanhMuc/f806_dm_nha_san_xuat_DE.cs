@@ -87,26 +87,38 @@ namespace BKI_QLHT
         private void save_data()
         {
             form_2_us_obj();
-            switch (m_e_form_mode)
+            
+                switch (m_e_form_mode)
+                {
+                    case DataEntryFormMode.InsertDataState:
+                        DS_V_DM_HANG_SX v_ds_dm_hang_sx = new DS_V_DM_HANG_SX();
+            US_V_DM_HANG_SX v_us_dm_hang_sx = new US_V_DM_HANG_SX();
+            v_us_dm_hang_sx.FillDatasetSearchByMaNSX(v_ds_dm_hang_sx, m_us_dm_ncc.strMA_NCC);
+            if (v_ds_dm_hang_sx.V_DM_HANG_SX.Count == 0)
             {
-                case DataEntryFormMode.InsertDataState:
-                    m_us_dm_ncc.Insert();
-                    BaseMessages.MsgBox_Infor("Thêm mới thành công");
-                    this.Close();
-                    break;
-                case DataEntryFormMode.SelectDataState:
-                    break;
-                case DataEntryFormMode.UpdateDataState:
-                    m_us_dm_ncc.Update();
-                    BaseMessages.MsgBox_Infor("Thay đổi thành công");
-                    this.Close();
-                    break;
-                case DataEntryFormMode.ViewDataState:
-                    break;
-                default:
-                    break;
+                m_us_dm_ncc.Insert();
+                BaseMessages.MsgBox_Infor("Thêm mới thành công");
+                this.Close();
             }
-        }
+            else
+            {
+                BaseMessages.MsgBox_Infor("Mã nhà cung cấp đã tồn tại. Vui lòng nhập lại");
+            }
+                        break;
+                    case DataEntryFormMode.SelectDataState:
+                        break;
+                    case DataEntryFormMode.UpdateDataState:
+                        m_us_dm_ncc.Update();
+                        BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                        this.Close();
+                        break;
+                    case DataEntryFormMode.ViewDataState:
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
         private bool check_validate()
         {
             if (!CValidateTextBox.IsValid(m_txt_ten_nha_cung_cap, DataType.StringType, allowNull.NO, true)) return false;
@@ -173,7 +185,15 @@ namespace BKI_QLHT
         {
             try
             {
-                save_data();
+                if (check_validate())
+                {
+                    save_data();
+                }
+                else
+                {
+                    BaseMessages.MsgBox_Infor("Bạn cần nhập tên nhà sản xuất");
+                }
+
             }
             catch (Exception v_e)
             {
@@ -188,26 +208,38 @@ namespace BKI_QLHT
                 if (check_validate())
                 {
                     form_2_us_obj();
-                    switch (m_e_form_mode)
+                   
+                        switch (m_e_form_mode)
+                        {
+                            case DataEntryFormMode.InsertDataState:
+                                 DS_V_DM_HANG_SX v_ds_dm_hang_sx = new DS_V_DM_HANG_SX();
+                    US_V_DM_HANG_SX v_us_dm_hang_sx = new US_V_DM_HANG_SX();
+                    v_us_dm_hang_sx.FillDatasetSearchByMaNSX(v_ds_dm_hang_sx, m_us_dm_ncc.strMA_NCC);
+                    if (v_ds_dm_hang_sx.V_DM_HANG_SX.Count == 0)
                     {
-                        case DataEntryFormMode.InsertDataState:
-                            m_us_dm_ncc.Insert();
-                            BaseMessages.MsgBox_Infor("Thêm mới thành công");
-                            this.Close();
-                            break;
-                        case DataEntryFormMode.SelectDataState:
-                            break;
-                        case DataEntryFormMode.UpdateDataState:
-                            m_us_dm_ncc.Update();
-                            BaseMessages.MsgBox_Infor("Thay đổi thành công");
-                            this.Close();
-                            break;
-                        case DataEntryFormMode.ViewDataState:
-                            break;
-                        default:
-                            break;
+                                m_us_dm_ncc.Insert();
+                                BaseMessages.MsgBox_Infor("Thêm mới thành công");
+                                this.Close();
                     }
-                }
+                                else
+                    {
+                        BaseMessages.MsgBox_Infor("Mã nhà cung cấp đã tồn tại. Vui lòng nhập lại");
+                    }
+                                break;
+                            case DataEntryFormMode.SelectDataState:
+                                break;
+                            case DataEntryFormMode.UpdateDataState:
+                                m_us_dm_ncc.Update();
+                                BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                this.Close();
+                                break;
+                            case DataEntryFormMode.ViewDataState:
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    
                 else
                 {
                     BaseMessages.MsgBox_Infor("Bạn cần nhập tên nhà sản xuất");

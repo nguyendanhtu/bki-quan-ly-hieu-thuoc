@@ -28,7 +28,6 @@ namespace BKI_QLHT
         {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             this.ShowDialog();
-            m_txt_ten_khach_hang.Focus();
 
         }
         public void display_for_update(US_V_DM_KHACH_HANG m_us)
@@ -45,7 +44,10 @@ namespace BKI_QLHT
             this.ShowDialog();
             m_txt_ten_khach_hang.Focus();
         }
-
+        public void get_us(ref US_DM_KHACH_HANG op_us)
+        {
+            op_us = m_us_dm_khach_hang;
+        }
         
         #endregion
 
@@ -91,6 +93,7 @@ namespace BKI_QLHT
        {
            if (!CValidateTextBox.IsValid(m_txt_ten_khach_hang, DataType.StringType, allowNull.NO, true)) return false;
            return true;
+           
        }
 
         #endregion
@@ -104,27 +107,39 @@ namespace BKI_QLHT
            {
                if (check_validate())
                {
-                   form_2_us_obj();
-                   switch (m_e_form_mode)
-                   {
-                       case DataEntryFormMode.InsertDataState:
-                           m_us_dm_khach_hang.Insert();
-                           BaseMessages.MsgBox_Infor("Thêm mới thành công");
-                           this.Close();
-                           break;
-                       case DataEntryFormMode.SelectDataState:
-                           break;
-                       case DataEntryFormMode.UpdateDataState:
-                           m_us_dm_khach_hang.Update();
-                           BaseMessages.MsgBox_Infor("Thay đổi thành công");
-                           this.Close();
-                           break;
-                       case DataEntryFormMode.ViewDataState:
-                           break;
-                       default:
-                           break;
-                   }
-               }
+                    form_2_us_obj();
+                   
+                        switch (m_e_form_mode)
+                        {
+                            case DataEntryFormMode.InsertDataState:
+                                 DS_DM_KHACH_HANG v_ds_dm_khach_hang = new DS_DM_KHACH_HANG();
+                    US_DM_KHACH_HANG v_us_dm_khach_hang = new US_DM_KHACH_HANG();
+                    v_us_dm_khach_hang.FillDatasetSearchByMaKH(v_ds_dm_khach_hang,m_us_dm_khach_hang.strMA_KHACH_HANG);
+                    if (v_ds_dm_khach_hang.DM_KHACH_HANG.Count == 0)
+                    {
+                        m_us_dm_khach_hang.Insert();
+                        BaseMessages.MsgBox_Infor("Thêm mới thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        BaseMessages.MsgBox_Infor("Mã khách hàng đã tồn tại.Vui lòng nhập lại");
+                    }
+                                break;
+                            case DataEntryFormMode.SelectDataState:
+                                break;
+                            case DataEntryFormMode.UpdateDataState:
+                                m_us_dm_khach_hang.Update();
+                                BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                this.Close();
+                                break;
+                            case DataEntryFormMode.ViewDataState:
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    
                else
                {
                    BaseMessages.MsgBox_Infor("Bạn cần nhập tên khách hàng");
@@ -216,26 +231,38 @@ namespace BKI_QLHT
                    if (check_validate())
                    {
                        form_2_us_obj();
-                       switch (m_e_form_mode)
-                       {
-                           case DataEntryFormMode.InsertDataState:
-                               m_us_dm_khach_hang.Insert();
-                               BaseMessages.MsgBox_Infor("Thêm mới thành công");
-                               this.Close();
-                               break;
-                           case DataEntryFormMode.SelectDataState:
-                               break;
-                           case DataEntryFormMode.UpdateDataState:
-                               m_us_dm_khach_hang.Update();
-                               BaseMessages.MsgBox_Infor("Thay đổi thành công");
-                               this.Close();
-                               break;
-                           case DataEntryFormMode.ViewDataState:
-                               break;
-                           default:
-                               break;
-                       }
-                   }
+                       
+                        switch (m_e_form_mode)
+                        {
+                            case DataEntryFormMode.InsertDataState:
+                                DS_DM_KHACH_HANG v_ds_dm_khach_hang = new DS_DM_KHACH_HANG();
+                    US_DM_KHACH_HANG v_us_dm_khach_hang = new US_DM_KHACH_HANG();
+                    v_us_dm_khach_hang.FillDatasetSearchByMaKH(v_ds_dm_khach_hang,m_us_dm_khach_hang.strMA_KHACH_HANG);
+                    if (v_ds_dm_khach_hang.DM_KHACH_HANG.Count == 0)
+                    {
+                                m_us_dm_khach_hang.Insert();
+                                BaseMessages.MsgBox_Infor("Thêm mới thành công");
+                                this.Close();
+                    }
+                                else
+                    {
+                        BaseMessages.MsgBox_Infor("Mã khách hàng đã tồn tại.Vui lòng nhập lại");
+                    }
+                                break;
+                            case DataEntryFormMode.SelectDataState:
+                                break;
+                            case DataEntryFormMode.UpdateDataState:
+                                m_us_dm_khach_hang.Update();
+                                BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                this.Close();
+                                break;
+                            case DataEntryFormMode.ViewDataState:
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    
                    else
                    {
                        BaseMessages.MsgBox_Infor("Bạn cần nhập tên khách hàng");

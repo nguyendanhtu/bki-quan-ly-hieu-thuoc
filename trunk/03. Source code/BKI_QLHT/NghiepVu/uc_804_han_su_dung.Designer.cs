@@ -201,11 +201,11 @@
             // m_grv_han_su_dung
             // 
             this.m_grv_han_su_dung.ColumnInfo = resources.GetString("m_grv_han_su_dung.ColumnInfo");
-            this.m_grv_han_su_dung.Location = new System.Drawing.Point(0, 136);
+            this.m_grv_han_su_dung.Location = new System.Drawing.Point(8, 133);
             this.m_grv_han_su_dung.Name = "m_grv_han_su_dung";
-            this.m_grv_han_su_dung.Size = new System.Drawing.Size(1124, 396);
+            this.m_grv_han_su_dung.Size = new System.Drawing.Size(1120, 395);
             this.m_grv_han_su_dung.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_han_su_dung.Styles"));
-            this.m_grv_han_su_dung.TabIndex = 28;
+            this.m_grv_han_su_dung.TabIndex = 27;
             // 
             // uc_804_han_su_dung
             // 

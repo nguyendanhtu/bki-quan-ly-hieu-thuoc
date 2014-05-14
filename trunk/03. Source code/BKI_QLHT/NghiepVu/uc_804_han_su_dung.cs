@@ -29,12 +29,14 @@ namespace BKI_QLHT
         #region Data Structure
         private enum e_col_Number
         {
-            TEN_DON_VI = 3
+            MA_GIAO_DICH = 2
 ,
-            HAN_SU_DUNG = 2
+            TEN_DON_VI = 4
+                ,
+            HAN_SD = 5
                 ,
             TEN_THUOC = 1
-                , SO_DU = 4
+                , SO_DU = 3
 
         }
         #endregion
@@ -51,12 +53,10 @@ namespace BKI_QLHT
             CControlFormat.setUserControlStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_grv_han_su_dung);
             m_grv_han_su_dung.Tree.Column = (int)e_col_Number.TEN_THUOC;
-            //m_grv_han_su_dung.Cols[(int)e_col_Number.tdvsd].Visible = false;
-            //m_fg.Cols[(int)e_col_Number.TEN_DANH_MUC].Visible = false;
             m_grv_han_su_dung.Cols[0].Caption = "STT";
-            //m_fg.Cols[6].Caption = "Số dư";
             m_grv_han_su_dung.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
             set_define_events();
+
         }
         private void set_initial_form_load()
         {
@@ -66,8 +66,9 @@ namespace BKI_QLHT
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
+            v_htb.Add(V_HAN_SU_DUNG.MA_GIAO_DICH, e_col_Number.MA_GIAO_DICH);
             v_htb.Add(V_HAN_SU_DUNG.TEN_DON_VI, e_col_Number.TEN_DON_VI);
-            v_htb.Add(V_HAN_SU_DUNG.HAN_SD, e_col_Number.HAN_SU_DUNG);
+            v_htb.Add(V_HAN_SU_DUNG.HAN_SD, e_col_Number.HAN_SD);
             v_htb.Add(V_HAN_SU_DUNG.TEN_THUOC, e_col_Number.TEN_THUOC);
             v_htb.Add(V_HAN_SU_DUNG.SO_DU, e_col_Number.SO_DU);
 
@@ -77,7 +78,7 @@ namespace BKI_QLHT
         private void load_data_2_grid()
         {
             m_ds = new DS_V_HAN_SU_DUNG();
-            m_us.FillDataset(m_ds);
+            m_us.FillDataset(m_ds,"where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<90 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0");
             m_grv_han_su_dung.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_grv_han_su_dung, m_obj_trans);
             CGridUtils.MakeSoTT(0, m_grv_han_su_dung);
@@ -110,7 +111,7 @@ namespace BKI_QLHT
 
         private void insert_v_han_su_dung()
         {
-            //	f804_han_su_dung_DE v_fDE = new  f804_han_su_dung_DE();								
+            //	frm_V_HAN_SU_DUNG_DE v_fDE = new  frm_V_HAN_SU_DUNG_DE();								
             //	v_fDE.display();
             load_data_2_grid();
         }
@@ -120,7 +121,7 @@ namespace BKI_QLHT
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_han_su_dung)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_han_su_dung, m_grv_han_su_dung.Row)) return;
             grid2us_object(m_us, m_grv_han_su_dung.Row);
-            //	f804_han_su_dung_DE v_fDE = new f804_han_su_dung_DE();
+            //	frm_V_HAN_SU_DUNG_DE v_fDE = new frm_V_HAN_SU_DUNG_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();
         }
@@ -153,14 +154,13 @@ namespace BKI_QLHT
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_grv_han_su_dung)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_grv_han_su_dung, m_grv_han_su_dung.Row)) return;
             grid2us_object(m_us, m_grv_han_su_dung.Row);
-            //	f804_han_su_dung_DE v_fDE = new f804_han_su_dung_DE();			
+            //	frm_V_HAN_SU_DUNG_DE v_fDE = new frm_V_HAN_SU_DUNG_DE();			
             //	v_fDE.display(m_us);
         }
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-            this.Load += new EventHandler(f804_han_su_dung_Load);
-           
+            this.Load += new EventHandler(frm_V_HAN_SU_DUNG_Load);
         }
         #endregion
 
@@ -170,7 +170,7 @@ namespace BKI_QLHT
         //
         //
         #region events
-        private void f804_han_su_dung_Load(object sender, System.EventArgs e)
+        private void frm_V_HAN_SU_DUNG_Load(object sender, System.EventArgs e)
         {
             try
             {
@@ -187,6 +187,7 @@ namespace BKI_QLHT
         {
             try
             {
+                this.Visible = false;
                 this.Controls.Clear();
             }
             catch (Exception v_e)

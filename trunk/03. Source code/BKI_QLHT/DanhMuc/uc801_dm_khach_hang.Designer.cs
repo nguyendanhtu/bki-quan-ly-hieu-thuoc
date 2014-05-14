@@ -138,7 +138,8 @@
             this.m_grv_dm_khach_hang.ColumnInfo = resources.GetString("m_grv_dm_khach_hang.ColumnInfo");
             this.m_grv_dm_khach_hang.Location = new System.Drawing.Point(-10, 107);
             this.m_grv_dm_khach_hang.Name = "m_grv_dm_khach_hang";
-            this.m_grv_dm_khach_hang.Size = new System.Drawing.Size(1152, 205);
+            this.m_grv_dm_khach_hang.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.m_grv_dm_khach_hang.Size = new System.Drawing.Size(1140, 205);
             this.m_grv_dm_khach_hang.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_dm_khach_hang.Styles"));
             this.m_grv_dm_khach_hang.TabIndex = 25;
             this.m_grv_dm_khach_hang.Click += new System.EventHandler(this.m_grv_dm_khach_hang_Click);
