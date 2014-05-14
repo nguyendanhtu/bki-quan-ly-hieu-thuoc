@@ -10,6 +10,98 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_BC_DOANH_THU_THEO_CAC_NHOM_THUOC
+    {
+        public const string TEN_NHOM_THUOC = "TEN_NHOM_THUOC";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+    public class V_BC_DOANH_THU_THEO_CAC_NHOM_THUOC_n_TEN_THUOC
+    {
+        public const string TEN_NHOM_THUOC = "TEN_NHOM_THUOC";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BC_DOANH_THU_THEO_CAC_NHOM_KHACH_HANG
+    {
+        public const string TEN_NHOM_KH = "TEN_NHOM_KH";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BC_DOANH_THU_THEO_CAC_NHAN_VIEN_n_TEN_THUOC
+    {
+        public const string TEN_NHAN_VIEN = "TEN_NHAN_VIEN";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BC_DOANH_THU_THEO_CAC_NHAN_VIEN
+    {
+        public const string TEN_NHAN_VIEN = "TEN_NHAN_VIEN";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BC_DOANH_THU_THEO_CAC_NGAY_n_NHOM_THUOC
+    {
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TEN_NHOM_THUOC = "TEN_NHOM_THUOC";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BC_DOANH_THU_THEO_CAC_NGAY_n_NHAN_VIEN
+    {
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TEN_NHAN_VIEN = "TEN_NHAN_VIEN";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BC_DOANH_THU_THEO_CAC_NGAY_n_KHACH_HANG
+    {
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string MA_KHACH_HANG = "MA_KHACH_HANG";
+        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BC_DOANH_THU_THEO_CAC_NGAY
+    {
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
+    public class V_BC_DOANH_THU_THEO_CAC_NCC_n_NHOM_THUOC
+    {
+        public const string TEN_NCC = "TEN_NCC";
+        public const string TEN_NHOM_THUOC = "TEN_NHOM_THUOC";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
+
     public class V_BC_DOANH_THU_THEO_CAC_BAC_SY
     {
         public const string TEN_BAC_SY = "TEN_BAC_SY";
