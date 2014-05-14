@@ -97,6 +97,11 @@
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NGAY_N_KHACH_HANG.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NGAY_N_NHAN_VIEN.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NGAY_N_NHOM_THUOC.cs" />
+    <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NHAN_VIEN.cs" />
+    <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NHAN_VIEN_N_TEN_THUOC.cs" />
+    <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NHOM_KHACH_HANG.cs" />
+    <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NHOM_THUOC.cs" />
+    <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NHOM_THUOC_N_TEN_THUOC.cs" />
     <Compile Include="US_V_DM_BAC_SY.cs" />
     <Compile Include="US_V_DM_DON_VI.cs" />
     <Compile Include="US_V_DM_DON_VI_TINH.cs" />
