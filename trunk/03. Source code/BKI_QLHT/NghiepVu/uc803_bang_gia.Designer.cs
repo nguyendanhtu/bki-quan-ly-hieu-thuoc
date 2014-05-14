@@ -68,9 +68,9 @@
             // m_grv_bang_gia
             // 
             this.m_grv_bang_gia.ColumnInfo = resources.GetString("m_grv_bang_gia.ColumnInfo");
-            this.m_grv_bang_gia.Location = new System.Drawing.Point(0, 121);
+            this.m_grv_bang_gia.Location = new System.Drawing.Point(0, 146);
             this.m_grv_bang_gia.Name = "m_grv_bang_gia";
-            this.m_grv_bang_gia.Size = new System.Drawing.Size(686, 252);
+            this.m_grv_bang_gia.Size = new System.Drawing.Size(1133, 382);
             this.m_grv_bang_gia.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_bang_gia.Styles"));
             this.m_grv_bang_gia.TabIndex = 22;
             // 
@@ -83,7 +83,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(946, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1053, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -93,10 +93,10 @@
             // 
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 468);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 534);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1038, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1145, 36);
             this.m_pnl_out_place_dm.TabIndex = 21;
             // 
             // uc803_bang_gia
@@ -106,7 +106,7 @@
             this.Controls.Add(this.m_grv_bang_gia);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "uc803_bang_gia";
-            this.Size = new System.Drawing.Size(1038, 504);
+            this.Size = new System.Drawing.Size(1145, 570);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_bang_gia)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.ResumeLayout(false);
