@@ -98,15 +98,6 @@
     <Compile Include="BaoCao\f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\f409_bao_cao_danh_muc_thuoc_theo_hsx.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f410_bao_cao_danh_muc_thuoc_theo_ncc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f411_bao_cao_danh_muc_thuoc_theo_nsx.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BaoCao\f412_bao_cao_kiem_ke_kho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,15 +442,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.resx">
       <DependentUpon>f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f409_bao_cao_danh_muc_thuoc_theo_hsx.resx">
-      <DependentUpon>f409_bao_cao_danh_muc_thuoc_theo_hsx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f410_bao_cao_danh_muc_thuoc_theo_ncc.resx">
-      <DependentUpon>f410_bao_cao_danh_muc_thuoc_theo_ncc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f411_bao_cao_danh_muc_thuoc_theo_nsx.resx">
-      <DependentUpon>f411_bao_cao_danh_muc_thuoc_theo_nsx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f412_bao_cao_kiem_ke_kho.resx">
       <DependentUpon>f412_bao_cao_kiem_ke_kho.cs</DependentUpon>
