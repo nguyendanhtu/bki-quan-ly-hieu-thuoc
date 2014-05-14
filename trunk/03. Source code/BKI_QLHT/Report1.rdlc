@@ -149,19 +149,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>2.31353in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>1.08705in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>1.25417in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>1.89003in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>1.99375in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -177,7 +177,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>TEN THUOC</Value>
+                              <Value>Tên thuốc</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -213,7 +213,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>SO LUONG BAN</Value>
+                              <Value>Số lượng</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -249,7 +249,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>TEN DON VI</Value>
+                              <Value>Đơn vị tính</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -285,7 +285,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>GIA BAN</Value>
+                              <Value>Đơn giá </Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -321,7 +321,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>THANH TIEN</Value>
+                              <Value>Thành tiền</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -542,19 +542,885 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DS_REPORT_BAN_THUOC</DataSetName>
+        <Top>6.19125cm</Top>
         <Height>1.2cm</Height>
-        <Width>12.49997cm</Width>
+        <Width>21.68787cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Nhà thuốc:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.14119cm</Top>
+        <Left>0.12383cm</Left>
+        <Height>0.52063cm</Height>
+        <Width>1.60042cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line1">
+        <Top>0.8382cm</Top>
+        <Height>0cm</Height>
+        <Width>18.38854cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Đ/C:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.14119cm</Top>
+        <Left>7.0976cm</Left>
+        <Height>0.52063cm</Height>
+        <Width>0.80667cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ĐT:</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.06182cm</Top>
+        <Left>13.79156cm</Left>
+        <Height>0.52063cm</Height>
+        <Width>0.70084cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="TEN_DAY_DU">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!TEN_DAY_DU.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TEN_DAY_DU</rd:DefaultName>
+        <Top>0.14119cm</Top>
+        <Left>1.90063cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.66958cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="DIA_CHI_DV">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DIA_CHI_DV.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>DIA_CHI_DV</rd:DefaultName>
+        <Top>0.06182cm</Top>
+        <Left>8.08066cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.33104cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="SDT_DV">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!SDT_DV.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>SDT_DV</rd:DefaultName>
+        <Top>0.06182cm</Top>
+        <Left>14.71083cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.34667cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>PHIẾU XUẤT</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox12</rd:DefaultName>
+        <Top>1.20862cm</Top>
+        <Left>7.0976cm</Left>
+        <Height>0.75875cm</Height>
+        <Width>3.39513cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Khách hàng:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>3.16653cm</Top>
+        <Left>0.44133cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.12958cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Đ/C:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>3.94292cm</Top>
+        <Left>0.44133cm</Left>
+        <Height>0.56472cm</Height>
+        <Width>1.25646cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ĐT:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>4.68403cm</Top>
+        <Left>0.46779cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.25646cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="TEN_KHACH_HANG">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!TEN_KHACH_HANG.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TEN_KHACH_HANG</rd:DefaultName>
+        <Top>3.11362cm</Top>
+        <Left>3.11362cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.79066cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="DIA_CHI_KH">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DIA_CHI_KH.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>DIA_CHI_KH</rd:DefaultName>
+        <Top>3.94292cm</Top>
+        <Left>3.11362cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.79066cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="SDT_KH">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!SDT_KH.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>SDT_KH</rd:DefaultName>
+        <Top>4.68403cm</Top>
+        <Left>3.11362cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.79066cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Mã phiếu:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>1.20862cm</Top>
+        <Left>11.51615cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.97083cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="MA_GIAO_DICH">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!MA_GIAO_DICH.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>MA_GIAO_DICH</rd:DefaultName>
+        <Top>1.20862cm</Top>
+        <Left>13.90862cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.01354cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ngày xuất:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>2.09448cm</Top>
+        <Left>11.51615cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.97083cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="NGAY_GIAO_DICH">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!NGAY_GIAO_DICH.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>NGAY_GIAO_DICH</rd:DefaultName>
+        <Top>2.09448cm</Top>
+        <Left>13.90862cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.01354cm</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tổng tiền:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>3.16653cm</Top>
+        <Left>9.92865cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.48306cm</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Chiết khấu:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>3.90764cm</Top>
+        <Left>9.92865cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.48306cm</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tổng tiền thanh toán:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>4.64876cm</Top>
+        <Left>9.92865cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.48306cm</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="TONG_TIEN">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!TONG_TIEN.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TONG_TIEN</rd:DefaultName>
+        <Top>3.16653cm</Top>
+        <Left>13.90862cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.01354cm</Width>
+        <ZIndex>22</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="TI_LE_CHIET_KHAU">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!TI_LE_CHIET_KHAU.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TI_LE_CHIET_KHAU</rd:DefaultName>
+        <Top>3.94292cm</Top>
+        <Left>13.90862cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="TONG_TIEN_THANH_TOAN">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!TONG_TIEN_THANH_TOAN.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TONG_TIEN_THANH_TOAN</rd:DefaultName>
+        <Top>4.67466cm</Top>
+        <Left>13.90862cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.01354cm</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>%</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>3.96882cm</Top>
+        <Left>16.58501cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.54208cm</Width>
+        <ZIndex>25</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>VNĐ</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>3.16653cm</Top>
+        <Left>19.34549cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.96541cm</Width>
+        <ZIndex>26</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>VNĐ</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>4.68403cm</Top>
+        <Left>19.34549cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.96541cm</Width>
+        <ZIndex>27</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Nhân viên:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>15.45594cm</Top>
+        <Left>16.08668cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.97083cm</Width>
+        <ZIndex>28</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="TEN_NHAN_VIEN">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!TEN_NHAN_VIEN.Value, "DS_REPORT_BAN_THUOC")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TEN_NHAN_VIEN</rd:DefaultName>
+        <Top>17.18945cm</Top>
+        <Left>16.08668cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>6.20833in</Height>
+    <Height>7.36458in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>8.53853in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
