@@ -1323,6 +1323,7 @@ namespace BKI_QLHT
             this.button19.TabIndex = 35;
             this.button19.Text = "420";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // f400_Main
             // 
