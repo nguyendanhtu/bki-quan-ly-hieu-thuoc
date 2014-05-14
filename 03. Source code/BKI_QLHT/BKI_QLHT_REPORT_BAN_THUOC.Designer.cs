@@ -1789,16 +1789,23 @@ namespace BKI_QLHT.BKI_QLHT_REPORT_BAN_THUOCTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, ID_GIAO_DICH, ID_THUOC, ID_DON_VI_THUOC, SO_LUONG_NHAP, SO_LUONG_BAN, ID_NHA_CUNG_CAP, ID_NUOC_SX, ID_HANG_SX, HAN_SU_DUNG, GIA_NHAP, GIA_BAN, ID_LO_THUOC, TEN_THUOC, TEN_DON_VI, MA_GIAO_DICH, NGAY_GIAO_DICH, TI_LE_CHIET_KHAU, GIA_BAN_GD_GIA, TEN_KHACH_HANG, SDT_KH, DIA_CHI_KH, TEN_DAY_DU, DIA_CHI_DV, SDT_DV, TEN_NHAN_VIEN, THANH_TIEN, TONG_TIEN, TONG_TIEN_THANH_TOAN FROM dbo.V_GD_GIAO_DICH_DETAIL";
+            this._commandCollection[0].CommandText = @"SELECT        ID, ID_GIAO_DICH, ID_THUOC, ID_DON_VI_THUOC, SO_LUONG_NHAP, SO_LUONG_BAN, ID_NHA_CUNG_CAP, ID_NUOC_SX, ID_HANG_SX, HAN_SU_DUNG, GIA_NHAP, GIA_BAN, ID_LO_THUOC, TEN_THUOC, 
+                         TEN_DON_VI, MA_GIAO_DICH, NGAY_GIAO_DICH, TI_LE_CHIET_KHAU, GIA_BAN_GD_GIA, TEN_KHACH_HANG, SDT_KH, DIA_CHI_KH, TEN_DAY_DU, DIA_CHI_DV, SDT_DV, TEN_NHAN_VIEN, THANH_TIEN, 
+                         TONG_TIEN, TONG_TIEN_THANH_TOAN
+FROM            V_GD_GIAO_DICH_DETAIL
+WHERE ID_GIAO_DICH = @ip_curent_id_giao_dich
+";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ip_curent_id_giao_dich", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 0, "ID_GIAO_DICH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BKI_QLHT_REPORT_BAN_THUOC.V_GD_GIAO_DICH_DETAILDataTable dataTable) {
+        public virtual int Fill(BKI_QLHT_REPORT_BAN_THUOC.V_GD_GIAO_DICH_DETAILDataTable dataTable, decimal ip_curent_id_giao_dich) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(ip_curent_id_giao_dich));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1810,8 +1817,9 @@ namespace BKI_QLHT.BKI_QLHT_REPORT_BAN_THUOCTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BKI_QLHT_REPORT_BAN_THUOC.V_GD_GIAO_DICH_DETAILDataTable GetData() {
+        public virtual BKI_QLHT_REPORT_BAN_THUOC.V_GD_GIAO_DICH_DETAILDataTable GetData(decimal ip_curent_id_giao_dich) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(ip_curent_id_giao_dich));
             BKI_QLHT_REPORT_BAN_THUOC.V_GD_GIAO_DICH_DETAILDataTable dataTable = new BKI_QLHT_REPORT_BAN_THUOC.V_GD_GIAO_DICH_DETAILDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
