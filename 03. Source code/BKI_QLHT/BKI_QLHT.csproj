@@ -119,18 +119,6 @@
     <Compile Include="BaoCao\f414_bao_cao_danh_muc_khach_hang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\f415_bao_cao_doanh_thu_theo_nhom_khach_hang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f416_bao_cao_doanh_thu_theo_nhom_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f418_bao_cao_doanh_thu_theo_bac_sy_0.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f419_bao_cao_doanh_thu_theo_ncc_0.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BKI_QLHTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -404,7 +392,9 @@
     <Compile Include="NghiepVu\f802_v_gd_gia_DE.Designer.cs">
       <DependentUpon>f802_v_gd_gia_DE.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\f803_bang_gia.cs" />
+    <Compile Include="NghiepVu\f803_bang_gia.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NghiepVu\f804_han_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -485,18 +475,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f414_bao_cao_danh_muc_khach_hang.resx">
       <DependentUpon>f414_bao_cao_danh_muc_khach_hang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f415_bao_cao_doanh_thu_theo_nhom_khach_hang.resx">
-      <DependentUpon>f415_bao_cao_doanh_thu_theo_nhom_khach_hang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f416_bao_cao_doanh_thu_theo_nhom_thuoc.resx">
-      <DependentUpon>f416_bao_cao_doanh_thu_theo_nhom_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f418_bao_cao_doanh_thu_theo_bac_sy_0.resx">
-      <DependentUpon>f418_bao_cao_doanh_thu_theo_bac_sy_0.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f419_bao_cao_doanh_thu_theo_ncc_0.resx">
-      <DependentUpon>f419_bao_cao_doanh_thu_theo_ncc_0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f100_v_dm_bac_sy_de.resx">
       <DependentUpon>f100_v_dm_bac_sy_de.cs</DependentUpon>
