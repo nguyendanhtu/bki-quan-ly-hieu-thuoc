@@ -115,6 +115,9 @@ namespace BKI_QLHT
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
@@ -1292,6 +1295,34 @@ namespace BKI_QLHT
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(17, 563);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(63, 23);
+            this.button17.TabIndex = 33;
+            this.button17.Text = "418";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(86, 563);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(63, 23);
+            this.button18.TabIndex = 34;
+            this.button18.Text = "419";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(160, 563);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(63, 23);
+            this.button19.TabIndex = 35;
+            this.button19.Text = "420";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1299,6 +1330,9 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(823, 587);
+            this.Controls.Add(this.button19);
+            this.Controls.Add(this.button18);
+            this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
@@ -1430,5 +1464,8 @@ namespace BKI_QLHT
         private Button button14;
         private Button button15;
         private Button button16;
+        private Button button19;
+        private Button button18;
+        private Button button17;
     }
 }
