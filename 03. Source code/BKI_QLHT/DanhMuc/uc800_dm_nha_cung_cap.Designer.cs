@@ -116,7 +116,8 @@
             this.m_grv_nha_cung_cap.ColumnInfo = resources.GetString("m_grv_nha_cung_cap.ColumnInfo");
             this.m_grv_nha_cung_cap.Location = new System.Drawing.Point(0, 117);
             this.m_grv_nha_cung_cap.Name = "m_grv_nha_cung_cap";
-            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1145, 191);
+            this.m_grv_nha_cung_cap.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1123, 191);
             this.m_grv_nha_cung_cap.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nha_cung_cap.Styles"));
             this.m_grv_nha_cung_cap.TabIndex = 22;
             this.m_grv_nha_cung_cap.Click += new System.EventHandler(this.m_grv_nha_cung_cap_Click);

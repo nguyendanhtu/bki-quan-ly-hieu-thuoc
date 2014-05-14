@@ -139,6 +139,9 @@ namespace BKI_QLHT.DanhMuc
             load_data_2_grid();
             v_fDE.get_us(ref m_us_dm_ncc);
             WinFormControls.set_focus_for_grid(m_grv_dm_nha_san_xuat, m_us_dm_ncc.strTEN_NCC, 1);
+            grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+            m_us = new US_V_DM_HANG_SX(m_us_dm_ncc.dcID);
+            load_data_2_thong_tin_chi_tiet(m_us);
         }
 
         private void update_v_dm_ncc_nsx_nhasx_1()
@@ -149,6 +152,9 @@ namespace BKI_QLHT.DanhMuc
                 f806_nha_san_xuat_DE v_fDE = new f806_nha_san_xuat_DE();
                 v_fDE.display_for_update(m_us_dm_ncc);
             load_data_2_grid();
+            grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+            m_us = new US_V_DM_HANG_SX(m_us_dm_ncc.dcID);
+            load_data_2_thong_tin_chi_tiet(m_us);
         }
 
         private void delete_v_dm_ncc_nsx_nhasx_1()
@@ -167,6 +173,9 @@ namespace BKI_QLHT.DanhMuc
                     v_us.Delete();
                     v_us.CommitTransaction();
                     m_grv_dm_nha_san_xuat.Rows.Remove(m_grv_dm_nha_san_xuat.Row);
+                    grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+                    m_us = new US_V_DM_HANG_SX(m_us_dm_ncc.dcID);
+                    load_data_2_thong_tin_chi_tiet(m_us);
                 }
                 catch (Exception v_e)
                 {
@@ -236,11 +245,15 @@ namespace BKI_QLHT.DanhMuc
                 m_grv_dm_nha_san_xuat.Redraw = true;
                 if (v_ds_v_dm_ncc.V_DM_NCC_NSX_NHASX_1.Count != 0)
                 {
-                    grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
-                    m_us = new US_V_DM_HANG_SX(m_us_dm_ncc.dcID);
+                    //WinFormControls.set_focus_for_grid(m_grv_dm_nha_san_xuat,v_us_v_dm_ncc.strTEN_NCC, 1);
+                    //grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+                    decimal id = CIPConvert.ToDecimal(v_ds_v_dm_ncc.Tables[0].Rows[0]["ID"]);
+                    m_us = new US_V_DM_HANG_SX(id);
+                    m_us_dm_ncc = new US_DM_NCC_NSX_NHASX(id);
                     load_data_2_thong_tin_chi_tiet(m_us);
                 }
                 else
+
                 {
                     m_lbl_ten_nha_cung_cap.Text = "";
                     m_lbl_ma_nha_cung_cap.Text = "";
@@ -282,6 +295,23 @@ namespace BKI_QLHT.DanhMuc
                     m_grv_dm_nha_san_xuat.Redraw = false;
                     CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_dm_nha_san_xuat, m_obj_trans);
                     m_grv_dm_nha_san_xuat.Redraw = true;
+                    if (v_ds_v_dm_ncc.V_DM_NCC_NSX_NHASX_1.Count != 0)
+                    {
+                        //WinFormControls.set_focus_for_grid(m_grv_dm_nha_san_xuat,v_us_v_dm_ncc.strTEN_NCC, 1);
+                        //grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+                        decimal id = CIPConvert.ToDecimal(v_ds_v_dm_ncc.Tables[0].Rows[0]["ID"]);
+                        m_us = new US_V_DM_HANG_SX(id);
+                        m_us_dm_ncc = new US_DM_NCC_NSX_NHASX(id);
+                        load_data_2_thong_tin_chi_tiet(m_us);
+                    }
+                    else
+                    {
+                        m_lbl_ten_nha_cung_cap.Text = "";
+                        m_lbl_ma_nha_cung_cap.Text = "";
+                        m_lbl_sdt.Text = "";
+                        m_lbl_dia_chi.Text = "";
+                    }
+
                 }
             }
             catch (Exception v_e)
@@ -628,6 +658,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_grv_dm_nha_san_xuat.ColumnInfo = resources.GetString("m_grv_dm_nha_san_xuat.ColumnInfo");
             this.m_grv_dm_nha_san_xuat.Location = new System.Drawing.Point(4, 114);
             this.m_grv_dm_nha_san_xuat.Name = "m_grv_dm_nha_san_xuat";
+            this.m_grv_dm_nha_san_xuat.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
             this.m_grv_dm_nha_san_xuat.Size = new System.Drawing.Size(1122, 178);
             this.m_grv_dm_nha_san_xuat.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_dm_nha_san_xuat.Styles"));
             this.m_grv_dm_nha_san_xuat.TabIndex = 52;

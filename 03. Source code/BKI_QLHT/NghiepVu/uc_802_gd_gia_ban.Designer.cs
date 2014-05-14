@@ -117,7 +117,8 @@
             this.m_grv_v_gd_gia.ColumnInfo = resources.GetString("m_grv_v_gd_gia.ColumnInfo");
             this.m_grv_v_gd_gia.Location = new System.Drawing.Point(0, 161);
             this.m_grv_v_gd_gia.Name = "m_grv_v_gd_gia";
-            this.m_grv_v_gd_gia.Size = new System.Drawing.Size(1141, 371);
+            this.m_grv_v_gd_gia.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.m_grv_v_gd_gia.Size = new System.Drawing.Size(1125, 371);
             this.m_grv_v_gd_gia.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_v_gd_gia.Styles"));
             this.m_grv_v_gd_gia.TabIndex = 22;
             // 

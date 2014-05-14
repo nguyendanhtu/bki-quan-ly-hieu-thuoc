@@ -117,6 +117,8 @@ namespace BKI_QLHT.DanhMuc
             	f805_nuoc_san_xuat_DE v_fDE = new  f805_nuoc_san_xuat_DE();								
             	v_fDE.display_for_insert();
             load_data_2_grid();
+            v_fDE.get_us(ref m_us_dm_ncc);
+            WinFormControls.set_focus_for_grid(m_grv_nha_cung_cap, m_us_dm_ncc.strTEN_NCC, 1);
         }
 
         private void update_v_dm_ncc_nsx_nhasx_1()
@@ -433,7 +435,8 @@ namespace BKI_QLHT.DanhMuc
             this.m_grv_nha_cung_cap.ColumnInfo = resources.GetString("m_grv_nha_cung_cap.ColumnInfo");
             this.m_grv_nha_cung_cap.Location = new System.Drawing.Point(0, 99);
             this.m_grv_nha_cung_cap.Name = "m_grv_nha_cung_cap";
-            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1141, 429);
+            this.m_grv_nha_cung_cap.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
+            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1125, 429);
             this.m_grv_nha_cung_cap.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nha_cung_cap.Styles"));
             this.m_grv_nha_cung_cap.TabIndex = 38;
             this.m_grv_nha_cung_cap.Click += new System.EventHandler(this.m_grv_nha_cung_cap_Click);

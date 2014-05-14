@@ -139,6 +139,10 @@ namespace BKI_QLHT
             f801_dm_khach_hang_DE v_fDE = new f801_dm_khach_hang_DE();
             v_fDE.display_for_insert();
             load_data_2_grid();
+            v_fDE.get_us(ref m_us_dm_khach_hang);
+            WinFormControls.set_focus_for_grid(m_grv_dm_khach_hang, m_us_dm_khach_hang.strTEN_KHACH_HANG, 1);
+            grid2us_object(m_us, m_grv_dm_khach_hang.Row);
+            load_data_2_thong_tin_chi_tiet(m_us);
         }
 
         private void update_v_dm_khach_hang()
@@ -149,6 +153,8 @@ namespace BKI_QLHT
             f801_dm_khach_hang_DE v_fDE = new f801_dm_khach_hang_DE();
             v_fDE.display_for_update(m_us);
             load_data_2_grid();
+            grid2us_object(m_us, m_grv_dm_khach_hang.Row);
+            load_data_2_thong_tin_chi_tiet(m_us);
         }
 
         private void delete_v_dm_khach_hang()
@@ -164,6 +170,8 @@ namespace BKI_QLHT
                 v_us.Delete();
                 v_us.CommitTransaction();
                 m_grv_dm_khach_hang.Rows.Remove(m_grv_dm_khach_hang.Row);
+                grid2us_object(m_us, m_grv_dm_khach_hang.Row);
+                load_data_2_thong_tin_chi_tiet(m_us);
             }
             catch (Exception v_e)
             {
@@ -210,6 +218,24 @@ namespace BKI_QLHT
                     m_grv_dm_khach_hang.Redraw = false;
                     CGridUtils.Dataset2C1Grid(v_ds_v_dm_khach_hang, m_grv_dm_khach_hang, m_obj_trans);
                     m_grv_dm_khach_hang.Redraw = true;
+                    if (v_ds_v_dm_khach_hang.V_DM_KHACH_HANG.Count != 0)
+                    {
+                        //WinFormControls.set_focus_for_grid(m_grv_dm_nha_san_xuat,v_us_v_dm_ncc.strTEN_NCC, 1);
+                        //grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+                        decimal id = CIPConvert.ToDecimal(v_ds_v_dm_khach_hang.Tables[0].Rows[0]["ID"]);
+                        m_us = new US_V_DM_KHACH_HANG(id);
+                        //m_us_dm_ncc = new US_DM_NCC_NSX_NHASX(id);
+                        load_data_2_thong_tin_chi_tiet(m_us);
+                    }
+                    else
+                    {
+                        m_lbl_ten_khach_hang.Text = "";
+                        m_lbl_ma_khach_hang.Text = "";
+                        m_lbl_sdt.Text = "";
+                        m_lbl_dia_chi.Text = "";
+                        m_lbl_ten_nhom_khach_hang.Text = "";
+                        m_lbl_ma_so_thue.Text = "";
+                    }
                 }
             }
             catch (Exception v_e)
@@ -318,6 +344,24 @@ namespace BKI_QLHT
                 m_grv_dm_khach_hang.Redraw = false;
                 CGridUtils.Dataset2C1Grid(v_ds_v_dm_khach_hang, m_grv_dm_khach_hang, m_obj_trans);
                 m_grv_dm_khach_hang.Redraw = true;
+                if (v_ds_v_dm_khach_hang.V_DM_KHACH_HANG.Count != 0)
+                {
+                    //WinFormControls.set_focus_for_grid(m_grv_dm_nha_san_xuat,v_us_v_dm_ncc.strTEN_NCC, 1);
+                    //grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+                    decimal id = CIPConvert.ToDecimal(v_ds_v_dm_khach_hang.Tables[0].Rows[0]["ID"]);
+                    m_us = new US_V_DM_KHACH_HANG(id);
+                    //m_us_dm_ncc = new US_DM_NCC_NSX_NHASX(id);
+                    load_data_2_thong_tin_chi_tiet(m_us);
+                }
+                else
+                {
+                    m_lbl_ten_khach_hang.Text = "";
+                    m_lbl_ma_khach_hang.Text = "";
+                    m_lbl_sdt.Text = "";
+                    m_lbl_dia_chi.Text = "";
+                    m_lbl_ten_nhom_khach_hang.Text = "";
+                    m_lbl_ma_so_thue.Text = "";
+                }
             }
             catch (Exception v_e)
             {

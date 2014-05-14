@@ -114,6 +114,11 @@ namespace BKI_QLHT.DanhMuc
             	f800_dm_nha_cung_cap_DE v_fDE = new  f800_dm_nha_cung_cap_DE();								
             	v_fDE.display_for_insert();
             load_data_2_grid();
+            v_fDE.get_us(ref m_us_dm_ncc);
+            WinFormControls.set_focus_for_grid(m_grv_nha_cung_cap, m_us_dm_ncc.strTEN_NCC, 1);
+            grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+            m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+            load_data_2_thong_tin_chi_tiet(m_us);
         }
 
         private void update_v_dm_ncc_nsx_nhasx_1()
@@ -124,6 +129,9 @@ namespace BKI_QLHT.DanhMuc
             	f800_dm_nha_cung_cap_DE v_fDE = new f800_dm_nha_cung_cap_DE();
             	v_fDE.display_for_update(m_us_dm_ncc);
             load_data_2_grid();
+            grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+            m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+            load_data_2_thong_tin_chi_tiet(m_us);
         }
 
         private void delete_v_dm_ncc_nsx_nhasx_1()
@@ -142,6 +150,9 @@ namespace BKI_QLHT.DanhMuc
                     v_us.Delete();
                     v_us.CommitTransaction();
                     m_grv_nha_cung_cap.Rows.Remove(m_grv_nha_cung_cap.Row);
+                    grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+                    m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+                    load_data_2_thong_tin_chi_tiet(m_us);
                 }
                 catch (Exception v_e)
                 {
@@ -283,6 +294,22 @@ namespace BKI_QLHT.DanhMuc
                 m_grv_nha_cung_cap.Redraw = false;
                 CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
                 m_grv_nha_cung_cap.Redraw = true;
+                if (v_ds_v_dm_ncc.V_DM_NCC_NSX_NHASX_1.Count != 0)
+                {
+                    //WinFormControls.set_focus_for_grid(m_grv_dm_nha_san_xuat,v_us_v_dm_ncc.strTEN_NCC, 1);
+                    //grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+                    decimal id = CIPConvert.ToDecimal(v_ds_v_dm_ncc.Tables[0].Rows[0]["ID"]);
+                    m_us = new US_V_DM_NCC_NSX_NHASX_1(id);
+                    //m_us_dm_ncc = new US_DM_NCC_NSX_NHASX(id);
+                    load_data_2_thong_tin_chi_tiet(m_us);
+                }
+                else
+                {
+                    m_lbl_ten_nha_cung_cap.Text = "";
+                    m_lbl_ma_nha_cung_cap.Text = "";
+                    m_lbl_sdt.Text = "";
+                    m_lbl_dia_chi.Text = "";
+                }
             }
             catch (Exception v_e)
             {
@@ -302,6 +329,22 @@ namespace BKI_QLHT.DanhMuc
                     m_grv_nha_cung_cap.Redraw = false;
                     CGridUtils.Dataset2C1Grid(v_ds_v_dm_ncc, m_grv_nha_cung_cap, m_obj_trans);
                     m_grv_nha_cung_cap.Redraw = true;
+                    if (v_ds_v_dm_ncc.V_DM_NCC_NSX_NHASX_1.Count != 0)
+                    {
+                        //WinFormControls.set_focus_for_grid(m_grv_dm_nha_san_xuat,v_us_v_dm_ncc.strTEN_NCC, 1);
+                        //grid2us_object(m_us_dm_ncc, m_grv_dm_nha_san_xuat.Row);
+                        decimal id = CIPConvert.ToDecimal(v_ds_v_dm_ncc.Tables[0].Rows[0]["ID"]);
+                        m_us = new US_V_DM_NCC_NSX_NHASX_1(id);
+                        //m_us_dm_ncc = new US_DM_NCC_NSX_NHASX(id);
+                        load_data_2_thong_tin_chi_tiet(m_us);
+                    }
+                    else
+                    {
+                        m_lbl_ten_nha_cung_cap.Text = "";
+                        m_lbl_ma_nha_cung_cap.Text = "";
+                        m_lbl_sdt.Text = "";
+                        m_lbl_dia_chi.Text = "";
+                    }
                 }
             }
             catch (Exception v_e)
