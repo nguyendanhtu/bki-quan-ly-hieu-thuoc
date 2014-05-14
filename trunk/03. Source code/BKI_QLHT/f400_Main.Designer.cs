@@ -1045,16 +1045,6 @@ namespace BKI_QLHT
             // 
             // m_cmd_lich_su_gia_ban
             // 
-            this.m_cmd_lich_su_gia_ban.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.m_cmd_lich_su_gia_ban.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.m_cmd_lich_su_gia_ban.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_cmd_lich_su_gia_ban.Location = new System.Drawing.Point(3, 14);
-            this.m_cmd_lich_su_gia_ban.Name = "m_cmd_lich_su_gia_ban";
-            this.m_cmd_lich_su_gia_ban.Size = new System.Drawing.Size(196, 40);
-            this.m_cmd_lich_su_gia_ban.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_cmd_lich_su_gia_ban.TabIndex = 0;
-            this.m_cmd_lich_su_gia_ban.Text = "Lịch sử giá bán";
-            this.m_cmd_lich_su_gia_ban.Click += new System.EventHandler(this.m_cmd_lich_su_gia_ban_Click);
             // 
             // dockContainerItem1
             // 
@@ -1138,6 +1128,7 @@ namespace BKI_QLHT
             this.button1.TabIndex = 17;
             this.button1.Text = "BC Danh mục thuốc theo nhóm thuốc";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // button2
             // 
