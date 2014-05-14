@@ -47,7 +47,6 @@ namespace BKI_QLHT
         private Label m_lbl_ngay_lam_bc;
         private Label label3;
         private Label m_lbl_nguoi_lam_bao_cao;
-        private Label label4;
         private Label m_lbl_doanh_thu;
         private Label label2;
         private Label m_lbl_count;
@@ -108,7 +107,6 @@ namespace BKI_QLHT
             this.m_lbl_ngay_lam_bc = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.m_lbl_nguoi_lam_bao_cao = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.m_lbl_doanh_thu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.m_lbl_count = new System.Windows.Forms.Label();
@@ -264,7 +262,7 @@ namespace BKI_QLHT
             // m_lbl_nguoi_lam_bc
             // 
             this.m_lbl_nguoi_lam_bc.AutoSize = true;
-            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(630, 87);
+            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(603, 87);
             this.m_lbl_nguoi_lam_bc.Name = "m_lbl_nguoi_lam_bc";
             this.m_lbl_nguoi_lam_bc.Size = new System.Drawing.Size(63, 13);
             this.m_lbl_nguoi_lam_bc.TabIndex = 2809;
@@ -273,7 +271,7 @@ namespace BKI_QLHT
             // m_lbl_ngay_lam_bc
             // 
             this.m_lbl_ngay_lam_bc.AutoSize = true;
-            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(630, 109);
+            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(603, 109);
             this.m_lbl_ngay_lam_bc.Name = "m_lbl_ngay_lam_bc";
             this.m_lbl_ngay_lam_bc.Size = new System.Drawing.Size(60, 13);
             this.m_lbl_ngay_lam_bc.TabIndex = 2808;
@@ -282,7 +280,7 @@ namespace BKI_QLHT
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(505, 109);
+            this.label3.Location = new System.Drawing.Point(486, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 2807;
@@ -291,26 +289,17 @@ namespace BKI_QLHT
             // m_lbl_nguoi_lam_bao_cao
             // 
             this.m_lbl_nguoi_lam_bao_cao.AutoSize = true;
-            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(505, 87);
+            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(486, 87);
             this.m_lbl_nguoi_lam_bao_cao.Name = "m_lbl_nguoi_lam_bao_cao";
             this.m_lbl_nguoi_lam_bao_cao.Size = new System.Drawing.Size(96, 13);
             this.m_lbl_nguoi_lam_bao_cao.TabIndex = 2806;
             this.m_lbl_nguoi_lam_bao_cao.Text = "Người làm báo cáo";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(242, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
-            this.label4.TabIndex = 2805;
-            this.label4.Text = "(VNĐ)";
-            // 
             // m_lbl_doanh_thu
             // 
             this.m_lbl_doanh_thu.AutoSize = true;
             this.m_lbl_doanh_thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_doanh_thu.Location = new System.Drawing.Point(180, 109);
+            this.m_lbl_doanh_thu.Location = new System.Drawing.Point(177, 109);
             this.m_lbl_doanh_thu.Name = "m_lbl_doanh_thu";
             this.m_lbl_doanh_thu.Size = new System.Drawing.Size(28, 13);
             this.m_lbl_doanh_thu.TabIndex = 2804;
@@ -319,17 +308,17 @@ namespace BKI_QLHT
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 109);
+            this.label2.Location = new System.Drawing.Point(23, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 2803;
-            this.label2.Text = "Tổng doanh thu:";
+            this.label2.Text = "Tổng doanh thu";
             // 
             // m_lbl_count
             // 
             this.m_lbl_count.AutoSize = true;
             this.m_lbl_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_count.Location = new System.Drawing.Point(180, 87);
+            this.m_lbl_count.Location = new System.Drawing.Point(177, 87);
             this.m_lbl_count.Name = "m_lbl_count";
             this.m_lbl_count.Size = new System.Drawing.Size(28, 13);
             this.m_lbl_count.TabIndex = 2802;
@@ -338,11 +327,11 @@ namespace BKI_QLHT
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 87);
+            this.label1.Location = new System.Drawing.Point(23, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 13);
+            this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 2801;
-            this.label1.Text = "Số kết quả trong báo cáo: ";
+            this.label1.Text = "Số kết quả trong báo cáo";
             // 
             // label7
             // 
@@ -368,7 +357,6 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_lbl_ngay_lam_bc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.m_lbl_nguoi_lam_bao_cao);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.m_lbl_doanh_thu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.m_lbl_count);
@@ -418,8 +406,8 @@ namespace BKI_QLHT
         {
             Decimal CUI = CAppContext_201.getCurrentUserID();
             IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG v_us = new IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG(CUI);
-            m_lbl_ngay_lam_bc.ForeColor = Color.Red;
-            m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
+            //m_lbl_ngay_lam_bc.ForeColor = Color.Red;
+            //m_lbl_nguoi_lam_bc.ForeColor = Color.Red;
             m_lbl_count.ForeColor = Color.Red;
             m_lbl_doanh_thu.ForeColor = Color.Red;
             m_lbl_nguoi_lam_bc.Text = v_us.strTEN.Trim();
@@ -501,7 +489,7 @@ namespace BKI_QLHT
             {
                 v_dc_tong_doanh_thu += CIPConvert.ToDecimal(m_v_ds.Tables[0].Rows[i][BKI_QLHT.DS.CDBNames.V_BC_DOANH_THU_THEO_CAC_BAC_SY.DOANH_THU]);
             }
-            m_lbl_doanh_thu.Text = CIPConvert.ToStr(v_dc_tong_doanh_thu, "#,###.##");
+            m_lbl_doanh_thu.Text = CIPConvert.ToStr(v_dc_tong_doanh_thu, "#,###.##") + "   VNĐ";
             
             CGridUtils.Dataset2C1Grid(m_v_ds, m_fg, m_obj_trans);
             CGridUtils.MakeSoTT(0, m_fg);
@@ -514,12 +502,6 @@ namespace BKI_QLHT
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Sum
                 , 0
                 ,(int)e_col_Number.TEN_BAC_SY
-                , (int)e_col_Number.DOANH_THU
-                , "{0}"
-                );
-            m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count 
-                , 0
-                , (int)e_col_Number.TEN_BAC_SY
                 , (int)e_col_Number.DOANH_THU
                 , "{0}"
                 );
@@ -570,7 +552,7 @@ namespace BKI_QLHT
             String m_str_dia_chi = v_us.strDIA_CHI;
             String m_str_so_dien_thoai = v_us.strSDT;
 
-            CExcelReport v_obj_excel_rpt = new CExcelReport("f419_bao_cao_doanh_thu_theo_cac_ncc.xlsx", 10, 1);
+            CExcelReport v_obj_excel_rpt = new CExcelReport("f402_bao_cao_doanh_thu_theo_cac_bac_sy.xlsx", 10, 1);
             //người làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<nguoi_xuat_bao_cao>", m_lbl_nguoi_lam_bc.Text.Trim());
             //ngày làm báo cáo
@@ -578,6 +560,7 @@ namespace BKI_QLHT
             v_obj_excel_rpt.AddFindAndReplaceItem("<dia_chi>", m_str_dia_chi);
             v_obj_excel_rpt.AddFindAndReplaceItem("<so_dien_thoai>", m_str_so_dien_thoai);
             v_obj_excel_rpt.AddFindAndReplaceItem("<ngay_xuat_bao_cao>", m_lbl_ngay_lam_bc.Text.Trim());
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tong_doanh_thu>", m_lbl_doanh_thu.Text);
             v_obj_excel_rpt.FindAndReplace(false);
             v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 0, m_fg.Cols.Count - 1, true);
         }
