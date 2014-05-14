@@ -149,19 +149,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.31353in</Width>
+              <Width>2.01603in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.08705in</Width>
+              <Width>0.78955in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.25417in</Width>
+              <Width>0.95667in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.89003in</Width>
+              <Width>1.59253in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.99375in</Width>
+              <Width>1.69625in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -180,7 +180,7 @@
                               <Value>Tên thuốc</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -216,7 +216,7 @@
                               <Value>Số lượng</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -252,7 +252,7 @@
                               <Value>Đơn vị tính</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -288,7 +288,7 @@
                               <Value>Đơn giá </Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -324,7 +324,7 @@
                               <Value>Thành tiền</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -365,6 +365,7 @@
                               <Value>=Fields!TEN_THUOC.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -398,6 +399,7 @@
                               <Value>=Sum(Fields!SO_LUONG_BAN.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -431,6 +433,7 @@
                               <Value>=Fields!TEN_DON_VI.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -464,6 +467,7 @@
                               <Value>=Sum(Fields!GIA_BAN.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -497,6 +501,7 @@
                               <Value>=Sum(Fields!THANH_TIEN.Value)</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -542,13 +547,14 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DS_REPORT_BAN_THUOC</DataSetName>
-        <Top>6.19125cm</Top>
+        <Top>7.14375cm</Top>
         <Height>1.2cm</Height>
-        <Width>21.68787cm</Width>
+        <Width>17.90963cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <FontSize>8pt</FontSize>
         </Style>
       </Tablix>
       <Textbox Name="Textbox1">
@@ -560,7 +566,7 @@
               <TextRun>
                 <Value>Nhà thuốc:</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>6pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -568,10 +574,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.14119cm</Top>
-        <Left>0.12383cm</Left>
+        <Top>0.3175cm</Top>
+        <Left>2.34633cm</Left>
         <Height>0.52063cm</Height>
-        <Width>1.60042cm</Width>
+        <Width>1.12417cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -586,7 +592,7 @@
       <Line Name="Line1">
         <Top>0.8382cm</Top>
         <Height>0cm</Height>
-        <Width>18.38854cm</Width>
+        <Width>19.05cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -603,7 +609,7 @@
               <TextRun>
                 <Value>Đ/C:</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>6pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -611,8 +617,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.14119cm</Top>
-        <Left>7.0976cm</Left>
+        <Top>0.3175cm</Top>
+        <Left>7.7326cm</Left>
         <Height>0.52063cm</Height>
         <Width>0.80667cm</Width>
         <ZIndex>3</ZIndex>
@@ -635,7 +641,7 @@
               <TextRun>
                 <Value>ĐT:</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>6pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -643,8 +649,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.06182cm</Top>
-        <Left>13.79156cm</Left>
+        <Top>0.3175cm</Top>
+        <Left>12.79435cm</Left>
         <Height>0.52063cm</Height>
         <Width>0.70084cm</Width>
         <ZIndex>4</ZIndex>
@@ -667,7 +673,7 @@
               <TextRun>
                 <Value>=First(Fields!TEN_DAY_DU.Value, "DS_REPORT_BAN_THUOC")</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>6pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -675,10 +681,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TEN_DAY_DU</rd:DefaultName>
-        <Top>0.14119cm</Top>
-        <Left>1.90063cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.66958cm</Width>
+        <Top>0.3175cm</Top>
+        <Left>3.54106cm</Left>
+        <Height>0.52062cm</Height>
+        <Width>3.29238cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -699,7 +705,7 @@
               <TextRun>
                 <Value>=First(Fields!DIA_CHI_DV.Value, "DS_REPORT_BAN_THUOC")</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>6pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -707,10 +713,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>DIA_CHI_DV</rd:DefaultName>
-        <Top>0.06182cm</Top>
-        <Left>8.08066cm</Left>
-        <Height>0.6cm</Height>
-        <Width>5.33104cm</Width>
+        <Top>0.3175cm</Top>
+        <Left>8.53927cm</Left>
+        <Height>0.52062cm</Height>
+        <Width>4.07869cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -731,7 +737,7 @@
               <TextRun>
                 <Value>=First(Fields!SDT_DV.Value, "DS_REPORT_BAN_THUOC")</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>6pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -739,10 +745,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>SDT_DV</rd:DefaultName>
-        <Top>0.06182cm</Top>
-        <Left>14.71083cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.34667cm</Width>
+        <Top>0.3175cm</Top>
+        <Left>13.61046cm</Left>
+        <Height>0.52063cm</Height>
+        <Width>2.71167cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -764,6 +770,7 @@
                 <Value>PHIẾU XUẤT</Value>
                 <Style>
                   <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -772,7 +779,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
         <Top>1.20862cm</Top>
-        <Left>7.0976cm</Left>
+        <Left>7.67968cm</Left>
         <Height>0.75875cm</Height>
         <Width>3.39513cm</Width>
         <ZIndex>8</ZIndex>
@@ -794,17 +801,19 @@
             <TextRuns>
               <TextRun>
                 <Value>Khách hàng:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.16653cm</Top>
-        <Left>0.44133cm</Left>
+        <Top>3.83681cm</Top>
+        <Left>1.45797cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.12958cm</Width>
+        <Width>1.8609cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -824,15 +833,17 @@
             <TextRuns>
               <TextRun>
                 <Value>Đ/C:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.94292cm</Top>
-        <Left>0.44133cm</Left>
+        <Top>4.66611cm</Top>
+        <Left>1.48443cm</Left>
         <Height>0.56472cm</Height>
         <Width>1.25646cm</Width>
         <ZIndex>10</ZIndex>
@@ -854,15 +865,17 @@
             <TextRuns>
               <TextRun>
                 <Value>ĐT:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>4.68403cm</Top>
-        <Left>0.46779cm</Left>
+        <Top>5.4425cm</Top>
+        <Left>1.48443cm</Left>
         <Height>0.6cm</Height>
         <Width>1.25646cm</Width>
         <ZIndex>11</ZIndex>
@@ -884,17 +897,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!TEN_KHACH_HANG.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TEN_KHACH_HANG</rd:DefaultName>
-        <Top>3.11362cm</Top>
-        <Left>3.11362cm</Left>
+        <Top>3.83681cm</Top>
+        <Left>3.49526cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.79066cm</Width>
+        <Width>3.60003cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -914,17 +929,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!DIA_CHI_KH.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>DIA_CHI_KH</rd:DefaultName>
-        <Top>3.94292cm</Top>
-        <Left>3.11362cm</Left>
+        <Top>4.66611cm</Top>
+        <Left>3.52172cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.79066cm</Width>
+        <Width>3.60003cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -944,17 +961,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!SDT_KH.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>SDT_KH</rd:DefaultName>
-        <Top>4.68403cm</Top>
-        <Left>3.11362cm</Left>
+        <Top>5.4425cm</Top>
+        <Left>3.49526cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.79066cm</Width>
+        <Width>3.60003cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -974,15 +993,17 @@
             <TextRuns>
               <TextRun>
                 <Value>Mã phiếu:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>1.20862cm</Top>
-        <Left>11.51615cm</Left>
+        <Top>3.06042cm</Top>
+        <Left>1.48443cm</Left>
         <Height>0.6cm</Height>
         <Width>1.97083cm</Width>
         <ZIndex>15</ZIndex>
@@ -1004,17 +1025,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!MA_GIAO_DICH.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>MA_GIAO_DICH</rd:DefaultName>
-        <Top>1.20862cm</Top>
-        <Left>13.90862cm</Left>
+        <Top>3.06042cm</Top>
+        <Left>3.5594cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.01354cm</Width>
+        <Width>2.89277cm</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -1034,15 +1057,17 @@
             <TextRuns>
               <TextRun>
                 <Value>Ngày xuất:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>2.09448cm</Top>
-        <Left>11.51615cm</Left>
+        <Top>3.06042cm</Top>
+        <Left>9.29365cm</Left>
         <Height>0.6cm</Height>
         <Width>1.97083cm</Width>
         <ZIndex>17</ZIndex>
@@ -1064,17 +1089,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!NGAY_GIAO_DICH.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>NGAY_GIAO_DICH</rd:DefaultName>
-        <Top>2.09448cm</Top>
-        <Left>13.90862cm</Left>
+        <Top>3.06042cm</Top>
+        <Left>11.36862cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.01354cm</Width>
+        <Width>5.12347cm</Width>
         <ZIndex>18</ZIndex>
         <Style>
           <Border>
@@ -1094,17 +1121,19 @@
             <TextRuns>
               <TextRun>
                 <Value>Tổng tiền:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.16653cm</Top>
-        <Left>9.92865cm</Left>
+        <Top>3.83681cm</Top>
+        <Left>9.29365cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.48306cm</Width>
+        <Width>2.5041cm</Width>
         <ZIndex>19</ZIndex>
         <Style>
           <Border>
@@ -1124,17 +1153,19 @@
             <TextRuns>
               <TextRun>
                 <Value>Chiết khấu:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.90764cm</Top>
-        <Left>9.92865cm</Left>
+        <Top>4.63083cm</Top>
+        <Left>9.29365cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.48306cm</Width>
+        <Width>2.5041cm</Width>
         <ZIndex>20</ZIndex>
         <Style>
           <Border>
@@ -1154,17 +1185,19 @@
             <TextRuns>
               <TextRun>
                 <Value>Tổng tiền thanh toán:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>4.64876cm</Top>
-        <Left>9.92865cm</Left>
+        <Top>5.63653cm</Top>
+        <Left>9.27021cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.48306cm</Width>
+        <Width>2.89796cm</Width>
         <ZIndex>21</ZIndex>
         <Style>
           <Border>
@@ -1184,17 +1217,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=Sum(Fields!TONG_TIEN.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TONG_TIEN</rd:DefaultName>
-        <Top>3.16653cm</Top>
-        <Left>13.90862cm</Left>
+        <Top>3.83681cm</Top>
+        <Left>12.32112cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.01354cm</Width>
+        <Width>4.31851cm</Width>
         <ZIndex>22</ZIndex>
         <Style>
           <Border>
@@ -1214,15 +1249,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=Sum(Fields!TI_LE_CHIET_KHAU.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TI_LE_CHIET_KHAU</rd:DefaultName>
-        <Top>3.94292cm</Top>
-        <Left>13.90862cm</Left>
+        <Top>4.66611cm</Top>
+        <Left>12.32112cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>23</ZIndex>
@@ -1244,17 +1281,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=Sum(Fields!TONG_TIEN_THANH_TOAN.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TONG_TIEN_THANH_TOAN</rd:DefaultName>
-        <Top>4.67466cm</Top>
-        <Left>13.90862cm</Left>
+        <Top>5.62716cm</Top>
+        <Left>12.32112cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.01354cm</Width>
+        <Width>4.3185cm</Width>
         <ZIndex>24</ZIndex>
         <Style>
           <Border>
@@ -1281,8 +1320,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.96882cm</Top>
-        <Left>16.58501cm</Left>
+        <Top>4.69201cm</Top>
+        <Left>15.95001cm</Left>
         <Height>0.6cm</Height>
         <Width>0.54208cm</Width>
         <ZIndex>25</ZIndex>
@@ -1304,15 +1343,17 @@
             <TextRuns>
               <TextRun>
                 <Value>VNĐ</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>3.16653cm</Top>
-        <Left>19.34549cm</Left>
+        <Top>3.83681cm</Top>
+        <Left>16.80549cm</Left>
         <Height>0.6cm</Height>
         <Width>0.96541cm</Width>
         <ZIndex>26</ZIndex>
@@ -1334,15 +1375,17 @@
             <TextRuns>
               <TextRun>
                 <Value>VNĐ</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>4.68403cm</Top>
-        <Left>19.34549cm</Left>
+        <Top>5.63653cm</Top>
+        <Left>16.80549cm</Left>
         <Height>0.6cm</Height>
         <Width>0.96541cm</Width>
         <ZIndex>27</ZIndex>
@@ -1364,15 +1407,17 @@
             <TextRuns>
               <TextRun>
                 <Value>Nhân viên:</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>15.45594cm</Top>
-        <Left>16.08668cm</Left>
+        <Top>13.27264cm</Top>
+        <Left>11.30767cm</Left>
         <Height>0.6cm</Height>
         <Width>1.97083cm</Width>
         <ZIndex>28</ZIndex>
@@ -1394,15 +1439,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!TEN_NHAN_VIEN.Value, "DS_REPORT_BAN_THUOC")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TEN_NHAN_VIEN</rd:DefaultName>
-        <Top>17.18945cm</Top>
-        <Left>16.08668cm</Left>
+        <Top>14.37115cm</Top>
+        <Left>10.99017cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>29</ZIndex>
@@ -1417,10 +1464,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>7.36458in</Height>
+    <Height>6.06in</Height>
     <Style />
   </Body>
-  <Width>8.53853in</Width>
+  <Width>7.52083in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
