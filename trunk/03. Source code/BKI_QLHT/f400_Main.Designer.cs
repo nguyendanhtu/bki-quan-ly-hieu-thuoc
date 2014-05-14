@@ -1313,6 +1313,7 @@ namespace BKI_QLHT
             this.button18.TabIndex = 34;
             this.button18.Text = "419";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
