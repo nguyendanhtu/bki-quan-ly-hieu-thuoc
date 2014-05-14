@@ -37,6 +37,14 @@
         public const string TI_LE_CHIET_KHAU_NHOM_KH = "TI_LE_CHIET_KHAU_NHOM_KH";
         public const string HAN_SU_DUNG = "HAN_SU_DUNG";
     }
+    public class V_BC_DOANH_THU_THEO_CAC_NCC
+    {
+        public const string TEN_NCC = "TEN_NCC";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TONG_SO_LUONG_BAN = "TONG_SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string DOANH_THU = "DOANH_THU";
+    }
 
     public class V_BAO_CAO_DOANH_THU_THEO_BAC_SY_0
     {
