@@ -24,6 +24,7 @@ namespace BKI_QLHT.NghiepVu
         public uc803_bang_gia()
         {
             InitializeComponent();
+            format_controls();
         }
         #region Data Structure
         private enum e_col_Number
@@ -81,6 +82,13 @@ namespace BKI_QLHT.NghiepVu
               , "{0}"
               );
             m_grv_bang_gia.Redraw = true;
+        }
+        private void load_data_to_text_box_search()
+        {
+            US_V_DM_THUOC v_us = new US_V_DM_THUOC();
+            DS_V_DM_THUOC v_ds = new DS_V_DM_THUOC();
+            v_us.FillDataset(v_ds);
+            m_txts_ten_thuoc.load_data_to_list(v_ds, V_DM_THUOC.DISPLAY, V_DM_THUOC.ID);
         }
         private void grid2us_object(US_V_GD_GIA_BAN i_us
             , int i_grid_row)
@@ -167,6 +175,7 @@ namespace BKI_QLHT.NghiepVu
             try
             {
                 set_initial_form_load();
+                load_data_to_text_box_search();
             }
             catch (Exception v_e)
             {
@@ -236,5 +245,30 @@ namespace BKI_QLHT.NghiepVu
             }
         }
         #endregion
+
+        private void m_txts_ten_thuoc_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                DS_V_GD_GIA_BAN v_ds = new DS_V_GD_GIA_BAN();
+                US_V_GD_GIA_BAN v_us = new US_V_GD_GIA_BAN();
+                v_us.FillDataset(v_ds, "where V_GD_GIA_BAN.ID_THUOC=" + m_txts_ten_thuoc.dcID);
+                m_grv_bang_gia.Redraw = false;
+                CGridUtils.Dataset2C1Grid(v_ds, m_grv_bang_gia, m_obj_trans);
+                m_grv_bang_gia.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
+             , 0
+             , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình nhóm
+             , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
+             , "{0}"
+             );
+                m_grv_bang_gia.Redraw = true;
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+       
     }
 }
