@@ -471,6 +471,10 @@ namespace BKI_QLHT
                         v_us_sd.dcID = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID"]);
                         v_us_sd.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
                         v_us_sd.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]) + v_list.sd_so_luong;
+                        if (v_list.ID_don_vi_thuoc != CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"])) {
+                            v_us_sd.dcID_DON_VI_THUOC = v_list.ID_don_vi_thuoc;
+                        }
+                        else
                         v_us_sd.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
                         //v_us_sd.datNGAY_PHAT_SINH = CIPConvert.ToDatetime( v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"].ToString(),"dd/MM/yyyy");
                         v_us_sd.datNGAY_PHAT_SINH = DateTime.Now;
@@ -511,6 +515,7 @@ namespace BKI_QLHT
             foreach (data v_list in list)
             {
 
+                v_ds_gd_dv_tinh_thuoc.Clear();
                 v_us_gd_dv_tinh_thuoc.FillDataset(v_ds_gd_dv_tinh_thuoc, "where id_nhom_don_vi_tinh=" + v_list.ID_nhom_dv_tinh);
                 if (v_ds_gd_dv_tinh_thuoc.GD_DON_VI_TINH_THUOC.Count == 0)
                 {
