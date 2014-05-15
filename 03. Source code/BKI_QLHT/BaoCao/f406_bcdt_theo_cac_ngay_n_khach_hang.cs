@@ -554,13 +554,16 @@ namespace BKI_QLHT
             String m_str_dia_chi = v_us.strDIA_CHI;
             String m_str_so_dien_thoai = v_us.strSDT;
 
-            CExcelReport v_obj_excel_rpt = new CExcelReport("f402_bao_cao_doanh_thu_theo_cac_bac_sy.xlsx", 10, 1);
+            CExcelReport v_obj_excel_rpt = new CExcelReport("f406_bao_cao_doanh_thu_theo_cac_ngay_va_khach_hang.xlsx", 10, 1);
             //người làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<nguoi_xuat_bao_cao>", m_lbl_nguoi_lam_bc.Text.Trim());
             //ngày làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<ten_don_vi>", m_str_ten_don_vi);
             v_obj_excel_rpt.AddFindAndReplaceItem("<dia_chi>", m_str_dia_chi);
             v_obj_excel_rpt.AddFindAndReplaceItem("<so_dien_thoai>", m_str_so_dien_thoai);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tu_ngay>", m_dat_tu_ngay.Text);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<den_ngay>", m_dat_den_ngay.Text);
+            
             v_obj_excel_rpt.AddFindAndReplaceItem("<ngay_xuat_bao_cao>", m_lbl_ngay_lam_bc.Text.Trim());
             v_obj_excel_rpt.AddFindAndReplaceItem("<tong_doanh_thu>", m_lbl_doanh_thu.Text);
             v_obj_excel_rpt.FindAndReplace(false);
