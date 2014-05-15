@@ -559,8 +559,13 @@ namespace BKI_QLHT
             v_obj_excel_rpt.AddFindAndReplaceItem("<ten_don_vi>", m_str_ten_don_vi);
             v_obj_excel_rpt.AddFindAndReplaceItem("<dia_chi>", m_str_dia_chi);
             v_obj_excel_rpt.AddFindAndReplaceItem("<so_dien_thoai>", m_str_so_dien_thoai);
+
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tu_ngay>", m_dat_tu_ngay.Text);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<den_ngay>",m_dat_den_ngay.Text);
+            
             v_obj_excel_rpt.AddFindAndReplaceItem("<ngay_xuat_bao_cao>", m_lbl_ngay_lam_bc.Text.Trim());
             v_obj_excel_rpt.AddFindAndReplaceItem("<tong_doanh_thu>", m_lbl_doanh_thu.Text);
+            
             v_obj_excel_rpt.FindAndReplace(false);
             v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 0, m_fg.Cols.Count - 1, true);
         }
