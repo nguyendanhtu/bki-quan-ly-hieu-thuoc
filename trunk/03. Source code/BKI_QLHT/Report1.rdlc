@@ -149,19 +149,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.01603in</Width>
+              <Width>1.90441in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.78955in</Width>
+              <Width>0.67793in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.95667in</Width>
+              <Width>0.84505in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.59253in</Width>
+              <Width>1.48091in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.69625in</Width>
+              <Width>1.58463in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -549,7 +549,7 @@
         <DataSetName>DS_REPORT_BAN_THUOC</DataSetName>
         <Top>7.14375cm</Top>
         <Height>1.2cm</Height>
-        <Width>17.90963cm</Width>
+        <Width>16.49204cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -592,7 +592,7 @@
       <Line Name="Line1">
         <Top>0.8382cm</Top>
         <Height>0cm</Height>
-        <Width>19.05cm</Width>
+        <Width>16.63963cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -1067,7 +1067,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
         <Top>3.06042cm</Top>
-        <Left>9.29365cm</Left>
+        <Left>8.34115cm</Left>
         <Height>0.6cm</Height>
         <Width>1.97083cm</Width>
         <ZIndex>17</ZIndex>
@@ -1099,7 +1099,7 @@
         </Paragraphs>
         <rd:DefaultName>NGAY_GIAO_DICH</rd:DefaultName>
         <Top>3.06042cm</Top>
-        <Left>11.36862cm</Left>
+        <Left>10.41612cm</Left>
         <Height>0.6cm</Height>
         <Width>5.12347cm</Width>
         <ZIndex>18</ZIndex>
@@ -1131,7 +1131,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
         <Top>3.83681cm</Top>
-        <Left>9.29365cm</Left>
+        <Left>8.34115cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5041cm</Width>
         <ZIndex>19</ZIndex>
@@ -1163,7 +1163,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
         <Top>4.63083cm</Top>
-        <Left>9.29365cm</Left>
+        <Left>8.34115cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5041cm</Width>
         <ZIndex>20</ZIndex>
@@ -1195,7 +1195,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
         <Top>5.63653cm</Top>
-        <Left>9.27021cm</Left>
+        <Left>8.31771cm</Left>
         <Height>0.6cm</Height>
         <Width>2.89796cm</Width>
         <ZIndex>21</ZIndex>
@@ -1218,6 +1218,7 @@
               <TextRun>
                 <Value>=Sum(Fields!TONG_TIEN.Value, "DS_REPORT_BAN_THUOC")</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1227,7 +1228,7 @@
         </Paragraphs>
         <rd:DefaultName>TONG_TIEN</rd:DefaultName>
         <Top>3.83681cm</Top>
-        <Left>12.32112cm</Left>
+        <Left>11.36862cm</Left>
         <Height>0.6cm</Height>
         <Width>4.31851cm</Width>
         <ZIndex>22</ZIndex>
@@ -1259,7 +1260,7 @@
         </Paragraphs>
         <rd:DefaultName>TI_LE_CHIET_KHAU</rd:DefaultName>
         <Top>4.66611cm</Top>
-        <Left>12.32112cm</Left>
+        <Left>11.36862cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>23</ZIndex>
@@ -1282,6 +1283,7 @@
               <TextRun>
                 <Value>=Sum(Fields!TONG_TIEN_THANH_TOAN.Value, "DS_REPORT_BAN_THUOC")</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1291,7 +1293,7 @@
         </Paragraphs>
         <rd:DefaultName>TONG_TIEN_THANH_TOAN</rd:DefaultName>
         <Top>5.62716cm</Top>
-        <Left>12.32112cm</Left>
+        <Left>11.36862cm</Left>
         <Height>0.6cm</Height>
         <Width>4.3185cm</Width>
         <ZIndex>24</ZIndex>
@@ -1320,8 +1322,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>4.69201cm</Top>
-        <Left>15.95001cm</Left>
+        <Top>4.66611cm</Top>
+        <Left>14.04501cm</Left>
         <Height>0.6cm</Height>
         <Width>0.54208cm</Width>
         <ZIndex>25</ZIndex>
@@ -1353,9 +1355,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
         <Top>3.83681cm</Top>
-        <Left>16.80549cm</Left>
+        <Left>15.85299cm</Left>
         <Height>0.6cm</Height>
-        <Width>0.96541cm</Width>
+        <Width>0.78664cm</Width>
         <ZIndex>26</ZIndex>
         <Style>
           <Border>
@@ -1385,9 +1387,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
         <Top>5.63653cm</Top>
-        <Left>16.80549cm</Left>
+        <Left>15.85299cm</Left>
         <Height>0.6cm</Height>
-        <Width>0.96541cm</Width>
+        <Width>0.78664cm</Width>
         <ZIndex>27</ZIndex>
         <Style>
           <Border>
