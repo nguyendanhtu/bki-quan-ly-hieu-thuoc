@@ -560,7 +560,9 @@
         public const string ID = "ID";
         public const string MA_NHOM = "MA_NHOM";
         public const string TEN_NHOM = "TEN_NHOM";
+        public const string TI_LE_CHIET_KHAU_NHOM_KH = "TI_LE_CHIET_KHAU_NHOM_KH";
     }
+
     public class DM_THUOC
     {
         public const string ID = "ID";
