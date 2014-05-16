@@ -176,6 +176,7 @@ namespace BKI_QLHT.NghiepVu
             {
                 set_initial_form_load();
                 load_data_to_text_box_search();
+                m_txts_ten_thuoc.Focus();
             }
             catch (Exception v_e)
             {

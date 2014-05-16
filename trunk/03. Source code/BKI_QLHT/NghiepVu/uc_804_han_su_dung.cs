@@ -175,6 +175,7 @@ namespace BKI_QLHT
             try
             {
                 set_initial_form_load();
+                m_cbo_thoi_gian.Focus();
             }
             catch (Exception v_e)
             {

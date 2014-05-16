@@ -149,7 +149,7 @@
             this.m_txts_ten_thuoc.Name = "m_txts_ten_thuoc";
             this.m_txts_ten_thuoc.Size = new System.Drawing.Size(367, 20);
             this.m_txts_ten_thuoc.str_query = null;
-            this.m_txts_ten_thuoc.TabIndex = 24;
+            this.m_txts_ten_thuoc.TabIndex = 1;
             this.m_txts_ten_thuoc.Text1 = null;
             this.m_txts_ten_thuoc.ValueMember = null;
             this.m_txts_ten_thuoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txts_ten_thuoc_KeyDown);

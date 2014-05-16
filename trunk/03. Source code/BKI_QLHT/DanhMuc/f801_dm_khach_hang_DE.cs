@@ -89,11 +89,17 @@ namespace BKI_QLHT
            m_cbo_nhom_khach_hang.ValueMember = DM_NHOM_KHACH_HANG.ID;
            m_cbo_nhom_khach_hang.DisplayMember = DM_NHOM_KHACH_HANG.TEN_NHOM;
        }
-       private bool check_validate()
+       private int check_validate()
        {
-           if (!CValidateTextBox.IsValid(m_txt_ten_khach_hang, DataType.StringType, allowNull.NO, true)) return false;
-           return true;
-           
+           if (m_txt_ten_khach_hang.Text == "")
+           {
+               return 1;
+           }
+           if (m_txt_so_dien_thoai.Text == "")
+           {
+               return 2;
+           }
+           return 0;
        }
 
         #endregion
@@ -105,44 +111,75 @@ namespace BKI_QLHT
        {
            try
            {
-               if (check_validate())
+               if (check_validate() == 1)
                {
-                    form_2_us_obj();
-                   
-                        switch (m_e_form_mode)
-                        {
-                            case DataEntryFormMode.InsertDataState:
-                                 DS_DM_KHACH_HANG v_ds_dm_khach_hang = new DS_DM_KHACH_HANG();
-                    US_DM_KHACH_HANG v_us_dm_khach_hang = new US_DM_KHACH_HANG();
-                    v_us_dm_khach_hang.FillDatasetSearchByMaKH(v_ds_dm_khach_hang,m_us_dm_khach_hang.strMA_KHACH_HANG);
-                    if (v_ds_dm_khach_hang.DM_KHACH_HANG.Count == 0)
-                    {
-                        m_us_dm_khach_hang.Insert();
-                        BaseMessages.MsgBox_Infor("Thêm mới thành công");
-                        this.Close();
-                    }
-                    else
-                    {
-                        BaseMessages.MsgBox_Infor("Mã khách hàng đã tồn tại.Vui lòng nhập lại");
-                    }
-                                break;
-                            case DataEntryFormMode.SelectDataState:
-                                break;
-                            case DataEntryFormMode.UpdateDataState:
-                                m_us_dm_khach_hang.Update();
-                                BaseMessages.MsgBox_Infor("Thay đổi thành công");
-                                this.Close();
-                                break;
-                            case DataEntryFormMode.ViewDataState:
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    
+                   BaseMessages.MsgBox_Infor("Bạn chưa nhập tên khách hàng");
+                   m_txt_ten_khach_hang.Focus();
+               }
                else
                {
-                   BaseMessages.MsgBox_Infor("Bạn cần nhập tên khách hàng");
+                   if (check_validate() == 2)
+                   {
+                       BaseMessages.MsgBox_Infor("Bạn chưa nhập số điện thoại");
+                       m_txt_so_dien_thoai.Focus();
+                   }
+                   else
+                   {
+                       switch (m_e_form_mode)
+                       {
+                           case DataEntryFormMode.InsertDataState:
+                               form_2_us_obj();
+                               DS_DM_KHACH_HANG v_ds_dm_khach_hang = new DS_DM_KHACH_HANG();
+                               US_DM_KHACH_HANG v_us_dm_hang_sx = new US_DM_KHACH_HANG();
+                               v_us_dm_hang_sx.FillDatasetSearchByMaKH(v_ds_dm_khach_hang, m_us_dm_khach_hang.strMA_KHACH_HANG);
+                               if (v_ds_dm_khach_hang.DM_KHACH_HANG.Count == 0)
+                               {
+                                   m_us_dm_khach_hang.Insert();
+                                   BaseMessages.MsgBox_Infor("Thêm mới thành công");
+                                   this.Close();
+                               }
+                               else
+                               {
+                                   BaseMessages.MsgBox_Infor("Số điện thoại này đã được sử dụng. Vui lòng nhập lại");
+                                   m_txt_so_dien_thoai.Focus();
+                               }
+                               break;
+                           case DataEntryFormMode.SelectDataState:
+                               break;
+                           case DataEntryFormMode.UpdateDataState:
+                               m_us_dm_khach_hang = new US_DM_KHACH_HANG(m_us_dm_khach_hang.dcID);
+                               if (m_us_dm_khach_hang.strMA_KHACH_HANG != "KH_" + m_txt_so_dien_thoai.Text)
+                               {
+                                   form_2_us_obj();
+                                   DS_DM_KHACH_HANG v_ds = new DS_DM_KHACH_HANG();
+                                   US_DM_KHACH_HANG v_us = new US_DM_KHACH_HANG();
+                                   v_us.FillDatasetSearchByMaKH(v_ds, m_us_dm_khach_hang.strMA_KHACH_HANG);
+                                   if (v_ds.DM_KHACH_HANG.Count == 0)
+                                   {
+                                       m_us_dm_khach_hang.Update();
+                                       BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                       this.Close();
+                                   }
+                                   else
+                                   {
+                                       BaseMessages.MsgBox_Infor("Số điện thoại này đã được sử dụng. Vui lòng nhập lại");
+                                       m_txt_so_dien_thoai.Focus();
+                                   }
+                               }
+                               else
+                               {
+                                   form_2_us_obj();
+                                    m_us_dm_khach_hang.Update();
+                                   BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                   this.Close();
+                               }
+                               break;
+                           case DataEntryFormMode.ViewDataState:
+                               break;
+                           default:
+                               break;
+                       }
+                   }
                }
            }
            catch (Exception v_e)
@@ -228,44 +265,75 @@ namespace BKI_QLHT
            {
                if (e.KeyCode == Keys.Enter)
                {
-                   if (check_validate())
+                   if (check_validate() == 1)
                    {
-                       form_2_us_obj();
-                       
-                        switch (m_e_form_mode)
-                        {
-                            case DataEntryFormMode.InsertDataState:
-                                DS_DM_KHACH_HANG v_ds_dm_khach_hang = new DS_DM_KHACH_HANG();
-                    US_DM_KHACH_HANG v_us_dm_khach_hang = new US_DM_KHACH_HANG();
-                    v_us_dm_khach_hang.FillDatasetSearchByMaKH(v_ds_dm_khach_hang,m_us_dm_khach_hang.strMA_KHACH_HANG);
-                    if (v_ds_dm_khach_hang.DM_KHACH_HANG.Count == 0)
-                    {
-                                m_us_dm_khach_hang.Insert();
-                                BaseMessages.MsgBox_Infor("Thêm mới thành công");
-                                this.Close();
-                    }
-                                else
-                    {
-                        BaseMessages.MsgBox_Infor("Mã khách hàng đã tồn tại.Vui lòng nhập lại");
-                    }
-                                break;
-                            case DataEntryFormMode.SelectDataState:
-                                break;
-                            case DataEntryFormMode.UpdateDataState:
-                                m_us_dm_khach_hang.Update();
-                                BaseMessages.MsgBox_Infor("Thay đổi thành công");
-                                this.Close();
-                                break;
-                            case DataEntryFormMode.ViewDataState:
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                    
+                       BaseMessages.MsgBox_Infor("Bạn chưa nhập tên khách hàng");
+                       m_txt_ten_khach_hang.Focus();
+                   }
                    else
                    {
-                       BaseMessages.MsgBox_Infor("Bạn cần nhập tên khách hàng");
+                       if (check_validate() == 2)
+                       {
+                           BaseMessages.MsgBox_Infor("Bạn chưa nhập số điện thoại");
+                           m_txt_so_dien_thoai.Focus();
+                       }
+                       else
+                       {
+                           switch (m_e_form_mode)
+                           {
+                               case DataEntryFormMode.InsertDataState:
+                                   form_2_us_obj();
+                                   DS_DM_KHACH_HANG v_ds_dm_khach_hang = new DS_DM_KHACH_HANG();
+                                   US_DM_KHACH_HANG v_us_dm_hang_sx = new US_DM_KHACH_HANG();
+                                   v_us_dm_hang_sx.FillDatasetSearchByMaKH(v_ds_dm_khach_hang, m_us_dm_khach_hang.strMA_KHACH_HANG);
+                                   if (v_ds_dm_khach_hang.DM_KHACH_HANG.Count == 0)
+                                   {
+                                       m_us_dm_khach_hang.Insert();
+                                       BaseMessages.MsgBox_Infor("Thêm mới thành công");
+                                       this.Close();
+                                   }
+                                   else
+                                   {
+                                       BaseMessages.MsgBox_Infor("Số điện thoại này đã được sử dụng. Vui lòng nhập lại");
+                                       m_txt_so_dien_thoai.Focus();
+                                   }
+                                   break;
+                               case DataEntryFormMode.SelectDataState:
+                                   break;
+                               case DataEntryFormMode.UpdateDataState:
+                                   m_us_dm_khach_hang = new US_DM_KHACH_HANG(m_us_dm_khach_hang.dcID);
+                                   if (m_us_dm_khach_hang.strMA_KHACH_HANG != "KH_" + m_txt_so_dien_thoai.Text)
+                                   {
+                                       form_2_us_obj();
+                                       DS_DM_KHACH_HANG v_ds = new DS_DM_KHACH_HANG();
+                                       US_DM_KHACH_HANG v_us = new US_DM_KHACH_HANG();
+                                       v_us.FillDatasetSearchByMaKH(v_ds, m_us_dm_khach_hang.strMA_KHACH_HANG);
+                                       if (v_ds.DM_KHACH_HANG.Count == 0)
+                                       {
+                                           m_us_dm_khach_hang.Update();
+                                           BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                           this.Close();
+                                       }
+                                       else
+                                       {
+                                           BaseMessages.MsgBox_Infor("Số điện thoại này đã được sử dụng. Vui lòng nhập lại");
+                                           m_txt_so_dien_thoai.Focus();
+                                       }
+                                   }
+                                   else
+                                   {
+                                       form_2_us_obj();
+                                       m_us_dm_khach_hang.Update();
+                                       BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                       this.Close();
+                                   }
+                                   break;
+                               case DataEntryFormMode.ViewDataState:
+                                   break;
+                               default:
+                                   break;
+                           }
+                       }
                    }
                }
            }

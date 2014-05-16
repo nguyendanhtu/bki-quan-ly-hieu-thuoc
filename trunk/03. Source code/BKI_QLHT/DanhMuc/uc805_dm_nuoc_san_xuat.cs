@@ -118,7 +118,7 @@ namespace BKI_QLHT.DanhMuc
             	v_fDE.display_for_insert();
             load_data_2_grid();
             v_fDE.get_us(ref m_us_dm_ncc);
-            WinFormControls.set_focus_for_grid(m_grv_nha_cung_cap, m_us_dm_ncc.strTEN_NCC, 1);
+            WinFormControls.set_focus_for_grid(m_grv_nha_cung_cap, m_us_dm_ncc.strMA_NCC, 2);
         }
 
         private void update_v_dm_ncc_nsx_nhasx_1()
