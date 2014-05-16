@@ -140,9 +140,12 @@ namespace BKI_QLHT
             v_fDE.display_for_insert();
             load_data_2_grid();
             v_fDE.get_us(ref m_us_dm_khach_hang);
-            WinFormControls.set_focus_for_grid(m_grv_dm_khach_hang, m_us_dm_khach_hang.strTEN_KHACH_HANG, 1);
-            grid2us_object(m_us, m_grv_dm_khach_hang.Row);
-            load_data_2_thong_tin_chi_tiet(m_us);
+            if (m_us_dm_khach_hang.strMA_KHACH_HANG != "")
+            {
+                WinFormControls.set_focus_for_grid(m_grv_dm_khach_hang, m_us_dm_khach_hang.strMA_KHACH_HANG, 2);
+                grid2us_object(m_us, m_grv_dm_khach_hang.Row);
+                load_data_2_thong_tin_chi_tiet(m_us);
+            }
         }
 
         private void update_v_dm_khach_hang()

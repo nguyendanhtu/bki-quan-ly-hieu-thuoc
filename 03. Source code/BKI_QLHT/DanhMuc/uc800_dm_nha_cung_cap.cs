@@ -115,10 +115,13 @@ namespace BKI_QLHT.DanhMuc
             	v_fDE.display_for_insert();
             load_data_2_grid();
             v_fDE.get_us(ref m_us_dm_ncc);
-            WinFormControls.set_focus_for_grid(m_grv_nha_cung_cap, m_us_dm_ncc.strTEN_NCC, 1);
-            grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
-            m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
-            load_data_2_thong_tin_chi_tiet(m_us);
+            if (m_us_dm_ncc.strMA_NCC != "")
+            {
+                WinFormControls.set_focus_for_grid(m_grv_nha_cung_cap, m_us_dm_ncc.strMA_NCC, 2);
+                grid2us_object(m_us_dm_ncc, m_grv_nha_cung_cap.Row);
+                m_us = new US_V_DM_NCC_NSX_NHASX_1(m_us_dm_ncc.dcID);
+                load_data_2_thong_tin_chi_tiet(m_us);
+            }
         }
 
         private void update_v_dm_ncc_nsx_nhasx_1()

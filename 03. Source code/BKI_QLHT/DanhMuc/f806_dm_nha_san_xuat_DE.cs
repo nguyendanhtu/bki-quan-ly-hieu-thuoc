@@ -86,43 +86,73 @@ namespace BKI_QLHT
         }
         private void save_data()
         {
-            form_2_us_obj();
-            
-                switch (m_e_form_mode)
-                {
-                    case DataEntryFormMode.InsertDataState:
-                        DS_V_DM_HANG_SX v_ds_dm_hang_sx = new DS_V_DM_HANG_SX();
-            US_V_DM_HANG_SX v_us_dm_hang_sx = new US_V_DM_HANG_SX();
-            v_us_dm_hang_sx.FillDatasetSearchByMaNSX(v_ds_dm_hang_sx, m_us_dm_ncc.strMA_NCC);
-            if (v_ds_dm_hang_sx.V_DM_HANG_SX.Count == 0)
+            switch (m_e_form_mode)
             {
-                m_us_dm_ncc.Insert();
-                BaseMessages.MsgBox_Infor("Thêm mới thành công");
-                this.Close();
-            }
-            else
-            {
-                BaseMessages.MsgBox_Infor("Mã nhà cung cấp đã tồn tại. Vui lòng nhập lại");
-            }
-                        break;
-                    case DataEntryFormMode.SelectDataState:
-                        break;
-                    case DataEntryFormMode.UpdateDataState:
+                case DataEntryFormMode.InsertDataState:
+                    form_2_us_obj();
+                    DS_V_DM_HANG_SX v_ds_dm_hang_sx = new DS_V_DM_HANG_SX();
+                    US_V_DM_HANG_SX v_us_dm_hang_sx = new US_V_DM_HANG_SX();
+                    v_us_dm_hang_sx.FillDatasetSearchByMaNSX(v_ds_dm_hang_sx, m_us_dm_ncc.strMA_NCC);
+                    if (v_ds_dm_hang_sx.V_DM_HANG_SX.Count == 0)
+                    {
+                        m_us_dm_ncc.Insert();
+                        BaseMessages.MsgBox_Infor("Thêm mới thành công");
+                        this.Close();
+                    }
+                    else
+                    {
+                        BaseMessages.MsgBox_Infor("Số điện thoại này đã được sử dụng. Vui lòng nhập lại");
+                        m_txt_sdt.Focus();
+                    }
+                    break;
+                case DataEntryFormMode.SelectDataState:
+                    break;
+                case DataEntryFormMode.UpdateDataState:
+                    m_us_dm_ncc = new US_DM_NCC_NSX_NHASX(m_us_dm_ncc.dcID);
+                    if (m_us_dm_ncc.strMA_NCC != "NSX_" + m_txt_sdt.Text)
+                    {
+                        form_2_us_obj();
+                        DS_V_DM_HANG_SX v_ds = new DS_V_DM_HANG_SX();
+                        US_V_DM_HANG_SX v_us = new US_V_DM_HANG_SX();
+                        v_us.FillDatasetSearchByMaNSX(v_ds, m_us_dm_ncc.strMA_NCC);
+                        if (v_ds.V_DM_HANG_SX.Count == 0)
+                        {
+                            m_us_dm_ncc.Update();
+                            BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                            this.Close();
+                        }
+                        else
+                        {
+                            BaseMessages.MsgBox_Infor("Số điện thoại này đã được sử dụng. Vui lòng nhập lại");
+                            m_txt_sdt.Focus();
+                        }
+                    }
+                    else
+                    {
+                        form_2_us_obj();
                         m_us_dm_ncc.Update();
                         BaseMessages.MsgBox_Infor("Thay đổi thành công");
                         this.Close();
-                        break;
-                    case DataEntryFormMode.ViewDataState:
-                        break;
-                    default:
-                        break;
-                }
+                    }
+                    break;
+                case DataEntryFormMode.ViewDataState:
+                    break;
+                default:
+                    break;
+            }
             }
             
-        private bool check_validate()
+        private int check_validate()
         {
-            if (!CValidateTextBox.IsValid(m_txt_ten_nha_cung_cap, DataType.StringType, allowNull.NO, true)) return false;
-            return true;
+            if (m_txt_ten_nha_cung_cap.Text == "")
+            {
+                return 1;
+            }
+            if (m_txt_sdt.Text == "")
+            {
+                return 2;
+            }
+            return 0;
         }
         #endregion
 
@@ -132,17 +162,26 @@ namespace BKI_QLHT
         {
             try
             {
-                if (e.KeyCode == Keys.Enter)
+                if(e.KeyCode==Keys.Enter)
                 {
-                    if (check_validate())
+                if (check_validate() == 1)
+                {
+                    BaseMessages.MsgBox_Infor("Bạn chưa nhập tên nhà sản xuất");
+                    m_txt_ten_nha_cung_cap.Focus();
+                }
+                else
+                {
+                    if (check_validate() == 2)
                     {
-                        save_data();
+                        BaseMessages.MsgBox_Infor("Bạn chưa nhập số điện thoại");
+                        m_txt_sdt.Focus();
                     }
                     else
                     {
-                        BaseMessages.MsgBox_Infor("Bạn cần nhập tên nhà sản xuất");
+                        save_data();
                     }
                 }
+                    }
             }
             catch (Exception v_e)
             {
@@ -181,57 +220,72 @@ namespace BKI_QLHT
             }
         }
 
-        private void m_txt_dia_chi_MouseUp(object sender, MouseEventArgs e)
-        {
-            try
-            {
-                if (check_validate())
-                {
-                    save_data();
-                }
-                else
-                {
-                    BaseMessages.MsgBox_Infor("Bạn cần nhập tên nhà sản xuất");
-                }
-
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
         private void m_cmd_save_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (check_validate())
+                if (check_validate() == 1)
                 {
-                    form_2_us_obj();
-                   
+                    BaseMessages.MsgBox_Infor("Bạn chưa nhập tên nhà cung cấp");
+                    m_txt_ten_nha_cung_cap.Focus();
+                }
+                else
+                {
+                    if (check_validate() == 2)
+                    {
+                        BaseMessages.MsgBox_Infor("Bạn chưa nhập số điện thoại");
+                        m_txt_sdt.Focus();
+                    }
+                    else
+                    {
                         switch (m_e_form_mode)
                         {
                             case DataEntryFormMode.InsertDataState:
-                                 DS_V_DM_HANG_SX v_ds_dm_hang_sx = new DS_V_DM_HANG_SX();
-                    US_V_DM_HANG_SX v_us_dm_hang_sx = new US_V_DM_HANG_SX();
-                    v_us_dm_hang_sx.FillDatasetSearchByMaNSX(v_ds_dm_hang_sx, m_us_dm_ncc.strMA_NCC);
-                    if (v_ds_dm_hang_sx.V_DM_HANG_SX.Count == 0)
-                    {
-                                m_us_dm_ncc.Insert();
-                                BaseMessages.MsgBox_Infor("Thêm mới thành công");
-                                this.Close();
-                    }
+                                form_2_us_obj();
+                                DS_V_DM_HANG_SX v_ds_dm_hang_sx = new DS_V_DM_HANG_SX();
+                                US_V_DM_HANG_SX v_us_dm_hang_sx = new US_V_DM_HANG_SX();
+                                v_us_dm_hang_sx.FillDatasetSearchByMaNSX(v_ds_dm_hang_sx, m_us_dm_ncc.strMA_NCC);
+                                if (v_ds_dm_hang_sx.V_DM_HANG_SX.Count == 0)
+                                {
+                                    m_us_dm_ncc.Insert();
+                                    BaseMessages.MsgBox_Infor("Thêm mới thành công");
+                                    this.Close();
+                                }
                                 else
-                    {
-                        BaseMessages.MsgBox_Infor("Mã nhà cung cấp đã tồn tại. Vui lòng nhập lại");
-                    }
+                                {
+                                    BaseMessages.MsgBox_Infor("Số điện thoại này đã được sử dụng. Vui lòng nhập lại");
+                                    m_txt_sdt.Focus();
+                                }
                                 break;
                             case DataEntryFormMode.SelectDataState:
                                 break;
                             case DataEntryFormMode.UpdateDataState:
-                                m_us_dm_ncc.Update();
-                                BaseMessages.MsgBox_Infor("Thay đổi thành công");
-                                this.Close();
+                                m_us_dm_ncc = new US_DM_NCC_NSX_NHASX(m_us_dm_ncc.dcID);
+                                if (m_us_dm_ncc.strMA_NCC != "NSX_" + m_txt_sdt.Text)
+                                {
+                                    form_2_us_obj();
+                                    DS_V_DM_HANG_SX v_ds = new DS_V_DM_HANG_SX();
+                                    US_V_DM_HANG_SX v_us = new US_V_DM_HANG_SX();
+                                    v_us.FillDatasetSearchByMaNSX(v_ds, m_us_dm_ncc.strMA_NCC);
+                                    if (v_ds.V_DM_HANG_SX.Count == 0)
+                                    {
+                                        m_us_dm_ncc.Update();
+                                        BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        BaseMessages.MsgBox_Infor("Số điện thoại này đã được sử dụng. Vui lòng nhập lại");
+                                        m_txt_sdt.Focus();
+                                    }
+                                }
+                                else
+                                {
+                                    form_2_us_obj();
+                                    m_us_dm_ncc.Update();
+                                    BaseMessages.MsgBox_Infor("Thay đổi thành công");
+                                    this.Close();
+                                }
                                 break;
                             case DataEntryFormMode.ViewDataState:
                                 break;
@@ -239,10 +293,7 @@ namespace BKI_QLHT
                                 break;
                         }
                     }
-                    
-                else
-                {
-                    BaseMessages.MsgBox_Infor("Bạn cần nhập tên nhà sản xuất");
+
                 }
             }
             catch (Exception v_e)
