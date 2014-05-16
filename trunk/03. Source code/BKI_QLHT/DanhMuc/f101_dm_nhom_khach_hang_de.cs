@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BKI_QLHT.DS;
 using BKI_QLHT.US;
+using BKI_QLHT.DS.CDBNames;
 using IP.Core.IPCommon;
 using IP.Core.IPSystemAdmin;
 
@@ -80,6 +81,20 @@ namespace BKI_QLHT
             }
             else return true;
         }
+        private bool check_ma_nhom()
+        {
+            string ma_nhom;
+            ma_nhom = m_txt_ma_nhom.Text;
+            US_DM_NHOM_KHACH_HANG v_us = new US_DM_NHOM_KHACH_HANG();
+            DS_DM_NHOM_KHACH_HANG v_ds = new DS_DM_NHOM_KHACH_HANG();
+            v_us.FillDatasetCheckMaNhom(v_ds, ma_nhom);
+            if (v_ds.Tables[0].Rows.Count == 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
         #endregion
 
         #region Event
@@ -91,6 +106,7 @@ namespace BKI_QLHT
         {
             if (!check_validate()) return;
             if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn chỉ được nhập số"); m_txt_chiet_khau.Focus(); return; }
+            if (!check_ma_nhom()) { BaseMessages.MsgBox_Error("Mã nhóm đã tồn tại"); m_txt_ma_nhom.Focus(); return; }
             m_form_to_us_obj();
             try
             {
