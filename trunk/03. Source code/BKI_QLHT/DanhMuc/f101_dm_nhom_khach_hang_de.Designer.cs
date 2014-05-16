@@ -39,6 +39,9 @@
             this.m_cmd_Cap_Nhat = new SIS.Controls.Button.SiSButton();
             this.m_pnl_control = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.m_txt_chiet_khau = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,7 +141,7 @@
             this.m_pnl_control.Controls.Add(this.m_cmd_Cap_Nhat);
             this.m_pnl_control.Controls.Add(this.m_cmd_huy);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 213);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 225);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Size = new System.Drawing.Size(485, 42);
             this.m_pnl_control.TabIndex = 17;
@@ -153,16 +156,46 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Cập nhật danh mục nhóm khách hàng";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(85, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Chiết khấu";
+            // 
+            // m_txt_chiet_khau
+            // 
+            this.m_txt_chiet_khau.Location = new System.Drawing.Point(158, 157);
+            this.m_txt_chiet_khau.Name = "m_txt_chiet_khau";
+            this.m_txt_chiet_khau.Size = new System.Drawing.Size(98, 20);
+            this.m_txt_chiet_khau.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(282, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "%";
+            // 
             // f101_dm_nhom_khach_hang_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 255);
+            this.ClientSize = new System.Drawing.Size(485, 267);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.m_pnl_control);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.m_txt_chiet_khau);
             this.Controls.Add(this.m_txt_ten_nhom);
             this.Controls.Add(this.m_txt_ma_nhom);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Name = "f101_dm_nhom_khach_hang_de";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -184,5 +217,8 @@
         private System.Windows.Forms.Panel m_pnl_control;
         private System.Windows.Forms.Label label3;
         internal System.Windows.Forms.ImageList ImageList;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox m_txt_chiet_khau;
+        private System.Windows.Forms.Label label5;
     }
 }
