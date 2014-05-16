@@ -54,18 +54,31 @@ namespace BKI_QLHT
         {
             m_us_dm_nhom_khach_hang.strMA_NHOM = m_txt_ma_nhom.Text;
             m_us_dm_nhom_khach_hang.strTEN_NHOM = m_txt_ten_nhom.Text;
+            m_us_dm_nhom_khach_hang.dcTI_LE_CHIET_KHAU_NHOM_KH = CIPConvert.ToDecimal(m_txt_chiet_khau.Text);
         }
 
         private void m_us_obj_to_form()
         {
             m_txt_ma_nhom.Text = m_us_dm_nhom_khach_hang.strMA_NHOM;
             m_txt_ten_nhom.Text = m_us_dm_nhom_khach_hang.strTEN_NHOM;
+            m_txt_chiet_khau.Text = CIPConvert.ToStr(m_us_dm_nhom_khach_hang.dcTI_LE_CHIET_KHAU_NHOM_KH);
         }
         private bool check_validate()
         {
             if (!CValidateTextBox.IsValid(m_txt_ma_nhom, DataType.StringType, allowNull.NO, true)) return false;
             if (!CValidateTextBox.IsValid(m_txt_ten_nhom, DataType.StringType, allowNull.NO, true)) return false;
             return true;
+        }
+        private bool check_chiet_khau()
+        {
+            decimal num;
+            bool isNumberic = decimal.TryParse(m_txt_chiet_khau.Text, out num);
+
+            if (!isNumberic)
+            {
+                return false;
+            }
+            else return true;
         }
         #endregion
 
@@ -77,6 +90,7 @@ namespace BKI_QLHT
         private void m_cmd_Cap_Nhat_Click(object sender, EventArgs e)
         {
             if (!check_validate()) return;
+            if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn chỉ được nhập số"); m_txt_chiet_khau.Focus(); return; }
             m_form_to_us_obj();
             try
             {

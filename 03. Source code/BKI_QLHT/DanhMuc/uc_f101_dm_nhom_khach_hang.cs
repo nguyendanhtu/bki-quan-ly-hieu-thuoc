@@ -43,10 +43,10 @@ namespace BKI_QLHT.DanhMuc
         #region Data Structure
         private enum e_col_Number
         {
-            TEN_NHOM = 3
+            TI_LE_CHIET_KHAU_NHOM_KH = 3
 ,
-            ID = 1
-                , MA_NHOM = 2
+            TEN_NHOM = 2
+                , MA_NHOM = 1
 
         }
         #endregion
@@ -75,7 +75,7 @@ namespace BKI_QLHT.DanhMuc
         {
             Hashtable v_htb = new Hashtable();
             v_htb.Add(DM_NHOM_KHACH_HANG.TEN_NHOM, e_col_Number.TEN_NHOM);
-            v_htb.Add(DM_NHOM_KHACH_HANG.ID, e_col_Number.ID);
+            v_htb.Add(DM_NHOM_KHACH_HANG.TI_LE_CHIET_KHAU_NHOM_KH, e_col_Number.TI_LE_CHIET_KHAU_NHOM_KH);
             v_htb.Add(DM_NHOM_KHACH_HANG.MA_NHOM, e_col_Number.MA_NHOM);
 
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds_dm_nhom_khach_hang.DM_NHOM_KHACH_HANG.NewRow());

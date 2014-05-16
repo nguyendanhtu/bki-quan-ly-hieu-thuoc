@@ -32,20 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_f101_dm_nhom_khach_hang));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_pnl_grid = new System.Windows.Forms.Panel();
+            this.m_text_tim_kiem = new System.Windows.Forms.TextBox();
+            this.m_pnl_top = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_pnl_grid = new System.Windows.Forms.Panel();
-            this.m_text_tim_kiem = new System.Windows.Forms.TextBox();
-            this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_pnl_top = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.m_pnl_control.SuspendLayout();
             this.m_pnl_grid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -87,6 +87,59 @@
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_control.Size = new System.Drawing.Size(898, 36);
             this.m_pnl_control.TabIndex = 23;
+            // 
+            // m_pnl_grid
+            // 
+            this.m_pnl_grid.Controls.Add(this.m_fg);
+            this.m_pnl_grid.Controls.Add(this.m_text_tim_kiem);
+            this.m_pnl_grid.Controls.Add(this.m_cmd_tim_kiem);
+            this.m_pnl_grid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_grid.Location = new System.Drawing.Point(0, 54);
+            this.m_pnl_grid.Name = "m_pnl_grid";
+            this.m_pnl_grid.Size = new System.Drawing.Size(898, 430);
+            this.m_pnl_grid.TabIndex = 32;
+            // 
+            // m_text_tim_kiem
+            // 
+            this.m_text_tim_kiem.Location = new System.Drawing.Point(144, 24);
+            this.m_text_tim_kiem.Name = "m_text_tim_kiem";
+            this.m_text_tim_kiem.Size = new System.Drawing.Size(265, 20);
+            this.m_text_tim_kiem.TabIndex = 0;
+            this.m_text_tim_kiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_text_tim_kiem_KeyDown);
+            // 
+            // m_pnl_top
+            // 
+            this.m_pnl_top.Controls.Add(this.label4);
+            this.m_pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.m_pnl_top.Location = new System.Drawing.Point(0, 0);
+            this.m_pnl_top.Name = "m_pnl_top";
+            this.m_pnl_top.Size = new System.Drawing.Size(898, 48);
+            this.m_pnl_top.TabIndex = 34;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(238, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(258, 23);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Danh sách nhóm khách hàng";
+            // 
+            // m_cmd_tim_kiem
+            // 
+            this.m_cmd_tim_kiem.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_tim_kiem.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_tim_kiem.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_tim_kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_tim_kiem.ImageIndex = 18;
+            this.m_cmd_tim_kiem.ImageList = this.ImageList;
+            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(429, 24);
+            this.m_cmd_tim_kiem.Name = "m_cmd_tim_kiem";
+            this.m_cmd_tim_kiem.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_tim_kiem.TabIndex = 1;
+            this.m_cmd_tim_kiem.Text = "Tìm kiếm";
+            this.m_cmd_tim_kiem.Click += new System.EventHandler(this.m_cmd_tim_kiem_Click);
             // 
             // m_cmd_insert
             // 
@@ -152,70 +205,15 @@
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
-            // m_pnl_grid
-            // 
-            this.m_pnl_grid.Controls.Add(this.m_text_tim_kiem);
-            this.m_pnl_grid.Controls.Add(this.m_cmd_tim_kiem);
-            this.m_pnl_grid.Controls.Add(this.m_fg);
-            this.m_pnl_grid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_grid.Location = new System.Drawing.Point(0, 54);
-            this.m_pnl_grid.Name = "m_pnl_grid";
-            this.m_pnl_grid.Size = new System.Drawing.Size(898, 430);
-            this.m_pnl_grid.TabIndex = 32;
-            // 
-            // m_text_tim_kiem
-            // 
-            this.m_text_tim_kiem.Location = new System.Drawing.Point(144, 24);
-            this.m_text_tim_kiem.Name = "m_text_tim_kiem";
-            this.m_text_tim_kiem.Size = new System.Drawing.Size(265, 20);
-            this.m_text_tim_kiem.TabIndex = 0;
-            this.m_text_tim_kiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_text_tim_kiem_KeyDown);
-            // 
-            // m_cmd_tim_kiem
-            // 
-            this.m_cmd_tim_kiem.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_tim_kiem.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_tim_kiem.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_tim_kiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_tim_kiem.ImageIndex = 18;
-            this.m_cmd_tim_kiem.ImageList = this.ImageList;
-            this.m_cmd_tim_kiem.Location = new System.Drawing.Point(429, 24);
-            this.m_cmd_tim_kiem.Name = "m_cmd_tim_kiem";
-            this.m_cmd_tim_kiem.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_tim_kiem.TabIndex = 1;
-            this.m_cmd_tim_kiem.Text = "Tìm kiếm";
-            this.m_cmd_tim_kiem.Click += new System.EventHandler(this.m_cmd_tim_kiem_Click);
-            // 
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 78);
+            this.m_fg.Location = new System.Drawing.Point(0, 74);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(898, 352);
+            this.m_fg.Size = new System.Drawing.Size(898, 356);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 2;
-            this.m_fg.Click += new System.EventHandler(this.m_fg_Click);
-            this.m_fg.DoubleClick += new System.EventHandler(this.m_fg_DoubleClick);
-            // 
-            // m_pnl_top
-            // 
-            this.m_pnl_top.Controls.Add(this.label4);
-            this.m_pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_pnl_top.Location = new System.Drawing.Point(0, 0);
-            this.m_pnl_top.Name = "m_pnl_top";
-            this.m_pnl_top.Size = new System.Drawing.Size(898, 48);
-            this.m_pnl_top.TabIndex = 34;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(238, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(258, 23);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Danh sách nhóm khách hàng";
+            this.m_fg.TabIndex = 21;
             // 
             // uc_f101_dm_nhom_khach_hang
             // 
@@ -230,9 +228,9 @@
             this.m_pnl_control.ResumeLayout(false);
             this.m_pnl_grid.ResumeLayout(false);
             this.m_pnl_grid.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_top.ResumeLayout(false);
             this.m_pnl_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,8 +246,8 @@
         private System.Windows.Forms.Panel m_pnl_grid;
         private System.Windows.Forms.TextBox m_text_tim_kiem;
         internal SIS.Controls.Button.SiSButton m_cmd_tim_kiem;
-        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.Panel m_pnl_top;
         private System.Windows.Forms.Label label4;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
     }
 }
