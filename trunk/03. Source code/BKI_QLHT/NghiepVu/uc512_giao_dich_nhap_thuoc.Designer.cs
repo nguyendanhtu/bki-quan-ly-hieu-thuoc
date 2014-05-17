@@ -35,6 +35,7 @@
             this.m_cmd_upadate = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_txt_add_thuoc = new System.Windows.Forms.Button();
+            this.m_txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.m_cmd_add = new SIS.Controls.Button.SiSButton();
             this.m_lbl_ma_giao_dich = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
@@ -76,8 +77,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.m_dtp_ngay_nhap = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_grv_nhap_thuoc = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +91,9 @@
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,6 +103,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.m_txt_ten_thuoc);
             this.panel1.Controls.Add(this.m_cmd_upadate);
             this.panel1.Controls.Add(this.m_txt_add_thuoc);
@@ -133,8 +137,6 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.m_dtp_ngay_nhap);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -143,7 +145,7 @@
             // 
             // m_txt_ten_thuoc
             // 
-            this.m_txt_ten_thuoc.Location = new System.Drawing.Point(173, 96);
+            this.m_txt_ten_thuoc.Location = new System.Drawing.Point(173, 69);
             this.m_txt_ten_thuoc.Name = "m_txt_ten_thuoc";
             this.m_txt_ten_thuoc.Size = new System.Drawing.Size(239, 20);
             this.m_txt_ten_thuoc.TabIndex = 152;
@@ -196,12 +198,28 @@
             // 
             this.m_txt_add_thuoc.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_txt_add_thuoc.Image = global::BKI_QLHT.Properties.Resources.add;
-            this.m_txt_add_thuoc.Location = new System.Drawing.Point(417, 95);
+            this.m_txt_add_thuoc.Location = new System.Drawing.Point(417, 68);
             this.m_txt_add_thuoc.Name = "m_txt_add_thuoc";
             this.m_txt_add_thuoc.Size = new System.Drawing.Size(52, 20);
             this.m_txt_add_thuoc.TabIndex = 150;
             this.m_txt_add_thuoc.TabStop = false;
             this.m_txt_add_thuoc.UseVisualStyleBackColor = true;
+            // 
+            // m_txt_search_thuoc1
+            // 
+            this.m_txt_search_thuoc1.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.m_txt_search_thuoc1.DisplayMember = null;
+            this.m_txt_search_thuoc1.Location = new System.Drawing.Point(173, 68);
+            this.m_txt_search_thuoc1.Name = "m_txt_search_thuoc1";
+            this.m_txt_search_thuoc1.Size = new System.Drawing.Size(238, 20);
+            this.m_txt_search_thuoc1.str_query = null;
+            this.m_txt_search_thuoc1.TabIndex = 0;
+            this.m_txt_search_thuoc1.Text1 = null;
+            this.m_txt_search_thuoc1.ValueMember = null;
             // 
             // m_cmd_add
             // 
@@ -244,7 +262,7 @@
             this.m_lbl_dv_tinh_nhap.AutoSize = true;
             this.m_lbl_dv_tinh_nhap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_dv_tinh_nhap.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.m_lbl_dv_tinh_nhap.Location = new System.Drawing.Point(306, 189);
+            this.m_lbl_dv_tinh_nhap.Location = new System.Drawing.Point(339, 187);
             this.m_lbl_dv_tinh_nhap.Name = "m_lbl_dv_tinh_nhap";
             this.m_lbl_dv_tinh_nhap.Size = new System.Drawing.Size(56, 16);
             this.m_lbl_dv_tinh_nhap.TabIndex = 139;
@@ -266,7 +284,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(285, 186);
+            this.label13.Location = new System.Drawing.Point(318, 184);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(15, 19);
             this.label13.TabIndex = 138;
@@ -295,7 +313,7 @@
             this.m_dtp_han_su_dung.CalendarFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_dtp_han_su_dung.CustomFormat = "dd-MM-yyyy";
             this.m_dtp_han_su_dung.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dtp_han_su_dung.Location = new System.Drawing.Point(172, 157);
+            this.m_dtp_han_su_dung.Location = new System.Drawing.Point(172, 130);
             this.m_dtp_han_su_dung.Name = "m_dtp_han_su_dung";
             this.m_dtp_han_su_dung.Size = new System.Drawing.Size(239, 20);
             this.m_dtp_han_su_dung.TabIndex = 2;
@@ -305,7 +323,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(77, 161);
+            this.label11.Location = new System.Drawing.Point(77, 134);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(80, 16);
             this.label11.TabIndex = 136;
@@ -325,7 +343,7 @@
             this.m_lbl_dv_tinh_ban.AutoSize = true;
             this.m_lbl_dv_tinh_ban.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_dv_tinh_ban.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.m_lbl_dv_tinh_ban.Location = new System.Drawing.Point(306, 211);
+            this.m_lbl_dv_tinh_ban.Location = new System.Drawing.Point(341, 211);
             this.m_lbl_dv_tinh_ban.Name = "m_lbl_dv_tinh_ban";
             this.m_lbl_dv_tinh_ban.Size = new System.Drawing.Size(56, 16);
             this.m_lbl_dv_tinh_ban.TabIndex = 146;
@@ -336,7 +354,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label24.Location = new System.Drawing.Point(283, 209);
+            this.label24.Location = new System.Drawing.Point(318, 209);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(15, 19);
             this.label24.TabIndex = 145;
@@ -385,7 +403,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(72, 131);
+            this.label10.Location = new System.Drawing.Point(72, 104);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 16);
             this.label10.TabIndex = 135;
@@ -396,7 +414,7 @@
             this.m_dtp_ngay_san_xuat.CalendarFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_dtp_ngay_san_xuat.CustomFormat = "dd-MM-yyyy";
             this.m_dtp_ngay_san_xuat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dtp_ngay_san_xuat.Location = new System.Drawing.Point(172, 131);
+            this.m_dtp_ngay_san_xuat.Location = new System.Drawing.Point(172, 104);
             this.m_dtp_ngay_san_xuat.Name = "m_dtp_ngay_san_xuat";
             this.m_dtp_ngay_san_xuat.Size = new System.Drawing.Size(239, 20);
             this.m_dtp_ngay_san_xuat.TabIndex = 1;
@@ -597,7 +615,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(92, 100);
+            this.label5.Location = new System.Drawing.Point(92, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 129;
@@ -624,28 +642,6 @@
             this.label9.Size = new System.Drawing.Size(85, 16);
             this.label9.TabIndex = 133;
             this.label9.Text = "Nhà cung cấp";
-            // 
-            // m_dtp_ngay_nhap
-            // 
-            this.m_dtp_ngay_nhap.CalendarFont = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_dtp_ngay_nhap.CustomFormat = "dd-MM-yyyy";
-            this.m_dtp_ngay_nhap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dtp_ngay_nhap.Location = new System.Drawing.Point(845, 69);
-            this.m_dtp_ngay_nhap.Name = "m_dtp_ngay_nhap";
-            this.m_dtp_ngay_nhap.Size = new System.Drawing.Size(234, 20);
-            this.m_dtp_ngay_nhap.TabIndex = 120;
-            this.m_dtp_ngay_nhap.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(754, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 16);
-            this.label4.TabIndex = 132;
-            this.label4.Text = "Ngày nhập ";
             // 
             // panel2
             // 
@@ -790,21 +786,36 @@
             this.m_cmd_exit.TabIndex = 14;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
-            // m_txt_search_thuoc1
+            // label14
             // 
-            this.m_txt_search_thuoc1.dcID = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.m_txt_search_thuoc1.DisplayMember = null;
-            this.m_txt_search_thuoc1.Location = new System.Drawing.Point(173, 95);
-            this.m_txt_search_thuoc1.Name = "m_txt_search_thuoc1";
-            this.m_txt_search_thuoc1.Size = new System.Drawing.Size(238, 20);
-            this.m_txt_search_thuoc1.str_query = null;
-            this.m_txt_search_thuoc1.TabIndex = 0;
-            this.m_txt_search_thuoc1.Text1 = null;
-            this.m_txt_search_thuoc1.ValueMember = null;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(173, 156);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(213, 16);
+            this.label14.TabIndex = 153;
+            this.label14.Text = "(*Chú ý : HSD mặc định là 2 năm*)";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(277, 187);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 16);
+            this.label18.TabIndex = 154;
+            this.label18.Text = "(VNĐ)";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(277, 212);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(43, 16);
+            this.label19.TabIndex = 155;
+            this.label19.Text = "(VNĐ)";
             // 
             // uc512_giao_dich_nhap_thuoc
             // 
@@ -875,8 +886,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker m_dtp_ngay_nhap;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.Panel m_pnl_control;
         private System.Windows.Forms.Label m_lbl_tong_tien;
@@ -892,5 +901,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
     }
 }
