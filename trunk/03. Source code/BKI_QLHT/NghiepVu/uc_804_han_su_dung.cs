@@ -29,14 +29,14 @@ namespace BKI_QLHT
         #region Data Structure
         private enum e_col_Number
         {
-            MA_GIAO_DICH = 2
+            MA_GIAO_DICH = 3
 ,
-            TEN_DON_VI = 4
+            TEN_DON_VI = 5
                 ,
-            HAN_SD = 5
+            HAN_SD = 1
                 ,
-            TEN_THUOC = 1
-                , SO_DU = 3
+            TEN_THUOC = 2
+                , SO_DU = 4
 
         }
         #endregion
@@ -52,7 +52,7 @@ namespace BKI_QLHT
         {
             CControlFormat.setUserControlStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_grv_han_su_dung);
-            m_grv_han_su_dung.Tree.Column = (int)e_col_Number.TEN_THUOC;
+            m_grv_han_su_dung.Tree.Column = (int)e_col_Number.HAN_SD;
             m_grv_han_su_dung.Cols[0].Caption = "STT";
             m_grv_han_su_dung.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
             set_define_events();
@@ -78,13 +78,13 @@ namespace BKI_QLHT
         private void load_data_2_grid()
         {
             m_ds = new DS_V_HAN_SU_DUNG();
-            m_us.FillDataset(m_ds,"where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<90 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0");
+            m_us.FillDataset(m_ds,"where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<90 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 ORDER BY HAN_SD");
             m_grv_han_su_dung.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_grv_han_su_dung, m_obj_trans);
             CGridUtils.MakeSoTT(0, m_grv_han_su_dung);
             m_grv_han_su_dung.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
               , 0
-              , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình nhóm
+              , (int)e_col_Number.HAN_SD // chỗ này là tên trường mà mình nhóm
               , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
               , "{0}"
               );
@@ -252,22 +252,22 @@ namespace BKI_QLHT
             DS_V_HAN_SU_DUNG v_ds_v_han_su_dung=new DS_V_HAN_SU_DUNG();
             if (m_cbo_thoi_gian.Text == "Dưới 1 tháng")
             {
-                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0");
+                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 ORDER BY HAN_SD");
             }
             if (m_cbo_thoi_gian.Text == "Từ  1 tháng đến 3 tháng")
             {
-                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90");
+                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90 ORDER BY HAN_SD");
             }
             if (m_cbo_thoi_gian.Text == "Trên 3 tháng")
             {
-                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90");
+                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90 ORDER BY HAN_SD");
             }
             m_grv_han_su_dung.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds_v_han_su_dung, m_grv_han_su_dung, m_obj_trans);
             CGridUtils.MakeSoTT(0, m_grv_han_su_dung);
             m_grv_han_su_dung.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
               , 0
-              , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình nhóm
+              , (int)e_col_Number.HAN_SD // chỗ này là tên trường mà mình nhóm
               , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
               , "{0}"
               );
@@ -285,22 +285,22 @@ namespace BKI_QLHT
                     DS_V_HAN_SU_DUNG v_ds_v_han_su_dung = new DS_V_HAN_SU_DUNG();
                     if (m_cbo_thoi_gian.Text == "Dưới 1 tháng")
                     {
-                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0");
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 ORDER BY HAN_SD");
                     }
                     if (m_cbo_thoi_gian.Text == "Từ  1 tháng đến 3 tháng")
                     {
-                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90");
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90 ORDER BY HAN_SD");
                     }
                     if (m_cbo_thoi_gian.Text == "Trên 3 tháng")
                     {
-                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90");
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90 ORDER BY HAN_SD");
                     }
                     m_grv_han_su_dung.Redraw = false;
                     CGridUtils.Dataset2C1Grid(v_ds_v_han_su_dung, m_grv_han_su_dung, m_obj_trans);
                     CGridUtils.MakeSoTT(0, m_grv_han_su_dung);
                     m_grv_han_su_dung.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
                       , 0
-                      , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình nhóm
+                      , (int)e_col_Number.HAN_SD // chỗ này là tên trường mà mình nhóm
                       , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
                       , "{0}"
                       );
