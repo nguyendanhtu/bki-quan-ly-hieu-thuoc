@@ -136,6 +136,7 @@
     <Compile Include="US_V_GD_GIA_BAN.cs" />
     <Compile Include="US_V_HAN_SU_DUNG.cs" />
     <Compile Include="US_V_HT_CONTROL_IN_FORM.cs" />
+    <Compile Include="US_V_SO_DU.cs" />
     <Compile Include="Windows.cs" />
   </ItemGroup>
   <ItemGroup>
