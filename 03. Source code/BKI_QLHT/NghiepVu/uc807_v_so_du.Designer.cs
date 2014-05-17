@@ -68,7 +68,7 @@
             // m_grv_so_du
             // 
             this.m_grv_so_du.ColumnInfo = resources.GetString("m_grv_so_du.ColumnInfo");
-            this.m_grv_so_du.Location = new System.Drawing.Point(0, 316);
+            this.m_grv_so_du.Location = new System.Drawing.Point(3, 312);
             this.m_grv_so_du.Name = "m_grv_so_du";
             this.m_grv_so_du.Size = new System.Drawing.Size(1129, 216);
             this.m_grv_so_du.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_so_du.Styles"));
