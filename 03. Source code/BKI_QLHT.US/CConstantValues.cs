@@ -24,6 +24,12 @@ namespace BKI_QLHT.US
         public const decimal PHAN_QUYEN = 1;
         public const decimal BENH_VIEN = 2;
         public const decimal CHUC_NANG = 3;
+        public const decimal DON_VI_TINH = 8;
+    }
+    public class ID_LOAI_GIAO_DICH 
+    {
+        public const decimal NHAP_THUOC = 1;
+        public const decimal BAN_THUOC = 2;
     }
 
 
