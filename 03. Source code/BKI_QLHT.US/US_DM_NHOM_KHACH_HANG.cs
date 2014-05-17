@@ -131,9 +131,18 @@ public class US_DM_NHOM_KHACH_HANG : US_Object
 	}
 #endregion
 
-    public void FillDatasetSearch(DS_DM_NHOM_KHACH_HANG v_ds_dm_nhom_khach_hang, string v_str_tu_khoa)
+    public void FillDatasetSearch(DS_DM_NHOM_KHACH_HANG ip_ds_dm_nhom_khach_hang, string ip_str_tu_khoa)
     {
-        
+        CStoredProc v_stored_proc = new CStoredProc("pr_DM_NHOM_KHACH_HANG_Search");
+        v_stored_proc.addNVarcharInputParam("@TU_KHOA", ip_str_tu_khoa);
+        v_stored_proc.fillDataSetByCommand(this, ip_ds_dm_nhom_khach_hang);
+    }
+
+    public void FillDatasetCheckMaNhom(DS_DM_NHOM_KHACH_HANG ip_v_ds, string ip_ma_nhom)
+    {
+        CStoredProc v_stored_proc = new CStoredProc("pr_DM_NHOM_KHACH_HANG_Check_ma_nhom");
+        v_stored_proc.addNVarcharInputParam("@IP_MA_NHOM", ip_ma_nhom);
+        v_stored_proc.fillDataSetByCommand(this, ip_v_ds);
     }
 }
 }
