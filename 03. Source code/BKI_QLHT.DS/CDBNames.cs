@@ -10,6 +10,17 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_BC_BAN_THUOC
+    {
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string TEN_KHACH_HANG = "TEN_KHACH_HANG";
+        public const string SO_LUONG_BAN = "SO_LUONG_BAN";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string GIA_BAN = "GIA_BAN";
+        public const string THANH_TIEN = "THANH_TIEN";
+    }
+
     public class V_BC_DOANH_THU_THEO_CAC_NHOM_THUOC
     {
         public const string TEN_NHOM_THUOC = "TEN_NHOM_THUOC";

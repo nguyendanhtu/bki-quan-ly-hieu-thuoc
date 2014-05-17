@@ -87,7 +87,7 @@ namespace BKI_QLHT
             ma_nhom = m_txt_ma_nhom.Text;
             US_DM_NHOM_KHACH_HANG v_us = new US_DM_NHOM_KHACH_HANG();
             DS_DM_NHOM_KHACH_HANG v_ds = new DS_DM_NHOM_KHACH_HANG();
-            v_us.FillDatasetCheckMaNhom(v_ds, ma_nhom);
+            //v_us.FillDatasetCheckMaNhom(v_ds, ma_nhom);
             if (v_ds.Tables[0].Rows.Count == 0)
             {
                 return true;
