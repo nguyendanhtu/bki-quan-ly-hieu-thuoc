@@ -428,6 +428,7 @@
     <Compile Include="NghiepVu\f804_han_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NghiepVu\f807_v_so_du.cs" />
     <Compile Include="NghiepVu\frm_V_HAN_SU_DUNG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -701,6 +702,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f804_han_su_dung.resx">
       <DependentUpon>f804_han_su_dung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f807_v_so_du.resx">
+      <DependentUpon>f807_v_so_du.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\frm_V_HAN_SU_DUNG.resx">
       <DependentUpon>frm_V_HAN_SU_DUNG.cs</DependentUpon>
