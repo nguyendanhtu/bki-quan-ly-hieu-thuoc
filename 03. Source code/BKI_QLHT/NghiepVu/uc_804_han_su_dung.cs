@@ -16,6 +16,7 @@ using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using IP.Core.IPSystemAdmin;
+using System.Globalization;
 
 namespace BKI_QLHT
 {
@@ -88,6 +89,7 @@ namespace BKI_QLHT
               , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
               , "{0}"
               );
+            m_lbl_count.Text = m_ds.V_HAN_SU_DUNG.Count.ToString(CultureInfo.InvariantCulture);
             m_grv_han_su_dung.Redraw = true;
         }
         private void grid2us_object(US_V_HAN_SU_DUNG i_us
@@ -271,6 +273,7 @@ namespace BKI_QLHT
               , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
               , "{0}"
               );
+            m_lbl_count.Text = m_ds.V_HAN_SU_DUNG.Count.ToString(CultureInfo.InvariantCulture);
             m_grv_han_su_dung.Redraw = true;
 
         }
@@ -304,6 +307,7 @@ namespace BKI_QLHT
                       , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
                       , "{0}"
                       );
+                    m_lbl_count.Text = v_ds_v_han_su_dung.V_HAN_SU_DUNG.Count.ToString(CultureInfo.InvariantCulture);
                     m_grv_han_su_dung.Redraw = true;
                 }
 

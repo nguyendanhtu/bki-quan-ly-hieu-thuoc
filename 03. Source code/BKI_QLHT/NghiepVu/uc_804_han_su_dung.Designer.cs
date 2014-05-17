@@ -40,6 +40,8 @@
             this.m_cmd_tim_kiem = new SIS.Controls.Button.SiSButton();
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.m_grv_han_su_dung = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.m_lbl_count = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.m_pnl_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_han_su_dung)).BeginInit();
             this.SuspendLayout();
@@ -201,16 +203,38 @@
             // m_grv_han_su_dung
             // 
             this.m_grv_han_su_dung.ColumnInfo = resources.GetString("m_grv_han_su_dung.ColumnInfo");
-            this.m_grv_han_su_dung.Location = new System.Drawing.Point(8, 133);
+            this.m_grv_han_su_dung.Location = new System.Drawing.Point(8, 188);
             this.m_grv_han_su_dung.Name = "m_grv_han_su_dung";
-            this.m_grv_han_su_dung.Size = new System.Drawing.Size(1120, 395);
+            this.m_grv_han_su_dung.Size = new System.Drawing.Size(1120, 340);
             this.m_grv_han_su_dung.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_han_su_dung.Styles"));
             this.m_grv_han_su_dung.TabIndex = 27;
+            // 
+            // m_lbl_count
+            // 
+            this.m_lbl_count.AutoSize = true;
+            this.m_lbl_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_count.Location = new System.Drawing.Point(217, 154);
+            this.m_lbl_count.Name = "m_lbl_count";
+            this.m_lbl_count.Size = new System.Drawing.Size(28, 13);
+            this.m_lbl_count.TabIndex = 2803;
+            this.m_lbl_count.Text = "000";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(42, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(169, 16);
+            this.label3.TabIndex = 2804;
+            this.label3.Text = "Tổng số thuốc sắp hết hạn :";
             // 
             // uc_804_han_su_dung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.m_lbl_count);
             this.Controls.Add(this.m_grv_han_su_dung);
             this.Controls.Add(this.m_cmd_tim_kiem);
             this.Controls.Add(this.m_cbo_thoi_gian);
@@ -238,5 +262,7 @@
         internal SIS.Controls.Button.SiSButton m_cmd_tim_kiem;
         internal System.Windows.Forms.ImageList imageList2;
         private C1.Win.C1FlexGrid.C1FlexGrid m_grv_han_su_dung;
+        private System.Windows.Forms.Label m_lbl_count;
+        private System.Windows.Forms.Label label3;
     }
 }
