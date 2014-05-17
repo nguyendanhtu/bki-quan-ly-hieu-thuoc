@@ -285,6 +285,8 @@ namespace BKI_QLHT.DS {
             
             private global::System.Data.DataColumn columnID_DON_VI_THUOC;
             
+            private global::System.Data.DataColumn columnMOI_NHAT_YN;
+            
             private global::System.Data.DataColumn columnTEN_DON_VI;
             
             private global::System.Data.DataColumn columnTEN_THUOC;
@@ -348,6 +350,14 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MOI_NHAT_YNColumn {
+                get {
+                    return this.columnMOI_NHAT_YN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn TEN_DON_VIColumn {
                 get {
                     return this.columnTEN_DON_VI;
@@ -399,12 +409,13 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_SO_DURow AddV_SO_DURow(decimal ID_THUOC, decimal SO_DU, decimal ID_DON_VI_THUOC, string TEN_DON_VI, string TEN_THUOC) {
+            public V_SO_DURow AddV_SO_DURow(decimal ID_THUOC, decimal SO_DU, decimal ID_DON_VI_THUOC, string MOI_NHAT_YN, string TEN_DON_VI, string TEN_THUOC) {
                 V_SO_DURow rowV_SO_DURow = ((V_SO_DURow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_THUOC,
                         SO_DU,
                         ID_DON_VI_THUOC,
+                        MOI_NHAT_YN,
                         TEN_DON_VI,
                         TEN_THUOC};
                 rowV_SO_DURow.ItemArray = columnValuesArray;
@@ -438,6 +449,7 @@ namespace BKI_QLHT.DS {
                 this.columnID_THUOC = base.Columns["ID_THUOC"];
                 this.columnSO_DU = base.Columns["SO_DU"];
                 this.columnID_DON_VI_THUOC = base.Columns["ID_DON_VI_THUOC"];
+                this.columnMOI_NHAT_YN = base.Columns["MOI_NHAT_YN"];
                 this.columnTEN_DON_VI = base.Columns["TEN_DON_VI"];
                 this.columnTEN_THUOC = base.Columns["TEN_THUOC"];
             }
@@ -451,6 +463,8 @@ namespace BKI_QLHT.DS {
                 base.Columns.Add(this.columnSO_DU);
                 this.columnID_DON_VI_THUOC = new global::System.Data.DataColumn("ID_DON_VI_THUOC", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_DON_VI_THUOC);
+                this.columnMOI_NHAT_YN = new global::System.Data.DataColumn("MOI_NHAT_YN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMOI_NHAT_YN);
                 this.columnTEN_DON_VI = new global::System.Data.DataColumn("TEN_DON_VI", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTEN_DON_VI);
                 this.columnTEN_THUOC = new global::System.Data.DataColumn("TEN_THUOC", typeof(string), null, global::System.Data.MappingType.Element);
@@ -458,6 +472,7 @@ namespace BKI_QLHT.DS {
                 this.columnID_THUOC.AllowDBNull = false;
                 this.columnSO_DU.AllowDBNull = false;
                 this.columnID_DON_VI_THUOC.AllowDBNull = false;
+                this.columnMOI_NHAT_YN.MaxLength = 1;
                 this.columnTEN_DON_VI.AllowDBNull = false;
                 this.columnTEN_DON_VI.MaxLength = 50;
                 this.columnTEN_THUOC.AllowDBNull = false;
@@ -637,6 +652,22 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MOI_NHAT_YN {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_SO_DU.MOI_NHAT_YNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MOI_NHAT_YN\' in table \'V_SO_DU\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_SO_DU.MOI_NHAT_YNColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TEN_DON_VI {
                 get {
                     return ((string)(this[this.tableV_SO_DU.TEN_DON_VIColumn]));
@@ -655,6 +686,18 @@ namespace BKI_QLHT.DS {
                 set {
                     this[this.tableV_SO_DU.TEN_THUOCColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMOI_NHAT_YNNull() {
+                return this.IsNull(this.tableV_SO_DU.MOI_NHAT_YNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMOI_NHAT_YNNull() {
+                this[this.tableV_SO_DU.MOI_NHAT_YNColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -820,6 +863,7 @@ namespace BKI_QLHT.DS.DS_V_SO_DUTableAdapters {
             tableMapping.ColumnMappings.Add("ID_THUOC", "ID_THUOC");
             tableMapping.ColumnMappings.Add("SO_DU", "SO_DU");
             tableMapping.ColumnMappings.Add("ID_DON_VI_THUOC", "ID_DON_VI_THUOC");
+            tableMapping.ColumnMappings.Add("MOI_NHAT_YN", "MOI_NHAT_YN");
             tableMapping.ColumnMappings.Add("TEN_DON_VI", "TEN_DON_VI");
             tableMapping.ColumnMappings.Add("TEN_THUOC", "TEN_THUOC");
             this._adapter.TableMappings.Add(tableMapping);
@@ -838,7 +882,8 @@ namespace BKI_QLHT.DS.DS_V_SO_DUTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_THUOC, SO_DU, ID_DON_VI_THUOC, TEN_DON_VI, TEN_THUOC FROM dbo.V_SO_DU";
+            this._commandCollection[0].CommandText = "SELECT ID_THUOC, SO_DU, ID_DON_VI_THUOC, MOI_NHAT_YN, TEN_DON_VI, TEN_THUOC FROM " +
+                "dbo.V_SO_DU";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

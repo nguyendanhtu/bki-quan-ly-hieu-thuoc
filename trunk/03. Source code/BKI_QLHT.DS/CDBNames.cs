@@ -969,6 +969,7 @@
         public const string ID_THUOC = "ID_THUOC";
         public const string SO_DU = "SO_DU";
         public const string ID_DON_VI_THUOC = "ID_DON_VI_THUOC";
+        public const string MOI_NHAT_YN = "MOI_NHAT_YN";
         public const string TEN_DON_VI = "TEN_DON_VI";
         public const string TEN_THUOC = "TEN_THUOC";
     }
