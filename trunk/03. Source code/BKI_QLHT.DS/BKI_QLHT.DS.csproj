@@ -287,6 +287,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_BC_BAN_THUOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BC_BAN_THUOC.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -964,6 +969,17 @@
     </None>
     <None Include="DS_V_BAO_CAO_KIEM_KE_KHO.xss">
       <DependentUpon>DS_V_BAO_CAO_KIEM_KE_KHO.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_BAN_THUOC.xsc">
+      <DependentUpon>DS_V_BC_BAN_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_BAN_THUOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BC_BAN_THUOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BC_BAN_THUOC.xss">
+      <DependentUpon>DS_V_BC_BAN_THUOC.xsd</DependentUpon>
     </None>
     <None Include="DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsc">
       <DependentUpon>DS_V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>

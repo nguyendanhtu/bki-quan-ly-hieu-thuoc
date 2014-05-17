@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_BC_BAN_THUOC" targetNamespace="http://tempuri.org/DS_V_BC_BAN_THUOC.xsd" xmlns:mstns="http://tempuri.org/DS_V_BC_BAN_THUOC.xsd" xmlns="http://tempuri.org/DS_V_BC_BAN_THUOC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString5" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString5 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString5" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_BC_BAN_THUOCTableAdapter" GeneratorDataComponentClassName="V_BC_BAN_THUOCTableAdapter" Name="V_BC_BAN_THUOC" UserDataComponentName="V_BC_BAN_THUOCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BKI_QLHTConnectionString5 (Settings)" DbObjectName="BKI_QLHT.dbo.V_BC_BAN_THUOC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TEN_THUOC, NGAY_GIAO_DICH, TEN_KHACH_HANG, SO_LUONG_BAN, DON_VI_TINH, GIA_BAN, THANH_TIEN FROM dbo.V_BC_BAN_THUOC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TEN_THUOC" DataSetColumn="TEN_THUOC" />
+              <Mapping SourceColumn="NGAY_GIAO_DICH" DataSetColumn="NGAY_GIAO_DICH" />
+              <Mapping SourceColumn="TEN_KHACH_HANG" DataSetColumn="TEN_KHACH_HANG" />
+              <Mapping SourceColumn="SO_LUONG_BAN" DataSetColumn="SO_LUONG_BAN" />
+              <Mapping SourceColumn="DON_VI_TINH" DataSetColumn="DON_VI_TINH" />
+              <Mapping SourceColumn="GIA_BAN" DataSetColumn="GIA_BAN" />
+              <Mapping SourceColumn="THANH_TIEN" DataSetColumn="THANH_TIEN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_BC_BAN_THUOC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_BC_BAN_THUOC" msprop:Generator_UserDSName="DS_V_BC_BAN_THUOC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_BC_BAN_THUOC" msprop:Generator_TableClassName="V_BC_BAN_THUOCDataTable" msprop:Generator_TableVarName="tableV_BC_BAN_THUOC" msprop:Generator_TablePropName="V_BC_BAN_THUOC" msprop:Generator_RowDeletingName="V_BC_BAN_THUOCRowDeleting" msprop:Generator_UserTableName="V_BC_BAN_THUOC" msprop:Generator_RowChangingName="V_BC_BAN_THUOCRowChanging" msprop:Generator_RowEvHandlerName="V_BC_BAN_THUOCRowChangeEventHandler" msprop:Generator_RowDeletedName="V_BC_BAN_THUOCRowDeleted" msprop:Generator_RowEvArgName="V_BC_BAN_THUOCRowChangeEvent" msprop:Generator_RowChangedName="V_BC_BAN_THUOCRowChanged" msprop:Generator_RowClassName="V_BC_BAN_THUOCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NGAY_GIAO_DICH" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNGAY_GIAO_DICH" msprop:Generator_ColumnPropNameInRow="NGAY_GIAO_DICH" msprop:Generator_ColumnPropNameInTable="NGAY_GIAO_DICHColumn" msprop:Generator_UserColumnName="NGAY_GIAO_DICH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_KHACH_HANG" msprop:Generator_ColumnVarNameInTable="columnTEN_KHACH_HANG" msprop:Generator_ColumnPropNameInRow="TEN_KHACH_HANG" msprop:Generator_ColumnPropNameInTable="TEN_KHACH_HANGColumn" msprop:Generator_UserColumnName="TEN_KHACH_HANG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SO_LUONG_BAN" msprop:Generator_ColumnVarNameInTable="columnSO_LUONG_BAN" msprop:Generator_ColumnPropNameInRow="SO_LUONG_BAN" msprop:Generator_ColumnPropNameInTable="SO_LUONG_BANColumn" msprop:Generator_UserColumnName="SO_LUONG_BAN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DON_VI_TINH" msprop:Generator_ColumnVarNameInTable="columnDON_VI_TINH" msprop:Generator_ColumnPropNameInRow="DON_VI_TINH" msprop:Generator_ColumnPropNameInTable="DON_VI_TINHColumn" msprop:Generator_UserColumnName="DON_VI_TINH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GIA_BAN" msprop:Generator_ColumnVarNameInTable="columnGIA_BAN" msprop:Generator_ColumnPropNameInRow="GIA_BAN" msprop:Generator_ColumnPropNameInTable="GIA_BANColumn" msprop:Generator_UserColumnName="GIA_BAN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="THANH_TIEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTHANH_TIEN" msprop:Generator_ColumnPropNameInRow="THANH_TIEN" msprop:Generator_ColumnPropNameInTable="THANH_TIENColumn" msprop:Generator_UserColumnName="THANH_TIEN" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
