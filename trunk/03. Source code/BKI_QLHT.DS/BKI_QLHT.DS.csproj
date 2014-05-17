@@ -541,6 +541,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_SO_DU.cs">
+      <DependentUpon>DS_V_SO_DU.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_V_SO_DU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_SO_DU.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1584,6 +1593,17 @@
     </None>
     <None Include="DS_V_HT_CONTROL_IN_FORM.xss">
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_SO_DU.xsc">
+      <DependentUpon>DS_V_SO_DU.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_SO_DU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_SO_DU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_SO_DU.xss">
+      <DependentUpon>DS_V_SO_DU.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

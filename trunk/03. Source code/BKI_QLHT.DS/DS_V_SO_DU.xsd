@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_SO_DU" targetNamespace="http://tempuri.org/DS_V_SO_DU.xsd" xmlns:mstns="http://tempuri.org/DS_V_SO_DU.xsd" xmlns="http://tempuri.org/DS_V_SO_DU.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BKI_QLHTConnectionString6" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BKI_QLHTConnectionString6 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLHT.DS.Properties.Settings.GlobalReference.Default.BKI_QLHTConnectionString6" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_SO_DUTableAdapter" GeneratorDataComponentClassName="V_SO_DUTableAdapter" Name="V_SO_DU" UserDataComponentName="V_SO_DUTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BKI_QLHTConnectionString6 (Settings)" DbObjectName="BKI_QLHT.dbo.V_SO_DU" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_THUOC, SO_DU, ID_DON_VI_THUOC, TEN_DON_VI, TEN_THUOC FROM dbo.V_SO_DU</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_THUOC" DataSetColumn="ID_THUOC" />
+              <Mapping SourceColumn="SO_DU" DataSetColumn="SO_DU" />
+              <Mapping SourceColumn="ID_DON_VI_THUOC" DataSetColumn="ID_DON_VI_THUOC" />
+              <Mapping SourceColumn="TEN_DON_VI" DataSetColumn="TEN_DON_VI" />
+              <Mapping SourceColumn="TEN_THUOC" DataSetColumn="TEN_THUOC" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_SO_DU" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_SO_DU" msprop:Generator_UserDSName="DS_V_SO_DU">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_SO_DU" msprop:Generator_TableClassName="V_SO_DUDataTable" msprop:Generator_TableVarName="tableV_SO_DU" msprop:Generator_TablePropName="V_SO_DU" msprop:Generator_RowDeletingName="V_SO_DURowDeleting" msprop:Generator_RowChangingName="V_SO_DURowChanging" msprop:Generator_RowEvHandlerName="V_SO_DURowChangeEventHandler" msprop:Generator_RowDeletedName="V_SO_DURowDeleted" msprop:Generator_UserTableName="V_SO_DU" msprop:Generator_RowChangedName="V_SO_DURowChanged" msprop:Generator_RowEvArgName="V_SO_DURowChangeEvent" msprop:Generator_RowClassName="V_SO_DURow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_THUOC" msprop:Generator_ColumnVarNameInTable="columnID_THUOC" msprop:Generator_ColumnPropNameInRow="ID_THUOC" msprop:Generator_ColumnPropNameInTable="ID_THUOCColumn" msprop:Generator_UserColumnName="ID_THUOC" type="xs:decimal" />
+              <xs:element name="SO_DU" msprop:Generator_ColumnVarNameInTable="columnSO_DU" msprop:Generator_ColumnPropNameInRow="SO_DU" msprop:Generator_ColumnPropNameInTable="SO_DUColumn" msprop:Generator_UserColumnName="SO_DU" type="xs:decimal" />
+              <xs:element name="ID_DON_VI_THUOC" msprop:Generator_ColumnVarNameInTable="columnID_DON_VI_THUOC" msprop:Generator_ColumnPropNameInRow="ID_DON_VI_THUOC" msprop:Generator_ColumnPropNameInTable="ID_DON_VI_THUOCColumn" msprop:Generator_UserColumnName="ID_DON_VI_THUOC" type="xs:decimal" />
+              <xs:element name="TEN_DON_VI" msprop:Generator_ColumnVarNameInTable="columnTEN_DON_VI" msprop:Generator_ColumnPropNameInRow="TEN_DON_VI" msprop:Generator_ColumnPropNameInTable="TEN_DON_VIColumn" msprop:Generator_UserColumnName="TEN_DON_VI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_THUOC" msprop:Generator_ColumnVarNameInTable="columnTEN_THUOC" msprop:Generator_ColumnPropNameInRow="TEN_THUOC" msprop:Generator_ColumnPropNameInTable="TEN_THUOCColumn" msprop:Generator_UserColumnName="TEN_THUOC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
