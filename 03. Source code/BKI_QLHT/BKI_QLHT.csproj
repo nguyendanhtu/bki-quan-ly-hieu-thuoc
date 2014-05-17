@@ -428,7 +428,9 @@
     <Compile Include="NghiepVu\f804_han_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\f807_v_so_du.cs" />
+    <Compile Include="NghiepVu\f807_v_so_du.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NghiepVu\frm_V_HAN_SU_DUNG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,6 +454,12 @@
     </Compile>
     <Compile Include="NghiepVu\uc803_bang_gia.Designer.cs">
       <DependentUpon>uc803_bang_gia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\uc807_v_so_du.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\uc807_v_so_du.Designer.cs">
+      <DependentUpon>uc807_v_so_du.cs</DependentUpon>
     </Compile>
     <Compile Include="NghiepVu\uc_802_gd_gia_ban.cs">
       <SubType>UserControl</SubType>
