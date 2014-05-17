@@ -729,6 +729,9 @@
     <EmbeddedResource Include="NghiepVu\uc803_bang_gia.resx">
       <DependentUpon>uc803_bang_gia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\uc807_v_so_du.resx">
+      <DependentUpon>uc807_v_so_du.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\uc_802_gd_gia_ban.resx">
       <DependentUpon>uc_802_gd_gia_ban.cs</DependentUpon>
     </EmbeddedResource>

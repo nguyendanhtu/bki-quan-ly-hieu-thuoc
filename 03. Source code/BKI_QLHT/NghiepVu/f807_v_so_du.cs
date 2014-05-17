@@ -218,7 +218,10 @@ namespace BKI_QLHT
 
 		#region Data Structure
 		private enum e_col_Number{
-			TEN_DON_VI = 3,TEN_THUOC = 1,SO_DU = 2
+			TEN_DON_VI = 3
+,TEN_THUOC = 1
+,SO_DU = 2
+
 		}			
 		#endregion
 
@@ -241,7 +244,10 @@ namespace BKI_QLHT
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(V_SO_DU.TEN_DON_VI, e_col_Number.TEN_DON_VI);			v_htb.Add(V_SO_DU.TEN_THUOC, e_col_Number.TEN_THUOC);			v_htb.Add(V_SO_DU.SO_DU, e_col_Number.SO_DU);									
+			v_htb.Add(V_SO_DU.TEN_DON_VI, e_col_Number.TEN_DON_VI);
+			v_htb.Add(V_SO_DU.TEN_THUOC, e_col_Number.TEN_THUOC);
+			v_htb.Add(V_SO_DU.SO_DU, e_col_Number.SO_DU);
+									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_SO_DU.NewRow());
 			return v_obj_trans;			
 		}
@@ -324,62 +330,84 @@ namespace BKI_QLHT
 		//
 		//		EVENT HANLDERS
 		//
-		//
-		private void f807_v_so_du_Load(object sender, System.EventArgs e) {
-			try{
-				set_initial_form_load();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		
-		}
+        //
 
-		private void m_cmd_exit_Click(object sender, EventArgs e) {
-			try{
-				this.Close();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        #region events
+        private void f807_v_so_du_Load(object sender, System.EventArgs e)
+        {
+            try
+            {
+                set_initial_form_load();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
 
-		private void m_cmd_insert_Click(object sender, EventArgs e) {
-			try{
-				insert_v_so_du();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        }
 
-		private void m_cmd_update_Click(object sender, EventArgs e) {
-			try{
-				update_v_so_du();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_delete_Click(object sender, EventArgs e) {
-			try{
-				delete_v_so_du();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_insert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                insert_v_so_du();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_view_Click(object sender, EventArgs e) {
-			try{
-				view_v_so_du();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                update_v_so_du();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-	}
+        private void m_cmd_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                delete_v_so_du();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_view_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                view_v_so_du();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        #endregion
+
+    }
 }
+
 
