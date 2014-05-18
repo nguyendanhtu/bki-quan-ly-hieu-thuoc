@@ -815,7 +815,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f425_bcnt_theo_cac_hsx_de v_frm = new f425_bcnt_theo_cac_hsx_de();
+                f424_bcnt_theo_cac_hsx v_frm = new f424_bcnt_theo_cac_hsx();
                 v_frm.ShowDialog();
             }
             catch (System.Exception ex)
@@ -829,6 +829,19 @@ namespace BKI_QLHT
             try
             {
                 f426_bcnt_theo_cac_ncc v_frm = new f426_bcnt_theo_cac_ncc();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f427_bcnt_theo_cac_ncc_de v_frm = new f427_bcnt_theo_cac_ncc_de();
                 v_frm.ShowDialog();
             }
             catch (System.Exception ex)
