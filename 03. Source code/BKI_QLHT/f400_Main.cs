@@ -811,6 +811,19 @@ namespace BKI_QLHT
             }
         }
 
+        private void button24_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f425_bcnt_theo_cac_hsx_de v_frm = new f425_bcnt_theo_cac_hsx_de();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
 
 
 
