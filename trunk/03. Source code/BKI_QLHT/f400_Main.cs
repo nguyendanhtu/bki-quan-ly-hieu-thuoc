@@ -772,6 +772,19 @@ namespace BKI_QLHT
             }
         }
 
+        private void button21_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f422_bcnt_tong_hop v_frm = new f422_bcnt_tong_hop();
+                v_frm.ShowDialog(); 
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
 
 
 
