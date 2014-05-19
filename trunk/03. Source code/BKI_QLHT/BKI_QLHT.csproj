@@ -182,6 +182,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BKI_QLHTDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BKI_QLHTDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BKI_QLHT_REPORT_BAN_THUOC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -424,6 +429,12 @@
     </Compile>
     <Compile Include="NghiepVu\f511_gd_nhap_thuoc.Designer.cs">
       <DependentUpon>f511_gd_nhap_thuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\f513_report_nhap_thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f513_report_nhap_thuoc.Designer.cs">
+      <DependentUpon>f513_report_nhap_thuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="NghiepVu\f802_v_gd_gia_ban.cs">
       <SubType>Form</SubType>
@@ -732,6 +743,9 @@
     <EmbeddedResource Include="NghiepVu\f511_gd_nhap_thuoc.resx">
       <DependentUpon>f511_gd_nhap_thuoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f513_report_nhap_thuoc.resx">
+      <DependentUpon>f513_report_nhap_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f802_v_gd_gia_ban.resx">
       <DependentUpon>f802_v_gd_gia_ban.cs</DependentUpon>
     </EmbeddedResource>
@@ -756,6 +770,7 @@
     <EmbeddedResource Include="NghiepVu\f_804_han_su_dung.resx">
       <DependentUpon>f_804_han_su_dung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\Report2.rdlc" />
     <EmbeddedResource Include="NghiepVu\uc108_v_gd_giao_dich_detail.resx">
       <DependentUpon>uc108_v_gd_giao_dich_detail.cs</DependentUpon>
     </EmbeddedResource>
@@ -824,6 +839,17 @@
     </None>
     <None Include="BKI_QLHTDataSet2.xss">
       <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHTDataSet3.xsc">
+      <DependentUpon>BKI_QLHTDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHTDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BKI_QLHTDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BKI_QLHTDataSet3.xss">
+      <DependentUpon>BKI_QLHTDataSet3.xsd</DependentUpon>
     </None>
     <None Include="BKI_QLHT_REPORT_BAN_THUOC.xsc">
       <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>

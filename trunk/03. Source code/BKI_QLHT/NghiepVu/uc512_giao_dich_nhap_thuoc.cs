@@ -380,6 +380,9 @@ namespace BKI_QLHT
             m_txt_gia_nhap.Clear();
             m_txt_gia_ban.Clear();
             m_txt_so_luong.Clear();
+            m_txt_search_thuoc1.Visible = true;
+            m_txt_search_thuoc1.xoa_trang();
+            m_txt_ten_thuoc.Visible = false;
             //m_txt_search_thuoc1.Text1 = "";
             restart_quy_doi();
             load_data_2_label();
@@ -1089,8 +1092,15 @@ namespace BKI_QLHT
                     load_data_2_gd_so_du();
                     restart_form();
                     list.Clear();
+                    m_lbl_tong_tien.Text = "";
+                    tong_tien = 0;
                     m_grv_nhap_thuoc.Rows.Clear();
                     BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
+                    //DialogResult dgl = MessageBox.Show("Ban muon in hoa don khong", "In hoa don", MessageBoxButtons.YesNo);
+                    //if (dgl == DialogResult.Yes) {
+                    //    f513_report_nhap_thuoc frm = new f513_report_nhap_thuoc();
+                    //    frm.display_form_print_nhap_thuoc(m_id_giao_dich);
+                    //}
                 }
                 else
                 {
