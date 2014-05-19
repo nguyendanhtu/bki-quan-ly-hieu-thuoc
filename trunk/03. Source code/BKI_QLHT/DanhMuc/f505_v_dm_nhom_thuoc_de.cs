@@ -24,7 +24,7 @@ namespace BKI_QLHT
             load_data_2_cbo();
         }
 
-        
+
         #region Public Interface
         public void display_for_insert()
         {
@@ -115,13 +115,14 @@ namespace BKI_QLHT
         {
             load_data_2_cbo();
         }
-        private bool check_validate() {
+        private bool check_validate()
+        {
             if (!CValidateTextBox.IsValid(m_txt_nhom_thuoc, DataType.StringType, allowNull.NO, true)) return false;
             return true;
         }
         #endregion
 
-       
+
         #region Event
         private void m_cmd_save_Click(object sender, EventArgs e)
         {
@@ -163,21 +164,23 @@ namespace BKI_QLHT
 
         private void f505_v_dm_nhom_thuoc_de_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F2) {
+            if (e.KeyCode == Keys.F2)
+            {
                 save_data();
-               
+
             }
-            if (e.KeyCode == Keys.Escape) {
+            if (e.KeyCode == Keys.Escape)
+            {
                 this.Close();
             }
         }
 
-        
-
-       
 
 
 
-        
+
+
+
+
     }
 }

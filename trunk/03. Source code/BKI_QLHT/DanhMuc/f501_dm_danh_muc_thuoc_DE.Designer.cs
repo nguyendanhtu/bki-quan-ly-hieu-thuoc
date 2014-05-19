@@ -64,7 +64,7 @@
             this.m_cmd_save.Location = new System.Drawing.Point(180, 13);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 13;
+            this.m_cmd_save.TabIndex = 3;
             this.m_cmd_save.Text = "Lưu (F2)";
             // 
             // ImageList
@@ -106,7 +106,7 @@
             this.m_cmd_huy.Location = new System.Drawing.Point(303, 13);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Size = new System.Drawing.Size(105, 28);
-            this.m_cmd_huy.TabIndex = 12;
+            this.m_cmd_huy.TabIndex = 4;
             this.m_cmd_huy.Text = "Trở về (Esc)";
             // 
             // label3
@@ -144,14 +144,14 @@
             this.m_txt_danh_muc.Location = new System.Drawing.Point(166, 60);
             this.m_txt_danh_muc.Name = "m_txt_danh_muc";
             this.m_txt_danh_muc.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_danh_muc.TabIndex = 45;
+            this.m_txt_danh_muc.TabIndex = 1;
             // 
             // m_txt_ghi_chu
             // 
             this.m_txt_ghi_chu.Location = new System.Drawing.Point(166, 106);
             this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
             this.m_txt_ghi_chu.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_ghi_chu.TabIndex = 46;
+            this.m_txt_ghi_chu.TabIndex = 2;
             // 
             // f501_dm_danh_muc_thuoc_DE
             // 

@@ -65,6 +65,7 @@ namespace BKI_QLHT
         }
         private void save_data()
         {
+            if (!check_validate()) return;
             form_2_us_obj();
             switch (m_e_for_mode)
             {
@@ -88,6 +89,11 @@ namespace BKI_QLHT
                 m_txt_ghi_chu.Clear();
                 m_e_for_mode = DataEntryFormMode.InsertDataState;
             
+        }
+        private bool check_validate()
+        {
+            if (!CValidateTextBox.IsValid(m_txt_danh_muc, DataType.StringType, allowNull.NO, true)) return false;
+            return true;
         }
         
         #endregion
