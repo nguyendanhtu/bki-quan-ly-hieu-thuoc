@@ -58,14 +58,14 @@
             this.m_txt_cach_dung.Location = new System.Drawing.Point(552, 59);
             this.m_txt_cach_dung.Name = "m_txt_cach_dung";
             this.m_txt_cach_dung.Size = new System.Drawing.Size(194, 20);
-            this.m_txt_cach_dung.TabIndex = 17;
+            this.m_txt_cach_dung.TabIndex = 4;
             // 
             // m_txt_ten_thuoc
             // 
             this.m_txt_ten_thuoc.Location = new System.Drawing.Point(134, 59);
             this.m_txt_ten_thuoc.Name = "m_txt_ten_thuoc";
             this.m_txt_ten_thuoc.Size = new System.Drawing.Size(201, 20);
-            this.m_txt_ten_thuoc.TabIndex = 14;
+            this.m_txt_ten_thuoc.TabIndex = 1;
             // 
             // label5
             // 
@@ -126,7 +126,7 @@
             this.m_cbo_nhom_thuoc.Location = new System.Drawing.Point(134, 117);
             this.m_cbo_nhom_thuoc.Name = "m_cbo_nhom_thuoc";
             this.m_cbo_nhom_thuoc.Size = new System.Drawing.Size(201, 21);
-            this.m_cbo_nhom_thuoc.TabIndex = 23;
+            this.m_cbo_nhom_thuoc.TabIndex = 3;
             // 
             // m_cbo_danh_muc_thuoc
             // 
@@ -137,14 +137,14 @@
             this.m_cbo_danh_muc_thuoc.Location = new System.Drawing.Point(134, 88);
             this.m_cbo_danh_muc_thuoc.Name = "m_cbo_danh_muc_thuoc";
             this.m_cbo_danh_muc_thuoc.Size = new System.Drawing.Size(201, 21);
-            this.m_cbo_danh_muc_thuoc.TabIndex = 24;
+            this.m_cbo_danh_muc_thuoc.TabIndex = 2;
             // 
             // m_txt_thuoc_thay_the
             // 
             this.m_txt_thuoc_thay_the.Location = new System.Drawing.Point(552, 89);
             this.m_txt_thuoc_thay_the.Name = "m_txt_thuoc_thay_the";
             this.m_txt_thuoc_thay_the.Size = new System.Drawing.Size(194, 20);
-            this.m_txt_thuoc_thay_the.TabIndex = 26;
+            this.m_txt_thuoc_thay_the.TabIndex = 5;
             // 
             // label9
             // 
@@ -190,7 +190,7 @@
             this.m_chk_tuyen_su_dung_5.Location = new System.Drawing.Point(134, 160);
             this.m_chk_tuyen_su_dung_5.Name = "m_chk_tuyen_su_dung_5";
             this.m_chk_tuyen_su_dung_5.Size = new System.Drawing.Size(123, 20);
-            this.m_chk_tuyen_su_dung_5.TabIndex = 29;
+            this.m_chk_tuyen_su_dung_5.TabIndex = 6;
             this.m_chk_tuyen_su_dung_5.Text = "Tuyến sử dụng 5";
             this.m_chk_tuyen_su_dung_5.UseVisualStyleBackColor = true;
             // 
@@ -201,7 +201,7 @@
             this.m_chk_tuyen_su_dung_6.Location = new System.Drawing.Point(292, 160);
             this.m_chk_tuyen_su_dung_6.Name = "m_chk_tuyen_su_dung_6";
             this.m_chk_tuyen_su_dung_6.Size = new System.Drawing.Size(123, 20);
-            this.m_chk_tuyen_su_dung_6.TabIndex = 30;
+            this.m_chk_tuyen_su_dung_6.TabIndex = 7;
             this.m_chk_tuyen_su_dung_6.Text = "Tuyến sử dụng 6";
             this.m_chk_tuyen_su_dung_6.UseVisualStyleBackColor = true;
             // 
@@ -212,7 +212,7 @@
             this.m_chk_tuyen_su_dung_7.Location = new System.Drawing.Point(442, 159);
             this.m_chk_tuyen_su_dung_7.Name = "m_chk_tuyen_su_dung_7";
             this.m_chk_tuyen_su_dung_7.Size = new System.Drawing.Size(123, 20);
-            this.m_chk_tuyen_su_dung_7.TabIndex = 31;
+            this.m_chk_tuyen_su_dung_7.TabIndex = 8;
             this.m_chk_tuyen_su_dung_7.Text = "Tuyến sử dụng 7";
             this.m_chk_tuyen_su_dung_7.UseVisualStyleBackColor = true;
             // 
@@ -223,7 +223,7 @@
             this.m_chk_tuyen_su_dung_8.Location = new System.Drawing.Point(606, 159);
             this.m_chk_tuyen_su_dung_8.Name = "m_chk_tuyen_su_dung_8";
             this.m_chk_tuyen_su_dung_8.Size = new System.Drawing.Size(123, 20);
-            this.m_chk_tuyen_su_dung_8.TabIndex = 32;
+            this.m_chk_tuyen_su_dung_8.TabIndex = 9;
             this.m_chk_tuyen_su_dung_8.Text = "Tuyến sử dụng 8";
             this.m_chk_tuyen_su_dung_8.UseVisualStyleBackColor = true;
             // 
@@ -260,7 +260,7 @@
             this.m_cmd_save.Location = new System.Drawing.Point(307, 13);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 30;
+            this.m_cmd_save.TabIndex = 10;
             this.m_cmd_save.Text = "Lưu (F2)";
             // 
             // m_cmd_thoat
@@ -275,7 +275,7 @@
             this.m_cmd_thoat.Location = new System.Drawing.Point(401, 13);
             this.m_cmd_thoat.Name = "m_cmd_thoat";
             this.m_cmd_thoat.Size = new System.Drawing.Size(101, 28);
-            this.m_cmd_thoat.TabIndex = 29;
+            this.m_cmd_thoat.TabIndex = 11;
             this.m_cmd_thoat.Text = "Trở về (Esc)";
             // 
             // f503_v_dm_thuoc_de
