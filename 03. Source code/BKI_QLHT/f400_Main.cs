@@ -902,6 +902,32 @@ namespace BKI_QLHT
             }
         }
 
+        private void button31_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f432_bcnt_theo_cac_nsx v_frm = new f432_bcnt_theo_cac_nsx();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f432_bcnt_theo_cac_nsx_de v_frm = new f432_bcnt_theo_cac_nsx_de();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
 
 
 
