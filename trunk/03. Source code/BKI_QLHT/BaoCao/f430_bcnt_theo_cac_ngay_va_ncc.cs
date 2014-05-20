@@ -414,7 +414,7 @@ namespace BKI_QLHT
         }
         private void load_custom_source_2_m_txt_tim_kiem()
         {
-            int count = m_v_ds.Tables["V_BC_NHAP_THUOC_THEO_CAC_NGAY"].Rows.Count;
+            int count = m_v_ds.Tables["V_BC_NHAP_THUOC_THEO_CAC_NGAY_N_NCC"].Rows.Count;
             AutoCompleteStringCollection v_acsc_search = new AutoCompleteStringCollection();
             foreach (DataRow dr in m_v_ds.V_BC_NHAP_THUOC_THEO_CAC_NGAY_N_NCC)
             {
@@ -431,7 +431,7 @@ namespace BKI_QLHT
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             m_fg.Tree.Column = (int)e_col_Number.NGAY_GIAO_DICH;
-            m_fg.Cols[(int)e_col_Number.TEN_NCC].Visible = false;
+            //m_fg.Cols[(int)e_col_Number.TEN_NCC].Visible = false;
             m_fg.Cols[0].Caption = "STT";
             m_fg.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
 

@@ -126,6 +126,9 @@ namespace BKI_QLHT
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
@@ -1147,7 +1150,7 @@ namespace BKI_QLHT
             // 
             this.button1.Location = new System.Drawing.Point(17, 273);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(202, 23);
+            this.button1.Size = new System.Drawing.Size(33, 23);
             this.button1.TabIndex = 17;
             this.button1.Text = "BC Danh mục thuốc theo nhóm thuốc";
             this.button1.UseVisualStyleBackColor = true;
@@ -1155,9 +1158,9 @@ namespace BKI_QLHT
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(17, 302);
+            this.button2.Location = new System.Drawing.Point(56, 273);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 23);
+            this.button2.Size = new System.Drawing.Size(33, 23);
             this.button2.TabIndex = 18;
             this.button2.Text = "BC Danh mục thuốc theo hãng sx";
             this.button2.UseVisualStyleBackColor = true;
@@ -1165,9 +1168,9 @@ namespace BKI_QLHT
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 331);
+            this.button3.Location = new System.Drawing.Point(99, 273);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(202, 23);
+            this.button3.Size = new System.Drawing.Size(33, 23);
             this.button3.TabIndex = 19;
             this.button3.Text = "BC Danh mục thuốc theo ncc";
             this.button3.UseVisualStyleBackColor = true;
@@ -1175,9 +1178,9 @@ namespace BKI_QLHT
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(17, 360);
+            this.button4.Location = new System.Drawing.Point(138, 273);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(202, 23);
+            this.button4.Size = new System.Drawing.Size(33, 23);
             this.button4.TabIndex = 20;
             this.button4.Text = "BC Danh mục thuốc theo nước sx\r\n";
             this.button4.UseVisualStyleBackColor = true;
@@ -1195,9 +1198,9 @@ namespace BKI_QLHT
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(17, 389);
+            this.button6.Location = new System.Drawing.Point(185, 273);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(202, 23);
+            this.button6.Size = new System.Drawing.Size(33, 23);
             this.button6.TabIndex = 22;
             this.button6.Text = "BC Danh mục bác sỹ";
             this.button6.UseVisualStyleBackColor = true;
@@ -1413,6 +1416,36 @@ namespace BKI_QLHT
             this.button27.UseVisualStyleBackColor = true;
             this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(138, 198);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(33, 23);
+            this.button28.TabIndex = 44;
+            this.button28.Text = "429";
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // button29
+            // 
+            this.button29.Location = new System.Drawing.Point(185, 198);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(33, 27);
+            this.button29.TabIndex = 45;
+            this.button29.Text = "430";
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(17, 302);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(33, 23);
+            this.button30.TabIndex = 46;
+            this.button30.Text = "431";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1420,6 +1453,9 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(823, 587);
+            this.Controls.Add(this.button30);
+            this.Controls.Add(this.button29);
+            this.Controls.Add(this.button28);
             this.Controls.Add(this.button27);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.button25);
@@ -1573,5 +1609,8 @@ namespace BKI_QLHT
         private Button button25;
         private Button button26;
         private Button button27;
+        private Button button30;
+        private Button button29;
+        private Button button28;
     }
 }
