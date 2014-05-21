@@ -815,7 +815,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f424_bcnt_theo_cac_hsx v_frm = new f424_bcnt_theo_cac_hsx();
+                f425_bcnt_theo_cac_HSX_de v_frm = new f425_bcnt_theo_cac_HSX_de();
                 v_frm.ShowDialog();
             }
             catch (System.Exception ex)
