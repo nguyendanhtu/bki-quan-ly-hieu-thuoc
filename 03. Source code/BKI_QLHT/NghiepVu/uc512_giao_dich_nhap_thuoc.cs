@@ -977,7 +977,7 @@ namespace BKI_QLHT
                 m_txt_quy_doi_3.Focus();
                 return false;
             }
-            if (int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", "")) > int.Parse(m_txt_gia_ban.Text.Trim().Replace(",", "")))
+            if (int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".","")) > int.Parse(m_txt_gia_ban.Text.Trim().Replace(",", "").Replace(".","")))
             {
                 BaseMessages.MsgBox_Infor("Giá bán phải lớn hơn giá nhập");
                 m_txt_gia_nhap.Focus();
@@ -1068,9 +1068,9 @@ namespace BKI_QLHT
             m_grv_nhap_thuoc.Rows[n].Cells[1].Value = m_txt_search_thuoc1.Text1;
             m_grv_nhap_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
             m_grv_nhap_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
-            m_grv_nhap_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", "")));
-            m_grv_nhap_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", ""))));
-            tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", ""));
+            m_grv_nhap_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", "")));
+            m_grv_nhap_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", ""))));
+            tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", ""));
             m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(tong_tien));
             restart_form();
             m_trang_thai = true;
@@ -1166,8 +1166,8 @@ namespace BKI_QLHT
             {
                 if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
                 list.RemoveAt(m_grv_nhap_thuoc.SelectedRows[0].Index);
-                m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_lbl_tong_tien.Text.Replace(",", "")) - CIPConvert.ToDecimal(m_grv_nhap_thuoc.SelectedRows[0].Cells[5].Value.ToString().Replace(",", "")));
-                tong_tien -= int.Parse(m_grv_nhap_thuoc.SelectedRows[0].Cells[5].Value.ToString().Replace(",", ""));
+                m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_lbl_tong_tien.Text.Replace(",", "").Replace(".", "")) - CIPConvert.ToDecimal(m_grv_nhap_thuoc.SelectedRows[0].Cells[5].Value.ToString().Replace(",", "").Replace(".", "")));
+                tong_tien -= int.Parse(m_grv_nhap_thuoc.SelectedRows[0].Cells[5].Value.ToString().Replace(",", "").Replace(".", ""));
                 m_grv_nhap_thuoc.Rows.RemoveAt(m_grv_nhap_thuoc.SelectedRows[0].Index);
                 restart_form();
                 for (int i = 0; i < m_grv_nhap_thuoc.Rows.Count; i++) m_grv_nhap_thuoc.Rows[i].Cells[0].Value = i + 1;
@@ -1286,14 +1286,14 @@ namespace BKI_QLHT
         }
         private void m_cmd_upadate_Click(object sender, EventArgs e)
         {
-            tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", ""));
-            m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", ""))));
+            tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", ""));
+            m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", ""))));
             m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(tong_tien));
             list[m_grv_s_i].so_luong = int.Parse(m_txt_so_luong.Text);
-            list[m_grv_s_i].gia = int.Parse(m_txt_gia_nhap.Text.Replace(",", ""));
-            list[m_grv_s_i].gia_ban = int.Parse(m_txt_gia_ban.Text.Replace(",", ""));
+            list[m_grv_s_i].gia = int.Parse(m_txt_gia_nhap.Text.Replace(",", "").Replace(".", ""));
+            list[m_grv_s_i].gia_ban = int.Parse(m_txt_gia_ban.Text.Replace(",", "").Replace(".", ""));
             list[m_grv_s_i].sd_so_luong = int.Parse(m_txt_so_luong.Text) * int.Parse(m_txt_quy_doi_1.Text) * int.Parse(m_txt_quy_doi_2.Text) * int.Parse(m_txt_quy_doi_3.Text);
-            m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", "")));
+            m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", "")));
             m_cmd_add.Visible = true;
             m_cmd_upadate.Visible = false;
             //m_txt_search_thuoc1.Visible = true;
