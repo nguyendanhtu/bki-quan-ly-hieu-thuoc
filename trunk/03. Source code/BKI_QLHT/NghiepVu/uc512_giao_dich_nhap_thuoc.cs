@@ -916,7 +916,6 @@ namespace BKI_QLHT
             m_txt_so_luong.Clear();
             m_txt_search_thuoc1.Visible = true;
             m_txt_search_thuoc1.xoa_trang();
-            m_txt_ten_thuoc.Visible = false;
             //m_txt_search_thuoc1.Text1 = "";
             restart_quy_doi();
             load_data_2_label();
@@ -1251,10 +1250,9 @@ namespace BKI_QLHT
             m_grv_s_i = m_grv_nhap_thuoc.SelectedRows[0].Index;
             m_txt_search_thuoc1.dcID = list[m_grv_s_i].ID_thuoc;
             m_txt_search_thuoc1.Text1 = list[m_grv_s_i].ten_thuoc;
-            m_txt_ten_thuoc.Text = list[m_grv_s_i].ten_thuoc;
-            m_txt_ten_thuoc.Visible = true;
-            m_txt_search_thuoc1.Visible = false;
-            m_txt_ten_thuoc.Enabled = false;
+            m_txt_search_thuoc1.get_text(list[m_grv_s_i].ten_thuoc);
+            m_txt_search_thuoc1.Enabled = false;
+            //m_txt_search_thuoc1.Visible = false;
             load_data_2_cbo_don_vi();
             load_quy_doi();
             load_don_gia_ban();
@@ -1298,8 +1296,8 @@ namespace BKI_QLHT
             m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", "")));
             m_cmd_add.Visible = true;
             m_cmd_upadate.Visible = false;
-            m_txt_ten_thuoc.Visible = false;
-            m_txt_search_thuoc1.Visible = true;
+            //m_txt_search_thuoc1.Visible = true;
+            m_txt_search_thuoc1.Enabled = true;
             BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
             restart_form();
         }

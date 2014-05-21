@@ -44,7 +44,13 @@ namespace BKI_QLHT.DanhMuc
             get { return text; }
             set { text = value; }
         }
-
+        public void get_text(string ip_str)
+        {
+            this.m_list_suggest.DataSource = null;
+            this.m_txt_search.Text = ip_str;
+            m_list_suggest.Visible = false;
+            this.Height = m_txt_search.Height;
+        }
         public string valueMember;
         public string ValueMember
         {
