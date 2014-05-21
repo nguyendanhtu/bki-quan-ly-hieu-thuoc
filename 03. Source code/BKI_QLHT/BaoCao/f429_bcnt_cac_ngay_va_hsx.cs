@@ -430,7 +430,7 @@ namespace BKI_QLHT
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
-            m_fg.Tree.Column = (int)e_col_Number.NGAY_GIAO_DICH;
+            m_fg.Tree.Column = (int)e_col_Number.TEN_HSX;
            // m_fg.Cols[(int)e_col_Number.TEN_HSX].Visible = false;
             m_fg.Cols[0].Caption = "STT";
             m_fg.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
@@ -495,13 +495,13 @@ namespace BKI_QLHT
             CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
               , 0
-              , (int)e_col_Number.TEN_HSX// chỗ này là tên trường mà mình nhóm
+              , (int)e_col_Number.NGAY_GIAO_DICH// chỗ này là tên trường mà mình nhóm
               , (int)e_col_Number.DON_VI_TINH // chỗ này là tên trường mà mình Count
               , "{0}"
               );
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Sum
                 , 0
-                , (int)e_col_Number.TEN_HSX
+                , (int)e_col_Number.NGAY_GIAO_DICH
                 , (int)e_col_Number.THANH_TIEN
                 , "{0}"
                 );
