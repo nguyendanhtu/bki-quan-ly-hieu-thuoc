@@ -97,15 +97,21 @@ namespace BKI_QLHT
             //CControlFormat.setFormStyle(this, new CAppContext_201());
             CControlFormat.setUserControlStyle(this, new CAppContext_201());
             set_define_event();
+            m_lbl_canh_bao_hsd.ForeColor = Color.Red;
             m_grv_nhap_thuoc.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             m_grv_nhap_thuoc.DefaultCellStyle.Alignment = DataGridViewContentAlignment.BottomCenter;
             m_grv_nhap_thuoc.RowsDefaultCellStyle.BackColor = Color.Bisque;
             m_grv_nhap_thuoc.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
-            m_grv_nhap_thuoc.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            //m_grv_nhap_thuoc.CellBorderStyle = DataGridViewCellBorderStyle.None;
             m_grv_nhap_thuoc.DefaultCellStyle.SelectionBackColor = Color.CornflowerBlue;
             m_grv_nhap_thuoc.DefaultCellStyle.SelectionForeColor = Color.White;
+            m_grv_nhap_thuoc.DefaultCellStyle.ForeColor = Color.RoyalBlue;
             m_grv_nhap_thuoc.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             m_grv_nhap_thuoc.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            //m_grv_nhap_thuoc.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            //m_grv_nhap_thuoc.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            m_grv_nhap_thuoc.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            m_grv_nhap_thuoc.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             m_grv_nhap_thuoc.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //m_grv_nhap_thuoc.AllowUserToResizeColumns = false;
             m_lbl_ma_giao_dich.Text = gen_Ma_GD();
@@ -1002,6 +1008,31 @@ namespace BKI_QLHT
                 m_cbo_dv_cap_4.Focus();
                 return false;
             }
+            if (m_cbo_dv_cap_4.Text == m_cbo_dv_cap_3.Text && m_txt_quy_doi_3.Text != "1")
+            {
+                BaseMessages.MsgBox_Infor("Bạn nhập sai quy đổi đơn vị!!");
+                m_txt_quy_doi_3.Focus();
+                return false;
+            }
+            if (m_cbo_dv_cap_3.Text == m_cbo_dv_cap_2.Text && m_txt_quy_doi_2.Text != "1")
+            {
+                BaseMessages.MsgBox_Infor("Bạn nhập sai quy đổi đơn vị!!");
+                m_txt_quy_doi_2.Focus();
+                return false;
+            }
+            if (m_cbo_dv_cap_4.Text == m_cbo_dv_cap_3.Text && m_cbo_dv_cap_3.Text == m_cbo_dv_cap_2.Text && m_cbo_don_vi_tinh.Text == m_cbo_dv_cap_2.Text) {
+                DialogResult dgr = MessageBox.Show("Bộ đơn vị bạn nhập chỉ có 1 đơn vị.Bạn có muốn nhập bộ đơn vị này không ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dgr == DialogResult.No) {
+                    m_cbo_dv_cap_2.Focus();
+                    return false;
+                }
+            }
+            if (m_dtp_ngay_san_xuat.Value>m_dtp_han_su_dung.Value )
+            {
+                BaseMessages.MsgBox_Infor("Bạn nhập sai hạn sử dụng");
+                m_dtp_han_su_dung.Focus();
+                return false;
+            }
 
             return true;
         }
@@ -1085,32 +1116,35 @@ namespace BKI_QLHT
             {
                 if (m_trang_thai == true)
                 {
-
-                    m_us_don_vi_tinh.BeginTransaction();
-                    load_data_2_don_vi_tinh(m_us_don_vi_tinh);
-                    US_GD_DON_VI_TINH_THUOC v_us_gd_dv_tinh_thuoc = new US_GD_DON_VI_TINH_THUOC();
-                    v_us_gd_dv_tinh_thuoc.UseTransOfUSObject(m_us_don_vi_tinh);
-                    load_data_2_gd_dv_tinh_thuoc(v_us_gd_dv_tinh_thuoc);
-                    US_GD_GIAO_DICH v_us_gd_giao_dich = new US_GD_GIAO_DICH();
-                    v_us_gd_giao_dich.UseTransOfUSObject(m_us_don_vi_tinh);
-                    load_data_2_gd_giao_dich(v_us_gd_giao_dich);
-                    //load_cbo_dv();
-                    US_GD_GIAO_DICH_DETAIL v_us_gd_detail = new US_GD_GIAO_DICH_DETAIL();
-                    v_us_gd_detail.UseTransOfUSObject(m_us_don_vi_tinh);
-                    load_data_2_gd_detial(v_us_gd_detail);
-                    US_GD_GIA_BAN v_us_gd_gia_ban = new US_GD_GIA_BAN();
-                    v_us_gd_gia_ban.UseTransOfUSObject(m_us_don_vi_tinh);
-                    load_data_2_gd_gia_ban(v_us_gd_gia_ban);
-                    US_GD_SO_DU v_us_gd_so_du = new US_GD_SO_DU();
-                    v_us_gd_so_du.UseTransOfUSObject(m_us_don_vi_tinh);
-                    load_data_2_gd_so_du(v_us_gd_so_du);
-                    m_us_don_vi_tinh.CommitTransaction();
-                    restart_form();
-                    list.Clear();
-                    m_lbl_tong_tien.Text = "";
-                    tong_tien = 0;
-                    m_grv_nhap_thuoc.Rows.Clear();
-                    BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
+                    DialogResult dgr = MessageBox.Show("Bạn có muốn lưu dữ liệu không ?","Thông báo  ", MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                    if (dgr == DialogResult.OK)
+                    {
+                        m_us_don_vi_tinh.BeginTransaction();
+                        load_data_2_don_vi_tinh(m_us_don_vi_tinh);
+                        US_GD_DON_VI_TINH_THUOC v_us_gd_dv_tinh_thuoc = new US_GD_DON_VI_TINH_THUOC();
+                        v_us_gd_dv_tinh_thuoc.UseTransOfUSObject(m_us_don_vi_tinh);
+                        load_data_2_gd_dv_tinh_thuoc(v_us_gd_dv_tinh_thuoc);
+                        US_GD_GIAO_DICH v_us_gd_giao_dich = new US_GD_GIAO_DICH();
+                        v_us_gd_giao_dich.UseTransOfUSObject(m_us_don_vi_tinh);
+                        load_data_2_gd_giao_dich(v_us_gd_giao_dich);
+                        //load_cbo_dv();
+                        US_GD_GIAO_DICH_DETAIL v_us_gd_detail = new US_GD_GIAO_DICH_DETAIL();
+                        v_us_gd_detail.UseTransOfUSObject(m_us_don_vi_tinh);
+                        load_data_2_gd_detial(v_us_gd_detail);
+                        US_GD_GIA_BAN v_us_gd_gia_ban = new US_GD_GIA_BAN();
+                        v_us_gd_gia_ban.UseTransOfUSObject(m_us_don_vi_tinh);
+                        load_data_2_gd_gia_ban(v_us_gd_gia_ban);
+                        US_GD_SO_DU v_us_gd_so_du = new US_GD_SO_DU();
+                        v_us_gd_so_du.UseTransOfUSObject(m_us_don_vi_tinh);
+                        load_data_2_gd_so_du(v_us_gd_so_du);
+                        m_us_don_vi_tinh.CommitTransaction();
+                        restart_form();
+                        list.Clear();
+                        m_lbl_tong_tien.Text = "";
+                        tong_tien = 0;
+                        m_grv_nhap_thuoc.Rows.Clear();
+                        BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
+                    }
                     //DialogResult dgl = MessageBox.Show("Ban muon in hoa don khong", "In hoa don", MessageBoxButtons.YesNo);
                     //if (dgl == DialogResult.Yes) {
                     //    f513_report_nhap_thuoc frm = new f513_report_nhap_thuoc();
@@ -1287,6 +1321,7 @@ namespace BKI_QLHT
         private void m_cmd_upadate_Click(object sender, EventArgs e)
         {
             tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", ""));
+            m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[2].Value = m_txt_so_luong.Text;
             m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", ""))));
             m_lbl_tong_tien.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(tong_tien));
             list[m_grv_s_i].so_luong = int.Parse(m_txt_so_luong.Text);

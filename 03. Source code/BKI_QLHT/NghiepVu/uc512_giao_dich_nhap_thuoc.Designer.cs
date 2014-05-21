@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc512_giao_dich_nhap_thuoc));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.m_lbl_canh_bao_hsd = new System.Windows.Forms.Label();
             this.m_cmd_upadate = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_txt_add_thuoc = new System.Windows.Forms.Button();
@@ -102,9 +100,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.m_lbl_canh_bao_hsd);
             this.panel1.Controls.Add(this.m_cmd_upadate);
             this.panel1.Controls.Add(this.m_txt_add_thuoc);
             this.panel1.Controls.Add(this.m_txt_search_thuoc1);
@@ -141,36 +137,16 @@
             this.panel1.Size = new System.Drawing.Size(1117, 329);
             this.panel1.TabIndex = 0;
             // 
-            // label19
+            // m_lbl_canh_bao_hsd
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(277, 182);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(43, 16);
-            this.label19.TabIndex = 155;
-            this.label19.Text = "(VNĐ)";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(277, 157);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 16);
-            this.label18.TabIndex = 154;
-            this.label18.Text = "(VNĐ)";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(417, 130);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(213, 16);
-            this.label14.TabIndex = 153;
-            this.label14.Text = "(*Chú ý : HSD mặc định là 2 năm*)";
+            this.m_lbl_canh_bao_hsd.AutoSize = true;
+            this.m_lbl_canh_bao_hsd.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_canh_bao_hsd.ForeColor = System.Drawing.Color.Red;
+            this.m_lbl_canh_bao_hsd.Location = new System.Drawing.Point(417, 130);
+            this.m_lbl_canh_bao_hsd.Name = "m_lbl_canh_bao_hsd";
+            this.m_lbl_canh_bao_hsd.Size = new System.Drawing.Size(213, 16);
+            this.m_lbl_canh_bao_hsd.TabIndex = 153;
+            this.m_lbl_canh_bao_hsd.Text = "(*Chú ý : HSD mặc định là 2 năm*)";
             // 
             // m_cmd_upadate
             // 
@@ -245,7 +221,7 @@
             this.m_lbl_ma_giao_dich.AutoSize = true;
             this.m_lbl_ma_giao_dich.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_ma_giao_dich.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.m_lbl_ma_giao_dich.Location = new System.Drawing.Point(533, 33);
+            this.m_lbl_ma_giao_dich.Location = new System.Drawing.Point(495, 38);
             this.m_lbl_ma_giao_dich.Name = "m_lbl_ma_giao_dich";
             this.m_lbl_ma_giao_dich.Size = new System.Drawing.Size(52, 16);
             this.m_lbl_ma_giao_dich.TabIndex = 148;
@@ -256,7 +232,7 @@
             this.label123.AutoSize = true;
             this.label123.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label123.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label123.Location = new System.Drawing.Point(483, 33);
+            this.label123.Location = new System.Drawing.Point(445, 38);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(58, 16);
             this.label123.TabIndex = 147;
@@ -267,7 +243,7 @@
             this.m_lbl_dv_tinh_nhap.AutoSize = true;
             this.m_lbl_dv_tinh_nhap.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_dv_tinh_nhap.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.m_lbl_dv_tinh_nhap.Location = new System.Drawing.Point(339, 157);
+            this.m_lbl_dv_tinh_nhap.Location = new System.Drawing.Point(332, 157);
             this.m_lbl_dv_tinh_nhap.Name = "m_lbl_dv_tinh_nhap";
             this.m_lbl_dv_tinh_nhap.Size = new System.Drawing.Size(56, 16);
             this.m_lbl_dv_tinh_nhap.TabIndex = 139;
@@ -287,13 +263,13 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(318, 154);
+            this.label13.Location = new System.Drawing.Point(283, 157);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(15, 19);
+            this.label13.Size = new System.Drawing.Size(52, 16);
             this.label13.TabIndex = 138;
-            this.label13.Text = "/";
+            this.label13.Text = "(VNĐ) /";
             // 
             // label12
             // 
@@ -312,6 +288,7 @@
             this.m_txt_gia_nhap.Name = "m_txt_gia_nhap";
             this.m_txt_gia_nhap.Size = new System.Drawing.Size(105, 20);
             this.m_txt_gia_nhap.TabIndex = 5;
+            this.m_txt_gia_nhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // m_dtp_han_su_dung
             // 
@@ -348,7 +325,7 @@
             this.m_lbl_dv_tinh_ban.AutoSize = true;
             this.m_lbl_dv_tinh_ban.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_dv_tinh_ban.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.m_lbl_dv_tinh_ban.Location = new System.Drawing.Point(341, 181);
+            this.m_lbl_dv_tinh_ban.Location = new System.Drawing.Point(332, 185);
             this.m_lbl_dv_tinh_ban.Name = "m_lbl_dv_tinh_ban";
             this.m_lbl_dv_tinh_ban.Size = new System.Drawing.Size(56, 16);
             this.m_lbl_dv_tinh_ban.TabIndex = 146;
@@ -357,13 +334,13 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label24.Location = new System.Drawing.Point(318, 179);
+            this.label24.Location = new System.Drawing.Point(283, 182);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(15, 19);
+            this.label24.Size = new System.Drawing.Size(52, 16);
             this.label24.TabIndex = 145;
-            this.label24.Text = "/";
+            this.label24.Text = "(VNĐ) /";
             // 
             // m_txt_gia_ban
             // 
@@ -371,6 +348,7 @@
             this.m_txt_gia_ban.Name = "m_txt_gia_ban";
             this.m_txt_gia_ban.Size = new System.Drawing.Size(105, 20);
             this.m_txt_gia_ban.TabIndex = 6;
+            this.m_txt_gia_ban.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // m_cbo_nuoc_san_xuat
             // 
@@ -493,6 +471,7 @@
             this.m_txt_quy_doi_3.Name = "m_txt_quy_doi_3";
             this.m_txt_quy_doi_3.Size = new System.Drawing.Size(47, 23);
             this.m_txt_quy_doi_3.TabIndex = 4;
+            this.m_txt_quy_doi_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label22
             // 
@@ -540,6 +519,7 @@
             this.m_txt_quy_doi_2.Name = "m_txt_quy_doi_2";
             this.m_txt_quy_doi_2.Size = new System.Drawing.Size(47, 23);
             this.m_txt_quy_doi_2.TabIndex = 2;
+            this.m_txt_quy_doi_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -577,6 +557,7 @@
             this.m_txt_quy_doi_1.Name = "m_txt_quy_doi_1";
             this.m_txt_quy_doi_1.Size = new System.Drawing.Size(47, 23);
             this.m_txt_quy_doi_1.TabIndex = 0;
+            this.m_txt_quy_doi_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -603,6 +584,7 @@
             this.m_txt_so_luong.Name = "m_txt_so_luong";
             this.m_txt_so_luong.Size = new System.Drawing.Size(151, 20);
             this.m_txt_so_luong.TabIndex = 3;
+            this.m_txt_so_luong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -890,8 +872,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label m_lbl_canh_bao_hsd;
     }
 }
