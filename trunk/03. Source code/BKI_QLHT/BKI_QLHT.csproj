@@ -508,6 +508,12 @@
     <Compile Include="NghiepVu\uc807_v_so_du.Designer.cs">
       <DependentUpon>uc807_v_so_du.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\uc808_canh_bao_thuoc_sap_het_han.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\uc808_canh_bao_thuoc_sap_het_han.Designer.cs">
+      <DependentUpon>uc808_canh_bao_thuoc_sap_het_han.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\uc_802_gd_gia_ban.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -818,6 +824,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\uc807_v_so_du.resx">
       <DependentUpon>uc807_v_so_du.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\uc808_canh_bao_thuoc_sap_het_han.resx">
+      <DependentUpon>uc808_canh_bao_thuoc_sap_het_han.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\uc_802_gd_gia_ban.resx">
       <DependentUpon>uc_802_gd_gia_ban.cs</DependentUpon>
