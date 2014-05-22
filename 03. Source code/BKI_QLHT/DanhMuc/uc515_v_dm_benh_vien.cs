@@ -24,6 +24,7 @@ namespace BKI_QLHT
         public uc515_v_dm_benh_vien()
         {
             InitializeComponent();
+            format_controls();
         }
         #region Public Interface
         public void display()
