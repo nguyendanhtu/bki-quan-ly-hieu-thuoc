@@ -572,10 +572,105 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>V_BAO_CAO_DOANH_THU_TONG_HOP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="V_BC_DOANH_THU_BAC_SY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_BAC_SY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_BAC_SY_DE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_BAC_SY_DE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NCC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NGAY_KH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NGAY_KH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NGAY_NT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NGAY_NV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NGAY_NV_DE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NV_DE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NHOM_KH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NHOM_KH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NHOM_THUOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NHOM_THUOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NT_TEN_THUOC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NT_TEN_THUOC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_DOANH_THU_NV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_DOANH_THU_NV.xsd</DependentUpon>
+    </Compile>
     <Compile Include="V_BC_DOANH_THU_THEO_CAC_BAC_SY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_NHAP_THUOC_CAC_NV_N_NGAY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_NHAP_THUOC_NCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_NHAP_THUOC_NCC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_NHAP_THUOC_NCC_DE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_NHAP_THUOC_NCC_DE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_NHAP_THUOC_NGAY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_NHAP_THUOC_NGAY_N_HSX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY_N_HSX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_NHAP_THUOC_NHAN_VIEN_DE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_NHAP_THUOC_NHAN_VIEN_DE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="V_BC_XUAT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>V_BC_XUAT.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1653,6 +1748,127 @@
     <None Include="V_BAO_CAO_DOANH_THU_TONG_HOP.xss">
       <DependentUpon>V_BAO_CAO_DOANH_THU_TONG_HOP.xsd</DependentUpon>
     </None>
+    <None Include="V_BC_DOANH_THU_BAC_SY.xsc">
+      <DependentUpon>V_BC_DOANH_THU_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_BAC_SY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_BAC_SY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_BAC_SY.xss">
+      <DependentUpon>V_BC_DOANH_THU_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_BAC_SY_DE.xsc">
+      <DependentUpon>V_BC_DOANH_THU_BAC_SY_DE.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_BAC_SY_DE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_BAC_SY_DE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_BAC_SY_DE.xss">
+      <DependentUpon>V_BC_DOANH_THU_BAC_SY_DE.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NCC.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NCC.xss">
+      <DependentUpon>V_BC_DOANH_THU_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_KH.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NGAY_KH.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_KH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NGAY_KH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_KH.xss">
+      <DependentUpon>V_BC_DOANH_THU_NGAY_KH.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NT.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NT.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NGAY_NT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NT.xss">
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NT.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NV.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NV.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NGAY_NV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NV.xss">
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NV.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NV_DE.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NV_DE.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NV_DE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NGAY_NV_DE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NGAY_NV_DE.xss">
+      <DependentUpon>V_BC_DOANH_THU_NGAY_NV_DE.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NHOM_KH.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NHOM_KH.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NHOM_KH.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NHOM_KH.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NHOM_KH.xss">
+      <DependentUpon>V_BC_DOANH_THU_NHOM_KH.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NHOM_THUOC.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NHOM_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NHOM_THUOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NHOM_THUOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NHOM_THUOC.xss">
+      <DependentUpon>V_BC_DOANH_THU_NHOM_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NT_TEN_THUOC.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NT_TEN_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NT_TEN_THUOC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NT_TEN_THUOC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NT_TEN_THUOC.xss">
+      <DependentUpon>V_BC_DOANH_THU_NT_TEN_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NV.xsc">
+      <DependentUpon>V_BC_DOANH_THU_NV.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_DOANH_THU_NV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_DOANH_THU_NV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_DOANH_THU_NV.xss">
+      <DependentUpon>V_BC_DOANH_THU_NV.xsd</DependentUpon>
+    </None>
     <None Include="V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsc">
       <DependentUpon>V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
     </None>
@@ -1663,6 +1879,94 @@
     </None>
     <None Include="V_BC_DOANH_THU_THEO_CAC_BAC_SY.xss">
       <DependentUpon>V_BC_DOANH_THU_THEO_CAC_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xsc">
+      <DependentUpon>V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_NHAP_THUOC_CAC_NV_N_NGAY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xss">
+      <DependentUpon>V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NCC.xsc">
+      <DependentUpon>V_BC_NHAP_THUOC_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_NHAP_THUOC_NCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NCC.xss">
+      <DependentUpon>V_BC_NHAP_THUOC_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NCC_DE.xsc">
+      <DependentUpon>V_BC_NHAP_THUOC_NCC_DE.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NCC_DE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_NHAP_THUOC_NCC_DE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NCC_DE.xss">
+      <DependentUpon>V_BC_NHAP_THUOC_NCC_DE.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY.xsc">
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_NHAP_THUOC_NGAY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY.xss">
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY_N_HSX.xsc">
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY_N_HSX.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY_N_HSX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_NHAP_THUOC_NGAY_N_HSX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY_N_HSX.xss">
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY_N_HSX.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.xsc">
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.xss">
+      <DependentUpon>V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NHAN_VIEN_DE.xsc">
+      <DependentUpon>V_BC_NHAP_THUOC_NHAN_VIEN_DE.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NHAN_VIEN_DE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_NHAP_THUOC_NHAN_VIEN_DE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_NHAP_THUOC_NHAN_VIEN_DE.xss">
+      <DependentUpon>V_BC_NHAP_THUOC_NHAN_VIEN_DE.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_XUAT.xsc">
+      <DependentUpon>V_BC_XUAT.xsd</DependentUpon>
+    </None>
+    <None Include="V_BC_XUAT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>V_BC_XUAT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="V_BC_XUAT.xss">
+      <DependentUpon>V_BC_XUAT.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

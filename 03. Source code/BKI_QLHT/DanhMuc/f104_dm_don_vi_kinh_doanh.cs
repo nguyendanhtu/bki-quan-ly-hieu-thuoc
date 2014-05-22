@@ -45,12 +45,13 @@ namespace BKI_QLHT.DanhMuc
 
         private void Load_data_2_form()
         {
-            m_lbl_ma_nha_thuoc.Text = m_us_don_vi_kinh_doanh.strMA_VIET_TAT;
-            m_txt_ten_nha_thuoc.Text = m_us_don_vi_kinh_doanh.strTEN_DAY_DU;
-            m_txt_dia_chi.Text = m_us_don_vi_kinh_doanh.strDIA_CHI;
-            m_txt_ma_so_thue.Text = m_us_don_vi_kinh_doanh.strMA_SO_THUE;
-            m_txt_so_dien_thoai.Text = m_us_don_vi_kinh_doanh.strSDT;
-            m_txt_ghi_chu.Text = m_us_don_vi_kinh_doanh.strGHI_CHU_2;
+            m_us_don_vi_kinh_doanh.FillDataset(m_ds_don_vi_kinh_doanh);
+            m_lbl_ma_nha_thuoc.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0]["MA_VIET_TAT"].ToString();
+            m_txt_ten_nha_thuoc.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0][2].ToString();
+            m_txt_dia_chi.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0][3].ToString();
+            m_txt_ma_so_thue.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0][4].ToString();
+            m_txt_so_dien_thoai.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0][5].ToString();
+            m_txt_ghi_chu.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0][6].ToString();
         }
         private bool check_validate()
         {
