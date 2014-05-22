@@ -10,6 +10,15 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_BC_NHAP_THUOC_THEO_GIA
+    {
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string MA_GIAO_DICH = "MA_GIAO_DICH";
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string GIA_NHAP = "GIA_NHAP";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+    }
+
     public class V_BC_NHAP_THUOC_THEO_CAC_NCC
     {
         public const string TEN_NCC = "TEN_NCC";

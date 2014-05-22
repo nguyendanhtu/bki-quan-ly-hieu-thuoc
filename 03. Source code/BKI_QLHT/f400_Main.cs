@@ -947,5 +947,18 @@ namespace BKI_QLHT
             }
         }
 
+        private void button33_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f440_bcnt_theo_gia v_frm = new f440_bcnt_theo_gia();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
     }     
 }
