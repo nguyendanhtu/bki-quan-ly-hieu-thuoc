@@ -951,12 +951,26 @@ namespace BKI_QLHT
         {
             try
             {
-                f440_bcnt_theo_gia v_frm = new f440_bcnt_theo_gia();
-                v_frm.ShowDialog();
+                //f440_bcnt_theo_gia v_frm = new f440_bcnt_theo_gia();
+                //v_frm.ShowDialog();
             }
             catch (System.Exception ex)
             {
                 CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
+        private void m_cmd_don_vi_kinh_doanh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f104_dm_don_vi_kinh_doanh v_frm = new f104_dm_don_vi_kinh_doanh();
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
