@@ -367,6 +367,10 @@ namespace BKI_QLHT.NghiepVu
         private bool check_so_luong()
         {
             decimal num;
+            if (CIPConvert.ToDecimal(m_txt_so_luong.Text) == 0)
+            {
+                return false;
+            }
             bool isNumberic = decimal.TryParse(m_txt_so_luong.Text, out num);
 
             if (!isNumberic)
@@ -455,7 +459,8 @@ namespace BKI_QLHT.NghiepVu
             m_grv_quan_ly_ban_thuoc.Rows.Clear();
             txt_search_thuoc1.Text1 = "";
             m_txt_don_gia.Text = "";
-            m_cbo_don_vi_tinh.Text = "";
+            load_cbo_don_vi_tinh();
+            m_txt_so_luong.Text = "";
             tong_tien = 0;
             tong_tien_thanh_toan = 0;
             m_txt_tong_tien.Text = "0 VNĐ";
@@ -543,8 +548,8 @@ namespace BKI_QLHT.NghiepVu
                 m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                 m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", (CIPConvert.ToDecimal(tong_tien)-(CIPConvert.ToDecimal(tong_tien)*m_ti_le_chiet_khau)/100)) + " " + "VNĐ";
                 txt_search_thuoc1.Focus();
-                m_cbo_don_vi_tinh.Refresh();
-                m_txt_don_gia.Clear();
+                m_txt_don_gia.Text ="";
+                m_txt_so_luong.Text ="";
             }
             catch (Exception v_e)
             {
