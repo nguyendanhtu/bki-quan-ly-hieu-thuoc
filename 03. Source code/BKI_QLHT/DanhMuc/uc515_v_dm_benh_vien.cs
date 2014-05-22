@@ -152,13 +152,25 @@ namespace BKI_QLHT
             //	f515_v_dm_benh_vien_DE v_fDE = new f515_v_dm_benh_vien_DE();			
             //	v_fDE.display(m_us);
         }
+        private void load_grid_search()
+        {
+            string v_str_tu_khoa = m_txt_tu_khoa.Text;
+            US_V_DM_BENH_VIEN v_us = new US_V_DM_BENH_VIEN();
+            DS_V_DM_BENH_VIEN v_ds = new DS_V_DM_BENH_VIEN();
+            v_us.FillDataseSearch(v_ds, v_str_tu_khoa);
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
+            m_fg.Redraw = true;
+        }
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            m_cmd_search.Click+=new EventHandler(m_cmd_search_Click);
             this.Load += new System.EventHandler(this.uc515_v_dm_benh_vien_Load);
+            m_txt_tu_khoa.KeyUp+=new KeyEventHandler(m_txt_tu_khoa_KeyUp);
             //m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
         }
         #endregion
@@ -243,7 +255,40 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+        private void m_fg_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                update_v_dm_benh_vien();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_grid_search();
+            }
+            catch (Exception v_e)
+            {
 
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void m_txt_tu_khoa_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                load_grid_search();
+            }
+        }
+
+       
         #endregion
+
+        
     }
 }
