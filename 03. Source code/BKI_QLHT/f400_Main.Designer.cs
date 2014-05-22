@@ -135,6 +135,7 @@ namespace BKI_QLHT
             this.button33 = new System.Windows.Forms.Button();
             this.m_menu_item_don_vi_kinh_doanh = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_don_vi_kinh_doanh = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_baocao.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
@@ -1527,7 +1528,8 @@ namespace BKI_QLHT
             this.m_menu_item_don_vi_kinh_doanh.Dock = System.Windows.Forms.DockStyle.Left;
             this.m_menu_item_don_vi_kinh_doanh.ImageSize = DevComponents.DotNetBar.eBarImageSize.Medium;
             this.m_menu_item_don_vi_kinh_doanh.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.m_cmd_don_vi_kinh_doanh});
+            this.m_cmd_don_vi_kinh_doanh,
+            this.buttonItem1});
             this.m_menu_item_don_vi_kinh_doanh.Location = new System.Drawing.Point(605, 0);
             this.m_menu_item_don_vi_kinh_doanh.Name = "m_menu_item_don_vi_kinh_doanh";
             this.m_menu_item_don_vi_kinh_doanh.Size = new System.Drawing.Size(72, 83);
@@ -1550,6 +1552,12 @@ namespace BKI_QLHT
             this.m_cmd_don_vi_kinh_doanh.SubItemsExpandWidth = 14;
             this.m_cmd_don_vi_kinh_doanh.Text = "Thông tin nhà thuốc";
             this.m_cmd_don_vi_kinh_doanh.Click += new System.EventHandler(this.m_cmd_don_vi_kinh_doanh_Click);
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.SubItemsExpandWidth = 14;
+            this.buttonItem1.Text = "buttonItem1";
             // 
             // f400_Main
             // 
@@ -1728,5 +1736,6 @@ namespace BKI_QLHT
         private Button button33;
         private DevComponents.DotNetBar.RibbonBar m_menu_item_don_vi_kinh_doanh;
         private DevComponents.DotNetBar.ButtonItem m_cmd_don_vi_kinh_doanh;
+        private DevComponents.DotNetBar.ButtonItem buttonItem1;
     }
 }
