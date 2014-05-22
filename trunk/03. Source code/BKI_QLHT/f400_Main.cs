@@ -951,8 +951,8 @@ namespace BKI_QLHT
         {
             try
             {
-                //f440_bcnt_theo_gia v_frm = new f440_bcnt_theo_gia();
-                //v_frm.ShowDialog();
+                f440_bcnt_theo_gia v_frm = new f440_bcnt_theo_gia();
+                v_frm.ShowDialog();
             }
             catch (System.Exception ex)
             {
