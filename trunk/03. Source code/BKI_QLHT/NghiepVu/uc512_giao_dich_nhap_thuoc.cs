@@ -18,6 +18,7 @@ using BKI_QLHT.DS.CDBNames;
 using C1.Win.C1FlexGrid;
 using IP.Core.IPSystemAdmin;
 using System.Collections.Generic;
+using System.Globalization;
 
 
 namespace BKI_QLHT
@@ -885,11 +886,11 @@ namespace BKI_QLHT
                         ip_us_gd_so_du.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
                         ip_us_gd_so_du.dcSO_DU = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["SO_DU"]);
                         ip_us_gd_so_du.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
-                        //ip_us_gd_so_du.datNGAY_PHAT_SINH = CIPConvert.ToDatetime( v_ds_sd.Tables[0].Rows[0]["NGAY_PHAT_SINH"].ToString(),"dd/MM/yyyy");
-                        ip_us_gd_so_du.datNGAY_PHAT_SINH = DateTime.Now;
+                        ip_us_gd_so_du.datNGAY_PHAT_SINH = v_dat_nps;
                         ip_us_gd_so_du.strMOI_NHAT_YN = v_ds_sd.Tables[0].Rows[0]["MOI_NHAT_YN"].ToString();
                         ip_us_gd_so_du.strMOI_NHAT_YN = "N";
                         ip_us_gd_so_du.Update();
+                        ip_us_gd_so_du.datNGAY_PHAT_SINH = DateTime.Now;
                         ip_us_gd_so_du.dcID_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_THUOC"]);
                         ip_us_gd_so_du.dcID_DON_VI_THUOC = CIPConvert.ToDecimal(v_ds_sd.Tables[0].Rows[0]["ID_DON_VI_THUOC"]);
                         ip_us_gd_so_du.strMOI_NHAT_YN = "Y";
