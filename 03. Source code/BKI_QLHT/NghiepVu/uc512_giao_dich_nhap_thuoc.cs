@@ -1143,6 +1143,7 @@ namespace BKI_QLHT
                         m_lbl_tong_tien.Text = "";
                         tong_tien = 0;
                         m_grv_nhap_thuoc.Rows.Clear();
+                        //gen_Ma_GD();
                         BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
                     }
                     //DialogResult dgl = MessageBox.Show("Ban muon in hoa don khong", "In hoa don", MessageBoxButtons.YesNo);
