@@ -982,4 +982,13 @@
         public const string TEN_DON_VI = "TEN_DON_VI";
         public const string TEN_THUOC = "TEN_THUOC";
     }
+    public class V_DM_BENH_VIEN
+    {
+        public const string ID = "ID";
+        public const string MA_TU_DIEN = "MA_TU_DIEN";
+        public const string ID_LOAI_TU_DIEN = "ID_LOAI_TU_DIEN";
+        public const string TEN_NGAN = "TEN_NGAN";
+        public const string TEN = "TEN";
+        public const string GHI_CHU = "GHI_CHU";
+    }
 }

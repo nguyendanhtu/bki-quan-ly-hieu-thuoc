@@ -448,6 +448,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_DM_BAC_SY.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_DM_BENH_VIEN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_DM_BENH_VIEN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_DM_DON_VI.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1401,6 +1406,17 @@
     </None>
     <None Include="DS_V_DM_BAC_SY.xss">
       <DependentUpon>DS_V_DM_BAC_SY.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_BENH_VIEN.xsc">
+      <DependentUpon>DS_V_DM_BENH_VIEN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_DM_BENH_VIEN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_DM_BENH_VIEN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_DM_BENH_VIEN.xss">
+      <DependentUpon>DS_V_DM_BENH_VIEN.xsd</DependentUpon>
     </None>
     <None Include="DS_V_DM_DON_VI.xsc">
       <DependentUpon>DS_V_DM_DON_VI.xsd</DependentUpon>
