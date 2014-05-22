@@ -118,6 +118,7 @@
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_GIA.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_TONG_HOP.cs" />
     <Compile Include="US_V_DM_BAC_SY.cs" />
+    <Compile Include="US_V_DM_BENH_VIEN.cs" />
     <Compile Include="US_V_DM_DON_VI.cs" />
     <Compile Include="US_V_DM_DON_VI_TINH.cs" />
     <Compile Include="US_V_DM_HANG_SX.cs" />
