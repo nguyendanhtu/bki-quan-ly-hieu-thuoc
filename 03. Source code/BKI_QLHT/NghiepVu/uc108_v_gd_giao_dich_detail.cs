@@ -537,9 +537,9 @@ namespace BKI_QLHT.NghiepVu
                 m_grv_quan_ly_ban_thuoc.Rows[n].Cells[1].Value = txt_search_thuoc1.Text1;
                 m_grv_quan_ly_ban_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
                 m_grv_quan_ly_ban_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
-                m_grv_quan_ly_ban_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.ToString().Replace(",", ""))) + " " + "VNĐ";
-                m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",", "")))) + " " + "VNĐ";
-                tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", ""));
+                m_grv_quan_ly_ban_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.ToString().Replace(",", "").Replace(".",""))) + " " + "VNĐ";
+                m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",", "").Replace(".", "")))) + " " + "VNĐ";
+                tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "").Replace(".", ""));
                 m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                 m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", (CIPConvert.ToDecimal(tong_tien)-(CIPConvert.ToDecimal(tong_tien)*m_ti_le_chiet_khau)/100)) + " " + "VNĐ";
                 txt_search_thuoc1.Focus();
@@ -588,7 +588,7 @@ namespace BKI_QLHT.NghiepVu
                 m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value = m_cbo_don_vi_tinh.Text;
                 m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value = m_txt_don_gia.Text;
                 m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[5].Value = CIPConvert.ToDecimal(m_txt_don_gia.Text) * CIPConvert.ToDecimal(m_txt_so_luong.Text);
-                tong_tien = (tong_tien - tong_cu) + (int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "")));
+                tong_tien = (tong_tien - tong_cu) + (int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "").Replace(".", "")));
                 m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                 m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                 //thông báo và thoát khỏi chế độ sửa
@@ -835,9 +835,9 @@ namespace BKI_QLHT.NghiepVu
                         m_grv_quan_ly_ban_thuoc.Rows[n].Cells[1].Value = txt_search_thuoc1.Text1;
                         m_grv_quan_ly_ban_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
                         m_grv_quan_ly_ban_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
-                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.ToString().Replace(",", ""))) + " " + "VNĐ";
-                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",", "")))) + " " + "VNĐ";
-                        tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", ""));
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.ToString().Replace(",", "").Replace(".", ""))) + " " + "VNĐ";
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",", "").Replace(".", "")))) + " " + "VNĐ";
+                        tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "").Replace(".", ""));
                         m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                         m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                         txt_search_thuoc1.Focus();
@@ -863,7 +863,7 @@ namespace BKI_QLHT.NghiepVu
                         m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value = m_cbo_don_vi_tinh.Text;
                         m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value = m_txt_don_gia.Text;
                         m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[5].Value = CIPConvert.ToDecimal(m_txt_don_gia.Text) * CIPConvert.ToDecimal(m_txt_so_luong.Text);
-                        tong_tien = (tong_tien - tong_cu) + (int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "")));
+                        tong_tien = (tong_tien - tong_cu) + (int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "").Replace(".", "")));
                         m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                         m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                         //thông báo và thoát khỏi chế độ sửa
@@ -912,9 +912,9 @@ namespace BKI_QLHT.NghiepVu
                         m_grv_quan_ly_ban_thuoc.Rows[n].Cells[1].Value = txt_search_thuoc1.Text1;
                         m_grv_quan_ly_ban_thuoc.Rows[n].Cells[2].Value = m_txt_so_luong.Text;
                         m_grv_quan_ly_ban_thuoc.Rows[n].Cells[3].Value = m_cbo_don_vi_tinh.Text;
-                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.ToString().Replace(",", ""))) + " " + "VNĐ";
-                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",", "")))) + " " + "VNĐ";
-                        tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", ""));
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.ToString().Replace(",", "").Replace(".", ""))) + " " + "VNĐ";
+                        m_grv_quan_ly_ban_thuoc.Rows[n].Cells[5].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.ToString().Replace(",", "").Replace(".", "")))) + " " + "VNĐ";
+                        tong_tien += int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "").Replace(".", ""));
                         m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                         m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                         txt_search_thuoc1.Focus();
@@ -940,7 +940,7 @@ namespace BKI_QLHT.NghiepVu
                         m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value = m_cbo_don_vi_tinh.Text;
                         m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value = m_txt_don_gia.Text;
                         m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[5].Value = CIPConvert.ToDecimal(m_txt_don_gia.Text) * CIPConvert.ToDecimal(m_txt_so_luong.Text);
-                        tong_tien = (tong_tien - tong_cu) + (int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "")));
+                        tong_tien = (tong_tien - tong_cu) + (int.Parse(m_txt_so_luong.Text.ToString()) * int.Parse(m_txt_don_gia.Text.Trim().Replace(",", "").Replace(".", "")));
                         m_txt_tong_tien.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                         m_txt_tong_tien_thanh_toan.Text = string.Format("{0:0,#}", CIPConvert.ToDecimal(tong_tien)) + " " + "VNĐ";
                         //thông báo và thoát khỏi chế độ sửa
