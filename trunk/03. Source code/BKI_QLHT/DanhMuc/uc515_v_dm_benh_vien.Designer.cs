@@ -181,6 +181,7 @@
             this.m_fg.Size = new System.Drawing.Size(1132, 412);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 46;
+            this.m_fg.DoubleClick += new System.EventHandler(this.m_fg_DoubleClick);
             // 
             // m_pnl_control
             // 
