@@ -409,6 +409,22 @@
         public const string ID = "ID";
         public const string FORM_NAME = "FORM_NAME";
         public const string DISPLAY_NAME = "DISPLAY_NAME";
+        public const string MENU_ITEM_NAME = "MENU_ITEM_NAME";
+    }
+    public class HT_PHAN_QUYEN
+    {
+        public const string ID = "ID";
+        public const string ID_USER_GROUP = "ID_USER_GROUP";
+        public const string ID_CONTROL = "ID_CONTROL";
+    }
+    public class HT_FORM_CONTROL
+    {
+        public const string ID = "ID";
+        public const string ID_FORM = "ID_FORM";
+        public const string CONTROL_NAME = "CONTROL_NAME";
+        public const string CONTROL_TYPE = "CONTROL_TYPE";
+        public const string CONTROL_DISPLAY = "CONTROL_DISPLAY";
+        public const string CONTROL_TEXT = "CONTROL_TEXT";
     }
 
 
@@ -638,7 +654,7 @@
     }
 
 
-      public class DM_PHAP_NHAN
+    public class DM_PHAP_NHAN
     {
         public const string ID = "ID";
         public const string MA_PHAP_NHAN = "MA_PHAP_NHAN";
