@@ -496,9 +496,15 @@ namespace BKI_QLHT
                 m_v_us.FillDatasetSearchMax(m_v_ds, "", v_dat_ngay_bd, v_dat_ngay_kt);
             if ((m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") && m_rbd_min.Checked == true)
                 m_v_us.FillDatasetSearchMin(m_v_ds, "", v_dat_ngay_bd, v_dat_ngay_kt);
-            else 
-                m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
-
+            else
+            {
+                if(m_rbd_all.Checked==true)
+                    m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
+                if (m_rbd_max.Checked == true)
+                    m_v_us.FillDatasetSearchMax(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
+                if (m_rbd_min.Checked == true)
+                    m_v_us.FillDatasetSearchMin(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
+            }
             //m_v_us.FillDataset(m_v_ds);
             var v_str_search = m_txt_tim_kiem.Text.Trim();
             if (v_str_search.Equals(m_str_tim_kiem))
