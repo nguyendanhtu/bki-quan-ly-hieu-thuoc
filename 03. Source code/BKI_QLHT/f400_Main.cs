@@ -974,5 +974,10 @@ namespace BKI_QLHT
             }
         }
 
+        private void m_cmd_dm_benh_vien_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }     
 }
