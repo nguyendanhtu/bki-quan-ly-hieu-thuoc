@@ -132,6 +132,7 @@ namespace BKI_QLHT
             this.button30 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_baocao.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
@@ -212,6 +213,7 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_baocao.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_baocao.TabIndex = 4;
+            this.m_ribbonPanel_baocao.Visible = true;
             // 
             // ribbonBar1
             // 
@@ -1084,6 +1086,7 @@ namespace BKI_QLHT
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 0;
+            this.panelDockContainer1.Visible = true;
             // 
             // buttonX2
             // 
@@ -1101,7 +1104,6 @@ namespace BKI_QLHT
             this.m_cmd_lich_su_gia_ban.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.m_cmd_lich_su_gia_ban.Location = new System.Drawing.Point(0, 0);
             this.m_cmd_lich_su_gia_ban.Name = "m_cmd_lich_su_gia_ban";
-            this.m_cmd_lich_su_gia_ban.Size = new System.Drawing.Size(0, 0);
             this.m_cmd_lich_su_gia_ban.TabIndex = 2;
             // 
             // dockContainerItem1
@@ -1498,6 +1500,16 @@ namespace BKI_QLHT
             this.button32.UseVisualStyleBackColor = true;
             this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(17, 389);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(55, 23);
+            this.button33.TabIndex = 49;
+            this.button33.Text = "440";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1505,6 +1517,7 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(823, 587);
+            this.Controls.Add(this.button33);
             this.Controls.Add(this.button32);
             this.Controls.Add(this.button31);
             this.Controls.Add(this.button30);
@@ -1671,5 +1684,6 @@ namespace BKI_QLHT
         private Button button32;
         private Button button31;
         private DevComponents.DotNetBar.RibbonBar ribbonBar1;
+        private Button button33;
     }
 }

@@ -115,6 +115,7 @@
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_NGAY_N_NSX.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_NSX.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_NSX_DE.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_THEO_GIA.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_TONG_HOP.cs" />
     <Compile Include="US_V_DM_BAC_SY.cs" />
     <Compile Include="US_V_DM_DON_VI.cs" />
