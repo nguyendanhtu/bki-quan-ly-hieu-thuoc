@@ -976,6 +976,8 @@ namespace BKI_QLHT
 
         private void m_cmd_dm_benh_vien_Click(object sender, EventArgs e)
         {
+            f515_v_dm_benh_vien frm = new f515_v_dm_benh_vien();
+            frm.ShowDialog();
 
         }
 
