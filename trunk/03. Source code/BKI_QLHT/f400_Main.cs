@@ -96,6 +96,7 @@ namespace BKI_QLHT
         private void format_controls()
         {
             CControlFormat.setFormStyle(this);
+            this.MinimizeBox = true;
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             Left = Top = 0;
             Width = Screen.PrimaryScreen.WorkingArea.Width;
@@ -928,163 +929,23 @@ namespace BKI_QLHT
             }
         }
 
-
-
-
-
-        //private void m_menu_item_he_thong_nguoi_su_dung_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        f999_ht_nguoi_su_dung frm = new f999_ht_nguoi_su_dung();
-        //        frm.Show();
-        //    }
-        //    catch (System.Exception v_e)
-        //    {
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-
-        //}
-
-        //private void m_menu_item_he_thong_nhom_nguoi_su__dung_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        f997_ht_nhom_nguoi_su_dung frm = new f997_ht_nhom_nguoi_su_dung();
-        //        frm.Show();
-        //    }
-        //    catch (System.Exception v_e)
-        //    {
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-
-
-        //}
-
-        //private void m_menu_item_he_thong_nhat_ky_he_thong_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-
-        //    }
-        //    catch (System.Exception v_e)
-        //    {
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-
-        //}
-
-        //private void m_menu_item_he_thong_phan_quyen_cho_nhom_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        f995_ht_phan_quyen_cho_nhom frm = new f995_ht_phan_quyen_cho_nhom();
-        //        frm.ShowDialog();
-        //    }
-        //    catch (System.Exception v_e)
-        //    {
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-
-        //}
-
-        //private void m_menu_item_tu_dien_he_thong_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-
-        //    }
-        //    catch (System.Exception v_e)
-        //    {
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-
-        //}
-
-        //private void m_menu_item_he_thong_thoat_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        Application.Exit();
-        //    }
-        //    catch (System.Exception v_e)
-        //    {
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-
-        //}
-
-        //private void m_menu_item_danh_muc_bac_si_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        f100_V_DM_BAC_SY v_frm_f100_V_DM_BAC_SY = new f100_V_DM_BAC_SY();
-        //        v_frm_f100_V_DM_BAC_SY.ShowDialog();
-        //    }
-        //    catch (Exception v_e)
-        //    {
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-        //}
-
-        //private void m_menu_item_danh_muc_thuoc_Click(object sender, EventArgs e)
-        //{
-        //    f500_dm_danh_muc_thuoc frm = new f500_dm_danh_muc_thuoc();
-        //    frm.ShowDialog();
-        //}
-
-        //private void m_menu_item_danh_muc_nha_cung_cap_Click(object sender, EventArgs e)
-        //{
-        //    f800_dm_nha_cung_cap frm = new f800_dm_nha_cung_cap();
-        //    frm.ShowDialog();
-        //}
-
-        //private void m_menu_item_danh_muc_khach_hang_Click(object sender, EventArgs e)
-        //{
-        //    f801_dm_khach_hang frm = new f801_dm_khach_hang();
-        //    frm.ShowDialog();
-        //}
-
-        //private void m_menu_item_danh_muc_nhom_khach_hang_Click(object sender, EventArgs e)
-        //{
-        //    f101_dm_nhom_khach_hang frm = new f101_dm_nhom_khach_hang();
-        //    frm.ShowDialog();
-        //}
-
-        //private void m_menu_item_danh_muc_nhom_thuoc_Click(object sender, EventArgs e)
-        //{
-        //    f501_v_dm_nhom_thuoc frm = new f501_v_dm_nhom_thuoc();
-        //    frm.ShowDialog();
-        //}
-
-        //private void m_menu_item_thuoc_Click(object sender, EventArgs e)
-        //{
-        //    f502_v_dm_thuoc frm = new f502_v_dm_thuoc();
-        //    frm.ShowDialog();
-        //}
-
-        //private void m_menu_item_he_thong_danh_muc_control_Click(object sender, EventArgs e)
-        //{
-        //    f991_v_ht_control_in_form v_frm = new f991_v_ht_control_in_form();
-        //    v_frm.display();
-        //}
-
-        //private void m_menu_item_he_thong_phan_quyen_he_thong_Click(object sender, EventArgs e)
-        //{
-        //    f993_phan_quyen_he_thong v_frm = new f993_phan_quyen_he_thong();
-        //    v_frm.display();
-        //}
-
-        //private void m_menu_item_he_thong_phan_quyen_chi_tiet_Click(object sender, EventArgs e)
-        //{
-        //    f994_phan_quyen_detail v_frm = new f994_phan_quyen_detail();
-        //    v_frm.ShowDialog();
-        //}
-
-
-
-
-
+        private void f400_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn cập nhật thống kê không?",
+                "Quản lý bán thuốc", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                
+                BaseMessages.MsgBox_Infor("Đã cập nhật");
+                return;
+         
+            }
+            if (result == DialogResult.No)
+            {
+                BaseMessages.MsgBox_Infor("Chưa cập nhật");
+                return;
+            }
+        }
 
     }     
 }
