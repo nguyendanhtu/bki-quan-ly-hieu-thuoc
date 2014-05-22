@@ -137,6 +137,22 @@ public class US_V_BC_NHAP_THUOC_THEO_GIA : US_Object
         v_sp.addDatetimeInputParam("@DAT_KT", i_dat_ngay_kt);
         v_sp.fillDataSetByCommand(this, op_ds_bc_da);
     }
+    public void FillDatasetSearchMax(DS_V_BC_NHAP_THUOC_THEO_GIA op_ds_bc_da, string i_str_tu_khoa, DateTime i_dat_ngay_bd, DateTime i_dat_ngay_kt)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_BC_NHAP_THUOC_THEO_GIA_MAX_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_tu_khoa);
+        v_sp.addDatetimeInputParam("@DAT_BD", i_dat_ngay_bd);
+        v_sp.addDatetimeInputParam("@DAT_KT", i_dat_ngay_kt);
+        v_sp.fillDataSetByCommand(this, op_ds_bc_da);
+    }
+    public void FillDatasetSearchMin(DS_V_BC_NHAP_THUOC_THEO_GIA op_ds_bc_da, string i_str_tu_khoa, DateTime i_dat_ngay_bd, DateTime i_dat_ngay_kt)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_BC_NHAP_THUOC_THEO_GIA_MIN_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_tu_khoa);
+        v_sp.addDatetimeInputParam("@DAT_BD", i_dat_ngay_bd);
+        v_sp.addDatetimeInputParam("@DAT_KT", i_dat_ngay_kt);
+        v_sp.fillDataSetByCommand(this, op_ds_bc_da);
+    }
 	public US_V_BC_NHAP_THUOC_THEO_GIA() 
 	{
 		pm_objDS = new DS_V_BC_NHAP_THUOC_THEO_GIA();

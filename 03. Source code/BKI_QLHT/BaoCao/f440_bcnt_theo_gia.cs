@@ -51,6 +51,9 @@ namespace BKI_QLHT
         private Label m_lbl_nguoi_lam_bao_cao;
         private Label m_lbl_count;
         private Label label1;
+        private RadioButton m_rbd_all;
+        private RadioButton m_rbd_max;
+        private RadioButton m_rbd_min;
 		private System.ComponentModel.IContainer components;
 
 		public f440_bcnt_theo_gia()
@@ -108,6 +111,9 @@ namespace BKI_QLHT
             this.m_lbl_nguoi_lam_bao_cao = new System.Windows.Forms.Label();
             this.m_lbl_count = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.m_rbd_all = new System.Windows.Forms.RadioButton();
+            this.m_rbd_max = new System.Windows.Forms.RadioButton();
+            this.m_rbd_min = new System.Windows.Forms.RadioButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -318,10 +324,44 @@ namespace BKI_QLHT
             this.label1.TabIndex = 2892;
             this.label1.Text = "Số kết quả trong báo cáo";
             // 
+            // m_rbd_all
+            // 
+            this.m_rbd_all.AutoSize = true;
+            this.m_rbd_all.Checked = true;
+            this.m_rbd_all.Location = new System.Drawing.Point(15, 105);
+            this.m_rbd_all.Name = "m_rbd_all";
+            this.m_rbd_all.Size = new System.Drawing.Size(56, 17);
+            this.m_rbd_all.TabIndex = 2900;
+            this.m_rbd_all.Text = "Tất cả";
+            this.m_rbd_all.UseVisualStyleBackColor = true;
+            // 
+            // m_rbd_max
+            // 
+            this.m_rbd_max.AutoSize = true;
+            this.m_rbd_max.Location = new System.Drawing.Point(82, 105);
+            this.m_rbd_max.Name = "m_rbd_max";
+            this.m_rbd_max.Size = new System.Drawing.Size(106, 17);
+            this.m_rbd_max.TabIndex = 2901;
+            this.m_rbd_max.Text = "Các giá cao nhất";
+            this.m_rbd_max.UseVisualStyleBackColor = true;
+            // 
+            // m_rbd_min
+            // 
+            this.m_rbd_min.AutoSize = true;
+            this.m_rbd_min.Location = new System.Drawing.Point(194, 105);
+            this.m_rbd_min.Name = "m_rbd_min";
+            this.m_rbd_min.Size = new System.Drawing.Size(109, 17);
+            this.m_rbd_min.TabIndex = 2902;
+            this.m_rbd_min.Text = "Các giá thấp nhất";
+            this.m_rbd_min.UseVisualStyleBackColor = true;
+            // 
             // f440_bcnt_theo_gia
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(704, 409);
+            this.Controls.Add(this.m_rbd_min);
+            this.Controls.Add(this.m_rbd_max);
+            this.Controls.Add(this.m_rbd_all);
             this.Controls.Add(this.m_lbl_nguoi_lam_bc);
             this.Controls.Add(this.m_lbl_ngay_lam_bc);
             this.Controls.Add(this.label3);
@@ -450,8 +490,14 @@ namespace BKI_QLHT
                 v_dat_ngay_kt = m_dat_den_ngay.Value;
             }
 
-            if (m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") m_v_us.FillDatasetSearch(m_v_ds, "", v_dat_ngay_bd, v_dat_ngay_kt);
-            else m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
+            if ((m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "")&&m_rbd_all.Checked==true) 
+                m_v_us.FillDatasetSearch(m_v_ds, "", v_dat_ngay_bd, v_dat_ngay_kt);
+            if ((m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") && m_rbd_max.Checked == true)
+                m_v_us.FillDatasetSearchMax(m_v_ds, "", v_dat_ngay_bd, v_dat_ngay_kt);
+            if ((m_txt_tim_kiem.Text.Trim() == m_str_tim_kiem || m_txt_tim_kiem.Text.Trim() == "") && m_rbd_min.Checked == true)
+                m_v_us.FillDatasetSearchMin(m_v_ds, "", v_dat_ngay_bd, v_dat_ngay_kt);
+            else 
+                m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
 
             //m_v_us.FillDataset(m_v_ds);
             var v_str_search = m_txt_tim_kiem.Text.Trim();
