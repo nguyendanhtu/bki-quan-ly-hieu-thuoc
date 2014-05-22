@@ -432,6 +432,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BC_NHAP_THUOC_THEO_CAC_NSX_de.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_BC_NHAP_THUOC_THEO_GIA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BC_NHAP_THUOC_THEO_GIA.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_BC_NHAP_THUOC_TONG_HOP.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1362,6 +1367,17 @@
     </None>
     <None Include="DS_V_BC_NHAP_THUOC_THEO_CAC_NSX_de.xss">
       <DependentUpon>DS_V_BC_NHAP_THUOC_THEO_CAC_NSX_de.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_THEO_GIA.xsc">
+      <DependentUpon>DS_V_BC_NHAP_THUOC_THEO_GIA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_THEO_GIA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BC_NHAP_THUOC_THEO_GIA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_THEO_GIA.xss">
+      <DependentUpon>DS_V_BC_NHAP_THUOC_THEO_GIA.xsd</DependentUpon>
     </None>
     <None Include="DS_V_BC_NHAP_THUOC_TONG_HOP.xsc">
       <DependentUpon>DS_V_BC_NHAP_THUOC_TONG_HOP.xsd</DependentUpon>
