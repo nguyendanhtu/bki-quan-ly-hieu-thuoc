@@ -164,6 +164,7 @@
     </Compile>
     <Compile Include="DS_GD_SO_DU.cs">
       <DependentUpon>DS_GD_SO_DU.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DS_GD_SO_DU.Designer.cs">
       <AutoGen>True</AutoGen>
