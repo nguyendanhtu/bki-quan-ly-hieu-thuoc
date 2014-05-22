@@ -20,17 +20,17 @@ namespace BKI_QLHT.DS {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DS_HT_FORM")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DS_HT_FORM_CONTROL")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DS_HT_FORM : global::System.Data.DataSet {
+    public partial class DS_HT_FORM_CONTROL : global::System.Data.DataSet {
         
-        private HT_FORMDataTable tableHT_FORM;
+        private HT_FORM_CONTROLDataTable tableHT_FORM_CONTROL;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DS_HT_FORM() {
+        public DS_HT_FORM_CONTROL() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace BKI_QLHT.DS {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DS_HT_FORM(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DS_HT_FORM_CONTROL(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace BKI_QLHT.DS {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["HT_FORM"] != null)) {
-                    base.Tables.Add(new HT_FORMDataTable(ds.Tables["HT_FORM"]));
+                if ((ds.Tables["HT_FORM_CONTROL"] != null)) {
+                    base.Tables.Add(new HT_FORM_CONTROLDataTable(ds.Tables["HT_FORM_CONTROL"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace BKI_QLHT.DS {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public HT_FORMDataTable HT_FORM {
+        public HT_FORM_CONTROLDataTable HT_FORM_CONTROL {
             get {
-                return this.tableHT_FORM;
+                return this.tableHT_FORM_CONTROL;
             }
         }
         
@@ -127,7 +127,7 @@ namespace BKI_QLHT.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DS_HT_FORM cln = ((DS_HT_FORM)(base.Clone()));
+            DS_HT_FORM_CONTROL cln = ((DS_HT_FORM_CONTROL)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace BKI_QLHT.DS {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["HT_FORM"] != null)) {
-                    base.Tables.Add(new HT_FORMDataTable(ds.Tables["HT_FORM"]));
+                if ((ds.Tables["HT_FORM_CONTROL"] != null)) {
+                    base.Tables.Add(new HT_FORM_CONTROLDataTable(ds.Tables["HT_FORM_CONTROL"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace BKI_QLHT.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableHT_FORM = ((HT_FORMDataTable)(base.Tables["HT_FORM"]));
+            this.tableHT_FORM_CONTROL = ((HT_FORM_CONTROLDataTable)(base.Tables["HT_FORM_CONTROL"]));
             if ((initTable == true)) {
-                if ((this.tableHT_FORM != null)) {
-                    this.tableHT_FORM.InitVars();
+                if ((this.tableHT_FORM_CONTROL != null)) {
+                    this.tableHT_FORM_CONTROL.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace BKI_QLHT.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DS_HT_FORM";
+            this.DataSetName = "DS_HT_FORM_CONTROL";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DS_HT_FORM.xsd";
+            this.Namespace = "http://tempuri.org/DS_HT_FORM_CONTROL.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableHT_FORM = new HT_FORMDataTable();
-            base.Tables.Add(this.tableHT_FORM);
+            this.tableHT_FORM_CONTROL = new HT_FORM_CONTROLDataTable();
+            base.Tables.Add(this.tableHT_FORM_CONTROL);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeHT_FORM() {
+        private bool ShouldSerializeHT_FORM_CONTROL() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace BKI_QLHT.DS {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DS_HT_FORM ds = new DS_HT_FORM();
+            DS_HT_FORM_CONTROL ds = new DS_HT_FORM_CONTROL();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,31 @@ namespace BKI_QLHT.DS {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void HT_FORMRowChangeEventHandler(object sender, HT_FORMRowChangeEvent e);
+        public delegate void HT_FORM_CONTROLRowChangeEventHandler(object sender, HT_FORM_CONTROLRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class HT_FORMDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
+        public partial class HT_FORM_CONTROLDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnFORM_NAME;
+            private global::System.Data.DataColumn columnID_FORM;
             
-            private global::System.Data.DataColumn columnDISPLAY_NAME;
+            private global::System.Data.DataColumn columnCONTROL_NAME;
             
-            private global::System.Data.DataColumn columnMENU_ITEM_NAME;
+            private global::System.Data.DataColumn columnCONTROL_TYPE;
+            
+            private global::System.Data.DataColumn columnCONTROL_DISPLAY;
+            
+            private global::System.Data.DataColumn columnCONTROL_TEXT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HT_FORMDataTable() {
-                this.TableName = "HT_FORM";
+            public HT_FORM_CONTROLDataTable() {
+                this.TableName = "HT_FORM_CONTROL";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +302,7 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal HT_FORMDataTable(global::System.Data.DataTable table) {
+            internal HT_FORM_CONTROLDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +319,7 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected HT_FORMDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected HT_FORM_CONTROLDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -330,25 +334,41 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FORM_NAMEColumn {
+            public global::System.Data.DataColumn ID_FORMColumn {
                 get {
-                    return this.columnFORM_NAME;
+                    return this.columnID_FORM;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DISPLAY_NAMEColumn {
+            public global::System.Data.DataColumn CONTROL_NAMEColumn {
                 get {
-                    return this.columnDISPLAY_NAME;
+                    return this.columnCONTROL_NAME;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MENU_ITEM_NAMEColumn {
+            public global::System.Data.DataColumn CONTROL_TYPEColumn {
                 get {
-                    return this.columnMENU_ITEM_NAME;
+                    return this.columnCONTROL_TYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CONTROL_DISPLAYColumn {
+                get {
+                    return this.columnCONTROL_DISPLAY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CONTROL_TEXTColumn {
+                get {
+                    return this.columnCONTROL_TEXT;
                 }
             }
             
@@ -363,48 +383,50 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HT_FORMRow this[int index] {
+            public HT_FORM_CONTROLRow this[int index] {
                 get {
-                    return ((HT_FORMRow)(this.Rows[index]));
+                    return ((HT_FORM_CONTROLRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event HT_FORMRowChangeEventHandler HT_FORMRowChanging;
+            public event HT_FORM_CONTROLRowChangeEventHandler HT_FORM_CONTROLRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event HT_FORMRowChangeEventHandler HT_FORMRowChanged;
+            public event HT_FORM_CONTROLRowChangeEventHandler HT_FORM_CONTROLRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event HT_FORMRowChangeEventHandler HT_FORMRowDeleting;
+            public event HT_FORM_CONTROLRowChangeEventHandler HT_FORM_CONTROLRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event HT_FORMRowChangeEventHandler HT_FORMRowDeleted;
+            public event HT_FORM_CONTROLRowChangeEventHandler HT_FORM_CONTROLRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddHT_FORMRow(HT_FORMRow row) {
+            public void AddHT_FORM_CONTROLRow(HT_FORM_CONTROLRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HT_FORMRow AddHT_FORMRow(string FORM_NAME, string DISPLAY_NAME, string MENU_ITEM_NAME) {
-                HT_FORMRow rowHT_FORMRow = ((HT_FORMRow)(this.NewRow()));
+            public HT_FORM_CONTROLRow AddHT_FORM_CONTROLRow(decimal ID_FORM, string CONTROL_NAME, string CONTROL_TYPE, string CONTROL_DISPLAY, string CONTROL_TEXT) {
+                HT_FORM_CONTROLRow rowHT_FORM_CONTROLRow = ((HT_FORM_CONTROLRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        FORM_NAME,
-                        DISPLAY_NAME,
-                        MENU_ITEM_NAME};
-                rowHT_FORMRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowHT_FORMRow);
-                return rowHT_FORMRow;
+                        ID_FORM,
+                        CONTROL_NAME,
+                        CONTROL_TYPE,
+                        CONTROL_DISPLAY,
+                        CONTROL_TEXT};
+                rowHT_FORM_CONTROLRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowHT_FORM_CONTROLRow);
+                return rowHT_FORM_CONTROLRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HT_FORMRow FindByID(decimal ID) {
-                return ((HT_FORMRow)(this.Rows.Find(new object[] {
+            public HT_FORM_CONTROLRow FindByID(decimal ID) {
+                return ((HT_FORM_CONTROLRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
@@ -417,7 +439,7 @@ namespace BKI_QLHT.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                HT_FORMDataTable cln = ((HT_FORMDataTable)(base.Clone()));
+                HT_FORM_CONTROLDataTable cln = ((HT_FORM_CONTROLDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -425,16 +447,18 @@ namespace BKI_QLHT.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new HT_FORMDataTable();
+                return new HT_FORM_CONTROLDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnFORM_NAME = base.Columns["FORM_NAME"];
-                this.columnDISPLAY_NAME = base.Columns["DISPLAY_NAME"];
-                this.columnMENU_ITEM_NAME = base.Columns["MENU_ITEM_NAME"];
+                this.columnID_FORM = base.Columns["ID_FORM"];
+                this.columnCONTROL_NAME = base.Columns["CONTROL_NAME"];
+                this.columnCONTROL_TYPE = base.Columns["CONTROL_TYPE"];
+                this.columnCONTROL_DISPLAY = base.Columns["CONTROL_DISPLAY"];
+                this.columnCONTROL_TEXT = base.Columns["CONTROL_TEXT"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -442,12 +466,16 @@ namespace BKI_QLHT.DS {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnFORM_NAME = new global::System.Data.DataColumn("FORM_NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFORM_NAME);
-                this.columnDISPLAY_NAME = new global::System.Data.DataColumn("DISPLAY_NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDISPLAY_NAME);
-                this.columnMENU_ITEM_NAME = new global::System.Data.DataColumn("MENU_ITEM_NAME", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMENU_ITEM_NAME);
+                this.columnID_FORM = new global::System.Data.DataColumn("ID_FORM", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_FORM);
+                this.columnCONTROL_NAME = new global::System.Data.DataColumn("CONTROL_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONTROL_NAME);
+                this.columnCONTROL_TYPE = new global::System.Data.DataColumn("CONTROL_TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONTROL_TYPE);
+                this.columnCONTROL_DISPLAY = new global::System.Data.DataColumn("CONTROL_DISPLAY", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONTROL_DISPLAY);
+                this.columnCONTROL_TEXT = new global::System.Data.DataColumn("CONTROL_TEXT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONTROL_TEXT);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -456,36 +484,39 @@ namespace BKI_QLHT.DS {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnFORM_NAME.AllowDBNull = false;
-                this.columnFORM_NAME.MaxLength = 250;
-                this.columnDISPLAY_NAME.MaxLength = 250;
-                this.columnMENU_ITEM_NAME.MaxLength = 100;
+                this.columnID_FORM.AllowDBNull = false;
+                this.columnCONTROL_NAME.AllowDBNull = false;
+                this.columnCONTROL_NAME.MaxLength = 50;
+                this.columnCONTROL_TYPE.AllowDBNull = false;
+                this.columnCONTROL_TYPE.MaxLength = 50;
+                this.columnCONTROL_DISPLAY.MaxLength = 100;
+                this.columnCONTROL_TEXT.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HT_FORMRow NewHT_FORMRow() {
-                return ((HT_FORMRow)(this.NewRow()));
+            public HT_FORM_CONTROLRow NewHT_FORM_CONTROLRow() {
+                return ((HT_FORM_CONTROLRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new HT_FORMRow(builder);
+                return new HT_FORM_CONTROLRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(HT_FORMRow);
+                return typeof(HT_FORM_CONTROLRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.HT_FORMRowChanged != null)) {
-                    this.HT_FORMRowChanged(this, new HT_FORMRowChangeEvent(((HT_FORMRow)(e.Row)), e.Action));
+                if ((this.HT_FORM_CONTROLRowChanged != null)) {
+                    this.HT_FORM_CONTROLRowChanged(this, new HT_FORM_CONTROLRowChangeEvent(((HT_FORM_CONTROLRow)(e.Row)), e.Action));
                 }
             }
             
@@ -493,8 +524,8 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.HT_FORMRowChanging != null)) {
-                    this.HT_FORMRowChanging(this, new HT_FORMRowChangeEvent(((HT_FORMRow)(e.Row)), e.Action));
+                if ((this.HT_FORM_CONTROLRowChanging != null)) {
+                    this.HT_FORM_CONTROLRowChanging(this, new HT_FORM_CONTROLRowChangeEvent(((HT_FORM_CONTROLRow)(e.Row)), e.Action));
                 }
             }
             
@@ -502,8 +533,8 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.HT_FORMRowDeleted != null)) {
-                    this.HT_FORMRowDeleted(this, new HT_FORMRowChangeEvent(((HT_FORMRow)(e.Row)), e.Action));
+                if ((this.HT_FORM_CONTROLRowDeleted != null)) {
+                    this.HT_FORM_CONTROLRowDeleted(this, new HT_FORM_CONTROLRowChangeEvent(((HT_FORM_CONTROLRow)(e.Row)), e.Action));
                 }
             }
             
@@ -511,14 +542,14 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.HT_FORMRowDeleting != null)) {
-                    this.HT_FORMRowDeleting(this, new HT_FORMRowChangeEvent(((HT_FORMRow)(e.Row)), e.Action));
+                if ((this.HT_FORM_CONTROLRowDeleting != null)) {
+                    this.HT_FORM_CONTROLRowDeleting(this, new HT_FORM_CONTROLRowChangeEvent(((HT_FORM_CONTROLRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveHT_FORMRow(HT_FORMRow row) {
+            public void RemoveHT_FORM_CONTROLRow(HT_FORM_CONTROLRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -527,7 +558,7 @@ namespace BKI_QLHT.DS {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DS_HT_FORM ds = new DS_HT_FORM();
+                DS_HT_FORM_CONTROL ds = new DS_HT_FORM_CONTROL();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -545,7 +576,7 @@ namespace BKI_QLHT.DS {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "HT_FORMDataTable";
+                attribute2.FixedValue = "HT_FORM_CONTROLDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -589,93 +620,115 @@ namespace BKI_QLHT.DS {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class HT_FORMRow : global::System.Data.DataRow {
+        public partial class HT_FORM_CONTROLRow : global::System.Data.DataRow {
             
-            private HT_FORMDataTable tableHT_FORM;
+            private HT_FORM_CONTROLDataTable tableHT_FORM_CONTROL;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal HT_FORMRow(global::System.Data.DataRowBuilder rb) : 
+            internal HT_FORM_CONTROLRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableHT_FORM = ((HT_FORMDataTable)(this.Table));
+                this.tableHT_FORM_CONTROL = ((HT_FORM_CONTROLDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal ID {
                 get {
-                    return ((decimal)(this[this.tableHT_FORM.IDColumn]));
+                    return ((decimal)(this[this.tableHT_FORM_CONTROL.IDColumn]));
                 }
                 set {
-                    this[this.tableHT_FORM.IDColumn] = value;
+                    this[this.tableHT_FORM_CONTROL.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FORM_NAME {
+            public decimal ID_FORM {
                 get {
-                    return ((string)(this[this.tableHT_FORM.FORM_NAMEColumn]));
+                    return ((decimal)(this[this.tableHT_FORM_CONTROL.ID_FORMColumn]));
                 }
                 set {
-                    this[this.tableHT_FORM.FORM_NAMEColumn] = value;
+                    this[this.tableHT_FORM_CONTROL.ID_FORMColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DISPLAY_NAME {
+            public string CONTROL_NAME {
+                get {
+                    return ((string)(this[this.tableHT_FORM_CONTROL.CONTROL_NAMEColumn]));
+                }
+                set {
+                    this[this.tableHT_FORM_CONTROL.CONTROL_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CONTROL_TYPE {
+                get {
+                    return ((string)(this[this.tableHT_FORM_CONTROL.CONTROL_TYPEColumn]));
+                }
+                set {
+                    this[this.tableHT_FORM_CONTROL.CONTROL_TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CONTROL_DISPLAY {
                 get {
                     try {
-                        return ((string)(this[this.tableHT_FORM.DISPLAY_NAMEColumn]));
+                        return ((string)(this[this.tableHT_FORM_CONTROL.CONTROL_DISPLAYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DISPLAY_NAME\' in table \'HT_FORM\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CONTROL_DISPLAY\' in table \'HT_FORM_CONTROL\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableHT_FORM.DISPLAY_NAMEColumn] = value;
+                    this[this.tableHT_FORM_CONTROL.CONTROL_DISPLAYColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string MENU_ITEM_NAME {
+            public string CONTROL_TEXT {
                 get {
                     try {
-                        return ((string)(this[this.tableHT_FORM.MENU_ITEM_NAMEColumn]));
+                        return ((string)(this[this.tableHT_FORM_CONTROL.CONTROL_TEXTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MENU_ITEM_NAME\' in table \'HT_FORM\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CONTROL_TEXT\' in table \'HT_FORM_CONTROL\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableHT_FORM.MENU_ITEM_NAMEColumn] = value;
+                    this[this.tableHT_FORM_CONTROL.CONTROL_TEXTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDISPLAY_NAMENull() {
-                return this.IsNull(this.tableHT_FORM.DISPLAY_NAMEColumn);
+            public bool IsCONTROL_DISPLAYNull() {
+                return this.IsNull(this.tableHT_FORM_CONTROL.CONTROL_DISPLAYColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDISPLAY_NAMENull() {
-                this[this.tableHT_FORM.DISPLAY_NAMEColumn] = global::System.Convert.DBNull;
+            public void SetCONTROL_DISPLAYNull() {
+                this[this.tableHT_FORM_CONTROL.CONTROL_DISPLAYColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMENU_ITEM_NAMENull() {
-                return this.IsNull(this.tableHT_FORM.MENU_ITEM_NAMEColumn);
+            public bool IsCONTROL_TEXTNull() {
+                return this.IsNull(this.tableHT_FORM_CONTROL.CONTROL_TEXTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMENU_ITEM_NAMENull() {
-                this[this.tableHT_FORM.MENU_ITEM_NAMEColumn] = global::System.Convert.DBNull;
+            public void SetCONTROL_TEXTNull() {
+                this[this.tableHT_FORM_CONTROL.CONTROL_TEXTColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -683,22 +736,22 @@ namespace BKI_QLHT.DS {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class HT_FORMRowChangeEvent : global::System.EventArgs {
+        public class HT_FORM_CONTROLRowChangeEvent : global::System.EventArgs {
             
-            private HT_FORMRow eventRow;
+            private HT_FORM_CONTROLRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HT_FORMRowChangeEvent(HT_FORMRow row, global::System.Data.DataRowAction action) {
+            public HT_FORM_CONTROLRowChangeEvent(HT_FORM_CONTROLRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public HT_FORMRow Row {
+            public HT_FORM_CONTROLRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -714,7 +767,7 @@ namespace BKI_QLHT.DS {
         }
     }
 }
-namespace BKI_QLHT.DS.DS_HT_FORMTableAdapters {
+namespace BKI_QLHT.DS.DS_HT_FORM_CONTROLTableAdapters {
     
     
     /// <summary>
@@ -726,7 +779,7 @@ namespace BKI_QLHT.DS.DS_HT_FORMTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class HT_FORMTableAdapter : global::System.ComponentModel.Component {
+    public partial class HT_FORM_CONTROLTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -740,7 +793,7 @@ namespace BKI_QLHT.DS.DS_HT_FORMTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public HT_FORMTableAdapter() {
+        public HT_FORM_CONTROLTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -837,45 +890,54 @@ namespace BKI_QLHT.DS.DS_HT_FORMTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "HT_FORM";
+            tableMapping.DataSetTable = "HT_FORM_CONTROL";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("FORM_NAME", "FORM_NAME");
-            tableMapping.ColumnMappings.Add("DISPLAY_NAME", "DISPLAY_NAME");
-            tableMapping.ColumnMappings.Add("MENU_ITEM_NAME", "MENU_ITEM_NAME");
+            tableMapping.ColumnMappings.Add("ID_FORM", "ID_FORM");
+            tableMapping.ColumnMappings.Add("CONTROL_NAME", "CONTROL_NAME");
+            tableMapping.ColumnMappings.Add("CONTROL_TYPE", "CONTROL_TYPE");
+            tableMapping.ColumnMappings.Add("CONTROL_DISPLAY", "CONTROL_DISPLAY");
+            tableMapping.ColumnMappings.Add("CONTROL_TEXT", "CONTROL_TEXT");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[HT_FORM] WHERE (([ID] = @Original_ID) AND ([FORM_NAME] = @Original_FORM_NAME) AND ((@IsNull_DISPLAY_NAME = 1 AND [DISPLAY_NAME] IS NULL) OR ([DISPLAY_NAME] = @Original_DISPLAY_NAME)) AND ((@IsNull_MENU_ITEM_NAME = 1 AND [MENU_ITEM_NAME] IS NULL) OR ([MENU_ITEM_NAME] = @Original_MENU_ITEM_NAME)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[HT_FORM_CONTROL] WHERE (([ID] = @Original_ID) AND ([ID_FORM] = @Original_ID_FORM) AND ([CONTROL_NAME] = @Original_CONTROL_NAME) AND ([CONTROL_TYPE] = @Original_CONTROL_TYPE) AND ((@IsNull_CONTROL_DISPLAY = 1 AND [CONTROL_DISPLAY] IS NULL) OR ([CONTROL_DISPLAY] = @Original_CONTROL_DISPLAY)) AND ((@IsNull_CONTROL_TEXT = 1 AND [CONTROL_TEXT] IS NULL) OR ([CONTROL_TEXT] = @Original_CONTROL_TEXT)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FORM_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FORM_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DISPLAY_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DISPLAY_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DISPLAY_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DISPLAY_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MENU_ITEM_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MENU_ITEM_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MENU_ITEM_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MENU_ITEM_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_FORM", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_FORM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CONTROL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CONTROL_TYPE", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TYPE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CONTROL_DISPLAY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_DISPLAY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CONTROL_DISPLAY", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_DISPLAY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CONTROL_TEXT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TEXT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CONTROL_TEXT", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TEXT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[HT_FORM] ([FORM_NAME], [DISPLAY_NAME], [MENU_ITEM_NAME]) VALUE" +
-                "S (@FORM_NAME, @DISPLAY_NAME, @MENU_ITEM_NAME);\r\nSELECT ID, FORM_NAME, DISPLAY_N" +
-                "AME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[HT_FORM_CONTROL] ([ID_FORM], [CONTROL_NAME], [CONTROL_TYPE], [CONTROL_DISPLAY], [CONTROL_TEXT]) VALUES (@ID_FORM, @CONTROL_NAME, @CONTROL_TYPE, @CONTROL_DISPLAY, @CONTROL_TEXT);
+SELECT ID, ID_FORM, CONTROL_NAME, CONTROL_TYPE, CONTROL_DISPLAY, CONTROL_TEXT FROM HT_FORM_CONTROL WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FORM_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FORM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DISPLAY_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DISPLAY_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MENU_ITEM_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MENU_ITEM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_FORM", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_FORM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTROL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTROL_TYPE", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TYPE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTROL_DISPLAY", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_DISPLAY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTROL_TEXT", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TEXT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[HT_FORM] SET [FORM_NAME] = @FORM_NAME, [DISPLAY_NAME] = @DISPLAY_NAME, [MENU_ITEM_NAME] = @MENU_ITEM_NAME WHERE (([ID] = @Original_ID) AND ([FORM_NAME] = @Original_FORM_NAME) AND ((@IsNull_DISPLAY_NAME = 1 AND [DISPLAY_NAME] IS NULL) OR ([DISPLAY_NAME] = @Original_DISPLAY_NAME)) AND ((@IsNull_MENU_ITEM_NAME = 1 AND [MENU_ITEM_NAME] IS NULL) OR ([MENU_ITEM_NAME] = @Original_MENU_ITEM_NAME)));
-SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[HT_FORM_CONTROL] SET [ID_FORM] = @ID_FORM, [CONTROL_NAME] = @CONTROL_NAME, [CONTROL_TYPE] = @CONTROL_TYPE, [CONTROL_DISPLAY] = @CONTROL_DISPLAY, [CONTROL_TEXT] = @CONTROL_TEXT WHERE (([ID] = @Original_ID) AND ([ID_FORM] = @Original_ID_FORM) AND ([CONTROL_NAME] = @Original_CONTROL_NAME) AND ([CONTROL_TYPE] = @Original_CONTROL_TYPE) AND ((@IsNull_CONTROL_DISPLAY = 1 AND [CONTROL_DISPLAY] IS NULL) OR ([CONTROL_DISPLAY] = @Original_CONTROL_DISPLAY)) AND ((@IsNull_CONTROL_TEXT = 1 AND [CONTROL_TEXT] IS NULL) OR ([CONTROL_TEXT] = @Original_CONTROL_TEXT)));
+SELECT ID, ID_FORM, CONTROL_NAME, CONTROL_TYPE, CONTROL_DISPLAY, CONTROL_TEXT FROM HT_FORM_CONTROL WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FORM_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FORM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DISPLAY_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DISPLAY_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MENU_ITEM_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MENU_ITEM_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_FORM", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_FORM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTROL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTROL_TYPE", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TYPE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTROL_DISPLAY", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_DISPLAY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTROL_TEXT", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TEXT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FORM_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FORM_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DISPLAY_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DISPLAY_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DISPLAY_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DISPLAY_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MENU_ITEM_NAME", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MENU_ITEM_NAME", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MENU_ITEM_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MENU_ITEM_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_FORM", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "ID_FORM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CONTROL_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CONTROL_TYPE", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TYPE", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CONTROL_DISPLAY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_DISPLAY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CONTROL_DISPLAY", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_DISPLAY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CONTROL_TEXT", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TEXT", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CONTROL_TEXT", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTROL_TEXT", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -892,7 +954,8 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM dbo.HT_FORM";
+            this._commandCollection[0].CommandText = "SELECT ID, ID_FORM, CONTROL_NAME, CONTROL_TYPE, CONTROL_DISPLAY, CONTROL_TEXT FRO" +
+                "M dbo.HT_FORM_CONTROL";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -900,7 +963,7 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS_HT_FORM.HT_FORMDataTable dataTable) {
+        public virtual int Fill(DS_HT_FORM_CONTROL.HT_FORM_CONTROLDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -913,9 +976,9 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS_HT_FORM.HT_FORMDataTable GetData() {
+        public virtual DS_HT_FORM_CONTROL.HT_FORM_CONTROLDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DS_HT_FORM.HT_FORMDataTable dataTable = new DS_HT_FORM.HT_FORMDataTable();
+            DS_HT_FORM_CONTROL.HT_FORM_CONTROLDataTable dataTable = new DS_HT_FORM_CONTROL.HT_FORM_CONTROLDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -923,15 +986,15 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DS_HT_FORM.HT_FORMDataTable dataTable) {
+        public virtual int Update(DS_HT_FORM_CONTROL.HT_FORM_CONTROLDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DS_HT_FORM dataSet) {
-            return this.Adapter.Update(dataSet, "HT_FORM");
+        public virtual int Update(DS_HT_FORM_CONTROL dataSet) {
+            return this.Adapter.Update(dataSet, "HT_FORM_CONTROL");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -953,29 +1016,36 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_ID, string Original_FORM_NAME, string Original_DISPLAY_NAME, string Original_MENU_ITEM_NAME) {
+        public virtual int Delete(decimal Original_ID, decimal Original_ID_FORM, string Original_CONTROL_NAME, string Original_CONTROL_TYPE, string Original_CONTROL_DISPLAY, string Original_CONTROL_TEXT) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID));
-            if ((Original_FORM_NAME == null)) {
-                throw new global::System.ArgumentNullException("Original_FORM_NAME");
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_ID_FORM));
+            if ((Original_CONTROL_NAME == null)) {
+                throw new global::System.ArgumentNullException("Original_CONTROL_NAME");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_FORM_NAME));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_CONTROL_NAME));
             }
-            if ((Original_DISPLAY_NAME == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((Original_CONTROL_TYPE == null)) {
+                throw new global::System.ArgumentNullException("Original_CONTROL_TYPE");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_DISPLAY_NAME));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_CONTROL_TYPE));
             }
-            if ((Original_MENU_ITEM_NAME == null)) {
+            if ((Original_CONTROL_DISPLAY == null)) {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_MENU_ITEM_NAME));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_CONTROL_DISPLAY));
+            }
+            if ((Original_CONTROL_TEXT == null)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_CONTROL_TEXT));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -997,24 +1067,31 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string FORM_NAME, string DISPLAY_NAME, string MENU_ITEM_NAME) {
-            if ((FORM_NAME == null)) {
-                throw new global::System.ArgumentNullException("FORM_NAME");
+        public virtual int Insert(decimal ID_FORM, string CONTROL_NAME, string CONTROL_TYPE, string CONTROL_DISPLAY, string CONTROL_TEXT) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(ID_FORM));
+            if ((CONTROL_NAME == null)) {
+                throw new global::System.ArgumentNullException("CONTROL_NAME");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(FORM_NAME));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CONTROL_NAME));
             }
-            if ((DISPLAY_NAME == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DISPLAY_NAME));
-            }
-            if ((MENU_ITEM_NAME == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((CONTROL_TYPE == null)) {
+                throw new global::System.ArgumentNullException("CONTROL_TYPE");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(MENU_ITEM_NAME));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CONTROL_TYPE));
+            }
+            if ((CONTROL_DISPLAY == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CONTROL_DISPLAY));
+            }
+            if ((CONTROL_TEXT == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CONTROL_TEXT));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1036,49 +1113,63 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FORM_NAME, string DISPLAY_NAME, string MENU_ITEM_NAME, decimal Original_ID, string Original_FORM_NAME, string Original_DISPLAY_NAME, string Original_MENU_ITEM_NAME, decimal ID) {
-            if ((FORM_NAME == null)) {
-                throw new global::System.ArgumentNullException("FORM_NAME");
+        public virtual int Update(decimal ID_FORM, string CONTROL_NAME, string CONTROL_TYPE, string CONTROL_DISPLAY, string CONTROL_TEXT, decimal Original_ID, decimal Original_ID_FORM, string Original_CONTROL_NAME, string Original_CONTROL_TYPE, string Original_CONTROL_DISPLAY, string Original_CONTROL_TEXT, decimal ID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(ID_FORM));
+            if ((CONTROL_NAME == null)) {
+                throw new global::System.ArgumentNullException("CONTROL_NAME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(FORM_NAME));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CONTROL_NAME));
             }
-            if ((DISPLAY_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DISPLAY_NAME));
-            }
-            if ((MENU_ITEM_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            if ((CONTROL_TYPE == null)) {
+                throw new global::System.ArgumentNullException("CONTROL_TYPE");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(MENU_ITEM_NAME));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CONTROL_TYPE));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Original_ID));
-            if ((Original_FORM_NAME == null)) {
-                throw new global::System.ArgumentNullException("Original_FORM_NAME");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_FORM_NAME));
-            }
-            if ((Original_DISPLAY_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((CONTROL_DISPLAY == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DISPLAY_NAME));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CONTROL_DISPLAY));
             }
-            if ((Original_MENU_ITEM_NAME == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((CONTROL_TEXT == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_MENU_ITEM_NAME));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(CONTROL_TEXT));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(ID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_ID_FORM));
+            if ((Original_CONTROL_NAME == null)) {
+                throw new global::System.ArgumentNullException("Original_CONTROL_NAME");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_CONTROL_NAME));
+            }
+            if ((Original_CONTROL_TYPE == null)) {
+                throw new global::System.ArgumentNullException("Original_CONTROL_TYPE");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_CONTROL_TYPE));
+            }
+            if ((Original_CONTROL_DISPLAY == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_CONTROL_DISPLAY));
+            }
+            if ((Original_CONTROL_TEXT == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_CONTROL_TEXT));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1099,8 +1190,8 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FORM_NAME, string DISPLAY_NAME, string MENU_ITEM_NAME, decimal Original_ID, string Original_FORM_NAME, string Original_DISPLAY_NAME, string Original_MENU_ITEM_NAME) {
-            return this.Update(FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME, Original_ID, Original_FORM_NAME, Original_DISPLAY_NAME, Original_MENU_ITEM_NAME, Original_ID);
+        public virtual int Update(decimal ID_FORM, string CONTROL_NAME, string CONTROL_TYPE, string CONTROL_DISPLAY, string CONTROL_TEXT, decimal Original_ID, decimal Original_ID_FORM, string Original_CONTROL_NAME, string Original_CONTROL_TYPE, string Original_CONTROL_DISPLAY, string Original_CONTROL_TEXT) {
+            return this.Update(ID_FORM, CONTROL_NAME, CONTROL_TYPE, CONTROL_DISPLAY, CONTROL_TEXT, Original_ID, Original_ID_FORM, Original_CONTROL_NAME, Original_CONTROL_TYPE, Original_CONTROL_DISPLAY, Original_CONTROL_TEXT, Original_ID);
         }
     }
     
@@ -1116,7 +1207,7 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         
         private UpdateOrderOption _updateOrder;
         
-        private HT_FORMTableAdapter _hT_FORMTableAdapter;
+        private HT_FORM_CONTROLTableAdapter _hT_FORM_CONTROLTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1138,12 +1229,12 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public HT_FORMTableAdapter HT_FORMTableAdapter {
+        public HT_FORM_CONTROLTableAdapter HT_FORM_CONTROLTableAdapter {
             get {
-                return this._hT_FORMTableAdapter;
+                return this._hT_FORM_CONTROLTableAdapter;
             }
             set {
-                this._hT_FORMTableAdapter = value;
+                this._hT_FORM_CONTROLTableAdapter = value;
             }
         }
         
@@ -1166,9 +1257,9 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._hT_FORMTableAdapter != null) 
-                            && (this._hT_FORMTableAdapter.Connection != null))) {
-                    return this._hT_FORMTableAdapter.Connection;
+                if (((this._hT_FORM_CONTROLTableAdapter != null) 
+                            && (this._hT_FORM_CONTROLTableAdapter.Connection != null))) {
+                    return this._hT_FORM_CONTROLTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1183,7 +1274,7 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._hT_FORMTableAdapter != null)) {
+                if ((this._hT_FORM_CONTROLTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1195,14 +1286,14 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DS_HT_FORM dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DS_HT_FORM_CONTROL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._hT_FORMTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.HT_FORM.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._hT_FORM_CONTROLTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.HT_FORM_CONTROL.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._hT_FORMTableAdapter.Update(updatedRows));
+                    result = (result + this._hT_FORM_CONTROLTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1214,13 +1305,13 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DS_HT_FORM dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DS_HT_FORM_CONTROL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._hT_FORMTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.HT_FORM.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._hT_FORM_CONTROLTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.HT_FORM_CONTROL.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._hT_FORMTableAdapter.Update(addedRows));
+                    result = (result + this._hT_FORM_CONTROLTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1232,13 +1323,13 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DS_HT_FORM dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DS_HT_FORM_CONTROL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._hT_FORMTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.HT_FORM.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._hT_FORM_CONTROLTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.HT_FORM_CONTROL.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._hT_FORMTableAdapter.Update(deletedRows));
+                    result = (result + this._hT_FORM_CONTROLTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1274,15 +1365,15 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DS_HT_FORM dataSet) {
+        public virtual int UpdateAll(DS_HT_FORM_CONTROL dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._hT_FORMTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._hT_FORMTableAdapter.Connection) == false))) {
+            if (((this._hT_FORM_CONTROLTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._hT_FORM_CONTROLTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1318,13 +1409,13 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._hT_FORMTableAdapter != null)) {
-                    revertConnections.Add(this._hT_FORMTableAdapter, this._hT_FORMTableAdapter.Connection);
-                    this._hT_FORMTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._hT_FORMTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._hT_FORMTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._hT_FORMTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._hT_FORMTableAdapter.Adapter);
+                if ((this._hT_FORM_CONTROLTableAdapter != null)) {
+                    revertConnections.Add(this._hT_FORM_CONTROLTableAdapter, this._hT_FORM_CONTROLTableAdapter.Connection);
+                    this._hT_FORM_CONTROLTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._hT_FORM_CONTROLTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._hT_FORM_CONTROLTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._hT_FORM_CONTROLTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._hT_FORM_CONTROLTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1385,9 +1476,9 @@ SELECT ID, FORM_NAME, DISPLAY_NAME, MENU_ITEM_NAME FROM HT_FORM WHERE (ID = @ID)
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._hT_FORMTableAdapter != null)) {
-                    this._hT_FORMTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._hT_FORMTableAdapter]));
-                    this._hT_FORMTableAdapter.Transaction = null;
+                if ((this._hT_FORM_CONTROLTableAdapter != null)) {
+                    this._hT_FORM_CONTROLTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._hT_FORM_CONTROLTableAdapter]));
+                    this._hT_FORM_CONTROLTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

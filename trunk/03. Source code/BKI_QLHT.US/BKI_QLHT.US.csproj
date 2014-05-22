@@ -72,7 +72,9 @@
     <Compile Include="US_GD_SO_DU.cs" />
     <Compile Include="US_HT_CONTROL_IN_FORM.cs" />
     <Compile Include="US_HT_FORM.cs" />
+    <Compile Include="US_HT_FORM_CONTROL.cs" />
     <Compile Include="US_HT_NGUOI_SU_DUNG.cs" />
+    <Compile Include="US_HT_PHAN_QUYEN.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_CHO_NHOM.cs" />
     <Compile Include="US_HT_PHAN_QUYEN_HE_THONG.cs" />
     <Compile Include="US_HT_USER_GROUP.cs" />
