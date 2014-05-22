@@ -976,8 +976,12 @@ namespace BKI_QLHT
 
         private void m_cmd_dm_benh_vien_Click(object sender, EventArgs e)
         {
-            f515_v_dm_benh_vien frm = new f515_v_dm_benh_vien();
-            frm.ShowDialog();
+            m_Panel_Content.Controls.Clear();
+            uc515_v_dm_benh_vien uc_frm = new uc515_v_dm_benh_vien();
+            uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            m_Panel_Content.Controls.Add(uc_frm);
+            //f515_v_dm_benh_vien frm = new f515_v_dm_benh_vien();
+            //frm.ShowDialog();
 
         }
 

@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f516_v_dm_benh_vien_de));
             this.m_pnl_control = new System.Windows.Forms.Panel();
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.m_txt_ghi_chu = new System.Windows.Forms.TextBox();
-            this.m_txt_danh_muc = new System.Windows.Forms.TextBox();
+            this.m_cmd_huy = new SIS.Controls.Button.SiSButton();
+            this.m_txt_ten_benh_vien = new System.Windows.Forms.TextBox();
+            this.m_txt_ma_benh_vien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.m_txt_so_dien_thoai = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.m_txt_dia_chi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
@@ -70,21 +70,7 @@
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_save.TabIndex = 3;
             this.m_cmd_save.Text = "Lưu (F2)";
-            // 
-            // m_cmd_huy
-            // 
-            this.m_cmd_huy.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_huy.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
-            this.m_cmd_huy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_huy.ImageIndex = 11;
-            this.m_cmd_huy.ImageList = this.ImageList;
-            this.m_cmd_huy.Location = new System.Drawing.Point(303, 13);
-            this.m_cmd_huy.Name = "m_cmd_huy";
-            this.m_cmd_huy.Size = new System.Drawing.Size(105, 28);
-            this.m_cmd_huy.TabIndex = 4;
-            this.m_cmd_huy.Text = "Trở về (Esc)";
+            
             // 
             // ImageList
             // 
@@ -113,19 +99,35 @@
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
-            // m_txt_ghi_chu
+            // m_cmd_huy
             // 
-            this.m_txt_ghi_chu.Location = new System.Drawing.Point(138, 109);
-            this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
-            this.m_txt_ghi_chu.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_ghi_chu.TabIndex = 46;
+            this.m_cmd_huy.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_huy.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_huy.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Blue;
+            this.m_cmd_huy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_cmd_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_huy.ImageIndex = 11;
+            this.m_cmd_huy.ImageList = this.ImageList;
+            this.m_cmd_huy.Location = new System.Drawing.Point(303, 13);
+            this.m_cmd_huy.Name = "m_cmd_huy";
+            this.m_cmd_huy.Size = new System.Drawing.Size(105, 28);
+            this.m_cmd_huy.TabIndex = 4;
+            this.m_cmd_huy.Text = "Trở về (Esc)";
+            
             // 
-            // m_txt_danh_muc
+            // m_txt_ten_benh_vien
             // 
-            this.m_txt_danh_muc.Location = new System.Drawing.Point(138, 77);
-            this.m_txt_danh_muc.Name = "m_txt_danh_muc";
-            this.m_txt_danh_muc.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_danh_muc.TabIndex = 45;
+            this.m_txt_ten_benh_vien.Location = new System.Drawing.Point(138, 109);
+            this.m_txt_ten_benh_vien.Name = "m_txt_ten_benh_vien";
+            this.m_txt_ten_benh_vien.Size = new System.Drawing.Size(245, 20);
+            this.m_txt_ten_benh_vien.TabIndex = 46;
+            // 
+            // m_txt_ma_benh_vien
+            // 
+            this.m_txt_ma_benh_vien.Location = new System.Drawing.Point(138, 77);
+            this.m_txt_ma_benh_vien.Name = "m_txt_ma_benh_vien";
+            this.m_txt_ma_benh_vien.Size = new System.Drawing.Size(245, 20);
+            this.m_txt_ma_benh_vien.TabIndex = 45;
             // 
             // label2
             // 
@@ -157,12 +159,12 @@
             this.label3.TabIndex = 47;
             this.label3.Text = "Cập nhật thông tin bệnh viện";
             // 
-            // textBox1
+            // m_txt_so_dien_thoai
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
-            this.textBox1.TabIndex = 50;
+            this.m_txt_so_dien_thoai.Location = new System.Drawing.Point(138, 142);
+            this.m_txt_so_dien_thoai.Name = "m_txt_so_dien_thoai";
+            this.m_txt_so_dien_thoai.Size = new System.Drawing.Size(245, 20);
+            this.m_txt_so_dien_thoai.TabIndex = 50;
             // 
             // label4
             // 
@@ -174,12 +176,12 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "Số điện thoại";
             // 
-            // textBox2
+            // m_txt_dia_chi
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 20);
-            this.textBox2.TabIndex = 52;
+            this.m_txt_dia_chi.Location = new System.Drawing.Point(138, 178);
+            this.m_txt_dia_chi.Name = "m_txt_dia_chi";
+            this.m_txt_dia_chi.Size = new System.Drawing.Size(245, 20);
+            this.m_txt_dia_chi.TabIndex = 52;
             // 
             // label5
             // 
@@ -196,18 +198,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 306);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.m_txt_dia_chi);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.m_txt_so_dien_thoai);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.m_txt_ghi_chu);
-            this.Controls.Add(this.m_txt_danh_muc);
+            this.Controls.Add(this.m_txt_ten_benh_vien);
+            this.Controls.Add(this.m_txt_ma_benh_vien);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "f516_v_dm_benh_vien_de";
             this.Text = "f526_v_dm_benh_vien_de";
+            
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,14 +223,14 @@
         internal SIS.Controls.Button.SiSButton m_cmd_save;
         internal SIS.Controls.Button.SiSButton m_cmd_huy;
         internal System.Windows.Forms.ImageList ImageList;
-        private System.Windows.Forms.TextBox m_txt_ghi_chu;
-        private System.Windows.Forms.TextBox m_txt_danh_muc;
+        private System.Windows.Forms.TextBox m_txt_ten_benh_vien;
+        private System.Windows.Forms.TextBox m_txt_ma_benh_vien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox m_txt_so_dien_thoai;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox m_txt_dia_chi;
         private System.Windows.Forms.Label label5;
     }
 }
