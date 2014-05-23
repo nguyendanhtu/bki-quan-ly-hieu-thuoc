@@ -405,12 +405,6 @@
     <Compile Include="DanhMuc\f101_dm_nhom_khach_hang_de.Designer.cs">
       <DependentUpon>f101_dm_nhom_khach_hang_de.cs</DependentUpon>
     </Compile>
-    <Compile Include="f115_report_ban_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="f115_report_ban_thuoc.Designer.cs">
-      <DependentUpon>f115_report_ban_thuoc.cs</DependentUpon>
-    </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -477,12 +471,6 @@
     </Compile>
     <Compile Include="NghiepVu\f511_gd_nhap_thuoc.Designer.cs">
       <DependentUpon>f511_gd_nhap_thuoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NghiepVu\f513_report_nhap_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NghiepVu\f513_report_nhap_thuoc.Designer.cs">
-      <DependentUpon>f513_report_nhap_thuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="NghiepVu\f802_v_gd_gia_ban.cs">
       <SubType>Form</SubType>
@@ -787,9 +775,6 @@
     <EmbeddedResource Include="DanhMuc\f101_dm_nhom_khach_hang_de.resx">
       <DependentUpon>f101_dm_nhom_khach_hang_de.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="f115_report_ban_thuoc.resx">
-      <DependentUpon>f115_report_ban_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -832,9 +817,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f511_gd_nhap_thuoc.resx">
       <DependentUpon>f511_gd_nhap_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\f513_report_nhap_thuoc.resx">
-      <DependentUpon>f513_report_nhap_thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f802_v_gd_gia_ban.resx">
       <DependentUpon>f802_v_gd_gia_ban.cs</DependentUpon>
