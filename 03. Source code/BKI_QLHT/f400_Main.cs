@@ -1149,5 +1149,19 @@ namespace BKI_QLHT
             }
         }
 
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                f455_bcnt_ncc_de v_frm = new f455_bcnt_ncc_de();
+
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
     }     
 }
