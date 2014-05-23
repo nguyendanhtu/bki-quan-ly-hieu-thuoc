@@ -194,6 +194,9 @@
     <Compile Include="BaoCao\f442_bcdt_bac_sy.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f443_bcdt_ncc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BKI_QLHTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -672,6 +675,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f442_bcdt_bac_sy.resx">
       <DependentUpon>f442_bcdt_bac_sy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f443_bcdt_ncc.resx">
+      <DependentUpon>f443_bcdt_ncc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f100_v_dm_bac_sy_de.resx">
       <DependentUpon>f100_v_dm_bac_sy_de.cs</DependentUpon>

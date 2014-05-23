@@ -95,6 +95,7 @@
     <Compile Include="US_V_BC_BAN_THUOC.cs" />
     <Compile Include="US_V_BC_DOANH_THU_BAC_SY.cs" />
     <Compile Include="US_V_BC_DOANH_THU_BAC_SY_DE.cs" />
+    <Compile Include="US_V_BC_DOANH_THU_NCC.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_BAC_SY.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NCC.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NCC_N_NHOM_THUOC.cs" />

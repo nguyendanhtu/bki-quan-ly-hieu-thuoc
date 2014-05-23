@@ -1012,5 +1012,18 @@ namespace BKI_QLHT
             }
         }
 
+        private void button36_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f443_bcdt_ncc v_frm = new f443_bcdt_ncc();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
     }     
 }
