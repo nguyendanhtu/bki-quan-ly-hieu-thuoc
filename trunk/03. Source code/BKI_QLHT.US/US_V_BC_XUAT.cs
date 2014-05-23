@@ -16,7 +16,9 @@ using System.Data;
 using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 
-namespace BKI_QLHT.US{
+
+namespace BKI_QLHT.US
+{
 
 public class US_V_BC_XUAT : US_Object
 {

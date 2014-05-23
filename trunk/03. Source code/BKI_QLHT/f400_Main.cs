@@ -1094,5 +1094,32 @@ namespace BKI_QLHT
             }
         }
 
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                f449_bcdt_nhom_thuoc_ten_thuoc v_frm = new f449_bcdt_nhom_thuoc_ten_thuoc();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                f450_bc_xuat v_frm = new f450_bc_xuat();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
     }     
 }
