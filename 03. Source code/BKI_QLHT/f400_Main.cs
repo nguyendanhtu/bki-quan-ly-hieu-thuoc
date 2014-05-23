@@ -1054,5 +1054,19 @@ namespace BKI_QLHT
             }
         }
 
+        private void button39_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f446_bcdt_ngay_nv_de v_frm = new f446_bcdt_ngay_nv_de();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
     }     
 }
