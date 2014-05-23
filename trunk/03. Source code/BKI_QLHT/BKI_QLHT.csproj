@@ -61,8 +61,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="SiSButton, Version=1.0.1494.35082, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\SiSButton.dll</HintPath>
@@ -404,6 +404,12 @@
     </Compile>
     <Compile Include="DanhMuc\f101_dm_nhom_khach_hang_de.Designer.cs">
       <DependentUpon>f101_dm_nhom_khach_hang_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f115_report_ban_thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f115_report_ban_thuoc.Designer.cs">
+      <DependentUpon>f115_report_ban_thuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="f400_Main.cs">
       <SubType>Form</SubType>
@@ -775,6 +781,9 @@
     <EmbeddedResource Include="DanhMuc\f101_dm_nhom_khach_hang_de.resx">
       <DependentUpon>f101_dm_nhom_khach_hang_de.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="f115_report_ban_thuoc.resx">
+      <DependentUpon>f115_report_ban_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="f400_Main.resx">
       <DependentUpon>f400_Main.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -937,7 +946,6 @@
     <None Include="BKI_QLHT_REPORT_BAN_THUOC.xss">
       <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
     </None>
-    <None Include="Properties\DataSources\BKI_QLHT.BaoCao.Demo_Report.DataSet1.datasource" />
     <None Include="Properties\DataSources\BKI_QLHT.NghiepVu.uc108_v_gd_giao_dich_detail+data1.datasource" />
     <None Include="Properties\DataSources\BKI_QLHT.NghiepVu.uc108_v_gd_giao_dich_detail.datasource" />
     <None Include="Properties\Settings.settings">
