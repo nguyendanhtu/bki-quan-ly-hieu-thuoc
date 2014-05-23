@@ -139,6 +139,7 @@ namespace BKI_QLHT
             this.button34 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
@@ -1578,7 +1579,7 @@ namespace BKI_QLHT
             // 
             // button35
             // 
-            this.button35.Location = new System.Drawing.Point(105, 389);
+            this.button35.Location = new System.Drawing.Point(97, 389);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(44, 23);
             this.button35.TabIndex = 51;
@@ -1588,13 +1589,23 @@ namespace BKI_QLHT
             // 
             // button36
             // 
-            this.button36.Location = new System.Drawing.Point(174, 389);
+            this.button36.Location = new System.Drawing.Point(139, 389);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(44, 23);
+            this.button36.Size = new System.Drawing.Size(40, 23);
             this.button36.TabIndex = 52;
             this.button36.Text = "443";
             this.button36.UseVisualStyleBackColor = true;
             this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // button37
+            // 
+            this.button37.Location = new System.Drawing.Point(178, 389);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(40, 23);
+            this.button37.TabIndex = 53;
+            this.button37.Text = "444";
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // f400_Main
             // 
@@ -1603,6 +1614,7 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(823, 587);
+            this.Controls.Add(this.button37);
             this.Controls.Add(this.button36);
             this.Controls.Add(this.button35);
             this.Controls.Add(this.button34);
@@ -1780,5 +1792,6 @@ namespace BKI_QLHT
         private Button button34;
         private Button button35;
         private Button button36;
+        private Button button37;
     }
 }
