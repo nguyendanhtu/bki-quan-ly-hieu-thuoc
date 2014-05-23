@@ -965,8 +965,8 @@ namespace BKI_QLHT
         {
             try
             {
-                f106_dm_don_vi_kinh_doanh v_frm = new f106_dm_don_vi_kinh_doanh();
-                v_frm.Show();
+                //f106_dm_don_vi_kinh_doanh v_frm = new f106_dm_don_vi_kinh_doanh();
+                //v_frm.Show();
             }
             catch (Exception v_e)
             {
@@ -984,6 +984,19 @@ namespace BKI_QLHT
             //f515_v_dm_benh_vien frm = new f515_v_dm_benh_vien();
             //frm.ShowDialog();
 
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f441_bcdt_bac_sy_de v_frm = new f441_bcdt_bac_sy_de();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
         }
 
     }     
