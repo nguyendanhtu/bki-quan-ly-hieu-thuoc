@@ -562,8 +562,8 @@ namespace BKI_QLHT.NghiepVu
         {
             try
             {
-                //f115_report_ban_thuoc frm = new f115_report_ban_thuoc();
-                //frm.display_for_print(m_id_giao_dich);
+                f115_report_ban_thuoc frm = new f115_report_ban_thuoc();
+                frm.display_for_print(m_id_giao_dich);
             }
             catch (Exception v_e)
             {
