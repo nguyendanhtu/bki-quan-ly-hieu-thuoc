@@ -76,6 +76,7 @@
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 4;
             this.m_cmd_update.Text = "Cập nhật";
+            this.m_cmd_update.Click += new System.EventHandler(this.m_cmd_update_Click);
             // 
             // ImageList
             // 
@@ -118,6 +119,7 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 6;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // m_txt_dia_chi
             // 
