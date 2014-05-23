@@ -332,6 +332,7 @@ namespace BKI_QLHT
             this.m_rbd_all.Name = "m_rbd_all";
             this.m_rbd_all.Size = new System.Drawing.Size(56, 17);
             this.m_rbd_all.TabIndex = 2900;
+            this.m_rbd_all.TabStop = true;
             this.m_rbd_all.Text = "Tất cả";
             this.m_rbd_all.UseVisualStyleBackColor = true;
             // 
@@ -574,10 +575,18 @@ namespace BKI_QLHT
             String m_str_dia_chi = v_us.strDIA_CHI;
             String m_str_so_dien_thoai = v_us.strSDT;
 
-            CExcelReport v_obj_excel_rpt = new CExcelReport("f416_bao_cao_doanh_thu_theo_cac_nhan_vien.xlsx", 10, 1);
+            CExcelReport v_obj_excel_rpt = new CExcelReport("f440_bao_cao_so_sanh_gia_nhap_thuoc.xlsx", 10, 1);
             //người làm báo cáo
             v_obj_excel_rpt.AddFindAndReplaceItem("<nguoi_xuat_bao_cao>", m_lbl_nguoi_lam_bc.Text.Trim());
             //ngày làm báo cáo
+            if(m_rbd_all.Checked==true)
+                v_obj_excel_rpt.AddFindAndReplaceItem("<loai_bao_cao>", "Tất cả");
+            if (m_rbd_max.Checked == true)
+                v_obj_excel_rpt.AddFindAndReplaceItem("<loai_bao_cao>", "So sánh giá lớn nhất");
+            if (m_rbd_min.Checked == true)
+                v_obj_excel_rpt.AddFindAndReplaceItem("<loai_bao_cao>", "So sánh giá nhỏ nhất");
+
+               
             v_obj_excel_rpt.AddFindAndReplaceItem("<ten_don_vi>", m_str_ten_don_vi);
             v_obj_excel_rpt.AddFindAndReplaceItem("<dia_chi>", m_str_dia_chi);
             v_obj_excel_rpt.AddFindAndReplaceItem("<tu_ngay>", m_dat_tu_ngay.Text);
@@ -586,6 +595,8 @@ namespace BKI_QLHT
             v_obj_excel_rpt.AddFindAndReplaceItem("<so_dien_thoai>", m_str_so_dien_thoai);
             v_obj_excel_rpt.AddFindAndReplaceItem("<ngay_xuat_bao_cao>", m_lbl_ngay_lam_bc.Text.Trim());
             //v_obj_excel_rpt.AddFindAndReplaceItem("<tong_doanh_thu>", m_lbl_doanh_thu.Text);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<tong_so_kq>", m_lbl_count.Text.Trim());
+            
             v_obj_excel_rpt.FindAndReplace(false);
             v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_fg, 0, m_fg.Cols.Count - 1, true);
         }
