@@ -1068,5 +1068,18 @@ namespace BKI_QLHT
             }
         }
 
+        private void button40_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f447_bcdt_nhan_vien v_frm = new f447_bcdt_nhan_vien();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
     }     
 }

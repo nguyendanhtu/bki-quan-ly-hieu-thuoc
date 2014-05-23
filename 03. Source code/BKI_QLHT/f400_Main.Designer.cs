@@ -142,6 +142,7 @@ namespace BKI_QLHT
             this.button37 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
@@ -1629,6 +1630,16 @@ namespace BKI_QLHT
             this.button39.UseVisualStyleBackColor = true;
             this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
+            // button40
+            // 
+            this.button40.Location = new System.Drawing.Point(92, 360);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(40, 23);
+            this.button40.TabIndex = 56;
+            this.button40.Text = "447";
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1636,6 +1647,7 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(823, 587);
+            this.Controls.Add(this.button40);
             this.Controls.Add(this.button39);
             this.Controls.Add(this.button38);
             this.Controls.Add(this.button37);
@@ -1819,5 +1831,6 @@ namespace BKI_QLHT
         private Button button37;
         private Button button38;
         private Button button39;
+        private Button button40;
     }
 }
