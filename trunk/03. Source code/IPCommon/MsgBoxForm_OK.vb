@@ -125,7 +125,7 @@ Namespace MessageForms
             End If
             Dim v_FormWidth As Long = v_LabelWidth + c_FormLabelDiffWidth
             Dim v_LabelHeight As Long = c_LabelLineHeight * v_NumOfLine
-            Dim v_FormHeight As Long = v_LabelHeight + c_FormLabelDiffHeight
+            Dim v_FormHeight As Long = v_LabelHeight + c_FormLabelDiffHeight + 20
             Me.Width = CType(v_FormWidth, Integer)
             Me.Height = CType(v_FormHeight, Integer)
             LabMsg.Width = CType(v_LabelWidth, Integer)
@@ -161,7 +161,7 @@ Namespace MessageForms
                 Dim v_ButtonWidth As Integer = i_Button.Width
                 Dim v_ButtonHeight As Integer = i_Button.Height
                 Dim v_ButtonLeft As Integer = CType((v_FormWidth - v_ButtonWidth) / 2, Integer)
-                Dim v_buttonTop As Integer = CType(v_FormHeight - v_ButtonHeight - 35, Integer)
+                Dim v_buttonTop As Integer = CType(v_FormHeight - v_ButtonHeight - 50, Integer)
                 Me.Text = i_TitleMsg
                 i_Button.Top = v_buttonTop
                 i_Button.Left = v_ButtonLeft
