@@ -965,8 +965,11 @@ namespace BKI_QLHT
         {
             try
             {
-                //f106_dm_don_vi_kinh_doanh v_frm = new f106_dm_don_vi_kinh_doanh();
-                //v_frm.Show();
+              
+                m_Panel_Content.Controls.Clear();
+                uc106_dm_don_vi_kinh_doanh uc_frm = new uc106_dm_don_vi_kinh_doanh();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
             }
             catch (Exception v_e)
             {
