@@ -965,7 +965,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f104_dm_don_vi_kinh_doanh v_frm = new f104_dm_don_vi_kinh_doanh();
+                f106_dm_don_vi_kinh_doanh v_frm = new f106_dm_don_vi_kinh_doanh();
                 v_frm.Show();
             }
             catch (Exception v_e)
