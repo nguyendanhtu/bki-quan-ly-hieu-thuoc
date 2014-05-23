@@ -999,5 +999,18 @@ namespace BKI_QLHT
             }
         }
 
+        private void button35_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f442_bcdt_bac_sy v_frm = new f442_bcdt_bac_sy();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
     }     
 }
