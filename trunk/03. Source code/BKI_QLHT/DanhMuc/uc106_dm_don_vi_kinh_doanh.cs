@@ -24,6 +24,7 @@ namespace BKI_QLHT.DanhMuc
         public uc106_dm_don_vi_kinh_doanh()
         {
             InitializeComponent();
+            format_control();
         }
 
         #region Public interface
