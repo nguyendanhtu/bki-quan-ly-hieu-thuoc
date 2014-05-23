@@ -100,6 +100,7 @@
     <Compile Include="US_V_BC_DOANH_THU_NGAY_NT.cs" />
     <Compile Include="US_V_BC_DOANH_THU_NGAY_NV.cs" />
     <Compile Include="US_V_BC_DOANH_THU_NGAY_NV_DE.cs" />
+    <Compile Include="US_V_BC_DOANH_THU_NT_TEN_THUOC.cs" />
     <Compile Include="US_V_BC_DOANH_THU_NV.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_BAC_SY.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NCC.cs" />
@@ -114,6 +115,12 @@
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NHOM_THUOC.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_NHOM_THUOC_N_TEN_THUOC.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_CAC_NV_N_NGAY.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_NCC.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_NCC_DE.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_NGAY.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_NGAY_N_HSX.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_NHAN_VIEN_DE.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_HSX.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_HSX_DE.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_NCC.cs" />
@@ -127,6 +134,7 @@
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_NSX_DE.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_GIA.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_TONG_HOP.cs" />
+    <Compile Include="US_V_BC_XUAT.cs" />
     <Compile Include="US_V_DM_BAC_SY.cs" />
     <Compile Include="US_V_DM_BENH_VIEN.cs" />
     <Compile Include="US_V_DM_DON_VI.cs" />
