@@ -68,9 +68,8 @@
             this.m_cmd_save.Location = new System.Drawing.Point(180, 13);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_save.TabIndex = 3;
+            this.m_cmd_save.TabIndex = 5;
             this.m_cmd_save.Text = "Lưu (F2)";
-            
             // 
             // ImageList
             // 
@@ -111,23 +110,22 @@
             this.m_cmd_huy.Location = new System.Drawing.Point(303, 13);
             this.m_cmd_huy.Name = "m_cmd_huy";
             this.m_cmd_huy.Size = new System.Drawing.Size(105, 28);
-            this.m_cmd_huy.TabIndex = 4;
+            this.m_cmd_huy.TabIndex = 6;
             this.m_cmd_huy.Text = "Trở về (Esc)";
-            
             // 
             // m_txt_ten_benh_vien
             // 
             this.m_txt_ten_benh_vien.Location = new System.Drawing.Point(138, 109);
             this.m_txt_ten_benh_vien.Name = "m_txt_ten_benh_vien";
             this.m_txt_ten_benh_vien.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_ten_benh_vien.TabIndex = 46;
+            this.m_txt_ten_benh_vien.TabIndex = 2;
             // 
             // m_txt_ma_benh_vien
             // 
             this.m_txt_ma_benh_vien.Location = new System.Drawing.Point(138, 77);
             this.m_txt_ma_benh_vien.Name = "m_txt_ma_benh_vien";
             this.m_txt_ma_benh_vien.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_ma_benh_vien.TabIndex = 45;
+            this.m_txt_ma_benh_vien.TabIndex = 1;
             // 
             // label2
             // 
@@ -164,7 +162,7 @@
             this.m_txt_so_dien_thoai.Location = new System.Drawing.Point(138, 142);
             this.m_txt_so_dien_thoai.Name = "m_txt_so_dien_thoai";
             this.m_txt_so_dien_thoai.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_so_dien_thoai.TabIndex = 50;
+            this.m_txt_so_dien_thoai.TabIndex = 3;
             // 
             // label4
             // 
@@ -181,7 +179,7 @@
             this.m_txt_dia_chi.Location = new System.Drawing.Point(138, 178);
             this.m_txt_dia_chi.Name = "m_txt_dia_chi";
             this.m_txt_dia_chi.Size = new System.Drawing.Size(245, 20);
-            this.m_txt_dia_chi.TabIndex = 52;
+            this.m_txt_dia_chi.TabIndex = 4;
             // 
             // label5
             // 
@@ -210,7 +208,6 @@
             this.Controls.Add(this.m_pnl_control);
             this.Name = "f516_v_dm_benh_vien_de";
             this.Text = "f526_v_dm_benh_vien_de";
-            
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

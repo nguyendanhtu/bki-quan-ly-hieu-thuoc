@@ -103,10 +103,29 @@ namespace BKI_QLHT
 
         private bool check_validate()
         {
-            if (!CValidateTextBox.IsValid(m_txt_ma_benh_vien, DataType.StringType, allowNull.NO, true)) return false;
-            if (!CValidateTextBox.IsValid(m_txt_ten_benh_vien, DataType.StringType, allowNull.NO, true)) return false;
-            if (!CValidateTextBox.IsValid(m_txt_so_dien_thoai, DataType.StringType, allowNull.NO, true)) return false;
-            if (!CValidateTextBox.IsValid(m_txt_dia_chi, DataType.StringType, allowNull.NO, true)) return false;
+            if (m_txt_ma_benh_vien.Text == "") {
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập mã bệnh viện");
+                m_txt_ma_benh_vien.Focus();
+                return false;
+            }
+            if (m_txt_ten_benh_vien.Text == "")
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập tên bệnh viện");
+                m_txt_ten_benh_vien.Focus();
+                return false;
+            }
+            if (m_txt_so_dien_thoai.Text == "")
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập số điện thoại ");
+                m_txt_so_dien_thoai.Focus();
+                return false;
+            }
+            if (m_txt_dia_chi.Text == "")
+            {
+                BaseMessages.MsgBox_Infor("Bạn chưa nhập địa chỉ  bệnh viện");
+                m_txt_dia_chi.Focus();
+                return false;
+            }
             return true;
         }
         

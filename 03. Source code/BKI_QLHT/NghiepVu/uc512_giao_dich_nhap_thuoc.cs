@@ -796,6 +796,7 @@ namespace BKI_QLHT
                     }
                     else
                     {
+                        
                         if (CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.GIA_BAN].ToString().ToString()) != v_list.gia_ban)
                         {
                             ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
@@ -810,6 +811,7 @@ namespace BKI_QLHT
                         }
                         else
                         {
+                            v_list.gia_ban_dv_cap_2 = v_list.gia_ban / CIPConvert.ToDecimal(v_list.quy_doi_1);
                             v_ds.Clear();
                             ip_us_gd_gia_ban.FillDataset(v_ds, "where id_thuoc='" + v_list.ID_thuoc + "' and id_don_vi_tinh=" + v_list.ID_dv_cap_2);
                             v_dr = v_ds.Tables[0].Rows[0];
@@ -1117,7 +1119,7 @@ namespace BKI_QLHT
             {
                 if (m_trang_thai == true)
                 {
-                    DialogResult dgr = MessageBox.Show("Bạn có muốn lưu dữ liệu không ?","Thông báo  ", MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                    DialogResult dgr = MessageBox.Show("Bạn có muốn lưu dữ liệu không ?", "Thông báo  ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if (dgr == DialogResult.OK)
                     {
                         m_us_don_vi_tinh.BeginTransaction();
@@ -1144,7 +1146,7 @@ namespace BKI_QLHT
                         m_lbl_tong_tien.Text = "";
                         tong_tien = 0;
                         m_grv_nhap_thuoc.Rows.Clear();
-                        //gen_Ma_GD();
+                        m_lbl_ma_giao_dich.Text = gen_Ma_GD();
                         BaseMessages.MsgBox_Infor("Bạn đã cập nhật thành công");
                     }
                     //DialogResult dgl = MessageBox.Show("Ban muon in hoa don khong", "In hoa don", MessageBoxButtons.YesNo);
@@ -1263,7 +1265,7 @@ namespace BKI_QLHT
             {
                 if (e.KeyChar != (char)8)
                 {
-                    BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'...Xin vui lòng chỉ nhập số");
+                    BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'..Xin vui lòng chỉ nhập số");
                     e.KeyChar = (char)0;
                 }
             }
