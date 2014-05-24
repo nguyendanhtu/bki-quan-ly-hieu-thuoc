@@ -32,6 +32,7 @@ namespace BKI_QLHT.DanhMuc
         #endregion
 
         #region Members
+        decimal m_ID;
         US_DM_DON_VI_KINH_DOANH m_us_don_vi_kinh_doanh = new US_DM_DON_VI_KINH_DOANH();
         DS_DM_DON_VI_KINH_DOANH m_ds_don_vi_kinh_doanh = new DS_DM_DON_VI_KINH_DOANH();
         #endregion
@@ -46,6 +47,7 @@ namespace BKI_QLHT.DanhMuc
         private void Load_data_2_form()
         {
             m_us_don_vi_kinh_doanh.FillDataset(m_ds_don_vi_kinh_doanh);
+            m_ID = CIPConvert.ToDecimal(m_ds_don_vi_kinh_doanh.Tables[0].Rows[0][0]);
             m_lbl_ma_nha_thuoc.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0]["MA_VIET_TAT"].ToString();
             m_txt_ten_nha_thuoc.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0][2].ToString();
             m_txt_dia_chi.Text = m_ds_don_vi_kinh_doanh.Tables[0].Rows[0][4].ToString();
@@ -74,6 +76,8 @@ namespace BKI_QLHT.DanhMuc
 
         private void m_form_2_us()
         {
+            m_us_don_vi_kinh_doanh.dcID = m_ID;
+            m_us_don_vi_kinh_doanh.strMA_VIET_TAT = m_lbl_ma_nha_thuoc.Text;
             m_us_don_vi_kinh_doanh.strTEN_DAY_DU = m_txt_ten_nha_thuoc.Text;
             m_us_don_vi_kinh_doanh.strDIA_CHI = m_txt_dia_chi.Text;
             m_us_don_vi_kinh_doanh.strMA_SO_THUE = m_txt_ma_so_thue.Text;
