@@ -430,8 +430,9 @@ namespace BKI_QLHT
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             //m_fg.Tree.Column = (int)e_col_Number.TEN_THUOC;
-            m_fg.Tree.Column = (int)e_col_Number.TEN_NHAN_VIEN;
+            m_fg.Tree.Column = (int)e_col_Number.MA_GIAO_DICH;
             m_fg.Cols[(int)e_col_Number.NGAY_GIAO_DICH].Visible = false;
+            m_fg.Cols[(int)e_col_Number.TEN_NHAN_VIEN].Visible = false;
             m_fg.Cols[0].Caption = "STT";
             m_fg.Tree.Style = C1.Win.C1FlexGrid.TreeStyleFlags.SimpleLeaf;
 
@@ -499,12 +500,25 @@ namespace BKI_QLHT
               , (int)e_col_Number.TEN_NHAN_VIEN // chỗ này là tên trường mà mình Count
               , "{0}"
               );
+            m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Count
+                , 1
+                , (int)e_col_Number.TEN_NHAN_VIEN
+                , (int)e_col_Number.MA_GIAO_DICH
+                , "{0}"
+                );
+            m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Sum
+                , 1
+                , (int)e_col_Number.TEN_NHAN_VIEN
+                , (int)e_col_Number.DOANH_THU
+                , "{0}"
+                );
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Sum
                 , 0
                 , (int)e_col_Number.NGAY_GIAO_DICH
                 , (int)e_col_Number.DOANH_THU
                 , "{0}"
                 );
+
             m_lbl_count.Text = m_v_ds._V_BC_DOANH_THU_NGAY_NV_DE.Count.ToString(CultureInfo.InvariantCulture);
             m_fg.Redraw = true;
             set_search_format_before();
