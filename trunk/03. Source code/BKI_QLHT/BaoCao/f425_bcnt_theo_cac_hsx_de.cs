@@ -503,10 +503,16 @@ namespace BKI_QLHT
               , (int)e_col_Number.TEN_THUOC // chỗ này là tên trường mà mình Count
               , "{0}"
               );
+            m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Sum // chỗ này dùng hàm count tức là để đếm, có thể dùng các hàm khác thay thế
+              , 0
+              , (int)e_col_Number.TEN_HSX // chỗ này là tên trường mà mình nhóm
+              , (int)e_col_Number.THANH_TIEN // chỗ này là tên trường mà mình Count
+              , "{0}"
+              );
             m_fg.Subtotal(C1.Win.C1FlexGrid.AggregateEnum.Sum
                 , 1
                 , (int)e_col_Number.TEN_THUOC
-                , (int)e_col_Number.NGAY_GIAO_DICH
+                , (int)e_col_Number.THANH_TIEN
                 , "{0}"
                 );
             m_lbl_count.Text = m_v_ds.V_BC_NHAP_THUOC_THEO_CAC_HSX_de.Count.ToString(CultureInfo.InvariantCulture);
