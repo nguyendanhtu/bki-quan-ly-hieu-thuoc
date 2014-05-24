@@ -224,6 +224,9 @@
     <Compile Include="BaoCao\f452_bcnt_ngay_va_nhan_vien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f454_bcnt_nhan_vien_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BaoCao\f455_bcnt_ncc_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -741,6 +744,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f452_bcnt_ngay_va_nhan_vien.resx">
       <DependentUpon>f452_bcnt_ngay_va_nhan_vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f454_bcnt_nhan_vien_de.resx">
+      <DependentUpon>f454_bcnt_nhan_vien_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f455_bcnt_ncc_de.resx">
       <DependentUpon>f455_bcnt_ncc_de.cs</DependentUpon>
