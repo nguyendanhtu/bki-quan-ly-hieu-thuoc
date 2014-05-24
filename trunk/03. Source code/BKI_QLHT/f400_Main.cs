@@ -1177,5 +1177,178 @@ namespace BKI_QLHT
             }
         }
 
+        private void m_cmd_bc_dm_thuoc_theo_nhom_thuoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc v_frm = new f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_dm_thuoc_theo_hsx_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f409_bao_cao_danh_muc_thuoc_theo_hsx v_frm = new f409_bao_cao_danh_muc_thuoc_theo_hsx();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_dm_thuoc_theo_ncc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f410_bao_cao_danh_muc_thuoc_theo_ncc v_frm = new f410_bao_cao_danh_muc_thuoc_theo_ncc();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_dm_thuoc_theo_nsx_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f411_bao_cao_danh_muc_thuoc_theo_nsx v_frm = new f411_bao_cao_danh_muc_thuoc_theo_nsx();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_kiem_ke_kho_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f412_bao_cao_kiem_ke_kho v_frm = new f412_bao_cao_kiem_ke_kho();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_dm_bac_sy_theo_benh_vien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f413_v_bao_cao_danh_muc_bac_sy v_frm = new f413_v_bao_cao_danh_muc_bac_sy();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_dm_khach_hang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f414_bao_cao_danh_muc_khach_hang v_frm = new f414_bao_cao_danh_muc_khach_hang();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_nhap_thuoc_theo_gia_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f440_bcnt_theo_gia v_frm = new f440_bcnt_theo_gia();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_nhap_thuoc_theo_ncc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_cmd_bc_nhap_thuoc_theo_nhan_vien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f423_bcnt_theo_cac_nv_va_ngay v_frm = new f423_bcnt_theo_cac_nv_va_ngay();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_nhap_thuoc_theo_hsx_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f425_bcnt_theo_cac_HSX_de v_frm = new f425_bcnt_theo_cac_HSX_de();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_theo_bac_sy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f402_bao_cao_doanh_thu_theo_cac_bac_sy v_frm = new f402_bao_cao_doanh_thu_theo_cac_bac_sy();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_theo_ncc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f403_bao_cao_doanh_thu_theo_cac_ncc v_frm = new f403_bao_cao_doanh_thu_theo_cac_ncc();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
     }     
 }
