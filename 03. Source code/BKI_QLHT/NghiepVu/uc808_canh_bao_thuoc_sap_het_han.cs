@@ -1,11 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
 using System.Windows.Forms;
+
+using IP.Core.IPCommon;
+using IP.Core.IPException;
+using IP.Core.IPData;
+using IP.Core.IPUserService;
+
+using BKI_QLHT.DS;
+using BKI_QLHT.US;
+using BKI_QLHT.DS.CDBNames;
+
+using C1.Win.C1FlexGrid;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT.NghiepVu
 {
@@ -15,11 +25,43 @@ namespace BKI_QLHT.NghiepVu
         {
             InitializeComponent();
             load_thuoc_sap_het_han();
+            format_controls();
+        }
+
+        private void format_controls()
+        {
+            CControlFormat.setUserControlStyle(this, new CAppContext_201());
+            
         }
 
         private void load_thuoc_sap_het_han()
         {
+            US_V_HAN_SU_DUNG v_us = new US_V_HAN_SU_DUNG();
+            DS_V_HAN_SU_DUNG v_ds = new DS_V_HAN_SU_DUNG();
+            v_us.FillDataset(v_ds, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY HAN_SD");
+            m_lbl_thuoc_1.Text= CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+            m_lbl_thuoc_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
+            m_lbl_thuoc_3.Text= CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
+            m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
+            m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
+            m_lbl_hsd_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["HAN_SD"]);
+            
+        }
 
+
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //m_Panel_Content.Controls.Clear();
+                //uc_802_gd_gia_ban uc_frm = new uc_802_gd_gia_ban();
+                //uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                //m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
     }
