@@ -36,9 +36,9 @@ namespace BKI_QLHT
         #region Data Structure
         private enum e_col_Number
         {
-            MA_TU_DIEN = 2
+            MA_TU_DIEN = 1
 ,
-            TEN_NGAN = 1
+            TEN_NGAN = 2
                 ,
             GHI_CHU = 4
                 , TEN = 3
