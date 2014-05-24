@@ -53,11 +53,7 @@ namespace BKI_QLHT
             set_define_events();
         }
 
-        private void set_define_events()
-        {
-            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
-            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
-        }
+       
         private void us_obj_2_form(US_V_DM_BENH_VIEN ip_us_v)
         {
             m_us_tu_dien.dcID = ip_us_v.dcID;
@@ -128,6 +124,12 @@ namespace BKI_QLHT
             }
             return true;
         }
+        private void set_define_events()
+        {
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            this.m_cmd_huy.Click += new System.EventHandler(this.m_cmd_huy_Click);
+            this.KeyDown+=new KeyEventHandler(f516_v_dm_benh_vien_de_KeyDown);
+        }
         
         #endregion
 
@@ -162,6 +164,18 @@ namespace BKI_QLHT
             {
 
                 CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+        private void f516_v_dm_benh_vien_de_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                save_data();
+
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
         #endregion

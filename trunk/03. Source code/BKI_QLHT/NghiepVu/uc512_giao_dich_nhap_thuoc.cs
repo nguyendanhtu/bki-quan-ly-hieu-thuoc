@@ -725,7 +725,7 @@ namespace BKI_QLHT
             foreach (data v_list in list)
             {
                 decimal v_id_thuoc = v_list.ID_thuoc;
-                decimal gia_ban_dv_3;
+                decimal gia_ban_dv_1=0;
                 v_ds.Clear();
                 ip_us_gd_gia_ban.FillDataset(v_ds, "where id_thuoc=" + v_id_thuoc);
                 if (v_ds.GD_GIA_BAN.Count == 0)
@@ -775,85 +775,46 @@ namespace BKI_QLHT
 
                 else
                 {
-
-
+                    if (v_list.ID_dv_cap_1 == v_list.id_don_vi_thuoc_nhap) gia_ban_dv_1 = v_list.gia_ban;
+                    if (v_list.ID_dv_cap_2 == v_list.id_don_vi_thuoc_nhap) gia_ban_dv_1 = v_list.gia_ban * CIPConvert.ToDecimal(v_list.quy_doi_1);
+                    if (v_list.ID_dv_cap_3 == v_list.id_don_vi_thuoc_nhap) gia_ban_dv_1 = v_list.gia_ban * CIPConvert.ToDecimal(v_list.quy_doi_1) * CIPConvert.ToDecimal(v_list.quy_doi_2);
+                    if (v_list.ID_dv_cap_4 == v_list.id_don_vi_thuoc_nhap) gia_ban_dv_1 = v_list.gia_ban * CIPConvert.ToDecimal(v_list.quy_doi_1) * CIPConvert.ToDecimal(v_list.quy_doi_2) * CIPConvert.ToDecimal(v_list.quy_doi_3);
                     v_ds.Clear();
-                    v_list.gia_ban_dv_cap_2 = v_list.gia_ban;
                     ip_us_gd_gia_ban.FillDataset(v_ds, "where id_thuoc='" + v_list.ID_thuoc + "' and id_don_vi_tinh=" + v_list.ID_dv_cap_1);
                     DataRow v_dr = v_ds.Tables[0].Rows[0];
-                    if (v_list.ID_dv_cap_1 != v_list.id_don_vi_thuoc_nhap)
+                    if (CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.GIA_BAN].ToString()) != gia_ban_dv_1)
                     {
-                        if (CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.GIA_BAN].ToString()) != (v_list.gia_ban * CIPConvert.ToDecimal(v_list.quy_doi_1)))
-                        {
-                            ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
-                            ip_us_gd_gia_ban.dcID_THUOC = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_THUOC].ToString());
-                            ip_us_gd_gia_ban.dcID_DON_VI_TINH = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_DON_VI_TINH].ToString());
-                            ip_us_gd_gia_ban.dcGIA_BAN = v_list.gia_ban * CIPConvert.ToDecimal(v_list.quy_doi_1);
-                            ip_us_gd_gia_ban.Update();
-                            v_list.gia_ban_dv_cap_2 = v_list.gia_ban;
-                        }
-
-                    }
-                    else
-                    {
-                        
-                        if (CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.GIA_BAN].ToString().ToString()) != v_list.gia_ban)
-                        {
-                            ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
-                            ip_us_gd_gia_ban.dcID_THUOC = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_THUOC].ToString());
-                            ip_us_gd_gia_ban.dcID_DON_VI_TINH = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_DON_VI_TINH].ToString());
-                            ip_us_gd_gia_ban.dcGIA_BAN = v_list.gia_ban;
-                            ip_us_gd_gia_ban.Update();
-                        }
-                        if (v_list.ID_dv_cap_2 == 0)
-                        {
-                            return;
-                        }
-                        else
-                        {
-                            v_list.gia_ban_dv_cap_2 = v_list.gia_ban / CIPConvert.ToDecimal(v_list.quy_doi_1);
-                            v_ds.Clear();
-                            ip_us_gd_gia_ban.FillDataset(v_ds, "where id_thuoc='" + v_list.ID_thuoc + "' and id_don_vi_tinh=" + v_list.ID_dv_cap_2);
-                            v_dr = v_ds.Tables[0].Rows[0];
-                            if (CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.GIA_BAN].ToString()) != (v_list.gia_ban / CIPConvert.ToDecimal(v_list.quy_doi_1)))
-                            {
-                                ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
-                                ip_us_gd_gia_ban.dcID_THUOC = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_THUOC].ToString());
-                                ip_us_gd_gia_ban.dcID_DON_VI_TINH = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_DON_VI_TINH].ToString());
-                                ip_us_gd_gia_ban.dcGIA_BAN = v_list.gia_ban / CIPConvert.ToDecimal(v_list.quy_doi_1);
-                                ip_us_gd_gia_ban.Update();
-                                v_list.gia_ban_dv_cap_2 = ip_us_gd_gia_ban.dcGIA_BAN;
-                            }
-                        }
-                    }
-                    if (v_list.ID_dv_cap_2 != v_list.ID_dv_cap_3)
-                    {
+                        ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
+                        ip_us_gd_gia_ban.dcID_THUOC = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_THUOC].ToString());
+                        ip_us_gd_gia_ban.dcID_DON_VI_TINH = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_DON_VI_TINH].ToString());
+                        ip_us_gd_gia_ban.dcGIA_BAN = gia_ban_dv_1;
+                        ip_us_gd_gia_ban.Update();
+                        v_ds.Clear();
+                        ip_us_gd_gia_ban.FillDataset(v_ds, "where id_thuoc='" + v_list.ID_thuoc + "' and id_don_vi_tinh=" + v_list.ID_dv_cap_2);
+                        v_dr = v_ds.Tables[0].Rows[0];
+                        ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
+                        ip_us_gd_gia_ban.dcID_THUOC = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_THUOC].ToString());
+                        ip_us_gd_gia_ban.dcID_DON_VI_TINH = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_DON_VI_TINH].ToString());
+                        ip_us_gd_gia_ban.dcGIA_BAN = gia_ban_dv_1 / CIPConvert.ToDecimal(v_list.quy_doi_1);
+                        ip_us_gd_gia_ban.Update();
                         v_ds.Clear();
                         ip_us_gd_gia_ban.FillDataset(v_ds, "where id_thuoc='" + v_list.ID_thuoc + "' and id_don_vi_tinh=" + v_list.ID_dv_cap_3);
                         v_dr = v_ds.Tables[0].Rows[0];
-                        if (CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.GIA_BAN].ToString()) != (v_list.gia_ban_dv_cap_2 / CIPConvert.ToDecimal(v_list.quy_doi_2)))
+                        ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
+                        ip_us_gd_gia_ban.dcID_THUOC = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_THUOC].ToString());
+                        ip_us_gd_gia_ban.dcID_DON_VI_TINH = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_DON_VI_TINH].ToString());
+                        ip_us_gd_gia_ban.dcGIA_BAN = gia_ban_dv_1 / (CIPConvert.ToDecimal(v_list.quy_doi_1) * CIPConvert.ToDecimal(v_list.quy_doi_2));
+                        ip_us_gd_gia_ban.Update();
+                        v_ds.Clear();
+                        if (v_list.ID_dv_cap_3 != v_list.ID_dv_cap_4)
                         {
+                            ip_us_gd_gia_ban.FillDataset(v_ds, "where id_thuoc='" + v_list.ID_thuoc + "' and id_don_vi_tinh=" + v_list.ID_dv_cap_4);
+                            v_dr = v_ds.Tables[0].Rows[0];
                             ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
                             ip_us_gd_gia_ban.dcID_THUOC = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_THUOC].ToString());
                             ip_us_gd_gia_ban.dcID_DON_VI_TINH = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_DON_VI_TINH].ToString());
-                            ip_us_gd_gia_ban.dcGIA_BAN = v_list.gia_ban_dv_cap_2 / CIPConvert.ToDecimal(v_list.quy_doi_2);
+                            ip_us_gd_gia_ban.dcGIA_BAN = gia_ban_dv_1 / (CIPConvert.ToDecimal(v_list.quy_doi_1) * CIPConvert.ToDecimal(v_list.quy_doi_2) * CIPConvert.ToDecimal(v_list.quy_doi_3));
                             ip_us_gd_gia_ban.Update();
-                            gia_ban_dv_3 = ip_us_gd_gia_ban.dcGIA_BAN;
-                        }
-                        else gia_ban_dv_3 = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.GIA_BAN].ToString());
-                        if (v_list.ID_dv_cap_3 != v_list.ID_dv_cap_4)
-                        {
-                            v_ds.Clear();
-                            ip_us_gd_gia_ban.FillDataset(v_ds, "where id_thuoc='" + v_list.ID_thuoc + "' and id_don_vi_tinh=" + v_list.ID_dv_cap_4);
-                            v_dr = v_ds.Tables[0].Rows[0];
-                            if (CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.GIA_BAN].ToString()) != (gia_ban_dv_3 / CIPConvert.ToDecimal(v_list.quy_doi_3)))
-                            {
-                                ip_us_gd_gia_ban.dcID = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID].ToString());
-                                ip_us_gd_gia_ban.dcID_THUOC = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_THUOC].ToString());
-                                ip_us_gd_gia_ban.dcID_DON_VI_TINH = CIPConvert.ToDecimal(v_dr[GD_GIA_BAN.ID_DON_VI_TINH].ToString());
-                                ip_us_gd_gia_ban.dcGIA_BAN = gia_ban_dv_3 / CIPConvert.ToDecimal(v_list.quy_doi_3);
-                                ip_us_gd_gia_ban.Update();
-                            }
                         }
                     }
                 }
