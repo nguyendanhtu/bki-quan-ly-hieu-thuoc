@@ -213,8 +213,9 @@ namespace BKI_QLHT
 
         private void m_cmd_item_danh_muc_control_Click(object sender, EventArgs e)
         {
-            f991_v_ht_control_in_form v_frm = new f991_v_ht_control_in_form();
-            v_frm.display();
+            //f991_v_ht_control_in_form v_frm = new f991_v_ht_control_in_form();
+            f902_form_control v_frm = new f902_form_control();
+            v_frm.Show();
         }
 
         private void m_cmd_item_phan_quyen_chi_tiet_Click(object sender, EventArgs e)

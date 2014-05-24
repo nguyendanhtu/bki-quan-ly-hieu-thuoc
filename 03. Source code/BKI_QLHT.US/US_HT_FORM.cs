@@ -89,6 +89,28 @@ namespace BKI_QLHT.US
             pm_objDR["DISPLAY_NAME"] = System.Convert.DBNull;
         }
 
+        public string strMENU_ITEM_NAME
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "MENU_ITEM_NAME", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["MENU_ITEM_NAME"] = value;
+            }
+        }
+
+        public bool IsMENU_ITEM_NAMENull()
+        {
+            return pm_objDR.IsNull("MENU_ITEM_NAME");
+        }
+
+        public void SetMENU_ITEM_NAMENull()
+        {
+            pm_objDR["MENU_ITEM_NAME"] = System.Convert.DBNull;
+        }
+
         #endregion
         #region "Init Functions"
         public US_HT_FORM()
