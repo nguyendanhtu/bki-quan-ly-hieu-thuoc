@@ -10,6 +10,19 @@
         public const string MA_TU_DIEN = "MA_TU_DIEN";
         public const string ID_TU_DIEN = "ID_TU_DIEN";
     }
+    public class V_HT_FORM_CONTROL
+    {
+        public const string ID = "ID";
+        public const string ID_FORM = "ID_FORM";
+        public const string CONTROL_NAME = "CONTROL_NAME";
+        public const string CONTROL_TYPE = "CONTROL_TYPE";
+        public const string CONTROL_DISPLAY = "CONTROL_DISPLAY";
+        public const string CONTROL_TEXT = "CONTROL_TEXT";
+        public const string FORM_NAME = "FORM_NAME";
+        public const string DISPLAY_NAME = "DISPLAY_NAME";
+        public const string MENU_ITEM_NAME = "MENU_ITEM_NAME";
+    }
+
     public class V_BC_DOANH_THU_NCC
     {
         public const string TEN_NCC = "TEN_NCC";

@@ -94,9 +94,6 @@ namespace BKI_QLHT
             format_controls();
         }
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -349,11 +346,11 @@ namespace BKI_QLHT
             // m_lbl_menu_item_name
             // 
             this.m_lbl_menu_item_name.AutoSize = true;
-            this.m_lbl_menu_item_name.Location = new System.Drawing.Point(348, 156);
+            this.m_lbl_menu_item_name.Location = new System.Drawing.Point(336, 156);
             this.m_lbl_menu_item_name.Name = "m_lbl_menu_item_name";
-            this.m_lbl_menu_item_name.Size = new System.Drawing.Size(71, 14);
+            this.m_lbl_menu_item_name.Size = new System.Drawing.Size(84, 14);
             this.m_lbl_menu_item_name.TabIndex = 39;
-            this.m_lbl_menu_item_name.Text = "Display name";
+            this.m_lbl_menu_item_name.Text = "Menu item name";
             // 
             // m_txt_menu_item_name
             // 
@@ -427,6 +424,7 @@ namespace BKI_QLHT
                 m_txt_display_name.Enabled = true;
                 m_txt_form_name.Enabled = false;
                 m_cmd_save.Visible = true;
+                m_cmd_them_tat_ca.Visible = true;
                 m_cmd_cap_nhat.Visible = false;
                 m_cmd_huy.Visible = false;
             }
@@ -435,6 +433,7 @@ namespace BKI_QLHT
                 m_txt_display_name.Enabled = true;
                 m_txt_form_name.Enabled = false;
                 m_cmd_save.Visible = false;
+                m_cmd_them_tat_ca.Visible = false;
                 m_cmd_cap_nhat.Visible = true;
                 m_cmd_huy.Visible = true;
             }
@@ -531,8 +530,6 @@ namespace BKI_QLHT
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
             i_us.DataRow2Me(v_dr);
         }
-
-
         private void us_object2grid(US_HT_FORM i_us
             , int i_grid_row)
         {
@@ -540,8 +537,6 @@ namespace BKI_QLHT
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
-
-
         private void insert_ht_form()
         {
             //	f990_ht_form_DE v_fDE = new  f990_ht_form_DE();								
@@ -613,43 +608,6 @@ namespace BKI_QLHT
             }
 
         }
-
-        private void m_cmd_update_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                update_ht_form();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_cmd_delete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                delete_ht_form();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void m_cmd_view_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                view_ht_form();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
         private void m_fg_Click(object sender, EventArgs e)
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
@@ -657,19 +615,10 @@ namespace BKI_QLHT
             grid2us_object(m_us, m_fg.Row);
             m_txt_form_name.Text = m_us.strFORM_NAME;
             m_txt_display_name.Text = m_us.strDISPLAY_NAME;
+            m_txt_menu_item_name.Text = m_us.strMENU_ITEM_NAME;
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
             format_form();
         }
-
-
-        internal void show_2_choose(f994_phan_quyen_detail f994_phan_quyen_detail)
-        {
-            m_frm = f994_phan_quyen_detail;
-            this.ShowDialog();
-            f994_phan_quyen_detail = m_frm;
-        }
-        #endregion
-
         private void m_cmd_save_Click(object sender, EventArgs e)
         {
             try
@@ -677,21 +626,19 @@ namespace BKI_QLHT
                 m_e_form_mode = DataEntryFormMode.InsertDataState;
                 if (m_list.Count != 0)
                 {
-                    //foreach (list_form v_item in m_list)
-                    //{
-                    //    m_us.strFORM_NAME = v_item.Form_name;
-                    //    m_us.strDISPLAY_NAME = v_item.Form_text;
-                    //    m_us.Insert();
-                    //}
                     if (m_list_control_chua_liet_ke.SelectedValue != null)
                     {
                         m_us.strFORM_NAME = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_name;
                         m_us.strDISPLAY_NAME = ((list_form)m_list_control_chua_liet_ke.Items[m_list_control_chua_liet_ke.SelectedIndex]).Form_text;
+                        m_us.strMENU_ITEM_NAME = m_txt_menu_item_name.Text.Trim();
                         m_us.Insert();
                         m_list_control_chua_liet_ke.DataSource = null;
                         load_form_name_unsaved();
                         load_data_2_grid();
                         BaseMessages.MsgBox_Infor("Đã cập nhập dữ liệu thành công!");
+                        m_txt_form_name.Text = "";
+                        m_txt_display_name.Text = "";
+                        m_txt_menu_item_name.Text = "";
                     }
                     else
                     {
@@ -709,18 +656,10 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
         private void m_cmd_cap_nhat_Click(object sender, EventArgs e)
         {
             try
             {
-                //m_e_form_mode = DataEntryFormMode.UpdateDataState;
-                //if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-                //if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-                //grid2us_object(m_us, m_fg.Row);
-                ////	f990_ht_form_DE v_fDE = new f990_ht_form_DE();
-                ////	v_fDE.display(m_us);
-                //load_data_2_grid();
                 if (m_txt_form_name.Text.Trim().Equals(""))
                 {
                     BaseMessages.MsgBox_Infor("Bạn phải nhập tên form!");
@@ -729,11 +668,13 @@ namespace BKI_QLHT
                 }
                 else
                 {
-                    m_us.strDISPLAY_NAME = m_txt_display_name.Text;
-                    m_us.strFORM_NAME = m_txt_form_name.Text;
+                    m_us.strDISPLAY_NAME = m_txt_display_name.Text.Trim();
+                    m_us.strFORM_NAME = m_txt_form_name.Text.Trim();
+                    m_us.strMENU_ITEM_NAME = m_txt_menu_item_name.Text.Trim();
                     m_us.Update();
                     m_txt_form_name.Text = "";
                     m_txt_display_name.Text = "";
+                    m_txt_menu_item_name.Text = "";
                     m_e_form_mode = DataEntryFormMode.InsertDataState;
                     format_form();
                     load_data_2_grid();
@@ -746,7 +687,6 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
         private void m_cmd_sua_Click(object sender, EventArgs e)
         {
             try
@@ -757,6 +697,7 @@ namespace BKI_QLHT
                 grid2us_object(m_us, m_fg.Row);
                 m_txt_form_name.Text = m_us.strFORM_NAME.Trim();
                 m_txt_display_name.Text = m_us.strDISPLAY_NAME.Trim();
+                m_txt_menu_item_name.Text = m_us.strMENU_ITEM_NAME;
                 //format_form();
             }
             catch (System.Exception v_e)
@@ -764,13 +705,13 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
         private void m_cmd_huy_Click(object sender, EventArgs e)
         {
             try
             {
                 m_txt_form_name.Text = "";
                 m_txt_display_name.Text = "";
+                m_txt_menu_item_name.Text = "";
                 m_e_form_mode = DataEntryFormMode.InsertDataState;
                 format_form();
             }
@@ -779,7 +720,6 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
         private void m_cmd_thoat_Click(object sender, EventArgs e)
         {
             try
@@ -791,7 +731,6 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
         private void m_list_control_chua_liet_ke_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -808,7 +747,6 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
         private void m_cmd_them_tat_ca_Click(object sender, EventArgs e)
         {
             try
@@ -821,7 +759,6 @@ namespace BKI_QLHT
                         m_us.strFORM_NAME = v_item.Form_name;
                         m_us.strDISPLAY_NAME = v_item.Form_text;
                         m_us.Insert();
-
                     }
                     load_form_name_unsaved();
                     load_data_2_grid();
@@ -834,7 +771,13 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
+        internal void show_2_choose(f994_phan_quyen_detail f994_phan_quyen_detail)
+        {
+            m_frm = f994_phan_quyen_detail;
+            this.ShowDialog();
+            f994_phan_quyen_detail = m_frm;
+        }
+        #endregion
     }
 }
 

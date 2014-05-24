@@ -562,6 +562,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_HT_FORM_CONTROL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_HT_FORM_CONTROL.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_SO_DU.cs">
       <DependentUpon>DS_V_SO_DU.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -1753,6 +1758,17 @@
     </None>
     <None Include="DS_V_HT_CONTROL_IN_FORM.xss">
       <DependentUpon>DS_V_HT_CONTROL_IN_FORM.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HT_FORM_CONTROL.xsc">
+      <DependentUpon>DS_V_HT_FORM_CONTROL.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HT_FORM_CONTROL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_HT_FORM_CONTROL.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_HT_FORM_CONTROL.xss">
+      <DependentUpon>DS_V_HT_FORM_CONTROL.xsd</DependentUpon>
     </None>
     <None Include="DS_V_SO_DU.xsc">
       <DependentUpon>DS_V_SO_DU.xsd</DependentUpon>

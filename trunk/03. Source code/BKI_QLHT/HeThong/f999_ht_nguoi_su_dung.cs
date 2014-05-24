@@ -145,7 +145,7 @@ namespace BKI_QLHT
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
-            this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Text = "&Thêm sdfsdfds";
             // 
             // m_cmd_update
             // 
