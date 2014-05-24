@@ -186,12 +186,12 @@ namespace BKI_QLHT
             // 
             this.m_ribbonControl_Main.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonControl_Main.CaptionVisible = true;
-            this.m_ribbonControl_Main.Controls.Add(this.m_menu_item_theo_bac_sy);
-            this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel1);
-            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_baocao);
-            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
-            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_danhmuc);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
+            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_baocao);
+            this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel1);
+            this.m_ribbonControl_Main.Controls.Add(this.m_menu_item_theo_bac_sy);
+            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_danhmuc);
+            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_ribbonControl_Main.ForeColor = System.Drawing.Color.Black;
             this.m_ribbonControl_Main.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -269,6 +269,7 @@ namespace BKI_QLHT
             this.m_menu_item_bc_dm_thuoc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_menu_item_bc_dm_thuoc.ContainerControlProcessDialogKey = true;
             this.m_menu_item_bc_dm_thuoc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_menu_item_bc_dm_thuoc.ImageSize = DevComponents.DotNetBar.eBarImageSize.Medium;
             this.m_menu_item_bc_dm_thuoc.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.m_cmd_bc_dm_thuoc_theo_nhom_thuoc,
             this.m_cmd_bc_dm_thuoc_theo_hsx,
@@ -312,7 +313,6 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_nghiepvu.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_nghiepvu.TabIndex = 3;
-            this.m_ribbonPanel_nghiepvu.Visible = false;
             // 
             // m_menu_item_gia
             // 
@@ -1020,6 +1020,7 @@ namespace BKI_QLHT
             // 
             // m_menuitem_nghiepvu
             // 
+            this.m_menuitem_nghiepvu.Checked = true;
             this.m_menuitem_nghiepvu.Name = "m_menuitem_nghiepvu";
             this.m_menuitem_nghiepvu.Panel = this.m_ribbonPanel_nghiepvu;
             this.m_menuitem_nghiepvu.Text = "Nghiệp vụ";
@@ -1677,7 +1678,6 @@ namespace BKI_QLHT
             // 
             // m_item_bao_cao_doanh_thu
             // 
-            this.m_item_bao_cao_doanh_thu.Checked = true;
             this.m_item_bao_cao_doanh_thu.Name = "m_item_bao_cao_doanh_thu";
             this.m_item_bao_cao_doanh_thu.Panel = this.m_menu_item_theo_bac_sy;
             this.m_item_bao_cao_doanh_thu.Text = "Báo cáo doanh thu";
@@ -1709,9 +1709,12 @@ namespace BKI_QLHT
             // 
             this.m_menu_item_theo_bac_sy.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_menu_item_theo_bac_sy.TabIndex = 6;
+            this.m_menu_item_theo_bac_sy.Visible = false;
             // 
             // m_cmd_bc_dm_thuoc_theo_nhom_thuoc
             // 
+            this.m_cmd_bc_dm_thuoc_theo_nhom_thuoc.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_bc_dm_thuoc_theo_nhom_thuoc.Image")));
+            this.m_cmd_bc_dm_thuoc_theo_nhom_thuoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.m_cmd_bc_dm_thuoc_theo_nhom_thuoc.Name = "m_cmd_bc_dm_thuoc_theo_nhom_thuoc";
             this.m_cmd_bc_dm_thuoc_theo_nhom_thuoc.SubItemsExpandWidth = 14;
             this.m_cmd_bc_dm_thuoc_theo_nhom_thuoc.Text = "Nhóm thuốc";
