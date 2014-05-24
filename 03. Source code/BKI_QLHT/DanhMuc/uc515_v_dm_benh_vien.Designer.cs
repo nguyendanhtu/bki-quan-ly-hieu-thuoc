@@ -90,7 +90,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(776, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(785, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -105,7 +105,7 @@
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(864, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(873, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -134,7 +134,7 @@
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(952, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(961, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -159,7 +159,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1132, 110);
+            this.panel1.Size = new System.Drawing.Size(1141, 110);
             this.panel1.TabIndex = 47;
             // 
             // label3
@@ -178,7 +178,7 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_fg.Location = new System.Drawing.Point(0, 116);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1132, 412);
+            this.m_fg.Size = new System.Drawing.Size(1141, 412);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 46;
             this.m_fg.DoubleClick += new System.EventHandler(this.m_fg_DoubleClick);
@@ -193,7 +193,7 @@
             this.m_pnl_control.Location = new System.Drawing.Point(0, 528);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(1132, 36);
+            this.m_pnl_control.Size = new System.Drawing.Size(1141, 36);
             this.m_pnl_control.TabIndex = 45;
             // 
             // m_cmd_exit
@@ -205,7 +205,7 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(1040, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1049, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -219,7 +219,7 @@
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "uc515_v_dm_benh_vien";
-            this.Size = new System.Drawing.Size(1132, 564);
+            this.Size = new System.Drawing.Size(1141, 564);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
