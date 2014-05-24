@@ -378,7 +378,7 @@ namespace BKI_QLHT.HeThong
             m_ds_v_ht_form_control.Clear();
             m_us_v_ht_form_control.FillDataset(m_ds_v_ht_form_control, "where form_name='" +
                 ((DataRowView)m_cbo_form.Items[m_cbo_form.SelectedIndex])[HT_FORM.FORM_NAME].ToString() + "' order by display_name");
-            m_fg.Redraw = true;
+            m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds_v_ht_form_control, m_fg, m_obj_trans);
             m_fg.Redraw = true;
         }

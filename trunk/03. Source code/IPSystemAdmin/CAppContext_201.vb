@@ -111,11 +111,16 @@ Public Class CAppContext_201
         m_dsDecentralization = ip_dsDecentralization
     End Sub
 
-    Private Shared Function CanUseThisControl( _
-                ByVal ip_strFormName As String _
-                , ByVal ip_strControlName As String _
-                , ByVal ip_strControlType As String) As Boolean
-        If (m_dsDecentralization.HT_PHAN_QUYEN_DETAIL.Select("FORM_NAME = '" & ip_strFormName & "' AND CONTROL_NAME ='" & ip_strControlName & "'").Length > 0) Then
+    Public Shared Function CanUseThisControl(ip_strFormName As String, ip_strControlName As String, ip_strControlType As String) As Boolean
+        Dim v_us_v_ht_phan_quyen As New US_V_HT_PHAN_QUYEN()
+        Dim v_ds_v_ht_phan_quyen As New DS_V_HT_PHAN_QUYEN()
+        Dim v_sp As New CStoredProc("pr_ht_phan_quyen_count")
+        v_sp.addDecimalInputParam("@ip_dc_id_user", CAppContext_201.getCurrentUserID())
+        v_sp.addNVarcharInputParam("@ip_str_form_name", ip_strFormName)
+        v_sp.addNVarcharInputParam("@ip_str_control_name", ip_strControlName)
+        v_sp.addNVarcharInputParam("@ip_str_control_type", ip_strControlType)
+        v_sp.fillDataSetByCommand(v_us_v_ht_phan_quyen, v_ds_v_ht_phan_quyen)
+        If v_ds_v_ht_phan_quyen.V_HT_PHAN_QUYEN.Count > 0 Then
             Return True
         End If
         Return False

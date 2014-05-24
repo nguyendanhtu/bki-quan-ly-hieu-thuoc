@@ -22,6 +22,21 @@
         public const string DISPLAY_NAME = "DISPLAY_NAME";
         public const string MENU_ITEM_NAME = "MENU_ITEM_NAME";
     }
+    public class V_HT_PHAN_QUYEN
+    {
+        public const string ID = "ID";
+        public const string ID_FORM = "ID_FORM";
+        public const string CONTROL_NAME = "CONTROL_NAME";
+        public const string CONTROL_TYPE = "CONTROL_TYPE";
+        public const string CONTROL_DISPLAY = "CONTROL_DISPLAY";
+        public const string CONTROL_TEXT = "CONTROL_TEXT";
+        public const string FORM_NAME = "FORM_NAME";
+        public const string DISPLAY_NAME = "DISPLAY_NAME";
+        public const string MENU_ITEM_NAME = "MENU_ITEM_NAME";
+        public const string ID_USER_GROUP = "ID_USER_GROUP";
+        public const string ID_QUYEN = "ID_QUYEN";
+        public const string USER_GROUP_NAME = "USER_GROUP_NAME";
+    }
 
     public class V_BC_DOANH_THU_NCC
     {

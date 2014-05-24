@@ -28,7 +28,7 @@ namespace BKI_QLHT.DanhMuc
             US_DM_THUOC v_us = new US_DM_THUOC();
             DS_DM_THUOC v_ds = new DS_DM_THUOC();
             v_us.FillDataset(v_ds);
-            m_txts_ten_thuoc.load_data_to_list(v_ds,DM_THUOC.TEN_THUOC, DM_THUOC.ID);
+            m_txts_ten_thuoc.load_data_to_list(v_ds, DM_THUOC.TEN_THUOC, DM_THUOC.ID);
 
         }
 
@@ -39,7 +39,7 @@ namespace BKI_QLHT.DanhMuc
 
         private void m_txts_ten_thuoc_KeyDown(object sender, KeyEventArgs e)
         {
-            if (button1.BackColor!=System.Drawing.Color.Red)
+            if (button1.BackColor != System.Drawing.Color.Red)
             {
                 button1.BackColor = System.Drawing.Color.Red;
             }
@@ -54,6 +54,10 @@ namespace BKI_QLHT.DanhMuc
             m_txts_ten_thuoc.xoa_trang();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
 
+        }
     }
 }

@@ -266,7 +266,6 @@
     </Compile>
     <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.cs">
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -566,6 +565,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_HT_FORM_CONTROL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_HT_PHAN_QUYEN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_HT_PHAN_QUYEN.xsd</DependentUpon>
     </Compile>
     <Compile Include="DS_V_SO_DU.cs">
       <DependentUpon>DS_V_SO_DU.xsd</DependentUpon>
@@ -1769,6 +1773,17 @@
     </None>
     <None Include="DS_V_HT_FORM_CONTROL.xss">
       <DependentUpon>DS_V_HT_FORM_CONTROL.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HT_PHAN_QUYEN.xsc">
+      <DependentUpon>DS_V_HT_PHAN_QUYEN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HT_PHAN_QUYEN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_HT_PHAN_QUYEN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_HT_PHAN_QUYEN.xss">
+      <DependentUpon>DS_V_HT_PHAN_QUYEN.xsd</DependentUpon>
     </None>
     <None Include="DS_V_SO_DU.xsc">
       <DependentUpon>DS_V_SO_DU.xsd</DependentUpon>

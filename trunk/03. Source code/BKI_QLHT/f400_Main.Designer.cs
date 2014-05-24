@@ -484,7 +484,7 @@ namespace BKI_QLHT
             this.m_cmd_dm_benh_vien});
             this.m_menu_item_don_vi_kinh_doanh.Location = new System.Drawing.Point(605, 0);
             this.m_menu_item_don_vi_kinh_doanh.Name = "m_menu_item_don_vi_kinh_doanh";
-            this.m_menu_item_don_vi_kinh_doanh.Size = new System.Drawing.Size(153, 83);
+            this.m_menu_item_don_vi_kinh_doanh.Size = new System.Drawing.Size(153, 94);
             this.m_menu_item_don_vi_kinh_doanh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_don_vi_kinh_doanh.TabIndex = 4;
             // 
@@ -575,7 +575,7 @@ namespace BKI_QLHT
             this.m_cmd_nha_san_xuat});
             this.m_menu_item_nha_cung_cap.Location = new System.Drawing.Point(340, 0);
             this.m_menu_item_nha_cung_cap.Name = "m_menu_item_nha_cung_cap";
-            this.m_menu_item_nha_cung_cap.Size = new System.Drawing.Size(192, 83);
+            this.m_menu_item_nha_cung_cap.Size = new System.Drawing.Size(192, 94);
             this.m_menu_item_nha_cung_cap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_nha_cung_cap.TabIndex = 2;
             this.m_menu_item_nha_cung_cap.Text = "Nhà cung cấp";
@@ -635,7 +635,7 @@ namespace BKI_QLHT
             this.m_cmd_nhom_khach_hang});
             this.m_menu_khach_hang.Location = new System.Drawing.Point(207, 0);
             this.m_menu_khach_hang.Name = "m_menu_khach_hang";
-            this.m_menu_khach_hang.Size = new System.Drawing.Size(133, 83);
+            this.m_menu_khach_hang.Size = new System.Drawing.Size(133, 94);
             this.m_menu_khach_hang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_khach_hang.TabIndex = 1;
             this.m_menu_khach_hang.Text = "Danh mục khách hàng";
@@ -688,7 +688,7 @@ namespace BKI_QLHT
             this.m_cmd_item_chi_tiet_thuoc});
             this.m_menu_item_thuoc.Location = new System.Drawing.Point(3, 0);
             this.m_menu_item_thuoc.Name = "m_menu_item_thuoc";
-            this.m_menu_item_thuoc.Size = new System.Drawing.Size(204, 83);
+            this.m_menu_item_thuoc.Size = new System.Drawing.Size(204, 94);
             this.m_menu_item_thuoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_thuoc.TabIndex = 0;
             this.m_menu_item_thuoc.Text = "Danh mục thuốc";
@@ -1083,9 +1083,9 @@ namespace BKI_QLHT
             this.m_Panel_Content.CanvasColor = System.Drawing.SystemColors.Control;
             this.m_Panel_Content.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_Panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_Panel_Content.Location = new System.Drawing.Point(234, 143);
+            this.m_Panel_Content.Location = new System.Drawing.Point(234, 154);
             this.m_Panel_Content.Name = "m_Panel_Content";
-            this.m_Panel_Content.Size = new System.Drawing.Size(584, 442);
+            this.m_Panel_Content.Size = new System.Drawing.Size(564, 430);
             this.m_Panel_Content.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.m_Panel_Content.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.m_Panel_Content.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1129,9 +1129,9 @@ namespace BKI_QLHT
             this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(5, 585);
+            this.dockSite4.Location = new System.Drawing.Point(5, 584);
             this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(813, 0);
+            this.dockSite4.Size = new System.Drawing.Size(793, 0);
             this.dockSite4.TabIndex = 12;
             this.dockSite4.TabStop = false;
             // 
@@ -1141,10 +1141,10 @@ namespace BKI_QLHT
             this.dockSite1.Controls.Add(this.bar1);
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 226, 442)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
-            this.dockSite1.Location = new System.Drawing.Point(5, 143);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 226, 430)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            this.dockSite1.Location = new System.Drawing.Point(5, 154);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(229, 442);
+            this.dockSite1.Size = new System.Drawing.Size(229, 430);
             this.dockSite1.TabIndex = 9;
             this.dockSite1.TabStop = false;
             // 
@@ -1156,14 +1156,14 @@ namespace BKI_QLHT
             this.bar1.AutoSyncBarCaption = true;
             this.bar1.CloseSingleTab = true;
             this.bar1.Controls.Add(this.panelDockContainer1);
-            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bar1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.dockContainerItem1});
             this.bar1.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(226, 442);
+            this.bar1.Size = new System.Drawing.Size(226, 430);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.bar1.TabIndex = 0;
@@ -1177,7 +1177,7 @@ namespace BKI_QLHT
             this.panelDockContainer1.Controls.Add(this.m_cmd_lich_su_gia_ban);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(220, 416);
+            this.panelDockContainer1.Size = new System.Drawing.Size(220, 404);
             this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
@@ -1189,9 +1189,9 @@ namespace BKI_QLHT
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(3, 60);
+            this.buttonX2.Location = new System.Drawing.Point(3, 65);
             this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(196, 40);
+            this.buttonX2.Size = new System.Drawing.Size(196, 43);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 1;
             this.buttonX2.Text = "buttonX2";
@@ -1215,9 +1215,9 @@ namespace BKI_QLHT
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite2.Location = new System.Drawing.Point(818, 143);
+            this.dockSite2.Location = new System.Drawing.Point(798, 154);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 442);
+            this.dockSite2.Size = new System.Drawing.Size(0, 430);
             this.dockSite2.TabIndex = 10;
             this.dockSite2.TabStop = false;
             // 
@@ -1225,9 +1225,9 @@ namespace BKI_QLHT
             // 
             this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(5, 585);
+            this.dockSite8.Location = new System.Drawing.Point(5, 584);
             this.dockSite8.Name = "dockSite8";
-            this.dockSite8.Size = new System.Drawing.Size(813, 0);
+            this.dockSite8.Size = new System.Drawing.Size(793, 0);
             this.dockSite8.TabIndex = 16;
             this.dockSite8.TabStop = false;
             // 
@@ -1237,7 +1237,7 @@ namespace BKI_QLHT
             this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite5.Location = new System.Drawing.Point(5, 1);
             this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 584);
+            this.dockSite5.Size = new System.Drawing.Size(0, 583);
             this.dockSite5.TabIndex = 13;
             this.dockSite5.TabStop = false;
             // 
@@ -1245,9 +1245,9 @@ namespace BKI_QLHT
             // 
             this.dockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite6.Location = new System.Drawing.Point(818, 1);
+            this.dockSite6.Location = new System.Drawing.Point(798, 1);
             this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 584);
+            this.dockSite6.Size = new System.Drawing.Size(0, 583);
             this.dockSite6.TabIndex = 14;
             this.dockSite6.TabStop = false;
             // 
@@ -1257,7 +1257,7 @@ namespace BKI_QLHT
             this.dockSite7.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite7.Location = new System.Drawing.Point(5, 1);
             this.dockSite7.Name = "dockSite7";
-            this.dockSite7.Size = new System.Drawing.Size(813, 0);
+            this.dockSite7.Size = new System.Drawing.Size(793, 0);
             this.dockSite7.TabIndex = 15;
             this.dockSite7.TabStop = false;
             // 
@@ -1268,7 +1268,7 @@ namespace BKI_QLHT
             this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite3.Location = new System.Drawing.Point(5, 1);
             this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(813, 0);
+            this.dockSite3.Size = new System.Drawing.Size(793, 0);
             this.dockSite3.TabIndex = 11;
             this.dockSite3.TabStop = false;
             // 
@@ -1280,9 +1280,9 @@ namespace BKI_QLHT
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(17, 476);
+            this.button8.Location = new System.Drawing.Point(17, 513);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(63, 23);
+            this.button8.Size = new System.Drawing.Size(63, 25);
             this.button8.TabIndex = 24;
             this.button8.Text = "402";
             this.button8.UseVisualStyleBackColor = true;
@@ -1290,9 +1290,9 @@ namespace BKI_QLHT
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(86, 476);
+            this.button9.Location = new System.Drawing.Point(86, 513);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(68, 23);
+            this.button9.Size = new System.Drawing.Size(68, 25);
             this.button9.TabIndex = 25;
             this.button9.Text = "403";
             this.button9.UseVisualStyleBackColor = true;
@@ -1300,9 +1300,9 @@ namespace BKI_QLHT
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(160, 476);
+            this.button10.Location = new System.Drawing.Point(160, 513);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(63, 23);
+            this.button10.Size = new System.Drawing.Size(63, 25);
             this.button10.TabIndex = 26;
             this.button10.Text = "404";
             this.button10.UseVisualStyleBackColor = true;
@@ -1310,9 +1310,9 @@ namespace BKI_QLHT
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(17, 505);
+            this.button11.Location = new System.Drawing.Point(17, 544);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(63, 23);
+            this.button11.Size = new System.Drawing.Size(63, 25);
             this.button11.TabIndex = 27;
             this.button11.Text = "405";
             this.button11.UseVisualStyleBackColor = true;
@@ -1320,9 +1320,9 @@ namespace BKI_QLHT
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(86, 505);
+            this.button12.Location = new System.Drawing.Point(86, 544);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(63, 23);
+            this.button12.Size = new System.Drawing.Size(63, 25);
             this.button12.TabIndex = 28;
             this.button12.Text = "406";
             this.button12.UseVisualStyleBackColor = true;
@@ -1330,9 +1330,9 @@ namespace BKI_QLHT
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(160, 505);
+            this.button13.Location = new System.Drawing.Point(160, 544);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(63, 23);
+            this.button13.Size = new System.Drawing.Size(63, 25);
             this.button13.TabIndex = 29;
             this.button13.Text = "407";
             this.button13.UseVisualStyleBackColor = true;
@@ -1340,9 +1340,9 @@ namespace BKI_QLHT
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(17, 534);
+            this.button14.Location = new System.Drawing.Point(17, 575);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(63, 23);
+            this.button14.Size = new System.Drawing.Size(63, 25);
             this.button14.TabIndex = 30;
             this.button14.Text = "415";
             this.button14.UseVisualStyleBackColor = true;
@@ -1350,9 +1350,9 @@ namespace BKI_QLHT
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(86, 534);
+            this.button15.Location = new System.Drawing.Point(86, 575);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(63, 23);
+            this.button15.Size = new System.Drawing.Size(63, 25);
             this.button15.TabIndex = 31;
             this.button15.Text = "416";
             this.button15.UseVisualStyleBackColor = true;
@@ -1360,9 +1360,9 @@ namespace BKI_QLHT
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(160, 534);
+            this.button16.Location = new System.Drawing.Point(160, 575);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(63, 23);
+            this.button16.Size = new System.Drawing.Size(63, 25);
             this.button16.TabIndex = 32;
             this.button16.Text = "417";
             this.button16.UseVisualStyleBackColor = true;
@@ -1370,9 +1370,9 @@ namespace BKI_QLHT
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(17, 563);
+            this.button17.Location = new System.Drawing.Point(17, 606);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(63, 23);
+            this.button17.Size = new System.Drawing.Size(63, 25);
             this.button17.TabIndex = 33;
             this.button17.Text = "418";
             this.button17.UseVisualStyleBackColor = true;
@@ -1380,9 +1380,9 @@ namespace BKI_QLHT
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(86, 563);
+            this.button18.Location = new System.Drawing.Point(86, 606);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(63, 23);
+            this.button18.Size = new System.Drawing.Size(63, 25);
             this.button18.TabIndex = 34;
             this.button18.Text = "419";
             this.button18.UseVisualStyleBackColor = true;
@@ -1390,9 +1390,9 @@ namespace BKI_QLHT
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(160, 563);
+            this.button19.Location = new System.Drawing.Point(160, 606);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(63, 23);
+            this.button19.Size = new System.Drawing.Size(63, 25);
             this.button19.TabIndex = 35;
             this.button19.Text = "420";
             this.button19.UseVisualStyleBackColor = true;
@@ -1400,9 +1400,9 @@ namespace BKI_QLHT
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(17, 169);
+            this.button20.Location = new System.Drawing.Point(17, 182);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(33, 23);
+            this.button20.Size = new System.Drawing.Size(33, 25);
             this.button20.TabIndex = 36;
             this.button20.Text = "421";
             this.button20.UseVisualStyleBackColor = true;
@@ -1410,9 +1410,9 @@ namespace BKI_QLHT
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(56, 169);
+            this.button21.Location = new System.Drawing.Point(56, 182);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(35, 23);
+            this.button21.Size = new System.Drawing.Size(35, 25);
             this.button21.TabIndex = 37;
             this.button21.Text = "422";
             this.button21.UseVisualStyleBackColor = true;
@@ -1420,9 +1420,9 @@ namespace BKI_QLHT
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(97, 169);
+            this.button22.Location = new System.Drawing.Point(97, 182);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(35, 23);
+            this.button22.Size = new System.Drawing.Size(35, 25);
             this.button22.TabIndex = 38;
             this.button22.Text = "423";
             this.button22.UseVisualStyleBackColor = true;
@@ -1430,9 +1430,9 @@ namespace BKI_QLHT
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(138, 169);
+            this.button23.Location = new System.Drawing.Point(138, 182);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(33, 23);
+            this.button23.Size = new System.Drawing.Size(33, 25);
             this.button23.TabIndex = 39;
             this.button23.Text = "424";
             this.button23.UseVisualStyleBackColor = true;
@@ -1440,9 +1440,9 @@ namespace BKI_QLHT
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(177, 360);
+            this.button24.Location = new System.Drawing.Point(177, 388);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(34, 23);
+            this.button24.Size = new System.Drawing.Size(34, 25);
             this.button24.TabIndex = 40;
             this.button24.Text = "425";
             this.button24.UseVisualStyleBackColor = true;
@@ -1450,9 +1450,9 @@ namespace BKI_QLHT
             // 
             // button25
             // 
-            this.button25.Location = new System.Drawing.Point(17, 198);
+            this.button25.Location = new System.Drawing.Point(17, 213);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(33, 23);
+            this.button25.Size = new System.Drawing.Size(33, 25);
             this.button25.TabIndex = 41;
             this.button25.Text = "426";
             this.button25.UseVisualStyleBackColor = true;
@@ -1460,9 +1460,9 @@ namespace BKI_QLHT
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(58, 198);
+            this.button26.Location = new System.Drawing.Point(58, 213);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(33, 23);
+            this.button26.Size = new System.Drawing.Size(33, 25);
             this.button26.TabIndex = 42;
             this.button26.Text = "427";
             this.button26.UseVisualStyleBackColor = true;
@@ -1470,9 +1470,9 @@ namespace BKI_QLHT
             // 
             // button27
             // 
-            this.button27.Location = new System.Drawing.Point(97, 198);
+            this.button27.Location = new System.Drawing.Point(97, 213);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(33, 23);
+            this.button27.Size = new System.Drawing.Size(33, 25);
             this.button27.TabIndex = 43;
             this.button27.Text = "428";
             this.button27.UseVisualStyleBackColor = true;
@@ -1480,9 +1480,9 @@ namespace BKI_QLHT
             // 
             // button28
             // 
-            this.button28.Location = new System.Drawing.Point(138, 198);
+            this.button28.Location = new System.Drawing.Point(138, 213);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(33, 23);
+            this.button28.Size = new System.Drawing.Size(33, 25);
             this.button28.TabIndex = 44;
             this.button28.Text = "429";
             this.button28.UseVisualStyleBackColor = true;
@@ -1490,9 +1490,9 @@ namespace BKI_QLHT
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(185, 198);
+            this.button29.Location = new System.Drawing.Point(185, 213);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(33, 27);
+            this.button29.Size = new System.Drawing.Size(33, 29);
             this.button29.TabIndex = 45;
             this.button29.Text = "430";
             this.button29.UseVisualStyleBackColor = true;
@@ -1500,9 +1500,9 @@ namespace BKI_QLHT
             // 
             // button33
             // 
-            this.button33.Location = new System.Drawing.Point(17, 389);
+            this.button33.Location = new System.Drawing.Point(17, 419);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(33, 23);
+            this.button33.Size = new System.Drawing.Size(33, 25);
             this.button33.TabIndex = 49;
             this.button33.Text = "440";
             this.button33.UseVisualStyleBackColor = true;
@@ -1510,9 +1510,9 @@ namespace BKI_QLHT
             // 
             // button34
             // 
-            this.button34.Location = new System.Drawing.Point(56, 389);
+            this.button34.Location = new System.Drawing.Point(56, 419);
             this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(43, 23);
+            this.button34.Size = new System.Drawing.Size(43, 25);
             this.button34.TabIndex = 50;
             this.button34.Text = "441";
             this.button34.UseVisualStyleBackColor = true;
@@ -1520,9 +1520,9 @@ namespace BKI_QLHT
             // 
             // button35
             // 
-            this.button35.Location = new System.Drawing.Point(97, 389);
+            this.button35.Location = new System.Drawing.Point(97, 419);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(44, 23);
+            this.button35.Size = new System.Drawing.Size(44, 25);
             this.button35.TabIndex = 51;
             this.button35.Text = "442";
             this.button35.UseVisualStyleBackColor = true;
@@ -1530,9 +1530,9 @@ namespace BKI_QLHT
             // 
             // button36
             // 
-            this.button36.Location = new System.Drawing.Point(139, 389);
+            this.button36.Location = new System.Drawing.Point(139, 419);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(40, 23);
+            this.button36.Size = new System.Drawing.Size(40, 25);
             this.button36.TabIndex = 52;
             this.button36.Text = "443";
             this.button36.UseVisualStyleBackColor = true;
@@ -1540,9 +1540,9 @@ namespace BKI_QLHT
             // 
             // button37
             // 
-            this.button37.Location = new System.Drawing.Point(178, 389);
+            this.button37.Location = new System.Drawing.Point(178, 419);
             this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(40, 23);
+            this.button37.Size = new System.Drawing.Size(40, 25);
             this.button37.TabIndex = 53;
             this.button37.Text = "444";
             this.button37.UseVisualStyleBackColor = true;
@@ -1550,9 +1550,9 @@ namespace BKI_QLHT
             // 
             // button38
             // 
-            this.button38.Location = new System.Drawing.Point(17, 360);
+            this.button38.Location = new System.Drawing.Point(17, 388);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(40, 23);
+            this.button38.Size = new System.Drawing.Size(40, 25);
             this.button38.TabIndex = 54;
             this.button38.Text = "445";
             this.button38.UseVisualStyleBackColor = true;
@@ -1560,9 +1560,9 @@ namespace BKI_QLHT
             // 
             // button39
             // 
-            this.button39.Location = new System.Drawing.Point(51, 360);
+            this.button39.Location = new System.Drawing.Point(51, 388);
             this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(40, 23);
+            this.button39.Size = new System.Drawing.Size(40, 25);
             this.button39.TabIndex = 55;
             this.button39.Text = "446";
             this.button39.UseVisualStyleBackColor = true;
@@ -1570,9 +1570,9 @@ namespace BKI_QLHT
             // 
             // button40
             // 
-            this.button40.Location = new System.Drawing.Point(92, 360);
+            this.button40.Location = new System.Drawing.Point(92, 388);
             this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(40, 23);
+            this.button40.Size = new System.Drawing.Size(40, 25);
             this.button40.TabIndex = 56;
             this.button40.Text = "447";
             this.button40.UseVisualStyleBackColor = true;
@@ -1580,9 +1580,9 @@ namespace BKI_QLHT
             // 
             // button41
             // 
-            this.button41.Location = new System.Drawing.Point(131, 360);
+            this.button41.Location = new System.Drawing.Point(131, 388);
             this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(40, 23);
+            this.button41.Size = new System.Drawing.Size(40, 25);
             this.button41.TabIndex = 57;
             this.button41.Text = "448";
             this.button41.UseVisualStyleBackColor = true;
@@ -1590,9 +1590,9 @@ namespace BKI_QLHT
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(17, 331);
+            this.button5.Location = new System.Drawing.Point(17, 356);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 23);
+            this.button5.Size = new System.Drawing.Size(40, 25);
             this.button5.TabIndex = 58;
             this.button5.Text = "449";
             this.button5.UseVisualStyleBackColor = true;
@@ -1600,9 +1600,9 @@ namespace BKI_QLHT
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(63, 331);
+            this.button7.Location = new System.Drawing.Point(63, 356);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(40, 23);
+            this.button7.Size = new System.Drawing.Size(40, 25);
             this.button7.TabIndex = 59;
             this.button7.Text = "450";
             this.button7.UseVisualStyleBackColor = true;
@@ -1610,9 +1610,9 @@ namespace BKI_QLHT
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(109, 331);
+            this.button1.Location = new System.Drawing.Point(109, 356);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 23);
+            this.button1.Size = new System.Drawing.Size(40, 25);
             this.button1.TabIndex = 60;
             this.button1.Text = "451";
             this.button1.UseVisualStyleBackColor = true;
@@ -1620,9 +1620,9 @@ namespace BKI_QLHT
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(155, 331);
+            this.button2.Location = new System.Drawing.Point(155, 356);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 23);
+            this.button2.Size = new System.Drawing.Size(40, 25);
             this.button2.TabIndex = 61;
             this.button2.Text = "452";
             this.button2.UseVisualStyleBackColor = true;
@@ -1630,9 +1630,9 @@ namespace BKI_QLHT
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 302);
+            this.button3.Location = new System.Drawing.Point(17, 325);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 23);
+            this.button3.Size = new System.Drawing.Size(40, 25);
             this.button3.TabIndex = 62;
             this.button3.Text = "455";
             this.button3.UseVisualStyleBackColor = true;
@@ -1640,9 +1640,9 @@ namespace BKI_QLHT
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(63, 302);
+            this.button4.Location = new System.Drawing.Point(63, 325);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 23);
+            this.button4.Size = new System.Drawing.Size(40, 25);
             this.button4.TabIndex = 63;
             this.button4.Text = "454";
             this.button4.UseVisualStyleBackColor = true;
@@ -2114,11 +2114,11 @@ namespace BKI_QLHT
             // 
             // f400_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(823, 587);
+            this.ClientSize = new System.Drawing.Size(803, 586);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
