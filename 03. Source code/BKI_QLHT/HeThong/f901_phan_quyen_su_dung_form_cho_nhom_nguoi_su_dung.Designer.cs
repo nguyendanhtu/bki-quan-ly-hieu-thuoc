@@ -37,19 +37,17 @@
             this.m_cmd_right_2_left = new SIS.Controls.Button.SiSButton();
             this.m_cmd_left_2_right_all = new SIS.Controls.Button.SiSButton();
             this.m_cmd_left_2_right = new SIS.Controls.Button.SiSButton();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.m_tab_form = new System.Windows.Forms.TabControl();
             this.m_tab_phan_quyen_form = new System.Windows.Forms.TabPage();
-            this.m_tab_phan_quyen_form_control = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.m_cmd_save = new SIS.Controls.Button.SiSButton();
-            this.siSButton1 = new SIS.Controls.Button.SiSButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.siSButton2 = new SIS.Controls.Button.SiSButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_tab_phan_quyen_form_control = new System.Windows.Forms.TabPage();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.siSButton3 = new SIS.Controls.Button.SiSButton();
-            this.tabControl1.SuspendLayout();
+            this.m_cmd_xoa_control = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_them_control = new SIS.Controls.Button.SiSButton();
+            this.m_lst_control = new System.Windows.Forms.ListBox();
+            this.m_lst_form = new System.Windows.Forms.ListBox();
+            this.m_tab_form.SuspendLayout();
             this.m_tab_phan_quyen_form.SuspendLayout();
             this.m_tab_phan_quyen_form_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -59,7 +57,7 @@
             // 
             this.m_cbo_nhom_nguoi_su_dung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_nhom_nguoi_su_dung.FormattingEnabled = true;
-            this.m_cbo_nhom_nguoi_su_dung.Location = new System.Drawing.Point(239, 32);
+            this.m_cbo_nhom_nguoi_su_dung.Location = new System.Drawing.Point(381, 32);
             this.m_cbo_nhom_nguoi_su_dung.Name = "m_cbo_nhom_nguoi_su_dung";
             this.m_cbo_nhom_nguoi_su_dung.Size = new System.Drawing.Size(322, 22);
             this.m_cbo_nhom_nguoi_su_dung.TabIndex = 0;
@@ -68,18 +66,18 @@
             // 
             this.m_lst_danh_sach_form.FormattingEnabled = true;
             this.m_lst_danh_sach_form.ItemHeight = 14;
-            this.m_lst_danh_sach_form.Location = new System.Drawing.Point(6, 86);
+            this.m_lst_danh_sach_form.Location = new System.Drawing.Point(148, 86);
             this.m_lst_danh_sach_form.Name = "m_lst_danh_sach_form";
-            this.m_lst_danh_sach_form.Size = new System.Drawing.Size(268, 172);
+            this.m_lst_danh_sach_form.Size = new System.Drawing.Size(268, 242);
             this.m_lst_danh_sach_form.TabIndex = 1;
             // 
             // m_lst_danh_sach_form_duoc_dung
             // 
             this.m_lst_danh_sach_form_duoc_dung.FormattingEnabled = true;
             this.m_lst_danh_sach_form_duoc_dung.ItemHeight = 14;
-            this.m_lst_danh_sach_form_duoc_dung.Location = new System.Drawing.Point(397, 86);
+            this.m_lst_danh_sach_form_duoc_dung.Location = new System.Drawing.Point(539, 86);
             this.m_lst_danh_sach_form_duoc_dung.Name = "m_lst_danh_sach_form_duoc_dung";
-            this.m_lst_danh_sach_form_duoc_dung.Size = new System.Drawing.Size(268, 172);
+            this.m_lst_danh_sach_form_duoc_dung.Size = new System.Drawing.Size(268, 242);
             this.m_lst_danh_sach_form_duoc_dung.TabIndex = 1;
             // 
             // m_cmd_right_2_left_all
@@ -89,9 +87,9 @@
             this.m_cmd_right_2_left_all.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_right_2_left_all.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_right_2_left_all.ImageIndex = 10;
-            this.m_cmd_right_2_left_all.Location = new System.Drawing.Point(314, 226);
+            this.m_cmd_right_2_left_all.Location = new System.Drawing.Point(453, 259);
             this.m_cmd_right_2_left_all.Name = "m_cmd_right_2_left_all";
-            this.m_cmd_right_2_left_all.Size = new System.Drawing.Size(48, 30);
+            this.m_cmd_right_2_left_all.Size = new System.Drawing.Size(48, 36);
             this.m_cmd_right_2_left_all.TabIndex = 16;
             this.m_cmd_right_2_left_all.Text = "<<";
             // 
@@ -102,9 +100,9 @@
             this.m_cmd_right_2_left.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_right_2_left.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_right_2_left.ImageIndex = 10;
-            this.m_cmd_right_2_left.Location = new System.Drawing.Point(314, 190);
+            this.m_cmd_right_2_left.Location = new System.Drawing.Point(453, 217);
             this.m_cmd_right_2_left.Name = "m_cmd_right_2_left";
-            this.m_cmd_right_2_left.Size = new System.Drawing.Size(48, 30);
+            this.m_cmd_right_2_left.Size = new System.Drawing.Size(48, 36);
             this.m_cmd_right_2_left.TabIndex = 15;
             this.m_cmd_right_2_left.Text = "<";
             // 
@@ -115,9 +113,9 @@
             this.m_cmd_left_2_right_all.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_left_2_right_all.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_left_2_right_all.ImageIndex = 10;
-            this.m_cmd_left_2_right_all.Location = new System.Drawing.Point(314, 122);
+            this.m_cmd_left_2_right_all.Location = new System.Drawing.Point(453, 155);
             this.m_cmd_left_2_right_all.Name = "m_cmd_left_2_right_all";
-            this.m_cmd_left_2_right_all.Size = new System.Drawing.Size(48, 30);
+            this.m_cmd_left_2_right_all.Size = new System.Drawing.Size(48, 36);
             this.m_cmd_left_2_right_all.TabIndex = 14;
             this.m_cmd_left_2_right_all.Text = ">>";
             // 
@@ -128,27 +126,25 @@
             this.m_cmd_left_2_right.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
             this.m_cmd_left_2_right.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_left_2_right.ImageIndex = 10;
-            this.m_cmd_left_2_right.Location = new System.Drawing.Point(314, 86);
+            this.m_cmd_left_2_right.Location = new System.Drawing.Point(453, 113);
             this.m_cmd_left_2_right.Name = "m_cmd_left_2_right";
-            this.m_cmd_left_2_right.Size = new System.Drawing.Size(48, 30);
+            this.m_cmd_left_2_right.Size = new System.Drawing.Size(48, 36);
             this.m_cmd_left_2_right.TabIndex = 13;
             this.m_cmd_left_2_right.Text = ">";
             // 
-            // tabControl1
+            // m_tab_form
             // 
-            this.tabControl1.Controls.Add(this.m_tab_phan_quyen_form);
-            this.tabControl1.Controls.Add(this.m_tab_phan_quyen_form_control);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(778, 402);
-            this.tabControl1.TabIndex = 17;
+            this.m_tab_form.Controls.Add(this.m_tab_phan_quyen_form);
+            this.m_tab_form.Controls.Add(this.m_tab_phan_quyen_form_control);
+            this.m_tab_form.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_tab_form.Location = new System.Drawing.Point(0, 0);
+            this.m_tab_form.Name = "m_tab_form";
+            this.m_tab_form.SelectedIndex = 0;
+            this.m_tab_form.Size = new System.Drawing.Size(951, 402);
+            this.m_tab_form.TabIndex = 17;
             // 
             // m_tab_phan_quyen_form
             // 
-            this.m_tab_phan_quyen_form.Controls.Add(this.siSButton1);
-            this.m_tab_phan_quyen_form.Controls.Add(this.m_cmd_save);
             this.m_tab_phan_quyen_form.Controls.Add(this.label1);
             this.m_tab_phan_quyen_form.Controls.Add(this.m_lst_danh_sach_form);
             this.m_tab_phan_quyen_form.Controls.Add(this.m_cbo_nhom_nguoi_su_dung);
@@ -160,34 +156,10 @@
             this.m_tab_phan_quyen_form.Location = new System.Drawing.Point(4, 23);
             this.m_tab_phan_quyen_form.Name = "m_tab_phan_quyen_form";
             this.m_tab_phan_quyen_form.Padding = new System.Windows.Forms.Padding(3);
-            this.m_tab_phan_quyen_form.Size = new System.Drawing.Size(770, 375);
+            this.m_tab_phan_quyen_form.Size = new System.Drawing.Size(943, 375);
             this.m_tab_phan_quyen_form.TabIndex = 0;
             this.m_tab_phan_quyen_form.Text = "Phân quyền form";
             this.m_tab_phan_quyen_form.UseVisualStyleBackColor = true;
-            // 
-            // m_tab_phan_quyen_form_control
-            // 
-            this.m_tab_phan_quyen_form_control.Controls.Add(this.m_fg);
-            this.m_tab_phan_quyen_form_control.Controls.Add(this.siSButton3);
-            this.m_tab_phan_quyen_form_control.Controls.Add(this.siSButton2);
-            this.m_tab_phan_quyen_form_control.Controls.Add(this.listBox2);
-            this.m_tab_phan_quyen_form_control.Controls.Add(this.listBox1);
-            this.m_tab_phan_quyen_form_control.Location = new System.Drawing.Point(4, 23);
-            this.m_tab_phan_quyen_form_control.Name = "m_tab_phan_quyen_form_control";
-            this.m_tab_phan_quyen_form_control.Padding = new System.Windows.Forms.Padding(3);
-            this.m_tab_phan_quyen_form_control.Size = new System.Drawing.Size(770, 375);
-            this.m_tab_phan_quyen_form_control.TabIndex = 1;
-            this.m_tab_phan_quyen_form_control.Text = "Phân quyền chi tiết";
-            this.m_tab_phan_quyen_form_control.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 14);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Chọn nhóm người sử dụng";
             // 
             // ImageList
             // 
@@ -216,64 +188,29 @@
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
-            // m_cmd_save
+            // label1
             // 
-            this.m_cmd_save.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_save.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_save.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_save.ImageIndex = 10;
-            this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(416, 318);
-            this.m_cmd_save.Name = "m_cmd_save";
-            this.m_cmd_save.Size = new System.Drawing.Size(154, 30);
-            this.m_cmd_save.TabIndex = 40;
-            this.m_cmd_save.Text = "Phân quyền chi tiết";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(240, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 14);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Chọn nhóm người sử dụng";
             // 
-            // siSButton1
+            // m_tab_phan_quyen_form_control
             // 
-            this.siSButton1.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.siSButton1.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.siSButton1.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.siSButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.siSButton1.ImageIndex = 10;
-            this.siSButton1.Location = new System.Drawing.Point(576, 318);
-            this.siSButton1.Name = "siSButton1";
-            this.siSButton1.Size = new System.Drawing.Size(82, 30);
-            this.siSButton1.TabIndex = 40;
-            this.siSButton1.Text = "Thoát";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 14;
-            this.listBox1.Location = new System.Drawing.Point(26, 32);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(268, 144);
-            this.listBox1.TabIndex = 2;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 14;
-            this.listBox2.Location = new System.Drawing.Point(348, 32);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(268, 144);
-            this.listBox2.TabIndex = 2;
-            // 
-            // siSButton2
-            // 
-            this.siSButton2.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.siSButton2.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.siSButton2.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.siSButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.siSButton2.ImageIndex = 10;
-            this.siSButton2.ImageList = this.ImageList;
-            this.siSButton2.Location = new System.Drawing.Point(647, 32);
-            this.siSButton2.Name = "siSButton2";
-            this.siSButton2.Size = new System.Drawing.Size(73, 30);
-            this.siSButton2.TabIndex = 41;
-            this.siSButton2.Text = "Thêm";
+            this.m_tab_phan_quyen_form_control.Controls.Add(this.m_fg);
+            this.m_tab_phan_quyen_form_control.Controls.Add(this.m_cmd_xoa_control);
+            this.m_tab_phan_quyen_form_control.Controls.Add(this.m_cmd_them_control);
+            this.m_tab_phan_quyen_form_control.Controls.Add(this.m_lst_control);
+            this.m_tab_phan_quyen_form_control.Controls.Add(this.m_lst_form);
+            this.m_tab_phan_quyen_form_control.Location = new System.Drawing.Point(4, 23);
+            this.m_tab_phan_quyen_form_control.Name = "m_tab_phan_quyen_form_control";
+            this.m_tab_phan_quyen_form_control.Padding = new System.Windows.Forms.Padding(3);
+            this.m_tab_phan_quyen_form_control.Size = new System.Drawing.Size(943, 375);
+            this.m_tab_phan_quyen_form_control.TabIndex = 1;
+            this.m_tab_phan_quyen_form_control.Text = "Phân quyền chi tiết";
+            this.m_tab_phan_quyen_form_control.UseVisualStyleBackColor = true;
             // 
             // m_fg
             // 
@@ -281,34 +218,66 @@
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_fg.Location = new System.Drawing.Point(3, 194);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(764, 178);
+            this.m_fg.Size = new System.Drawing.Size(937, 178);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 42;
             // 
-            // siSButton3
+            // m_cmd_xoa_control
             // 
-            this.siSButton3.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.siSButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.siSButton3.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.siSButton3.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.siSButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.siSButton3.ImageIndex = 4;
-            this.siSButton3.ImageList = this.ImageList;
-            this.siSButton3.Location = new System.Drawing.Point(691, 158);
-            this.siSButton3.Name = "siSButton3";
-            this.siSButton3.Size = new System.Drawing.Size(73, 30);
-            this.siSButton3.TabIndex = 41;
-            this.siSButton3.Text = " Xoá";
+            this.m_cmd_xoa_control.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xoa_control.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.m_cmd_xoa_control.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xoa_control.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xoa_control.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xoa_control.ImageIndex = 4;
+            this.m_cmd_xoa_control.ImageList = this.ImageList;
+            this.m_cmd_xoa_control.Location = new System.Drawing.Point(862, 158);
+            this.m_cmd_xoa_control.Name = "m_cmd_xoa_control";
+            this.m_cmd_xoa_control.Size = new System.Drawing.Size(73, 30);
+            this.m_cmd_xoa_control.TabIndex = 41;
+            this.m_cmd_xoa_control.Text = " Xoá";
+            // 
+            // m_cmd_them_control
+            // 
+            this.m_cmd_them_control.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_them_control.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_them_control.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_them_control.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_them_control.ImageIndex = 10;
+            this.m_cmd_them_control.ImageList = this.ImageList;
+            this.m_cmd_them_control.Location = new System.Drawing.Point(751, 29);
+            this.m_cmd_them_control.Name = "m_cmd_them_control";
+            this.m_cmd_them_control.Size = new System.Drawing.Size(73, 30);
+            this.m_cmd_them_control.TabIndex = 41;
+            this.m_cmd_them_control.Text = "Thêm";
+            // 
+            // m_lst_control
+            // 
+            this.m_lst_control.FormattingEnabled = true;
+            this.m_lst_control.ItemHeight = 14;
+            this.m_lst_control.Location = new System.Drawing.Point(468, 29);
+            this.m_lst_control.Name = "m_lst_control";
+            this.m_lst_control.Size = new System.Drawing.Size(268, 144);
+            this.m_lst_control.TabIndex = 2;
+            // 
+            // m_lst_form
+            // 
+            this.m_lst_form.FormattingEnabled = true;
+            this.m_lst_form.ItemHeight = 14;
+            this.m_lst_form.Location = new System.Drawing.Point(146, 29);
+            this.m_lst_form.Name = "m_lst_form";
+            this.m_lst_form.Size = new System.Drawing.Size(268, 144);
+            this.m_lst_form.TabIndex = 2;
             // 
             // f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 402);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(951, 402);
+            this.Controls.Add(this.m_tab_form);
             this.Name = "f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung";
             this.Text = "f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung";
-            this.tabControl1.ResumeLayout(false);
+            this.m_tab_form.ResumeLayout(false);
             this.m_tab_phan_quyen_form.ResumeLayout(false);
             this.m_tab_phan_quyen_form.PerformLayout();
             this.m_tab_phan_quyen_form_control.ResumeLayout(false);
@@ -326,17 +295,15 @@
         internal SIS.Controls.Button.SiSButton m_cmd_right_2_left;
         internal SIS.Controls.Button.SiSButton m_cmd_left_2_right_all;
         internal SIS.Controls.Button.SiSButton m_cmd_left_2_right;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl m_tab_form;
         private System.Windows.Forms.TabPage m_tab_phan_quyen_form;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage m_tab_phan_quyen_form_control;
         internal System.Windows.Forms.ImageList ImageList;
-        internal SIS.Controls.Button.SiSButton siSButton1;
-        internal SIS.Controls.Button.SiSButton m_cmd_save;
-        internal SIS.Controls.Button.SiSButton siSButton2;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        internal SIS.Controls.Button.SiSButton m_cmd_them_control;
+        private System.Windows.Forms.ListBox m_lst_control;
+        private System.Windows.Forms.ListBox m_lst_form;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
-        internal SIS.Controls.Button.SiSButton siSButton3;
+        internal SIS.Controls.Button.SiSButton m_cmd_xoa_control;
     }
 }

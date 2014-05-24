@@ -126,6 +126,7 @@
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
     </Reference>
@@ -179,6 +180,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_LICENSESOFTWARE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_HT_PHAN_QUYEN.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_HT_PHAN_QUYEN.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -243,6 +249,17 @@
     </None>
     <None Include="DS_LICENSESOFTWARE.xsx">
       <DependentUpon>DS_LICENSESOFTWARE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HT_PHAN_QUYEN.xsc">
+      <DependentUpon>DS_V_HT_PHAN_QUYEN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_HT_PHAN_QUYEN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_HT_PHAN_QUYEN.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DS_V_HT_PHAN_QUYEN.xss">
+      <DependentUpon>DS_V_HT_PHAN_QUYEN.xsd</DependentUpon>
     </None>
     <None Include="My Project\Settings.settings">
       <CustomToolNamespace>My</CustomToolNamespace>

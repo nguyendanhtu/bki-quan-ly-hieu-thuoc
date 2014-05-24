@@ -201,6 +201,7 @@
     <Compile Include="US_Object.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="US_V_HT_PHAN_QUYEN.vb" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="My Project\" />

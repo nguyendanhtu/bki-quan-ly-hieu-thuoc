@@ -31,6 +31,7 @@
             this.m_txts_ten_thuoc = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // m_txts_ten_thuoc
@@ -70,11 +71,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(233, 247);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(56, 20);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Xoa trang";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 439);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.m_txts_ten_thuoc);
@@ -91,5 +103,6 @@
         private txt_search_thuoc m_txts_ten_thuoc;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
