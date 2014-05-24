@@ -117,7 +117,7 @@
             this.m_grv_nha_cung_cap.Location = new System.Drawing.Point(0, 117);
             this.m_grv_nha_cung_cap.Name = "m_grv_nha_cung_cap";
             this.m_grv_nha_cung_cap.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1123, 191);
+            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1141, 191);
             this.m_grv_nha_cung_cap.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nha_cung_cap.Styles"));
             this.m_grv_nha_cung_cap.TabIndex = 22;
             this.m_grv_nha_cung_cap.Click += new System.EventHandler(this.m_grv_nha_cung_cap_Click);
@@ -243,7 +243,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(835, 409);
+            this.label6.Location = new System.Drawing.Point(773, 409);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 16);
             this.label6.TabIndex = 31;
@@ -253,7 +253,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(849, 468);
+            this.label7.Location = new System.Drawing.Point(787, 468);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 16);
             this.label7.TabIndex = 32;
@@ -281,11 +281,10 @@
             // 
             // m_lbl_dia_chi
             // 
-            this.m_lbl_dia_chi.AutoSize = true;
             this.m_lbl_dia_chi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_dia_chi.Location = new System.Drawing.Point(913, 409);
+            this.m_lbl_dia_chi.Location = new System.Drawing.Point(851, 409);
             this.m_lbl_dia_chi.Name = "m_lbl_dia_chi";
-            this.m_lbl_dia_chi.Size = new System.Drawing.Size(64, 16);
+            this.m_lbl_dia_chi.Size = new System.Drawing.Size(277, 36);
             this.m_lbl_dia_chi.TabIndex = 35;
             this.m_lbl_dia_chi.Text = "Từ khóa :";
             // 
@@ -293,7 +292,7 @@
             // 
             this.m_lbl_sdt.AutoSize = true;
             this.m_lbl_sdt.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_sdt.Location = new System.Drawing.Point(913, 468);
+            this.m_lbl_sdt.Location = new System.Drawing.Point(851, 468);
             this.m_lbl_sdt.Name = "m_lbl_sdt";
             this.m_lbl_sdt.Size = new System.Drawing.Size(64, 16);
             this.m_lbl_sdt.TabIndex = 36;
