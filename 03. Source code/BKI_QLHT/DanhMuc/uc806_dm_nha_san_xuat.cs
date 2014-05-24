@@ -530,7 +530,7 @@ namespace BKI_QLHT.DanhMuc
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(496, 330);
+            this.label3.Location = new System.Drawing.Point(492, 362);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 23);
             this.label3.TabIndex = 43;
@@ -663,7 +663,7 @@ namespace BKI_QLHT.DanhMuc
             this.m_grv_dm_nha_san_xuat.Location = new System.Drawing.Point(4, 114);
             this.m_grv_dm_nha_san_xuat.Name = "m_grv_dm_nha_san_xuat";
             this.m_grv_dm_nha_san_xuat.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.m_grv_dm_nha_san_xuat.Size = new System.Drawing.Size(1122, 178);
+            this.m_grv_dm_nha_san_xuat.Size = new System.Drawing.Size(1122, 231);
             this.m_grv_dm_nha_san_xuat.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_dm_nha_san_xuat.Styles"));
             this.m_grv_dm_nha_san_xuat.TabIndex = 52;
             this.m_grv_dm_nha_san_xuat.Click += new System.EventHandler(this.m_grv_dm_nha_san_xuat_Click);

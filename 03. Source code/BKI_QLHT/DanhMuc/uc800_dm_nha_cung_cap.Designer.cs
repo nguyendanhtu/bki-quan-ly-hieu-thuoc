@@ -117,7 +117,7 @@
             this.m_grv_nha_cung_cap.Location = new System.Drawing.Point(0, 117);
             this.m_grv_nha_cung_cap.Name = "m_grv_nha_cung_cap";
             this.m_grv_nha_cung_cap.SelectionMode = C1.Win.C1FlexGrid.SelectionModeEnum.Row;
-            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1141, 191);
+            this.m_grv_nha_cung_cap.Size = new System.Drawing.Size(1141, 222);
             this.m_grv_nha_cung_cap.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_nha_cung_cap.Styles"));
             this.m_grv_nha_cung_cap.TabIndex = 22;
             this.m_grv_nha_cung_cap.Click += new System.EventHandler(this.m_grv_nha_cung_cap_Click);
@@ -213,7 +213,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(490, 332);
+            this.label3.Location = new System.Drawing.Point(490, 355);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(153, 23);
             this.label3.TabIndex = 28;
