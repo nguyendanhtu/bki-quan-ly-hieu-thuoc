@@ -122,6 +122,9 @@
     <Compile Include="US_V_BC_NHAP_THUOC_NGAY_N_HSX.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_NHAN_VIEN_DE.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.cs" />
+    <Compile Include="US_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_HSX.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_HSX_DE.cs" />
     <Compile Include="US_V_BC_NHAP_THUOC_THEO_CAC_NCC.cs" />
