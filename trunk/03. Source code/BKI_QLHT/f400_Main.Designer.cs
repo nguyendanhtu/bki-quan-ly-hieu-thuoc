@@ -32,6 +32,13 @@ namespace BKI_QLHT
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f400_Main));
             this.m_ribbonControl_Main = new DevComponents.DotNetBar.RibbonControl();
+            this.m_ribbonPanel_hethong = new DevComponents.DotNetBar.RibbonPanel();
+            this.m_menu_item_quan_tri = new DevComponents.DotNetBar.RibbonBar();
+            this.m_cmd_item_nguoi_su_dung = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_item_nhom_nguoi_su_dung = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_item_ht_form = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_item_danh_muc_control = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_item_phan_quyen_he_thong = new DevComponents.DotNetBar.ButtonItem();
             this.m_menu_item_theo_bac_sy = new DevComponents.DotNetBar.RibbonPanel();
             this.m_menu_item_bc_doanh_thu_theo_nhom_thuoc = new DevComponents.DotNetBar.RibbonBar();
             this.m_menu_item_bc_doanh_thu_theo_bac_sy = new DevComponents.DotNetBar.RibbonBar();
@@ -85,18 +92,6 @@ namespace BKI_QLHT
             this.m_cmd_item_danh_muc_thuoc = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_item_danh_muc_nhom_thuoc = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_item_chi_tiet_thuoc = new DevComponents.DotNetBar.ButtonItem();
-            this.m_ribbonPanel_hethong = new DevComponents.DotNetBar.RibbonPanel();
-            this.m_menu_item_tu_dien_he_thong = new DevComponents.DotNetBar.RibbonBar();
-            this.m_cmd_item_tu_dien_he_thong = new DevComponents.DotNetBar.ButtonItem();
-            this.m_menu_item_quan_tri = new DevComponents.DotNetBar.RibbonBar();
-            this.m_cmd_item_nguoi_su_dung = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_item_nhom_nguoi_su_dung = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_item_ht_form = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_item_danh_muc_control = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_item_phan_quyen_he_thong = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_item_phan_quyen_cho_nhom = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_item_phan_quyen_chi_tiet = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_item_nhat_ki_he_thong = new DevComponents.DotNetBar.ButtonItem();
             this.applicationButton1 = new DevComponents.DotNetBar.ApplicationButton();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
@@ -120,7 +115,6 @@ namespace BKI_QLHT
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.panelDockContainer1 = new DevComponents.DotNetBar.PanelDockContainer();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.m_cmd_lich_su_gia_ban = new DevComponents.DotNetBar.ButtonX();
             this.dockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.dockSite2 = new DevComponents.DotNetBar.DockSite();
@@ -130,50 +124,19 @@ namespace BKI_QLHT
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
+            this.m_ribbonPanel_hethong.SuspendLayout();
             this.m_menu_item_theo_bac_sy.SuspendLayout();
             this.m_ribbonPanel_baocao.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
-            this.m_ribbonPanel_hethong.SuspendLayout();
             this.dockSite1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.bar1.SuspendLayout();
@@ -188,12 +151,12 @@ namespace BKI_QLHT
             // 
             this.m_ribbonControl_Main.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonControl_Main.CaptionVisible = true;
+            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
+            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Controls.Add(this.m_menu_item_theo_bac_sy);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_baocao);
             this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel1);
-            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_danhmuc);
-            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_ribbonControl_Main.ForeColor = System.Drawing.Color.Black;
             this.m_ribbonControl_Main.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -231,6 +194,116 @@ namespace BKI_QLHT
             this.m_ribbonControl_Main.TabIndex = 6;
             this.m_ribbonControl_Main.Text = "m_ribbonControl_QLHT_main";
             // 
+            // m_ribbonPanel_hethong
+            // 
+            this.m_ribbonPanel_hethong.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_ribbonPanel_hethong.Controls.Add(this.m_menu_item_quan_tri);
+            this.m_ribbonPanel_hethong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_ribbonPanel_hethong.Location = new System.Drawing.Point(0, 53);
+            this.m_ribbonPanel_hethong.Name = "m_ribbonPanel_hethong";
+            this.m_ribbonPanel_hethong.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.m_ribbonPanel_hethong.Size = new System.Drawing.Size(783, 106);
+            // 
+            // 
+            // 
+            this.m_ribbonPanel_hethong.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_ribbonPanel_hethong.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_ribbonPanel_hethong.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_ribbonPanel_hethong.TabIndex = 1;
+            this.m_ribbonPanel_hethong.Visible = false;
+            // 
+            // m_menu_item_quan_tri
+            // 
+            this.m_menu_item_quan_tri.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.m_menu_item_quan_tri.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_menu_item_quan_tri.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_menu_item_quan_tri.ContainerControlProcessDialogKey = true;
+            this.m_menu_item_quan_tri.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_menu_item_quan_tri.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_menu_item_quan_tri.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.m_cmd_item_nguoi_su_dung,
+            this.m_cmd_item_nhom_nguoi_su_dung,
+            this.m_cmd_item_ht_form,
+            this.m_cmd_item_danh_muc_control,
+            this.m_cmd_item_phan_quyen_he_thong});
+            this.m_menu_item_quan_tri.Location = new System.Drawing.Point(3, 0);
+            this.m_menu_item_quan_tri.Name = "m_menu_item_quan_tri";
+            this.m_menu_item_quan_tri.Size = new System.Drawing.Size(331, 103);
+            this.m_menu_item_quan_tri.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_menu_item_quan_tri.TabIndex = 0;
+            this.m_menu_item_quan_tri.Text = "Quản trị hệ thống";
+            // 
+            // 
+            // 
+            this.m_menu_item_quan_tri.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_menu_item_quan_tri.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // m_cmd_item_nguoi_su_dung
+            // 
+            this.m_cmd_item_nguoi_su_dung.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_nguoi_su_dung.Image")));
+            this.m_cmd_item_nguoi_su_dung.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
+            this.m_cmd_item_nguoi_su_dung.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_item_nguoi_su_dung.Name = "m_cmd_item_nguoi_su_dung";
+            this.m_cmd_item_nguoi_su_dung.SubItemsExpandWidth = 14;
+            this.m_cmd_item_nguoi_su_dung.Text = "Người sử dụng";
+            this.m_cmd_item_nguoi_su_dung.Click += new System.EventHandler(this.m_cmd_item_nguoi_su_dung_Click);
+            // 
+            // m_cmd_item_nhom_nguoi_su_dung
+            // 
+            this.m_cmd_item_nhom_nguoi_su_dung.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.m_cmd_item_nhom_nguoi_su_dung.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_nhom_nguoi_su_dung.Image")));
+            this.m_cmd_item_nhom_nguoi_su_dung.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
+            this.m_cmd_item_nhom_nguoi_su_dung.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_item_nhom_nguoi_su_dung.Name = "m_cmd_item_nhom_nguoi_su_dung";
+            this.m_cmd_item_nhom_nguoi_su_dung.SubItemsExpandWidth = 14;
+            this.m_cmd_item_nhom_nguoi_su_dung.Text = "Nhóm người sử dụng";
+            this.m_cmd_item_nhom_nguoi_su_dung.Click += new System.EventHandler(this.m_cmd_item_nhom_nguoi_su_dung_Click);
+            // 
+            // m_cmd_item_ht_form
+            // 
+            this.m_cmd_item_ht_form.Image = global::BKI_QLHT.Properties.Resources.form;
+            this.m_cmd_item_ht_form.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
+            this.m_cmd_item_ht_form.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_item_ht_form.Name = "m_cmd_item_ht_form";
+            this.m_cmd_item_ht_form.SubItemsExpandWidth = 14;
+            this.m_cmd_item_ht_form.Text = "Danh sách form";
+            this.m_cmd_item_ht_form.Click += new System.EventHandler(this.m_cmd_item_ht_form_Click);
+            // 
+            // m_cmd_item_danh_muc_control
+            // 
+            this.m_cmd_item_danh_muc_control.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_danh_muc_control.Image")));
+            this.m_cmd_item_danh_muc_control.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
+            this.m_cmd_item_danh_muc_control.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_item_danh_muc_control.Name = "m_cmd_item_danh_muc_control";
+            this.m_cmd_item_danh_muc_control.SubItemsExpandWidth = 14;
+            this.m_cmd_item_danh_muc_control.Text = "Danh mục control";
+            this.m_cmd_item_danh_muc_control.Click += new System.EventHandler(this.m_cmd_item_danh_muc_control_Click);
+            // 
+            // m_cmd_item_phan_quyen_he_thong
+            // 
+            this.m_cmd_item_phan_quyen_he_thong.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_phan_quyen_he_thong.Image")));
+            this.m_cmd_item_phan_quyen_he_thong.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
+            this.m_cmd_item_phan_quyen_he_thong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.m_cmd_item_phan_quyen_he_thong.Name = "m_cmd_item_phan_quyen_he_thong";
+            this.m_cmd_item_phan_quyen_he_thong.SubItemsExpandWidth = 14;
+            this.m_cmd_item_phan_quyen_he_thong.Text = "Phân quyền hệ thống";
+            this.m_cmd_item_phan_quyen_he_thong.Click += new System.EventHandler(this.m_cmd_item_phan_quyen_he_thong_Click);
+            // 
             // m_menu_item_theo_bac_sy
             // 
             this.m_menu_item_theo_bac_sy.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -258,6 +331,7 @@ namespace BKI_QLHT
             // 
             this.m_menu_item_theo_bac_sy.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_menu_item_theo_bac_sy.TabIndex = 6;
+            this.m_menu_item_theo_bac_sy.Visible = false;
             // 
             // m_menu_item_bc_doanh_thu_theo_nhom_thuoc
             // 
@@ -749,10 +823,10 @@ namespace BKI_QLHT
             this.m_ribbonPanel_nghiepvu.Controls.Add(this.m_menu_item_gia);
             this.m_ribbonPanel_nghiepvu.Controls.Add(this.menu_item_quan_ly);
             this.m_ribbonPanel_nghiepvu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_ribbonPanel_nghiepvu.Location = new System.Drawing.Point(0, 49);
+            this.m_ribbonPanel_nghiepvu.Location = new System.Drawing.Point(0, 53);
             this.m_ribbonPanel_nghiepvu.Name = "m_ribbonPanel_nghiepvu";
             this.m_ribbonPanel_nghiepvu.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.m_ribbonPanel_nghiepvu.Size = new System.Drawing.Size(813, 80);
+            this.m_ribbonPanel_nghiepvu.Size = new System.Drawing.Size(783, 106);
             // 
             // 
             // 
@@ -766,7 +840,6 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_nghiepvu.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_nghiepvu.TabIndex = 3;
-            this.m_ribbonPanel_nghiepvu.Visible = false;
             // 
             // m_menu_item_gia
             // 
@@ -787,7 +860,7 @@ namespace BKI_QLHT
             this.m_cmd_item_bang_gia});
             this.m_menu_item_gia.Location = new System.Drawing.Point(293, 0);
             this.m_menu_item_gia.Name = "m_menu_item_gia";
-            this.m_menu_item_gia.Size = new System.Drawing.Size(100, 77);
+            this.m_menu_item_gia.Size = new System.Drawing.Size(130, 103);
             this.m_menu_item_gia.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_gia.TabIndex = 1;
             this.m_menu_item_gia.Text = "Quản lý giá";
@@ -815,8 +888,7 @@ namespace BKI_QLHT
             this.m_cmd_item_bang_gia.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.m_cmd_item_bang_gia.Name = "m_cmd_item_bang_gia";
             this.m_cmd_item_bang_gia.SubItemsExpandWidth = 14;
-            this.m_cmd_item_bang_gia.Text = "Bảng giá";
-            this.m_cmd_item_bang_gia.Click += new System.EventHandler(this.m_cmd_item_bang_gia_Click);
+            this.m_cmd_item_bang_gia.Text = "    Bảng giá   ";
             // 
             // menu_item_quan_ly
             // 
@@ -839,7 +911,7 @@ namespace BKI_QLHT
             this.m_cmd_quan_ly_so_du});
             this.menu_item_quan_ly.Location = new System.Drawing.Point(3, 0);
             this.menu_item_quan_ly.Name = "menu_item_quan_ly";
-            this.menu_item_quan_ly.Size = new System.Drawing.Size(290, 77);
+            this.menu_item_quan_ly.Size = new System.Drawing.Size(290, 103);
             this.menu_item_quan_ly.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.menu_item_quan_ly.TabIndex = 0;
             this.menu_item_quan_ly.Text = "Quản lý thuốc";
@@ -954,7 +1026,6 @@ namespace BKI_QLHT
             this.m_cmd_don_vi_kinh_doanh.Name = "m_cmd_don_vi_kinh_doanh";
             this.m_cmd_don_vi_kinh_doanh.SubItemsExpandWidth = 14;
             this.m_cmd_don_vi_kinh_doanh.Text = "Thông tin nhà thuốc";
-            this.m_cmd_don_vi_kinh_doanh.Click += new System.EventHandler(this.m_cmd_don_vi_kinh_doanh_Click);
             // 
             // m_cmd_dm_benh_vien
             // 
@@ -963,7 +1034,6 @@ namespace BKI_QLHT
             this.m_cmd_dm_benh_vien.Name = "m_cmd_dm_benh_vien";
             this.m_cmd_dm_benh_vien.SubItemsExpandWidth = 14;
             this.m_cmd_dm_benh_vien.Text = "Thông tin bệnh viện";
-            this.m_cmd_dm_benh_vien.Click += new System.EventHandler(this.m_cmd_dm_benh_vien_Click);
             // 
             // m_menu_item_bac_sy
             // 
@@ -1182,190 +1252,6 @@ namespace BKI_QLHT
             this.m_cmd_item_chi_tiet_thuoc.Text = "Danh sách thuốc";
             this.m_cmd_item_chi_tiet_thuoc.Click += new System.EventHandler(this.m_cmd_item_chi_tiet_thuoc_Click);
             // 
-            // m_ribbonPanel_hethong
-            // 
-            this.m_ribbonPanel_hethong.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_ribbonPanel_hethong.Controls.Add(this.m_menu_item_tu_dien_he_thong);
-            this.m_ribbonPanel_hethong.Controls.Add(this.m_menu_item_quan_tri);
-            this.m_ribbonPanel_hethong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_ribbonPanel_hethong.Location = new System.Drawing.Point(0, 49);
-            this.m_ribbonPanel_hethong.Name = "m_ribbonPanel_hethong";
-            this.m_ribbonPanel_hethong.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.m_ribbonPanel_hethong.Size = new System.Drawing.Size(813, 80);
-            // 
-            // 
-            // 
-            this.m_ribbonPanel_hethong.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_ribbonPanel_hethong.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_ribbonPanel_hethong.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_ribbonPanel_hethong.TabIndex = 1;
-            this.m_ribbonPanel_hethong.Visible = false;
-            // 
-            // m_menu_item_tu_dien_he_thong
-            // 
-            this.m_menu_item_tu_dien_he_thong.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.m_menu_item_tu_dien_he_thong.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_menu_item_tu_dien_he_thong.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_menu_item_tu_dien_he_thong.ContainerControlProcessDialogKey = true;
-            this.m_menu_item_tu_dien_he_thong.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_menu_item_tu_dien_he_thong.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.m_cmd_item_tu_dien_he_thong});
-            this.m_menu_item_tu_dien_he_thong.Location = new System.Drawing.Point(518, 0);
-            this.m_menu_item_tu_dien_he_thong.Name = "m_menu_item_tu_dien_he_thong";
-            this.m_menu_item_tu_dien_he_thong.Size = new System.Drawing.Size(66, 77);
-            this.m_menu_item_tu_dien_he_thong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_menu_item_tu_dien_he_thong.TabIndex = 1;
-            // 
-            // 
-            // 
-            this.m_menu_item_tu_dien_he_thong.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_menu_item_tu_dien_he_thong.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // m_cmd_item_tu_dien_he_thong
-            // 
-            this.m_cmd_item_tu_dien_he_thong.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_tu_dien_he_thong.Image")));
-            this.m_cmd_item_tu_dien_he_thong.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Large;
-            this.m_cmd_item_tu_dien_he_thong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_tu_dien_he_thong.Name = "m_cmd_item_tu_dien_he_thong";
-            this.m_cmd_item_tu_dien_he_thong.SubItemsExpandWidth = 14;
-            this.m_cmd_item_tu_dien_he_thong.Text = "Từ điển hệ thống";
-            this.m_cmd_item_tu_dien_he_thong.Click += new System.EventHandler(this.m_cmd_item_tu_dien_he_thong_Click);
-            // 
-            // m_menu_item_quan_tri
-            // 
-            this.m_menu_item_quan_tri.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.m_menu_item_quan_tri.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_menu_item_quan_tri.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_menu_item_quan_tri.ContainerControlProcessDialogKey = true;
-            this.m_menu_item_quan_tri.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_menu_item_quan_tri.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_menu_item_quan_tri.ImageSize = DevComponents.DotNetBar.eBarImageSize.Medium;
-            this.m_menu_item_quan_tri.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.m_cmd_item_nguoi_su_dung,
-            this.m_cmd_item_nhom_nguoi_su_dung,
-            this.m_cmd_item_ht_form,
-            this.m_cmd_item_danh_muc_control,
-            this.m_cmd_item_phan_quyen_he_thong,
-            this.m_cmd_item_phan_quyen_cho_nhom,
-            this.m_cmd_item_phan_quyen_chi_tiet,
-            this.m_cmd_item_nhat_ki_he_thong});
-            this.m_menu_item_quan_tri.Location = new System.Drawing.Point(3, 0);
-            this.m_menu_item_quan_tri.Name = "m_menu_item_quan_tri";
-            this.m_menu_item_quan_tri.Size = new System.Drawing.Size(515, 77);
-            this.m_menu_item_quan_tri.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_menu_item_quan_tri.TabIndex = 0;
-            this.m_menu_item_quan_tri.Text = "Quản trị hệ thống";
-            // 
-            // 
-            // 
-            this.m_menu_item_quan_tri.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_menu_item_quan_tri.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // m_cmd_item_nguoi_su_dung
-            // 
-            this.m_cmd_item_nguoi_su_dung.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_nguoi_su_dung.Image")));
-            this.m_cmd_item_nguoi_su_dung.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
-            this.m_cmd_item_nguoi_su_dung.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_nguoi_su_dung.Name = "m_cmd_item_nguoi_su_dung";
-            this.m_cmd_item_nguoi_su_dung.SubItemsExpandWidth = 14;
-            this.m_cmd_item_nguoi_su_dung.Text = "Người sử dụng";
-            this.m_cmd_item_nguoi_su_dung.Click += new System.EventHandler(this.m_cmd_item_nguoi_su_dung_Click);
-            // 
-            // m_cmd_item_nhom_nguoi_su_dung
-            // 
-            this.m_cmd_item_nhom_nguoi_su_dung.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.m_cmd_item_nhom_nguoi_su_dung.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_nhom_nguoi_su_dung.Image")));
-            this.m_cmd_item_nhom_nguoi_su_dung.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
-            this.m_cmd_item_nhom_nguoi_su_dung.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_nhom_nguoi_su_dung.Name = "m_cmd_item_nhom_nguoi_su_dung";
-            this.m_cmd_item_nhom_nguoi_su_dung.SubItemsExpandWidth = 14;
-            this.m_cmd_item_nhom_nguoi_su_dung.Text = "Nhóm người sử dụng";
-            this.m_cmd_item_nhom_nguoi_su_dung.Click += new System.EventHandler(this.m_cmd_item_nhom_nguoi_su_dung_Click);
-            // 
-            // m_cmd_item_ht_form
-            // 
-            this.m_cmd_item_ht_form.Image = global::BKI_QLHT.Properties.Resources.form;
-            this.m_cmd_item_ht_form.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
-            this.m_cmd_item_ht_form.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_ht_form.Name = "m_cmd_item_ht_form";
-            this.m_cmd_item_ht_form.SubItemsExpandWidth = 14;
-            this.m_cmd_item_ht_form.Text = "Danh sách form";
-            this.m_cmd_item_ht_form.Click += new System.EventHandler(this.m_cmd_item_ht_form_Click);
-            // 
-            // m_cmd_item_danh_muc_control
-            // 
-            this.m_cmd_item_danh_muc_control.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_danh_muc_control.Image")));
-            this.m_cmd_item_danh_muc_control.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
-            this.m_cmd_item_danh_muc_control.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_danh_muc_control.Name = "m_cmd_item_danh_muc_control";
-            this.m_cmd_item_danh_muc_control.SubItemsExpandWidth = 14;
-            this.m_cmd_item_danh_muc_control.Text = "Danh mục control";
-            this.m_cmd_item_danh_muc_control.Click += new System.EventHandler(this.m_cmd_item_danh_muc_control_Click);
-            // 
-            // m_cmd_item_phan_quyen_he_thong
-            // 
-            this.m_cmd_item_phan_quyen_he_thong.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_phan_quyen_he_thong.Image")));
-            this.m_cmd_item_phan_quyen_he_thong.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
-            this.m_cmd_item_phan_quyen_he_thong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_phan_quyen_he_thong.Name = "m_cmd_item_phan_quyen_he_thong";
-            this.m_cmd_item_phan_quyen_he_thong.SubItemsExpandWidth = 14;
-            this.m_cmd_item_phan_quyen_he_thong.Text = "Phân quyền hệ thống";
-            this.m_cmd_item_phan_quyen_he_thong.Click += new System.EventHandler(this.m_cmd_item_phan_quyen_he_thong_Click);
-            // 
-            // m_cmd_item_phan_quyen_cho_nhom
-            // 
-            this.m_cmd_item_phan_quyen_cho_nhom.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_phan_quyen_cho_nhom.Image")));
-            this.m_cmd_item_phan_quyen_cho_nhom.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
-            this.m_cmd_item_phan_quyen_cho_nhom.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_phan_quyen_cho_nhom.Name = "m_cmd_item_phan_quyen_cho_nhom";
-            this.m_cmd_item_phan_quyen_cho_nhom.SubItemsExpandWidth = 14;
-            this.m_cmd_item_phan_quyen_cho_nhom.Text = "Phân quyền nhóm";
-            this.m_cmd_item_phan_quyen_cho_nhom.Click += new System.EventHandler(this.m_cmd_item_phan_quyen_cho_nhom_Click);
-            // 
-            // m_cmd_item_phan_quyen_chi_tiet
-            // 
-            this.m_cmd_item_phan_quyen_chi_tiet.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_phan_quyen_chi_tiet.Image")));
-            this.m_cmd_item_phan_quyen_chi_tiet.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
-            this.m_cmd_item_phan_quyen_chi_tiet.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_phan_quyen_chi_tiet.Name = "m_cmd_item_phan_quyen_chi_tiet";
-            this.m_cmd_item_phan_quyen_chi_tiet.SubItemsExpandWidth = 14;
-            this.m_cmd_item_phan_quyen_chi_tiet.Text = "Phân quyền chi tiết";
-            this.m_cmd_item_phan_quyen_chi_tiet.Click += new System.EventHandler(this.m_cmd_item_phan_quyen_chi_tiet_Click);
-            // 
-            // m_cmd_item_nhat_ki_he_thong
-            // 
-            this.m_cmd_item_nhat_ki_he_thong.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_item_nhat_ki_he_thong.Image")));
-            this.m_cmd_item_nhat_ki_he_thong.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
-            this.m_cmd_item_nhat_ki_he_thong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.m_cmd_item_nhat_ki_he_thong.Name = "m_cmd_item_nhat_ki_he_thong";
-            this.m_cmd_item_nhat_ki_he_thong.SubItemsExpandWidth = 14;
-            this.m_cmd_item_nhat_ki_he_thong.Text = "Nhật kí hệ thống";
-            this.m_cmd_item_nhat_ki_he_thong.Click += new System.EventHandler(this.m_cmd_item_nhat_ki_he_thong_Click);
-            // 
             // applicationButton1
             // 
             this.applicationButton1.AutoExpandOnClick = true;
@@ -1474,6 +1360,7 @@ namespace BKI_QLHT
             // 
             // m_menuitem_nghiepvu
             // 
+            this.m_menuitem_nghiepvu.Checked = true;
             this.m_menuitem_nghiepvu.Name = "m_menuitem_nghiepvu";
             this.m_menuitem_nghiepvu.Panel = this.m_ribbonPanel_nghiepvu;
             this.m_menuitem_nghiepvu.Text = "Nghiệp vụ";
@@ -1492,7 +1379,6 @@ namespace BKI_QLHT
             // 
             // m_item_bao_cao_doanh_thu
             // 
-            this.m_item_bao_cao_doanh_thu.Checked = true;
             this.m_item_bao_cao_doanh_thu.Name = "m_item_bao_cao_doanh_thu";
             this.m_item_bao_cao_doanh_thu.Panel = this.m_menu_item_theo_bac_sy;
             this.m_item_bao_cao_doanh_thu.Text = "Báo cáo doanh thu";
@@ -1637,7 +1523,6 @@ namespace BKI_QLHT
             // panelDockContainer1
             // 
             this.panelDockContainer1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
-            this.panelDockContainer1.Controls.Add(this.buttonX2);
             this.panelDockContainer1.Controls.Add(this.m_cmd_lich_su_gia_ban);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
@@ -1648,17 +1533,6 @@ namespace BKI_QLHT
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 0;
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(3, 60);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(196, 40);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 1;
-            this.buttonX2.Text = "buttonX2";
             // 
             // m_cmd_lich_su_gia_ban
             // 
@@ -1742,375 +1616,47 @@ namespace BKI_QLHT
             this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem1.Name = "controlContainerItem1";
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(17, 476);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(63, 23);
-            this.button8.TabIndex = 24;
-            this.button8.Text = "402";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(86, 476);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(68, 23);
-            this.button9.TabIndex = 25;
-            this.button9.Text = "403";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(160, 476);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(63, 23);
-            this.button10.TabIndex = 26;
-            this.button10.Text = "404";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(17, 505);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(63, 23);
-            this.button11.TabIndex = 27;
-            this.button11.Text = "405";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(86, 505);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(63, 23);
-            this.button12.TabIndex = 28;
-            this.button12.Text = "406";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(160, 505);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(63, 23);
-            this.button13.TabIndex = 29;
-            this.button13.Text = "407";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(17, 534);
+            this.button14.Location = new System.Drawing.Point(0, 0);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(63, 23);
-            this.button14.TabIndex = 30;
-            this.button14.Text = "415";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 5;
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(86, 534);
+            this.button15.Location = new System.Drawing.Point(0, 0);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(63, 23);
-            this.button15.TabIndex = 31;
-            this.button15.Text = "416";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 4;
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(160, 534);
+            this.button16.Location = new System.Drawing.Point(0, 0);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(63, 23);
-            this.button16.TabIndex = 32;
-            this.button16.Text = "417";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 3;
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(17, 563);
+            this.button17.Location = new System.Drawing.Point(0, 0);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(63, 23);
-            this.button17.TabIndex = 33;
-            this.button17.Text = "418";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.Size = new System.Drawing.Size(75, 23);
+            this.button17.TabIndex = 2;
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(86, 563);
+            this.button18.Location = new System.Drawing.Point(0, 0);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(63, 23);
-            this.button18.TabIndex = 34;
-            this.button18.Text = "419";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.button18.Size = new System.Drawing.Size(75, 23);
+            this.button18.TabIndex = 1;
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(160, 563);
+            this.button19.Location = new System.Drawing.Point(0, 0);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(63, 23);
-            this.button19.TabIndex = 35;
-            this.button19.Text = "420";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(17, 169);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(33, 23);
-            this.button20.TabIndex = 36;
-            this.button20.Text = "421";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(56, 169);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(35, 23);
-            this.button21.TabIndex = 37;
-            this.button21.Text = "422";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(97, 169);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(35, 23);
-            this.button22.TabIndex = 38;
-            this.button22.Text = "423";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(138, 169);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(33, 23);
-            this.button23.TabIndex = 39;
-            this.button23.Text = "424";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(177, 360);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(34, 23);
-            this.button24.TabIndex = 40;
-            this.button24.Text = "425";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // button25
-            // 
-            this.button25.Location = new System.Drawing.Point(17, 198);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(33, 23);
-            this.button25.TabIndex = 41;
-            this.button25.Text = "426";
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
-            // 
-            // button26
-            // 
-            this.button26.Location = new System.Drawing.Point(58, 198);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(33, 23);
-            this.button26.TabIndex = 42;
-            this.button26.Text = "427";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(97, 198);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(33, 23);
-            this.button27.TabIndex = 43;
-            this.button27.Text = "428";
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(138, 198);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(33, 23);
-            this.button28.TabIndex = 44;
-            this.button28.Text = "429";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // button29
-            // 
-            this.button29.Location = new System.Drawing.Point(185, 198);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(33, 27);
-            this.button29.TabIndex = 45;
-            this.button29.Text = "430";
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(17, 389);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(33, 23);
-            this.button33.TabIndex = 49;
-            this.button33.Text = "440";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(56, 389);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(43, 23);
-            this.button34.TabIndex = 50;
-            this.button34.Text = "441";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(97, 389);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(44, 23);
-            this.button35.TabIndex = 51;
-            this.button35.Text = "442";
-            this.button35.UseVisualStyleBackColor = true;
-            this.button35.Click += new System.EventHandler(this.button35_Click);
-            // 
-            // button36
-            // 
-            this.button36.Location = new System.Drawing.Point(139, 389);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(40, 23);
-            this.button36.TabIndex = 52;
-            this.button36.Text = "443";
-            this.button36.UseVisualStyleBackColor = true;
-            this.button36.Click += new System.EventHandler(this.button36_Click);
-            // 
-            // button37
-            // 
-            this.button37.Location = new System.Drawing.Point(178, 389);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(40, 23);
-            this.button37.TabIndex = 53;
-            this.button37.Text = "444";
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
-            // 
-            // button38
-            // 
-            this.button38.Location = new System.Drawing.Point(17, 360);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(40, 23);
-            this.button38.TabIndex = 54;
-            this.button38.Text = "445";
-            this.button38.UseVisualStyleBackColor = true;
-            this.button38.Click += new System.EventHandler(this.button38_Click);
-            // 
-            // button39
-            // 
-            this.button39.Location = new System.Drawing.Point(51, 360);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(40, 23);
-            this.button39.TabIndex = 55;
-            this.button39.Text = "446";
-            this.button39.UseVisualStyleBackColor = true;
-            this.button39.Click += new System.EventHandler(this.button39_Click);
-            // 
-            // button40
-            // 
-            this.button40.Location = new System.Drawing.Point(92, 360);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(40, 23);
-            this.button40.TabIndex = 56;
-            this.button40.Text = "447";
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.button40_Click);
-            // 
-            // button41
-            // 
-            this.button41.Location = new System.Drawing.Point(131, 360);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(40, 23);
-            this.button41.TabIndex = 57;
-            this.button41.Text = "448";
-            this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(17, 331);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(40, 23);
-            this.button5.TabIndex = 58;
-            this.button5.Text = "449";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(63, 331);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(40, 23);
-            this.button7.TabIndex = 59;
-            this.button7.Text = "450";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(109, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 23);
-            this.button1.TabIndex = 60;
-            this.button1.Text = "451";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(155, 331);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 23);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "452";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(17, 302);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 23);
-            this.button3.TabIndex = 62;
-            this.button3.Text = "455";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(63, 302);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(40, 23);
-            this.button4.TabIndex = 63;
-            this.button4.Text = "454";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.button19.Size = new System.Drawing.Size(75, 23);
+            this.button19.TabIndex = 0;
             // 
             // f400_Main
             // 
@@ -2119,43 +1665,12 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(793, 513);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button41);
-            this.Controls.Add(this.button40);
-            this.Controls.Add(this.button39);
-            this.Controls.Add(this.button38);
-            this.Controls.Add(this.button37);
-            this.Controls.Add(this.button36);
-            this.Controls.Add(this.button35);
-            this.Controls.Add(this.button34);
-            this.Controls.Add(this.button33);
-            this.Controls.Add(this.button29);
-            this.Controls.Add(this.button28);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button25);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.button20);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.m_Panel_Content);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
@@ -2174,12 +1689,12 @@ namespace BKI_QLHT
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.f400_Main_FormClosing);
             this.m_ribbonControl_Main.ResumeLayout(false);
             this.m_ribbonControl_Main.PerformLayout();
+            this.m_ribbonPanel_hethong.ResumeLayout(false);
             this.m_menu_item_theo_bac_sy.ResumeLayout(false);
             this.m_ribbonPanel_baocao.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
             this.m_ribbonPanel_nghiepvu.ResumeLayout(false);
             this.m_ribbonPanel_danhmuc.ResumeLayout(false);
-            this.m_ribbonPanel_hethong.ResumeLayout(false);
             this.dockSite1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.bar1.ResumeLayout(false);
@@ -2218,14 +1733,9 @@ namespace BKI_QLHT
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_chi_tiet_thuoc;
         private DevComponents.DotNetBar.RibbonBar m_menu_item_thoat;
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_thoat;
-        private DevComponents.DotNetBar.RibbonBar m_menu_item_tu_dien_he_thong;
-        private DevComponents.DotNetBar.ButtonItem m_cmd_item_tu_dien_he_thong;
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_nhom_nguoi_su_dung;
-        private DevComponents.DotNetBar.ButtonItem m_cmd_item_nhat_ki_he_thong;
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_danh_muc_control;
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_phan_quyen_he_thong;
-        private DevComponents.DotNetBar.ButtonItem m_cmd_item_phan_quyen_cho_nhom;
-        private DevComponents.DotNetBar.ButtonItem m_cmd_item_phan_quyen_chi_tiet;
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_danh_muc_khach_hang;
         private DevComponents.DotNetBar.ButtonItem m_cmd_nhom_khach_hang;
         private DevComponents.DotNetBar.RibbonBar m_menu_item_bac_sy;
@@ -2243,7 +1753,6 @@ namespace BKI_QLHT
         private DevComponents.DotNetBar.DockSite dockSite6;
         private DevComponents.DotNetBar.DockSite dockSite7;
         private DevComponents.DotNetBar.DockSite dockSite8;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX m_cmd_lich_su_gia_ban;
         private DevComponents.DotNetBar.ButtonItem m_cmd_item_danh_muc_bac_sy;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem1;
@@ -2259,47 +1768,16 @@ namespace BKI_QLHT
         private DevComponents.DotNetBar.ButtonItem m_cmd_quan_ly_so_du;
         private DevComponents.DotNetBar.ButtonItem m_cmd_nuoc_san_xuat;
         private DevComponents.DotNetBar.ButtonItem m_cmd_nha_san_xuat;
-        private Button button9;
-        private Button button8;
-        private Button button10;
-        private Button button11;
-        private Button button12;
-        private Button button13;
         private Button button14;
         private Button button15;
         private Button button16;
         private Button button19;
         private Button button18;
         private Button button17;
-        private Button button20;
-        private Button button21;
-        private Button button22;
-        private Button button23;
-        private Button button24;
-        private Button button25;
-        private Button button26;
-        private Button button27;
-        private Button button29;
-        private Button button28;
         private DevComponents.DotNetBar.RibbonBar m_menu_item_bc_dm_thuoc;
-        private Button button33;
         private DevComponents.DotNetBar.RibbonBar m_menu_item_don_vi_kinh_doanh;
         private DevComponents.DotNetBar.ButtonItem m_cmd_don_vi_kinh_doanh;
         private DevComponents.DotNetBar.ButtonItem m_cmd_dm_benh_vien;
-        private Button button34;
-        private Button button35;
-        private Button button36;
-        private Button button37;
-        private Button button38;
-        private Button button39;
-        private Button button40;
-        private Button button41;
-        private Button button7;
-        private Button button5;
-        private Button button2;
-        private Button button1;
-        private Button button3;
-        private Button button4;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel1;
         private DevComponents.DotNetBar.RibbonTabItem m_menu_item_bao_cao_nhap_thuoc;
         private DevComponents.DotNetBar.RibbonPanel m_menu_item_theo_bac_sy;
