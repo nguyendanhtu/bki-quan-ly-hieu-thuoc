@@ -1009,5 +1009,20 @@ namespace BKI_QLHT
             }
         }
 
+        private void m_cmd_item_bang_gia_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m_Panel_Content.Controls.Clear();
+                uc803_bang_gia uc_frm = new uc803_bang_gia();
+                m_Panel_Content.Controls.Add(uc_frm);
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
     }     
 }

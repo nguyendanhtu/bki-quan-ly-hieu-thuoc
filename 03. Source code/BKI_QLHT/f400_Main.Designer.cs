@@ -162,11 +162,11 @@ namespace BKI_QLHT
             // 
             this.m_ribbonControl_Main.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonControl_Main.CaptionVisible = true;
+            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_danhmuc);
             this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel2);
             this.m_ribbonControl_Main.Controls.Add(this.m_menu_item_theo_bac_sy);
             this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel1);
-            this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_baocao);
             this.m_ribbonControl_Main.Dock = System.Windows.Forms.DockStyle.Top;
@@ -232,6 +232,7 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_danhmuc.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_danhmuc.TabIndex = 2;
+            this.m_ribbonPanel_danhmuc.Visible = false;
             // 
             // m_menu_item_don_vi_kinh_doanh
             // 
@@ -917,7 +918,7 @@ namespace BKI_QLHT
             this.m_ribbonPanel_nghiepvu.Location = new System.Drawing.Point(0, 53);
             this.m_ribbonPanel_nghiepvu.Name = "m_ribbonPanel_nghiepvu";
             this.m_ribbonPanel_nghiepvu.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.m_ribbonPanel_nghiepvu.Size = new System.Drawing.Size(783, 106);
+            this.m_ribbonPanel_nghiepvu.Size = new System.Drawing.Size(902, 106);
             // 
             // 
             // 
@@ -931,7 +932,6 @@ namespace BKI_QLHT
             // 
             this.m_ribbonPanel_nghiepvu.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonPanel_nghiepvu.TabIndex = 3;
-            this.m_ribbonPanel_nghiepvu.Visible = false;
             // 
             // m_menu_item_gia
             // 
@@ -981,6 +981,7 @@ namespace BKI_QLHT
             this.m_cmd_item_bang_gia.Name = "m_cmd_item_bang_gia";
             this.m_cmd_item_bang_gia.SubItemsExpandWidth = 14;
             this.m_cmd_item_bang_gia.Text = "    Bảng giá   ";
+            this.m_cmd_item_bang_gia.Click += new System.EventHandler(this.m_cmd_item_bang_gia_Click);
             // 
             // menu_item_quan_ly
             // 
@@ -1376,7 +1377,6 @@ namespace BKI_QLHT
             // 
             // m_menuitem_danhmuc
             // 
-            this.m_menuitem_danhmuc.Checked = true;
             this.m_menuitem_danhmuc.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Medium;
             this.m_menuitem_danhmuc.Name = "m_menuitem_danhmuc";
             this.m_menuitem_danhmuc.Panel = this.m_ribbonPanel_danhmuc;
@@ -1384,6 +1384,7 @@ namespace BKI_QLHT
             // 
             // m_menuitem_nghiepvu
             // 
+            this.m_menuitem_nghiepvu.Checked = true;
             this.m_menuitem_nghiepvu.Name = "m_menuitem_nghiepvu";
             this.m_menuitem_nghiepvu.Panel = this.m_ribbonPanel_nghiepvu;
             this.m_menuitem_nghiepvu.Text = "Nghiệp vụ";
