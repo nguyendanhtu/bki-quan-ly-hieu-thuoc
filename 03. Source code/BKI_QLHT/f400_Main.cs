@@ -905,5 +905,10 @@ namespace BKI_QLHT
             }
         }
 
+        private void m_cmd_thong_tin_lien_he_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }     
 }

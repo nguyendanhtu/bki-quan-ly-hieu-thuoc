@@ -158,8 +158,8 @@ namespace BKI_QLHT
             // 
             this.m_ribbonControl_Main.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_ribbonControl_Main.CaptionVisible = true;
-            this.m_ribbonControl_Main.Controls.Add(this.m_menu_item_theo_bac_sy);
             this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel2);
+            this.m_ribbonControl_Main.Controls.Add(this.m_menu_item_theo_bac_sy);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_baocao);
@@ -340,6 +340,7 @@ namespace BKI_QLHT
             // 
             this.m_menu_item_theo_bac_sy.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.m_menu_item_theo_bac_sy.TabIndex = 6;
+            this.m_menu_item_theo_bac_sy.Visible = false;
             // 
             // m_menu_item_bc_doanh_thu_theo_nhom_thuoc
             // 
@@ -1387,7 +1388,6 @@ namespace BKI_QLHT
             // 
             // m_item_bao_cao_doanh_thu
             // 
-            this.m_item_bao_cao_doanh_thu.Checked = true;
             this.m_item_bao_cao_doanh_thu.Name = "m_item_bao_cao_doanh_thu";
             this.m_item_bao_cao_doanh_thu.Panel = this.m_menu_item_theo_bac_sy;
             this.m_item_bao_cao_doanh_thu.Text = "Báo cáo doanh thu";
@@ -1669,6 +1669,7 @@ namespace BKI_QLHT
             // 
             // m_menu_item_help
             // 
+            this.m_menu_item_help.Checked = true;
             this.m_menu_item_help.Name = "m_menu_item_help";
             this.m_menu_item_help.Panel = this.ribbonPanel2;
             this.m_menu_item_help.Text = "Trợ giúp";
@@ -1696,7 +1697,6 @@ namespace BKI_QLHT
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 7;
-            this.ribbonPanel2.Visible = false;
             // 
             // m_menu_item_huong_dan_su_dung
             // 
@@ -1771,6 +1771,7 @@ namespace BKI_QLHT
             this.m_cmd_thong_tin_lien_he.Name = "m_cmd_thong_tin_lien_he";
             this.m_cmd_thong_tin_lien_he.SubItemsExpandWidth = 14;
             this.m_cmd_thong_tin_lien_he.Text = "buttonItem1";
+            this.m_cmd_thong_tin_lien_he.Click += new System.EventHandler(this.m_cmd_thong_tin_lien_he_Click);
             // 
             // f400_Main
             // 
