@@ -42,16 +42,13 @@ namespace BKI_QLHT.DanhMuc
         private enum e_col_Number
         {
             HO_TEN = 1
-,
-            BENH_VIEN = 5
-                ,
-            DIA_CHI = 3
                 ,
             TEN_NGAN = 2
                 ,
-            ID_LOAI_TU_DIEN = 6
-                , DIEN_THOAI = 4
-
+            DIA_CHI = 3
+                ,
+            DIEN_THOAI = 4
+                
         }
         #endregion
 
@@ -83,10 +80,8 @@ namespace BKI_QLHT.DanhMuc
         {
             Hashtable v_htb = new Hashtable();
             v_htb.Add(V_DM_BAC_SY.HO_TEN, e_col_Number.HO_TEN);
-            v_htb.Add(V_DM_BAC_SY.BENH_VIEN, e_col_Number.BENH_VIEN);
             v_htb.Add(V_DM_BAC_SY.DIA_CHI, e_col_Number.DIA_CHI);
             v_htb.Add(V_DM_BAC_SY.TEN_NGAN, e_col_Number.TEN_NGAN);
-            v_htb.Add(V_DM_BAC_SY.ID_LOAI_TU_DIEN, e_col_Number.ID_LOAI_TU_DIEN);
             v_htb.Add(V_DM_BAC_SY.DIEN_THOAI, e_col_Number.DIEN_THOAI);
 
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds_v_dm_bac_sy.V_DM_BAC_SY.NewRow());
