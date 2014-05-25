@@ -388,6 +388,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_BC_NHAP_THUOC_THEO_CAC_HSX.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1389,6 +1404,39 @@
     </None>
     <None Include="DS_V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xss">
       <DependentUpon>DS_V_BC_NHAP_THUOC_CAC_NV_N_NGAY.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.xsc">
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.xss">
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.xsc">
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.xss">
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.xsc">
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.xss">
+      <DependentUpon>DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.xsd</DependentUpon>
     </None>
     <None Include="DS_V_BC_NHAP_THUOC_THEO_CAC_HSX.xsc">
       <DependentUpon>DS_V_BC_NHAP_THUOC_THEO_CAC_HSX.xsd</DependentUpon>
