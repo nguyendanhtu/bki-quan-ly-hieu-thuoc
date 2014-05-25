@@ -27,6 +27,73 @@ namespace BKI_QLHT
         {
             InitializeComponent();
             format_controls();
+            load_thuoc_sap_het_han();
+            load_thuoc_sap_het_trong_kho();
+        }
+
+        private void load_thuoc_sap_het_trong_kho()
+        {
+            US_V_SO_DU v_us = new US_V_SO_DU();
+            DS_V_SO_DU v_ds = new DS_V_SO_DU();
+            v_us.FillDataset(v_ds, " where SO_DU>0 ORDER BY SO_DU");
+            switch (v_ds.Tables[0].Rows.Count)
+            {
+                case 1:
+                    m_lbl_thuoc_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+                    m_lbl_so_du_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["SO_DU"]);
+                    m_lbl_thuoc_5.Text = "";
+                    m_lbl_so_du_5.Text = "";
+                    m_lbl_thuoc_6.Text = "";
+                    m_lbl_so_du_6.Text = ""; break;
+                case 2:
+                    m_lbl_thuoc_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+                    m_lbl_so_du_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["SO_DU"]);
+                    m_lbl_thuoc_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
+                    m_lbl_so_du_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["SO_DU"]);
+                    m_lbl_so_du_6.Text = "";
+                    m_lbl_thuoc_6.Text = ""; break;
+                default:
+                    m_lbl_thuoc_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+                    m_lbl_so_du_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["SO_DU"]);
+                    m_lbl_thuoc_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
+                    m_lbl_so_du_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["SO_DU"]);
+                    m_lbl_so_du_6.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["SO_DU"]);
+                    m_lbl_thuoc_6.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
+                    break;
+            }
+        }
+
+        private void load_thuoc_sap_het_han()
+        {
+            US_V_HAN_SU_DUNG v_us = new US_V_HAN_SU_DUNG();
+            DS_V_HAN_SU_DUNG v_ds = new DS_V_HAN_SU_DUNG();
+            v_us.FillDataset(v_ds, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY HAN_SD");
+            switch (v_ds.Tables[0].Rows.Count)
+            {
+                case 0: BaseMessages.MsgBox_Infor("Không có thuốc sắp hết hạn trong 3 tháng tới"); break;
+                case 1:
+                    m_lbl_thuoc_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+                    m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
+                    m_lbl_hsd_2.Text = "";
+                    m_lbl_hsd_3.Text = "";
+                    m_lbl_thuoc_2.Text = "";
+                    m_lbl_thuoc_3.Text = ""; break;
+                case 2:
+                    m_lbl_thuoc_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+                    m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
+                    m_lbl_thuoc_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
+                    m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
+                    m_lbl_hsd_3.Text = "";
+                    m_lbl_thuoc_3.Text = ""; break;
+                default:
+                    m_lbl_thuoc_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+                    m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
+                    m_lbl_thuoc_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
+                    m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
+                    m_lbl_hsd_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["HAN_SD"]);
+                    m_lbl_thuoc_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
+                    break;
+            }
         }
 
         #region Public Interface
@@ -909,6 +976,37 @@ namespace BKI_QLHT
         {
             f521_thong_tin_lien_he v_frm = new f521_thong_tin_lien_he();
             v_frm.ShowDialog();
+        }
+
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m_Panel_Content.Controls.Clear();
+                uc_804_han_su_dung uc_frm = new uc_804_han_su_dung();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+        private void m_cmd_so_du_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                m_Panel_Content.Controls.Clear();
+                uc807_v_so_du uc_frm = new uc807_v_so_du();
+                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
+                m_Panel_Content.Controls.Add(uc_frm);
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
     }     

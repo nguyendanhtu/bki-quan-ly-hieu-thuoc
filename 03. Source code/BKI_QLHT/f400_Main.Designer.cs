@@ -124,6 +124,22 @@ namespace BKI_QLHT
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.m_lbl_thuoc_1 = new System.Windows.Forms.Label();
+            this.m_lbl_hsd_1 = new System.Windows.Forms.Label();
+            this.m_lbl_thuoc_2 = new System.Windows.Forms.Label();
+            this.m_lbl_hsd_2 = new System.Windows.Forms.Label();
+            this.m_lbl_thuoc_3 = new System.Windows.Forms.Label();
+            this.m_lbl_hsd_3 = new System.Windows.Forms.Label();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.m_lbl_thuoc_4 = new System.Windows.Forms.Label();
+            this.m_lbl_thuoc_5 = new System.Windows.Forms.Label();
+            this.m_lbl_thuoc_6 = new System.Windows.Forms.Label();
+            this.m_lbl_so_du_4 = new System.Windows.Forms.Label();
+            this.m_lbl_so_du_5 = new System.Windows.Forms.Label();
+            this.m_lbl_so_du_6 = new System.Windows.Forms.Label();
+            this.m_cmd_so_du = new SIS.Controls.Button.SiSButton();
             this.m_ribbonControl_Main.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.m_menu_item_theo_bac_sy.SuspendLayout();
@@ -169,7 +185,7 @@ namespace BKI_QLHT
             this.m_ribbonControl_Main.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.m_ribbonControl_Main.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.qatCustomizeItem1});
-            this.m_ribbonControl_Main.Size = new System.Drawing.Size(783, 162);
+            this.m_ribbonControl_Main.Size = new System.Drawing.Size(902, 162);
             this.m_ribbonControl_Main.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_ribbonControl_Main.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.m_ribbonControl_Main.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -199,7 +215,7 @@ namespace BKI_QLHT
             this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel2.Name = "ribbonPanel2";
             this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(783, 106);
+            this.ribbonPanel2.Size = new System.Drawing.Size(902, 106);
             // 
             // 
             // 
@@ -1446,7 +1462,7 @@ namespace BKI_QLHT
             this.m_Panel_Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_Panel_Content.Location = new System.Drawing.Point(234, 163);
             this.m_Panel_Content.Name = "m_Panel_Content";
-            this.m_Panel_Content.Size = new System.Drawing.Size(554, 348);
+            this.m_Panel_Content.Size = new System.Drawing.Size(673, 491);
             this.m_Panel_Content.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.m_Panel_Content.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.m_Panel_Content.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -1490,9 +1506,9 @@ namespace BKI_QLHT
             this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(5, 511);
+            this.dockSite4.Location = new System.Drawing.Point(5, 654);
             this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(783, 0);
+            this.dockSite4.Size = new System.Drawing.Size(902, 0);
             this.dockSite4.TabIndex = 12;
             this.dockSite4.TabStop = false;
             // 
@@ -1502,10 +1518,10 @@ namespace BKI_QLHT
             this.dockSite1.Controls.Add(this.bar1);
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 226, 348)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 226, 491)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
             this.dockSite1.Location = new System.Drawing.Point(5, 163);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(229, 348);
+            this.dockSite1.Size = new System.Drawing.Size(229, 491);
             this.dockSite1.TabIndex = 9;
             this.dockSite1.TabStop = false;
             // 
@@ -1524,7 +1540,7 @@ namespace BKI_QLHT
             this.bar1.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(226, 348);
+            this.bar1.Size = new System.Drawing.Size(226, 491);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.bar1.TabIndex = 0;
@@ -1534,11 +1550,26 @@ namespace BKI_QLHT
             // panelDockContainer1
             // 
             this.panelDockContainer1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.panelDockContainer1.Controls.Add(this.m_cmd_so_du);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_so_du_6);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_so_du_5);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_so_du_4);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_thuoc_6);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_thuoc_5);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_thuoc_4);
+            this.panelDockContainer1.Controls.Add(this.label2);
+            this.panelDockContainer1.Controls.Add(this.m_cmd_exit);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_hsd_3);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_thuoc_3);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_hsd_2);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_thuoc_2);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_hsd_1);
+            this.panelDockContainer1.Controls.Add(this.m_lbl_thuoc_1);
             this.panelDockContainer1.Controls.Add(this.label1);
             this.panelDockContainer1.Controls.Add(this.m_cmd_lich_su_gia_ban);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(220, 322);
+            this.panelDockContainer1.Size = new System.Drawing.Size(220, 465);
             this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
@@ -1565,9 +1596,9 @@ namespace BKI_QLHT
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite2.Location = new System.Drawing.Point(788, 163);
+            this.dockSite2.Location = new System.Drawing.Point(907, 163);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 348);
+            this.dockSite2.Size = new System.Drawing.Size(0, 491);
             this.dockSite2.TabIndex = 10;
             this.dockSite2.TabStop = false;
             // 
@@ -1575,9 +1606,9 @@ namespace BKI_QLHT
             // 
             this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(5, 511);
+            this.dockSite8.Location = new System.Drawing.Point(5, 654);
             this.dockSite8.Name = "dockSite8";
-            this.dockSite8.Size = new System.Drawing.Size(783, 0);
+            this.dockSite8.Size = new System.Drawing.Size(902, 0);
             this.dockSite8.TabIndex = 16;
             this.dockSite8.TabStop = false;
             // 
@@ -1587,7 +1618,7 @@ namespace BKI_QLHT
             this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite5.Location = new System.Drawing.Point(5, 1);
             this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 510);
+            this.dockSite5.Size = new System.Drawing.Size(0, 653);
             this.dockSite5.TabIndex = 13;
             this.dockSite5.TabStop = false;
             // 
@@ -1595,9 +1626,9 @@ namespace BKI_QLHT
             // 
             this.dockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite6.Location = new System.Drawing.Point(788, 1);
+            this.dockSite6.Location = new System.Drawing.Point(907, 1);
             this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 510);
+            this.dockSite6.Size = new System.Drawing.Size(0, 653);
             this.dockSite6.TabIndex = 14;
             this.dockSite6.TabStop = false;
             // 
@@ -1607,7 +1638,7 @@ namespace BKI_QLHT
             this.dockSite7.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite7.Location = new System.Drawing.Point(5, 1);
             this.dockSite7.Name = "dockSite7";
-            this.dockSite7.Size = new System.Drawing.Size(783, 0);
+            this.dockSite7.Size = new System.Drawing.Size(902, 0);
             this.dockSite7.TabIndex = 15;
             this.dockSite7.TabStop = false;
             // 
@@ -1618,7 +1649,7 @@ namespace BKI_QLHT
             this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite3.Location = new System.Drawing.Point(5, 1);
             this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(783, 0);
+            this.dockSite3.Size = new System.Drawing.Size(902, 0);
             this.dockSite3.TabIndex = 11;
             this.dockSite3.TabStop = false;
             // 
@@ -1631,6 +1662,7 @@ namespace BKI_QLHT
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(42, 19);
             this.label1.Name = "label1";
@@ -1638,13 +1670,201 @@ namespace BKI_QLHT
             this.label1.TabIndex = 3;
             this.label1.Text = "Thuốc sắp hết hạn";
             // 
+            // m_lbl_thuoc_1
+            // 
+            this.m_lbl_thuoc_1.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_thuoc_1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_thuoc_1.Location = new System.Drawing.Point(9, 61);
+            this.m_lbl_thuoc_1.Name = "m_lbl_thuoc_1";
+            this.m_lbl_thuoc_1.Size = new System.Drawing.Size(128, 30);
+            this.m_lbl_thuoc_1.TabIndex = 4;
+            this.m_lbl_thuoc_1.Text = "label2";
+            // 
+            // m_lbl_hsd_1
+            // 
+            this.m_lbl_hsd_1.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_hsd_1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_hsd_1.Location = new System.Drawing.Point(144, 61);
+            this.m_lbl_hsd_1.Name = "m_lbl_hsd_1";
+            this.m_lbl_hsd_1.Size = new System.Drawing.Size(73, 30);
+            this.m_lbl_hsd_1.TabIndex = 5;
+            this.m_lbl_hsd_1.Text = "label3";
+            // 
+            // m_lbl_thuoc_2
+            // 
+            this.m_lbl_thuoc_2.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_thuoc_2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_thuoc_2.Location = new System.Drawing.Point(9, 100);
+            this.m_lbl_thuoc_2.Name = "m_lbl_thuoc_2";
+            this.m_lbl_thuoc_2.Size = new System.Drawing.Size(128, 33);
+            this.m_lbl_thuoc_2.TabIndex = 6;
+            this.m_lbl_thuoc_2.Text = "label4";
+            // 
+            // m_lbl_hsd_2
+            // 
+            this.m_lbl_hsd_2.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_hsd_2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_hsd_2.Location = new System.Drawing.Point(144, 100);
+            this.m_lbl_hsd_2.Name = "m_lbl_hsd_2";
+            this.m_lbl_hsd_2.Size = new System.Drawing.Size(73, 33);
+            this.m_lbl_hsd_2.TabIndex = 7;
+            this.m_lbl_hsd_2.Text = "label5";
+            // 
+            // m_lbl_thuoc_3
+            // 
+            this.m_lbl_thuoc_3.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_thuoc_3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_thuoc_3.Location = new System.Drawing.Point(9, 142);
+            this.m_lbl_thuoc_3.Name = "m_lbl_thuoc_3";
+            this.m_lbl_thuoc_3.Size = new System.Drawing.Size(128, 34);
+            this.m_lbl_thuoc_3.TabIndex = 8;
+            this.m_lbl_thuoc_3.Text = "label6";
+            // 
+            // m_lbl_hsd_3
+            // 
+            this.m_lbl_hsd_3.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_hsd_3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_hsd_3.Location = new System.Drawing.Point(144, 142);
+            this.m_lbl_hsd_3.Name = "m_lbl_hsd_3";
+            this.m_lbl_hsd_3.Size = new System.Drawing.Size(73, 34);
+            this.m_lbl_hsd_3.TabIndex = 9;
+            this.m_lbl_hsd_3.Text = "label7";
+            // 
+            // m_cmd_exit
+            // 
+            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_exit.ImageIndex = 18;
+            this.m_cmd_exit.ImageList = this.ImageList;
+            this.m_cmd_exit.Location = new System.Drawing.Point(46, 179);
+            this.m_cmd_exit.Name = "m_cmd_exit";
+            this.m_cmd_exit.Size = new System.Drawing.Size(136, 28);
+            this.m_cmd_exit.TabIndex = 12;
+            this.m_cmd_exit.Text = "Xem chi tiết...";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
+            // 
+            // ImageList
+            // 
+            this.ImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList.ImageStream")));
+            this.ImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList.Images.SetKeyName(0, "");
+            this.ImageList.Images.SetKeyName(1, "");
+            this.ImageList.Images.SetKeyName(2, "");
+            this.ImageList.Images.SetKeyName(3, "");
+            this.ImageList.Images.SetKeyName(4, "");
+            this.ImageList.Images.SetKeyName(5, "");
+            this.ImageList.Images.SetKeyName(6, "");
+            this.ImageList.Images.SetKeyName(7, "");
+            this.ImageList.Images.SetKeyName(8, "");
+            this.ImageList.Images.SetKeyName(9, "");
+            this.ImageList.Images.SetKeyName(10, "");
+            this.ImageList.Images.SetKeyName(11, "");
+            this.ImageList.Images.SetKeyName(12, "");
+            this.ImageList.Images.SetKeyName(13, "");
+            this.ImageList.Images.SetKeyName(14, "");
+            this.ImageList.Images.SetKeyName(15, "");
+            this.ImageList.Images.SetKeyName(16, "");
+            this.ImageList.Images.SetKeyName(17, "");
+            this.ImageList.Images.SetKeyName(18, "");
+            this.ImageList.Images.SetKeyName(19, "");
+            this.ImageList.Images.SetKeyName(20, "");
+            this.ImageList.Images.SetKeyName(21, "");
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(25, 233);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(183, 19);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Thuốc sắp hết trong kho";
+            // 
+            // m_lbl_thuoc_4
+            // 
+            this.m_lbl_thuoc_4.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_thuoc_4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_thuoc_4.Location = new System.Drawing.Point(9, 279);
+            this.m_lbl_thuoc_4.Name = "m_lbl_thuoc_4";
+            this.m_lbl_thuoc_4.Size = new System.Drawing.Size(113, 30);
+            this.m_lbl_thuoc_4.TabIndex = 14;
+            this.m_lbl_thuoc_4.Text = "label2";
+            // 
+            // m_lbl_thuoc_5
+            // 
+            this.m_lbl_thuoc_5.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_thuoc_5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_thuoc_5.Location = new System.Drawing.Point(9, 320);
+            this.m_lbl_thuoc_5.Name = "m_lbl_thuoc_5";
+            this.m_lbl_thuoc_5.Size = new System.Drawing.Size(128, 30);
+            this.m_lbl_thuoc_5.TabIndex = 15;
+            this.m_lbl_thuoc_5.Text = "label2";
+            // 
+            // m_lbl_thuoc_6
+            // 
+            this.m_lbl_thuoc_6.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_thuoc_6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_thuoc_6.Location = new System.Drawing.Point(9, 364);
+            this.m_lbl_thuoc_6.Name = "m_lbl_thuoc_6";
+            this.m_lbl_thuoc_6.Size = new System.Drawing.Size(128, 30);
+            this.m_lbl_thuoc_6.TabIndex = 16;
+            this.m_lbl_thuoc_6.Text = "label2";
+            // 
+            // m_lbl_so_du_4
+            // 
+            this.m_lbl_so_du_4.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_so_du_4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_so_du_4.Location = new System.Drawing.Point(143, 279);
+            this.m_lbl_so_du_4.Name = "m_lbl_so_du_4";
+            this.m_lbl_so_du_4.Size = new System.Drawing.Size(65, 30);
+            this.m_lbl_so_du_4.TabIndex = 17;
+            this.m_lbl_so_du_4.Text = "label3";
+            // 
+            // m_lbl_so_du_5
+            // 
+            this.m_lbl_so_du_5.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_so_du_5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_so_du_5.Location = new System.Drawing.Point(143, 320);
+            this.m_lbl_so_du_5.Name = "m_lbl_so_du_5";
+            this.m_lbl_so_du_5.Size = new System.Drawing.Size(73, 30);
+            this.m_lbl_so_du_5.TabIndex = 18;
+            this.m_lbl_so_du_5.Text = "label3";
+            // 
+            // m_lbl_so_du_6
+            // 
+            this.m_lbl_so_du_6.BackColor = System.Drawing.Color.Transparent;
+            this.m_lbl_so_du_6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_so_du_6.Location = new System.Drawing.Point(144, 364);
+            this.m_lbl_so_du_6.Name = "m_lbl_so_du_6";
+            this.m_lbl_so_du_6.Size = new System.Drawing.Size(73, 30);
+            this.m_lbl_so_du_6.TabIndex = 19;
+            this.m_lbl_so_du_6.Text = "label3";
+            // 
+            // m_cmd_so_du
+            // 
+            this.m_cmd_so_du.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_so_du.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_so_du.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_so_du.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_so_du.ImageIndex = 18;
+            this.m_cmd_so_du.ImageList = this.ImageList;
+            this.m_cmd_so_du.Location = new System.Drawing.Point(46, 409);
+            this.m_cmd_so_du.Name = "m_cmd_so_du";
+            this.m_cmd_so_du.Size = new System.Drawing.Size(136, 28);
+            this.m_cmd_so_du.TabIndex = 12;
+            this.m_cmd_so_du.Text = "Xem chi tiết...";
+            this.m_cmd_so_du.Click += new System.EventHandler(this.m_cmd_so_du_Click);
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(793, 513);
+            this.ClientSize = new System.Drawing.Size(912, 656);
             this.Controls.Add(this.m_Panel_Content);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
@@ -1775,5 +1995,21 @@ namespace BKI_QLHT
         private DevComponents.DotNetBar.ButtonItem m_cmd_huong_dan_sd;
         private DevComponents.DotNetBar.RibbonTabItem m_menu_item_help;
         private Label label1;
+        private Label m_lbl_hsd_3;
+        private Label m_lbl_thuoc_3;
+        private Label m_lbl_hsd_2;
+        private Label m_lbl_thuoc_2;
+        private Label m_lbl_hsd_1;
+        private Label m_lbl_thuoc_1;
+        internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        internal ImageList ImageList;
+        internal SIS.Controls.Button.SiSButton m_cmd_so_du;
+        private Label m_lbl_so_du_6;
+        private Label m_lbl_so_du_5;
+        private Label m_lbl_so_du_4;
+        private Label m_lbl_thuoc_6;
+        private Label m_lbl_thuoc_5;
+        private Label m_lbl_thuoc_4;
+        private Label label2;
     }
 }
