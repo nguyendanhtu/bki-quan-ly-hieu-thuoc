@@ -470,6 +470,12 @@
     <Compile Include="HeThong\f1000_phan_quyen_tong_hop.Designer.cs">
       <DependentUpon>f1000_phan_quyen_tong_hop.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeThong\f521_thong_tin_lien_he.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\f521_thong_tin_lien_he.Designer.cs">
+      <DependentUpon>f521_thong_tin_lien_he.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -888,6 +894,9 @@
     <EmbeddedResource Include="HeThong\f1000_phan_quyen_tong_hop.resx">
       <DependentUpon>f1000_phan_quyen_tong_hop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f521_thong_tin_lien_he.resx">
+      <DependentUpon>f521_thong_tin_lien_he.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung.resx">
       <DependentUpon>f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung.cs</DependentUpon>
     </EmbeddedResource>
@@ -1121,6 +1130,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add.ico" />
+    <None Include="Resources\grp23DDDD251.png" />
+    <None Include="Resources\grpD23251.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -266,6 +266,7 @@
     </Compile>
     <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.cs">
       <DependentUpon>DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DS_V_BAO_CAO_DOANH_THU_THEO_NHOM_KHACH_HANG.Designer.cs">
       <AutoGen>True</AutoGen>

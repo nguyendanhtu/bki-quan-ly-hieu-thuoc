@@ -907,7 +907,8 @@ namespace BKI_QLHT
 
         private void m_cmd_thong_tin_lien_he_Click(object sender, EventArgs e)
         {
-
+            f521_thong_tin_lien_he v_frm = new f521_thong_tin_lien_he();
+            v_frm.ShowDialog();
         }
 
     }     
