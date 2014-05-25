@@ -46,6 +46,12 @@ namespace BKI_QLHT
             this.m_cmd_bc_doanh_thu_theo_ncc = new DevComponents.DotNetBar.ButtonItem();
             this.m_menu_item_bc_doanh_thu_theo_nv = new DevComponents.DotNetBar.RibbonBar();
             this.m_menu_item_bc_doanh_thu_theo_kh = new DevComponents.DotNetBar.RibbonBar();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.m_menu_item_bc_nhap_thuoc = new DevComponents.DotNetBar.RibbonBar();
+            this.m_cmd_bc_nhap_thuoc_theo_gia = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_bc_nhap_thuoc_theo_ncc = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien = new DevComponents.DotNetBar.ButtonItem();
+            this.m_cmd_bc_nhap_thuoc_theo_hsx = new DevComponents.DotNetBar.ButtonItem();
             this.m_ribbonPanel_nghiepvu = new DevComponents.DotNetBar.RibbonPanel();
             this.m_menu_item_gia = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_item_quan_ly_gia = new DevComponents.DotNetBar.ButtonItem();
@@ -74,12 +80,6 @@ namespace BKI_QLHT
             this.m_cmd_bc_dm_thuoc_theo_hsx = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_bc_dm_thuoc_theo_ncc = new DevComponents.DotNetBar.ButtonItem();
             this.m_cmd_bc_dm_thuoc_theo_nsx = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.m_menu_item_bc_nhap_thuoc = new DevComponents.DotNetBar.RibbonBar();
-            this.m_cmd_bc_nhap_thuoc_theo_gia = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_bc_nhap_thuoc_theo_ncc = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien = new DevComponents.DotNetBar.ButtonItem();
-            this.m_cmd_bc_nhap_thuoc_theo_hsx = new DevComponents.DotNetBar.ButtonItem();
             this.m_ribbonPanel_danhmuc = new DevComponents.DotNetBar.RibbonPanel();
             this.m_menu_item_don_vi_kinh_doanh = new DevComponents.DotNetBar.RibbonBar();
             this.m_cmd_don_vi_kinh_doanh = new DevComponents.DotNetBar.ButtonItem();
@@ -123,13 +123,14 @@ namespace BKI_QLHT
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.m_ribbonControl_Main.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.m_menu_item_theo_bac_sy.SuspendLayout();
+            this.ribbonPanel1.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
             this.m_ribbonPanel_hethong.SuspendLayout();
             this.m_ribbonPanel_baocao.SuspendLayout();
-            this.ribbonPanel1.SuspendLayout();
             this.m_ribbonPanel_danhmuc.SuspendLayout();
             this.dockSite1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -510,6 +511,92 @@ namespace BKI_QLHT
             // 
             // 
             this.m_menu_item_bc_doanh_thu_theo_kh.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ribbonPanel1
+            // 
+            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.m_menu_item_bc_nhap_thuoc);
+            this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel1.Name = "ribbonPanel1";
+            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel1.Size = new System.Drawing.Size(783, 106);
+            // 
+            // 
+            // 
+            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel1.TabIndex = 5;
+            this.ribbonPanel1.Visible = false;
+            // 
+            // m_menu_item_bc_nhap_thuoc
+            // 
+            this.m_menu_item_bc_nhap_thuoc.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.m_menu_item_bc_nhap_thuoc.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_menu_item_bc_nhap_thuoc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.m_menu_item_bc_nhap_thuoc.ContainerControlProcessDialogKey = true;
+            this.m_menu_item_bc_nhap_thuoc.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_menu_item_bc_nhap_thuoc.ImageSize = DevComponents.DotNetBar.eBarImageSize.Medium;
+            this.m_menu_item_bc_nhap_thuoc.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.m_cmd_bc_nhap_thuoc_theo_gia,
+            this.m_cmd_bc_nhap_thuoc_theo_ncc,
+            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien,
+            this.m_cmd_bc_nhap_thuoc_theo_hsx});
+            this.m_menu_item_bc_nhap_thuoc.Location = new System.Drawing.Point(3, 0);
+            this.m_menu_item_bc_nhap_thuoc.Name = "m_menu_item_bc_nhap_thuoc";
+            this.m_menu_item_bc_nhap_thuoc.Size = new System.Drawing.Size(424, 103);
+            this.m_menu_item_bc_nhap_thuoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.m_menu_item_bc_nhap_thuoc.TabIndex = 0;
+            this.m_menu_item_bc_nhap_thuoc.Text = "Báo cáo nhập thuốc";
+            // 
+            // 
+            // 
+            this.m_menu_item_bc_nhap_thuoc.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.m_menu_item_bc_nhap_thuoc.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // m_cmd_bc_nhap_thuoc_theo_gia
+            // 
+            this.m_cmd_bc_nhap_thuoc_theo_gia.Name = "m_cmd_bc_nhap_thuoc_theo_gia";
+            this.m_cmd_bc_nhap_thuoc_theo_gia.SubItemsExpandWidth = 14;
+            this.m_cmd_bc_nhap_thuoc_theo_gia.Text = "Theo giá";
+            this.m_cmd_bc_nhap_thuoc_theo_gia.Click += new System.EventHandler(this.m_cmd_bc_nhap_thuoc_theo_gia_Click);
+            // 
+            // m_cmd_bc_nhap_thuoc_theo_ncc
+            // 
+            this.m_cmd_bc_nhap_thuoc_theo_ncc.Name = "m_cmd_bc_nhap_thuoc_theo_ncc";
+            this.m_cmd_bc_nhap_thuoc_theo_ncc.SubItemsExpandWidth = 14;
+            this.m_cmd_bc_nhap_thuoc_theo_ncc.Text = "Theo nhà cung cấp";
+            this.m_cmd_bc_nhap_thuoc_theo_ncc.Click += new System.EventHandler(this.m_cmd_bc_nhap_thuoc_theo_ncc_Click);
+            // 
+            // m_cmd_bc_nhap_thuoc_theo_nhan_vien
+            // 
+            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien.Name = "m_cmd_bc_nhap_thuoc_theo_nhan_vien";
+            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien.SubItemsExpandWidth = 14;
+            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien.Text = "Theo nhân viên";
+            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien.Click += new System.EventHandler(this.m_cmd_bc_nhap_thuoc_theo_nhan_vien_Click);
+            // 
+            // m_cmd_bc_nhap_thuoc_theo_hsx
+            // 
+            this.m_cmd_bc_nhap_thuoc_theo_hsx.Name = "m_cmd_bc_nhap_thuoc_theo_hsx";
+            this.m_cmd_bc_nhap_thuoc_theo_hsx.SubItemsExpandWidth = 14;
+            this.m_cmd_bc_nhap_thuoc_theo_hsx.Text = "Theo hãng sản xuất";
+            this.m_cmd_bc_nhap_thuoc_theo_hsx.Click += new System.EventHandler(this.m_cmd_bc_nhap_thuoc_theo_hsx_Click);
             // 
             // m_ribbonPanel_nghiepvu
             // 
@@ -969,92 +1056,6 @@ namespace BKI_QLHT
             this.m_cmd_bc_dm_thuoc_theo_nsx.SubItemsExpandWidth = 14;
             this.m_cmd_bc_dm_thuoc_theo_nsx.Text = "Nước sản xuất";
             this.m_cmd_bc_dm_thuoc_theo_nsx.Click += new System.EventHandler(this.m_cmd_bc_dm_thuoc_theo_nsx_Click);
-            // 
-            // ribbonPanel1
-            // 
-            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel1.Controls.Add(this.m_menu_item_bc_nhap_thuoc);
-            this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel1.Name = "ribbonPanel1";
-            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(783, 106);
-            // 
-            // 
-            // 
-            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel1.TabIndex = 5;
-            this.ribbonPanel1.Visible = false;
-            // 
-            // m_menu_item_bc_nhap_thuoc
-            // 
-            this.m_menu_item_bc_nhap_thuoc.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.m_menu_item_bc_nhap_thuoc.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_menu_item_bc_nhap_thuoc.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.m_menu_item_bc_nhap_thuoc.ContainerControlProcessDialogKey = true;
-            this.m_menu_item_bc_nhap_thuoc.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_menu_item_bc_nhap_thuoc.ImageSize = DevComponents.DotNetBar.eBarImageSize.Medium;
-            this.m_menu_item_bc_nhap_thuoc.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.m_cmd_bc_nhap_thuoc_theo_gia,
-            this.m_cmd_bc_nhap_thuoc_theo_ncc,
-            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien,
-            this.m_cmd_bc_nhap_thuoc_theo_hsx});
-            this.m_menu_item_bc_nhap_thuoc.Location = new System.Drawing.Point(3, 0);
-            this.m_menu_item_bc_nhap_thuoc.Name = "m_menu_item_bc_nhap_thuoc";
-            this.m_menu_item_bc_nhap_thuoc.Size = new System.Drawing.Size(424, 103);
-            this.m_menu_item_bc_nhap_thuoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.m_menu_item_bc_nhap_thuoc.TabIndex = 0;
-            this.m_menu_item_bc_nhap_thuoc.Text = "Báo cáo nhập thuốc";
-            // 
-            // 
-            // 
-            this.m_menu_item_bc_nhap_thuoc.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.m_menu_item_bc_nhap_thuoc.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // m_cmd_bc_nhap_thuoc_theo_gia
-            // 
-            this.m_cmd_bc_nhap_thuoc_theo_gia.Name = "m_cmd_bc_nhap_thuoc_theo_gia";
-            this.m_cmd_bc_nhap_thuoc_theo_gia.SubItemsExpandWidth = 14;
-            this.m_cmd_bc_nhap_thuoc_theo_gia.Text = "Theo giá";
-            this.m_cmd_bc_nhap_thuoc_theo_gia.Click += new System.EventHandler(this.m_cmd_bc_nhap_thuoc_theo_gia_Click);
-            // 
-            // m_cmd_bc_nhap_thuoc_theo_ncc
-            // 
-            this.m_cmd_bc_nhap_thuoc_theo_ncc.Name = "m_cmd_bc_nhap_thuoc_theo_ncc";
-            this.m_cmd_bc_nhap_thuoc_theo_ncc.SubItemsExpandWidth = 14;
-            this.m_cmd_bc_nhap_thuoc_theo_ncc.Text = "Theo nhà cung cấp";
-            this.m_cmd_bc_nhap_thuoc_theo_ncc.Click += new System.EventHandler(this.m_cmd_bc_nhap_thuoc_theo_ncc_Click);
-            // 
-            // m_cmd_bc_nhap_thuoc_theo_nhan_vien
-            // 
-            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien.Name = "m_cmd_bc_nhap_thuoc_theo_nhan_vien";
-            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien.SubItemsExpandWidth = 14;
-            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien.Text = "Theo nhân viên";
-            this.m_cmd_bc_nhap_thuoc_theo_nhan_vien.Click += new System.EventHandler(this.m_cmd_bc_nhap_thuoc_theo_nhan_vien_Click);
-            // 
-            // m_cmd_bc_nhap_thuoc_theo_hsx
-            // 
-            this.m_cmd_bc_nhap_thuoc_theo_hsx.Name = "m_cmd_bc_nhap_thuoc_theo_hsx";
-            this.m_cmd_bc_nhap_thuoc_theo_hsx.SubItemsExpandWidth = 14;
-            this.m_cmd_bc_nhap_thuoc_theo_hsx.Text = "Theo hãng sản xuất";
-            this.m_cmd_bc_nhap_thuoc_theo_hsx.Click += new System.EventHandler(this.m_cmd_bc_nhap_thuoc_theo_hsx_Click);
             // 
             // m_ribbonPanel_danhmuc
             // 
@@ -1516,7 +1517,7 @@ namespace BKI_QLHT
             this.bar1.AutoSyncBarCaption = true;
             this.bar1.CloseSingleTab = true;
             this.bar1.Controls.Add(this.panelDockContainer1);
-            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bar1.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.dockContainerItem1});
@@ -1533,6 +1534,7 @@ namespace BKI_QLHT
             // panelDockContainer1
             // 
             this.panelDockContainer1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
+            this.panelDockContainer1.Controls.Add(this.label1);
             this.panelDockContainer1.Controls.Add(this.m_cmd_lich_su_gia_ban);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
@@ -1626,6 +1628,16 @@ namespace BKI_QLHT
             this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem1.Name = "controlContainerItem1";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(42, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Thuốc sắp hết hạn";
+            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1653,15 +1665,16 @@ namespace BKI_QLHT
             this.m_ribbonControl_Main.PerformLayout();
             this.ribbonPanel2.ResumeLayout(false);
             this.m_menu_item_theo_bac_sy.ResumeLayout(false);
+            this.ribbonPanel1.ResumeLayout(false);
             this.m_ribbonPanel_nghiepvu.ResumeLayout(false);
             this.m_ribbonPanel_hethong.ResumeLayout(false);
             this.m_ribbonPanel_baocao.ResumeLayout(false);
-            this.ribbonPanel1.ResumeLayout(false);
             this.m_ribbonPanel_danhmuc.ResumeLayout(false);
             this.dockSite1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.bar1.ResumeLayout(false);
             this.panelDockContainer1.ResumeLayout(false);
+            this.panelDockContainer1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1761,5 +1774,6 @@ namespace BKI_QLHT
         private DevComponents.DotNetBar.RibbonBar m_menu_item_huong_dan_su_dung;
         private DevComponents.DotNetBar.ButtonItem m_cmd_huong_dan_sd;
         private DevComponents.DotNetBar.RibbonTabItem m_menu_item_help;
+        private Label label1;
     }
 }

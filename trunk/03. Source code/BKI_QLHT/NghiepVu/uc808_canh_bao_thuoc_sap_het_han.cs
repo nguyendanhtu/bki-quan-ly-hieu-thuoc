@@ -39,12 +39,33 @@ namespace BKI_QLHT.NghiepVu
             US_V_HAN_SU_DUNG v_us = new US_V_HAN_SU_DUNG();
             DS_V_HAN_SU_DUNG v_ds = new DS_V_HAN_SU_DUNG();
             v_us.FillDataset(v_ds, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY HAN_SD");
-            m_lbl_thuoc_1.Text= CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
-            m_lbl_thuoc_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
-            m_lbl_thuoc_3.Text= CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
+            switch (v_ds.Tables[0].Rows.Count)
+            {
+                case 0: BaseMessages.MsgBox_Infor("Không có thuốc sắp hết hạn trong 3 tháng tới"); break;
+                case 1:
+                m_lbl_thuoc_1.Text= CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
             m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
+            m_lbl_hsd_2.Text = "";
+            m_lbl_hsd_3.Text = "";
+            m_lbl_thuoc_2.Text = "";
+            m_lbl_thuoc_3.Text = "";break;
+                case 2:
+                     m_lbl_thuoc_1.Text= CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+            m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
+            m_lbl_thuoc_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
+            m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
+            m_lbl_hsd_3.Text = "";
+            m_lbl_thuoc_3.Text = "";break;
+                default:
+            m_lbl_thuoc_1.Text= CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
+            m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
+            m_lbl_thuoc_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
             m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
             m_lbl_hsd_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["HAN_SD"]);
+            m_lbl_thuoc_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
+            break;
+            }
+            
             
         }
 
