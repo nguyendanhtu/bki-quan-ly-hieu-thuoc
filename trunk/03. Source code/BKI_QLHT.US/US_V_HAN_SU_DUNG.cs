@@ -23,28 +23,6 @@ public class US_V_HAN_SU_DUNG : US_Object
 {
 	private const string c_TableName = "V_HAN_SU_DUNG";
     #region "Public Properties"
-    public decimal dcID_THUOC
-    {
-        get
-        {
-            return CNull.RowNVLDecimal(pm_objDR, "ID_THUOC", IPConstants.c_DefaultDecimal);
-        }
-        set
-        {
-            pm_objDR["ID_THUOC"] = value;
-        }
-    }
-
-    public bool IsID_THUOCNull()
-    {
-        return pm_objDR.IsNull("ID_THUOC");
-    }
-
-    public void SetID_THUOCNull()
-    {
-        pm_objDR["ID_THUOC"] = System.Convert.DBNull;
-    }
-
     public string strTEN_THUOC
     {
         get
