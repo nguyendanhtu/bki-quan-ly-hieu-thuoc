@@ -188,7 +188,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Name = "f505_v_dm_nhom_thuoc_de";
-            this.Text = "f505_v_dm_nhom_thuoc_de";
+            this.Text = "F505-Cập nhật thông tin nhóm thuốc";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.f505_v_dm_nhom_thuoc_de_KeyDown);
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);

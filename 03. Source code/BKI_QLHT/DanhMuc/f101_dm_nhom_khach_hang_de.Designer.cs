@@ -199,7 +199,7 @@
             this.Controls.Add(this.label2);
             this.Name = "f101_dm_nhom_khach_hang_de";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "f101_dm_nhom_khach_hang_de";
+            this.Text = "F101-Cập nhật thông tin nhóm khách hàng";
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

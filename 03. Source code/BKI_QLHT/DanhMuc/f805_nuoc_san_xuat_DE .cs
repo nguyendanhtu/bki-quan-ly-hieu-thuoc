@@ -342,6 +342,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Name = "f805_nuoc_san_xuat_DE";
+            this.Text = "F805-Cập nhật thông tin nước sản xuất";
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

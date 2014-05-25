@@ -165,7 +165,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "f501_dm_danh_muc_thuoc_DE";
-            this.Text = "f501_Danh sách danh mục thuốc";
+            this.Text = "f501_Cập nhật thông tin danh mục thuốc";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.f501_dm_danh_muc_thuoc_DE_KeyDown);
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);

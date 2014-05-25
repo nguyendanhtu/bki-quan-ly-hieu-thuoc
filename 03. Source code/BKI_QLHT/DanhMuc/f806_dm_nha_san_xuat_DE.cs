@@ -478,6 +478,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Name = "f806_nha_san_xuat_DE";
+            this.Text = "F806-Cập nhật thông tin nhà sản xuất";
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

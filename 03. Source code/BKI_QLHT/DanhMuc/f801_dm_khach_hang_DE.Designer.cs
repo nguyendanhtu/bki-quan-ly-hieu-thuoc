@@ -236,7 +236,7 @@
             this.Controls.Add(this.label2);
             this.Name = "f801_dm_khach_hang_DE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "f801_dm_khach_hang_DE";
+            this.Text = "F801-Cập nhật thông tin khách hàng";
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
