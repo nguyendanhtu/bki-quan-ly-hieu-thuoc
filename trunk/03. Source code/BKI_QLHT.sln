@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BKI_QLHT.DS", "BKI_QLHT.DS\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BKI_QLHT.US", "BKI_QLHT.US\BKI_QLHT.US.csproj", "{CAFDA83F-D091-49BF-816F-F7A7A72C68EC}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MMS", "MMS\MMS.vdproj", "{335408EB-38F7-45C3-9573-CEE7B13FEDBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		BondDebug|Any CPU = BondDebug|Any CPU
@@ -407,6 +409,25 @@ Global
 		{CAFDA83F-D091-49BF-816F-F7A7A72C68EC}.SIPDebug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{CAFDA83F-D091-49BF-816F-F7A7A72C68EC}.SIPDebug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{CAFDA83F-D091-49BF-816F-F7A7A72C68EC}.SIPDebug|x86.ActiveCfg = Debug|Any CPU
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.BondDebug|Any CPU.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.BondDebug|Mixed Platforms.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.BondDebug|x86.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.Debug|Any CPU.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.Debug|Mixed Platforms.Build.0 = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.Debug|x86.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.iFASDebug|Any CPU.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.iFASDebug|Mixed Platforms.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.iFASDebug|x86.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.PersonalBuild|Any CPU.ActiveCfg = Release
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.PersonalBuild|Mixed Platforms.ActiveCfg = Release
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.PersonalBuild|x86.ActiveCfg = Release
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.Release|Any CPU.ActiveCfg = Release
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.Release|Mixed Platforms.ActiveCfg = Release
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.Release|x86.ActiveCfg = Release
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.SIPDebug|Any CPU.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.SIPDebug|Mixed Platforms.ActiveCfg = Debug
+		{335408EB-38F7-45C3-9573-CEE7B13FEDBC}.SIPDebug|x86.ActiveCfg = Debug
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
