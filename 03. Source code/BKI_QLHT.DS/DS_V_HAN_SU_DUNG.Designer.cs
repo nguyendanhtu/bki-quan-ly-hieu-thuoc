@@ -279,8 +279,6 @@ namespace BKI_QLHT.DS {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class V_HAN_SU_DUNGDataTable : global::System.Data.DataTable, global::System.Collections.IEnumerable {
             
-            private global::System.Data.DataColumn columnID_THUOC;
-            
             private global::System.Data.DataColumn columnTEN_THUOC;
             
             private global::System.Data.DataColumn columnHAN_SD;
@@ -322,14 +320,6 @@ namespace BKI_QLHT.DS {
             protected V_HAN_SU_DUNGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_THUOCColumn {
-                get {
-                    return this.columnID_THUOC;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -409,10 +399,9 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_HAN_SU_DUNGRow AddV_HAN_SU_DUNGRow(decimal ID_THUOC, string TEN_THUOC, string HAN_SD, decimal SO_DU, string TEN_DON_VI, string MA_GIAO_DICH) {
+            public V_HAN_SU_DUNGRow AddV_HAN_SU_DUNGRow(string TEN_THUOC, string HAN_SD, decimal SO_DU, string TEN_DON_VI, string MA_GIAO_DICH) {
                 V_HAN_SU_DUNGRow rowV_HAN_SU_DUNGRow = ((V_HAN_SU_DUNGRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_THUOC,
                         TEN_THUOC,
                         HAN_SD,
                         SO_DU,
@@ -446,7 +435,6 @@ namespace BKI_QLHT.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnID_THUOC = base.Columns["ID_THUOC"];
                 this.columnTEN_THUOC = base.Columns["TEN_THUOC"];
                 this.columnHAN_SD = base.Columns["HAN_SD"];
                 this.columnSO_DU = base.Columns["SO_DU"];
@@ -457,8 +445,6 @@ namespace BKI_QLHT.DS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_THUOC = new global::System.Data.DataColumn("ID_THUOC", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_THUOC);
                 this.columnTEN_THUOC = new global::System.Data.DataColumn("TEN_THUOC", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTEN_THUOC);
                 this.columnHAN_SD = new global::System.Data.DataColumn("HAN_SD", typeof(string), null, global::System.Data.MappingType.Element);
@@ -469,10 +455,11 @@ namespace BKI_QLHT.DS {
                 base.Columns.Add(this.columnTEN_DON_VI);
                 this.columnMA_GIAO_DICH = new global::System.Data.DataColumn("MA_GIAO_DICH", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMA_GIAO_DICH);
-                this.columnID_THUOC.AllowDBNull = false;
                 this.columnTEN_THUOC.AllowDBNull = false;
                 this.columnTEN_THUOC.MaxLength = 250;
+                this.columnHAN_SD.ReadOnly = true;
                 this.columnHAN_SD.MaxLength = 30;
+                this.columnSO_DU.ReadOnly = true;
                 this.columnTEN_DON_VI.AllowDBNull = false;
                 this.columnTEN_DON_VI.MaxLength = 50;
                 this.columnMA_GIAO_DICH.AllowDBNull = false;
@@ -615,17 +602,6 @@ namespace BKI_QLHT.DS {
             internal V_HAN_SU_DUNGRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableV_HAN_SU_DUNG = ((V_HAN_SU_DUNGDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal ID_THUOC {
-                get {
-                    return ((decimal)(this[this.tableV_HAN_SU_DUNG.ID_THUOCColumn]));
-                }
-                set {
-                    this[this.tableV_HAN_SU_DUNG.ID_THUOCColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -877,7 +853,6 @@ namespace BKI_QLHT.DS.DS_V_HAN_SU_DUNGTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "V_HAN_SU_DUNG";
-            tableMapping.ColumnMappings.Add("ID_THUOC", "ID_THUOC");
             tableMapping.ColumnMappings.Add("TEN_THUOC", "TEN_THUOC");
             tableMapping.ColumnMappings.Add("HAN_SD", "HAN_SD");
             tableMapping.ColumnMappings.Add("SO_DU", "SO_DU");
@@ -890,7 +865,7 @@ namespace BKI_QLHT.DS.DS_V_HAN_SU_DUNGTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_QLHT.DS.Properties.Settings.Default.BKI_QLHTConnectionString6;
+            this._connection.ConnectionString = global::BKI_QLHT.DS.Properties.Settings.Default.BKI_QLHTConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -899,8 +874,7 @@ namespace BKI_QLHT.DS.DS_V_HAN_SU_DUNGTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_THUOC, TEN_THUOC, HAN_SD, SO_DU, TEN_DON_VI, MA_GIAO_DICH FROM dbo.V_HA" +
-                "N_SU_DUNG";
+            this._commandCollection[0].CommandText = "SELECT TEN_THUOC, HAN_SD, SO_DU, TEN_DON_VI, MA_GIAO_DICH FROM dbo.V_HAN_SU_DUNG";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
