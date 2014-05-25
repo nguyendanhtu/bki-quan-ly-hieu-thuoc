@@ -209,7 +209,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.m_pnl_control_out);
             this.Name = "f521_thong_tin_lien_he";
-            this.Text = "f521_thong_tin_lien_he";
+            this.Text = "F521_Thông tin liên hệ";
             this.m_pnl_control_out.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
