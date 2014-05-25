@@ -48,7 +48,7 @@ namespace BKI_QLHT
         #endregion
 
         #region Data Structure
-
+        US_V_HT_PHAN_QUYEN m_us_v_ht_phan_quyen = new US_V_HT_PHAN_QUYEN();
         #endregion
 
         #region Members
@@ -58,9 +58,9 @@ namespace BKI_QLHT
         #region Private Method
         private void format_dotnetbar_menu()
         {
-            CAppContext_201 v_context = new CAppContext_201();
             foreach (Control v_sub_control in m_ribbonControl_Main.Controls)
             {
+                int v_dem = 0;
                 if (v_sub_control.GetType().Name == "RibbonPanel")
                 {
                     foreach (Control v_sub_sub_control in v_sub_control.Controls)
@@ -68,28 +68,29 @@ namespace BKI_QLHT
                         if (v_sub_sub_control.GetType().Name == "RibbonBar")
                         {
                             RibbonBar v_rp = (RibbonBar)v_sub_sub_control;
-                            int v_dem = 0;
+                           
                             for (int i = 0; i < v_rp.Items.Count; i++)
                             {
-                                if (v_context.CanUseControl(this.Name, v_rp.Items[i].Name, v_rp.Items[i].GetType().Name))
+
+                                if (m_us_v_ht_phan_quyen.is_having_quyen_menu(v_rp.Items[i].Name))
                                 {
                                     v_rp.Items[i].Visible = true;
                                     v_rp.Items[i].Enabled = true;
                                     v_dem++;
-                                    
+
                                 }
                                 else
                                 {
-                                    //v_rp.Items[i].Visible = false;
-                                    //v_rp.Items[i].Enabled = false;
+                                    v_rp.Items[i].Visible = false;
+                                    v_rp.Items[i].Enabled = false;
                                 }
-                              
+
                             }
                             if (v_dem == 0) v_rp.Visible = false;
-                            
                         }
-
+                      
                     }
+                    if (v_dem == 0) v_sub_control.Visible = false;
                 }
             }
         }
@@ -199,7 +200,7 @@ namespace BKI_QLHT
             //f800_dm_nha_cung_cap frm = new f800_dm_nha_cung_cap();
             //frm.ShowDialog();
             m_Panel_Content.Controls.Clear();
-            uc800_dm_nha_cung_cap v_frm=new uc800_dm_nha_cung_cap();
+            uc800_dm_nha_cung_cap v_frm = new uc800_dm_nha_cung_cap();
             v_frm.Dock = System.Windows.Forms.DockStyle.Fill;
             m_Panel_Content.Controls.Add(v_frm);
         }
@@ -207,8 +208,9 @@ namespace BKI_QLHT
 
         private void m_cmd_item_phan_quyen_he_thong_Click(object sender, EventArgs e)
         {
-            f993_phan_quyen_he_thong v_frm = new f993_phan_quyen_he_thong();
-            v_frm.display();
+            //f993_phan_quyen_he_thong v_frm = new f993_phan_quyen_he_thong();
+            f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung v_frm = new f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung();
+            v_frm.Show();
         }
 
         private void m_cmd_item_danh_muc_control_Click(object sender, EventArgs e)
@@ -251,17 +253,17 @@ namespace BKI_QLHT
         }
         private void m_cmd_item_nhat_ki_he_thong_Click(object sender, EventArgs e)
         {
-           try
-           {
-               //test v_frm = new test();
-               //f1000_phan_quyen_tong_hop v_frm = new f1000_phan_quyen_tong_hop();
-               f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung v_frm = new f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung();
-               v_frm.ShowDialog();
-           }
-           catch (System.Exception v_e)
-           {
-           	CSystemLog_301.ExceptionHandle(v_e);
-           }
+            try
+            {
+                test v_frm = new test();
+                //f1000_phan_quyen_tong_hop v_frm = new f1000_phan_quyen_tong_hop();
+                //f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung v_frm = new f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void m_cmd_item_phan_quyen_cho_nhom_Click(object sender, EventArgs e)
@@ -284,7 +286,7 @@ namespace BKI_QLHT
             {
                 IP.Core.IPSystemAdmin.f100_TuDien v_frm = new f100_TuDien();
                 v_frm.ShowDialog();
-                
+
             }
             catch (System.Exception v_e)
             {
@@ -319,7 +321,7 @@ namespace BKI_QLHT
 
         #endregion
 
-        
+
         private void m_cmd_item_danh_muc_bac_sy_Click(object sender, EventArgs e)
         {
             try
@@ -378,14 +380,14 @@ namespace BKI_QLHT
             }
         }
 
-        
+
 
         private void m_cmd_quan_ly_thuoc_het_han_Click(object sender, EventArgs e)
         {
 
         }
 
-    
+
 
         private void cmd_item_quan_ly_nhap_thuoc_Click(object sender, EventArgs e)
         {
@@ -445,9 +447,9 @@ namespace BKI_QLHT
             }
         }
 
-       
 
-       
+
+
         private void m_cmd_quan_ly_thuoc_het_han_Click_1(object sender, EventArgs e)
         {
             try
@@ -463,9 +465,9 @@ namespace BKI_QLHT
             }
         }
 
-       
 
-        
+
+
         private void m_cmd_nuoc_san_xuat_Click(object sender, EventArgs e)
         {
             try
@@ -496,7 +498,7 @@ namespace BKI_QLHT
             }
         }
 
-        
+
 
         private void button1_Click_2(object sender, EventArgs e)
         {
@@ -515,7 +517,7 @@ namespace BKI_QLHT
         {
             try
             {
-                
+
                 f409_bao_cao_danh_muc_thuoc_theo_hsx v_frm = new f409_bao_cao_danh_muc_thuoc_theo_hsx();
                 v_frm.ShowDialog();
             }
@@ -547,7 +549,7 @@ namespace BKI_QLHT
             }
             catch (System.Exception ex)
             {
-                CSystemLog_301.ExceptionHandle(ex);    
+                CSystemLog_301.ExceptionHandle(ex);
             }
         }
 
@@ -780,7 +782,7 @@ namespace BKI_QLHT
             try
             {
                 f422_bcnt_tong_hop v_frm = new f422_bcnt_tong_hop();
-                v_frm.ShowDialog(); 
+                v_frm.ShowDialog();
             }
             catch (System.Exception ex)
             {
@@ -937,10 +939,10 @@ namespace BKI_QLHT
                 "Quản lý bán thuốc", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                
+
                 BaseMessages.MsgBox_Infor("Đã cập nhật");
                 return;
-         
+
             }
             if (result == DialogResult.No)
             {
@@ -966,7 +968,7 @@ namespace BKI_QLHT
         {
             try
             {
-              
+
                 m_Panel_Content.Controls.Clear();
                 uc106_dm_don_vi_kinh_doanh uc_frm = new uc106_dm_don_vi_kinh_doanh();
                 uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1064,7 +1066,7 @@ namespace BKI_QLHT
             }
             catch (Exception v_e)
             {
-                
+
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
@@ -1117,7 +1119,7 @@ namespace BKI_QLHT
             }
             catch (Exception v_e)
             {
-                
+
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }

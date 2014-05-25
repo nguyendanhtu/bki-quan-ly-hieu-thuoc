@@ -119,13 +119,13 @@ Public Class CControlFormat
             Else
                 ip_control.BackColor = System.Drawing.Color.Transparent
             End If
-            'ElseIf TypeOf ip_control Is Button Then
-            '    ip_control.Font = getBoldFont()
-            '    ip_control.ForeColor = getSpecialForeColor()
-            '    If (i_objControlerControl.CanUseControl(ip_str_form_name, ip_control.Name, "") = False) Then
-            '        ip_control.Visible = False
-            '        ip_control.Enabled = False
-            '    End If
+        ElseIf TypeOf ip_control Is Button Then
+            ip_control.Font = getBoldFont()
+            ip_control.ForeColor = getSpecialForeColor()
+            'If (i_objControlerControl.CanUseControl(ip_str_form_name, ip_control.Name, "") = False) Then
+            '    ip_control.Visible = False
+            '    ip_control.Enabled = False
+            'End If
         ElseIf TypeOf ip_control Is DateTimePicker Then
             CType(ip_control, DateTimePicker).CalendarForeColor = getRegularForeColor()
             CType(ip_control, DateTimePicker).CalendarTitleForeColor = getRegularForeColor()
