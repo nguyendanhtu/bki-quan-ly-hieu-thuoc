@@ -216,10 +216,9 @@ namespace BKI_QLHT
             // m_list_control_chua_liet_ke
             // 
             this.m_list_control_chua_liet_ke.FormattingEnabled = true;
-            this.m_list_control_chua_liet_ke.ItemHeight = 14;
             this.m_list_control_chua_liet_ke.Location = new System.Drawing.Point(6, 23);
             this.m_list_control_chua_liet_ke.Name = "m_list_control_chua_liet_ke";
-            this.m_list_control_chua_liet_ke.Size = new System.Drawing.Size(238, 172);
+            this.m_list_control_chua_liet_ke.Size = new System.Drawing.Size(238, 160);
             this.m_list_control_chua_liet_ke.TabIndex = 0;
             this.m_list_control_chua_liet_ke.SelectedIndexChanged += new System.EventHandler(this.m_list_control_chua_liet_ke_SelectedIndexChanged);
             // 
@@ -228,7 +227,7 @@ namespace BKI_QLHT
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(359, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 14);
+            this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 39;
             this.label2.Text = "Form name";
             // 
@@ -244,7 +243,7 @@ namespace BKI_QLHT
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(348, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 14);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 39;
             this.label3.Text = "Display name";
             // 
@@ -348,7 +347,7 @@ namespace BKI_QLHT
             this.m_lbl_menu_item_name.AutoSize = true;
             this.m_lbl_menu_item_name.Location = new System.Drawing.Point(336, 156);
             this.m_lbl_menu_item_name.Name = "m_lbl_menu_item_name";
-            this.m_lbl_menu_item_name.Size = new System.Drawing.Size(84, 14);
+            this.m_lbl_menu_item_name.Size = new System.Drawing.Size(85, 13);
             this.m_lbl_menu_item_name.TabIndex = 39;
             this.m_lbl_menu_item_name.Text = "Menu item name";
             // 
@@ -378,7 +377,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_fg);
             this.Name = "f990_ht_form";
-            this.Text = "F990 - Danh sách form dự án";
+            this.Text = "Hệ thống - F990 Danh sách form dự án";
             this.Load += new System.EventHandler(this.f990_ht_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -411,7 +410,6 @@ namespace BKI_QLHT
         ITransferDataRow m_obj_trans;
         DS_HT_FORM m_ds = new DS_HT_FORM();
         US_HT_FORM m_us = new US_HT_FORM();
-        f994_phan_quyen_detail m_frm = new f994_phan_quyen_detail();
         List<list_form> m_list = new List<list_form>();
         DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         #endregion
@@ -770,12 +768,6 @@ namespace BKI_QLHT
             {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-        }
-        internal void show_2_choose(f994_phan_quyen_detail f994_phan_quyen_detail)
-        {
-            m_frm = f994_phan_quyen_detail;
-            this.ShowDialog();
-            f994_phan_quyen_detail = m_frm;
         }
         #endregion
     }

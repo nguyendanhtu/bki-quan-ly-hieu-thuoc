@@ -12,6 +12,7 @@ using BKI_QLHT.DS;
 using BKI_QLHT.DS.CDBNames;
 using BKI_QLHT.US;
 using IP.Core.IPCommon;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT.HeThong
 {
@@ -63,6 +64,8 @@ namespace BKI_QLHT.HeThong
         }
         private void format_control()
         {
+            CControlFormat.setC1FlexFormat(m_fg);
+            CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
             m_fg.AllowEditing = true;
             CGridUtils.AllowEditingCols(4, 4, m_fg);
             CGridUtils.DisAllowEditingCols(0, 3, m_fg);

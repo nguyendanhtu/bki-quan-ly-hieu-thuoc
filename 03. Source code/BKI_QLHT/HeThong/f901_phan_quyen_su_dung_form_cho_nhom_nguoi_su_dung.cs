@@ -14,6 +14,7 @@ using BKI_QLHT.DS.CDBNames;
 using IP.Core.IPCommon;
 using System.Collections;
 using IP.Core.IPException;
+using IP.Core.IPSystemAdmin;
 
 namespace BKI_QLHT.HeThong
 {
@@ -22,7 +23,7 @@ namespace BKI_QLHT.HeThong
         public f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung()
         {
             InitializeComponent();
-            set_define_events();
+            format_control();
         }
 
         #region Public Interface
@@ -54,6 +55,12 @@ namespace BKI_QLHT.HeThong
         #endregion
 
         #region Private Methods
+        private void format_control()
+        {
+            set_define_events();
+            CControlFormat.setC1FlexFormat(m_fg);
+            CControlFormat.setFormStyle(this, new CAppContext_201(), IPFormStyle.DialogForm);
+        }
         private void set_inital_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
@@ -81,7 +88,7 @@ namespace BKI_QLHT.HeThong
 
         }
 
-        
+
 
 
 
@@ -101,7 +108,7 @@ namespace BKI_QLHT.HeThong
 
         private void load_data_to_grid_control()
         {
-           
+
             if (m_lst_form.SelectedItem != null)
             {
                 m_ds_v_ht_phan_quyen.Clear();
@@ -120,8 +127,8 @@ namespace BKI_QLHT.HeThong
             {
                 m_ds_v_ht_form_control.Clear();
                 m_us_v_ht_form_control.FillDataset(m_ds_v_ht_form_control, "where id_form="
-                    + ((DataRowView)m_lst_form.SelectedItem)[HT_FORM.ID].ToString() 
-                    +" and control_name not in(select control_name from v_ht_phan_quyen)"
+                    + ((DataRowView)m_lst_form.SelectedItem)[HT_FORM.ID].ToString()
+                    + " and control_name not in(select control_name from v_ht_phan_quyen)"
                     + "order by control_display");
                 m_lst_control.DisplayMember = V_HT_FORM_CONTROL.CONTROL_TEXT;
                 m_lst_control.ValueMember = V_HT_FORM_CONTROL.ID;
@@ -352,7 +359,7 @@ namespace BKI_QLHT.HeThong
         {
             try
             {
-                if (m_lst_control.SelectedItem!=null)
+                if (m_lst_control.SelectedItem != null)
                 {
                     US_HT_PHAN_QUYEN v_us_ht_phan_quyen = new US_HT_PHAN_QUYEN();
                     v_us_ht_phan_quyen.dcID_USER_GROUP = CIPConvert.ToDecimal(((DataRowView)m_cbo_nhom_nguoi_su_dung.SelectedItem)[HT_USER_GROUP.ID]);
@@ -371,7 +378,7 @@ namespace BKI_QLHT.HeThong
                     load_data_to_lst_control();
                 }
                 else BaseMessages.MsgBox_Infor("Form này không có control mới nào để phân quyền!");
-                
+
             }
             catch (System.Exception v_e)
             {

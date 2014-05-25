@@ -119,7 +119,7 @@ namespace BKI_QLHT
             this.m_cmd_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save.ImageIndex = 10;
             this.m_cmd_save.ImageList = this.ImageList;
-            this.m_cmd_save.Location = new System.Drawing.Point(284, 4);
+            this.m_cmd_save.Location = new System.Drawing.Point(271, 4);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_save.TabIndex = 0;
@@ -161,9 +161,9 @@ namespace BKI_QLHT
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 11;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(372, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(359, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(101, 28);
             this.m_cmd_exit.TabIndex = 1;
             this.m_cmd_exit.Text = "Trở về (Esc)";
             this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
@@ -250,7 +250,7 @@ namespace BKI_QLHT
             "Đã đóng"});
             this.m_cbo_nhom_quyen.Location = new System.Drawing.Point(144, 194);
             this.m_cbo_nhom_quyen.Name = "m_cbo_nhom_quyen";
-            this.m_cbo_nhom_quyen.Size = new System.Drawing.Size(224, 22);
+            this.m_cbo_nhom_quyen.Size = new System.Drawing.Size(224, 21);
             this.m_cbo_nhom_quyen.TabIndex = 26;
             // 
             // m_cbo_trang_thai
@@ -261,7 +261,7 @@ namespace BKI_QLHT
             "Đã đóng"});
             this.m_cbo_trang_thai.Location = new System.Drawing.Point(144, 167);
             this.m_cbo_trang_thai.Name = "m_cbo_trang_thai";
-            this.m_cbo_trang_thai.Size = new System.Drawing.Size(96, 22);
+            this.m_cbo_trang_thai.Size = new System.Drawing.Size(96, 21);
             this.m_cbo_trang_thai.TabIndex = 25;
             // 
             // label5
