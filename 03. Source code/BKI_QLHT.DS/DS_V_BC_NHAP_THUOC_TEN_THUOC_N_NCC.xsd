@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="BKI_QLHTConnectionString1 (Settings)" DbObjectName="BKI_QLHT.dbo.V_BC_NHAP_THUOC_TEN_THUOC_N_NCC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT TEN_THUOC, TEN_NCC, NGAY_GIAO_DICH, GIA_NHAP, DON_VI_TINH FROM dbo.V_BC_NHAP_THUOC_TEN_THUOC_N_NCC</CommandText>
+                    <CommandText>SELECT TEN_THUOC, DON_VI_TINH, TEN_NCC, GIA_NHAP, NGAY_GIAO_DICH FROM dbo.V_BC_NHAP_THUOC_TEN_THUOC_N_NCC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -20,10 +20,10 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="TEN_THUOC" DataSetColumn="TEN_THUOC" />
-              <Mapping SourceColumn="TEN_NCC" DataSetColumn="TEN_NCC" />
-              <Mapping SourceColumn="NGAY_GIAO_DICH" DataSetColumn="NGAY_GIAO_DICH" />
-              <Mapping SourceColumn="GIA_NHAP" DataSetColumn="GIA_NHAP" />
               <Mapping SourceColumn="DON_VI_TINH" DataSetColumn="DON_VI_TINH" />
+              <Mapping SourceColumn="TEN_NCC" DataSetColumn="TEN_NCC" />
+              <Mapping SourceColumn="GIA_NHAP" DataSetColumn="GIA_NHAP" />
+              <Mapping SourceColumn="NGAY_GIAO_DICH" DataSetColumn="NGAY_GIAO_DICH" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -45,6 +45,13 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="DON_VI_TINH" msprop:Generator_ColumnVarNameInTable="columnDON_VI_TINH" msprop:Generator_ColumnPropNameInRow="DON_VI_TINH" msprop:Generator_ColumnPropNameInTable="DON_VI_TINHColumn" msprop:Generator_UserColumnName="DON_VI_TINH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="TEN_NCC" msprop:Generator_ColumnVarNameInTable="columnTEN_NCC" msprop:Generator_ColumnPropNameInRow="TEN_NCC" msprop:Generator_ColumnPropNameInTable="TEN_NCCColumn" msprop:Generator_UserColumnName="TEN_NCC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -52,18 +59,11 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="GIA_NHAP" msprop:Generator_ColumnVarNameInTable="columnGIA_NHAP" msprop:Generator_ColumnPropNameInRow="GIA_NHAP" msprop:Generator_ColumnPropNameInTable="GIA_NHAPColumn" msprop:Generator_UserColumnName="GIA_NHAP" type="xs:decimal" minOccurs="0" />
               <xs:element name="NGAY_GIAO_DICH" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNGAY_GIAO_DICH" msprop:Generator_ColumnPropNameInRow="NGAY_GIAO_DICH" msprop:Generator_ColumnPropNameInTable="NGAY_GIAO_DICHColumn" msprop:Generator_UserColumnName="NGAY_GIAO_DICH" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="GIA_NHAP" msprop:Generator_ColumnVarNameInTable="columnGIA_NHAP" msprop:Generator_ColumnPropNameInRow="GIA_NHAP" msprop:Generator_ColumnPropNameInTable="GIA_NHAPColumn" msprop:Generator_UserColumnName="GIA_NHAP" type="xs:decimal" minOccurs="0" />
-              <xs:element name="DON_VI_TINH" msprop:Generator_ColumnVarNameInTable="columnDON_VI_TINH" msprop:Generator_ColumnPropNameInRow="DON_VI_TINH" msprop:Generator_ColumnPropNameInTable="DON_VI_TINHColumn" msprop:Generator_UserColumnName="DON_VI_TINH">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

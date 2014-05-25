@@ -281,13 +281,13 @@ namespace BKI_QLHT.DS {
             
             private global::System.Data.DataColumn columnTEN_THUOC;
             
-            private global::System.Data.DataColumn columnTEN_NCC;
+            private global::System.Data.DataColumn columnDON_VI_TINH;
             
-            private global::System.Data.DataColumn columnNGAY_GIAO_DICH;
+            private global::System.Data.DataColumn columnTEN_NCC;
             
             private global::System.Data.DataColumn columnGIA_NHAP;
             
-            private global::System.Data.DataColumn columnDON_VI_TINH;
+            private global::System.Data.DataColumn columnNGAY_GIAO_DICH;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -332,17 +332,17 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TEN_NCCColumn {
+            public global::System.Data.DataColumn DON_VI_TINHColumn {
                 get {
-                    return this.columnTEN_NCC;
+                    return this.columnDON_VI_TINH;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NGAY_GIAO_DICHColumn {
+            public global::System.Data.DataColumn TEN_NCCColumn {
                 get {
-                    return this.columnNGAY_GIAO_DICH;
+                    return this.columnTEN_NCC;
                 }
             }
             
@@ -356,9 +356,9 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DON_VI_TINHColumn {
+            public global::System.Data.DataColumn NGAY_GIAO_DICHColumn {
                 get {
-                    return this.columnDON_VI_TINH;
+                    return this.columnNGAY_GIAO_DICH;
                 }
             }
             
@@ -399,14 +399,14 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public V_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow AddV_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow(string TEN_THUOC, string TEN_NCC, string NGAY_GIAO_DICH, decimal GIA_NHAP, string DON_VI_TINH) {
+            public V_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow AddV_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow(string TEN_THUOC, string DON_VI_TINH, string TEN_NCC, decimal GIA_NHAP, string NGAY_GIAO_DICH) {
                 V_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow rowV_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow = ((V_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TEN_THUOC,
+                        DON_VI_TINH,
                         TEN_NCC,
-                        NGAY_GIAO_DICH,
                         GIA_NHAP,
-                        DON_VI_TINH};
+                        NGAY_GIAO_DICH};
                 rowV_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowV_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow);
                 return rowV_BC_NHAP_THUOC_TEN_THUOC_N_NCCRow;
@@ -436,10 +436,10 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnTEN_THUOC = base.Columns["TEN_THUOC"];
-                this.columnTEN_NCC = base.Columns["TEN_NCC"];
-                this.columnNGAY_GIAO_DICH = base.Columns["NGAY_GIAO_DICH"];
-                this.columnGIA_NHAP = base.Columns["GIA_NHAP"];
                 this.columnDON_VI_TINH = base.Columns["DON_VI_TINH"];
+                this.columnTEN_NCC = base.Columns["TEN_NCC"];
+                this.columnGIA_NHAP = base.Columns["GIA_NHAP"];
+                this.columnNGAY_GIAO_DICH = base.Columns["NGAY_GIAO_DICH"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -447,22 +447,22 @@ namespace BKI_QLHT.DS {
             private void InitClass() {
                 this.columnTEN_THUOC = new global::System.Data.DataColumn("TEN_THUOC", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTEN_THUOC);
-                this.columnTEN_NCC = new global::System.Data.DataColumn("TEN_NCC", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTEN_NCC);
-                this.columnNGAY_GIAO_DICH = new global::System.Data.DataColumn("NGAY_GIAO_DICH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNGAY_GIAO_DICH);
-                this.columnGIA_NHAP = new global::System.Data.DataColumn("GIA_NHAP", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGIA_NHAP);
                 this.columnDON_VI_TINH = new global::System.Data.DataColumn("DON_VI_TINH", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDON_VI_TINH);
+                this.columnTEN_NCC = new global::System.Data.DataColumn("TEN_NCC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEN_NCC);
+                this.columnGIA_NHAP = new global::System.Data.DataColumn("GIA_NHAP", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGIA_NHAP);
+                this.columnNGAY_GIAO_DICH = new global::System.Data.DataColumn("NGAY_GIAO_DICH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNGAY_GIAO_DICH);
                 this.columnTEN_THUOC.AllowDBNull = false;
                 this.columnTEN_THUOC.MaxLength = 250;
+                this.columnDON_VI_TINH.AllowDBNull = false;
+                this.columnDON_VI_TINH.MaxLength = 50;
                 this.columnTEN_NCC.AllowDBNull = false;
                 this.columnTEN_NCC.MaxLength = 50;
                 this.columnNGAY_GIAO_DICH.ReadOnly = true;
                 this.columnNGAY_GIAO_DICH.MaxLength = 30;
-                this.columnDON_VI_TINH.AllowDBNull = false;
-                this.columnDON_VI_TINH.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -616,29 +616,23 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DON_VI_TINH {
+                get {
+                    return ((string)(this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.DON_VI_TINHColumn]));
+                }
+                set {
+                    this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.DON_VI_TINHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string TEN_NCC {
                 get {
                     return ((string)(this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.TEN_NCCColumn]));
                 }
                 set {
                     this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.TEN_NCCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NGAY_GIAO_DICH {
-                get {
-                    try {
-                        return ((string)(this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.NGAY_GIAO_DICHColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NGAY_GIAO_DICH\' in table \'V_BC_NHAP_THUOC_TEN_THUOC_N_NCC\' " +
-                                "is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.NGAY_GIAO_DICHColumn] = value;
                 }
             }
             
@@ -661,25 +655,19 @@ namespace BKI_QLHT.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DON_VI_TINH {
+            public string NGAY_GIAO_DICH {
                 get {
-                    return ((string)(this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.DON_VI_TINHColumn]));
+                    try {
+                        return ((string)(this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.NGAY_GIAO_DICHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NGAY_GIAO_DICH\' in table \'V_BC_NHAP_THUOC_TEN_THUOC_N_NCC\' " +
+                                "is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.DON_VI_TINHColumn] = value;
+                    this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.NGAY_GIAO_DICHColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsNGAY_GIAO_DICHNull() {
-                return this.IsNull(this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.NGAY_GIAO_DICHColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetNGAY_GIAO_DICHNull() {
-                this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.NGAY_GIAO_DICHColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -692,6 +680,18 @@ namespace BKI_QLHT.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetGIA_NHAPNull() {
                 this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.GIA_NHAPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNGAY_GIAO_DICHNull() {
+                return this.IsNull(this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.NGAY_GIAO_DICHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNGAY_GIAO_DICHNull() {
+                this[this.tableV_BC_NHAP_THUOC_TEN_THUOC_N_NCC.NGAY_GIAO_DICHColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -855,10 +855,10 @@ namespace BKI_QLHT.DS.DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCCTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "V_BC_NHAP_THUOC_TEN_THUOC_N_NCC";
             tableMapping.ColumnMappings.Add("TEN_THUOC", "TEN_THUOC");
-            tableMapping.ColumnMappings.Add("TEN_NCC", "TEN_NCC");
-            tableMapping.ColumnMappings.Add("NGAY_GIAO_DICH", "NGAY_GIAO_DICH");
-            tableMapping.ColumnMappings.Add("GIA_NHAP", "GIA_NHAP");
             tableMapping.ColumnMappings.Add("DON_VI_TINH", "DON_VI_TINH");
+            tableMapping.ColumnMappings.Add("TEN_NCC", "TEN_NCC");
+            tableMapping.ColumnMappings.Add("GIA_NHAP", "GIA_NHAP");
+            tableMapping.ColumnMappings.Add("NGAY_GIAO_DICH", "NGAY_GIAO_DICH");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -875,7 +875,7 @@ namespace BKI_QLHT.DS.DS_V_BC_NHAP_THUOC_TEN_THUOC_N_NCCTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT TEN_THUOC, TEN_NCC, NGAY_GIAO_DICH, GIA_NHAP, DON_VI_TINH FROM dbo.V_BC_NH" +
+            this._commandCollection[0].CommandText = "SELECT TEN_THUOC, DON_VI_TINH, TEN_NCC, GIA_NHAP, NGAY_GIAO_DICH FROM dbo.V_BC_NH" +
                 "AP_THUOC_TEN_THUOC_N_NCC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
