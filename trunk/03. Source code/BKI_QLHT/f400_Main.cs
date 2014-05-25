@@ -210,14 +210,14 @@ namespace BKI_QLHT
         {
             //f993_phan_quyen_he_thong v_frm = new f993_phan_quyen_he_thong();
             f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung v_frm = new f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung();
-            v_frm.Show();
+            v_frm.ShowDialog();
         }
 
         private void m_cmd_item_danh_muc_control_Click(object sender, EventArgs e)
         {
             //f991_v_ht_control_in_form v_frm = new f991_v_ht_control_in_form();
             f902_form_control v_frm = new f902_form_control();
-            v_frm.Show();
+            v_frm.ShowDialog();
         }
 
         //private void m_cmd_item_phan_quyen_chi_tiet_Click(object sender, EventArgs e)
@@ -231,7 +231,7 @@ namespace BKI_QLHT
             try
             {
                 f999_ht_nguoi_su_dung frm = new f999_ht_nguoi_su_dung();
-                frm.Show();
+                frm.ShowDialog();
             }
             catch (System.Exception v_e)
             {
@@ -244,7 +244,7 @@ namespace BKI_QLHT
             try
             {
                 f997_ht_nhom_nguoi_su_dung frm = new f997_ht_nhom_nguoi_su_dung();
-                frm.Show();
+                frm.ShowDialog();
             }
             catch (System.Exception v_e)
             {

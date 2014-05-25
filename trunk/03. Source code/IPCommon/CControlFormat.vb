@@ -180,6 +180,7 @@ Public Class CControlFormat
                 .Font = getRegularFont()
                 .ForeColor = getRegularForeColor()
                 .BackgroundImage = IPCommon.My.Resources.grid_blue
+                .BorderStyle = BorderStyle.FixedSingle
                 'Select Case i_form_style
                 '    Case IPFormStyle.DialogForm
                 '        i_form.BorderStyle = CType(FormBorderStyle.None, BorderStyle)
@@ -223,15 +224,16 @@ Public Class CControlFormat
                 .Font = getRegularFont()
                 .ForeColor = getRegularForeColor()
                 .BackgroundImage = IPCommon.My.Resources.grid_blue
+                '.BorderStyle = BorderStyle.FixedSingle
                 Select Case i_form_style
                     Case IPFormStyle.DialogForm
-                        .FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable
+                        .FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
                         .MaximizeBox = False
                         .MinimizeBox = False
                         .StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
                         .ShowInTaskbar = True
                     Case IPFormStyle.DockableTopForm
-                        .FormBorderStyle = FormBorderStyle.Sizable
+                        .FormBorderStyle = FormBorderStyle.FixedSingle
                         .MaximizeBox = True
                         .MinimizeBox = True
                         .StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
