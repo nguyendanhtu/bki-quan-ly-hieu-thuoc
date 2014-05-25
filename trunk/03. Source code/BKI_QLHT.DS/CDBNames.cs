@@ -37,6 +37,31 @@
         public const string ID_QUYEN = "ID_QUYEN";
         public const string USER_GROUP_NAME = "USER_GROUP_NAME";
     }
+    public class V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MAX
+    {
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string GIA_NHAP_MAX = "GIA_NHAP_MAX";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+    }
+    public class V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN
+    {
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string GIA_NHAP_MIN = "GIA_NHAP_MIN";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+    }
+
+    public class V_BC_NHAP_THUOC_TEN_THUOC_N_NCC
+    {
+        public const string TEN_THUOC = "TEN_THUOC";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
+        public const string GIA_NHAP = "GIA_NHAP";
+        public const string DON_VI_TINH = "DON_VI_TINH";
+    }
 
     public class V_BC_DOANH_THU_NCC
     {
