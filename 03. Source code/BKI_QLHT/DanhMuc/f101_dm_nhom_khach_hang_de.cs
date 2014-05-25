@@ -32,6 +32,7 @@ namespace BKI_QLHT
         public void display_for_insert()
         {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
+            m_txt_ma_nhom.Enabled = true ;
             this.ShowDialog();
         }
 
@@ -40,6 +41,7 @@ namespace BKI_QLHT
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
             m_us_dm_nhom_khach_hang = ip_m_us_dm_nhom_khach_hang;
             m_us_obj_to_form();
+            m_txt_ma_nhom.Enabled = false;
             this.ShowDialog();
         }
     #endregion 
@@ -106,7 +108,6 @@ namespace BKI_QLHT
         {
             if (!check_validate()) return;
             if (!check_chiet_khau()) { BaseMessages.MsgBox_Error("Bạn chỉ được nhập số"); m_txt_chiet_khau.Focus(); return; }
-            if (!check_ma_nhom()) { BaseMessages.MsgBox_Error("Mã nhóm đã tồn tại"); m_txt_ma_nhom.Focus(); return; }
             m_form_to_us_obj();
             try
             {
@@ -114,6 +115,7 @@ namespace BKI_QLHT
                 switch (m_e_form_mode)
                 {
                     case DataEntryFormMode.InsertDataState:
+                        if (!check_ma_nhom()) { BaseMessages.MsgBox_Error("Mã nhóm đã tồn tại"); m_txt_ma_nhom.Focus(); return; }
                         m_us_dm_nhom_khach_hang.Insert();
                         break;
                     case DataEntryFormMode.UpdateDataState:
