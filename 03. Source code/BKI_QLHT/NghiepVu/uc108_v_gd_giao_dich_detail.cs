@@ -159,6 +159,7 @@ namespace BKI_QLHT.NghiepVu
 
         private decimal quy_doi_doi_don_vi_tinh(decimal ip_id_thuoc)
         {
+            //lay id_don_vi_tinh trong bang so du là don vi tinh nho nhat
             US_GD_SO_DU v_us = new US_GD_SO_DU();
             DS_GD_SO_DU v_ds = new DS_GD_SO_DU();
             v_us.FillDataset(v_ds,"where id_thuoc ="+ip_id_thuoc);
@@ -403,6 +404,11 @@ namespace BKI_QLHT.NghiepVu
         }
         private bool check_so_luong_va_so_du()
         {
+            QuyDoiDVT q = new QuyDoiDVT();
+            decimal so_luong_ban_dvtmin;
+            decimal id_don_vi_tinh_thuoc_min;
+            id_don_vi_tinh_thuoc_min = quy_doi_doi_don_vi_tinh(txt_search_thuoc1.dcID);
+            so_luong_ban_dvtmin = q.QuyDoi(Convert.ToDecimal(m_txt_so_luong.Text), CIPConvert.ToDecimal(m_cbo_don_vi_tinh.SelectedValue), txt_search_thuoc1.dcID);
             if (!check_validate()) return false;
             US_GD_SO_DU v_us = new US_GD_SO_DU();
             DS_GD_SO_DU v_ds = new DS_GD_SO_DU();
@@ -410,7 +416,7 @@ namespace BKI_QLHT.NghiepVu
             if (v_ds.Tables[0].Rows.Count > 0)
             {
                 DataRow v_dr = v_ds.Tables[0].Rows[0];
-                if (CIPConvert.ToDecimal(m_txt_so_luong.Text) > CIPConvert.ToDecimal(v_dr["SO_DU"]))
+                if (so_luong_ban_dvtmin > CIPConvert.ToDecimal(v_dr["SO_DU"]))
                 {
                     DialogResult result = MessageBox.Show("Số lượng vừa nhập vượt số dư trong kho. Bạn có muốn bán hết số dư không?",
                    "Thông báo",
@@ -419,6 +425,7 @@ namespace BKI_QLHT.NghiepVu
                     if (result == DialogResult.Yes)
                     {
                         m_txt_so_luong.Text = v_dr["SO_DU"].ToString();
+                        m_cbo_don_vi_tinh.Text = get_ten_don_vi_tinh_min(id_don_vi_tinh_thuoc_min);
                         return true;
                     }
                     if (result == DialogResult.No)
@@ -439,6 +446,15 @@ namespace BKI_QLHT.NghiepVu
                 BaseMessages.MsgBox_Error("Chưa nhập đủ dữ liệu cho loại thuốc này!");
                 return false;
             }
+        }
+
+        private string get_ten_don_vi_tinh_min(decimal ip_id_don_vi_tinh_min)
+        {
+            US_GD_DON_VI_TINH_THUOC v_us = new US_GD_DON_VI_TINH_THUOC();
+            DS_GD_DON_VI_TINH_THUOC v_ds = new DS_GD_DON_VI_TINH_THUOC();
+            v_us.FillDataset(v_ds,"where id ="+ip_id_don_vi_tinh_min);
+            DataRow v_dr = v_ds.Tables[0].Rows[0];
+            return v_dr["TEN_DON_VI"].ToString();
         }
         private bool check_validate()
         {
@@ -973,9 +989,6 @@ namespace BKI_QLHT.NghiepVu
             }
         }
 
-     
-        #endregion
-
         private void m_grv_quan_ly_ban_thuoc_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             try
@@ -1033,45 +1046,13 @@ namespace BKI_QLHT.NghiepVu
 
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-           
+
         }
-
-
-        //private void m_grv_quan_ly_ban_thuoc_MouseClick(object sender, MouseEventArgs e)
-        //{
-        //    txt_search_thuoc1.Text1 = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[1].Value.ToString();
-        //    m_txt_so_luong.Text = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[2].Value.ToString();
-        //    m_cbo_don_vi_tinh.Text = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value.ToString();
-        //    m_txt_don_gia.Text = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value.ToString();   
-        //}
-
-        //private void m_grv_quan_ly_ban_thuoc_SelectionChanged(object sender, EventArgs e)
-        //{
-        //  m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[1].Value = txt_search_thuoc1.Text1;
-        //  m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[2].Value = m_txt_so_luong.Text;
-        //  m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[3].Value = m_cbo_don_vi_tinh.Text;
-        //  m_grv_quan_ly_ban_thuoc.SelectedRows[0].Cells[4].Value = m_txt_don_gia.Text;
-        //}
-       
-
-        
-
      
+        #endregion
 
-        //private void m_cbo_don_vi_tinh_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    try
-        //    {
-        //        if (e.KeyData == Keys.Enter)
-        //            load_cbo_don_vi_tinh();
-        //            load_don_gia();
-        //    }
-        //    catch (Exception v_e)
-        //    {
+   
 
-        //        CSystemLog_301.ExceptionHandle(v_e);
-        //    }
-        //}
 
      }
 
