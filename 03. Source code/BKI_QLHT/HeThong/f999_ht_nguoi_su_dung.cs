@@ -233,7 +233,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_pnl_control);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "f999_ht_nguoi_su_dung";
-            this.Text = "F999 - Danh sách người sử dụng";
+            this.Text = "Hệ thống - F999 Danh sách người sử dụng";
             this.Load += new System.EventHandler(this.f999_ht_nguoi_su_dung_Load);
             this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
