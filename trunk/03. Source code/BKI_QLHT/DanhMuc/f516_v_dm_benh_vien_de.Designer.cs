@@ -207,7 +207,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "f516_v_dm_benh_vien_de";
-            this.Text = "f526_v_dm_benh_vien_de";
+            this.Text = "F516-Cập nhật thông tin bệnh viện";
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

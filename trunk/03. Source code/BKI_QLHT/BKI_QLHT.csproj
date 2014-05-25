@@ -261,21 +261,6 @@
     <Compile Include="DanhMuc\f100_v_dm_bac_sy_de.Designer.cs">
       <DependentUpon>f100_v_dm_bac_sy_de.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f100_V_DM_BAC_SY.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f101_dm_nhom_khach_hang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f102_V_DM_DON_VI_TINH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f102_v_dm_don_vi_tinh_de.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\f102_v_dm_don_vi_tinh_de.Designer.cs">
-      <DependentUpon>f102_v_dm_don_vi_tinh_de.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhMuc\f106_dm_don_vi_kinh_doanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,17 +282,11 @@
     <Compile Include="DanhMuc\f406_v_dm_nsx.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DanhMuc\f500_dm_danh_muc_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DanhMuc\f501_dm_danh_muc_thuoc_DE.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\f501_dm_danh_muc_thuoc_DE.Designer.cs">
       <DependentUpon>f501_dm_danh_muc_thuoc_DE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\f502_v_dm_thuoc.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\f503_v_dm_thuoc_de.cs">
       <SubType>Form</SubType>
@@ -315,17 +294,11 @@
     <Compile Include="DanhMuc\f503_v_dm_thuoc_de.Designer.cs">
       <DependentUpon>f503_v_dm_thuoc_de.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f504_v_dm_nhom_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DanhMuc\f505_v_dm_nhom_thuoc_de.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\f505_v_dm_nhom_thuoc_de.Designer.cs">
       <DependentUpon>f505_v_dm_nhom_thuoc_de.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\f515_v_dm_benh_vien.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\f516_v_dm_benh_vien_de.cs">
       <SubType>Form</SubType>
@@ -333,17 +306,11 @@
     <Compile Include="DanhMuc\f516_v_dm_benh_vien_de.Designer.cs">
       <DependentUpon>f516_v_dm_benh_vien_de.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanhMuc\f800_dm_nha_cung_cap.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DanhMuc\f800_dm_nha_cung_cap_DE.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\f800_dm_nha_cung_cap_DE.Designer.cs">
       <DependentUpon>f800_dm_nha_cung_cap_DE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\f801_dm_khach_hang.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\f801_dm_khach_hang_DE.cs">
       <SubType>Form</SubType>
@@ -356,12 +323,6 @@
     </Compile>
     <Compile Include="DanhMuc\f806_dm_nha_san_xuat_DE.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\txt_search_thuoc.cs">
       <SubType>UserControl</SubType>
@@ -422,12 +383,6 @@
     </Compile>
     <Compile Include="DanhMuc\uc806_dm_nha_san_xuat.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\uc_102_dm_don_vi_tinh.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\uc_102_dm_don_vi_tinh.Designer.cs">
-      <DependentUpon>uc_102_dm_don_vi_tinh.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\uc_800_dm_nha_cung_cap.cs">
       <SubType>UserControl</SubType>
@@ -734,18 +689,6 @@
     <EmbeddedResource Include="DanhMuc\f100_v_dm_bac_sy_de.resx">
       <DependentUpon>f100_v_dm_bac_sy_de.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f100_V_DM_BAC_SY.resx">
-      <DependentUpon>f100_V_DM_BAC_SY.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f101_dm_nhom_khach_hang.resx">
-      <DependentUpon>f101_dm_nhom_khach_hang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f102_V_DM_DON_VI_TINH.resx">
-      <DependentUpon>f102_V_DM_DON_VI_TINH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f102_v_dm_don_vi_tinh_de.resx">
-      <DependentUpon>f102_v_dm_don_vi_tinh_de.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f106_dm_don_vi_kinh_doanh.resx">
       <DependentUpon>f106_dm_don_vi_kinh_doanh.cs</DependentUpon>
     </EmbeddedResource>
@@ -761,38 +704,20 @@
     <EmbeddedResource Include="DanhMuc\f406_v_dm_nsx.resx">
       <DependentUpon>f406_v_dm_nsx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f500_dm_danh_muc_thuoc.resx">
-      <DependentUpon>f500_dm_danh_muc_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f501_dm_danh_muc_thuoc_DE.resx">
       <DependentUpon>f501_dm_danh_muc_thuoc_DE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f502_v_dm_thuoc.resx">
-      <DependentUpon>f502_v_dm_thuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f503_v_dm_thuoc_de.resx">
       <DependentUpon>f503_v_dm_thuoc_de.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f504_v_dm_nhom_thuoc.resx">
-      <DependentUpon>f504_v_dm_nhom_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f505_v_dm_nhom_thuoc_de.resx">
       <DependentUpon>f505_v_dm_nhom_thuoc_de.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f515_v_dm_benh_vien.resx">
-      <DependentUpon>f515_v_dm_benh_vien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f516_v_dm_benh_vien_de.resx">
       <DependentUpon>f516_v_dm_benh_vien_de.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f800_dm_nha_cung_cap.resx">
-      <DependentUpon>f800_dm_nha_cung_cap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f800_dm_nha_cung_cap_DE.resx">
       <DependentUpon>f800_dm_nha_cung_cap_DE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\f801_dm_khach_hang.resx">
-      <DependentUpon>f801_dm_khach_hang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f801_dm_khach_hang_DE.resx">
       <DependentUpon>f801_dm_khach_hang_DE.cs</DependentUpon>
@@ -802,9 +727,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f806_dm_nha_san_xuat_DE.resx">
       <DependentUpon>f806_dm_nha_san_xuat_DE.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\test.resx">
-      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\txt_search_thuoc.resx">
       <DependentUpon>txt_search_thuoc.cs</DependentUpon>
@@ -838,9 +760,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc806_dm_nha_san_xuat.resx">
       <DependentUpon>uc806_dm_nha_san_xuat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DanhMuc\uc_102_dm_don_vi_tinh.resx">
-      <DependentUpon>uc_102_dm_don_vi_tinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\uc_800_dm_nha_cung_cap.resx">
       <DependentUpon>uc_800_dm_nha_cung_cap.cs</DependentUpon>

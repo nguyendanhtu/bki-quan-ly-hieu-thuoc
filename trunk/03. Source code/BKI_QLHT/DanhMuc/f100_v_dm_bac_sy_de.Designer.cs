@@ -220,7 +220,7 @@
             this.Controls.Add(this.label1);
             this.Name = "f100_v_dm_bac_sy_de";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "_100_v_dm_bac_sy_de";
+            this.Text = "F100-Cập nhật thông tin bác sỹ";
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

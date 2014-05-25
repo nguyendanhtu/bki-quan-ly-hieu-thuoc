@@ -419,18 +419,18 @@ namespace BKI_QLHT
             }
         }
 
-        private void m_cmd_dm_don_vi_tinh_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f102_V_DM_DON_VI_TINH v_frm = new f102_V_DM_DON_VI_TINH();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //private void m_cmd_dm_don_vi_tinh_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        f102_V_DM_DON_VI_TINH v_frm = new f102_V_DM_DON_VI_TINH();
+        //        v_frm.ShowDialog();
+        //    }
+        //    catch (System.Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
         private void m_cmd_dm_don_vi_Click(object sender, EventArgs e)
         {

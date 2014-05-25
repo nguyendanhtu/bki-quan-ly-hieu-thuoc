@@ -188,7 +188,7 @@
             this.Controls.Add(this.label2);
             this.Name = "f800_dm_nha_cung_cap_DE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thông tin nhà cung cấp";
+            this.Text = "F800-Cập nhật thông tin nhà cung cấp";
             this.Enter += new System.EventHandler(this.m_cmd_save_Click_1);
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
