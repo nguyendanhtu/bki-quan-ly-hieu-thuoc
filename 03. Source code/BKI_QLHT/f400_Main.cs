@@ -220,11 +220,11 @@ namespace BKI_QLHT
             v_frm.Show();
         }
 
-        private void m_cmd_item_phan_quyen_chi_tiet_Click(object sender, EventArgs e)
-        {
-            f994_phan_quyen_detail v_frm = new f994_phan_quyen_detail();
-            v_frm.ShowDialog();
-        }
+        //private void m_cmd_item_phan_quyen_chi_tiet_Click(object sender, EventArgs e)
+        //{
+        //    f994_phan_quyen_detail v_frm = new f994_phan_quyen_detail();
+        //    v_frm.ShowDialog();
+        //}
 
         private void m_cmd_item_nguoi_su_dung_Click(object sender, EventArgs e)
         {
@@ -251,48 +251,48 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-        private void m_cmd_item_nhat_ki_he_thong_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                test v_frm = new test();
-                //f1000_phan_quyen_tong_hop v_frm = new f1000_phan_quyen_tong_hop();
-                //f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung v_frm = new f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //private void m_cmd_item_nhat_ki_he_thong_Click(object sender, EventArgs e)
+        //{
+        //   try
+        //   {
+        //       //test v_frm = new test();
+        //       //f1000_phan_quyen_tong_hop v_frm = new f1000_phan_quyen_tong_hop();
+        //       f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung v_frm = new f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung();
+        //       v_frm.ShowDialog();
+        //   }
+        //   catch (System.Exception v_e)
+        //   {
+        //    CSystemLog_301.ExceptionHandle(v_e);
+        //   }
+        //}
 
-        private void m_cmd_item_phan_quyen_cho_nhom_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f995_ht_phan_quyen_cho_nhom frm = new f995_ht_phan_quyen_cho_nhom();
-                frm.ShowDialog();
-            }
-            catch (System.Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
+        //private void m_cmd_item_phan_quyen_cho_nhom_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        f995_ht_phan_quyen_cho_nhom frm = new f995_ht_phan_quyen_cho_nhom();
+        //        frm.ShowDialog();
+        //    }
+        //    catch (System.Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
 
-        }
+        //}
 
-        private void m_cmd_item_tu_dien_he_thong_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                IP.Core.IPSystemAdmin.f100_TuDien v_frm = new f100_TuDien();
-                v_frm.ShowDialog();
+        //private void m_cmd_item_tu_dien_he_thong_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        IP.Core.IPSystemAdmin.f100_TuDien v_frm = new f100_TuDien();
+        //        v_frm.ShowDialog();
 
-            }
-            catch (System.Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //    }
+        //    catch (System.Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
         private void m_cmd_item_thoat_Click(object sender, EventArgs e)
         {
@@ -498,441 +498,6 @@ namespace BKI_QLHT
             }
         }
 
-
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            try
-            {
-                f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc v_frm = new f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                f409_bao_cao_danh_muc_thuoc_theo_hsx v_frm = new f409_bao_cao_danh_muc_thuoc_theo_hsx();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f410_bao_cao_danh_muc_thuoc_theo_ncc v_frm = new f410_bao_cao_danh_muc_thuoc_theo_ncc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f411_bao_cao_danh_muc_thuoc_theo_nsx v_frm = new f411_bao_cao_danh_muc_thuoc_theo_nsx();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f413_v_bao_cao_danh_muc_bac_sy v_frm = new f413_v_bao_cao_danh_muc_bac_sy();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f414_bao_cao_danh_muc_khach_hang v_frm = new f414_bao_cao_danh_muc_khach_hang();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f412_bao_cao_kiem_ke_kho v_frm = new f412_bao_cao_kiem_ke_kho();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f402_bao_cao_doanh_thu_theo_cac_bac_sy v_frm = new f402_bao_cao_doanh_thu_theo_cac_bac_sy();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f403_bao_cao_doanh_thu_theo_cac_ncc v_frm = new f403_bao_cao_doanh_thu_theo_cac_ncc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void m_cmd_item_bang_gia_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                m_Panel_Content.Controls.Clear();
-                uc803_bang_gia uc_frm = new uc803_bang_gia();
-                uc_frm.Dock = System.Windows.Forms.DockStyle.Fill;
-                m_Panel_Content.Controls.Add(uc_frm);
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f404_bcdt_theo_cac_ncc_n_nhom_thuoc v_frm = new f404_bcdt_theo_cac_ncc_n_nhom_thuoc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f405_bcdt_theo_cac_ngay v_frm = new f405_bcdt_theo_cac_ngay();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f406_bcdt_theo_cac_ngay_n_khach_hang v_frm = new f406_bcdt_theo_cac_ngay_n_khach_hang();
-                v_frm.ShowDialog();
-
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f407_bcdt_theo_ngay_n_nhan_vien v_frm = new f407_bcdt_theo_ngay_n_nhan_vien();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f415_bcdt_theo_cac_ngay_n_nhom_thuoc v_frm = new f415_bcdt_theo_cac_ngay_n_nhom_thuoc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f416_bcdt_theo_cac_nhan_vien v_frm = new f416_bcdt_theo_cac_nhan_vien();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f417_bcdt_theo_cac_nhan_vien_n_ten_thuoc v_frm = new f417_bcdt_theo_cac_nhan_vien_n_ten_thuoc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f418_bcdt_theo_cac_nhom_khach_hang v_frm = new f418_bcdt_theo_cac_nhom_khach_hang();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f419_bcdt_theo_cac_nhom_thuoc v_frm = new f419_bcdt_theo_cac_nhom_thuoc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button19_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f420_bcdt_theo_cac_nhom_thuoc_n_ten_thuoc v_frm = new f420_bcdt_theo_cac_nhom_thuoc_n_ten_thuoc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button20_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f421_bc_ban_thuoc v_frm = new f421_bc_ban_thuoc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button21_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f422_bcnt_tong_hop v_frm = new f422_bcnt_tong_hop();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button22_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f423_bcnt_theo_cac_nv_va_ngay v_frm = new f423_bcnt_theo_cac_nv_va_ngay();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button23_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f424_bcnt_theo_cac_hsx v_frm = new f424_bcnt_theo_cac_hsx();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button24_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f425_bcnt_theo_cac_HSX_de v_frm = new f425_bcnt_theo_cac_HSX_de();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button25_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f426_bcnt_theo_cac_ncc v_frm = new f426_bcnt_theo_cac_ncc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button26_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f427_bcnt_theo_cac_ncc_de v_frm = new f427_bcnt_theo_cac_ncc_de();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button27_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f428_bcnt_theo_cac_ngay v_frm = new f428_bcnt_theo_cac_ngay();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button28_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f429_bcnt_cac_ngay_va_HSX v_frm = new f429_bcnt_cac_ngay_va_HSX();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button29_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f430_bcnt_theo_cac_ngay_va_ncc v_frm = new f430_bcnt_theo_cac_ngay_va_ncc();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button30_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f431_bcnt_theo_cac_ngay_va_nsx v_frm = new f431_bcnt_theo_cac_ngay_va_nsx();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button31_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f432_bcnt_theo_cac_nsx v_frm = new f432_bcnt_theo_cac_nsx();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
-        private void button32_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f432_bcnt_theo_cac_nsx_de v_frm = new f432_bcnt_theo_cac_nsx_de();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
-
         private void f400_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn cập nhật thống kê không?",
@@ -951,18 +516,6 @@ namespace BKI_QLHT
             }
         }
 
-        private void button33_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f440_bcnt_theo_gia v_frm = new f440_bcnt_theo_gia();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-        }
 
         private void m_cmd_don_vi_kinh_doanh_Click(object sender, EventArgs e)
         {
