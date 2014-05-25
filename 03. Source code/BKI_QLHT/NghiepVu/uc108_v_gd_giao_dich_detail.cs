@@ -56,7 +56,7 @@ namespace BKI_QLHT.NghiepVu
         }
         public String gen_Ma_GD()
         {
-            string username = System.IO.File.ReadAllText(@"..\user_login.txt");
+            string username = CAppContext_201.getCurrentUserName();
             string ydate = DateTime.Now.Year.ToString();
             string mdate = DateTime.Now.Month.ToString();
             string ddate = DateTime.Now.Day.ToString();
