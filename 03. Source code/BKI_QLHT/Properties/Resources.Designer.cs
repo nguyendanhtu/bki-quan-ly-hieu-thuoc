@@ -73,5 +73,19 @@ namespace BKI_QLHT.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap grp23DDDD251 {
+            get {
+                object obj = ResourceManager.GetObject("grp23DDDD251", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap grpD23251 {
+            get {
+                object obj = ResourceManager.GetObject("grpD23251", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
