@@ -147,10 +147,10 @@ namespace BKI_QLHT
             this.m_ribbonControl_Main.CaptionVisible = true;
             this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel2);
             this.m_ribbonControl_Main.Controls.Add(this.m_menu_item_theo_bac_sy);
+            this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel1);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_nghiepvu);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_hethong);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_baocao);
-            this.m_ribbonControl_Main.Controls.Add(this.ribbonPanel1);
             this.m_ribbonControl_Main.Controls.Add(this.m_ribbonPanel_danhmuc);
             this.m_ribbonControl_Main.Dock = System.Windows.Forms.DockStyle.Top;
             this.m_ribbonControl_Main.ForeColor = System.Drawing.Color.Black;
@@ -231,7 +231,7 @@ namespace BKI_QLHT
             this.m_cmd_thong_tin_lien_he});
             this.m_menu_item_thong_tin_lien_he.Location = new System.Drawing.Point(110, 0);
             this.m_menu_item_thong_tin_lien_he.Name = "m_menu_item_thong_tin_lien_he";
-            this.m_menu_item_thong_tin_lien_he.Size = new System.Drawing.Size(113, 103);
+            this.m_menu_item_thong_tin_lien_he.Size = new System.Drawing.Size(101, 103);
             this.m_menu_item_thong_tin_lien_he.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_thong_tin_lien_he.TabIndex = 1;
             this.m_menu_item_thong_tin_lien_he.Text = "Thông tin liên hệ";
@@ -246,9 +246,9 @@ namespace BKI_QLHT
             // 
             // m_cmd_thong_tin_lien_he
             // 
+            this.m_cmd_thong_tin_lien_he.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_thong_tin_lien_he.Image")));
             this.m_cmd_thong_tin_lien_he.Name = "m_cmd_thong_tin_lien_he";
             this.m_cmd_thong_tin_lien_he.SubItemsExpandWidth = 14;
-            this.m_cmd_thong_tin_lien_he.Text = "buttonItem1";
             this.m_cmd_thong_tin_lien_he.Click += new System.EventHandler(this.m_cmd_thong_tin_lien_he_Click);
             // 
             // m_menu_item_huong_dan_su_dung
@@ -284,6 +284,7 @@ namespace BKI_QLHT
             // 
             // m_cmd_huong_dan_sd
             // 
+            this.m_cmd_huong_dan_sd.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_huong_dan_sd.Image")));
             this.m_cmd_huong_dan_sd.Name = "m_cmd_huong_dan_sd";
             this.m_cmd_huong_dan_sd.SubItemsExpandWidth = 14;
             this.m_cmd_huong_dan_sd.Text = "buttonItem1";
@@ -974,10 +975,10 @@ namespace BKI_QLHT
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonPanel1.Controls.Add(this.m_menu_item_bc_nhap_thuoc);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 49);
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(813, 80);
+            this.ribbonPanel1.Size = new System.Drawing.Size(783, 106);
             // 
             // 
             // 
@@ -1014,7 +1015,7 @@ namespace BKI_QLHT
             this.m_cmd_bc_nhap_thuoc_theo_hsx});
             this.m_menu_item_bc_nhap_thuoc.Location = new System.Drawing.Point(3, 0);
             this.m_menu_item_bc_nhap_thuoc.Name = "m_menu_item_bc_nhap_thuoc";
-            this.m_menu_item_bc_nhap_thuoc.Size = new System.Drawing.Size(424, 77);
+            this.m_menu_item_bc_nhap_thuoc.Size = new System.Drawing.Size(424, 103);
             this.m_menu_item_bc_nhap_thuoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.m_menu_item_bc_nhap_thuoc.TabIndex = 0;
             this.m_menu_item_bc_nhap_thuoc.Text = "Báo cáo nhập thuốc";
