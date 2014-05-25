@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-
+using System.Diagnostics;
 using System.Text;
 using System.Windows.Forms;
 using BKI_QLHT;
@@ -1021,6 +1021,20 @@ namespace BKI_QLHT
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_huong_dan_sd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process pro;
+                pro = Process.Start("01. Documents\\Tài liệu hướng dẫn sử dụng phần mềm.doc");// Path đường dẫn ứng dụng(Word chẳng hạn)
+                pro.WaitForExit();
+            }
+            catch
+            {
+                MessageBox.Show("ko tìm thấy đường dẫn ứng dụng");
             }
         }
 
