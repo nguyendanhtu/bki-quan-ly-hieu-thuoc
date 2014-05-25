@@ -57,10 +57,10 @@
     public class V_BC_NHAP_THUOC_TEN_THUOC_N_NCC
     {
         public const string TEN_THUOC = "TEN_THUOC";
-        public const string TEN_NCC = "TEN_NCC";
-        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
-        public const string GIA_NHAP = "GIA_NHAP";
         public const string DON_VI_TINH = "DON_VI_TINH";
+        public const string TEN_NCC = "TEN_NCC";
+        public const string GIA_NHAP = "GIA_NHAP";
+        public const string NGAY_GIAO_DICH = "NGAY_GIAO_DICH";
     }
 
     public class V_BC_DOANH_THU_NCC
