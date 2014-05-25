@@ -34,6 +34,7 @@ namespace BKI_QLHT
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             set_define_events();
+            this.Text = "F521_Thông tin liên hệ";
         }
 
         private void set_define_events()
