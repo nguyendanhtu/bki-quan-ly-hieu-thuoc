@@ -483,7 +483,14 @@ namespace BKI_QLHT
                 m_v_us.FillDatasetSearch(m_v_ds, "", v_dat_ngay_bd, v_dat_ngay_kt);
             else
                 m_v_us.FillDatasetSearch(m_v_ds, m_txt_tim_kiem.Text.Trim(), v_dat_ngay_bd, v_dat_ngay_kt);
-            
+            decimal v_dc_tong_doanh_thu = 0;
+            //m_v_us.get_tong_doanh_thu(v_dc_tong_doanh_thu);
+            for (int i = 0; i < m_v_ds._V_BC_XUAT.Count; i++)
+            {
+                v_dc_tong_doanh_thu += CIPConvert.ToDecimal(m_v_ds.Tables[0].Rows[i][BKI_QLHT.DS.CDBNames
+                .V_BC_DOANH_THU_NT_TEN_THUOC.DOANH_THU]);
+            }
+            m_lbl_doanh_thu.Text = CIPConvert.ToStr(v_dc_tong_doanh_thu, "#,###.##") + "   VNĐ";
             //m_v_us.FillDataset(m_v_ds);
             var v_str_search = m_txt_tim_kiem.Text.Trim();
             if (v_str_search.Equals(m_str_tim_kiem))
