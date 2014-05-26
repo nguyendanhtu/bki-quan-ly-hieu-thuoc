@@ -230,6 +230,9 @@
     <Compile Include="BaoCao\f455_bcnt_ncc_de.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f457_bcnt_ten_thuoc_va_nha_cung_cap_max.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BaoCao\f458_bcnt_ten_thuoc_va_nha_cung_cap_min.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -688,6 +691,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f455_bcnt_ncc_de.resx">
       <DependentUpon>f455_bcnt_ncc_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f457_bcnt_ten_thuoc_va_nha_cung_cap_max.resx">
+      <DependentUpon>f457_bcnt_ten_thuoc_va_nha_cung_cap_max.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f458_bcnt_ten_thuoc_va_nha_cung_cap_min.resx">
       <DependentUpon>f458_bcnt_ten_thuoc_va_nha_cung_cap_min.cs</DependentUpon>
