@@ -101,6 +101,7 @@
     <Compile Include="US_V_BC_DOANH_THU_NGAY_NT.cs" />
     <Compile Include="US_V_BC_DOANH_THU_NGAY_NV.cs" />
     <Compile Include="US_V_BC_DOANH_THU_NGAY_NV_DE.cs" />
+    <Compile Include="US_V_BC_DOANH_THU_NHOM_KH.cs" />
     <Compile Include="US_V_BC_DOANH_THU_NT_TEN_THUOC.cs" />
     <Compile Include="US_V_BC_DOANH_THU_NV.cs" />
     <Compile Include="US_V_BC_DOANH_THU_THEO_CAC_BAC_SY.cs" />
