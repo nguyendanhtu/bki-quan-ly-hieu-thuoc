@@ -111,7 +111,7 @@ public class US_V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN : US_Object
 #region "Init Functions"
     public void FillDatasetSearch(BKI_QLHT.DS.V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN op_ds_bc_da, string i_str_tu_khoa, DateTime i_dat_ngay_bd, DateTime i_dat_ngay_kt)
     {
-        CStoredProc v_sp = new CStoredProc("pr_V_BC_NHAP_THUOC_NCC_search");
+        CStoredProc v_sp = new CStoredProc("pr_V_BC_NHAP_THUOC_NGAY_N_NHAN_VIEN_search");
         v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_tu_khoa);
         v_sp.addDatetimeInputParam("@DAT_BD", i_dat_ngay_bd);
         v_sp.addDatetimeInputParam("@DAT_KT", i_dat_ngay_kt);
