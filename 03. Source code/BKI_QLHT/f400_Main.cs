@@ -1192,18 +1192,5 @@ namespace BKI_QLHT
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
-        private void m_cmd_bc_danh_thuoc_theo_nhom_thuoc_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f407_bcdt_theo_ngay_n_nhan_vien v_frm = new f407_bcdt_theo_ngay_n_nhan_vien();
-                v_frm.ShowDialog();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
     }
 }
