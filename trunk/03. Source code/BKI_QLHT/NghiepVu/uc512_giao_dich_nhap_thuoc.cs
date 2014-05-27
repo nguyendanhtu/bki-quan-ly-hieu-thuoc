@@ -1294,6 +1294,8 @@ namespace BKI_QLHT
             list[m_grv_s_i].gia_ban = int.Parse(m_txt_gia_ban.Text.Replace(",", "").Replace(".", ""));
             list[m_grv_s_i].sd_so_luong = int.Parse(m_txt_so_luong.Text) * int.Parse(m_txt_quy_doi_1.Text) * int.Parse(m_txt_quy_doi_2.Text) * int.Parse(m_txt_quy_doi_3.Text);
             m_grv_nhap_thuoc.Rows[m_grv_s_i].Cells[4].Value = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia_nhap.Text.Trim().Replace(",", "").Replace(".", "")));
+            list[m_grv_s_i].ngay_sx = m_dtp_ngay_san_xuat.Value;
+            list[m_grv_s_i].han_sd = m_dtp_han_su_dung.Value;
             m_cmd_add.Visible = true;
             m_cmd_upadate.Visible = false;
             //m_txt_search_thuoc1.Visible = true;
