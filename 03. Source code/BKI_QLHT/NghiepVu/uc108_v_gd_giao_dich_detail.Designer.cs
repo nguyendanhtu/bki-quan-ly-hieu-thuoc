@@ -101,11 +101,11 @@
             this.GIA_BAN,
             this.THANH_TIEN});
             this.m_grv_quan_ly_ban_thuoc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_grv_quan_ly_ban_thuoc.Location = new System.Drawing.Point(3, 178);
+            this.m_grv_quan_ly_ban_thuoc.Location = new System.Drawing.Point(3, 177);
             this.m_grv_quan_ly_ban_thuoc.Name = "m_grv_quan_ly_ban_thuoc";
             this.m_grv_quan_ly_ban_thuoc.RowHeadersVisible = false;
             this.m_grv_quan_ly_ban_thuoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.m_grv_quan_ly_ban_thuoc.Size = new System.Drawing.Size(1505, 382);
+            this.m_grv_quan_ly_ban_thuoc.Size = new System.Drawing.Size(1505, 372);
             this.m_grv_quan_ly_ban_thuoc.TabIndex = 22;
             this.m_grv_quan_ly_ban_thuoc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.m_grv_quan_ly_ban_thuoc_MouseDoubleClick);
             // 
@@ -320,9 +320,9 @@
             this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.label15);
             this.m_group_chi_tiet_thong_tin_ban.Controls.Add(this.m_grv_quan_ly_ban_thuoc);
             this.m_group_chi_tiet_thong_tin_ban.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_group_chi_tiet_thong_tin_ban.Location = new System.Drawing.Point(0, 151);
+            this.m_group_chi_tiet_thong_tin_ban.Location = new System.Drawing.Point(0, 162);
             this.m_group_chi_tiet_thong_tin_ban.Name = "m_group_chi_tiet_thong_tin_ban";
-            this.m_group_chi_tiet_thong_tin_ban.Size = new System.Drawing.Size(1511, 563);
+            this.m_group_chi_tiet_thong_tin_ban.Size = new System.Drawing.Size(1511, 552);
             this.m_group_chi_tiet_thong_tin_ban.TabIndex = 1;
             this.m_group_chi_tiet_thong_tin_ban.TabStop = false;
             this.m_group_chi_tiet_thong_tin_ban.Text = "Chi tiết thông tin thuốc bán";
@@ -540,7 +540,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1511, 145);
+            this.panel1.Size = new System.Drawing.Size(1511, 134);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -570,7 +570,7 @@
             this.m_group_thong_tin_khach_hang.Controls.Add(this.m_lbl_dia_chi_text);
             this.m_group_thong_tin_khach_hang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_group_thong_tin_khach_hang.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_group_thong_tin_khach_hang.Location = new System.Drawing.Point(0, 49);
+            this.m_group_thong_tin_khach_hang.Location = new System.Drawing.Point(0, 38);
             this.m_group_thong_tin_khach_hang.Margin = new System.Windows.Forms.Padding(4);
             this.m_group_thong_tin_khach_hang.Name = "m_group_thong_tin_khach_hang";
             this.m_group_thong_tin_khach_hang.Padding = new System.Windows.Forms.Padding(4);
@@ -627,7 +627,7 @@
             // 
             this.m_lbl_SDT.AutoSize = true;
             this.m_lbl_SDT.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_SDT.Location = new System.Drawing.Point(418, 62);
+            this.m_lbl_SDT.Location = new System.Drawing.Point(422, 62);
             this.m_lbl_SDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.m_lbl_SDT.Name = "m_lbl_SDT";
             this.m_lbl_SDT.Size = new System.Drawing.Size(38, 16);
