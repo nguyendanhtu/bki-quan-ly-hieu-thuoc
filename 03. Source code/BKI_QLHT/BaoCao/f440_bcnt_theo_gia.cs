@@ -146,10 +146,10 @@ namespace BKI_QLHT
             this.m_pnl_control.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 443);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(704, 36);
+            this.m_pnl_control.Size = new System.Drawing.Size(731, 36);
             this.m_pnl_control.TabIndex = 19;
             // 
             // m_cmd_xuat_excel
@@ -176,7 +176,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(612, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(639, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -186,9 +186,9 @@ namespace BKI_QLHT
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 166);
+            this.m_fg.Location = new System.Drawing.Point(0, 154);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(704, 207);
+            this.m_fg.Size = new System.Drawing.Size(731, 289);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -268,7 +268,7 @@ namespace BKI_QLHT
             // m_lbl_nguoi_lam_bc
             // 
             this.m_lbl_nguoi_lam_bc.AutoSize = true;
-            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(599, 116);
+            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(599, 112);
             this.m_lbl_nguoi_lam_bc.Name = "m_lbl_nguoi_lam_bc";
             this.m_lbl_nguoi_lam_bc.Size = new System.Drawing.Size(63, 13);
             this.m_lbl_nguoi_lam_bc.TabIndex = 2899;
@@ -277,7 +277,7 @@ namespace BKI_QLHT
             // m_lbl_ngay_lam_bc
             // 
             this.m_lbl_ngay_lam_bc.AutoSize = true;
-            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(599, 138);
+            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(599, 134);
             this.m_lbl_ngay_lam_bc.Name = "m_lbl_ngay_lam_bc";
             this.m_lbl_ngay_lam_bc.Size = new System.Drawing.Size(60, 13);
             this.m_lbl_ngay_lam_bc.TabIndex = 2898;
@@ -286,7 +286,7 @@ namespace BKI_QLHT
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(482, 138);
+            this.label3.Location = new System.Drawing.Point(482, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 2897;
@@ -295,7 +295,7 @@ namespace BKI_QLHT
             // m_lbl_nguoi_lam_bao_cao
             // 
             this.m_lbl_nguoi_lam_bao_cao.AutoSize = true;
-            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(482, 116);
+            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(482, 112);
             this.m_lbl_nguoi_lam_bao_cao.Name = "m_lbl_nguoi_lam_bao_cao";
             this.m_lbl_nguoi_lam_bao_cao.Size = new System.Drawing.Size(96, 13);
             this.m_lbl_nguoi_lam_bao_cao.TabIndex = 2896;
@@ -305,7 +305,7 @@ namespace BKI_QLHT
             // 
             this.m_lbl_count.AutoSize = true;
             this.m_lbl_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_count.Location = new System.Drawing.Point(166, 116);
+            this.m_lbl_count.Location = new System.Drawing.Point(166, 112);
             this.m_lbl_count.Name = "m_lbl_count";
             this.m_lbl_count.Size = new System.Drawing.Size(28, 13);
             this.m_lbl_count.TabIndex = 2893;
@@ -314,7 +314,7 @@ namespace BKI_QLHT
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 116);
+            this.label1.Location = new System.Drawing.Point(12, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 2892;
@@ -327,14 +327,14 @@ namespace BKI_QLHT
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(223, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(258, 23);
+            this.label4.Size = new System.Drawing.Size(279, 23);
             this.label4.TabIndex = 2900;
-            this.label4.Text = "Báo cáo nhập thuốc theo giá ";
+            this.label4.Text = "Báo cáo so sánh giá nhập thuốc";
             // 
             // f440_bcnt_theo_gia
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(704, 409);
+            this.ClientSize = new System.Drawing.Size(731, 479);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.m_lbl_nguoi_lam_bc);
             this.Controls.Add(this.m_lbl_ngay_lam_bc);
@@ -352,7 +352,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "f440_bcnt_theo_gia";
-            this.Text = "F440-Báo cáo nhập thuốc theo giá";
+            this.Text = "F440-Báo cáo so sánh giá nhập thuốc";
             this.Load += new System.EventHandler(this.f440_bcnt_theo_gia_Load);
             this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
