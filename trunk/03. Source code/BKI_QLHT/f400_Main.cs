@@ -67,7 +67,8 @@ namespace BKI_QLHT
         {
             US_V_HAN_SU_DUNG v_us = new US_V_HAN_SU_DUNG();
             DS_V_HAN_SU_DUNG v_ds = new DS_V_HAN_SU_DUNG();
-            v_us.FillDataset(v_ds, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY HAN_SD");
+            v_ds.Clear();
+            v_us.FillDataset(v_ds, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
             switch (v_ds.Tables[0].Rows.Count)
             {
                 case 0: BaseMessages.MsgBox_Infor("Không có thuốc sắp hết hạn trong 3 tháng tới"); break;
