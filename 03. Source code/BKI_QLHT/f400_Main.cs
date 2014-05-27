@@ -696,7 +696,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f442_bcdt_bac_sy v_frm = new f442_bcdt_bac_sy();
+                f441_bcdt_bac_sy_de v_frm = new f441_bcdt_bac_sy_de();
                 v_frm.ShowDialog();
             }
             catch (Exception v_e)
