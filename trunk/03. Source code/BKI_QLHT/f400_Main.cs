@@ -16,6 +16,8 @@ using BKI_QLHT.DanhMuc;
 using BKI_QLHT.NghiepVu;
 using DevComponents.DotNetBar;
 using BKI_QLHT.HeThong;
+using System.IO;
+using System.Reflection;
 
 
 
@@ -761,8 +763,12 @@ namespace BKI_QLHT
             try
             {
                 Process pro;
-                pro = Process.Start("01. Documents\\Tài liệu hướng dẫn sử dụng phần mềm.doc");// Path đường dẫn ứng dụng(Word chẳng hạn)
+                var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
+                var docpath = Path.Combine(outPutDirectory, "..\\..\\TaiLieuHuongDanSuDung.doc");
+                string path = new Uri(docpath).LocalPath;
+                pro = Process.Start(path);
                 pro.WaitForExit();
+                //  t đã làm xong rùi nhé
             }
             catch
             {

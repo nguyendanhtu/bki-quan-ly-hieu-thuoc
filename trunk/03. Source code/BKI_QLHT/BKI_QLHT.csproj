@@ -799,6 +799,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TaiLieuHuongDanSuDung.doc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BKI_QLHT.DS\BKI_QLHT.DS.csproj">
