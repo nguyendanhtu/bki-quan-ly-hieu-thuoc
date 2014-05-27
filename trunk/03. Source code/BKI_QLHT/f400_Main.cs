@@ -957,7 +957,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f402_bao_cao_doanh_thu_theo_cac_bac_sy v_frm = new f402_bao_cao_doanh_thu_theo_cac_bac_sy();
+                f442_bcdt_bac_sy v_frm = new f442_bcdt_bac_sy();
                 v_frm.ShowDialog();
             }
             catch (Exception v_e)
