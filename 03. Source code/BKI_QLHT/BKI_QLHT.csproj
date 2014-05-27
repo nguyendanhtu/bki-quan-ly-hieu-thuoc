@@ -86,27 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationControl.cs" />
-    <Compile Include="BaoCao\f401_bao_cao_doanh_thu_tong_hop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f402_bao_cao_doanh_thu_theo_cac_bac_sy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f403_bao_cao_doanh_thu_theo_cac_ncc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f404_bcdt_theo_cac_ncc_n_nhom_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f405_bcdt_theo_cac_ngay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f406_bcdt_theo_cac_ngay_n_khach_hang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f407_bcdt_theo_ngay_n_nhan_vien.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BaoCao\f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,63 +105,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaoCao\f414_bao_cao_danh_muc_khach_hang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f415_bcdt_theo_cac_ngay_n_nhom_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f416_bcdt_theo_cac_nhan_vien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f417_bcdt_theo_cac_nhan_vien_n_ten_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f418_bcdt_theo_cac_nhom_khach_hang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f419_bcdt_theo_cac_nhom_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f420_bcdt_theo_cac_nhom_thuoc_n_ten_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f421_bc_ban_thuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f422_bcnt_tong_hop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f423_bcnt_theo_cac_nv_va_ngay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f424_bcnt_theo_cac_hsx.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f425_bcnt_theo_cac_hsx_de.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f426_bcnt_theo_cac_ncc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f427_bcnt_theo_cac_ncc_de.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f428_bcnt_theo_cac_ngay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f429_bcnt_cac_ngay_va_hsx.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f430_bcnt_theo_cac_ngay_va_ncc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f431_bcnt_theo_cac_ngay_va_nsx.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f432_bcnt_theo_cac_nsx.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaoCao\f432_bcnt_theo_cac_nsx_de.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaoCao\f440_bcnt_theo_gia.cs">
@@ -551,27 +473,6 @@
       <DependentUpon>uc_f05_Image_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="WinFormControls.cs" />
-    <EmbeddedResource Include="BaoCao\f401_bao_cao_doanh_thu_tong_hop.resx">
-      <DependentUpon>f401_bao_cao_doanh_thu_tong_hop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f402_bao_cao_doanh_thu_theo_cac_bac_sy.resx">
-      <DependentUpon>f402_bao_cao_doanh_thu_theo_cac_bac_sy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f403_bao_cao_doanh_thu_theo_cac_ncc.resx">
-      <DependentUpon>f403_bao_cao_doanh_thu_theo_cac_ncc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f404_bcdt_theo_cac_ncc_n_nhom_thuoc.resx">
-      <DependentUpon>f404_bcdt_theo_cac_ncc_n_nhom_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f405_bcdt_theo_cac_ngay.resx">
-      <DependentUpon>f405_bcdt_theo_cac_ngay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f406_bcdt_theo_cac_ngay_n_khach_hang.resx">
-      <DependentUpon>f406_bcdt_theo_cac_ngay_n_khach_hang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f407_bcdt_theo_ngay_n_nhan_vien.resx">
-      <DependentUpon>f407_bcdt_theo_ngay_n_nhan_vien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.resx">
       <DependentUpon>f408_v_bao_cao_danh_muc_thuoc_theo_nhom_thuoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -592,63 +493,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f414_bao_cao_danh_muc_khach_hang.resx">
       <DependentUpon>f414_bao_cao_danh_muc_khach_hang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f415_bcdt_theo_cac_ngay_n_nhom_thuoc.resx">
-      <DependentUpon>f415_bcdt_theo_cac_ngay_n_nhom_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f416_bcdt_theo_cac_nhan_vien.resx">
-      <DependentUpon>f416_bcdt_theo_cac_nhan_vien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f417_bcdt_theo_cac_nhan_vien_n_ten_thuoc.resx">
-      <DependentUpon>f417_bcdt_theo_cac_nhan_vien_n_ten_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f418_bcdt_theo_cac_nhom_khach_hang.resx">
-      <DependentUpon>f418_bcdt_theo_cac_nhom_khach_hang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f419_bcdt_theo_cac_nhom_thuoc.resx">
-      <DependentUpon>f419_bcdt_theo_cac_nhom_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f420_bcdt_theo_cac_nhom_thuoc_n_ten_thuoc.resx">
-      <DependentUpon>f420_bcdt_theo_cac_nhom_thuoc_n_ten_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f421_bc_ban_thuoc.resx">
-      <DependentUpon>f421_bc_ban_thuoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f422_bcnt_tong_hop.resx">
-      <DependentUpon>f422_bcnt_tong_hop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f423_bcnt_theo_cac_nv_va_ngay.resx">
-      <DependentUpon>f423_bcnt_theo_cac_nv_va_ngay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f424_bcnt_theo_cac_hsx.resx">
-      <DependentUpon>f424_bcnt_theo_cac_hsx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f425_bcnt_theo_cac_hsx_de.resx">
-      <DependentUpon>f425_bcnt_theo_cac_hsx_de.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f426_bcnt_theo_cac_ncc.resx">
-      <DependentUpon>f426_bcnt_theo_cac_ncc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f427_bcnt_theo_cac_ncc_de.resx">
-      <DependentUpon>f427_bcnt_theo_cac_ncc_de.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f428_bcnt_theo_cac_ngay.resx">
-      <DependentUpon>f428_bcnt_theo_cac_ngay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f429_bcnt_cac_ngay_va_hsx.resx">
-      <DependentUpon>f429_bcnt_cac_ngay_va_hsx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f430_bcnt_theo_cac_ngay_va_ncc.resx">
-      <DependentUpon>f430_bcnt_theo_cac_ngay_va_ncc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f431_bcnt_theo_cac_ngay_va_nsx.resx">
-      <DependentUpon>f431_bcnt_theo_cac_ngay_va_nsx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f432_bcnt_theo_cac_nsx.resx">
-      <DependentUpon>f432_bcnt_theo_cac_nsx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f432_bcnt_theo_cac_nsx_de.resx">
-      <DependentUpon>f432_bcnt_theo_cac_nsx_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f440_bcnt_theo_gia.resx">
       <DependentUpon>f440_bcnt_theo_gia.cs</DependentUpon>
