@@ -967,20 +967,6 @@ namespace BKI_QLHT
             }
         }
 
-        private void m_cmd_bc_doanh_thu_theo_ncc_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                f403_bao_cao_doanh_thu_theo_cac_ncc v_frm = new f403_bao_cao_doanh_thu_theo_cac_ncc();
-                v_frm.ShowDialog();
-            }
-            catch (Exception v_e)
-            {
-
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
         private void m_cmd_thong_tin_lien_he_Click(object sender, EventArgs e)
         {
             f521_thong_tin_lien_he v_frm = new f521_thong_tin_lien_he();
@@ -1185,6 +1171,19 @@ namespace BKI_QLHT
             try
             {
                 f452_bcnt_ngay_va_nhan_vien v_frm = new f452_bcnt_ngay_va_nhan_vien();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_theo_ncc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f443_bcdt_ncc v_frm = new f443_bcdt_ncc();
                 v_frm.ShowDialog();
             }
             catch (Exception v_e)
