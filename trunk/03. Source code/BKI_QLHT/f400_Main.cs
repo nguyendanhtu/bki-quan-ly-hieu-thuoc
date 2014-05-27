@@ -279,7 +279,8 @@ namespace BKI_QLHT
         private void m_cmd_item_phan_quyen_he_thong_Click(object sender, EventArgs e)
         {
             //f993_phan_quyen_he_thong v_frm = new f993_phan_quyen_he_thong();
-            f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung v_frm = new f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung();
+            //f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung v_frm = new f901_phan_quyen_su_dung_form_cho_nhom_nguoi_su_dung();
+            F168_Phan_quyen_he_thong v_frm = new F168_Phan_quyen_he_thong();
             v_frm.ShowDialog();
         }
 
