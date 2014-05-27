@@ -1038,5 +1038,70 @@ namespace BKI_QLHT
             }
         }
 
+        private void m_cmd_bc_xuat_thuoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f450_bc_xuat v_frm = new f450_bc_xuat();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_theo_ngay_va_nv_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f445_bcdt_ngay_nhan_vien v_frm = new f445_bcdt_ngay_nhan_vien();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_theo_ngay_va_kh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f444_bcdt_ngay_khach_hang v_frm = new f444_bcdt_ngay_khach_hang();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_chi_tiet_theo_ngay_va_nv_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f447_bcdt_nhan_vien v_frm = new f447_bcdt_nhan_vien();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_theo_ngay_va_nhom_thuoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f448_bcdt_ngay_nhom_thuoc v_frm = new f448_bcdt_ngay_nhom_thuoc();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
     }     
 }
