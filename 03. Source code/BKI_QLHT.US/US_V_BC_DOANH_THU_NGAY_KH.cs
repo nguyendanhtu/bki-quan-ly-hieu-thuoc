@@ -129,6 +129,12 @@ public class US_V_BC_DOANH_THU_NGAY_KH : US_Object
 
 #endregion
 #region "Init Functions"
+    public void FillDatasetSearch(BKI_QLHT.DS.V_BC_DOANH_THU_NGAY_KH op_ds_bc_da, string i_str_tu_khoa)
+    {
+        CStoredProc v_sp = new CStoredProc("pr_V_BC_TONG_DOANH_THU_search");
+        v_sp.addNVarcharInputParam("@STR_SEARCH", i_str_tu_khoa);
+        v_sp.fillDataSetByCommand(this, op_ds_bc_da);
+    }
     public void FillDatasetSearch(BKI_QLHT.DS.V_BC_DOANH_THU_NGAY_KH op_ds_bc_da, string i_str_tu_khoa, DateTime i_dat_ngay_bd, DateTime i_dat_ngay_kt)
     {
         CStoredProc v_sp = new CStoredProc("pr_V_BC_DOANH_THU_NGAY_KH_search");
