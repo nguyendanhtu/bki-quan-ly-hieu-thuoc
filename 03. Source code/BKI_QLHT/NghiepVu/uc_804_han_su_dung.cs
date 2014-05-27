@@ -79,7 +79,7 @@ namespace BKI_QLHT
         private void load_data_2_grid()
         {
             m_ds = new DS_V_HAN_SU_DUNG();
-            m_us.FillDataset(m_ds,"where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<90 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY HAN_SD");
+            m_us.FillDataset(m_ds, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<90 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
             m_grv_han_su_dung.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_grv_han_su_dung, m_obj_trans);
             CGridUtils.MakeSoTT(0, m_grv_han_su_dung);
@@ -254,15 +254,15 @@ namespace BKI_QLHT
             DS_V_HAN_SU_DUNG v_ds_v_han_su_dung=new DS_V_HAN_SU_DUNG();
             if (m_cbo_thoi_gian.Text == "Dưới 1 tháng")
             {
-                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY HAN_SD");
+                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
             }
             if (m_cbo_thoi_gian.Text == "Từ  1 tháng đến 3 tháng")
             {
-                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90 AND SO_DU>0 ORDER BY HAN_SD");
+                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
             }
             if (m_cbo_thoi_gian.Text == "Trên 3 tháng")
             {
-                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90 AND SO_DU>0 ORDER BY HAN_SD");
+                v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
             }
             m_grv_han_su_dung.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds_v_han_su_dung, m_grv_han_su_dung, m_obj_trans);
@@ -288,15 +288,15 @@ namespace BKI_QLHT
                     DS_V_HAN_SU_DUNG v_ds_v_han_su_dung = new DS_V_HAN_SU_DUNG();
                     if (m_cbo_thoi_gian.Text == "Dưới 1 tháng")
                     {
-                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY HAN_SD");
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
                     }
                     if (m_cbo_thoi_gian.Text == "Từ  1 tháng đến 3 tháng")
                     {
-                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90 AND SO_DU>0 ORDER BY HAN_SD");
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=30 AND DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))<=90 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
                     }
                     if (m_cbo_thoi_gian.Text == "Trên 3 tháng")
                     {
-                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90 AND SO_DU>0 ORDER BY HAN_SD");
+                        v_us_v_han_su_dung.FillDataset(v_ds_v_han_su_dung, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>90 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
                     }
                     m_grv_han_su_dung.Redraw = false;
                     CGridUtils.Dataset2C1Grid(v_ds_v_han_su_dung, m_grv_han_su_dung, m_obj_trans);
