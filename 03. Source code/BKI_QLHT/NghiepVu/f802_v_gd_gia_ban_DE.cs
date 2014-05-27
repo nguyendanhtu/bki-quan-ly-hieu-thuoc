@@ -212,5 +212,21 @@ namespace BKI_QLHT
                 }
             }
         }
+
+        private void m_txt_gia_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (m_txt_gia.Text != "")
+                {
+                    m_txt_gia.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_gia.Text));
+                    m_txt_gia.SelectionStart = m_txt_gia.Text.Length + 1;
+                }
+            }
+            catch (Exception v_e)
+            {
+                BaseMessages.MsgBox_Infor("Bạn chỉ được nhập số.Vui lòng nhập lại");
+            }
+        }
     }
 }
