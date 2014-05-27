@@ -135,7 +135,7 @@ namespace BKI_QLHT
                         if (v_sub_sub_control.GetType().Name == "RibbonBar")
                         {
                             RibbonBar v_rp = (RibbonBar)v_sub_sub_control;
-                           
+
                             for (int i = 0; i < v_rp.Items.Count; i++)
                             {
 
@@ -155,7 +155,7 @@ namespace BKI_QLHT
                             }
                             if (v_dem == 0) v_rp.Visible = false;
                         }
-                      
+
                     }
                     if (v_dem == 0) v_sub_control.Visible = false;
                 }
@@ -913,6 +913,15 @@ namespace BKI_QLHT
 
         private void m_cmd_bc_nhap_thuoc_theo_ncc_Click(object sender, EventArgs e)
         {
+            try
+            {
+                f455_bcnt_ncc_de v_frm = new f455_bcnt_ncc_de();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
 
         }
 
@@ -920,7 +929,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f423_bcnt_theo_cac_nv_va_ngay v_frm = new f423_bcnt_theo_cac_nv_va_ngay();
+                f454_bcnt_nhan_vien_de v_frm = new f454_bcnt_nhan_vien_de();
                 v_frm.ShowDialog();
             }
             catch (Exception v_e)
@@ -934,7 +943,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f425_bcnt_theo_cac_HSX_de v_frm = new f425_bcnt_theo_cac_HSX_de();
+                f451_bcnt_ngay_va_hsx v_frm = new f451_bcnt_ngay_va_hsx();
                 v_frm.ShowDialog();
             }
             catch (Exception v_e)
@@ -1081,7 +1090,7 @@ namespace BKI_QLHT
         {
             try
             {
-                f447_bcdt_nhan_vien v_frm = new f447_bcdt_nhan_vien();
+                f446_bcdt_ngay_nv_de v_frm = new f446_bcdt_ngay_nv_de();
                 v_frm.ShowDialog();
             }
             catch (Exception v_e)
@@ -1103,5 +1112,98 @@ namespace BKI_QLHT
             }
         }
 
-    }     
+        private void m_cmd_bc_doanh_thu_chi_tiet_theo_nhom_thuoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f449_bcdt_nhom_thuoc_ten_thuoc v_frm = new f449_bcdt_nhom_thuoc_ten_thuoc();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_theo_nhom_kh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f460_v_bcdt_nhom_kh v_frm = new f460_v_bcdt_nhom_kh();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_doanh_thu_theo_nhan_vien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f447_bcdt_nhan_vien v_frm = new f447_bcdt_nhan_vien();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+        private void m_cmd_bc_so_sanh_nhap_ncc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f457_bcnt_ten_thuoc_va_nha_cung_cap_max v_frm = new f457_bcnt_ten_thuoc_va_nha_cung_cap_max();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+        private void m_cmd_bc_so_sanh_nhap_ncc_min_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f458_bcnt_ten_thuoc_va_nha_cung_cap_min v_frm = new f458_bcnt_ten_thuoc_va_nha_cung_cap_min();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+
+        }
+
+        private void m_cmd_bc_nhap_thuoc_theo_ngay_va_nv_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f452_bcnt_ngay_va_nhan_vien v_frm = new f452_bcnt_ngay_va_nhan_vien();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_bc_danh_thuoc_theo_nhom_thuoc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f407_bcdt_theo_ngay_n_nhan_vien v_frm = new f407_bcdt_theo_ngay_n_nhan_vien();
+                v_frm.ShowDialog();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+    }
 }
