@@ -34,7 +34,7 @@ namespace BKI_QLHT
 	public class f457_bcnt_ten_thuoc_va_nha_cung_cap_max : System.Windows.Forms.Form
 	{
 		internal System.Windows.Forms.ImageList ImageList;
-		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
+		internal System.Windows.Forms.Panel m_pnl_control;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
@@ -53,6 +53,7 @@ namespace BKI_QLHT
         private TextBox m_txt_tim_kiem;
         private Label m_lbl_doanh_thu;
         private Label label2;
+        private Label label4;
 		private System.ComponentModel.IContainer components;
 
 		public f457_bcnt_ten_thuoc_va_nha_cung_cap_max()
@@ -93,10 +94,10 @@ namespace BKI_QLHT
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f457_bcnt_ten_thuoc_va_nha_cung_cap_max));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_lbl_nguoi_lam_bc = new System.Windows.Forms.Label();
             this.m_lbl_ngay_lam_bc = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -112,7 +113,8 @@ namespace BKI_QLHT
             this.m_txt_tim_kiem = new System.Windows.Forms.TextBox();
             this.m_lbl_doanh_thu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.m_pnl_out_place_dm.SuspendLayout();
+            this.label4 = new System.Windows.Forms.Label();
+            this.m_pnl_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,16 +145,31 @@ namespace BKI_QLHT
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
-            // m_pnl_out_place_dm
+            // m_pnl_control
             // 
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
-            this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
-            this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
-            this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(686, 36);
-            this.m_pnl_out_place_dm.TabIndex = 19;
+            this.m_pnl_control.Controls.Add(this.m_cmd_xuat_excel);
+            this.m_pnl_control.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_control.Name = "m_pnl_control";
+            this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_control.Size = new System.Drawing.Size(686, 36);
+            this.m_pnl_control.TabIndex = 19;
+            // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(115, 28);
+            this.m_cmd_xuat_excel.TabIndex = 50;
+            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
             // 
             // m_cmd_exit
             // 
@@ -173,31 +190,16 @@ namespace BKI_QLHT
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_fg.Location = new System.Drawing.Point(0, 136);
+            this.m_fg.Location = new System.Drawing.Point(0, 163);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 237);
+            this.m_fg.Size = new System.Drawing.Size(686, 210);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
-            // 
-            // m_cmd_xuat_excel
-            // 
-            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xuat_excel.ImageIndex = 19;
-            this.m_cmd_xuat_excel.ImageList = this.ImageList;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(115, 28);
-            this.m_cmd_xuat_excel.TabIndex = 50;
-            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
             // 
             // m_lbl_nguoi_lam_bc
             // 
             this.m_lbl_nguoi_lam_bc.AutoSize = true;
-            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(601, 88);
+            this.m_lbl_nguoi_lam_bc.Location = new System.Drawing.Point(594, 113);
             this.m_lbl_nguoi_lam_bc.Name = "m_lbl_nguoi_lam_bc";
             this.m_lbl_nguoi_lam_bc.Size = new System.Drawing.Size(63, 13);
             this.m_lbl_nguoi_lam_bc.TabIndex = 3088;
@@ -206,7 +208,7 @@ namespace BKI_QLHT
             // m_lbl_ngay_lam_bc
             // 
             this.m_lbl_ngay_lam_bc.AutoSize = true;
-            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(601, 110);
+            this.m_lbl_ngay_lam_bc.Location = new System.Drawing.Point(594, 135);
             this.m_lbl_ngay_lam_bc.Name = "m_lbl_ngay_lam_bc";
             this.m_lbl_ngay_lam_bc.Size = new System.Drawing.Size(60, 13);
             this.m_lbl_ngay_lam_bc.TabIndex = 3087;
@@ -215,7 +217,7 @@ namespace BKI_QLHT
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(484, 110);
+            this.label3.Location = new System.Drawing.Point(477, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 3086;
@@ -224,7 +226,7 @@ namespace BKI_QLHT
             // m_lbl_nguoi_lam_bao_cao
             // 
             this.m_lbl_nguoi_lam_bao_cao.AutoSize = true;
-            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(484, 88);
+            this.m_lbl_nguoi_lam_bao_cao.Location = new System.Drawing.Point(477, 113);
             this.m_lbl_nguoi_lam_bao_cao.Name = "m_lbl_nguoi_lam_bao_cao";
             this.m_lbl_nguoi_lam_bao_cao.Size = new System.Drawing.Size(96, 13);
             this.m_lbl_nguoi_lam_bao_cao.TabIndex = 3085;
@@ -234,7 +236,7 @@ namespace BKI_QLHT
             // 
             this.m_lbl_count.AutoSize = true;
             this.m_lbl_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_count.Location = new System.Drawing.Point(168, 88);
+            this.m_lbl_count.Location = new System.Drawing.Point(168, 113);
             this.m_lbl_count.Name = "m_lbl_count";
             this.m_lbl_count.Size = new System.Drawing.Size(28, 13);
             this.m_lbl_count.TabIndex = 3084;
@@ -243,7 +245,7 @@ namespace BKI_QLHT
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 88);
+            this.label1.Location = new System.Drawing.Point(14, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 3083;
@@ -252,7 +254,7 @@ namespace BKI_QLHT
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(377, 57);
+            this.label7.Location = new System.Drawing.Point(377, 82);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 3082;
@@ -263,7 +265,7 @@ namespace BKI_QLHT
             this.m_dat_den_ngay.Checked = false;
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(447, 51);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(447, 76);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.ShowCheckBox = true;
             this.m_dat_den_ngay.Size = new System.Drawing.Size(106, 20);
@@ -274,7 +276,7 @@ namespace BKI_QLHT
             this.m_dat_tu_ngay.Checked = false;
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(152, 51);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(152, 76);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.ShowCheckBox = true;
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(106, 20);
@@ -283,7 +285,7 @@ namespace BKI_QLHT
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(74, 57);
+            this.label6.Location = new System.Drawing.Point(74, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 3079;
@@ -292,7 +294,7 @@ namespace BKI_QLHT
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(74, 23);
+            this.label5.Location = new System.Drawing.Point(74, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 3078;
@@ -306,7 +308,7 @@ namespace BKI_QLHT
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 18;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(573, 15);
+            this.m_cmd_search.Location = new System.Drawing.Point(573, 40);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 3077;
@@ -317,7 +319,7 @@ namespace BKI_QLHT
             this.m_txt_tim_kiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.m_txt_tim_kiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.m_txt_tim_kiem.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.m_txt_tim_kiem.Location = new System.Drawing.Point(152, 20);
+            this.m_txt_tim_kiem.Location = new System.Drawing.Point(152, 45);
             this.m_txt_tim_kiem.Name = "m_txt_tim_kiem";
             this.m_txt_tim_kiem.Size = new System.Drawing.Size(401, 20);
             this.m_txt_tim_kiem.TabIndex = 3076;
@@ -326,7 +328,7 @@ namespace BKI_QLHT
             // 
             this.m_lbl_doanh_thu.AutoSize = true;
             this.m_lbl_doanh_thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_doanh_thu.Location = new System.Drawing.Point(168, 110);
+            this.m_lbl_doanh_thu.Location = new System.Drawing.Point(168, 135);
             this.m_lbl_doanh_thu.Name = "m_lbl_doanh_thu";
             this.m_lbl_doanh_thu.Size = new System.Drawing.Size(28, 13);
             this.m_lbl_doanh_thu.TabIndex = 3090;
@@ -336,17 +338,29 @@ namespace BKI_QLHT
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 110);
+            this.label2.Location = new System.Drawing.Point(14, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 3089;
             this.label2.Text = "Giá nhập lớn nhất";
             this.label2.UseMnemonic = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(116, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(483, 23);
+            this.label4.TabIndex = 3091;
+            this.label4.Text = "Báo cáo giá nhập thuốc lớn nhất giữa các nhà cung cấp";
+            // 
             // f457_bcnt_ten_thuoc_va_nha_cung_cap_max
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(686, 409);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.m_lbl_doanh_thu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.m_lbl_nguoi_lam_bc);
@@ -363,11 +377,11 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_cmd_search);
             this.Controls.Add(this.m_txt_tim_kiem);
             this.Controls.Add(this.m_fg);
-            this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Controls.Add(this.m_pnl_control);
             this.Name = "f457_bcnt_ten_thuoc_va_nha_cung_cap_max";
-            this.Text = "f457_bcnt_ten_thuoc_va_nha_cung_cap_max";
+            this.Text = "F457-Báo cáo giá nhập thuốc lớn nhất giữa các nhà cung cấp";
             this.Load += new System.EventHandler(this.f457_bcnt_ten_thuoc_va_nha_cung_cap_max_Load);
-            this.m_pnl_out_place_dm.ResumeLayout(false);
+            this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -429,7 +443,7 @@ namespace BKI_QLHT
         private void format_controls()
         {
 
-            CControlFormat.setFormStyle(this);
+            CControlFormat.setFormStyle(this, new CAppContext_201());
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
