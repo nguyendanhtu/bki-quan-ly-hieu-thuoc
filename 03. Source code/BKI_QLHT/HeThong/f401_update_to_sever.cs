@@ -381,15 +381,7 @@ namespace BKI_QLHT
         private void update_to_sever(){
             m_pcb_run.Value = 0;
             m_pcb_run.Visible = true;
-            f403_InternetConection v_internetconect = new f403_InternetConection();
-            if (v_internetconect.IsConnectedToInternet())
-            {
-                m_lbl_conect.Text = "Hiện đang kết nối mạng";
-            }
-            else
-            {
-                m_lbl_conect.Text = "Không có mạng";
-            }
+            
             string date_time = m_lbl_ngay_giao_dich.Text;
 
             string tong_tien = m_lbl_tong_doanh_thu.Text;
@@ -431,6 +423,15 @@ namespace BKI_QLHT
 			try{
 				set_initial_form_load();
                 load_data_2_lbl();
+                f403_InternetConection v_internetconect = new f403_InternetConection();
+                if (v_internetconect.IsConnectedToInternet())
+                {
+                    m_lbl_conect.Text = "Hiện đang kết nối mạng";
+                }
+                else
+                {
+                    m_lbl_conect.Text = "Không có mạng";
+                }
                 
             }
             catch (Exception v_e)
