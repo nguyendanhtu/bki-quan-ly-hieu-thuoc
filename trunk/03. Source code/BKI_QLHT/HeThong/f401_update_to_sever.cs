@@ -380,7 +380,7 @@ namespace BKI_QLHT
             //m_pcb_run.Visible = false;
             response.Close();
             readStream.Close();
-            MessageBox.Show("Cập nhật thành công");
+            //MessageBox.Show("Cập nhật thành công");
         }
         private void set_define_events()
         {
@@ -397,7 +397,7 @@ namespace BKI_QLHT
 			try{
 				set_initial_form_load();
                 load_data_2_lbl();
-               
+                
             }
             catch (Exception v_e)
             {
@@ -423,6 +423,7 @@ namespace BKI_QLHT
             try
             {
                 update_to_sever();
+                this.Close();
             }
             catch (System.Exception ex)
             {
