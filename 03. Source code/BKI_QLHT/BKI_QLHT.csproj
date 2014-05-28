@@ -161,26 +161,6 @@
     <Compile Include="BaoCao\f460_v_bcdt_nhom_kh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BKI_QLHTDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BKI_QLHTDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BKI_QLHTDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BKI_QLHTDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BKI_QLHTDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BKI_QLHTDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BKI_QLHTDataSet3.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BKI_QLHT_REPORT_BAN_THUOC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -741,50 +721,6 @@
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="BKI_QLHTDataSet.xsc">
-      <DependentUpon>BKI_QLHTDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BKI_QLHTDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BKI_QLHTDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BKI_QLHTDataSet.xss">
-      <DependentUpon>BKI_QLHTDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BKI_QLHTDataSet1.xsc">
-      <DependentUpon>BKI_QLHTDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BKI_QLHTDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BKI_QLHTDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BKI_QLHTDataSet1.xss">
-      <DependentUpon>BKI_QLHTDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="BKI_QLHTDataSet2.xsc">
-      <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BKI_QLHTDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BKI_QLHTDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BKI_QLHTDataSet2.xss">
-      <DependentUpon>BKI_QLHTDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="BKI_QLHTDataSet3.xsc">
-      <DependentUpon>BKI_QLHTDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="BKI_QLHTDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BKI_QLHTDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BKI_QLHTDataSet3.xss">
-      <DependentUpon>BKI_QLHTDataSet3.xsd</DependentUpon>
     </None>
     <None Include="BKI_QLHT_REPORT_BAN_THUOC.xsc">
       <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
