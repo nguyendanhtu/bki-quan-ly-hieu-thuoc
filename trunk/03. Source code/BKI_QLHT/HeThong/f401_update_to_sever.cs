@@ -54,6 +54,8 @@ namespace BKI_QLHT
         private Timer m_timer;
         private Label m_lbl_conect;
         private Label label4;
+        internal Label label3;
+        private Label label5;
 		private System.ComponentModel.IContainer components;
 
 		public f401_update_to_sever()
@@ -106,6 +108,8 @@ namespace BKI_QLHT
             this.m_timer = new System.Windows.Forms.Timer(this.components);
             this.m_lbl_conect = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -142,10 +146,10 @@ namespace BKI_QLHT
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 158);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 195);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(390, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(425, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_update
@@ -172,7 +176,7 @@ namespace BKI_QLHT
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(276, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(311, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(110, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -191,7 +195,7 @@ namespace BKI_QLHT
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 24);
+            this.label1.Location = new System.Drawing.Point(44, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 21;
@@ -200,7 +204,7 @@ namespace BKI_QLHT
             // m_lbl_ngay_giao_dich
             // 
             this.m_lbl_ngay_giao_dich.AutoSize = true;
-            this.m_lbl_ngay_giao_dich.Location = new System.Drawing.Point(189, 24);
+            this.m_lbl_ngay_giao_dich.Location = new System.Drawing.Point(195, 70);
             this.m_lbl_ngay_giao_dich.Name = "m_lbl_ngay_giao_dich";
             this.m_lbl_ngay_giao_dich.Size = new System.Drawing.Size(35, 13);
             this.m_lbl_ngay_giao_dich.TabIndex = 22;
@@ -209,7 +213,7 @@ namespace BKI_QLHT
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 50);
+            this.label2.Location = new System.Drawing.Point(44, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 23;
@@ -218,7 +222,7 @@ namespace BKI_QLHT
             // m_lbl_tong_doanh_thu
             // 
             this.m_lbl_tong_doanh_thu.AutoSize = true;
-            this.m_lbl_tong_doanh_thu.Location = new System.Drawing.Point(189, 50);
+            this.m_lbl_tong_doanh_thu.Location = new System.Drawing.Point(195, 96);
             this.m_lbl_tong_doanh_thu.Name = "m_lbl_tong_doanh_thu";
             this.m_lbl_tong_doanh_thu.Size = new System.Drawing.Size(35, 13);
             this.m_lbl_tong_doanh_thu.TabIndex = 24;
@@ -226,7 +230,7 @@ namespace BKI_QLHT
             // 
             // m_pcb_run
             // 
-            this.m_pcb_run.Location = new System.Drawing.Point(41, 112);
+            this.m_pcb_run.Location = new System.Drawing.Point(47, 158);
             this.m_pcb_run.Name = "m_pcb_run";
             this.m_pcb_run.Size = new System.Drawing.Size(321, 23);
             this.m_pcb_run.TabIndex = 25;
@@ -239,7 +243,7 @@ namespace BKI_QLHT
             // m_lbl_conect
             // 
             this.m_lbl_conect.AutoSize = true;
-            this.m_lbl_conect.Location = new System.Drawing.Point(189, 76);
+            this.m_lbl_conect.Location = new System.Drawing.Point(195, 122);
             this.m_lbl_conect.Name = "m_lbl_conect";
             this.m_lbl_conect.Size = new System.Drawing.Size(35, 13);
             this.m_lbl_conect.TabIndex = 27;
@@ -248,19 +252,43 @@ namespace BKI_QLHT
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 76);
+            this.label4.Location = new System.Drawing.Point(44, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 26;
             this.label4.Text = "Kết nối mạng";
             // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(425, 43);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Cập nhật doanh thu tổng hợp lên Server";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.UseCompatibleTextRendering = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(308, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "VNĐ";
+            // 
             // f401_update_to_sever
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(390, 194);
+            this.ClientSize = new System.Drawing.Size(425, 231);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.m_lbl_conect);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.m_pcb_run);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.m_lbl_tong_doanh_thu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.m_lbl_ngay_giao_dich);
@@ -268,7 +296,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f401_update_to_sever";
-            this.Text = "7";
+            this.Text = "Cập nhật doanh thu lên server";
             this.Load += new System.EventHandler(this.f401_update_to_sever_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
