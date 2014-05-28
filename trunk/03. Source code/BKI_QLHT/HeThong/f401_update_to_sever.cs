@@ -11,7 +11,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
-
+using System.Runtime.InteropServices;
 using IP.Core.IPCommon;
 using IP.Core.IPException;
 using IP.Core.IPData;
@@ -31,6 +31,7 @@ using System.Net;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using BKI_QLHT.HeThong;
 
 
 namespace BKI_QLHT
@@ -51,6 +52,8 @@ namespace BKI_QLHT
         private Label m_lbl_tong_doanh_thu;
         private ProgressBar m_pcb_run;
         private Timer m_timer;
+        private Label m_lbl_conect;
+        private Label label4;
 		private System.ComponentModel.IContainer components;
 
 		public f401_update_to_sever()
@@ -101,6 +104,8 @@ namespace BKI_QLHT
             this.m_lbl_tong_doanh_thu = new System.Windows.Forms.Label();
             this.m_pcb_run = new System.Windows.Forms.ProgressBar();
             this.m_timer = new System.Windows.Forms.Timer(this.components);
+            this.m_lbl_conect = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
@@ -204,7 +209,7 @@ namespace BKI_QLHT
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 61);
+            this.label2.Location = new System.Drawing.Point(38, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 23;
@@ -213,7 +218,7 @@ namespace BKI_QLHT
             // m_lbl_tong_doanh_thu
             // 
             this.m_lbl_tong_doanh_thu.AutoSize = true;
-            this.m_lbl_tong_doanh_thu.Location = new System.Drawing.Point(189, 61);
+            this.m_lbl_tong_doanh_thu.Location = new System.Drawing.Point(189, 50);
             this.m_lbl_tong_doanh_thu.Name = "m_lbl_tong_doanh_thu";
             this.m_lbl_tong_doanh_thu.Size = new System.Drawing.Size(35, 13);
             this.m_lbl_tong_doanh_thu.TabIndex = 24;
@@ -231,10 +236,30 @@ namespace BKI_QLHT
             // 
             this.m_timer.Tick += new System.EventHandler(this.m_timer_Tick);
             // 
+            // m_lbl_conect
+            // 
+            this.m_lbl_conect.AutoSize = true;
+            this.m_lbl_conect.Location = new System.Drawing.Point(189, 76);
+            this.m_lbl_conect.Name = "m_lbl_conect";
+            this.m_lbl_conect.Size = new System.Drawing.Size(35, 13);
+            this.m_lbl_conect.TabIndex = 27;
+            this.m_lbl_conect.Text = "label2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(38, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Kết nối mạng";
+            // 
             // f401_update_to_sever
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(390, 194);
+            this.Controls.Add(this.m_lbl_conect);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.m_pcb_run);
             this.Controls.Add(this.m_lbl_tong_doanh_thu);
             this.Controls.Add(this.label2);
@@ -356,6 +381,15 @@ namespace BKI_QLHT
         private void update_to_sever(){
             //m_pcb_run.Value = 0;
             //m_pcb_run.Visible = true;
+            f403_InternetConection v_internetconect = new f403_InternetConection();
+            if (v_internetconect.IsConnectedToInternet())
+            {
+                m_lbl_conect.Text = "Hiện đang kết nối mạng";
+            }
+            else
+            {
+                m_lbl_conect.Text = "Không có mạng";
+            }
             string date_time = m_lbl_ngay_giao_dich.Text;
 
             string tong_tien = m_lbl_tong_doanh_thu.Text;
