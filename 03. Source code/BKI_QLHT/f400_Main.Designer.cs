@@ -152,7 +152,6 @@ namespace BKI_QLHT
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.m_ribbonControl_Main.SuspendLayout();
             this.m_ribbonPanel_baocao.SuspendLayout();
             this.m_ribbonPanel_nghiepvu.SuspendLayout();
@@ -2026,16 +2025,6 @@ namespace BKI_QLHT
             this.buttonItem2.SubItemsExpandWidth = 14;
             this.buttonItem2.Text = "Quản lý giá";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(5, 629);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Upload to sever";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // f400_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2043,7 +2032,6 @@ namespace BKI_QLHT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(912, 656);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.m_Panel_Content);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
@@ -2203,6 +2191,5 @@ namespace BKI_QLHT
         private DevComponents.DotNetBar.RibbonTabItem m_menu_item_bao_cao_khac;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
-        private Button button1;
     }
 }
