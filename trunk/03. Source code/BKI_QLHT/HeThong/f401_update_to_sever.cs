@@ -308,8 +308,8 @@ namespace BKI_QLHT
             IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG v_us = new IP.Core.IPUserService.US_HT_NGUOI_SU_DUNG(CUI);
             m_lbl_tong_doanh_thu.ForeColor = Color.Red;
             m_lbl_ngay_giao_dich.Text = DateTime.Now.Date.ToShortDateString();
-            //m_pcb_run.Maximum = 7;
-            //m_pcb_run.Minimum = 0;
+            m_pcb_run.Maximum = 100;
+            m_pcb_run.Minimum = 0;
         }
         
         private void format_controls()
@@ -379,8 +379,8 @@ namespace BKI_QLHT
         }
 
         private void update_to_sever(){
-            //m_pcb_run.Value = 0;
-            //m_pcb_run.Visible = true;
+            m_pcb_run.Value = 0;
+            m_pcb_run.Visible = true;
             f403_InternetConection v_internetconect = new f403_InternetConection();
             if (v_internetconect.IsConnectedToInternet())
             {
@@ -411,7 +411,7 @@ namespace BKI_QLHT
             // Pipes the stream to a higher level stream reader with the required encoding format. 
             StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
             
-            //m_pcb_run.Visible = false;
+            m_pcb_run.Visible = false;
             response.Close();
             readStream.Close();
             //MessageBox.Show("Cập nhật thành công");
