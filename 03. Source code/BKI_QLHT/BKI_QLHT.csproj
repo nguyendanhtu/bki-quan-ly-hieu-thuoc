@@ -327,6 +327,9 @@
     <Compile Include="HeThong\F168_Phan_quyen_he_thong.Designer.cs">
       <DependentUpon>F168_Phan_quyen_he_thong.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeThong\f401_update_to_sever.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HeThong\f521_thong_tin_lien_he.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -629,6 +632,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\F168_Phan_quyen_he_thong.resx">
       <DependentUpon>F168_Phan_quyen_he_thong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\f401_update_to_sever.resx">
+      <DependentUpon>f401_update_to_sever.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f521_thong_tin_lien_he.resx">
       <DependentUpon>f521_thong_tin_lien_he.cs</DependentUpon>
