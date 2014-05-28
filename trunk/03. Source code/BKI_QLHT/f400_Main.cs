@@ -940,6 +940,19 @@ namespace BKI_QLHT
 
         #endregion
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                f401_update_to_sever v_frm = new f401_update_to_sever();
+                v_frm.ShowDialog();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
      
 
   }
