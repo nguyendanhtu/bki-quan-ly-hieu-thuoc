@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BKI_QLHT_REPORT_BAN_THUOC.Designer.cs">
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="CDBNames.cs" />
     <Compile Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -711,6 +716,17 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="BKI_QLHT_REPORT_BAN_THUOC.xsc">
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="BKI_QLHT_REPORT_BAN_THUOC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BKI_QLHT_REPORT_BAN_THUOC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BKI_QLHT_REPORT_BAN_THUOC.xss">
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
     </None>
     <None Include="DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.xsc">
       <DependentUpon>DS_ v_BAO_CAO_DOANH_THU_THEO_NGAYxsd.xsd</DependentUpon>
