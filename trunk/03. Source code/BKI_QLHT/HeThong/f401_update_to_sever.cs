@@ -427,10 +427,12 @@ namespace BKI_QLHT
                 if (v_internetconect.IsConnectedToInternet())
                 {
                     m_lbl_conect.Text = "Hiện đang kết nối mạng";
+                    m_cmd_update.Visible = true;
                 }
                 else
                 {
                     m_lbl_conect.Text = "Không có mạng";
+                    m_cmd_update.Visible = false;
                 }
                 
             }
