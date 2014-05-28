@@ -363,6 +363,17 @@
     <Compile Include="HeThong\f999_ht_nguoi_su_dung.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NghiepVu\BKI_QLHT_REPORT_BAN_THUOC.Designer.cs">
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NghiepVu\f115_reports_ban_thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f115_reports_ban_thuoc.Designer.cs">
+      <DependentUpon>f115_reports_ban_thuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\f511_gd_nhap_thuoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -643,6 +654,9 @@
     <EmbeddedResource Include="HeThong\f999_ht_nguoi_su_dung.resx">
       <DependentUpon>f999_ht_nguoi_su_dung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f115_reports_ban_thuoc.resx">
+      <DependentUpon>f115_reports_ban_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f511_gd_nhap_thuoc.resx">
       <DependentUpon>f511_gd_nhap_thuoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -708,6 +722,17 @@
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="NghiepVu\BKI_QLHT_REPORT_BAN_THUOC.xsc">
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
+    </None>
+    <None Include="NghiepVu\BKI_QLHT_REPORT_BAN_THUOC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BKI_QLHT_REPORT_BAN_THUOC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NghiepVu\BKI_QLHT_REPORT_BAN_THUOC.xss">
+      <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\BKI_QLHT.NghiepVu.uc108_v_gd_giao_dich_detail+data1.datasource" />
     <None Include="Properties\DataSources\BKI_QLHT.NghiepVu.uc108_v_gd_giao_dich_detail.datasource" />
