@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.siSButton1 = new SIS.Controls.Button.SiSButton();
             this.m_txts_ten_thuoc = new BKI_QLHT.DanhMuc.txt_search_thuoc();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_bang_gia)).BeginInit();
             this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +96,7 @@
             // 
             // m_pnl_control
             // 
+            this.m_pnl_control.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.m_pnl_control.Location = new System.Drawing.Point(0, 534);
@@ -154,6 +156,21 @@
             this.m_txts_ten_thuoc.ValueMember = null;
             this.m_txts_ten_thuoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txts_ten_thuoc_KeyDown);
             // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(113, 28);
+            this.m_cmd_xuat_excel.TabIndex = 12;
+            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
+            // 
             // uc803_bang_gia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,5 +200,6 @@
         private DanhMuc.txt_search_thuoc m_txts_ten_thuoc;
         private System.Windows.Forms.Label label2;
         internal SIS.Controls.Button.SiSButton siSButton1;
+        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
     }
 }
