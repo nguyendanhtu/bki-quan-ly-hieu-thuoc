@@ -228,5 +228,17 @@ namespace BKI_QLHT
                 BaseMessages.MsgBox_Infor("Bạn chỉ được nhập số.Vui lòng nhập lại");
             }
         }
+
+        private void m_txt_gia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                if (e.KeyChar != (char)8)
+                {
+                    BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'..Xin vui lòng chỉ nhập số");
+                    e.KeyChar = (char)0;
+                }
+            }
+        }
     }
 }
