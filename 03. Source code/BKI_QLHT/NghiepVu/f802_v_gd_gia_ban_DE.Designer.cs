@@ -160,6 +160,7 @@
             this.m_txt_gia.Size = new System.Drawing.Size(326, 20);
             this.m_txt_gia.TabIndex = 1;
             this.m_txt_gia.TextChanged += new System.EventHandler(this.m_txt_gia_TextChanged);
+            this.m_txt_gia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_gia_KeyPress);
             this.m_txt_gia.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_gia_KeyUp);
             // 
             // m_lbl_ten_don_vi

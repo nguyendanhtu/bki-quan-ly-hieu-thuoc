@@ -57,7 +57,7 @@ namespace BKI_QLHT
                     m_lbl_so_du_5.Text = "";
                     m_lbl_thuoc_6.Text = "";
                     m_lbl_so_du_6.Text = "";
-                    m_lbl_canh_bao_so_du.Text = "";
+                    m_lbl_canh_bao_so_du.Visible=false;
                     break;
                 case 2:
                     m_lbl_thuoc_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
@@ -66,7 +66,7 @@ namespace BKI_QLHT
                     m_lbl_so_du_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["SO_DU"]);
                     m_lbl_so_du_6.Text = "";
                     m_lbl_thuoc_6.Text = "";
-                    m_lbl_canh_bao_so_du.Text = "";
+                    m_lbl_canh_bao_so_du.Visible=false;
                     break;
                 default:
                     m_lbl_thuoc_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
@@ -75,7 +75,7 @@ namespace BKI_QLHT
                     m_lbl_so_du_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["SO_DU"]);
                     m_lbl_so_du_6.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["SO_DU"]);
                     m_lbl_thuoc_6.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
-                    m_lbl_canh_bao_so_du.Text = "";
+                    m_lbl_canh_bao_so_du.Visible=false;
                     break;
             }
         }
@@ -105,7 +105,7 @@ namespace BKI_QLHT
                     m_lbl_hsd_3.Text = "";
                     m_lbl_thuoc_2.Text = "";
                     m_lbl_thuoc_3.Text = "";
-                    m_lbl_canh_bao_hsd.Text = "";
+                    m_lbl_canh_bao_hsd.Visible=false;
                     break;
                    
                 case 2:
@@ -115,7 +115,7 @@ namespace BKI_QLHT
                     m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
                     m_lbl_hsd_3.Text = "";
                     m_lbl_thuoc_3.Text = "";
-                    m_lbl_canh_bao_hsd.Text = "";
+                    m_lbl_canh_bao_hsd.Visible=false;
                     break;
                 default:
                     m_lbl_thuoc_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
@@ -124,7 +124,7 @@ namespace BKI_QLHT
                     m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
                     m_lbl_hsd_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["HAN_SD"]);
                     m_lbl_thuoc_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
-                    m_lbl_canh_bao_hsd.Text = "";
+                    m_lbl_canh_bao_hsd.Visible=false;
                     break;
             }
         }
