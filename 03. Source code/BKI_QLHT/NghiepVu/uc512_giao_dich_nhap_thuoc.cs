@@ -702,6 +702,10 @@ namespace BKI_QLHT
                 {
                     GIA_NHAP = CIPConvert.ToDecimal(v_list.gia) / ( CIPConvert.ToDecimal(v_list.quy_doi_3));
                 }
+                if (v_list.ID_dv_cap_4 == v_list.id_don_vi_thuoc_nhap)
+                {
+                    GIA_NHAP = CIPConvert.ToDecimal(v_list.gia);
+                }
                 decimal ID_GD_DETAIL = 0;
                 ip_us_gd_detail.Insert_data_into_gd_giao_dich_detail(ID_GIAO_DICH, ID_THUOC, ID_DON_VI_THUOC, SO_LUONG_NHAP, SO_LUONG_BAN, ID_GD_DETAIL, ID_NHA_CUNG_CAP, ID_NUOC_SX, ID_HANG_SX, HAN_SU_DUNG, GIA_BAN, GIA_NHAP);
             }
