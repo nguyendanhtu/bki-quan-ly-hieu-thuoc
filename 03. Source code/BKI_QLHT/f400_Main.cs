@@ -29,8 +29,8 @@ namespace BKI_QLHT
         {
             InitializeComponent();
             format_controls();
-            //load_thuoc_sap_het_han();
-            //load_thuoc_sap_het_trong_kho();
+            load_thuoc_sap_het_han();
+            load_thuoc_sap_het_trong_kho();
         }
 
         private void load_thuoc_sap_het_trong_kho()
@@ -40,20 +40,34 @@ namespace BKI_QLHT
             v_us.FillDataset(v_ds, " where SO_DU>0 ORDER BY SO_DU");
             switch (v_ds.Tables[0].Rows.Count)
             {
+                case 0://BaseMessages.MsgBox_Infor("Không có thuốc sắp hết trong kho");
+                     m_lbl_thuoc_4.Text ="";
+                    m_lbl_so_du_4.Text = "";
+                    m_lbl_thuoc_5.Text = "";
+                    m_lbl_so_du_5.Text = "";
+                    m_lbl_thuoc_6.Text = "";
+                    m_lbl_so_du_6.Text = "";
+                    m_lbl_canh_bao_so_du.Text = "Không có thuốc sắp hết trong kho";
+                    m_cmd_so_du.Visible = false;
+                    break;
                 case 1:
                     m_lbl_thuoc_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
                     m_lbl_so_du_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["SO_DU"]);
                     m_lbl_thuoc_5.Text = "";
                     m_lbl_so_du_5.Text = "";
                     m_lbl_thuoc_6.Text = "";
-                    m_lbl_so_du_6.Text = ""; break;
+                    m_lbl_so_du_6.Text = "";
+                    m_lbl_canh_bao_so_du.Text = "";
+                    break;
                 case 2:
                     m_lbl_thuoc_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
                     m_lbl_so_du_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["SO_DU"]);
                     m_lbl_thuoc_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
                     m_lbl_so_du_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["SO_DU"]);
                     m_lbl_so_du_6.Text = "";
-                    m_lbl_thuoc_6.Text = ""; break;
+                    m_lbl_thuoc_6.Text = "";
+                    m_lbl_canh_bao_so_du.Text = "";
+                    break;
                 default:
                     m_lbl_thuoc_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
                     m_lbl_so_du_4.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["SO_DU"]);
@@ -61,6 +75,7 @@ namespace BKI_QLHT
                     m_lbl_so_du_5.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["SO_DU"]);
                     m_lbl_so_du_6.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["SO_DU"]);
                     m_lbl_thuoc_6.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
+                    m_lbl_canh_bao_so_du.Text = "";
                     break;
             }
         }
@@ -73,21 +88,35 @@ namespace BKI_QLHT
             v_us.FillDataset(v_ds, "where DATEDIFF(day,GETDATE(),CONVERT(datetime,HAN_SD,103))>=0 AND SO_DU>0 ORDER BY CONVERT(datetime,HAN_SD,103)");
             switch (v_ds.Tables[0].Rows.Count)
             {
-                case 0: BaseMessages.MsgBox_Infor("Không có thuốc sắp hết hạn trong 3 tháng tới"); break;
+                case 0://BaseMessages.MsgBox_Infor("Không có thuốc sắp hết hạn trong 3 tháng tới");
+                    m_lbl_thuoc_1.Text = "";
+                    m_lbl_hsd_1.Text = "";
+                    m_lbl_hsd_2.Text = "";
+                    m_lbl_hsd_3.Text = "";
+                    m_lbl_thuoc_2.Text = "";
+                    m_lbl_thuoc_3.Text = "";
+                    m_lbl_canh_bao_hsd.Text = "Không có thuốc sắp hết hạn trong 3 tháng tới";
+                    m_cmd_chi_tiet_thuoc_het_han.Visible = false;
+                    break;
                 case 1:
                     m_lbl_thuoc_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
                     m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
                     m_lbl_hsd_2.Text = "";
                     m_lbl_hsd_3.Text = "";
                     m_lbl_thuoc_2.Text = "";
-                    m_lbl_thuoc_3.Text = ""; break;
+                    m_lbl_thuoc_3.Text = "";
+                    m_lbl_canh_bao_hsd.Text = "";
+                    break;
+                   
                 case 2:
                     m_lbl_thuoc_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
                     m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
                     m_lbl_thuoc_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["TEN_THUOC"]);
                     m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
                     m_lbl_hsd_3.Text = "";
-                    m_lbl_thuoc_3.Text = ""; break;
+                    m_lbl_thuoc_3.Text = "";
+                    m_lbl_canh_bao_hsd.Text = "";
+                    break;
                 default:
                     m_lbl_thuoc_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["TEN_THUOC"]);
                     m_lbl_hsd_1.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[0]["HAN_SD"]);
@@ -95,6 +124,7 @@ namespace BKI_QLHT
                     m_lbl_hsd_2.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[1]["HAN_SD"]);
                     m_lbl_hsd_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["HAN_SD"]);
                     m_lbl_thuoc_3.Text = CIPConvert.ToStr(v_ds.Tables[0].Rows[2]["TEN_THUOC"]);
+                    m_lbl_canh_bao_hsd.Text = "";
                     break;
             }
         }
