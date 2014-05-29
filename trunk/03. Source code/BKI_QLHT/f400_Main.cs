@@ -29,8 +29,8 @@ namespace BKI_QLHT
         {
             InitializeComponent();
             format_controls();
-            load_thuoc_sap_het_han();
-            load_thuoc_sap_het_trong_kho();
+            //load_thuoc_sap_het_han();
+            //load_thuoc_sap_het_trong_kho();
         }
 
         private void load_thuoc_sap_het_trong_kho()
