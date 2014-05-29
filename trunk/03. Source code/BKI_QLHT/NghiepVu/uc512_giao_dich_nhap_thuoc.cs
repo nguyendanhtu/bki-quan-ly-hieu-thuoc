@@ -679,6 +679,7 @@ namespace BKI_QLHT
             DS_GD_GIAO_DICH_DETAIL v_ds_gd_detail = new DS_GD_GIAO_DICH_DETAIL();
             foreach (data v_list in list)
             {
+                decimal GIA_NHAP=0;
                 decimal ID_GIAO_DICH = m_id_giao_dich;
                 decimal ID_THUOC = CIPConvert.ToDecimal(v_list.ID_thuoc);
                 decimal ID_DON_VI_THUOC = CIPConvert.ToDecimal(v_list.ID_don_vi_thuoc);
@@ -689,7 +690,18 @@ namespace BKI_QLHT
                 decimal SO_LUONG_BAN = 0;
                 decimal GIA_BAN = CIPConvert.ToDecimal(v_list.gia_ban);
                 DateTime HAN_SU_DUNG = v_list.han_sd;
-                decimal GIA_NHAP = CIPConvert.ToDecimal(v_list.gia) / (CIPConvert.ToDecimal(v_list.quy_doi_1) * CIPConvert.ToDecimal(v_list.quy_doi_2) * CIPConvert.ToDecimal(v_list.quy_doi_3));
+                if (v_list.ID_dv_cap_1 == v_list.id_don_vi_thuoc_nhap)
+                {
+                    GIA_NHAP = CIPConvert.ToDecimal(v_list.gia) / (CIPConvert.ToDecimal(v_list.quy_doi_1) * CIPConvert.ToDecimal(v_list.quy_doi_2) * CIPConvert.ToDecimal(v_list.quy_doi_3));
+                }
+                if (v_list.ID_dv_cap_2 == v_list.id_don_vi_thuoc_nhap)
+                {
+                    GIA_NHAP = CIPConvert.ToDecimal(v_list.gia) / (CIPConvert.ToDecimal(v_list.quy_doi_2) * CIPConvert.ToDecimal(v_list.quy_doi_3));
+                }
+                if (v_list.ID_dv_cap_3 == v_list.id_don_vi_thuoc_nhap)
+                {
+                    GIA_NHAP = CIPConvert.ToDecimal(v_list.gia) / ( CIPConvert.ToDecimal(v_list.quy_doi_3));
+                }
                 decimal ID_GD_DETAIL = 0;
                 ip_us_gd_detail.Insert_data_into_gd_giao_dich_detail(ID_GIAO_DICH, ID_THUOC, ID_DON_VI_THUOC, SO_LUONG_NHAP, SO_LUONG_BAN, ID_GD_DETAIL, ID_NHA_CUNG_CAP, ID_NUOC_SX, ID_HANG_SX, HAN_SU_DUNG, GIA_BAN, GIA_NHAP);
             }
