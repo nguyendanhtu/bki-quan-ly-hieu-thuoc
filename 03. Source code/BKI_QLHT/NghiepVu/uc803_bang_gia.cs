@@ -16,6 +16,7 @@ using BKI_QLHT.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using IP.Core.IPSystemAdmin;
+using IP.Core.IPExcelReport;
 
 namespace BKI_QLHT.NghiepVu
 {
@@ -160,7 +161,28 @@ namespace BKI_QLHT.NghiepVu
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            m_cmd_xuat_excel.Click += new EventHandler(m_cmd_xuat_excel_Click);
             this.Load += new EventHandler(f803_bang_gia_Load);
+        }
+        private void export_2_excel()
+        {
+            DS_DM_DON_VI_KINH_DOANH v_ds = new DS_DM_DON_VI_KINH_DOANH();
+            US_DM_DON_VI_KINH_DOANH v_us = new US_DM_DON_VI_KINH_DOANH();
+            v_us.FillDataset(v_ds);
+            v_us.DataRow2Me((DataRow)v_ds.DM_DON_VI_KINH_DOANH.Rows[0]);
+            String m_str_ten_don_vi = v_us.strTEN_DAY_DU;
+            String m_str_dia_chi = v_us.strDIA_CHI;
+            String m_str_so_dien_thoai = v_us.strSDT;
+
+            CExcelReport v_obj_excel_rpt = new CExcelReport("f803_bao_cao_gia_ban.xlsx", 8, 1);
+           v_obj_excel_rpt.AddFindAndReplaceItem("<ten_don_vi>", m_str_ten_don_vi);
+            v_obj_excel_rpt.AddFindAndReplaceItem("<dia_chi>", m_str_dia_chi);
+           
+
+            v_obj_excel_rpt.AddFindAndReplaceItem("<so_dien_thoai>", m_str_so_dien_thoai);
+            
+            v_obj_excel_rpt.FindAndReplace(false);
+            v_obj_excel_rpt.Export2ExcelWithoutFixedRows(m_grv_bang_gia, 0, m_grv_bang_gia.Cols.Count - 1, true);
         }
         #endregion
 
@@ -234,17 +256,7 @@ namespace BKI_QLHT.NghiepVu
             }
         }
 
-        private void m_cmd_view_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                view_v_gd_gia_ban();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        
         #endregion
 
         private void m_txts_ten_thuoc_KeyDown(object sender, KeyEventArgs e)
@@ -267,6 +279,18 @@ namespace BKI_QLHT.NghiepVu
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_xuat_excel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                export_2_excel();
+            }
+            catch (System.Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
             }
         }
 
