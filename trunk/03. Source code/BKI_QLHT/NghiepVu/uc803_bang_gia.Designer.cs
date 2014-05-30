@@ -34,11 +34,11 @@
             this.m_grv_bang_gia = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_pnl_control = new System.Windows.Forms.Panel();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.siSButton1 = new SIS.Controls.Button.SiSButton();
             this.m_txts_ten_thuoc = new BKI_QLHT.DanhMuc.txt_search_thuoc();
-            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_bang_gia)).BeginInit();
             this.m_pnl_control.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +105,22 @@
             this.m_pnl_control.Size = new System.Drawing.Size(1145, 36);
             this.m_pnl_control.TabIndex = 21;
             // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.ImageList;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(113, 28);
+            this.m_cmd_xuat_excel.TabIndex = 12;
+            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
+            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -155,21 +171,6 @@
             this.m_txts_ten_thuoc.Text1 = null;
             this.m_txts_ten_thuoc.ValueMember = null;
             this.m_txts_ten_thuoc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_txts_ten_thuoc_KeyDown);
-            // 
-            // m_cmd_xuat_excel
-            // 
-            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xuat_excel.ImageIndex = 19;
-            this.m_cmd_xuat_excel.ImageList = this.ImageList;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(113, 28);
-            this.m_cmd_xuat_excel.TabIndex = 12;
-            this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
             // 
             // uc803_bang_gia
             // 
