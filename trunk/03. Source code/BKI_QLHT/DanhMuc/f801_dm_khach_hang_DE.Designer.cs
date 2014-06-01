@@ -190,6 +190,7 @@
             this.m_txt_so_dien_thoai.Name = "m_txt_so_dien_thoai";
             this.m_txt_so_dien_thoai.Size = new System.Drawing.Size(304, 20);
             this.m_txt_so_dien_thoai.TabIndex = 2;
+            this.m_txt_so_dien_thoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_so_dien_thoai_KeyPress);
             this.m_txt_so_dien_thoai.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_so_dien_thoai_KeyUp);
             // 
             // m_txt_dia_chi

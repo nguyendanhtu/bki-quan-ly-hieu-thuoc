@@ -342,7 +342,21 @@ namespace BKI_QLHT
                CSystemLog_301.ExceptionHandle(v_e);
            }
        }
+
+       private void m_txt_so_dien_thoai_KeyPress(object sender, KeyPressEventArgs e)
+       {
+           if (e.KeyChar < '0' || e.KeyChar > '9')
+           {
+               if (e.KeyChar != (char)8 && !Char.IsControl(e.KeyChar))
+               {
+                   BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'..Xin vui lòng chỉ nhập số");
+                   e.KeyChar = (char)0;
+               }
+           }
+       }
         #endregion
+
+       
 
     }
 }
