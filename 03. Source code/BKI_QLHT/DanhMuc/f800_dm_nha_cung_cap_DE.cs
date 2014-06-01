@@ -246,36 +246,6 @@ namespace BKI_QLHT
 
         }
 
-        private void m_txt_sdt_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    if (check_validate() == 1)
-                    {
-                        BaseMessages.MsgBox_Infor("Bạn chưa nhập tên nhà cung cấp");
-                        m_txt_ten_nha_cung_cap.Focus();
-                    }
-                    else
-                    {
-                        if (check_validate() == 2)
-                        {
-                            BaseMessages.MsgBox_Infor("Bạn chưa nhập số điện thoại");
-                            m_txt_sdt.Focus();
-                        }
-                        else
-                        {
-                            save_data();
-                        }
-                    }
-                }
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
 
         private void m_txt_dia_chi_KeyUp(object sender, KeyEventArgs e)
         {
@@ -307,7 +277,55 @@ namespace BKI_QLHT
             }
         }
 
+        
+
         #endregion
 
+        private void m_txt_sdt_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (check_validate() == 1)
+                    {
+                        BaseMessages.MsgBox_Infor("Bạn chưa nhập tên nhà cung cấp");
+                        m_txt_ten_nha_cung_cap.Focus();
+                    }
+                    else
+                    {
+                        if (check_validate() == 2)
+                        {
+                            BaseMessages.MsgBox_Infor("Bạn chưa nhập số điện thoại");
+                            m_txt_sdt.Focus();
+                        }
+                        else
+                        {
+                            save_data();
+                        }
+                    }
+                }
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_txt_sdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                if (e.KeyChar != (char)8 && !Char.IsControl(e.KeyChar))
+                {
+                    BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'..Xin vui lòng chỉ nhập số");
+                    e.KeyChar = (char)0;
+                }
+            }
+        }
+
+
+
+        
     }
 }

@@ -314,6 +314,18 @@ namespace BKI_QLHT
             }
         }
 
+        private void m_txt_sdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                if (e.KeyChar != (char)8 && !Char.IsControl(e.KeyChar))
+                {
+                    BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'..Xin vui lòng chỉ nhập số");
+                    e.KeyChar = (char)0;
+                }
+            }
+        }
+
         #endregion
 
         private void InitializeComponent()
@@ -418,6 +430,7 @@ namespace BKI_QLHT
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(284, 20);
             this.m_txt_sdt.TabIndex = 2;
+            this.m_txt_sdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.m_txt_sdt_KeyPress);
             this.m_txt_sdt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.m_txt_sdt_KeyUp);
             // 
             // m_txt_ten_nha_cung_cap
@@ -488,6 +501,7 @@ namespace BKI_QLHT
         private Label label5;
         private Label label2;
 
+       
        
 
         
