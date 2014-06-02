@@ -233,7 +233,7 @@ namespace BKI_QLHT
         {
             if (e.KeyChar < '0' || e.KeyChar > '9')
             {
-                if (e.KeyChar != (char)8)
+                if (e.KeyChar != (char)8 && !Char.IsControl(e.KeyChar))
                 {
                     BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'..Xin vui lòng chỉ nhập số");
                     e.KeyChar = (char)0;
