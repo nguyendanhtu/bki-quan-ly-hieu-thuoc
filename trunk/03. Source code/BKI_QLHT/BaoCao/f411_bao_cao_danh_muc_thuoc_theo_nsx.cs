@@ -279,9 +279,9 @@ namespace BKI_QLHT
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(209, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(378, 23);
+            this.label4.Size = new System.Drawing.Size(388, 23);
             this.label4.TabIndex = 2824;
-            this.label4.Text = "Báo cáo danh mục thuốc theo nhà sản xuất";
+            this.label4.Text = "Báo cáo danh mục thuốc theo nước sản xuất";
             // 
             // f411_bao_cao_danh_muc_thuoc_theo_nsx
             // 
@@ -300,7 +300,7 @@ namespace BKI_QLHT
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "f411_bao_cao_danh_muc_thuoc_theo_nsx";
-            this.Text = "F411-Báo cáo danh mục thuốc theo nhà sản xuất";
+            this.Text = "F411-Báo cáo danh mục thuốc theo nước sản xuất";
             this.Load += new System.EventHandler(this.f409_bao_cao_danh_muc_thuoc_theo_nsx_Load);
             this.m_pnl_control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
