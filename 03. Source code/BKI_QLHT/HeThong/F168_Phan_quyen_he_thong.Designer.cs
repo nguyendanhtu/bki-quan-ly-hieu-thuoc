@@ -36,7 +36,7 @@
             this.m_cmd_right_2_left = new SIS.Controls.Button.SiSButton();
             this.m_cmd_left_2_right = new SIS.Controls.Button.SiSButton();
             this.m_cmd_left_2_right_all = new SIS.Controls.Button.SiSButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.m_lst_dang_sach_control = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -130,13 +130,13 @@
             this.m_cmd_left_2_right_all.TabIndex = 22;
             this.m_cmd_left_2_right_all.Text = ">>";
             // 
-            // listBox1
+            // m_lst_dang_sach_control
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(315, 140);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(268, 316);
-            this.listBox1.TabIndex = 26;
+            this.m_lst_dang_sach_control.FormattingEnabled = true;
+            this.m_lst_dang_sach_control.Location = new System.Drawing.Point(315, 140);
+            this.m_lst_dang_sach_control.Name = "m_lst_dang_sach_control";
+            this.m_lst_dang_sach_control.Size = new System.Drawing.Size(268, 316);
+            this.m_lst_dang_sach_control.TabIndex = 26;
             // 
             // label2
             // 
@@ -187,7 +187,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.m_lst_dang_sach_control);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_lst_danh_sach_form);
             this.Controls.Add(this.m_cbo_nhom_nguoi_su_dung);
@@ -213,7 +213,7 @@
         internal SIS.Controls.Button.SiSButton m_cmd_right_2_left;
         internal SIS.Controls.Button.SiSButton m_cmd_left_2_right;
         internal SIS.Controls.Button.SiSButton m_cmd_left_2_right_all;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox m_lst_dang_sach_control;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
