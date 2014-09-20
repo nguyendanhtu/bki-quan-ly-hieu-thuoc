@@ -730,6 +730,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="NghiepVu\BKI_QLHT_REPORT_BAN_THUOC.xsc">
       <DependentUpon>BKI_QLHT_REPORT_BAN_THUOC.xsd</DependentUpon>
     </None>
