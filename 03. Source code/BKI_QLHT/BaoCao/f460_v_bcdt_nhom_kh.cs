@@ -405,7 +405,7 @@ namespace BKI_QLHT
 		#region Members
 		ITransferDataRow m_obj_trans;
         DataEntryFormMode m_e_form_mode = DataEntryFormMode.ViewDataState;
-        private const String m_str_tim_kiem = "Nhập tên nhân viên cần tìm";
+        private const String m_str_tim_kiem = "Nhập tên nhóm khách hàng cần tìm";
         DateTime v_dat_ngay_bd;
         DateTime v_dat_ngay_kt;
         BKI_QLHT.DS.V_BC_DOANH_THU_NHOM_KH m_v_ds = new BKI_QLHT.DS.V_BC_DOANH_THU_NHOM_KH();
@@ -582,6 +582,23 @@ namespace BKI_QLHT
             m_txt_tim_kiem.KeyDown += m_txt_tim_kiem_KeyDown;
             m_txt_tim_kiem.MouseClick += m_txt_tim_kiem_MouseClick;
             m_txt_tim_kiem.Leave += m_txt_tim_kiem_Leave;
+            this.KeyDown += new KeyEventHandler(f460_v_bcdt_nhom_kh_KeyDown);
+        }
+
+       private void f460_v_bcdt_nhom_kh_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Escape)
+                {
+                    this.Close();
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 		#endregion
 
