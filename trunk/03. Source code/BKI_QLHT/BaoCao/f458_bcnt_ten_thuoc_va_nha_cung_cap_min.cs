@@ -502,15 +502,22 @@ namespace BKI_QLHT
             }
             m_fg.Redraw = true;
             decimal v_dc_gia_max = 0;
-            v_dc_gia_max = CIPConvert.ToDecimal(m_v_ds.Tables[0].Rows[0][V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.GIA_NHAP_MIN]);
-            for (int i = 1; i < m_v_ds.V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.Count; i++)
+            if (m_v_ds.V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.Count == 0)
             {
-                decimal v_dc_tg = CIPConvert.ToDecimal(m_v_ds.Tables[0].Rows[i][V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.GIA_NHAP_MIN]);
-                if (v_dc_gia_max > v_dc_tg)
-                    v_dc_gia_max = v_dc_tg;
-                
+                v_dc_gia_max = 0;
             }
-            m_lbl_doanh_thu.Text = CIPConvert.ToStr(v_dc_gia_max, "#,###.##") + "   VNĐ";
+            else
+            {
+                v_dc_gia_max = CIPConvert.ToDecimal(m_v_ds.Tables[0].Rows[0][V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.GIA_NHAP_MIN]);
+                for (int i = 1; i < m_v_ds.V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.Count; i++)
+                {
+                    decimal v_dc_tg = CIPConvert.ToDecimal(m_v_ds.Tables[0].Rows[i][V_BC_NHAP_THUOC_TEN_THUOC_N_NCC_MIN.GIA_NHAP_MIN]);
+                    if (v_dc_gia_max > v_dc_tg)
+                        v_dc_gia_max = v_dc_tg;
+
+                }
+            }
+            m_lbl_doanh_thu.Text = CIPConvert.ToStr(v_dc_gia_max, "#,##0.00") + "   VNĐ";
             
             //decimal v_dc_tong_doanh_thu = 0;
             ////m_v_us.get_tong_doanh_thu(v_dc_tong_doanh_thu);
@@ -610,6 +617,23 @@ namespace BKI_QLHT
             m_txt_tim_kiem.KeyDown += m_txt_tim_kiem_KeyDown;
             m_txt_tim_kiem.MouseClick += m_txt_tim_kiem_MouseClick;
             m_txt_tim_kiem.Leave += m_txt_tim_kiem_Leave;
+            this.KeyDown += new KeyEventHandler(f458_bcnt_ten_thuoc_va_nha_cung_cap_min_KeyDown);
+        }
+
+       private void f458_bcnt_ten_thuoc_va_nha_cung_cap_min_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Escape)
+                {
+                    this.Close();
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 		#endregion
 

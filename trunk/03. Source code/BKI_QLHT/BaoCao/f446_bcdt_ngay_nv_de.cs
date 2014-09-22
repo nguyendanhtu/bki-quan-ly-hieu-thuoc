@@ -603,6 +603,23 @@ namespace BKI_QLHT
             m_txt_tim_kiem.KeyDown += m_txt_tim_kiem_KeyDown;
             m_txt_tim_kiem.MouseClick += m_txt_tim_kiem_MouseClick;
             m_txt_tim_kiem.Leave += m_txt_tim_kiem_Leave;
+            this.KeyDown += new KeyEventHandler(f446_bcdt_ngay_nv_de_KeyDown);
+        }
+
+       private void f446_bcdt_ngay_nv_de_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Escape)
+                {
+                    this.Close();
+                }
+            }
+            catch (Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 		#endregion
 
