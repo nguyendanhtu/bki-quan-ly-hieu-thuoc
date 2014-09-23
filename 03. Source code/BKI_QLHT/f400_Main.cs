@@ -207,6 +207,9 @@ namespace BKI_QLHT
             //vScrollBar1.Scroll += (sender, e) => { m_Panel_Content.VerticalScroll.Value = vScrollBar1.Value; };
             //m_Panel_Content.Controls.Add(vScrollBar1);
             //format_dotnetbar_menu();
+            m_cmd_item_ht_form.Visible = false;
+            m_cmd_item_danh_muc_control.Visible = false;
+            m_cmd_item_phan_quyen_he_thong.Visible = false;
             set_define_events();
             ShowInTaskbar = true;
         }
