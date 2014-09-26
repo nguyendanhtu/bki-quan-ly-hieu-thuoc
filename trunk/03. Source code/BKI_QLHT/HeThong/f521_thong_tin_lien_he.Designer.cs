@@ -171,7 +171,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(328, 24);
             this.linkLabel1.TabIndex = 73;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Email: thuongvv@bkindex";
+            this.linkLabel1.Text = "Email: ntd.tt2k55@gmail.com";
             // 
             // label7
             // 
@@ -180,7 +180,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(328, 24);
             this.label7.TabIndex = 72;
-            this.label7.Text = "Di động: 093 6886 534";
+            this.label7.Text = "Di động: 0167 5698 350";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
@@ -190,7 +190,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(328, 24);
             this.label6.TabIndex = 71;
-            this.label6.Text = "Liên hệ: Vũ Văn Thương";
+            this.label6.Text = "Liên hệ: Nguyễn Tiến Dũng";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // f521_thong_tin_lien_he
