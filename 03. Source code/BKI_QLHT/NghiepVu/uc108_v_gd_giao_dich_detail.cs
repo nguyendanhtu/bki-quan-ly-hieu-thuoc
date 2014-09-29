@@ -993,6 +993,11 @@ namespace BKI_QLHT.NghiepVu
         {
             try
             {
+                if (m_grv_quan_ly_ban_thuoc.RowCount == 1)
+                {
+                    BaseMessages.MsgBox_Infor("Không có dữ liệu");
+                    return;
+                }
                 flag_sua = true;
                 m_cmd_them.Visible = false;
                 m_cmd_luu.Visible = false;
@@ -1006,8 +1011,13 @@ namespace BKI_QLHT.NghiepVu
                 m_lbl_tro_lai.Visible = true;
                 m_cmd_cap_nhat.Visible = true;
                 m_lbl_cap_nhat.Visible = true;
-                m_txt_cap_nhat_ten_thuoc.Visible = true;
+                m_txt_cap_nhat_ten_thuoc.Visible = true;         
                 m_i_fg = m_grv_quan_ly_ban_thuoc.SelectedRows[0].Index;
+                if (list.Count == m_i_fg) 
+                {
+                    BaseMessages.MsgBox_Infor("Không có dữ liệu");
+                    return;
+                }
                 m_txt_cap_nhat_ten_thuoc.Text = list[m_i_fg].ten_thuoc;
                 txt_search_thuoc1.dcID = list[m_i_fg].id_thuoc;
                 load_cbo_don_vi_tinh();
