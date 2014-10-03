@@ -75,7 +75,7 @@
             this.m_grv_bang_gia.ColumnInfo = resources.GetString("m_grv_bang_gia.ColumnInfo");
             this.m_grv_bang_gia.Location = new System.Drawing.Point(0, 146);
             this.m_grv_bang_gia.Name = "m_grv_bang_gia";
-            this.m_grv_bang_gia.Size = new System.Drawing.Size(1133, 382);
+            this.m_grv_bang_gia.Size = new System.Drawing.Size(1120, 367);
             this.m_grv_bang_gia.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_grv_bang_gia.Styles"));
             this.m_grv_bang_gia.TabIndex = 22;
             // 
@@ -88,9 +88,9 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(1053, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1035, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 31);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
@@ -99,10 +99,10 @@
             this.m_pnl_control.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_control.Controls.Add(this.m_cmd_exit);
             this.m_pnl_control.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_control.Location = new System.Drawing.Point(0, 534);
+            this.m_pnl_control.Location = new System.Drawing.Point(0, 519);
             this.m_pnl_control.Name = "m_pnl_control";
             this.m_pnl_control.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_control.Size = new System.Drawing.Size(1145, 36);
+            this.m_pnl_control.Size = new System.Drawing.Size(1127, 39);
             this.m_pnl_control.TabIndex = 21;
             // 
             // m_cmd_xuat_excel
@@ -116,7 +116,7 @@
             this.m_cmd_xuat_excel.ImageList = this.ImageList;
             this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(113, 28);
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(113, 31);
             this.m_cmd_xuat_excel.TabIndex = 12;
             this.m_cmd_xuat_excel.Text = "Xuất ra Excel";
             this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
@@ -183,7 +183,7 @@
             this.Controls.Add(this.m_grv_bang_gia);
             this.Controls.Add(this.m_pnl_control);
             this.Name = "uc803_bang_gia";
-            this.Size = new System.Drawing.Size(1145, 570);
+            this.Size = new System.Drawing.Size(1127, 558);
             ((System.ComponentModel.ISupportInitialize)(this.m_grv_bang_gia)).EndInit();
             this.m_pnl_control.ResumeLayout(false);
             this.ResumeLayout(false);
