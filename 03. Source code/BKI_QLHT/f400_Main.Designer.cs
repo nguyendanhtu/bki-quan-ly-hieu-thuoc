@@ -2070,7 +2070,6 @@ namespace BKI_QLHT
             this.Name = "f400_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "F400 - Chương trình quản lý hiệu thuốc";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.f400_Main_FormClosing);
             this.m_ribbonControl_Main.ResumeLayout(false);
             this.m_ribbonControl_Main.PerformLayout();
             this.m_ribbonPanel_baocao.ResumeLayout(false);

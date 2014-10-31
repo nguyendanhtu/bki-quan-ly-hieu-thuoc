@@ -526,32 +526,32 @@ namespace BKI_QLHT
             }
         }
 
-        private void f400_Main_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
-            {
-                f401_update_to_sever v_frm = new f401_update_to_sever();
-                v_frm.ShowDialog();
-            }
-            catch (System.Exception ex)
-            {
-                CSystemLog_301.ExceptionHandle(ex);
-            }
-            //DialogResult result = MessageBox.Show("Bạn có muốn cập nhật thống kê không?",
-            //    "Quản lý bán thuốc", MessageBoxButtons.YesNo);
-            //if (result == DialogResult.Yes)
-            //{
+        //private void f400_Main_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    try
+        //    {
+        //        f401_update_to_sever v_frm = new f401_update_to_sever();
+        //        v_frm.ShowDialog();
+        //    }
+        //    catch (System.Exception ex)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(ex);
+        //    }
+        //    //DialogResult result = MessageBox.Show("Bạn có muốn cập nhật thống kê không?",
+        //    //    "Quản lý bán thuốc", MessageBoxButtons.YesNo);
+        //    //if (result == DialogResult.Yes)
+        //    //{
 
-            //    BaseMessages.MsgBox_Infor("Đã cập nhật");
-            //    return;
+        //    //    BaseMessages.MsgBox_Infor("Đã cập nhật");
+        //    //    return;
 
-            //}
-            //if (result == DialogResult.No)
-            //{
-            //    BaseMessages.MsgBox_Infor("Chưa cập nhật");
-            //    return;
-            //}
-        }
+        //    //}
+        //    //if (result == DialogResult.No)
+        //    //{
+        //    //    BaseMessages.MsgBox_Infor("Chưa cập nhật");
+        //    //    return;
+        //    //}
+        //}
 
         private void m_cmd_don_vi_kinh_doanh_Click(object sender, EventArgs e)
         {
