@@ -933,12 +933,12 @@ namespace BKI_QLHT
                 m_txt_gia_nhap.Focus();
                 return false;
             }
-            if (m_txt_gia_ban.Text == "")
-            {
-                BaseMessages.MsgBox_Infor("Bạn chưa nhập giá bán");
-                m_txt_gia_ban.Focus();
-                return false;
-            }
+            //if (m_txt_gia_ban.Text == "")
+            //{
+            //    BaseMessages.MsgBox_Infor("Bạn chưa nhập giá bán");
+            //    m_txt_gia_ban.Focus();
+            //    return false;
+            //}
             if (m_txt_so_luong.Text == "")
             {
                 BaseMessages.MsgBox_Infor("Bạn chưa nhập số lượng");
