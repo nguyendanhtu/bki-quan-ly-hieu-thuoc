@@ -35,6 +35,7 @@
             this.m_cmd_upadate = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_txt_add_thuoc = new System.Windows.Forms.Button();
+            this.m_txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.m_cmd_add = new SIS.Controls.Button.SiSButton();
             this.m_lbl_ma_giao_dich = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
@@ -90,7 +91,6 @@
             this.m_cmd_save = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_txt_search_thuoc1 = new BKI_QLHT.DanhMuc.txt_search_thuoc();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -202,6 +202,22 @@
             this.m_txt_add_thuoc.TabStop = false;
             this.m_txt_add_thuoc.UseVisualStyleBackColor = true;
             // 
+            // m_txt_search_thuoc1
+            // 
+            this.m_txt_search_thuoc1.dcID = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.m_txt_search_thuoc1.DisplayMember = null;
+            this.m_txt_search_thuoc1.Location = new System.Drawing.Point(173, 68);
+            this.m_txt_search_thuoc1.Name = "m_txt_search_thuoc1";
+            this.m_txt_search_thuoc1.Size = new System.Drawing.Size(238, 20);
+            this.m_txt_search_thuoc1.str_query = null;
+            this.m_txt_search_thuoc1.TabIndex = 0;
+            this.m_txt_search_thuoc1.Text1 = null;
+            this.m_txt_search_thuoc1.ValueMember = null;
+            // 
             // m_cmd_add
             // 
             this.m_cmd_add.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -278,9 +294,9 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label12.Location = new System.Drawing.Point(99, 160);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 16);
+            this.label12.Size = new System.Drawing.Size(80, 16);
             this.label12.TabIndex = 137;
-            this.label12.Text = "Giá nhập";
+            this.label12.Text = "Giá nhập (*)";
             // 
             // m_txt_gia_nhap
             // 
@@ -593,9 +609,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(767, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 130;
-            this.label1.Text = "Số lượng";
+            this.label1.Text = "Số lượng (*)";
             // 
             // label5
             // 
@@ -604,9 +620,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(92, 73);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.Size = new System.Drawing.Size(87, 16);
             this.label5.TabIndex = 129;
-            this.label5.Text = "Tên thuốc";
+            this.label5.Text = "Tên thuốc (*)";
             // 
             // label25
             // 
@@ -772,22 +788,6 @@
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 37);
             this.m_cmd_exit.TabIndex = 14;
             this.m_cmd_exit.Text = "Thoát (Esc)";
-            // 
-            // m_txt_search_thuoc1
-            // 
-            this.m_txt_search_thuoc1.dcID = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.m_txt_search_thuoc1.DisplayMember = null;
-            this.m_txt_search_thuoc1.Location = new System.Drawing.Point(173, 68);
-            this.m_txt_search_thuoc1.Name = "m_txt_search_thuoc1";
-            this.m_txt_search_thuoc1.Size = new System.Drawing.Size(238, 20);
-            this.m_txt_search_thuoc1.str_query = null;
-            this.m_txt_search_thuoc1.TabIndex = 0;
-            this.m_txt_search_thuoc1.Text1 = null;
-            this.m_txt_search_thuoc1.ValueMember = null;
             // 
             // uc512_giao_dich_nhap_thuoc
             // 
