@@ -43,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.m_txt_gia_nhap = new System.Windows.Forms.TextBox();
+            this.m_txt_don_gia = new System.Windows.Forms.TextBox();
             this.m_dtp_han_su_dung = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.m_cbo_hang_san_xuat = new System.Windows.Forms.ComboBox();
@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.m_txt_gia_nhap);
+            this.panel1.Controls.Add(this.m_txt_don_gia);
             this.panel1.Controls.Add(this.m_dtp_han_su_dung);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.m_cbo_hang_san_xuat);
@@ -292,19 +292,19 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(99, 160);
+            this.label12.Location = new System.Drawing.Point(77, 157);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 16);
             this.label12.TabIndex = 137;
             this.label12.Text = "Giá nhập (*)";
             // 
-            // m_txt_gia_nhap
+            // m_txt_don_gia
             // 
-            this.m_txt_gia_nhap.Location = new System.Drawing.Point(172, 156);
-            this.m_txt_gia_nhap.Name = "m_txt_gia_nhap";
-            this.m_txt_gia_nhap.Size = new System.Drawing.Size(105, 20);
-            this.m_txt_gia_nhap.TabIndex = 5;
-            this.m_txt_gia_nhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.m_txt_don_gia.Location = new System.Drawing.Point(172, 156);
+            this.m_txt_don_gia.Name = "m_txt_don_gia";
+            this.m_txt_don_gia.Size = new System.Drawing.Size(105, 20);
+            this.m_txt_don_gia.TabIndex = 5;
+            this.m_txt_don_gia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // m_dtp_han_su_dung
             // 
@@ -607,7 +607,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(767, 103);
+            this.label1.Location = new System.Drawing.Point(758, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 130;
@@ -618,7 +618,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(92, 73);
+            this.label5.Location = new System.Drawing.Point(70, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 16);
             this.label5.TabIndex = 129;
@@ -823,7 +823,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox m_txt_gia_nhap;
+        private System.Windows.Forms.TextBox m_txt_don_gia;
         private System.Windows.Forms.DateTimePicker m_dtp_han_su_dung;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox m_cbo_hang_san_xuat;

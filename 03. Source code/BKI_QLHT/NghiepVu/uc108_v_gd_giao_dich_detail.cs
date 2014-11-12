@@ -155,6 +155,10 @@ namespace BKI_QLHT.NghiepVu
             //    m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             //    m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             //    m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            this.m_txt_don_gia.KeyPress +=new KeyPressEventHandler(m_txt_don_gia_KeyPress);
+            this.m_txt_so_luong.KeyPress +=new KeyPressEventHandler(m_txt_so_luong_KeyPress);
+            this.m_txt_so_luong.TextChanged +=new EventHandler(m_txt_so_luong_TextChanged);
+            this.m_txt_don_gia.TextChanged +=new EventHandler(m_txt_don_gia_TextChanged);
         }
 
         private decimal quy_doi_doi_don_vi_tinh(decimal ip_id_thuoc)
@@ -767,27 +771,6 @@ namespace BKI_QLHT.NghiepVu
             }
         }
 
-        private void m_txt_don_gia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
-            {
-                BaseMessages.MsgBox_Error("Bạn chỉ được nhập số!");
-                m_txt_don_gia.Focus();
-
-            }
-
-        }
-
-        private void m_txt_so_luong_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
-            {
-                BaseMessages.MsgBox_Error("Bạn chỉ được nhập số!");
-                m_txt_so_luong.Focus();
-            }
-        }
-
         private void txt_search_thuoc1_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -1058,7 +1041,54 @@ namespace BKI_QLHT.NghiepVu
             }
 
         }
-     
+
+        private void m_txt_so_luong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                if (e.KeyChar != (char)8)
+                {
+                    BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'..Xin vui lòng chỉ nhập số");
+                    e.KeyChar = (char)0;
+                }
+            }
+        }
+        private void m_txt_don_gia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9')
+            {
+                if (e.KeyChar != (char)8)
+                {
+                    BaseMessages.MsgBox_Infor("Bạn đã nhập chữ '" + e.KeyChar + "'...Xin vui lòng chỉ nhập số");
+                    e.KeyChar = (char)0;
+                }
+            }
+        }
+        private void m_txt_don_gia_TextChanged(object sender, EventArgs e)
+        {
+            if (m_txt_don_gia.Text == "")
+            {
+                m_txt_don_gia.SelectionStart = m_txt_don_gia.Text.Length + 1;
+            }
+            else
+            {
+                m_txt_don_gia.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_don_gia.Text.Trim()));
+                m_txt_don_gia.SelectionStart = m_txt_don_gia.Text.Length + 1;
+            }
+
+        }
+        private void m_txt_so_luong_TextChanged(object sender, EventArgs e)
+        {
+            if (m_txt_so_luong.Text == "")
+            {
+                m_txt_so_luong.SelectionStart = m_txt_so_luong.Text.Length + 1;
+            }
+            else
+            {
+                m_txt_so_luong.Text = string.Format("{0:#,###}", CIPConvert.ToDecimal(m_txt_so_luong.Text.Trim()));
+                m_txt_so_luong.SelectionStart = m_txt_so_luong.Text.Length + 1;
+            }
+        }
         #endregion
 
    
